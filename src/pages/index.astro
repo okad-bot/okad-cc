@@ -103,47 +103,28 @@ const calHref = "https://calendly.com/okad_calls/first";
   <Header />
   <main>
 
-    <!-- Section nav (sticky) -->
-    <nav class="sticky top-[60px] md:top-[60px] z-20 bg-card border-b border-border overflow-x-auto" style="-webkit-overflow-scrolling: touch;">
-      <div class="max-w-[1000px] mx-auto px-6 flex gap-8 whitespace-nowrap">
-        {[
-          { text: "Work", href: "#work" },
-          { text: "How it works", href: "#how" },
-          { text: "What's inside", href: "#batch" },
-          { text: "Results", href: "#results" },
-          { text: "Process", href: "#process" },
-          { text: "Pricing", href: "#pricing" },
-          { text: "Contact", href: "#contact" },
-        ].map((item) => (
-          <a href={item.href} class="text-[13px] text-muted py-3 border-b-2 border-transparent hover:text-ink hover:border-border transition-all no-underline">{item.text}</a>
-        ))}
-      </div>
-    </nav>
-
     <!-- Hero -->
-    <section class="pt-8 md:pt-12 pb-0 bg-bg">
+    <section class="pt-16 md:pt-20 pb-0 bg-bg">
       <div class="max-w-[1100px] mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-12 items-center py-14 md:py-16">
-          <div>
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="font-mono text-[11px] font-semibold uppercase tracking-[.06em] px-3 py-1 rounded-full" style="background: rgba(16,185,129,.12); color: #10B981">#creative_testing</span>
-              <span class="font-mono text-[11px] font-semibold uppercase tracking-[.06em] px-3 py-1 rounded-full" style="background: rgba(147,51,234,.12); color: #9333EA">#ugc</span>
-              <span class="font-mono text-[11px] font-semibold uppercase tracking-[.06em] px-3 py-1 rounded-full bg-card border border-border text-ink-2">#paid_ads</span>
-              <span class="font-mono text-[11px] font-semibold uppercase tracking-[.06em] px-3 py-1 rounded-full" style="background: rgba(99,102,241,.06); color: #6366F1; border: 1px solid rgba(99,102,241,.18)">#dtc</span>
-              <span class="font-mono text-[11px] font-semibold uppercase tracking-[.06em] px-3 py-1 rounded-full bg-card border border-border text-ink-2">#static & video</span>
-            </div>
-            <h1 class="font-display font-medium text-[clamp(32px,4vw,48px)] leading-[1.12] tracking-[-0.04em] text-ink mb-5">
-              We make video ads<br>and find which ones<br><span class="font-script text-accent">actually work</span>
-            </h1>
-            <p class="text-[16px] leading-[1.6] text-ink-2 max-w-[480px] mb-8">
-              Creative testing agency for DTC and e-com brands. 40-70 creatives per batch, real UGC creators + AI. Your CPA goes down, your winning creatives multiply.
-            </p>
-            <div class="flex flex-wrap gap-2.5">
-              <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-full font-sans text-[15px] font-medium bg-lime text-ink hover:bg-[#b8e537] transition-all no-underline">Tell us about your product</a>
-              <a href="#how" class="inline-flex items-center px-5 py-2.5 rounded-full font-sans text-[15px] font-medium bg-card text-ink-2 border border-border hover:border-ink hover:text-ink transition-all no-underline">How it works ↓</a>
-            </div>
+        <div class="text-center py-6 md:py-16">
+          <div class="flex flex-wrap justify-center gap-2 mb-4 md:mb-6">
+            <span class="font-mono text-[10px] md:text-[11px] font-semibold uppercase tracking-[.06em] px-2.5 py-0.5 rounded-full" style="background: rgba(16,185,129,.12); color: #10B981">#creative_testing</span>
+            <span class="font-mono text-[10px] md:text-[11px] font-semibold uppercase tracking-[.06em] px-2.5 py-0.5 rounded-full" style="background: rgba(147,51,234,.12); color: #9333EA">#ugc</span>
+            <span class="font-mono text-[10px] md:text-[11px] font-semibold uppercase tracking-[.06em] px-2.5 py-0.5 rounded-full bg-card border border-border text-ink-2">#paid_ads</span>
+            <span class="font-mono text-[10px] md:text-[11px] font-semibold uppercase tracking-[.06em] px-2.5 py-0.5 rounded-full" style="background: rgba(99,102,241,.06); color: #6366F1; border: 1px solid rgba(99,102,241,.18)">#dtc</span>
+            <span class="font-mono text-[10px] md:text-[11px] font-semibold uppercase tracking-[.06em] px-2.5 py-0.5 rounded-full bg-card border border-border text-ink-2">#static & video</span>
           </div>
-          <div class="relative">
+          <h1 class="font-display font-medium text-[clamp(26px,5vw,52px)] leading-[1.1] tracking-[-0.04em] text-ink mb-3 md:mb-5">
+            We make video ads<br>and find which ones<br><span class="font-script text-accent">actually work</span>
+          </h1>
+          <p class="text-[14px] md:text-[16px] leading-[1.5] text-ink-2 max-w-[520px] mx-auto mb-4 md:mb-8">
+            Creative testing agency for DTC and e-com brands. 40-70 creatives per batch, real UGC creators + AI. Your CPA goes down, your winning creatives multiply.
+          </p>
+          <div class="flex flex-wrap justify-center gap-2.5 mb-6 md:mb-12">
+            <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-full font-sans text-[14px] md:text-[15px] font-medium bg-lime text-ink hover:bg-[#b8e537] transition-all no-underline">Tell us about your product</a>
+            <a href="#how" class="inline-flex items-center px-5 py-2.5 rounded-full font-sans text-[14px] md:text-[15px] font-medium bg-card text-ink-2 border border-border hover:border-ink hover:text-ink transition-all no-underline">How it works ↓</a>
+          </div>
+          <div class="max-w-[600px] mx-auto">
             <img src="https://framerusercontent.com/images/BmUk0KMAPqqpLzpARwDdXhfg.gif" alt="UGC Ad Example" class="w-full rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,.08)]" />
           </div>
         </div>
