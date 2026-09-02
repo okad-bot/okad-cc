@@ -1,0 +1,87 @@
+---
+const navItems = [
+  { text: "How it works", href: "#how" },
+  { text: "Pricing", href: "#pricing" },
+  { text: "Results", href: "#results" },
+  { text: "FAQ", href: "#faq" },
+];
+---
+
+<header id="site-header" class="fixed top-3 left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-[1080px] z-30 bg-white rounded-full shadow-[0_2px_16px_rgba(0,0,0,.1)]">
+  <div class="flex items-center justify-between h-12 px-6">
+    <a href="/" class="flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-ink no-underline">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        <rect width="32" height="32" rx="8" fill="#6366F1" />
+        <text x="5" y="23" fill="white" font-size="18" font-weight="700" font-family="Space Grotesk, sans-serif">O</text>
+      </svg>
+      okad
+    </a>
+
+    <nav class="hidden md:flex items-center gap-5">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class="text-[13px] font-medium text-ink/55 hover:text-ink transition-colors no-underline"
+        >
+          {item.text}
+        </a>
+      ))}
+      <a
+        href="#start"
+        class="ml-2 px-[18px] py-2 bg-ink text-white text-[13px] font-semibold rounded-full border border-ink hover:bg-[#333] hover:border-[#333] transition-colors no-underline"
+      >
+        Start free →
+      </a>
+    </nav>
+
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden w-9 h-9 border border-ink/12 rounded-lg bg-ink/4 flex items-center justify-center"
+      aria-label="Menu"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/40">
+  <div class="absolute top-0 right-0 w-[280px] h-full bg-white p-5 flex flex-col gap-1 shadow-[-8px_0_32px_rgba(0,0,0,.1)]">
+    <button id="mobile-menu-close" class="self-end w-9 h-9 border border-border rounded-lg bg-white flex items-center justify-center mb-3" aria-label="Close">
+      ✕
+    </button>
+    {navItems.map((item) => (
+      <a href={item.href} class="block px-3 py-3 rounded-lg text-[15px] font-medium text-ink-2 hover:bg-accent-bg no-underline">
+        {item.text}
+      </a>
+    ))}
+    <div class="h-px bg-border my-2"></div>
+    <a href="#start" class="block px-3 py-3 rounded-lg text-[15px] font-semibold text-white bg-accent hover:bg-accent-hover text-center no-underline mt-2">
+      Start free →
+    </a>
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  const close = document.getElementById("mobile-menu-close");
+  btn?.addEventListener("click", () => menu?.classList.remove("hidden"));
+  close?.addEventListener("click", () => menu?.classList.add("hidden"));
+  menu?.addEventListener("click", (e) => { if (e.target === menu) menu.classList.add("hidden"); });
+</script>
+
+<style>
+  @media (max-width: 768px) {
+    #site-header {
+      top: 0;
+      border-radius: 0;
+      width: 100%;
+      box-shadow: 0 1px 8px rgba(0,0,0,.08);
+    }
+  }
+</style>

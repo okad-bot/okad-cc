@@ -1,0 +1,442 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const steps = [
+  { emoji: "🔗", title: "Drop your link", desc: "Paste your product URL — that's all we need" },
+  { emoji: "🧪", title: "Get a Hook Matrix", desc: "15+ hook concepts mapped to your audience in 24h" },
+  { emoji: "📊", title: "We test daily", desc: "3–7 videos per day, each testing a different angle" },
+  { emoji: "🏆", title: "Scale winners", desc: "Data picks the winners — we produce what works" },
+];
+
+const tiers = [
+  {
+    pill: "Free tier",
+    pillColor: "green",
+    title: "Hook Matrix",
+    em: "for free",
+    price: "$0",
+    desc: "Get a personalized testing matrix with 15+ video concepts mapped to your product. See exactly what to test — before you spend a dollar.",
+    bullets: [
+      "3–7 day testing roadmap",
+      "15+ hook concepts with references",
+      "Adaptation guide for your product",
+      "Performance prediction per hook",
+    ],
+    cta: "Get your free matrix",
+    ctaHref: "#start",
+  },
+  {
+    pill: "Most popular",
+    pillColor: "warm",
+    title: "Test & Learn",
+    em: "with data",
+    price: "$1,500/mo",
+    desc: "We run your testing matrix, post daily, and use real data to decide what works. You get a system, not guesswork.",
+    bullets: [
+      "Everything in Hook Matrix",
+      "Account setup & daily posting",
+      "Performance analytics dashboard",
+      "Data-driven hook iterations",
+      "Weekly strategy calls",
+    ],
+    cta: "Start testing →",
+    ctaHref: "#start",
+  },
+  {
+    pill: "Full production",
+    pillColor: "blue",
+    title: "Video Production",
+    em: "at scale",
+    price: "$3,000/mo",
+    desc: "We produce all the creative from our UGC creator network. You send your product — we handle the rest.",
+    bullets: [
+      "Everything in Test & Learn",
+      "UGC video production (10+ videos)",
+      "Creator matching & briefing",
+      "Script writing & iteration",
+      "Raw footage + final edits",
+    ],
+    cta: "Get started →",
+    ctaHref: "#start",
+  },
+  {
+    pill: "Enterprise",
+    pillColor: "pink",
+    title: "Custom Creator",
+    em: "exclusive",
+    price: "Custom",
+    desc: "Dedicated creator casting for your brand. Custom shoots, exclusive content, full creative control.",
+    bullets: [
+      "Everything in Video Production",
+      "Hand-picked creator for your niche",
+      "Custom on-brand shoots",
+      "Exclusive content rights",
+      "Dedicated creative director",
+    ],
+    cta: "Talk to us →",
+    ctaHref: "#start",
+  },
+];
+
+const results = [
+  { metric: "8%+", label: "View-to-25s retention on winning hooks", color: "text-accent" },
+  { metric: "3×", label: "CTR improvement vs standard creative", color: "text-warm-text" },
+  { metric: "200+", label: "Hooks tested per month across clients", color: "text-blue-text" },
+  { metric: "48h", label: "From brief to first test live", color: "text-green-text" },
+];
+
+const faqs = [
+  {
+    q: "What kind of startups is this for?",
+    a: "Any startup or DTC brand that runs paid ads or organic short-form video. We work with SaaS, e-commerce, apps, EdTech, FinTech — anyone who needs to find what messaging actually converts.",
+  },
+  {
+    q: "Do I need my own creators?",
+    a: "No. On the free tier, we provide reference videos and adaptation guides. On paid tiers, we handle everything — creator sourcing, scripting, filming, and editing.",
+  },
+  {
+    q: "What platforms do you test on?",
+    a: "TikTok, Instagram Reels, and YouTube Shorts. We can also adapt winning hooks for Meta and Google paid ads.",
+  },
+  {
+    q: "How is this different from hiring a UGC agency?",
+    a: "Most agencies produce content based on assumptions. We test first, produce second. You only invest in production after data proves which hooks work for your audience.",
+  },
+  {
+    q: "What do I need to provide?",
+    a: "A link to your product, any existing brand assets (logos, colors), and screen recordings or product demos if available. We handle everything else.",
+  },
+  {
+    q: "Can I cancel anytime?",
+    a: "Yes. All paid plans are month-to-month with no lock-in. You keep all content and data we've produced.",
+  },
+];
+
+const pillColors: Record<string, { bg: string; text: string }> = {
+  green: { bg: "bg-green-pill", text: "text-green-text" },
+  warm: { bg: "bg-warm-pill", text: "text-warm-text" },
+  blue: { bg: "bg-blue-pill", text: "text-blue-text" },
+  pink: { bg: "bg-pink-pill", text: "text-pink-text" },
+};
+
+const blockColors: Record<string, string> = {
+  green: "bg-green-tint",
+  warm: "bg-warm",
+  blue: "bg-blue-tint",
+  pink: "bg-pink-tint",
+};
+
+const btnColors: Record<string, { bg: string; hover: string }> = {
+  green: { bg: "bg-green-text", hover: "hover:bg-[#059669]" },
+  warm: { bg: "bg-warm-text", hover: "hover:bg-[#7E22CE]" },
+  blue: { bg: "bg-blue-text", hover: "hover:bg-[#E09100]" },
+  pink: { bg: "bg-pink-text", hover: "hover:bg-[#DB2777]" },
+};
+
+const dotColors: Record<string, string> = {
+  green: "bg-green-text",
+  warm: "bg-warm-text",
+  blue: "bg-blue-text",
+  pink: "bg-pink-text",
+};
+---
+
+<Layout>
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-0">
+      <div class="max-w-[1080px] mx-auto px-6 pt-12 md:pt-16 pb-12 md:pb-16">
+        <div class="max-w-[750px]">
+          <div class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium uppercase tracking-[.06em] text-ink-2 mb-7">
+            <strong class="text-accent font-semibold">Creative Testing</strong> — by OKAD Agency
+          </div>
+
+          <h1 class="font-display font-bold text-[clamp(36px,6.5vw,60px)] leading-[1.1] tracking-[-0.035em] mb-6 text-ink">
+            Stop guessing<br/>which hooks<br/>will <span class="font-script text-accent text-[1.15em]">convert</span>
+          </h1>
+
+          <p class="text-[19px] text-ink-2 max-w-[560px] leading-[1.55] mb-6">
+            Drop your product link — get a personalized Hook Testing Matrix with 15+ video concepts. We test daily, read the data, and only produce what's proven to work.
+          </p>
+
+          <div class="flex flex-wrap gap-2.5 mb-6">
+            <div class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-white/80 border border-border text-ink-2 backdrop-blur-sm">
+              <strong class="font-display font-bold">Free</strong> to start
+            </div>
+            <div class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-white/80 border border-border text-ink-2 backdrop-blur-sm">
+              Results in <strong class="font-display font-bold">24h</strong>
+            </div>
+            <div class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-white/80 border border-border text-ink-2 backdrop-blur-sm">
+              For <strong class="font-display font-bold">startups & DTC</strong>
+            </div>
+          </div>
+
+          <div class="flex flex-nowrap gap-2.5 mt-6">
+            <a
+              href="#start"
+              class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-white text-ink border border-[#d1d5db] hover:border-ink hover:bg-ink hover:text-white transition-all no-underline"
+            >
+              Get free matrix →
+            </a>
+            <a
+              href="#how"
+              class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-lime text-ink border-none hover:bg-[#b8e537] transition-all no-underline"
+            >
+              See how it works →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works — dark card -->
+    <div id="how" class="max-w-[1080px] mx-auto mb-16 px-6">
+      <div class="bg-dark rounded-3xl px-6 py-10 md:px-9 md:py-10">
+        <h2 class="font-display font-extrabold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-8 text-white">
+          From link to winning hook
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-5">
+          {steps.map((step) => (
+            <div class="text-left">
+              <div class="mb-2.5 text-[40px] leading-none">{step.emoji}</div>
+              <h4 class="font-display font-bold text-[15px] mb-1 text-white">{step.title}</h4>
+              <p class="text-[13px] text-white/60 leading-[1.45]">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Problem — feature blocks -->
+    <section class="py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="text-center mb-3">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">The problem</p>
+          <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] mb-4">
+            Why most ad creative fails
+          </h2>
+          <p class="text-[17px] text-muted max-w-[520px] mx-auto leading-[1.55] mb-12">
+            Startups produce 3–5 video ads, pick the one that "feels right," and hope for the best. Expensive. Slow. Random.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-warm rounded-3xl p-8 md:p-10 flex flex-col text-left shadow-[inset_0_1px_0_rgba(255,255,255,.6)]">
+            <div class="inline-flex self-start items-center font-mono text-[11px] font-semibold uppercase tracking-[.08em] px-4 py-2 rounded-full bg-warm-pill text-warm-text mb-6">
+              The cost
+            </div>
+            <h3 class="font-display font-extrabold text-[clamp(22px,3vw,28px)] leading-[1.15] tracking-[-0.03em] mb-4 text-ink">
+              <span class="text-warm-text">$2,000–5,000</span> per video ad
+            </h3>
+            <p class="text-[15px] text-ink-2 leading-[1.55]">
+              That's the average cost of one UGC video that might not work. Most brands burn through 3–5 before finding a winner.
+            </p>
+          </div>
+
+          <div class="bg-pink-tint rounded-3xl p-8 md:p-10 flex flex-col text-left shadow-[inset_0_1px_0_rgba(255,255,255,.6)]">
+            <div class="inline-flex self-start items-center font-mono text-[11px] font-semibold uppercase tracking-[.08em] px-4 py-2 rounded-full bg-pink-pill text-pink-text mb-6">
+              The failure rate
+            </div>
+            <h3 class="font-display font-extrabold text-[clamp(22px,3vw,28px)] leading-[1.15] tracking-[-0.03em] mb-4 text-ink">
+              <span class="text-pink-text">70–80%</span> fail in the first 3 seconds
+            </h3>
+            <p class="text-[15px] text-ink-2 leading-[1.55]">
+              Wrong hook = dead ad. The first 3 seconds decide everything, and most brands guess instead of testing.
+            </p>
+          </div>
+
+          <div class="bg-green-tint rounded-3xl p-8 md:p-10 flex flex-col text-left shadow-[inset_0_1px_0_rgba(255,255,255,.6)] sm:col-span-2">
+            <div class="inline-flex self-start items-center font-mono text-[11px] font-semibold uppercase tracking-[.08em] px-4 py-2 rounded-full bg-green-pill text-green-text mb-6">
+              The fix
+            </div>
+            <div class="grid sm:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 class="font-display font-extrabold text-[clamp(22px,3vw,28px)] leading-[1.15] tracking-[-0.03em] mb-4 text-ink">
+                  Test <span class="text-green-text">15+ hooks cheaply</span>. Only produce what data says works.
+                </h3>
+                <p class="text-[15px] text-ink-2 leading-[1.55]">
+                  We map your product to proven hook frameworks, test them with real audiences, and only invest in production for the winners. Data-driven, not gut-driven.
+                </p>
+              </div>
+              <div class="bg-dark rounded-2xl p-8 md:p-12 text-center flex flex-col items-center justify-center">
+                <div class="text-[40px] mb-5">🎯</div>
+                <h4 class="font-display font-extrabold text-2xl text-white mb-3 tracking-[-0.02em]">Test → Data → Scale</h4>
+                <p class="text-[15px] text-white/50 leading-[1.5] max-w-[280px]">You never pay for production until we've proven which hooks convert</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="py-16 md:py-20 bg-card border-t border-b border-border">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Results</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
+          Numbers from real campaigns
+        </h2>
+        <p class="text-[17px] text-muted text-center max-w-[520px] mx-auto leading-[1.55] mb-12">
+          Across DTC, SaaS, and app clients using our testing framework.
+        </p>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          {results.map((r) => (
+            <div class="bg-bg rounded-2xl p-6 text-center border border-border">
+              <div class={`font-display font-extrabold text-[clamp(32px,5vw,44px)] tracking-[-0.03em] ${r.color}`}>{r.metric}</div>
+              <p class="text-[13px] text-muted mt-2 leading-[1.4]">{r.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing — feature blocks -->
+    <section id="pricing" class="py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Pricing</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
+          Start free. Scale when it works.
+        </h2>
+        <p class="text-[17px] text-muted text-center max-w-[520px] mx-auto leading-[1.55] mb-12">
+          Every plan starts with data. You never pay for production until we've proven which hooks convert.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {tiers.map((tier) => {
+            const pc = pillColors[tier.pillColor];
+            const bc = blockColors[tier.pillColor];
+            const btc = btnColors[tier.pillColor];
+            const dc = dotColors[tier.pillColor];
+            return (
+              <div class={`${bc} rounded-3xl p-8 md:p-10 flex flex-col text-left shadow-[inset_0_1px_0_rgba(255,255,255,.6)]`}>
+                <div class={`inline-flex self-start items-center font-mono text-[11px] font-semibold uppercase tracking-[.08em] px-4 py-2 rounded-full ${pc.bg} ${pc.text} mb-6`}>
+                  {tier.pill}
+                </div>
+                <h3 class="font-display font-extrabold text-[clamp(22px,3vw,28px)] leading-[1.15] tracking-[-0.03em] mb-2 text-ink">
+                  {tier.title} — <span class={pc.text}>{tier.em}</span>
+                </h3>
+                <p class="font-display font-bold text-xl text-ink mb-4">{tier.price}</p>
+                <p class="text-[15px] text-ink-2 leading-[1.55] mb-6 flex-1">{tier.desc}</p>
+                <ul class="list-none p-0 m-0 mb-6 space-y-1.5">
+                  {tier.bullets.map((b) => (
+                    <li class="relative pl-4 text-[14px] text-ink-2 leading-[1.5]">
+                      <span class={`absolute left-0 top-[8px] w-1.5 h-1.5 rounded-full ${dc}`}></span>
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+                <div class="mt-auto pt-2">
+                  <a
+                    href={tier.ctaHref}
+                    class={`inline-flex items-center gap-1.5 px-[18px] py-2.5 rounded-full font-sans text-[13px] font-semibold text-white ${btc.bg} ${btc.hover} transition-all no-underline`}
+                  >
+                    {tier.cta}
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 md:py-20 bg-card border-t border-border">
+      <div class="max-w-[720px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">FAQ</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-12">
+          Frequently asked questions
+        </h2>
+
+        <div class="space-y-3">
+          {faqs.map((faq) => (
+            <details class="group bg-bg rounded-2xl border border-border">
+              <summary class="flex items-center justify-between cursor-pointer p-5 font-display text-[15px] font-semibold text-ink">
+                {faq.q}
+                <svg class="w-4 h-4 text-muted group-open:rotate-45 transition-transform flex-shrink-0 ml-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" />
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 text-[14px] text-ink-2 leading-relaxed">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA — dark brands section style -->
+    <section id="start" class="bg-dark py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 transition-transform hover:-translate-y-0.5">
+            <h3 class="font-display font-bold text-[22px] tracking-[-0.02em] mb-3 text-white">
+              Get your Hook Matrix — free
+            </h3>
+            <p class="text-[15px] text-white/60 leading-relaxed mb-6">
+              Paste your product link and we'll send a personalized testing plan with 15+ hook concepts within 24 hours. No credit card.
+            </p>
+            <div class="space-y-3 mb-6">
+              <input
+                type="url"
+                placeholder="https://your-product.com"
+                class="w-full px-4 py-3 rounded-xl bg-white/5 text-white border border-white/15 focus:border-accent focus:outline-none text-[14px] placeholder:text-white/30"
+              />
+              <input
+                type="email"
+                placeholder="you@company.com"
+                class="w-full px-4 py-3 rounded-xl bg-white/5 text-white border border-white/15 focus:border-accent focus:outline-none text-[14px] placeholder:text-white/30"
+              />
+            </div>
+            <button class="w-full bg-white text-ink text-[14px] font-semibold px-7 py-3 rounded-full border border-white hover:bg-border transition-colors">
+              Get my free matrix →
+            </button>
+          </div>
+
+          <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 transition-transform hover:-translate-y-0.5 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-[22px] tracking-[-0.02em] mb-3 text-white">
+                Prefer to talk first?
+              </h3>
+              <p class="text-[15px] text-white/60 leading-relaxed mb-8">
+                Book a 20-min call with Olga, founder of OKAD. We'll review your current ads, discuss your goals, and map out a testing plan together.
+              </p>
+            </div>
+            <div class="space-y-3">
+              <a
+                href="mailto:olga@okad.agency"
+                class="flex items-center justify-center gap-2 w-full bg-white text-ink text-[14px] font-semibold px-7 py-3 rounded-full hover:bg-border transition-colors no-underline"
+              >
+                Email us
+              </a>
+              <div class="flex gap-3">
+                <a
+                  href="https://wa.me/351939209099"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1 text-center text-[13px] font-medium text-white/60 hover:text-white py-2.5 border border-white/15 rounded-full transition-colors no-underline"
+                >
+                  WhatsApp
+                </a>
+                <a
+                  href="https://t.me/o_kad_work"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex-1 text-center text-[13px] font-medium text-white/60 hover:text-white py-2.5 border border-white/15 rounded-full transition-colors no-underline"
+                >
+                  Telegram
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

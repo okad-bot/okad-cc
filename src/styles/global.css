@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #FAF8F6;
+  --color-bg-alt: #F3F3F3;
+  --color-card: #FFFFFF;
+  --color-ink: #111111;
+  --color-ink-2: #374151;
+  --color-muted: #6B7280;
+  --color-muted-2: #9CA3AF;
+  --color-border: #E5E7EB;
+  --color-accent: #6366F1;
+  --color-accent-hover: #4F46E5;
+  --color-accent-ink: #FFFFFF;
+  --color-accent-bg: rgba(99,102,241,.06);
+  --color-ok: #059669;
+  --color-ok-bg: #ECFDF5;
+  --color-dark: #1a1a1f;
+  --color-dark-2: #2a2a2f;
+  --color-warm: rgba(147,51,234,.04);
+  --color-warm-pill: rgba(147,51,234,.12);
+  --color-warm-text: #9333EA;
+  --color-blue-tint: rgba(245,166,35,.04);
+  --color-blue-pill: rgba(245,166,35,.15);
+  --color-blue-text: #D48B00;
+  --color-green-tint: rgba(16,185,129,.035);
+  --color-green-pill: rgba(16,185,129,.12);
+  --color-green-text: #10B981;
+  --color-pink-tint: rgba(236,72,153,.04);
+  --color-pink-pill: rgba(236,72,153,.12);
+  --color-pink-text: #EC4899;
+  --color-lime: #c8f547;
+
+  --font-display: "Space Grotesk", -apple-system, sans-serif;
+  --font-sans: "Inter", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-script: "Caveat", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-bg);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
