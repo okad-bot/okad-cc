@@ -3,440 +3,454 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-const steps = [
-  { emoji: "🔗", title: "Drop your link", desc: "Paste your product URL — that's all we need" },
-  { emoji: "🧪", title: "Get a Hook Matrix", desc: "15+ hook concepts mapped to your audience in 24h" },
-  { emoji: "📊", title: "We test daily", desc: "3–7 videos per day, each testing a different angle" },
-  { emoji: "🏆", title: "Scale winners", desc: "Data picks the winners — we produce what works" },
-];
-
-const tiers = [
+const cases = [
   {
-    pill: "Free tier",
-    pillColor: "green",
-    title: "Hook Matrix",
-    em: "for free",
-    price: "$0",
-    desc: "Get a personalized testing matrix with 15+ video concepts mapped to your product. See exactly what to test — before you spend a dollar.",
-    bullets: [
-      "3–7 day testing roadmap",
-      "15+ hook concepts with references",
-      "Adaptation guide for your product",
-      "Performance prediction per hook",
-    ],
-    cta: "Get your free matrix",
-    ctaHref: "#start",
+    title: "High ROAS UGC Ads",
+    tags: ["#PAID_ADS", "#DTC", "#E-COM"],
+    chips: ["Creative testing", "UGC CONTENT", "UGC video"],
+    description: 'Every script follows Multiple Hooks → Body → CTAs structure engineered for watch time and keeps viewers past the 15-second mark through storytelling — not selling.',
+    challenge: "The challenge: most UGC ads lose viewers by second 3. We write scripts driving 8%+ view-to-25s retention and measurable ROAS.",
+    image: "/images/cases/ugc-ads.gif",
+    color: "warm",
   },
   {
-    pill: "Most popular",
-    pillColor: "warm",
-    title: "Test & Learn",
-    em: "with data",
-    price: "$1,500/mo",
-    desc: "We run your testing matrix, post daily, and use real data to decide what works. You get a system, not guesswork.",
-    bullets: [
-      "Everything in Hook Matrix",
-      "Account setup & daily posting",
-      "Performance analytics dashboard",
-      "Data-driven hook iterations",
-      "Weekly strategy calls",
-    ],
-    cta: "Start testing →",
-    ctaHref: "#start",
+    title: "AI static Ads — 3x CTR vs original creo",
+    tags: ["#PAID_ADS", "#DTC", "#E-COM"],
+    chips: ["UGC content", "Carousels"],
+    description: "When parents are choosing a $500+ crib for their newborn, they don't click on flashy banners. They look for something that feels real, safe, and beautiful.",
+    challenge: "The challenge: we reworked raw UGC with oversized product into premium visuals that convert.",
+    image: "/images/cases/ai-static.png",
+    color: "pink",
   },
   {
-    pill: "Full production",
-    pillColor: "blue",
-    title: "Video Production",
-    em: "at scale",
-    price: "$3,000/mo",
-    desc: "We produce all the creative from our UGC creator network. You send your product — we handle the rest.",
-    bullets: [
-      "Everything in Test & Learn",
-      "UGC video production (10+ videos)",
-      "Creator matching & briefing",
-      "Script writing & iteration",
-      "Raw footage + final edits",
-    ],
-    cta: "Get started →",
-    ctaHref: "#start",
+    title: "UGC Ads & Content by Creators 45+",
+    tags: ["#SILVER_AGE", "#DTC", "#E-COM"],
+    chips: ["UGC content", "Video", "CAROUSELS"],
+    description: "Most agencies use 22-year-old creators and miss mature audiences. We work with 35-55+ creators, focus on trust, and test what actually connects with thoughtful buyers.",
+    challenge: "The challenge: match creators to the audience, shift to trust-first messaging, and make content feel relatable.",
+    image: "/images/cases/creators45.png",
+    color: "green",
   },
   {
-    pill: "Enterprise",
-    pillColor: "pink",
-    title: "Custom Creator",
-    em: "exclusive",
-    price: "Custom",
-    desc: "Dedicated creator casting for your brand. Custom shoots, exclusive content, full creative control.",
-    bullets: [
-      "Everything in Video Production",
-      "Hand-picked creator for your niche",
-      "Custom on-brand shoots",
-      "Exclusive content rights",
-      "Dedicated creative director",
-    ],
-    cta: "Talk to us →",
-    ctaHref: "#start",
+    title: "1M views Video-content for Digital",
+    tags: ["#ORGANIC", "#DIGITAL", "#DTC"],
+    chips: ["UGC video", "UGC CONTENT", "Carousels"],
+    description: "Talking-head UGC for products you can't hold in your hands — dating apps, EdTech platforms, AI tools. Each video is built around one 'save-worthy' insight.",
+    challenge: "Results: 900K views for a dating app, 990K views + 22K saves for EdTech.",
+    image: "/images/cases/1m-views.gif",
+    color: "blue",
+  },
+  {
+    title: "High CPA Ads creatives for Digital",
+    tags: ["#PAID_ADS", "#DTC", "#DIGITAL"],
+    chips: ["UGC video", "UGC CONTENT", "Carousels"],
+    description: "Static ad creatives for Meta and TikTok built to convert on cost-per-action. Every card follows a direct-response formula: a bold claim, a pain-point, and one clear CTA.",
+    challenge: "The challenge: we design for info products, HR Tech, real estate, investing platforms, and EdTech — where trust is everything and attention is short.",
+    image: "/images/cases/high-cpa.png",
+    color: "warm",
+  },
+  {
+    title: "UGC & AI-content for Alco Brands",
+    tags: ["#ALCO", "#DTC", "#E-COM"],
+    chips: ["UGC video", "UGC CONTENT", "Carousels"],
+    description: "Alcohol UGC is the hardest content to produce. Your creator needs a full bar setup, fresh ingredients, steady hands for the perfect pour, and a space that looks premium.",
+    challenge: "The challenge: we built a creator network specifically for alcohol, combined it with a one-day production shoot with a professional bartender on set.",
+    image: "/images/cases/alco.png",
+    color: "pink",
   },
 ];
 
-const results = [
-  { metric: "8%+", label: "View-to-25s retention on winning hooks", color: "text-accent" },
-  { metric: "3×", label: "CTR improvement vs standard creative", color: "text-warm-text" },
-  { metric: "200+", label: "Hooks tested per month across clients", color: "text-blue-text" },
-  { metric: "48h", label: "From brief to first test live", color: "text-green-text" },
-];
-
-const faqs = [
+const designCases = [
   {
-    q: "What kind of startups is this for?",
-    a: "Any startup or DTC brand that runs paid ads or organic short-form video. We work with SaaS, e-commerce, apps, EdTech, FinTech — anyone who needs to find what messaging actually converts.",
+    title: "Branding",
+    tags: ["#branding", "Design", "CAROUSELS"],
+    description: "We built an identity for a Paris trampoline cardio studio where every touchpoint — from the logo to the street signage — carries the same theatrical tension. We turned a trampoline into a personal stage — with drama, shadows, and an aesthetic worthy of a Grand Opera poster.",
+    challenge: "The challenge: make a trampoline gym feel like a premium Parisian experience, not a kids' birthday party.",
+    image: "/images/design/jumpman.png",
+    buttonText: "Explore Jumpman Case",
+    color: "green",
   },
   {
-    q: "Do I need my own creators?",
-    a: "No. On the free tier, we provide reference videos and adaptation guides. On paid tiers, we handle everything — creator sourcing, scripting, filming, and editing.",
-  },
-  {
-    q: "What platforms do you test on?",
-    a: "TikTok, Instagram Reels, and YouTube Shorts. We can also adapt winning hooks for Meta and Google paid ads.",
-  },
-  {
-    q: "How is this different from hiring a UGC agency?",
-    a: "Most agencies produce content based on assumptions. We test first, produce second. You only invest in production after data proves which hooks work for your audience.",
-  },
-  {
-    q: "What do I need to provide?",
-    a: "A link to your product, any existing brand assets (logos, colors), and screen recordings or product demos if available. We handle everything else.",
-  },
-  {
-    q: "Can I cancel anytime?",
-    a: "Yes. All paid plans are month-to-month with no lock-in. You keep all content and data we've produced.",
+    title: "Web Design",
+    tags: ["#Webflow", "#Framer", "#Shopify", "Design"],
+    description: "Conversion-focused website design for SaaS, HR Tech, and digital products. We structure every page around a single user journey: land, understand, act.",
+    challenge: "The challenge: mobile-first, built to load fast and convert on the first visit.",
+    image: "/images/design/intalent.png",
+    buttonText: "Explore Intalent Case",
+    behanceLink: "https://www.behance.net/olga_kad",
+    color: "blue",
   },
 ];
 
-const pillColors: Record<string, { bg: string; text: string }> = {
-  green: { bg: "bg-green-pill", text: "text-green-text" },
-  warm: { bg: "bg-warm-pill", text: "text-warm-text" },
-  blue: { bg: "bg-blue-pill", text: "text-blue-text" },
-  pink: { bg: "bg-pink-pill", text: "text-pink-text" },
+const tiles = [
+  { src: "/images/tiles/tile-1.png", alt: "Portfolio work 1" },
+  { src: "/images/tiles/tile-2.png", alt: "Portfolio work 2" },
+  { src: "/images/tiles/tile-3.png", alt: "Portfolio work 3" },
+  { src: "/images/tiles/tile-4.png", alt: "Portfolio work 4" },
+  { src: "/images/tiles/tile-5.png", alt: "Portfolio work 5" },
+  { src: "/images/tiles/tile-6.png", alt: "Portfolio work 6" },
+  { src: "/images/tiles/tile-7.jpg", alt: "Portfolio work 7" },
+  { src: "/images/tiles/tile-8.jpg", alt: "Portfolio work 8" },
+];
+
+const reviews = [
+  {
+    text: "Very happy with the video produced by OKAD. It helped us increase our creative output, and communication was smooth throughout.",
+    name: "Maxime Lenzlinger",
+    role: "Co-founder / Marketing",
+    company: "VUE SWISS",
+    avatar: "/images/testimonials/maxime.jpg",
+  },
+  {
+    text: "The final result exceeded my expectations. The structure was clear, the content was well-aligned with the brand tone, and every post had a clear purpose and message.",
+    name: "Kristina Hr.",
+    role: "Marketing",
+    company: "Mushroom genetics",
+    avatar: "/images/testimonials/kristina.png",
+  },
+  {
+    text: "You're the best team I've ever worked with. You are professional, organized, creative, and kind, and I feel incredibly lucky to have found you.",
+    name: "Claire Ginn",
+    role: "Founder",
+    company: "YPM Agency",
+    avatar: "/images/testimonials/claire.png",
+  },
+  {
+    text: "Olga and her team are some of the best designers around. They're creative, work diligently/quickly, and deliver great content.",
+    name: "Damon Dixon",
+    role: "Founder",
+    company: "Douxds",
+    avatar: "/images/testimonials/damon.jpg",
+  },
+];
+
+const videos = [
+  {
+    title: "High-Converting UGC Video Ad System",
+    embedUrl: "https://www.youtube.com/embed/-UTQ0HyGE80?si=hBpETbXfn0ywydfE",
+  },
+  {
+    title: "How to create Static Ads that Actually Convert — 4 Elements every Ad needs",
+    embedUrl: "https://www.youtube.com/embed/6ww6ykmc2Pw",
+  },
+  {
+    title: "How We Build Websites That Convert",
+    embedUrl: "https://www.youtube.com/embed/UxOC3_DvR2o?start=29",
+  },
+  {
+    title: "Full Branding vs Micro-Branding 6 Real Projects",
+    embedUrl: "https://www.youtube.com/embed/njD3orMjpoM?start=3",
+  },
+];
+
+const stats = [
+  { number: "10,000+", label: "Ads & Posts Created" },
+  { number: "200+", label: "Websites & Brands Designed" },
+];
+
+const tagsRow1 = ["UGC", "AD Creatives", "Carousels", "AI", "CREATOR SOURCING", "#branding"];
+const tagsRow2 = ["#web_design", "#Marketing_materials", "Shopify", "Framer", "Digital branding", "packaging branding"];
+
+const blockBg: Record<string, string> = {
+  warm: "background: rgba(147,51,234,.04)",
+  pink: "background: rgba(236,72,153,.04)",
+  green: "background: rgba(16,185,129,.035)",
+  blue: "background: rgba(245,166,35,.04)",
 };
 
-const blockColors: Record<string, string> = {
-  green: "bg-green-tint",
-  warm: "bg-warm",
-  blue: "bg-blue-tint",
-  pink: "bg-pink-tint",
+const pillStyle: Record<string, string> = {
+  warm: "background: rgba(147,51,234,.12); color: #9333EA",
+  pink: "background: rgba(236,72,153,.12); color: #EC4899",
+  green: "background: rgba(16,185,129,.12); color: #10B981",
+  blue: "background: rgba(245,166,35,.15); color: #D48B00",
 };
 
-const btnColors: Record<string, { bg: string; hover: string }> = {
-  green: { bg: "bg-green-text", hover: "hover:bg-[#059669]" },
-  warm: { bg: "bg-warm-text", hover: "hover:bg-[#7E22CE]" },
-  blue: { bg: "bg-blue-text", hover: "hover:bg-[#E09100]" },
-  pink: { bg: "bg-pink-text", hover: "hover:bg-[#DB2777]" },
-};
-
-const dotColors: Record<string, string> = {
-  green: "bg-green-text",
-  warm: "bg-warm-text",
-  blue: "bg-blue-text",
-  pink: "bg-pink-text",
+const btnBg: Record<string, string> = {
+  warm: "#9333EA",
+  pink: "#EC4899",
+  green: "#10B981",
+  blue: "#F5A623",
 };
 ---
 
-<Layout>
+<Layout
+  title="OKAD Agency — Quality Scroll-Stopping Content At Scale"
+  description="Ad creatives, UGC video, marketing assets design. From your first ad to 200+ creatives/month — we scale with you."
+>
   <Header />
   <main>
+
     <!-- Hero -->
-    <section class="pt-20 md:pt-24 pb-0">
-      <div class="max-w-[1080px] mx-auto px-6 pt-12 md:pt-16 pb-12 md:pb-16">
-        <div class="max-w-[750px]">
-          <div class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium uppercase tracking-[.06em] text-ink-2 mb-7">
-            <strong class="text-accent font-semibold">Creative Testing</strong> — by OKAD Agency
+    <section class="pt-20 md:pt-24">
+      <div class="max-w-[1080px] mx-auto px-6 pt-12 md:pt-16 pb-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium uppercase tracking-[.06em] text-ink-2 mb-6">
+              <strong class="text-accent font-semibold">#PAID_ADS</strong>
+              <span class="text-muted-2">·</span>
+              <strong class="text-accent font-semibold">#ORGANIC</strong>
+              <span class="text-muted-2">·</span>
+              <strong class="text-accent font-semibold">#STATIC & VIDEO</strong>
+            </div>
+
+            <h1 class="font-display font-bold text-[clamp(36px,6vw,56px)] leading-[1.1] tracking-[-0.035em] mb-6 text-ink">
+              Quality<br />
+              <span class="font-script text-accent text-[1.1em]">Scroll-Stopping</span><br />
+              Content At Scale
+            </h1>
+
+            <p class="text-[17px] text-ink-2 leading-[1.55] mb-2">No content? Wrong content?</p>
+            <p class="text-[17px] font-semibold text-ink mb-6">&gt; We solve both.</p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-accent-bg border border-accent/15 text-accent font-medium">Boost your sales</span>
+              <span class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-accent-bg border border-accent/15 text-accent font-medium">Find new audience</span>
+            </div>
+
+            <p class="text-[15px] text-ink-2 leading-[1.55] max-w-[480px] mb-8">
+              Ad creatives, UGC video, marketing assets design. From your first ad to 200+ creatives/month — we scale with you.
+            </p>
+
+            <div class="flex flex-nowrap gap-2.5">
+              <a href="#contact" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-white text-ink border border-[#d1d5db] hover:border-ink hover:bg-ink hover:text-white transition-all no-underline">
+                Get a quote →
+              </a>
+              <a href="https://t.me/o_kad_work" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-lime text-ink hover:bg-[#b8e537] transition-all no-underline">
+                Book a call →
+              </a>
+            </div>
           </div>
 
-          <h1 class="font-display font-bold text-[clamp(36px,6.5vw,60px)] leading-[1.1] tracking-[-0.035em] mb-6 text-ink">
-            Stop guessing<br/>which hooks<br/>will <span class="font-script text-accent text-[1.15em]">convert</span>
-          </h1>
-
-          <p class="text-[19px] text-ink-2 max-w-[560px] leading-[1.55] mb-6">
-            Drop your product link — get a personalized Hook Testing Matrix with 15+ video concepts. We test daily, read the data, and only produce what's proven to work.
-          </p>
-
-          <div class="flex flex-wrap gap-2.5 mb-6">
-            <div class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-white/80 border border-border text-ink-2 backdrop-blur-sm">
-              <strong class="font-display font-bold">Free</strong> to start
+          <div class="relative">
+            <div class="rounded-3xl overflow-hidden">
+              <video autoplay muted loop playsinline poster="/images/hero-poster.jpg" class="w-full aspect-square object-cover">
+                <source src="/images/hero-video.mp4" type="video/mp4" />
+              </video>
             </div>
-            <div class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-white/80 border border-border text-ink-2 backdrop-blur-sm">
-              Results in <strong class="font-display font-bold">24h</strong>
-            </div>
-            <div class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-white/80 border border-border text-ink-2 backdrop-blur-sm">
-              For <strong class="font-display font-bold">startups & DTC</strong>
-            </div>
-          </div>
-
-          <div class="flex flex-nowrap gap-2.5 mt-6">
-            <a
-              href="#start"
-              class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-white text-ink border border-[#d1d5db] hover:border-ink hover:bg-ink hover:text-white transition-all no-underline"
-            >
-              Get free matrix →
-            </a>
-            <a
-              href="#how"
-              class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-lime text-ink border-none hover:bg-[#b8e537] transition-all no-underline"
-            >
-              See how it works →
-            </a>
+            <img src="/images/hero-animation.gif" alt="Creative showcase" class="hidden lg:block absolute -bottom-8 -left-12 w-[320px] rounded-2xl shadow-2xl border-4 border-white" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How it works — dark card -->
-    <div id="how" class="max-w-[1080px] mx-auto mb-16 px-6">
-      <div class="bg-dark rounded-3xl px-6 py-10 md:px-9 md:py-10">
-        <h2 class="font-display font-extrabold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-8 text-white">
-          From link to winning hook
-        </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-5">
-          {steps.map((step) => (
-            <div class="text-left">
-              <div class="mb-2.5 text-[40px] leading-none">{step.emoji}</div>
-              <h4 class="font-display font-bold text-[15px] mb-1 text-white">{step.title}</h4>
-              <p class="text-[13px] text-white/60 leading-[1.45]">{step.desc}</p>
+    <!-- Stats -->
+    <section class="py-12 md:py-16">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-8 mb-10">
+          {stats.map((stat) => (
+            <div>
+              <div class="font-display font-extrabold text-[clamp(40px,6vw,56px)] tracking-[-0.03em] text-ink">{stat.number}</div>
+              <div class="text-[17px] text-muted mt-1">{stat.label}</div>
             </div>
           ))}
         </div>
-      </div>
-    </div>
-
-    <!-- Problem — feature blocks -->
-    <section class="py-16 md:py-20">
-      <div class="max-w-[1080px] mx-auto px-6">
-        <div class="text-center mb-3">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">The problem</p>
-          <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] mb-4">
-            Why most ad creative fails
-          </h2>
-          <p class="text-[17px] text-muted max-w-[520px] mx-auto leading-[1.55] mb-12">
-            Startups produce 3–5 video ads, pick the one that "feels right," and hope for the best. Expensive. Slow. Random.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="bg-warm rounded-3xl p-8 md:p-10 flex flex-col text-left shadow-[inset_0_1px_0_rgba(255,255,255,.6)]">
-            <div class="inline-flex self-start items-center font-mono text-[11px] font-semibold uppercase tracking-[.08em] px-4 py-2 rounded-full bg-warm-pill text-warm-text mb-6">
-              The cost
-            </div>
-            <h3 class="font-display font-extrabold text-[clamp(22px,3vw,28px)] leading-[1.15] tracking-[-0.03em] mb-4 text-ink">
-              <span class="text-warm-text">$2,000–5,000</span> per video ad
-            </h3>
-            <p class="text-[15px] text-ink-2 leading-[1.55]">
-              That's the average cost of one UGC video that might not work. Most brands burn through 3–5 before finding a winner.
-            </p>
-          </div>
-
-          <div class="bg-pink-tint rounded-3xl p-8 md:p-10 flex flex-col text-left shadow-[inset_0_1px_0_rgba(255,255,255,.6)]">
-            <div class="inline-flex self-start items-center font-mono text-[11px] font-semibold uppercase tracking-[.08em] px-4 py-2 rounded-full bg-pink-pill text-pink-text mb-6">
-              The failure rate
-            </div>
-            <h3 class="font-display font-extrabold text-[clamp(22px,3vw,28px)] leading-[1.15] tracking-[-0.03em] mb-4 text-ink">
-              <span class="text-pink-text">70–80%</span> fail in the first 3 seconds
-            </h3>
-            <p class="text-[15px] text-ink-2 leading-[1.55]">
-              Wrong hook = dead ad. The first 3 seconds decide everything, and most brands guess instead of testing.
-            </p>
-          </div>
-
-          <div class="bg-green-tint rounded-3xl p-8 md:p-10 flex flex-col text-left shadow-[inset_0_1px_0_rgba(255,255,255,.6)] sm:col-span-2">
-            <div class="inline-flex self-start items-center font-mono text-[11px] font-semibold uppercase tracking-[.08em] px-4 py-2 rounded-full bg-green-pill text-green-text mb-6">
-              The fix
-            </div>
-            <div class="grid sm:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 class="font-display font-extrabold text-[clamp(22px,3vw,28px)] leading-[1.15] tracking-[-0.03em] mb-4 text-ink">
-                  Test <span class="text-green-text">15+ hooks cheaply</span>. Only produce what data says works.
-                </h3>
-                <p class="text-[15px] text-ink-2 leading-[1.55]">
-                  We map your product to proven hook frameworks, test them with real audiences, and only invest in production for the winners. Data-driven, not gut-driven.
-                </p>
-              </div>
-              <div class="bg-dark rounded-2xl p-8 md:p-12 text-center flex flex-col items-center justify-center">
-                <div class="text-[40px] mb-5">🎯</div>
-                <h4 class="font-display font-extrabold text-2xl text-white mb-3 tracking-[-0.02em]">Test → Data → Scale</h4>
-                <p class="text-[15px] text-white/50 leading-[1.5] max-w-[280px]">You never pay for production until we've proven which hooks convert</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Results -->
-    <section id="results" class="py-16 md:py-20 bg-card border-t border-b border-border">
-      <div class="max-w-[1080px] mx-auto px-6">
-        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Results</p>
-        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
-          Numbers from real campaigns
-        </h2>
-        <p class="text-[17px] text-muted text-center max-w-[520px] mx-auto leading-[1.55] mb-12">
-          Across DTC, SaaS, and app clients using our testing framework.
-        </p>
-
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {results.map((r) => (
-            <div class="bg-bg rounded-2xl p-6 text-center border border-border">
-              <div class={`font-display font-extrabold text-[clamp(32px,5vw,44px)] tracking-[-0.03em] ${r.color}`}>{r.metric}</div>
-              <p class="text-[13px] text-muted mt-2 leading-[1.4]">{r.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing — feature blocks -->
-    <section id="pricing" class="py-16 md:py-20">
-      <div class="max-w-[1080px] mx-auto px-6">
-        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Pricing</p>
-        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
-          Start free. Scale when it works.
-        </h2>
-        <p class="text-[17px] text-muted text-center max-w-[520px] mx-auto leading-[1.55] mb-12">
-          Every plan starts with data. You never pay for production until we've proven which hooks convert.
-        </p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {tiers.map((tier) => {
-            const pc = pillColors[tier.pillColor];
-            const bc = blockColors[tier.pillColor];
-            const btc = btnColors[tier.pillColor];
-            const dc = dotColors[tier.pillColor];
-            return (
-              <div class={`${bc} rounded-3xl p-8 md:p-10 flex flex-col text-left shadow-[inset_0_1px_0_rgba(255,255,255,.6)]`}>
-                <div class={`inline-flex self-start items-center font-mono text-[11px] font-semibold uppercase tracking-[.08em] px-4 py-2 rounded-full ${pc.bg} ${pc.text} mb-6`}>
-                  {tier.pill}
-                </div>
-                <h3 class="font-display font-extrabold text-[clamp(22px,3vw,28px)] leading-[1.15] tracking-[-0.03em] mb-2 text-ink">
-                  {tier.title} — <span class={pc.text}>{tier.em}</span>
-                </h3>
-                <p class="font-display font-bold text-xl text-ink mb-4">{tier.price}</p>
-                <p class="text-[15px] text-ink-2 leading-[1.55] mb-6 flex-1">{tier.desc}</p>
-                <ul class="list-none p-0 m-0 mb-6 space-y-1.5">
-                  {tier.bullets.map((b) => (
-                    <li class="relative pl-4 text-[14px] text-ink-2 leading-[1.5]">
-                      <span class={`absolute left-0 top-[8px] w-1.5 h-1.5 rounded-full ${dc}`}></span>
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-                <div class="mt-auto pt-2">
-                  <a
-                    href={tier.ctaHref}
-                    class={`inline-flex items-center gap-1.5 px-[18px] py-2.5 rounded-full font-sans text-[13px] font-semibold text-white ${btc.bg} ${btc.hover} transition-all no-underline`}
-                  >
-                    {tier.cta}
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-16 md:py-20 bg-card border-t border-border">
-      <div class="max-w-[720px] mx-auto px-6">
-        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">FAQ</p>
-        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-12">
-          Frequently asked questions
-        </h2>
 
         <div class="space-y-3">
-          {faqs.map((faq) => (
-            <details class="group bg-bg rounded-2xl border border-border">
-              <summary class="flex items-center justify-between cursor-pointer p-5 font-display text-[15px] font-semibold text-ink">
-                {faq.q}
-                <svg class="w-4 h-4 text-muted group-open:rotate-45 transition-transform flex-shrink-0 ml-4" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" />
-                </svg>
-              </summary>
-              <div class="px-5 pb-5 text-[14px] text-ink-2 leading-relaxed">
-                {faq.a}
+          <div class="flex flex-wrap gap-2.5 justify-center">
+            {tagsRow1.map((tag) => (
+              <span class="px-4 py-2 text-[11px] font-semibold uppercase tracking-[.08em] bg-card rounded-full text-ink-2 border border-border">{tag}</span>
+            ))}
+          </div>
+          <div class="flex flex-wrap gap-2.5 justify-center">
+            {tagsRow2.map((tag) => (
+              <span class="px-4 py-2 text-[11px] font-semibold uppercase tracking-[.08em] bg-card rounded-full text-ink-2 border border-border">{tag}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Cases -->
+    <section id="content" class="py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Content</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-12">
+          Explore Our Content Cases
+        </h2>
+
+        <div class="space-y-6">
+          {cases.map((c) => (
+            <div class="rounded-3xl p-8 md:p-10 shadow-[inset_0_1px_0_rgba(255,255,255,.6)]" style={blockBg[c.color]}>
+              <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    {c.tags.map((tag) => (
+                      <span class="rounded-full px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-[.08em]" style={pillStyle[c.color]}>{tag}</span>
+                    ))}
+                  </div>
+                  <h3 class="font-display font-extrabold text-[clamp(22px,3vw,28px)] leading-[1.15] tracking-[-0.03em] mb-4 text-ink">{c.title}</h3>
+                  <div class="flex flex-wrap gap-2 mb-5">
+                    {c.chips.map((chip) => (
+                      <span class="px-3 py-1.5 text-[12px] font-medium bg-white/80 rounded-full text-ink-2 border border-border">{chip}</span>
+                    ))}
+                  </div>
+                  <p class="text-[15px] text-ink-2 leading-[1.55] mb-3">{c.description}</p>
+                  <p class="text-[13px] text-muted italic mb-6">{c.challenge}</p>
+                  <div class="flex flex-wrap gap-2.5">
+                    <a href="#contact" class="inline-flex items-center gap-1.5 px-[18px] py-2.5 rounded-full font-sans text-[13px] font-semibold text-white no-underline transition-all" style={`background: ${btnBg[c.color]}`}>
+                      Explore Case →
+                    </a>
+                    <a href="#contact" class="inline-flex items-center gap-1.5 px-[18px] py-2.5 rounded-full font-sans text-[13px] font-semibold bg-white text-ink border border-[#d1d5db] hover:border-ink transition-all no-underline">
+                      Get a quote
+                    </a>
+                  </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                  <img src={c.image} alt={c.title} class="w-full h-auto object-cover rounded-2xl" loading="lazy" />
+                </div>
               </div>
-            </details>
+            </div>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- CTA — dark brands section style -->
-    <section id="start" class="bg-dark py-16 md:py-20">
+    <!-- Design Cases -->
+    <section id="design" class="py-16 md:py-20 bg-card border-t border-b border-border">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Design</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-12">
+          Explore Design Cases
+        </h2>
+
+        <div class="space-y-6">
+          {designCases.map((c) => (
+            <div class="rounded-3xl p-8 md:p-10 shadow-[inset_0_1px_0_rgba(255,255,255,.6)]" style={blockBg[c.color]}>
+              <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    {c.tags.map((tag) => (
+                      <span class="rounded-full px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-[.08em]" style={pillStyle[c.color]}>{tag}</span>
+                    ))}
+                  </div>
+                  <h3 class="font-display font-extrabold text-[clamp(22px,3vw,28px)] leading-[1.15] tracking-[-0.03em] mb-4 text-ink">{c.title}</h3>
+                  <p class="text-[15px] text-ink-2 leading-[1.55] mb-3">{c.description}</p>
+                  <p class="text-[13px] text-muted italic mb-6">{c.challenge}</p>
+                  <div class="flex flex-wrap gap-2.5">
+                    <a href="#" class="inline-flex items-center gap-1.5 px-[18px] py-2.5 rounded-full font-sans text-[13px] font-semibold text-white no-underline transition-all" style={`background: ${btnBg[c.color]}`}>
+                      {c.buttonText} →
+                    </a>
+                    <a href="#contact" class="inline-flex items-center gap-1.5 px-[18px] py-2.5 rounded-full font-sans text-[13px] font-semibold bg-white text-ink border border-[#d1d5db] hover:border-ink transition-all no-underline">
+                      Get a quote
+                    </a>
+                  </div>
+                  {c.behanceLink && (
+                    <a href={c.behanceLink} target="_blank" rel="noopener noreferrer" class="inline-block mt-5 text-[13px] font-medium text-accent hover:underline no-underline">
+                      Explore More Design Cases on Behance →
+                    </a>
+                  )}
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                  <img src={c.image} alt={c.title} class="w-full h-auto object-cover rounded-2xl" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {tiles.map((tile, i) => (
+            <div class:list={[
+              "rounded-2xl overflow-hidden",
+              (i === 2 || i === 3 || i === 6 || i === 7) ? "md:col-span-2" : "",
+            ]}>
+              <img src={tile.src} alt={tile.alt} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section id="video" class="py-16 md:py-20 bg-card border-t border-b border-border">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="text-center mb-10">
+          <p class="text-[17px] text-muted mb-2">Not ready for a call?</p>
+          <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em]">
+            Watch me walk through real projects
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          {videos.map((video) => (
+            <div class="bg-bg rounded-2xl overflow-hidden border border-border">
+              <div class="aspect-video">
+                <iframe src={video.embedUrl} title={video.title} class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" />
+              </div>
+              <div class="p-4">
+                <p class="text-[13px] font-semibold text-ink-2">{video.title}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] mb-3">
+          Don't take our word for it
+        </h2>
+        <p class="text-[17px] text-muted max-w-[480px] mb-10 leading-[1.55]">
+          Ad creatives, websites, and brand systems for 100+ brands. From first concept to scaled production.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {reviews.map((review) => (
+            <div class="bg-card border border-border rounded-2xl p-6 flex flex-col">
+              <div class="text-[#F59E0B] text-[14px] mb-2.5">★★★★★</div>
+              <p class="text-[15px] text-ink-2 leading-[1.55] italic flex-1 mb-5">
+                "{review.text}"
+              </p>
+              <div class="flex items-center gap-2.5 mt-auto">
+                <img src={review.avatar} alt={review.name} class="w-9 h-9 rounded-full object-cover" loading="lazy" />
+                <div>
+                  <div class="text-[14px] font-semibold text-ink">{review.name}</div>
+                  <div class="text-[12px] text-muted">{review.role} of {review.company}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Founder CTA -->
+    <section id="contact" class="bg-dark py-16 md:py-20">
       <div class="max-w-[1080px] mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-5">
           <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 transition-transform hover:-translate-y-0.5">
-            <h3 class="font-display font-bold text-[22px] tracking-[-0.02em] mb-3 text-white">
-              Get your Hook Matrix — free
-            </h3>
-            <p class="text-[15px] text-white/60 leading-relaxed mb-6">
-              Paste your product link and we'll send a personalized testing plan with 15+ hook concepts within 24 hours. No credit card.
+            <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] tracking-[-0.02em] text-white mb-4">
+              Start with a Conversation
+            </h2>
+            <p class="text-[17px] text-white/60 leading-[1.55] mb-8">
+              I'm Olga, founder of OKAD. Most projects start with a quick 20-min call to understand your brand and share relevant cases.
             </p>
-            <div class="space-y-3 mb-6">
-              <input
-                type="url"
-                placeholder="https://your-product.com"
-                class="w-full px-4 py-3 rounded-xl bg-white/5 text-white border border-white/15 focus:border-accent focus:outline-none text-[14px] placeholder:text-white/30"
-              />
-              <input
-                type="email"
-                placeholder="you@company.com"
-                class="w-full px-4 py-3 rounded-xl bg-white/5 text-white border border-white/15 focus:border-accent focus:outline-none text-[14px] placeholder:text-white/30"
-              />
+            <div class="space-y-2.5 mb-8">
+              <p class="text-[13px] text-white/40">Founder: Olga Kad Miller</p>
+              <p class="text-[13px] text-white/40">Email: <a href="mailto:olga@okad.agency" class="text-white hover:text-accent transition-colors no-underline">olga@okad.agency</a></p>
+              <p class="text-[13px] text-white/40">WhatsApp: <a href="https://wa.me/351939209099" class="text-white hover:text-accent transition-colors no-underline">+351 939 209 099</a></p>
             </div>
-            <button class="w-full bg-white text-ink text-[14px] font-semibold px-7 py-3 rounded-full border border-white hover:bg-border transition-colors">
-              Get my free matrix →
-            </button>
+            <div class="flex flex-wrap gap-2.5">
+              <a href="mailto:olga@okad.agency" class="inline-flex items-center px-5 py-2.5 bg-white text-ink text-[13px] font-semibold rounded-full hover:bg-border transition-colors no-underline">Email Us</a>
+              <a href="https://wa.me/351939209099" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 bg-lime text-ink text-[13px] font-semibold rounded-full hover:bg-[#b8e537] transition-colors no-underline">WhatsApp</a>
+              <a href="https://www.linkedin.com/in/o-kad/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 text-white/60 text-[13px] font-semibold rounded-full border border-white/15 hover:text-white hover:border-white/40 transition-colors no-underline">LinkedIn</a>
+            </div>
           </div>
 
-          <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 transition-transform hover:-translate-y-0.5 flex flex-col justify-between">
-            <div>
-              <h3 class="font-display font-bold text-[22px] tracking-[-0.02em] mb-3 text-white">
-                Prefer to talk first?
-              </h3>
-              <p class="text-[15px] text-white/60 leading-relaxed mb-8">
-                Book a 20-min call with Olga, founder of OKAD. We'll review your current ads, discuss your goals, and map out a testing plan together.
-              </p>
-            </div>
-            <div class="space-y-3">
-              <a
-                href="mailto:olga@okad.agency"
-                class="flex items-center justify-center gap-2 w-full bg-white text-ink text-[14px] font-semibold px-7 py-3 rounded-full hover:bg-border transition-colors no-underline"
-              >
-                Email us
-              </a>
-              <div class="flex gap-3">
-                <a
-                  href="https://wa.me/351939209099"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex-1 text-center text-[13px] font-medium text-white/60 hover:text-white py-2.5 border border-white/15 rounded-full transition-colors no-underline"
-                >
-                  WhatsApp
-                </a>
-                <a
-                  href="https://t.me/o_kad_work"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex-1 text-center text-[13px] font-medium text-white/60 hover:text-white py-2.5 border border-white/15 rounded-full transition-colors no-underline"
-                >
-                  Telegram
-                </a>
-              </div>
-            </div>
+          <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 transition-transform hover:-translate-y-0.5 flex items-center justify-center">
+            <img src="/images/founder.png" alt="Olga Kad Miller, founder of OKAD Agency" class="w-64 md:w-72 rounded-2xl" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
+
   </main>
   <Footer />
 </Layout>
