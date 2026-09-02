@@ -11,13 +11,13 @@ const navItems = [
 ---
 
 <header id="site-header" class="fixed top-3 left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-[1080px] z-30 bg-white rounded-full shadow-[0_2px_16px_rgba(0,0,0,.1)]">
-  <div class="flex items-center justify-between h-12 px-6">
+  <div class="flex items-center gap-3 md:gap-5 h-12 px-4 md:px-6">
     <a href="/" class="flex items-center gap-2 no-underline shrink-0">
       <img src="https://framerusercontent.com/images/9rU7XfzW4mHPYwiTjfyQcoLY.png" alt="OKAD" class="h-6" />
       <span class="font-display text-lg font-semibold tracking-tight text-ink">OKAD</span>
     </a>
 
-    <nav class="flex items-center gap-4 overflow-x-auto hide-scrollbar">
+    <nav class="flex items-center gap-3 md:gap-4 overflow-x-auto hide-scrollbar">
       {navItems.map((item) => (
         <a
           href={item.href}
