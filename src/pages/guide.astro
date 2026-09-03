@@ -1,0 +1,563 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailCreators = "mailto:olga@okad.agency?subject=Creator%20curation%20%E2%80%94%20tell%20us%20about%20your%20product";
+const emailBroll = "mailto:olga@okad.agency?subject=B-roll%20production%20%E2%80%94%20tell%20us%20about%20your%20product";
+const emailGeneral = "mailto:olga@okad.agency?subject=Creative%20testing%20%E2%80%94%20tell%20us%20about%20your%20product";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Creative Testing — The Complete Guide | OKAD Agency"
+  description="Everything about creative testing for paid ads: what it is, how it works, why most brands test wrong, and how to build a system that finds winners. An open reference by OKAD Agency."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Creative Testing: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Creative testing is the practice of producing high volumes of ad variations and using real purchase data to find winners. This guide covers how it works, why most brands test wrong, and how to build a system that scales.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailCreators} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Order creator curation &rarr;</a>
+          <a href={emailBroll} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Order B-roll production &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Paid ads</span>
+          <span>UGC</span>
+          <span>B-roll</span>
+          <span>AI statics</span>
+          <span>50+ creatives / mo</span>
+          <span>Data-driven</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Creative Testing Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F50D;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Research &amp; Script</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Analyze competitors, customer reviews, ad data. Write modular scripts with 3+ hooks per concept.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Produce &amp; Launch</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">UGC creators shoot, we edit. 40-70 videos per batch. Launch as ads within 2 weeks.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4CA;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Measure &amp; Scale</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Tag every creative: Scale, Iterate, or Kill. Decisions from purchase data, not guesswork.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "What Is Creative Testing?", href: "#what" },
+            { num: "03", text: "Why Most Brands Test Wrong", href: "#wrong" },
+            { num: "04", text: "The System: How It Actually Works", href: "#system" },
+            { num: "05", text: "Formats & Angles", href: "#formats" },
+            { num: "06", text: "Creator Selection & Curation", href: "#creators" },
+            { num: "07", text: "B-Roll & AI Production", href: "#broll" },
+            { num: "08", text: "Metrics & Benchmarks", href: "#metrics" },
+            { num: "09", text: "Economics", href: "#economics" },
+            { num: "10", text: "Glossary", href: "#glossary" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Creative testing is volume &times; data</h2>
+        <div class="bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] rounded-xl p-5 mb-7">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">TL;DR</div>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most brands produce 5-10 ads and guess which one is best</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creative testing produces 40-70 per batch and lets purchase data decide</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The winner rate in a well-run batch is ~30%. You need volume to hit it</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional ad production is a creative bet: hire a team, produce a handful of polished videos, run them until they burn out. Creative testing flips this &mdash; produce many variations cheaply, run all of them, and let real purchase data tell you which ones work.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The model grew up inside DTC and tech companies spending $50K-$500K/month on paid media. At that spend level, the cost of a wrong creative is measured in tens of thousands of wasted dollars. The cost of testing 50 variations instead of 5 is trivial by comparison.</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[100px]">Volume:</strong> 40-70 creatives per batch</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[100px]">Signal:</strong> real purchases, not views or likes</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[100px]">Cycle:</strong> 2-3 weeks per batch</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[100px]">Outcome:</strong> Scale winners, kill losers, iterate the middle</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 What Is Creative Testing -->
+    <section class="guide-section" id="what">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What is creative testing?</h2>
+        <div class="bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] rounded-xl p-5 mb-7">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">TL;DR</div>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Producing many ad variations systematically, not one polished hero video</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each variation tests one variable: hook, creator, format, angle, or CTA</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Winners are identified by CPA, not by likes or views</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Creative testing</strong> is a structured approach to paid ad production where every video is a hypothesis. Instead of producing one "best" ad, you produce dozens of variations &mdash; each testing a specific variable &mdash; and run all of them simultaneously as ads.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">A quick example</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A DTC supplement brand writes one script about bloating relief. From that script, they produce 12 videos: 3 different hooks &times; 2 creators &times; 2 formats (talking head vs voiceover + B-roll). All 12 run as ads. After $500 in spend, two have a CPA under $30 (target was $50). Those two get scaled. The other ten get killed or iterated. That's one creative test.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What it is not</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Not A/B testing a landing page</strong> &mdash; creative testing is about the ad itself, not where it sends traffic</li>
+          <li><strong>Not brand video production</strong> &mdash; the goal is performance, not polish</li>
+          <li><strong>Not influencer marketing</strong> &mdash; creators produce content for ads, not for their own audience</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 03 Why Most Brands Test Wrong -->
+    <section class="guide-section" id="wrong">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; The Problem</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why most brands test wrong</h2>
+        <div class="bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] rounded-xl p-5 mb-7">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">TL;DR</div>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Too few creatives &mdash; 5-10 per month isn't enough data</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Testing too many variables at once</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Judging by views instead of purchases</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most brands hire a videographer or agency to produce 5-10 ads per month. They pick the "best" one based on gut feeling, run it until it fatigues, and start over. This is not testing &mdash; it's guessing with expensive production.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The five mistakes</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step">Not enough volume &mdash; with a 30% winner rate, you need 30+ creatives to find 10 winners</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step">Changing too many variables at once &mdash; if the hook, creator, and format all change, you can't tell what worked</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step">Optimizing for views or CTR instead of CPA &mdash; a viral ad that doesn't convert is a cost center</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step">Not tracking creator-angle fit &mdash; the same script can cost $32/customer with one creator and $92 with another</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step">No system for iteration &mdash; winners aren't scaled, losers aren't analyzed</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 04 The System -->
+    <section class="guide-section" id="system">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; The System</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How creative testing actually works</h2>
+        <div class="bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] rounded-xl p-5 mb-7">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">TL;DR</div>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Research &rarr; Scripts &rarr; Production &rarr; Data &rarr; Iterate</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Modular scripts: one body, multiple hooks and CTAs</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every creative is tagged Scale / Iterate / Kill after 2-3 weeks of ad data</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The four stages</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Research.</strong> Analyze competitors' ads, your existing data, customer reviews. Build 5-8 testing angles &mdash; real pain points your customers have.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Scripts.</strong> Modular scripts: one proven body, multiple openings. 3 hooks &times; 2 creators &times; 2 formats = 12 videos from one concept.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Production.</strong> Creators shoot, we edit. UGC, voiceover + B-roll, AI statics, product demos. 40-70 videos in 2 weeks.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Data.</strong> After 2-3 weeks of ad data, tag every creative: Scale, Iterate, or Kill. Not likes &mdash; actual purchases.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Three batches, two months</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Batch 1: Find.</strong> 40-70 original videos testing multiple angles, creators, and formats. Every video is a hypothesis.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Batch 2: Scale.</strong> 10+ variations of every Batch 1 winner. New hooks, re-edited middles, different CTAs. Budget follows performance.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Batch 3: Find more.</strong> 50 new concepts, untested ideas, new pain points. Runs in parallel with Batch 2.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">By the end of month 2: 100-150 tested creatives, a clear picture of what works, and a system to keep finding winners.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need creators or B-roll for your ads?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We handle creator curation, scripting, and B-roll production. You get tested creatives ready to run as ads.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCreators} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Order creator curation &rarr;</a>
+            <a href={emailBroll} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Order B-roll production &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Formats & Angles -->
+    <section class="guide-section" id="formats">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Formats</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Formats &amp; angles: the real edge</h2>
+        <div class="bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] rounded-xl p-5 mb-7">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">TL;DR</div>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">6 core formats: UGC talking head, VO + B-roll, before/after, product demo, POV, AI statics</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">In our data, VO + B-roll costs 25% less per customer than talking heads</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You don't know which format wins until you test them all</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The six formats</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Format</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What it is</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">UGC talking head</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator speaks to camera</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Trust, authenticity</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">VO + B-roll</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Voiceover with product footage</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Lower CPA, visual products</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Before / After</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Transformation comparison</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Health, beauty, SaaS</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Product demo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Screen recording or hands-on</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Tech, apps, AI tools</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">POV</td><td class="px-4 py-2.5 border-b border-border text-ink-2">First-person perspective</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Lifestyle, experience</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">AI statics</td><td class="px-4 py-2.5 text-ink-2">AI-generated images + motion</td><td class="px-4 py-2.5 text-ink-2">Volume, visual variety</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Angles: 5-8 reasons people buy</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Each angle is a testing track. For supplements: bloating, fatigue, sleep. For AI products: speed, social proof, before/after. For fintech: hidden fees, instant transfers, rewards.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The hook library, angle library, and format library are the intellectual property of a creative testing program. Creators remix them into dozens of variants per week. Each variant is tracked back to its parent, so you know which hook families drive purchases.</p>
+      </div>
+    </section>
+
+    <!-- 06 Creator Selection -->
+    <section class="guide-section" id="creators">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Creators</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Creator selection &amp; curation</h2>
+        <div class="bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] rounded-xl p-5 mb-7">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">TL;DR</div>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The person matters more than the script</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Same script, different creator = 3x CPA difference</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">We test 2-3 creators per batch from a 600+ network</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">In our data, the same script can cost $32/customer with one creator and $92 with another. That 3x difference comes entirely from creator-product fit &mdash; how naturally they handle the product, how their energy matches the audience, how their face and voice build trust.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is why creator selection matters more than script quality. A mediocre script with the right creator outperforms a brilliant script with the wrong one.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What we look for</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Product affinity</strong> &mdash; the creator naturally uses or understands products in the category</li>
+          <li><strong>Hook delivery</strong> &mdash; how they handle the first 1-2 seconds on camera</li>
+          <li><strong>Edit pace</strong> &mdash; native short-form editing style, not polished commercial</li>
+          <li><strong>Demographic match</strong> &mdash; age, energy, and context that resonate with the target buyer</li>
+          <li><strong>Consistency</strong> &mdash; ability to produce 10-15 variations per batch without quality drop</li>
+        </ul>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9679;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailCreators} class="text-ink hover:text-accent transition-colors no-underline">Order creator curation from OKAD</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">We select, brief, and manage 2-3 creators per batch from our 600+ network. You get tested creator-angle combinations, not random influencers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 B-Roll & AI -->
+    <section class="guide-section" id="broll">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Production</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">B-roll &amp; AI production</h2>
+        <div class="bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] rounded-xl p-5 mb-7">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">TL;DR</div>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">VO + B-roll is the best-performing format in our data</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">AI statics brought customers at half the cost of traditional statics</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Combined: UGC handles trust, AI handles visual variety</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">B-roll production for creative testing is different from brand video. The goal is not a beautiful product reel &mdash; it's footage that can be combined with voiceover scripts in dozens of variations. We shoot modular B-roll: product in use, close-ups, lifestyle context, unboxing, results.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">AI-generated scenes and statics add another layer. In our testing, AI statics brought customers at half the cost of traditional statics. Combined with UGC and scripts, AI handles visual variety while creators handle trust.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What we produce</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Product B-roll</strong> &mdash; close-ups, unboxing, in-use footage, lifestyle context</li>
+          <li><strong>Voiceover recordings</strong> &mdash; multiple takes per script, different pacing and energy</li>
+          <li><strong>AI statics</strong> &mdash; product scenes, before/after visuals, lifestyle imagery</li>
+          <li><strong>AI video</strong> &mdash; motion graphics, animated product demos, visual hooks</li>
+          <li><strong>Editing</strong> &mdash; all footage assembled into 15-45s ad creatives with captions and sound</li>
+        </ul>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9670;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailBroll} class="text-ink hover:text-accent transition-colors no-underline">Order B-roll &amp; AI production from OKAD</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Modular B-roll, voiceover, AI statics, editing &mdash; everything you need to assemble dozens of ad variations from one shoot.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 Metrics -->
+    <section class="guide-section" id="metrics">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Metrics</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Metrics &amp; benchmarks</h2>
+        <div class="bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] rounded-xl p-5 mb-7">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">TL;DR</div>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CPA is the only metric that matters for decisions</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Winner hit rate ~30% in a well-run batch</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Track creator-angle fit, not just creative-level CPA</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Why it matters</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Common mistake</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CPA</td><td class="px-4 py-2.5 border-b border-border text-ink-2">The only decision metric</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Looking at CTR instead</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Winner hit rate</td><td class="px-4 py-2.5 border-b border-border text-ink-2">System health check</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Not tracking it at all</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator-angle fit</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Explains 3x CPA variance</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Blaming the script</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Hook retention</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Predicts CPA before spend</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Ignoring 3s retention</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Format CPA</td><td class="px-4 py-2.5 text-ink-2">Which format family works</td><td class="px-4 py-2.5 text-ink-2">Assuming UGC always wins</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Benchmarks from real batches</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Best CPA achieved</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$26 (target was $70)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Winner hit rate</td><td class="px-4 py-2.5 border-b border-border text-ink-2">32% (14 out of 44)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CPA range, same script</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$26 &ndash; $116 depending on creator</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">VO + B-roll vs UGC</td><td class="px-4 py-2.5 border-b border-border text-ink-2">25% lower CPA on average</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">AI statics vs traditional</td><td class="px-4 py-2.5 text-ink-2">~50% lower cost per customer</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 Economics -->
+    <section class="guide-section" id="economics">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Economics</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The economics of creative testing</h2>
+        <div class="bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] rounded-xl p-5 mb-7">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">TL;DR</div>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A full-time videographer costs $4-5K/month and produces 10-15 videos</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creative testing delivers 40-70 with strategy, scripts, creators, editing</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The real ROI is in lower CPA, not cheaper production</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Aspect</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">In-house / freelancer</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Creative testing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Videos / month</td><td class="px-4 py-2.5 border-b border-border text-ink-2">5-15</td><td class="px-4 py-2.5 border-b border-border text-ink-2">40-70+</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Strategy</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Ad-hoc</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Research-driven angles</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Scripts</td><td class="px-4 py-2.5 border-b border-border text-ink-2">One-off</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Modular, hook library</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creators</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1</td><td class="px-4 py-2.5 border-b border-border text-ink-2">2-3, tested for fit</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Data</td><td class="px-4 py-2.5 border-b border-border text-ink-2">None</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Scale / Iterate / Kill</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Learning</td><td class="px-4 py-2.5 text-ink-2">Gut feeling</td><td class="px-4 py-2.5 text-ink-2">Compound: each batch builds on the last</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The production cost difference is modest. The CPA difference is massive. A brand spending $100K/month on ads that finds even one creative with a 30% lower CPA saves $30K/month &mdash; every month that creative runs.</p>
+      </div>
+    </section>
+
+    <!-- 10 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+
+        {[
+          { term: "Creative testing", def: "Systematic production of ad variations to find winners through real purchase data." },
+          { term: "CPA", def: "Cost per acquisition — the dollar amount to acquire one customer through a specific ad creative." },
+          { term: "Hook", def: "The first 1-2 seconds of an ad. The largest single predictor of performance." },
+          { term: "Modular script", def: "A script designed to be remixed: one body with multiple interchangeable hooks and CTAs." },
+          { term: "Scale / Iterate / Kill", def: "The three outcomes for every tested creative. Scale means increase spend. Iterate means change one variable. Kill means stop." },
+          { term: "Angle", def: "A specific pain point or benefit used as the core message of an ad variation." },
+          { term: "Creator-angle fit", def: "How well a specific creator's delivery matches a specific product angle. Explains most CPA variance." },
+          { term: "B-roll", def: "Supporting footage (product close-ups, lifestyle shots, demos) used in voiceover-style ads." },
+          { term: "Winner hit rate", def: "Percentage of tested creatives that meet or beat the target CPA. ~30% in a well-run batch." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What is creative testing?", a: "Creative testing is producing many ad variations systematically — each testing one variable (hook, creator, format, angle) — and using real purchase data to find which ones work. It's not A/B testing landing pages; it's testing the ads themselves." },
+          { q: "How many creatives do I need per batch?", a: "We recommend 40-70 per batch. With a ~30% winner rate, that gives you 12-20 winners to scale. Fewer than 20 creatives per batch rarely produces statistically meaningful results." },
+          { q: "How long until I see results?", a: "First batch is produced in 2 weeks. After 2-3 weeks of ad data, you know which creatives are winners. By month 2, you have 100-150 tested creatives and a clear scaling playbook." },
+          { q: "What's the difference between creative testing and just making more ads?", a: "Volume alone isn't the answer. Creative testing is structured: each video tests one variable, results are tracked at the creative level, and decisions (Scale/Iterate/Kill) are made from purchase data, not views." },
+          { q: "Do I need my own creators?", a: "No. We handle creator selection and management from our 600+ creator network. We match creators to your product based on demographic fit, hook delivery, and category experience." },
+          { q: "Can I order just creator curation or just B-roll?", a: "Yes. Creator curation (selection + briefing + management) and B-roll production are available as standalone services. Write to us and we'll scope it based on your needs." },
+          { q: "What ad spend do I need to test effectively?", a: "Minimum $50-100 per creative to get statistically meaningful CPA data. For a 50-creative batch, that's $2,500-5,000 in test spend — typically a small fraction of a brand's monthly ad budget." },
+          { q: "Which platforms does this work on?", a: "Meta (Facebook + Instagram), TikTok, YouTube, and Google. The creative formats and testing methodology apply across all major paid media platforms." },
+          { q: "How is this different from hiring a UGC agency?", a: "Most UGC agencies deliver 5-10 videos and call it done. Creative testing is a system: research-driven angles, modular scripts, multiple creators per concept, real data analysis, and iteration across batches." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to start testing?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your product and current ad setup. We'll review it, suggest what to test first, and scope a batch.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailGeneral} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Write to us &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on real creative testing campaigns run by OKAD Agency for DTC, tech, and consumer brands. Benchmarks are directional, not guarantees. Individual outcomes depend on product, ad spend, target audience, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  .faq-item.open .faq-icon {
+    content: '\2212';
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
