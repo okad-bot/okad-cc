@@ -1,0 +1,600 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const guides = [
+  {
+    title: "Creative Testing",
+    quote: "Test before you scale",
+    subtitle: "Hypothesis-driven ad experimentation",
+    href: "/guide",
+    tag: "Strategy",
+    emoji: "&#x1F9EA;",
+    bg: "linear-gradient(135deg, #F4A261 0%, #E76F51 100%)",
+    noise: "warm",
+  },
+  {
+    title: "Canvas UGC",
+    quote: "The brand is the canvas",
+    subtitle: "Creators post on brand-owned accounts",
+    href: "/canvas-ugc",
+    tag: "Content Model",
+    emoji: "&#x1F3A8;",
+    bg: "linear-gradient(135deg, #264653 0%, #2A9D8F 100%)",
+    noise: "cool",
+  },
+  {
+    title: "Tech UGC",
+    quote: "Educate, don't sell",
+    subtitle: "Creator-made software & app content",
+    href: "/tech-ugc",
+    tag: "Content Model",
+    emoji: "&#x1F4BB;",
+    bg: "linear-gradient(135deg, #7209B7 0%, #B5179E 100%)",
+    noise: "warm",
+  },
+  {
+    title: "UGC Ads",
+    quote: "4x higher CTR",
+    subtitle: "Creator content as paid advertising",
+    href: "/ugc-ads",
+    tag: "Ads",
+    emoji: "&#x1F4F1;",
+    bg: "linear-gradient(135deg, #F4A261 0%, #E9C46A 100%)",
+    noise: "warm",
+  },
+  {
+    title: "Spark Ads",
+    quote: "Boost what already works",
+    subtitle: "TikTok's organic-to-paid format",
+    href: "/spark-ads",
+    tag: "Platform",
+    emoji: "&#x26A1;",
+    bg: "linear-gradient(135deg, #1a1a1f 0%, #EE1D52 100%)",
+    noise: "cool",
+  },
+  {
+    title: "Partnership Ads",
+    quote: "Creator's face, your budget",
+    subtitle: "Meta's branded content ad format",
+    href: "/partnership-ads",
+    tag: "Platform",
+    emoji: "&#x1F91D;",
+    bg: "linear-gradient(135deg, #1877F2 0%, #4CC9F0 100%)",
+    noise: "cool",
+  },
+  {
+    title: "Hook Rate",
+    quote: "3 seconds decide everything",
+    subtitle: "The metric that predicts CPA",
+    href: "/hook-rate",
+    tag: "Metrics",
+    emoji: "&#x1F3A3;",
+    bg: "linear-gradient(135deg, #F77F00 0%, #FCBF49 100%)",
+    noise: "warm",
+  },
+  {
+    title: "Ad Fatigue",
+    quote: "10 days on Meta in 2026",
+    subtitle: "Why winning ads stop working",
+    href: "/ad-fatigue",
+    tag: "Metrics",
+    emoji: "&#x1F4C9;",
+    bg: "linear-gradient(135deg, #D62828 0%, #F77F00 100%)",
+    noise: "warm",
+  },
+  {
+    title: "Performance Creative",
+    quote: "Data picks the winner",
+    subtitle: "Ad creative optimized for CPA & ROAS",
+    href: "/performance-creative",
+    tag: "Strategy",
+    emoji: "&#x1F3AF;",
+    bg: "linear-gradient(135deg, #6366F1 0%, #A855F7 100%)",
+    noise: "cool",
+  },
+  {
+    title: "Modular Creative",
+    quote: "13 parts = 72 ads",
+    subtitle: "Hooks × Bodies × CTAs = scale",
+    href: "/modular-creative",
+    tag: "Strategy",
+    emoji: "&#x1F9E9;",
+    bg: "linear-gradient(135deg, #0891B2 0%, #06B6D4 100%)",
+    noise: "cool",
+  },
+  {
+    title: "UGC Whitelisting",
+    quote: "Ads from creator accounts",
+    subtitle: "50% lower CPA, 2.4x higher CTR",
+    href: "/ugc-whitelisting",
+    tag: "Ads",
+    emoji: "&#x1F513;",
+    bg: "linear-gradient(135deg, #7C3AED 0%, #C084FC 100%)",
+    noise: "cool",
+  },
+  {
+    title: "Whitelabel UGC",
+    quote: "Their face, your ad",
+    subtitle: "$150–$500 per video, brand owns it",
+    href: "/whitelabel-ugc",
+    tag: "Content Model",
+    emoji: "&#x1F3F7;",
+    bg: "linear-gradient(135deg, #374151 0%, #6B7280 100%)",
+    noise: "cool",
+  },
+  {
+    title: "High-Volume UGC",
+    quote: "Volume is the strategy",
+    subtitle: "50–300+ videos per month at scale",
+    href: "/high-volume-ugc",
+    tag: "Content Model",
+    emoji: "&#x1F3ED;",
+    bg: "linear-gradient(135deg, #059669 0%, #34D399 100%)",
+    noise: "cool",
+  },
+  {
+    title: "Branded Content Ads",
+    quote: "Native ads that convert",
+    subtitle: "Creator-powered paid advertising",
+    href: "/branded-content-ads",
+    tag: "Ads",
+    emoji: "&#x2728;",
+    bg: "linear-gradient(135deg, #EC4899 0%, #F9A8D4 100%)",
+    noise: "warm",
+  },
+  {
+    title: "Social Proof Ads",
+    quote: "92% trust real people",
+    subtitle: "Testimonials & reviews as ad creative",
+    href: "/social-proof-ads",
+    tag: "Ads",
+    emoji: "&#x2B50;",
+    bg: "linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%)",
+    noise: "warm",
+  },
+  {
+    title: "UGC Creator",
+    quote: "Not an influencer",
+    subtitle: "What they do & how to hire them",
+    href: "/ugc-creator",
+    tag: "Creators",
+    emoji: "&#x1F3AC;",
+    bg: "linear-gradient(135deg, #10B981 0%, #6EE7B7 100%)",
+    noise: "cool",
+  },
+  {
+    title: "Creator Network",
+    quote: "700+ creators on call",
+    subtitle: "Building & managing creator pools",
+    href: "/creator-network",
+    tag: "Creators",
+    emoji: "&#x1F465;",
+    bg: "linear-gradient(135deg, #1a1a1f 0%, #6366F1 100%)",
+    noise: "cool",
+  },
+  {
+    title: "UGC Creator Rates",
+    quote: "$150–$2,000 per video",
+    subtitle: "Complete pricing guide by level & niche",
+    href: "/ugc-rates",
+    tag: "Pricing",
+    emoji: "&#x1F4B0;",
+    bg: "linear-gradient(135deg, #059669 0%, #10B981 100%)",
+    noise: "cool",
+  },
+  {
+    title: "UGC Portfolio Examples",
+    quote: "Show, don't tell",
+    subtitle: "What great creator portfolios look like",
+    href: "/ugc-portfolio-examples",
+    tag: "Portfolio",
+    emoji: "&#x1F4C1;",
+    bg: "linear-gradient(135deg, #6366F1 0%, #818CF8 100%)",
+    noise: "cool",
+  },
+  {
+    title: "UGC Creator Jobs",
+    quote: "Get paid to create",
+    subtitle: "Where to find paid UGC opportunities",
+    href: "/ugc-jobs",
+    tag: "Career",
+    emoji: "&#x1F4BC;",
+    bg: "linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%)",
+    noise: "warm",
+  },
+  {
+    title: "Brand Pitch Templates",
+    quote: "Copy, paste, land deals",
+    subtitle: "Email & DM scripts that get replies",
+    href: "/brand-pitch",
+    tag: "Outreach",
+    emoji: "&#x1F4E8;",
+    bg: "linear-gradient(135deg, #EC4899 0%, #F472B6 100%)",
+    noise: "warm",
+  },
+  {
+    title: "UGC for Brands",
+    quote: "Hire creators that convert",
+    subtitle: "B2B guide to finding & managing UGC talent",
+    href: "/ugc-for-brands",
+    tag: "For Brands",
+    emoji: "&#x1F3E2;",
+    bg: "linear-gradient(135deg, #0EA5E9 0%, #38BDF8 100%)",
+    noise: "cool",
+  },
+  {
+    title: "AI Portfolio Builder",
+    quote: "2 minutes, not 2 weeks",
+    subtitle: "How AI helps creators showcase work",
+    href: "/ai-portfolio-builder",
+    tag: "Tools",
+    emoji: "&#x1F916;",
+    bg: "linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)",
+    noise: "cool",
+  },
+  {
+    title: "UGC Contract Template",
+    quote: "Protect your work",
+    subtitle: "Essential clauses & usage rights pricing",
+    href: "/ugc-contract",
+    tag: "Legal",
+    emoji: "&#x1F4DD;",
+    bg: "linear-gradient(135deg, #374151 0%, #6B7280 100%)",
+    noise: "cool",
+  },
+  {
+    title: "UGC Creator Tools",
+    quote: "The complete 2026 toolkit",
+    subtitle: "Editing, portfolio, invoicing & analytics",
+    href: "/ugc-creator-tools",
+    tag: "Tools",
+    emoji: "&#x1F6E0;",
+    bg: "linear-gradient(135deg, #0891B2 0%, #22D3EE 100%)",
+    noise: "cool",
+  },
+  {
+    title: "How to Get UGC Deals",
+    quote: "From zero to consistent income",
+    subtitle: "Step-by-step guide to landing brand deals",
+    href: "/ugc-deals",
+    tag: "Career",
+    emoji: "&#x1F91D;",
+    bg: "linear-gradient(135deg, #DC2626 0%, #F87171 100%)",
+    noise: "warm",
+  },
+  {
+    title: "UGC Video Ads",
+    quote: "2–4x higher CTR",
+    subtitle: "Why UGC ads outperform everything else",
+    href: "/ugc-video-ads",
+    tag: "For Brands",
+    emoji: "&#x1F3AC;",
+    bg: "linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)",
+    noise: "cool",
+  },
+];
+---
+
+<Layout
+  title="Blog — Open Guides on UGC, Creative Testing & Paid Ads | OKAD"
+  description="17 in-depth guides on Canvas UGC, Tech UGC, creative testing, Spark Ads, hook rate, ad fatigue, and more. Free, research-based resources by OKAD Agency."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-8 text-center bg-bg">
+      <div class="max-w-[960px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-5">
+          {guides.length} open guides &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,44px)] leading-[1.1] tracking-[-0.03em] text-ink mb-3">
+          The OKAD <span class="text-accent">Knowledge Base</span>
+        </h1>
+        <p class="text-[17px] text-ink-2 max-w-[540px] mx-auto leading-[1.6] mb-6">
+          Research-based guides on UGC, creative testing, and paid ads. Written for brands and operators who want to understand how things actually work.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filter tags -->
+    <section class="pb-6">
+      <div class="max-w-[960px] mx-auto px-6">
+        <div class="flex gap-2 flex-wrap justify-center">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Strategy">Strategy</button>
+          <button class="filter-btn" data-filter="Content Model">Content Model</button>
+          <button class="filter-btn" data-filter="Ads">Ads</button>
+          <button class="filter-btn" data-filter="Platform">Platform</button>
+          <button class="filter-btn" data-filter="Metrics">Metrics</button>
+          <button class="filter-btn" data-filter="Creators">Creators</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid -->
+    <section class="pb-16">
+      <div class="max-w-[960px] mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5" id="guides-grid">
+          {guides.map((g) => (
+            <a href={g.href} class="guide-card group block no-underline" data-tag={g.tag}>
+              <div class="cover-wrap" style={`background: ${g.bg};`}>
+                <!-- Noise texture overlay -->
+                <div class={`cover-noise ${g.noise}`}></div>
+
+                <!-- Content -->
+                <div class="cover-content">
+                  <!-- Tag -->
+                  <div class="cover-tag">{g.tag}</div>
+
+                  <!-- Quote with highlight strips -->
+                  <div class="cover-quote">
+                    <span class="cover-highlight">{g.quote}</span>
+                  </div>
+
+                  <!-- Title & subtitle -->
+                  <div class="cover-bottom">
+                    <h2 class="cover-title">{g.title}</h2>
+                    <p class="cover-sub">{g.subtitle}</p>
+                  </div>
+
+                  <!-- OKAD badge -->
+                  <div class="cover-badge">
+                    <span class="cover-badge-text">OKAD</span>
+                  </div>
+                </div>
+
+                <!-- Character emoji -->
+                <div class="cover-char" set:html={g.emoji} />
+
+                <!-- Arrow on hover -->
+                <div class="cover-arrow">&rarr;</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="pb-16">
+      <div class="max-w-[960px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need help implementing any of this?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD handles creative testing, UGC production, and paid ad creative for DTC and tech brands. Tell us what you need.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href="mailto:olga@okad.agency?subject=OKAD%20%E2%80%94%20tell%20us%20about%20your%20brand" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Write to us &rarr;</a>
+            <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* Filter buttons */
+  .filter-btn {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    background: var(--color-card);
+    color: var(--color-muted);
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .filter-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+  .filter-btn.active {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+  }
+
+  /* Card */
+  .guide-card {
+    transition: transform .2s, box-shadow .2s;
+  }
+  .guide-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,.15);
+  }
+  .guide-card.hidden {
+    display: none;
+  }
+
+  /* Cover */
+  .cover-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    aspect-ratio: 16 / 10;
+    display: flex;
+  }
+
+  /* Noise texture */
+  .cover-noise {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 128px 128px;
+    pointer-events: none;
+  }
+  .cover-noise.warm { opacity: 0.18; }
+
+  /* Content layout */
+  .cover-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Tag pill */
+  .cover-tag {
+    align-self: flex-start;
+    background: rgba(255,255,255,.2);
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #fff;
+  }
+
+  /* Quote with white highlight strips */
+  .cover-quote {
+    margin: auto 0;
+    padding: 8px 0;
+  }
+  .cover-highlight {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: #111;
+    background: #fff;
+    padding: 2px 8px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  /* Bottom info */
+  .cover-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .cover-title {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 13px;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .cover-sub {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: rgba(255,255,255,.65);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  /* OKAD badge */
+  .cover-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 24px;
+    z-index: 3;
+  }
+  .cover-badge-text {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: -0.02em;
+    color: #fff;
+    background: rgba(0,0,0,.3);
+    backdrop-filter: blur(4px);
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  /* Character emoji */
+  .cover-char {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 72px;
+    opacity: 0.25;
+    z-index: 1;
+    pointer-events: none;
+    filter: grayscale(0.3);
+    transition: opacity .2s, transform .2s;
+  }
+  .guide-card:hover .cover-char {
+    opacity: 0.4;
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  /* Arrow on hover */
+  .cover-arrow {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    z-index: 3;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  .guide-card:hover .cover-arrow {
+    opacity: 1;
+  }
+
+  @media (max-width: 640px) {
+    .cover-wrap {
+      aspect-ratio: 16 / 11;
+    }
+    .cover-highlight {
+      font-size: 20px;
+    }
+    .cover-char {
+      font-size: 56px;
+      right: 10px;
+    }
+    .cover-content {
+      padding: 16px 18px;
+    }
+    .cover-badge {
+      bottom: 16px;
+      right: 18px;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+      document.querySelectorAll('.guide-card').forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-tag') === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
