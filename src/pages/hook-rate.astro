@@ -1,0 +1,557 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailTesting = "mailto:olga@okad.agency?subject=Hook%20rate%20testing%20%E2%80%94%20tell%20us%20about%20your%20ads";
+const emailGeneral = "mailto:olga@okad.agency?subject=Hook%20rate%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Hook Rate — The Complete Guide to Thumb-Stop Ratio & 3-Second Retention | OKAD"
+  description="Hook rate is the percentage of viewers who watch past the first 3 seconds of a video ad. This guide covers the formula, 2026 benchmarks (30-40% on Meta), hook types, how to improve hook rate, and the relationship between hook rate and CPA."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Hook Rate: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Hook rate is the percentage of viewers who watch past the first 3 seconds of a video ad. It is the earliest creative health signal &mdash; it predicts CPA before you spend enough to measure CPA directly. This guide covers the formula, benchmarks, hook types, and how to improve it.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailTesting} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Test your hooks with OKAD &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>3-second views</span>
+          <span>Thumb-stop ratio</span>
+          <span>30&ndash;40% benchmark</span>
+          <span>CPA predictor</span>
+          <span>Hook &rarr; CPA diagnostic</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Why Hook Rate Matters</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x23F1;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">3 Seconds Decide Everything</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">If the first 3 seconds don't stop the scroll, the rest of the ad is irrelevant. Hook rate measures this critical moment.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F52E;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Earliest CPA Signal</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Hook rate predicts CPA before you've spent enough to measure conversions. It's your leading indicator.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F527;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Diagnostic Tool</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Bad hook rate + bad CPA = fix the opening. Good hook rate + bad CPA = fix the body or offer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "What Is Hook Rate?", href: "#what" },
+            { num: "03", text: "The Formula", href: "#formula" },
+            { num: "04", text: "2026 Benchmarks", href: "#benchmarks" },
+            { num: "05", text: "Hook Rate as a Diagnostic Tool", href: "#diagnostic" },
+            { num: "06", text: "Hook Types That Work", href: "#types" },
+            { num: "07", text: "How to Improve Hook Rate", href: "#improve" },
+            { num: "08", text: "Hook Rate by Platform", href: "#platforms" },
+            { num: "09", text: "Hook Testing", href: "#testing" },
+            { num: "10", text: "Glossary", href: "#glossary" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The first 3 seconds are the entire ad</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Hook rate = 3-second video views &divide; impressions &times; 100</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Also called "thumb-stop ratio" or "thumb-stop rate"</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The strongest early predictor of overall ad performance</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">In a feed-based ad environment, most people scroll past ads in under a second. The hook &mdash; the first 3 seconds of a video ad &mdash; is the only thing that determines whether someone stops scrolling and watches. Everything else in the ad (the body, the offer, the CTA) only matters if the hook works first.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Hook rate measures this critical moment. It tells you what percentage of people who saw your ad actually stopped and watched. A high hook rate means the opening is doing its job. A low hook rate means you're paying for impressions that never become views.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This metric goes by several names: hook rate, thumb-stop ratio, thumb-stop rate, and 3-second retention rate. They all measure the same thing: did the first 3 seconds stop the scroll?</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Metric:</strong> 3-second video views &divide; impressions &times; 100</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Benchmark:</strong> 30&ndash;40% on Meta, varies by platform</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Signal:</strong> earliest predictor of CPA performance</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Use case:</strong> diagnostic &mdash; tells you why an ad is or isn't working</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 What Is Hook Rate -->
+    <section class="guide-section" id="what">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What is hook rate?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The percentage of impressions where the viewer watched at least 3 seconds</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Measures the hook's ability to stop the scroll</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Available as a custom metric in Meta Ads Manager and TikTok Ads</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Hook rate</strong> is the percentage of viewers who watch past the first 3 seconds of a video ad. It measures the effectiveness of the hook &mdash; the opening of the ad that must capture attention before the viewer scrolls away.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Platforms like Meta report "3-second video views" as a standard metric. Hook rate is not a default column &mdash; you create it as a custom metric by dividing 3-second video views by impressions. Most performance media buyers add this column to every report because it's the first metric that becomes reliable, often within 24 hours of launching an ad.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Why 3 seconds?</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Three seconds is the industry standard because it's the threshold where attention becomes intentional. In the first 1&ndash;2 seconds, an ad might appear in someone's feed as they scroll. By 3 seconds, the viewer has made a conscious decision to stop and watch. This is why 3-second views &mdash; not impressions, not 1-second views &mdash; are the meaningful threshold for measuring initial attention.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Hook rate vs other retention metrics</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Hook rate (3s)</strong> &mdash; measures whether the opening captures attention. Diagnostic for the hook itself.</li>
+          <li><strong>Hold rate (15s or 50%)</strong> &mdash; measures whether the body retains attention after the hook. Diagnostic for the middle of the ad.</li>
+          <li><strong>Completion rate</strong> &mdash; measures whether viewers watch the full ad. Less useful for performance creative because most conversions happen before the ad ends.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 03 The Formula -->
+    <section class="guide-section" id="formula">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Formula</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The hook rate formula</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Hook Rate = (3-Second Video Views &divide; Impressions) &times; 100</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Create as a custom metric in your ad platform</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Reliable with 1,000+ impressions</li>
+          </ul>
+        </div>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 text-center">
+          <div class="font-mono text-[18px] font-bold text-accent mb-2">Hook Rate = (3s Video Views &divide; Impressions) &times; 100</div>
+          <p class="text-[14px] text-muted m-0">Example: 3,500 three-second views from 10,000 impressions = 35% hook rate</p>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Setting up in Meta Ads Manager</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Go to Columns &rarr; Customize columns.</strong> In Ads Manager, click the Columns dropdown and select "Customize columns."</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Create a custom metric.</strong> Click "Create Custom Metric." Name it "Hook Rate" or "Thumb-Stop Ratio."</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Set the formula.</strong> 3-Second Video Views &divide; Impressions. Format as percentage.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Save to your default view.</strong> Add it next to CPA and CTR so you see it on every report.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Minimum data for reliable hook rate</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Hook rate becomes directionally reliable at 1,000+ impressions, which most ads reach within the first 24 hours. This is why it's the earliest signal &mdash; you can read hook rate a full day or two before you have enough conversion data to evaluate CPA. At 5,000+ impressions, the signal is strong enough to make decisions.</p>
+      </div>
+    </section>
+
+    <!-- 04 2026 Benchmarks -->
+    <section class="guide-section" id="benchmarks">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Benchmarks</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">2026 hook rate benchmarks</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Below 20%: problem &mdash; the hook is not stopping the scroll</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">20&ndash;30%: average &mdash; room for improvement</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">30&ndash;40%: good &mdash; the hook is working</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">35%+: strong &mdash; high-performing creative</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Hook Rate Range</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Assessment</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold" style="color: #c62828">Below 20%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Hook is failing &mdash; ad is invisible</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Replace the hook entirely. The opening is not working.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold" style="color: #f57f17">20&ndash;30%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Average &mdash; functional but not competitive</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Iterate. Try faster product reveal, stronger opening line, text overlay.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold" style="color: #2e7d32">30&ndash;40%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Good &mdash; the hook is doing its job</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Focus on optimizing the body and CTA. The hook is not the bottleneck.</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-semibold" style="color: #1b5e20">35%+</td><td class="px-4 py-2.5 text-ink-2">Strong &mdash; top-performing creative</td><td class="px-4 py-2.5 text-ink-2">Scale. Produce variations with this hook style on different body narratives.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Benchmark context</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">These benchmarks are for Meta (Facebook + Instagram) feed placements in 2026. Hook rate varies by category &mdash; entertainment ads tend to have higher hook rates than B2B SaaS ads &mdash; but the 30&ndash;40% range holds as a useful general benchmark across most consumer and DTC categories.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Important: hook rate is relative to your own account's historical performance. If your best ads consistently hit 28%, an ad hitting 35% is a strong signal even though 35% is "good" on an absolute scale. Track your own benchmarks alongside industry averages.</p>
+      </div>
+    </section>
+
+    <!-- 05 Hook Rate as Diagnostic -->
+    <section class="guide-section" id="diagnostic">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Diagnostic</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Hook rate as a diagnostic tool</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CPA tells you what happened. Hook rate tells you why.</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Bad hook rate + bad CPA = problem is the opening</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Good hook rate + bad CPA = problem is the body or offer</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most valuable use of hook rate is as a diagnostic tool, not just a performance metric. When CPA is bad, hook rate tells you <em>where</em> the problem is &mdash; in the opening (hook) or in the body and offer that follows.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The diagnostic framework</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Hook Rate</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">CPA</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Diagnosis</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Fix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink" style="color: #c62828">Low (&lt;20%)</td><td class="px-4 py-2.5 border-b border-border text-ink" style="color: #c62828">Bad</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Hook is the problem &mdash; ad never gets seen</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Replace the hook entirely</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink" style="color: #2e7d32">Good (30%+)</td><td class="px-4 py-2.5 border-b border-border text-ink" style="color: #c62828">Bad</td><td class="px-4 py-2.5 border-b border-border text-ink-2">People watch but don't convert &mdash; body or offer is weak</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Keep the hook, fix the body/offer/CTA</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink" style="color: #c62828">Low (&lt;20%)</td><td class="px-4 py-2.5 border-b border-border text-ink" style="color: #2e7d32">Good</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Small but highly qualified audience converts &mdash; rare but possible</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Improve hook to increase volume while maintaining conversion</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink" style="color: #2e7d32">Good (30%+)</td><td class="px-4 py-2.5 text-ink" style="color: #2e7d32">Good</td><td class="px-4 py-2.5 text-ink-2">Winner &mdash; the entire creative is working</td><td class="px-4 py-2.5 text-ink-2">Scale. Produce variations to extend lifespan.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The most common mistake</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">When CPA is bad, most teams change everything &mdash; new script, new creator, new format. This destroys any signal from the original creative. Use hook rate to isolate the problem. If hook rate is good, keep the hook and only change the body. If hook rate is bad, only change the hook and keep everything else. This is the foundation of the <a href="/guide" class="text-accent hover:underline">creative testing</a> discipline: isolate variables.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Want OKAD to test hooks for your brand?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We produce 5&ndash;10 hook variants per concept, test with $50&ndash;$100/day, and find the openings that stop the scroll. You get data on what hooks work for your product and audience.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailTesting} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Test your hooks with OKAD &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Hook Types -->
+    <section class="guide-section" id="types">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Hook Types</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Hook types that stop the scroll</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Different hook types trigger different psychological responses</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Test multiple hook types per concept &mdash; you can't predict which wins</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The best hooks combine a strong opening line with an unexpected visual</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Hook Type</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Example</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Why It Works</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Question hook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Why is nobody talking about this?"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creates a curiosity gap that demands an answer</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Stat hook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"I cut my ad costs by 47% in one week"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Specific numbers create credibility and intrigue</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Before/after hook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"My skin 6 months ago vs today"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Visual contrast stops the scroll instantly</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Controversy hook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Your morning routine is actually making you tired"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Challenges existing beliefs, triggers engagement</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">"I tried X" hook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"I tried this $12 tool for 30 days"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Personal experiment format creates trust and curiosity</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Result-first hook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"I made $4,200 in passive income this month"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Leads with the outcome, makes viewer want the method</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Pattern interrupt</td><td class="px-4 py-2.5 border-b border-border text-ink-2">[Unexpected visual + "Wait, what?"]</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Breaks the expected feed pattern, forces attention</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Social proof hook</td><td class="px-4 py-2.5 text-ink-2">"2 million people use this and I just found out"</td><td class="px-4 py-2.5 text-ink-2">Social validation triggers FOMO</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Combining visual and verbal hooks</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The best-performing hooks combine a strong opening line with a visual that doesn't match what the viewer expects. A creator saying "I can't believe this is only $12" while holding up an unexpectedly premium product works better than either element alone. The mismatch between expectation and reality is what creates the thumb-stop moment.</p>
+      </div>
+    </section>
+
+    <!-- 07 How to Improve Hook Rate -->
+    <section class="guide-section" id="improve">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Improvement</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to improve hook rate</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Show the product within the first 2 seconds</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use specific numbers instead of vague claims</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Add bold text overlays that reinforce the verbal hook</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Seven techniques to improve hook rate</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Faster product reveal.</strong> Show the product or result within the first 2 seconds. Don't waste time on intros or context before showing what the viewer came to see.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Specific numbers.</strong> "I saved 3 hours a week" beats "This saves so much time." Specificity creates credibility and intrigue. Vague hooks blend into the feed; specific hooks stand out.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Unexpected visuals.</strong> Start with something that doesn't look like an ad. An unusual camera angle, an unexpected object, a visual that creates a "what is that?" reaction. Feed algorithms favor content that generates engagement signals.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Text overlays.</strong> Bold, contrasting text in the first frame reinforces the verbal hook. Many viewers scroll with sound off &mdash; if the text overlay doesn't stop them, the audio hook never gets heard.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Movement in frame one.</strong> Static openings get scrolled past. The first frame should have motion &mdash; the creator moving, a product being revealed, a transition happening. Motion triggers pattern recognition in the viewer's peripheral vision.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Address the viewer directly.</strong> "You need to see this" or "If you're still doing X, stop" creates an immediate personal connection. The viewer feels spoken to, not marketed at.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Cut the preamble.</strong> Delete the first 1&ndash;3 seconds of most creator footage. Most creators start with a breath, a glance at the camera, or a slow build-up. Cut straight to the hook. The raw, abrupt opening often performs better.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 08 Hook Rate by Platform -->
+    <section class="guide-section" id="platforms">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Platforms</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Hook rate by platform</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok: higher hook rates (autoplay + sound on), faster fatigue</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Meta: moderate hook rates, sound-off optimization critical</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">YouTube: lower hook rates but higher intent once hooked</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Platform</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Typical Hook Rate</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Key Factor</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Optimization Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Meta (FB + IG)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">25&ndash;40%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Many users scroll with sound off</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Text overlays are essential. Visual hook must work muted.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">TikTok</td><td class="px-4 py-2.5 border-b border-border text-ink-2">30&ndash;50%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Autoplay with sound on, full-screen</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Audio hooks matter more. Native style critical.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">YouTube Shorts</td><td class="px-4 py-2.5 border-b border-border text-ink-2">25&ndash;35%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Higher intent audience, more competitive</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Educational hooks outperform pure curiosity hooks.</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">YouTube In-Stream</td><td class="px-4 py-2.5 text-ink-2">15&ndash;25%</td><td class="px-4 py-2.5 text-ink-2">Skippable after 5 seconds</td><td class="px-4 py-2.5 text-ink-2">Must hook in first 5s before the skip button appears.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Cross-platform hook strategy</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A hook that wins on one platform often works on others, but the <em>execution</em> must be adapted. A Meta hook that relies on text overlays needs to be re-produced with a stronger audio component for TikTok. A TikTok hook that relies on trending audio needs a visual substitute for Meta's sound-off environment. The insight (which message stops the scroll) transfers; the format must be platform-native.</p>
+      </div>
+    </section>
+
+    <!-- 09 Hook Testing -->
+    <section class="guide-section" id="testing">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Testing</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Hook testing: the highest-leverage test in advertising</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Same body + same CTA + 5 different hooks = isolated hook test</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">OKAD tests 5&ndash;10 hook variants per concept with $50&ndash;$100/day each</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Hook tests produce actionable data within 3 days</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Hook testing is the foundation of the <a href="/guide" class="text-accent hover:underline">creative testing</a> hierarchy. Because hooks have the highest impact on performance, testing hooks first produces the fastest and most reliable learnings.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">How to run a hook test</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Keep the body and CTA identical.</strong> The only variable is the first 3 seconds. This isolates the hook's impact.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Produce 5&ndash;10 hook variants.</strong> Use different hook types: question, stat, before/after, controversy, "I tried X." Cast with different creators if possible.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Launch all variants simultaneously.</strong> Same audience, same placement, same budget ($50&ndash;$100/day per variant).</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Read hook rates after 24&ndash;48 hours.</strong> At 1,000+ impressions per variant, hook rate is directionally reliable.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Decide after 3&ndash;5 days.</strong> Kill hooks below 20%. Iterate hooks in the 20&ndash;30% range. Scale hooks above 30%. Then test body narratives against the winning hooks.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Hook rate and CPA correlation</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Hook rate and CPA are correlated but not perfectly. A high hook rate means more people see the body and CTA, which generally leads to more conversions at a lower cost. But a hook that attracts the wrong audience (high hook rate from curiosity-seekers who never buy) can have a high hook rate and bad CPA. This is why hook rate is a diagnostic metric, not the decision metric. CPA is always the final judge.</p>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailTesting} class="text-ink hover:text-accent transition-colors no-underline">OKAD tests hooks systematically</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">We produce 5&ndash;10 hook variants per concept using <a href="/modular-creative" class="text-accent hover:underline">modular production</a>, test each with controlled spend, and identify which openings stop the scroll for your specific product and audience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+
+        {[
+          { term: "Hook rate", def: "The percentage of viewers who watch past the first 3 seconds of a video ad. Formula: 3-second video views / impressions x 100. Also called thumb-stop ratio." },
+          { term: "Thumb-stop ratio", def: "Another name for hook rate. Refers to the moment a viewer stops scrolling (stops their thumb) to watch an ad." },
+          { term: "Thumb-stop rate", def: "Synonym for hook rate and thumb-stop ratio. All three terms measure the same thing." },
+          { term: "3-second video views", def: "The number of times a video ad was watched for at least 3 seconds. A standard metric in Meta Ads Manager." },
+          { term: "Hook", def: "The first 3 seconds of a video ad. The opening that must capture attention before the viewer scrolls away." },
+          { term: "Hold rate", def: "The percentage of viewers who watch past 15 seconds or 50% of the video. Measures the body's effectiveness, as opposed to the hook's." },
+          { term: "Pattern interrupt", def: "A visual or audio element that breaks the expected pattern of the feed, forcing the viewer to stop scrolling and pay attention." },
+          { term: "Text overlay", def: "Bold text placed on the first frames of a video ad to reinforce the verbal hook. Essential for Meta where many users scroll with sound off." },
+          { term: "Hook test", def: "A structured test where 5-10 different hooks are attached to the same body and CTA, isolating the hook's impact on performance." },
+          { term: "Creative fatigue", def: "The decline in ad performance as the audience sees it too often. Hook rate is one of the first metrics to decline during fatigue." },
+          { term: "CPA", def: "Cost per acquisition. The decision metric in creative testing. Hook rate is the diagnostic; CPA is the judge." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What is hook rate?", a: "Hook rate is the percentage of viewers who watch past the first 3 seconds of a video ad. Formula: 3-second video views divided by impressions, times 100. It measures the hook's ability to stop the scroll and is the earliest creative health signal." },
+          { q: "What is a good hook rate?", a: "On Meta in 2026: 30-40% is good, 35%+ is strong, below 20% indicates a problem. These benchmarks vary by category and platform — entertainment ads tend to score higher than B2B ads. Track your own account's historical performance alongside industry averages." },
+          { q: "Is hook rate the same as thumb-stop ratio?", a: "Yes. Hook rate, thumb-stop ratio, and thumb-stop rate are different names for the same metric: 3-second video views divided by impressions. The terminology varies by team and platform, but they all measure whether the first 3 seconds stopped the scroll." },
+          { q: "How do I find hook rate in Meta Ads Manager?", a: "It's not a default column. Go to Columns > Customize columns > Create Custom Metric. Set the formula to 3-Second Video Views / Impressions, format as percentage. Save it to your default reporting view." },
+          { q: "My hook rate is good but CPA is bad. What's wrong?", a: "The hook is working — people are watching. The problem is in the body, offer, or CTA. People watch but don't convert. Keep the hook and test different body narratives, offers, or calls to action. This is the most common diagnostic use of hook rate." },
+          { q: "My hook rate is bad. What should I change?", a: "Replace the hook entirely. Try: faster product reveal, specific numbers instead of vague claims, unexpected visuals, bold text overlays, movement in the first frame, and cutting the preamble. Produce 5-10 different hook types and test them against the same body." },
+          { q: "How many hooks should I test per concept?", a: "5-10 hook variants is the standard. Use different hook types (question, stat, before/after, controversy, 'I tried X') to explore which psychological trigger works for your audience. Keep the body and CTA identical to isolate the hook's impact." },
+          { q: "How quickly can I read hook rate data?", a: "Hook rate becomes directionally reliable at 1,000+ impressions, which most ads reach within 24 hours. This makes it the earliest performance signal — you can read it a day or two before you have enough conversion data to evaluate CPA." },
+          { q: "Does hook rate predict CPA?", a: "They're correlated but not perfectly. Higher hook rates generally lead to lower CPA because more people see the body and CTA. But a hook that attracts curiosity-seekers who never buy can have high hook rate and bad CPA. Hook rate is a diagnostic metric; CPA remains the decision metric." },
+          { q: "Can OKAD help improve my hook rate?", a: "Yes. We produce 5-10 hook variants per concept using modular production, test each with $50-100/day, and identify which openings stop the scroll for your product. We handle strategy, production, and data analysis. Write to us at olga@okad.agency." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to find hooks that convert?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your product and current ads. We'll audit your hook rates, produce tested variants, and find the openings that stop the scroll for your audience.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailTesting} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Test your hooks with OKAD &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on hook rate data from creative testing programs run by OKAD Agency, supplemented by publicly available Meta and TikTok advertising benchmarks. Hook rate ranges and CPA correlations are directional industry figures based on aggregate campaign data. Individual outcomes depend on product, audience, creative quality, platform, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
