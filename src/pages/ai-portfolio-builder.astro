@@ -1,0 +1,624 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const tocItems = [
+  { id: "why-portfolios-matter", label: "1. Why Portfolios Matter" },
+  { id: "what-ai-portfolio-builders-do", label: "2. What AI Portfolio Builders Do" },
+  { id: "how-they-work", label: "3. How They Work" },
+  { id: "tool-comparison", label: "4. Tool Comparison" },
+  { id: "best-practices", label: "5. Best Practices" },
+  { id: "common-mistakes", label: "6. Common Mistakes" },
+  { id: "seo-tips", label: "7. SEO Tips" },
+  { id: "faq", label: "8. FAQ" },
+];
+
+const faqs = [
+  {
+    q: "What is an AI portfolio builder?",
+    a: "An AI portfolio builder is a tool that uses artificial intelligence to help creators assemble, organize, and present their work in a professional portfolio. Instead of manually arranging screenshots or editing PDFs, the AI analyzes your content, writes descriptions, suggests layouts, and generates a shareable page or document.",
+  },
+  {
+    q: "Do AI portfolio builders replace hiring a designer?",
+    a: "For most UGC creators, yes — at the portfolio level. AI tools can produce a clean, professional-looking portfolio in minutes. However, if you need full brand identity work, custom illustrations, or a bespoke website that doubles as a sales funnel, working with a creative agency or designer still makes sense.",
+  },
+  {
+    q: "How much do AI portfolio tools cost?",
+    a: "Many offer a free tier with basic features — enough to build and share a portfolio. Premium features like custom domains, analytics, and advanced AI editing typically range from $5 to $25 per month. Some tools use a credit-based model where each AI action costs a small amount (around $0.10-0.25).",
+  },
+  {
+    q: "Can I use an AI portfolio builder if I only have a few videos?",
+    a: "Absolutely. In fact, AI portfolio tools are especially useful for newer creators because they make 3-5 strong videos look polished and professional. The AI fills in context — writing your bio, identifying brands, and structuring your page — so you look established even when you are just getting started.",
+  },
+  {
+    q: "Will brands take an AI-generated portfolio seriously?",
+    a: "Brands care about the quality of your work, not how your portfolio was made. A clean, well-organized AI-built portfolio is far more effective than a messy Google Drive folder or an outdated PDF. We have seen response rates double when creators switch from shared folders to structured portfolio pages.",
+  },
+  {
+    q: "What should I include in my UGC portfolio?",
+    a: "Lead with your 5-8 strongest videos. Include your niche, the brands you have worked with, your turnaround time, rates (or rate range), and a one-line positioning statement. If you have metrics — views, engagement rates, ROAS data — add those. Keep it scannable. Brand managers spend less than 90 seconds reviewing a portfolio.",
+  },
+  {
+    q: "How often should I update my portfolio?",
+    a: "Every time you complete a project worth showing. At minimum, review your portfolio monthly. AI tools make this easy since most auto-update when you add new content. Stale portfolios with work older than 6 months signal to brands that you are not actively creating.",
+  },
+  {
+    q: "Can OKAD help me build my portfolio?",
+    a: "Yes. We work with 700+ UGC creators and regularly help them present their work to brands. Whether you need portfolio strategy, content direction, or full creative production support, reach out at olga@okad.agency or book a call to discuss your needs.",
+  },
+];
+---
+
+<Layout
+  title="AI Portfolio Builder: How AI Helps Creators Showcase Work | OKAD"
+  description="Learn how AI portfolio builders help UGC creators present their work professionally. Tool comparison, best practices, and expert tips from an agency that manages 700+ creators."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24">
+      <div class="max-w-[1080px] mx-auto px-6 pt-12 md:pt-16 pb-8">
+        <div class="max-w-[720px]">
+          <div class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium uppercase tracking-[.06em] text-ink-2 mb-6">
+            <strong class="text-accent font-semibold">#PORTFOLIO</strong>
+            <span class="text-muted-2">&middot;</span>
+            <strong class="text-accent font-semibold">#AI_TOOLS</strong>
+            <span class="text-muted-2">&middot;</span>
+            <strong class="text-accent font-semibold">#UGC_CREATORS</strong>
+          </div>
+
+          <h1 class="font-display font-bold text-[clamp(36px,6vw,56px)] leading-[1.1] tracking-[-0.035em] mb-6 text-ink">
+            AI Portfolio Builder:<br />
+            <span class="font-script text-accent text-[1.1em]">Smarter Way</span><br />
+            to Showcase Your Work
+          </h1>
+
+          <p class="text-[17px] text-ink-2 leading-[1.55] mb-2">Brands spend under 90 seconds reviewing a creator portfolio.</p>
+          <p class="text-[17px] font-semibold text-ink mb-6">&gt; AI helps you make every second count.</p>
+
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-accent-bg border border-accent/15 text-accent font-medium">Agency insights from 700+ creators</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-accent-bg border border-accent/15 text-accent font-medium">Updated Sep 2026</span>
+          </div>
+
+          <p class="text-[15px] text-ink-2 leading-[1.55] max-w-[560px] mb-8">
+            A comprehensive guide to AI-powered portfolio tools for UGC creators. We break down what they do, how they work, which ones are worth your time, and the mistakes that cost creators brand deals.
+          </p>
+
+          <div class="flex flex-nowrap gap-2.5">
+            <a href="#why-portfolios-matter" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-white text-ink border border-[#d1d5db] hover:border-ink hover:bg-ink hover:text-white transition-all no-underline">
+              Start reading &darr;
+            </a>
+            <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-lime text-ink hover:bg-[#b8e537] transition-all no-underline">
+              Talk to us &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="py-8">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="bg-card border border-border rounded-2xl p-6 md:p-8 max-w-[720px]">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-4">Table of Contents</p>
+          <nav class="space-y-2">
+            {tocItems.map((item) => (
+              <a href={`#${item.id}`} class="block text-[15px] text-ink-2 hover:text-accent transition-colors no-underline leading-relaxed">
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Why Portfolios Matter -->
+    <section id="why-portfolios-matter" class="py-12 md:py-16">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="max-w-[720px]">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 1</p>
+          <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] mb-6">
+            Why Portfolios Matter More Than Follower Counts
+          </h2>
+
+          <!-- TLDR Box -->
+          <div class="rounded-2xl p-6 mb-8" style="background: rgba(99,102,241,.04);">
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">TL;DR</p>
+            <p class="text-[15px] text-ink-2 leading-[1.55]">
+              Brands hire based on work samples, not vanity metrics. A structured portfolio directly increases your booking rate — we have measured this across hundreds of creator placements.
+            </p>
+          </div>
+
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            The UGC industry has matured rapidly. Three years ago, a creator could land brand deals with a TikTok profile and a direct message. Today, brands receive dozens of pitches daily. What separates creators who book consistently from those who hear nothing back is almost always the same thing: a professional portfolio.
+          </p>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            At OKAD, we manage content production with a network of over 700 creators across beauty, tech, food, fitness, and lifestyle verticals. When a brand briefs us on a campaign, the first filter is never "who has the most followers." It is "who has relevant work I can review in under two minutes."
+          </p>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            A portfolio serves three critical functions. First, it proves you can actually produce the type of content the brand needs — not just similar content, but the exact format, tone, and production quality. Second, it demonstrates professionalism. A creator who invests time in presenting their work signals that they take deadlines, communication, and deliverables seriously. Third, it saves the brand manager time. When someone can review your best six videos on a single page without downloading anything, you have already won half the battle.
+          </p>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            The problem is that building a portfolio has traditionally been tedious. Creators are not designers. They shoot video, not websites. This is exactly the gap that AI portfolio builders fill — and why every serious creator should understand how these tools work.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: What AI Portfolio Builders Do -->
+    <section id="what-ai-portfolio-builders-do" class="py-12 md:py-16 bg-card border-t border-b border-border">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="max-w-[720px]">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 2</p>
+          <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] mb-6">
+            What AI Portfolio Builders Actually Do
+          </h2>
+
+          <div class="rounded-2xl p-6 mb-8" style="background: rgba(16,185,129,.04);">
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-[#10B981] mb-2">TL;DR</p>
+            <p class="text-[15px] text-ink-2 leading-[1.55]">
+              AI portfolio builders automate the hard parts — writing descriptions, organizing content, detecting brands, and generating a shareable page — so you focus on creating, not designing.
+            </p>
+          </div>
+
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            An AI portfolio builder is any tool that uses machine learning to help creators assemble, organize, and present their work. The "AI" part handles tasks that would otherwise require either design skills or hours of manual effort.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">Core capabilities most tools share</h3>
+
+          <div class="space-y-4 mb-6">
+            <div class="flex gap-3 items-start">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-accent text-white text-[13px] font-bold flex items-center justify-center mt-0.5">1</span>
+              <div>
+                <p class="text-[15px] font-semibold text-ink mb-1">Content analysis</p>
+                <p class="text-[15px] text-ink-2 leading-[1.55]">AI watches your videos or scans your images and extracts key information — the brands featured, the type of content (testimonial, unboxing, tutorial), the hook structure, and sometimes even the emotional tone. This metadata powers everything else the tool does.</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-accent text-white text-[13px] font-bold flex items-center justify-center mt-0.5">2</span>
+              <div>
+                <p class="text-[15px] font-semibold text-ink mb-1">Bio and description generation</p>
+                <p class="text-[15px] text-ink-2 leading-[1.55]">Based on the content you upload, AI drafts a professional bio, positioning statement, and individual project descriptions. The output is typically 80% usable out of the box — you tweak the tone and add personal details rather than staring at a blank page.</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-accent text-white text-[13px] font-bold flex items-center justify-center mt-0.5">3</span>
+              <div>
+                <p class="text-[15px] font-semibold text-ink mb-1">Layout and design automation</p>
+                <p class="text-[15px] text-ink-2 leading-[1.55]">Instead of choosing fonts, spacing, and color palettes, the AI generates a visually coherent page layout. Most tools offer templates optimized for different content types — video-heavy portfolios get different layouts than photography or design portfolios.</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-accent text-white text-[13px] font-bold flex items-center justify-center mt-0.5">4</span>
+              <div>
+                <p class="text-[15px] font-semibold text-ink mb-1">Shareable output</p>
+                <p class="text-[15px] text-ink-2 leading-[1.55]">The end product is a URL you can drop into emails, DMs, or your social media bio. No files to download, no access requests to approve. The brand manager clicks once and sees your work immediately.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            What makes these tools genuinely useful — not just novel — is the time savings. We have watched creators spend entire weekends building Canva decks that look decent but are painful to update. An AI portfolio builder produces something equivalent in under ten minutes. When you add a new project, the portfolio updates automatically. That alone changes the economics of maintaining a professional presence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: How They Work -->
+    <section id="how-they-work" class="py-12 md:py-16">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="max-w-[720px]">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 3</p>
+          <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] mb-6">
+            How AI Portfolio Builders Work Under the Hood
+          </h2>
+
+          <div class="rounded-2xl p-6 mb-8" style="background: rgba(147,51,234,.04);">
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-[#9333EA] mb-2">TL;DR</p>
+            <p class="text-[15px] text-ink-2 leading-[1.55]">
+              Upload content, AI processes it through vision and language models, and a structured portfolio page is generated. Most tools follow a five-step flow: upload, analyze, generate, review, publish.
+            </p>
+          </div>
+
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            While the exact technology varies by platform, most AI portfolio builders follow a similar pipeline. Understanding this process helps you get better results from whatever tool you choose.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">Step 1: Content ingestion</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            You upload videos, images, or links to published work. The tool stores your files and prepares them for analysis. For video content, this typically involves extracting keyframes, transcribing audio, and reading any on-screen text. For images, it means running object detection and text recognition.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">Step 2: AI analysis</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            This is where the intelligence happens. Vision models identify brands from logos, packaging, and product placement. Language models analyze transcripts to determine content type — is this a product review, a tutorial, an unboxing, or a lifestyle vignette? Some tools go deeper, identifying hook structures, call-to-action patterns, and even production quality markers like lighting consistency and audio clarity.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">Step 3: Content generation</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            Using everything learned from analysis, the AI generates your portfolio content. This includes your bio (tailored to the niches detected in your work), individual project descriptions, brand collaboration summaries, and sometimes even a "creative approach" section that describes your style based on patterns across your videos.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">Step 4: Layout assembly</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            The tool combines your content with a design template. Better tools are opinionated about layout — they place your strongest content first, group related work together, and ensure the page loads fast on mobile. The design should feel intentional without requiring you to make any design decisions.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">Step 5: Review and publish</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            You review the generated portfolio, make manual edits where needed, and publish. The output is a live URL. Good tools let you edit text freely without paying extra — AI credits should only apply to regenerating content, not to fixing a typo in your bio.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Tool Comparison -->
+    <section id="tool-comparison" class="py-12 md:py-16 bg-card border-t border-b border-border">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 4</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] mb-6">
+          AI Portfolio Tools Compared
+        </h2>
+
+        <div class="rounded-2xl p-6 mb-8 max-w-[720px]" style="background: rgba(236,72,153,.04);">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-[#EC4899] mb-2">TL;DR</p>
+          <p class="text-[15px] text-ink-2 leading-[1.55]">
+            Different tools suit different needs. Dedicated UGC portfolio builders outperform general website builders for creator portfolios because they understand video content natively.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl border border-border mb-8">
+          <table class="w-full text-[13px] md:text-[14px]">
+            <thead>
+              <tr class="bg-[#F3F3F3] text-left">
+                <th class="px-4 py-3 font-semibold text-muted text-[11px] uppercase tracking-[.04em] border-b border-border">Feature</th>
+                <th class="px-4 py-3 font-semibold text-muted text-[11px] uppercase tracking-[.04em] border-b border-border">Google Drive / PDF</th>
+                <th class="px-4 py-3 font-semibold text-muted text-[11px] uppercase tracking-[.04em] border-b border-border">Canva</th>
+                <th class="px-4 py-3 font-semibold text-muted text-[11px] uppercase tracking-[.04em] border-b border-border">Linktree / Carrd</th>
+                <th class="px-4 py-3 font-semibold text-accent text-[11px] uppercase tracking-[.04em] border-b border-border bg-accent-bg">AI Portfolio Builder</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white">
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 font-medium">Setup time</td>
+                <td class="px-4 py-3 text-ink-2">2-4 hours</td>
+                <td class="px-4 py-3 text-ink-2">3-5 hours</td>
+                <td class="px-4 py-3 text-ink-2">30-60 min</td>
+                <td class="px-4 py-3 font-semibold text-accent bg-accent-bg">Under 10 min</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 font-medium">AI content writing</td>
+                <td class="px-4 py-3 text-ink-2">No</td>
+                <td class="px-4 py-3 text-ink-2">Basic text AI</td>
+                <td class="px-4 py-3 text-ink-2">No</td>
+                <td class="px-4 py-3 font-semibold text-accent bg-accent-bg">Full bio + descriptions</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 font-medium">Brand detection</td>
+                <td class="px-4 py-3 text-ink-2">Manual</td>
+                <td class="px-4 py-3 text-ink-2">Manual</td>
+                <td class="px-4 py-3 text-ink-2">Manual</td>
+                <td class="px-4 py-3 font-semibold text-accent bg-accent-bg">Automatic</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 font-medium">Video playback</td>
+                <td class="px-4 py-3 text-ink-2">Download required</td>
+                <td class="px-4 py-3 text-ink-2">Static images</td>
+                <td class="px-4 py-3 text-ink-2">Embed only</td>
+                <td class="px-4 py-3 font-semibold text-accent bg-accent-bg">Native player</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 font-medium">Auto-update on new work</td>
+                <td class="px-4 py-3 text-ink-2">Re-share needed</td>
+                <td class="px-4 py-3 text-ink-2">Redesign needed</td>
+                <td class="px-4 py-3 text-ink-2">Manual</td>
+                <td class="px-4 py-3 font-semibold text-accent bg-accent-bg">Automatic</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 font-medium">Mobile optimized</td>
+                <td class="px-4 py-3 text-ink-2">Often broken</td>
+                <td class="px-4 py-3 text-ink-2">Limited</td>
+                <td class="px-4 py-3 text-ink-2">Yes</td>
+                <td class="px-4 py-3 font-semibold text-accent bg-accent-bg">Built for mobile</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 font-medium">SEO discoverability</td>
+                <td class="px-4 py-3 text-ink-2">Not indexed</td>
+                <td class="px-4 py-3 text-ink-2">Not indexed</td>
+                <td class="px-4 py-3 text-ink-2">Basic</td>
+                <td class="px-4 py-3 font-semibold text-accent bg-accent-bg">Search indexed</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium">Typical cost</td>
+                <td class="px-4 py-3 text-ink-2">Free</td>
+                <td class="px-4 py-3 text-ink-2">$13/mo (Pro)</td>
+                <td class="px-4 py-3 text-ink-2">$5-24/mo</td>
+                <td class="px-4 py-3 font-semibold text-accent bg-accent-bg">Free + optional credits</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="max-w-[720px]">
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 text-ink">Choosing the right tool for your situation</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            If you are a UGC creator whose work is primarily video, a dedicated AI portfolio builder will serve you far better than a general-purpose website builder. Generic tools treat video as an afterthought — you end up embedding YouTube links or uploading static thumbnails. Purpose-built tools offer native video playback, automatic content tagging, and layouts designed specifically for showcasing reels and short-form content.
+          </p>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            For creators who also do photography, graphic design, or illustration, a hybrid approach can work. Use an AI portfolio builder for your video work and a platform like Behance or Dribbble for static creative. Link between them so brands can see the full picture.
+          </p>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            We recommend avoiding the temptation to build a custom website with WordPress or Webflow unless you are also a web designer. The maintenance burden is real, and most creators abandon custom sites within three months because updating them requires technical effort they would rather spend creating.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Best Practices -->
+    <section id="best-practices" class="py-12 md:py-16">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="max-w-[720px]">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 5</p>
+          <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] mb-6">
+            Best Practices for AI-Built Portfolios
+          </h2>
+
+          <div class="rounded-2xl p-6 mb-8" style="background: rgba(99,102,241,.04);">
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">TL;DR</p>
+            <p class="text-[15px] text-ink-2 leading-[1.55]">
+              Let AI do the heavy lifting, but always review and personalize. Lead with your strongest work, keep descriptions concise, and make your contact information impossible to miss.
+            </p>
+          </div>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">1. Curate ruthlessly before uploading</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            AI will analyze whatever you feed it. If you upload twenty mediocre videos, your portfolio will look mediocre no matter how good the AI is at writing descriptions. Select your five to eight strongest pieces. Prioritize variety — different brands, different content types, different tones. A brand manager wants to see range, not repetition.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">2. Edit the AI-generated text</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            AI-written bios are a solid starting point, but they tend to be generic. Add specific details that only you know — your turnaround time, your preferred content formats, the industries you understand deeply. Replace vague phrases like "passionate about creating engaging content" with concrete facts like "specialize in 15-30 second testimonial-style ads for DTC skincare brands."
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">3. Put your best reel first</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            The first video in your portfolio gets 4-5x more plays than the last one. This is not a guess — we have tracked this across creator profiles for two years. Lead with the piece that best represents the work you want to do more of. If you want beauty brand deals, lead with your best beauty reel, even if your food content has more views.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">4. Include rates or a rate range</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            This is controversial, but our data is clear: creators who include at least a rate range ("$200-500 per video depending on complexity") receive more qualified inquiries than those who say "DM for rates." Brands have budgets. When they can see your range fits their budget, they reach out. When it is hidden, they often move to the next creator who makes it easy.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">5. Make contact information prominent</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            This sounds obvious, but we regularly see portfolios where the only way to contact the creator is to scroll to the bottom and find a small email link. Your email address and preferred contact method should be visible without scrolling. Include it near the top and again at the bottom. Remove any friction between "I want to work with this person" and "I just sent them a message."
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">6. Test on mobile before sharing</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            Over 60% of portfolio views happen on phones. Brand managers check creator portfolios between meetings, during commutes, and while reviewing pitch emails on their phones. Open your portfolio on your own phone before you send it anywhere. Check that videos play without issues, text is readable, and your CTA buttons are tappable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Common Mistakes -->
+    <section id="common-mistakes" class="py-12 md:py-16 bg-card border-t border-b border-border">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="max-w-[720px]">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 6</p>
+          <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] mb-6">
+            Common Mistakes That Cost Creators Brand Deals
+          </h2>
+
+          <div class="rounded-2xl p-6 mb-8" style="background: rgba(245,166,35,.06);">
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-[#D48B00] mb-2">TL;DR</p>
+            <p class="text-[15px] text-ink-2 leading-[1.55]">
+              The biggest portfolio mistakes are not design-related. They are strategic: wrong content selection, missing information, and treating the portfolio as a one-time project instead of a living document.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <div class="border-l-4 border-accent pl-5">
+              <h3 class="font-display font-bold text-[17px] tracking-[-0.01em] mb-2 text-ink">Mistake 1: Including everything you have ever made</h3>
+              <p class="text-[15px] text-ink-2 leading-[1.55]">
+                More is not better. A portfolio with thirty videos overwhelms the viewer and dilutes your strongest work. We consistently see that creators with 5-8 carefully chosen pieces get more inquiries than those with 20+ random clips. Quality signals expertise. Volume signals desperation.
+              </p>
+            </div>
+            <div class="border-l-4 border-accent pl-5">
+              <h3 class="font-display font-bold text-[17px] tracking-[-0.01em] mb-2 text-ink">Mistake 2: Using Google Drive as your portfolio</h3>
+              <p class="text-[15px] text-ink-2 leading-[1.55]">
+                Shared Google Drive folders require access requests, have no visual structure, and force the viewer to download videos to watch them. We have seen brand managers skip creator pitches entirely because the Drive link asked for permission. A dedicated portfolio page — even a simple one — eliminates this friction completely.
+              </p>
+            </div>
+            <div class="border-l-4 border-accent pl-5">
+              <h3 class="font-display font-bold text-[17px] tracking-[-0.01em] mb-2 text-ink">Mistake 3: Accepting the AI output without editing</h3>
+              <p class="text-[15px] text-ink-2 leading-[1.55]">
+                AI-generated bios all start sounding the same after a while. "Versatile content creator passionate about storytelling" could describe anyone. The AI gives you a draft. Your job is to inject personality, specifics, and your actual voice. Spend ten minutes editing what the AI produces — it makes the difference between forgettable and memorable.
+              </p>
+            </div>
+            <div class="border-l-4 border-accent pl-5">
+              <h3 class="font-display font-bold text-[17px] tracking-[-0.01em] mb-2 text-ink">Mistake 4: Forgetting to update after new projects</h3>
+              <p class="text-[15px] text-ink-2 leading-[1.55]">
+                Your portfolio is a living document, not a one-time project. If the most recent work on your page is six months old, brands assume you have stopped creating. Set a monthly reminder to review and refresh. With AI tools, adding a new project takes under two minutes — there is no excuse for a stale portfolio.
+              </p>
+            </div>
+            <div class="border-l-4 border-accent pl-5">
+              <h3 class="font-display font-bold text-[17px] tracking-[-0.01em] mb-2 text-ink">Mistake 5: No clear niche positioning</h3>
+              <p class="text-[15px] text-ink-2 leading-[1.55]">
+                "I create content for any brand" is not a positioning statement. Brands hire specialists, not generalists. Even if you work across multiple categories, lead with one or two niches where you have the strongest work. You can always expand the conversation once you are in a call.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: SEO Tips -->
+    <section id="seo-tips" class="py-12 md:py-16">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="max-w-[720px]">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 7</p>
+          <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] mb-6">
+            SEO Tips to Make Your Portfolio Discoverable
+          </h2>
+
+          <div class="rounded-2xl p-6 mb-8" style="background: rgba(16,185,129,.04);">
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-[#10B981] mb-2">TL;DR</p>
+            <p class="text-[15px] text-ink-2 leading-[1.55]">
+              A discoverable portfolio brings inbound leads without cold pitching. Optimize your page title, use niche-specific keywords naturally, and make sure your portfolio is indexable by search engines.
+            </p>
+          </div>
+
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            Most creators think of their portfolio as something they send out in pitches. But a well-optimized portfolio also works as an inbound channel — brands searching for "UGC creator beauty Portugal" or "tech product video creator English" can find you without you ever reaching out. Here is how to increase your visibility.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">Use a descriptive page title</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            Your portfolio page title should include your name, your primary niche, and the word "UGC" or "creator." A good example: "Sarah Chen — Beauty UGC Creator Portfolio." Avoid generic titles like "My Work" or "Portfolio" — they tell search engines nothing useful.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">Write natural, keyword-rich descriptions</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            When you edit your AI-generated bio, include the specific terms brands search for. Mention content types (testimonial ads, product demos, unboxing videos), platforms (TikTok, Instagram Reels, YouTube Shorts), and industries (skincare, SaaS, food and beverage). Do not stuff keywords — write for humans first, search engines second.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">Ensure your portfolio is indexable</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            Not all portfolio tools are created equal here. Some generate client-side-rendered pages that search engines cannot crawl effectively. Check if your portfolio appears in Google by searching "site:yourtool.com/your-name" after it has been live for a week. If it does not show up, your tool may not support proper SEO — consider switching to one that does.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">Add alt text to images and video thumbnails</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            If your portfolio tool allows custom alt text, use it. Describe what is in each video thumbnail — "UGC testimonial ad for organic skincare brand" is far more useful than "video-1.jpg." This helps with image search visibility and accessibility, both of which matter.
+          </p>
+
+          <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] mb-4 mt-8 text-ink">Link to your portfolio from other platforms</h3>
+          <p class="text-[16px] text-ink-2 leading-[1.7] mb-5">
+            Add your portfolio URL to your Instagram bio, TikTok bio, LinkedIn profile, Twitter/X bio, and email signature. Each link signals to search engines that this page matters. More importantly, it creates multiple entry points for brands to discover your work regardless of where they first encounter you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: FAQ -->
+    <section id="faq" class="py-12 md:py-16 bg-card border-t border-b border-border">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="max-w-[720px]">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 8</p>
+          <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] mb-6">
+            Frequently Asked Questions
+          </h2>
+
+          <div class="space-y-0">
+            {faqs.map((faq, i) => (
+              <div class="border-b border-border py-4 faq-item" data-open={i === 0 ? "true" : "false"}>
+                <button class="faq-toggle w-full flex justify-between items-center gap-3 text-left font-display font-semibold text-[15px] text-ink cursor-pointer bg-transparent border-none p-0">
+                  <span>{faq.q}</span>
+                  <span class="faq-icon text-[20px] text-muted flex-shrink-0 transition-transform">+</span>
+                </button>
+                <div class="faq-answer text-[14px] text-ink-2 leading-[1.6] pt-2" style={i === 0 ? "" : "display:none"}>
+                  {faq.a}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-dark py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 transition-transform hover:-translate-y-0.5">
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-4">Work with us</p>
+            <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] tracking-[-0.02em] text-white mb-4">
+              Need Help With Your Creator Portfolio?
+            </h2>
+            <p class="text-[17px] text-white/60 leading-[1.55] mb-8">
+              We work with 700+ UGC creators and help brands find the right talent. Whether you are a creator looking for portfolio advice or a brand searching for creators, we can help.
+            </p>
+            <div class="space-y-2.5 mb-8">
+              <p class="text-[13px] text-white/40">Founder: Olga Kad Miller</p>
+              <p class="text-[13px] text-white/40">Email: <a href="mailto:olga@okad.agency" class="text-white hover:text-accent transition-colors no-underline">olga@okad.agency</a></p>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              <a href="mailto:olga@okad.agency" class="inline-flex items-center px-5 py-2.5 bg-white text-ink text-[13px] font-semibold rounded-full hover:bg-border transition-colors no-underline">Email Us</a>
+              <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 bg-lime text-ink text-[13px] font-semibold rounded-full hover:bg-[#b8e537] transition-colors no-underline">Book a Call</a>
+              <a href="https://www.linkedin.com/in/o-kad/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 text-white/60 text-[13px] font-semibold rounded-full border border-white/15 hover:text-white hover:border-white/40 transition-colors no-underline">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 transition-transform hover:-translate-y-0.5">
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-4">For brands</p>
+            <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-white mb-4">
+              Looking for UGC Creators?
+            </h2>
+            <p class="text-[15px] text-white/60 leading-[1.55] mb-6">
+              OKAD manages a vetted network of 700+ creators across beauty, tech, food, fitness, fashion, and lifestyle. We handle sourcing, briefing, production, and delivery.
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-ok mt-0.5 flex-shrink-0">&#10003;</span>
+                <span>Creators in 40+ countries and 15+ languages</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-ok mt-0.5 flex-shrink-0">&#10003;</span>
+                <span>10,000+ ads and posts produced</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-ok mt-0.5 flex-shrink-0">&#10003;</span>
+                <span>End-to-end: scripts, creators, editing, delivery</span>
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-ok mt-0.5 flex-shrink-0">&#10003;</span>
+                <span>Dedicated project manager for every campaign</span>
+              </li>
+            </ul>
+            <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 bg-accent text-white text-[13px] font-semibold rounded-full hover:bg-accent-hover transition-colors no-underline">
+              Get a Quote &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.querySelectorAll('.faq-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      if (!item) return;
+      const answer = item.querySelector('.faq-answer') as HTMLElement;
+      const icon = item.querySelector('.faq-icon');
+      if (!answer || !icon) return;
+      const isOpen = item.getAttribute('data-open') === 'true';
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.setAttribute('data-open', 'false');
+        const a = i.querySelector('.faq-answer') as HTMLElement;
+        const ic = i.querySelector('.faq-icon');
+        if (a) a.style.display = 'none';
+        if (ic) ic.textContent = '+';
+      });
+
+      // Toggle current
+      if (!isOpen) {
+        item.setAttribute('data-open', 'true');
+        answer.style.display = 'block';
+        icon.textContent = '−';
+      }
+    });
+  });
+</script>

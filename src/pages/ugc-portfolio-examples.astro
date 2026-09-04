@@ -1,0 +1,623 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const essentialElements = [
+  {
+    number: "01",
+    title: "A Clear Opening Statement",
+    description: "The first line of your portfolio should tell a brand exactly what you do and who you do it for. Not your life story. Not a list of platforms. One sentence: niche, content type, and the outcome you deliver.",
+    tips: [
+      "State your niche and content type upfront",
+      "Mention the outcome brands care about",
+      "Skip the generic 'passionate creator' intro",
+      "Keep it under 20 words",
+    ],
+  },
+  {
+    number: "02",
+    title: "Video Work Front and Center",
+    description: "Your best three to five videos should be the first thing a brand sees after your intro. Not thumbnails. Not screenshots. Playable videos with native sound. If a brand manager has to click through to another site or request file access, you have already lost them.",
+    tips: [
+      "Lead with your strongest piece, not your newest",
+      "Include a mix of content types (testimonial, unboxing, tutorial)",
+      "Make sure every video loads and plays instantly",
+      "Remove anything older than 12 months unless it went viral",
+    ],
+  },
+  {
+    number: "03",
+    title: "Brand Logos and Collaboration History",
+    description: "Even if you have worked with two brands, show them. Logos create instant credibility. A portfolio without brand names feels like a resume without job titles. Group them visually so a scanning eye catches them in under two seconds.",
+    tips: [
+      "Use recognizable logos, not just text names",
+      "Group by industry if you have 5+ brands",
+      "Include spec work clearly labeled as such",
+      "Update after every new collaboration",
+    ],
+  },
+  {
+    number: "04",
+    title: "Rates and Availability",
+    description: "Brands do not want to play email ping-pong to find out your pricing. Include at least a starting rate or a range. Creators who show rates get 40% more inbound inquiries in our experience, because brand managers can immediately see whether the budget fits.",
+    tips: [
+      "Show starting rates, not exact quotes",
+      "List turnaround time for standard deliverables",
+      "Mention if you offer usage rights separately",
+      "Include your preferred contact method",
+    ],
+  },
+  {
+    number: "05",
+    title: "Social Proof and Metrics",
+    description: "If your video hit 500K views, say so. If a brand's CPA dropped 30% after running your creative, include that number. Social proof converts hesitant brand managers into paying clients faster than any bio ever will.",
+    tips: [
+      "Include view counts on standout videos",
+      "Show performance metrics where available",
+      "Add client testimonials even if they are short",
+      "Link to live posts so brands can verify",
+    ],
+  },
+  {
+    number: "06",
+    title: "A Single Clear CTA",
+    description: "Every portfolio needs exactly one call to action. Not three. Not a paragraph of options. One button or one email address. The easier you make it to reach you, the more brands will actually do it.",
+    tips: [
+      "Use a specific email, not a contact form",
+      "Add a booking link for quick calls",
+      "Place the CTA after your video section",
+      "Repeat it at the bottom of the page",
+    ],
+  },
+];
+
+const commonMistakes = [
+  {
+    mistake: "Leading with follower count",
+    explanation: "Brands hiring UGC creators care about content quality, not your audience size. Your follower count is irrelevant when the brand is running your video as a paid ad. Lead with your work, not your metrics.",
+  },
+  {
+    mistake: "Using a PDF or Google Drive folder",
+    explanation: "PDFs do not play video. Google Drive links require access requests and feel unprofessional. Worse, both break when you update your work. A web-based portfolio stays current and loads instantly on any device.",
+  },
+  {
+    mistake: "Showing everything you have ever made",
+    explanation: "More is not better. A portfolio with 40 videos tells a brand you cannot curate. Show your 5 to 8 strongest pieces. Every extra video that is not excellent actively weakens the ones that are.",
+  },
+  {
+    mistake: "No context on each video",
+    explanation: "A video without a label is just a clip. Add the brand name, the content type (testimonial, tutorial, unboxing), and the platform it was made for. Context turns a reel into a case study.",
+  },
+  {
+    mistake: "Outdated work from 2+ years ago",
+    explanation: "UGC styles change fast. Content that looked fresh in 2024 can feel dated today. If your portfolio includes work from before 2025, remove it unless it has exceptional performance metrics attached.",
+  },
+  {
+    mistake: "No mobile optimization",
+    explanation: "Over 70% of brand managers first open your portfolio on their phone. If your layout breaks on mobile, your text is too small to read, or your videos do not autoplay, you are losing most of your audience.",
+  },
+];
+
+const nicheExamples = [
+  {
+    niche: "Beauty and Skincare",
+    color: "pink",
+    description: "The strongest beauty portfolios lead with close-up application shots and before-after sequences. Lighting quality matters more here than in any other niche. Show texture, show glow, show the product in use.",
+    keyElements: "Get-ready-with-me format, close-up product shots, natural lighting, skin texture visibility",
+    portfolioTip: "Include both 'raw skin' and 'finished look' videos. Brands want to see you can sell transformation, not just application.",
+  },
+  {
+    niche: "Food and Beverage",
+    color: "green",
+    description: "Food UGC portfolios need to make viewers hungry. That means overhead shots, steam, drizzles, and the satisfying first bite. Audio matters enormously in this niche: the crunch, the sizzle, the pour.",
+    keyElements: "Overhead angles, ASMR audio, recipe walkthroughs, appetizing presentation",
+    portfolioTip: "Show at least one video with a full recipe flow and one that is purely aesthetic. Brands need both educational and aspirational content.",
+  },
+  {
+    niche: "Tech and SaaS",
+    color: "warm",
+    description: "Tech UGC is the highest-paying niche, with rates reaching $500 to $2,000 per video. Your portfolio needs to demonstrate that you can explain complex products simply and make screen recordings feel dynamic.",
+    keyElements: "Screen recordings with face overlay, demo walkthroughs, problem-solution structure, clean audio",
+    portfolioTip: "Include at least one video where you explain a technical feature to a non-technical audience. This is the skill brands pay premium rates for.",
+  },
+  {
+    niche: "Fitness and Wellness",
+    color: "blue",
+    description: "Fitness portfolios succeed when they show energy and authenticity. Avoid overly polished gym footage. Brands in this space want real workouts, real sweat, and genuine reactions to products.",
+    keyElements: "Workout demonstrations, supplement unboxings, lifestyle integration, energetic delivery",
+    portfolioTip: "Show yourself using the product in a real workout, not just holding it and talking. Action shots outsell talking heads in this niche by a wide margin.",
+  },
+];
+
+const portfolioStructure = [
+  { step: "1", title: "Hero Section", detail: "Your name, one-line positioning, and a professional photo. This is not a headshot from your phone camera. Invest in one good photo." },
+  { step: "2", title: "Featured Reel", detail: "Your single best video, auto-playing with sound off. This is the piece that makes a brand manager stop scrolling and start watching." },
+  { step: "3", title: "Brand Logos", detail: "A clean row of logos from brands you have worked with. Even two or three logos change the perception of your portfolio entirely." },
+  { step: "4", title: "Video Grid", detail: "Your top 5 to 8 videos organized by content type or niche. Each video needs a label: brand, format, and platform." },
+  { step: "5", title: "About and Rates", detail: "A brief bio focused on what makes you different, your starting rates, turnaround time, and the types of content you specialize in." },
+  { step: "6", title: "Contact CTA", detail: "A clear, prominent way to reach you. An email address, a booking link, or both. No contact forms that disappear into a void." },
+];
+
+const faqs = [
+  {
+    question: "How many videos should a UGC portfolio include?",
+    answer: "Five to eight is the sweet spot. Enough to demonstrate range, few enough that every piece is genuinely strong. We review hundreds of creator portfolios each month at OKAD, and the ones that convert best are tightly curated rather than comprehensive.",
+  },
+  {
+    question: "Should I include spec work or only paid brand deals?",
+    answer: "Absolutely include spec work, especially if you are early in your career. Just label it honestly. A well-produced spec video for a brand you admire shows initiative and skill. What matters is the quality of the content, not whether someone paid for it.",
+  },
+  {
+    question: "Do I need a website or can I use a portfolio platform?",
+    answer: "A dedicated portfolio platform built for UGC creators is usually better than a general website builder. Platforms designed for creator portfolios handle video playback, mobile responsiveness, and quick updates far better than a Squarespace site you built yourself.",
+  },
+  {
+    question: "How often should I update my portfolio?",
+    answer: "After every significant project. At minimum, review it monthly and swap out your weakest piece for your newest strong work. A portfolio that has not been updated in six months signals to brands that you are not actively working.",
+  },
+  {
+    question: "What if I only have content for one niche?",
+    answer: "That is actually a strength, not a weakness. Brands prefer specialists. A portfolio focused entirely on beauty UGC or tech reviews tells a brand that you understand their audience deeply. Generalist portfolios get overlooked more often than niche ones.",
+  },
+  {
+    question: "Should I include pricing in my portfolio?",
+    answer: "Yes. At minimum, include a starting rate or a price range. Brands respect transparency, and it filters out inquiries that would never match your budget. Creators who display rates tend to attract more serious leads with faster turnaround on bookings.",
+  },
+  {
+    question: "How do brands actually discover UGC portfolios?",
+    answer: "Through three main channels: direct outreach from creators who include their portfolio link in pitch emails, creator directories and marketplaces, and organic search. Having a web-based portfolio that search engines can index dramatically increases your inbound opportunities.",
+  },
+  {
+    question: "Can OKAD help me build or improve my portfolio?",
+    answer: "Yes. We work with over 700 UGC creators and review portfolios regularly. Whether you need a full portfolio buildout or a quick audit of your existing one, reach out to olga@okad.agency and we can discuss what would make the biggest impact for your specific situation.",
+  },
+];
+
+const pillStyle: Record<string, string> = {
+  warm: "background: rgba(147,51,234,.12); color: #9333EA",
+  pink: "background: rgba(236,72,153,.12); color: #EC4899",
+  green: "background: rgba(16,185,129,.12); color: #10B981",
+  blue: "background: rgba(245,166,35,.15); color: #D48B00",
+};
+
+const blockBg: Record<string, string> = {
+  warm: "background: rgba(147,51,234,.04)",
+  pink: "background: rgba(236,72,153,.04)",
+  green: "background: rgba(16,185,129,.035)",
+  blue: "background: rgba(245,166,35,.04)",
+};
+---
+
+<Layout
+  title="UGC Portfolio Examples: What Great Portfolios Look Like | OKAD"
+  description="See what separates good UGC portfolios from great ones. Real analysis of portfolio structure, essential elements, common mistakes, and niche-specific tips from an agency that works with 700+ creators."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24">
+      <div class="max-w-[1080px] mx-auto px-6 pt-12 md:pt-16 pb-8">
+        <div class="max-w-[720px]">
+          <div class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium uppercase tracking-[.06em] text-ink-2 mb-6">
+            <strong class="text-accent font-semibold">#UGC_PORTFOLIO</strong>
+            <span class="text-muted-2">&middot;</span>
+            <strong class="text-accent font-semibold">#CREATOR_GUIDE</strong>
+            <span class="text-muted-2">&middot;</span>
+            <strong class="text-accent font-semibold">#EXAMPLES</strong>
+          </div>
+
+          <h1 class="font-display font-bold text-[clamp(36px,6vw,56px)] leading-[1.1] tracking-[-0.035em] mb-6 text-ink">
+            UGC Portfolio Examples:<br />
+            What <span class="font-script text-accent text-[1.1em]">Great</span> Portfolios<br />
+            Actually Look Like
+          </h1>
+
+          <p class="text-[17px] text-ink-2 leading-[1.55] mb-2">Your portfolio is the single most important asset in your UGC career.</p>
+          <p class="text-[17px] font-semibold text-ink mb-6">&gt; We have reviewed 2,000+ creator portfolios. Here is what the best ones get right.</p>
+
+          <p class="text-[15px] text-ink-2 leading-[1.55] max-w-[600px] mb-8">
+            At OKAD, we work with over 700 UGC creators across beauty, tech, food, fitness, and lifestyle. We see every format imaginable: Canva decks, Google Drive folders, Notion pages, Instagram highlights, and dedicated portfolio sites. After years of matching creators to brand campaigns, we know exactly which portfolios get opened, which get bookmarked, and which get ignored. This guide breaks down what separates the portfolios that land deals from the ones that collect dust.
+          </p>
+
+          <div class="flex flex-nowrap gap-2.5">
+            <a href="mailto:olga@okad.agency" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-white text-ink border border-[#d1d5db] hover:border-ink hover:bg-ink hover:text-white transition-all no-underline">
+              Email us &rarr;
+            </a>
+            <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-lime text-ink hover:bg-[#b8e537] transition-all no-underline">
+              Book a call &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Portfolios Matter -->
+    <section class="py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Why It Matters</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
+          Your Portfolio Is Your Sales Team
+        </h2>
+        <p class="text-[15px] text-ink-2 leading-[1.55] max-w-[640px] mx-auto text-center mb-12">
+          A brand manager evaluating UGC creators spends an average of 12 seconds on a portfolio before deciding to scroll deeper or move on. In those 12 seconds, your portfolio needs to answer three questions: Can this person create content that fits our brand? Have they done this before? How do I hire them?
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-card border border-border rounded-2xl p-6">
+            <div class="font-display font-extrabold text-[40px] tracking-[-0.03em] text-accent/15 mb-2">73%</div>
+            <h3 class="font-display font-semibold text-[17px] mb-2 text-ink">Deals Start Here</h3>
+            <p class="text-[14px] text-ink-2 leading-[1.55]">
+              In our creator network, nearly three out of four brand deals begin with a portfolio review. Not a DM. Not a cold email. The portfolio is the decision-making moment. Brands shortlist creators based on the first impression their portfolio delivers.
+            </p>
+          </div>
+          <div class="bg-card border border-border rounded-2xl p-6">
+            <div class="font-display font-extrabold text-[40px] tracking-[-0.03em] text-accent/15 mb-2">5&ndash;8</div>
+            <h3 class="font-display font-semibold text-[17px] mb-2 text-ink">Videos Are Enough</h3>
+            <p class="text-[14px] text-ink-2 leading-[1.55]">
+              The best-performing portfolios in our network contain between five and eight videos. Not twenty. Not two. This range gives brands enough to assess your range while ensuring every piece is genuinely strong. Quality always wins over quantity.
+            </p>
+          </div>
+          <div class="bg-card border border-border rounded-2xl p-6">
+            <div class="font-display font-extrabold text-[40px] tracking-[-0.03em] text-accent/15 mb-2">2&times;</div>
+            <h3 class="font-display font-semibold text-[17px] mb-2 text-ink">Response Rate Increase</h3>
+            <p class="text-[14px] text-ink-2 leading-[1.55]">
+              Creators in our network who switched from a Google Drive link to a proper portfolio page saw their brand response rate roughly double. A dedicated, well-structured portfolio page signals professionalism before anyone watches a single frame of your content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Essential Elements -->
+    <section id="elements" class="py-16 md:py-20 bg-card border-t border-b border-border">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Anatomy</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
+          Six Elements Every UGC Portfolio Needs
+        </h2>
+        <p class="text-[15px] text-ink-2 leading-[1.55] max-w-[640px] mx-auto text-center mb-12">
+          After reviewing thousands of creator portfolios across our network, these are the six non-negotiable elements that appear in every portfolio that consistently wins brand deals.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          {essentialElements.map((el) => (
+            <div class="bg-bg rounded-2xl p-6 border border-border">
+              <div class="font-display font-extrabold text-[32px] tracking-[-0.03em] text-accent/10 mb-3">{el.number}</div>
+              <h3 class="font-display font-semibold text-[17px] mb-3 text-ink">{el.title}</h3>
+              <p class="text-[14px] text-ink-2 leading-[1.55] mb-4">{el.description}</p>
+              <ul class="list-none p-0 m-0 space-y-1.5">
+                {el.tips.map((tip) => (
+                  <li class="text-[13px] text-ink-2 pl-5 relative before:content-['\2713'] before:absolute before:left-0 before:text-ok before:font-semibold">{tip}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Structure -->
+    <section class="py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Blueprint</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
+          The Ideal Portfolio Structure, Top to Bottom
+        </h2>
+        <p class="text-[15px] text-ink-2 leading-[1.55] max-w-[640px] mx-auto text-center mb-12">
+          Think of your portfolio as a funnel. Each section should pull the brand manager deeper into your work and make the next action obvious. Here is the order that works.
+        </p>
+
+        <div class="max-w-[680px] mx-auto space-y-4">
+          {portfolioStructure.map((item) => (
+            <div class="flex gap-5 items-start bg-card border border-border rounded-2xl p-5">
+              <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-display font-bold text-[15px] shrink-0">{item.step}</div>
+              <div>
+                <h3 class="font-display font-semibold text-[16px] mb-1.5 text-ink">{item.title}</h3>
+                <p class="text-[14px] text-ink-2 leading-[1.55]">{item.detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Mistakes -->
+    <section class="py-16 md:py-20 bg-card border-t border-b border-border">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Avoid</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
+          Six Portfolio Mistakes That Cost You Brand Deals
+        </h2>
+        <p class="text-[15px] text-ink-2 leading-[1.55] max-w-[640px] mx-auto text-center mb-12">
+          We see these errors in the majority of portfolios that come through our creator intake process. Each one is fixable in under an hour, and fixing them can make a dramatic difference in how brands respond to your work.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {commonMistakes.map((item) => (
+            <div class="bg-bg rounded-2xl p-6 border border-border">
+              <div class="text-[14px] font-semibold text-[#DC2626] mb-3">&times; {item.mistake}</div>
+              <p class="text-[14px] text-ink-2 leading-[1.55]">{item.explanation}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Niche-Specific Tips -->
+    <section class="py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">By Niche</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
+          What Winning Portfolios Look Like in Each Niche
+        </h2>
+        <p class="text-[15px] text-ink-2 leading-[1.55] max-w-[640px] mx-auto text-center mb-12">
+          A beauty portfolio and a tech portfolio require fundamentally different approaches. Here is what we look for in each niche when evaluating creators for brand campaigns.
+        </p>
+
+        <div class="space-y-6">
+          {nicheExamples.map((niche) => (
+            <div class="rounded-3xl p-8 md:p-10 shadow-[inset_0_1px_0_rgba(255,255,255,.6)]" style={blockBg[niche.color]}>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="rounded-full px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-[.08em]" style={pillStyle[niche.color]}>{niche.niche}</span>
+              </div>
+              <h3 class="font-display font-extrabold text-[clamp(22px,3vw,28px)] leading-[1.15] tracking-[-0.03em] mb-4 text-ink">{niche.niche} Portfolios</h3>
+              <p class="text-[15px] text-ink-2 leading-[1.55] mb-3">{niche.description}</p>
+              <p class="text-[13px] text-muted mb-2"><strong class="text-ink-2">Key elements:</strong> {niche.keyElements}</p>
+              <p class="text-[13px] text-muted italic mb-6"><strong class="text-ink-2">Pro tip:</strong> {niche.portfolioTip}</p>
+              <a href="mailto:olga@okad.agency" class="inline-flex items-center gap-1.5 px-[18px] py-2.5 rounded-full font-sans text-[13px] font-semibold bg-white text-ink border border-[#d1d5db] hover:border-ink transition-all no-underline">
+                Get portfolio feedback &rarr;
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Real-World Analysis -->
+    <section class="py-16 md:py-20 bg-card border-t border-b border-border">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Analysis</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
+          What We Actually Look For When Reviewing Portfolios
+        </h2>
+        <p class="text-[15px] text-ink-2 leading-[1.55] max-w-[640px] mx-auto text-center mb-12">
+          When a creator applies to join OKAD's network of 700+ creators, our team evaluates their portfolio against a specific set of criteria. Here is the internal framework we use.
+        </p>
+
+        <div class="max-w-[720px] mx-auto">
+          <div class="space-y-8">
+            <div>
+              <h3 class="font-display font-semibold text-[18px] mb-3 text-ink">First Impression (0 to 3 seconds)</h3>
+              <p class="text-[15px] text-ink-2 leading-[1.55] mb-3">
+                Does the portfolio look professional at a glance? We check for a clean layout, a clear name and positioning statement, and whether we can immediately tell what kind of content this person creates. Portfolios that open with a wall of text or a generic bio get closed immediately.
+              </p>
+              <p class="text-[15px] text-ink-2 leading-[1.55]">
+                The strongest portfolios we see have a single sentence above the fold that tells us the creator's niche and their angle. Something specific, like "I make testimonial-style ads for DTC skincare brands" rather than "UGC creator with a passion for storytelling."
+              </p>
+            </div>
+
+            <div class="h-px bg-border"></div>
+
+            <div>
+              <h3 class="font-display font-semibold text-[18px] mb-3 text-ink">Content Quality (3 to 15 seconds)</h3>
+              <p class="text-[15px] text-ink-2 leading-[1.55] mb-3">
+                We watch the first five seconds of the top video. If the hook is weak, the lighting is poor, or the audio is unclear, we have already formed an opinion. The opening clip in your portfolio carries disproportionate weight because it is the only piece most reviewers will watch in full.
+              </p>
+              <p class="text-[15px] text-ink-2 leading-[1.55]">
+                We specifically look for: natural delivery (not reading from a script with dead eyes), good lighting (natural light works perfectly), clean audio (no background noise, no echo), and a strong opening hook that would stop someone scrolling on their phone.
+              </p>
+            </div>
+
+            <div class="h-px bg-border"></div>
+
+            <div>
+              <h3 class="font-display font-semibold text-[18px] mb-3 text-ink">Range and Consistency (15 to 30 seconds)</h3>
+              <p class="text-[15px] text-ink-2 leading-[1.55] mb-3">
+                We scan the remaining videos to check for range. Can this creator do different formats? Testimonial and unboxing and tutorial? Or is every video the same talking-head setup? Range matters because brands need versatility within a campaign.
+              </p>
+              <p class="text-[15px] text-ink-2 leading-[1.55]">
+                At the same time, we look for consistency. Every video should feel like it was made by the same creator in terms of quality level, even if the format varies. A portfolio with one amazing video and four mediocre ones tells us the amazing one might have been a fluke.
+              </p>
+            </div>
+
+            <div class="h-px bg-border"></div>
+
+            <div>
+              <h3 class="font-display font-semibold text-[18px] mb-3 text-ink">Professionalism (30 to 60 seconds)</h3>
+              <p class="text-[15px] text-ink-2 leading-[1.55]">
+                Finally, we check the practical details. Are rates listed? Is there a clear way to contact this person? Do they mention turnaround time? Is their bio written in clear, grammatically correct English? These details do not seem creative, but they signal whether this person will be reliable to work with on a real campaign with real deadlines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison: Good vs Great -->
+    <section class="py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">Comparison</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
+          Good Portfolio vs. Great Portfolio
+        </h2>
+        <p class="text-[15px] text-ink-2 leading-[1.55] max-w-[640px] mx-auto text-center mb-12">
+          Most creator portfolios are not bad. They are just missing the details that make them genuinely compelling. Here is the difference between a portfolio that gets viewed and one that gets bookmarked.
+        </p>
+
+        <div class="max-w-[720px] mx-auto overflow-x-auto">
+          <table class="w-full border-collapse bg-card rounded-2xl overflow-hidden border border-border text-[14px]">
+            <thead>
+              <tr>
+                <th class="px-5 py-3 text-left bg-bg-alt text-[12px] font-semibold text-muted uppercase tracking-[.04em] border-b border-border">Element</th>
+                <th class="px-5 py-3 text-left bg-bg-alt text-[12px] font-semibold text-muted uppercase tracking-[.04em] border-b border-border">Good Portfolio</th>
+                <th class="px-5 py-3 text-left bg-accent-bg text-[12px] font-semibold text-accent uppercase tracking-[.04em] border-b border-border">Great Portfolio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-5 py-3 font-medium border-b border-border">Intro</td>
+                <td class="px-5 py-3 text-ink-2 border-b border-border">Generic bio with buzzwords</td>
+                <td class="px-5 py-3 text-ink-2 border-b border-border font-medium text-accent">One sentence: niche + outcome</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-medium border-b border-border">Videos</td>
+                <td class="px-5 py-3 text-ink-2 border-b border-border">10+ clips, mixed quality</td>
+                <td class="px-5 py-3 text-ink-2 border-b border-border font-medium text-accent">5-8 strong pieces, each labeled</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-medium border-b border-border">Brand proof</td>
+                <td class="px-5 py-3 text-ink-2 border-b border-border">Names mentioned in bio</td>
+                <td class="px-5 py-3 text-ink-2 border-b border-border font-medium text-accent">Logos with linked case context</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-medium border-b border-border">Pricing</td>
+                <td class="px-5 py-3 text-ink-2 border-b border-border">"DM for rates"</td>
+                <td class="px-5 py-3 text-ink-2 border-b border-border font-medium text-accent">Starting at $X per video</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-medium border-b border-border">Contact</td>
+                <td class="px-5 py-3 text-ink-2 border-b border-border">Instagram DM link</td>
+                <td class="px-5 py-3 text-ink-2 border-b border-border font-medium text-accent">Email + booking link</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-medium">Format</td>
+                <td class="px-5 py-3 text-ink-2">PDF or Drive folder</td>
+                <td class="px-5 py-3 text-ink-2 font-medium text-accent">Dedicated web page</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 md:py-20 bg-card border-t border-b border-border">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3 text-center">FAQ</p>
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,40px)] leading-[1.1] tracking-[-0.03em] text-center mb-4">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-[15px] text-ink-2 leading-[1.55] max-w-[640px] mx-auto text-center mb-12">
+          Common questions we receive from creators about building and maintaining their UGC portfolios.
+        </p>
+
+        <div class="max-w-[700px] mx-auto">
+          {faqs.map((faq, i) => (
+            <div class="border-b border-border py-4 faq-item" data-open={i === 0 ? "true" : undefined}>
+              <button class="faq-q w-full flex justify-between items-center gap-3 text-left font-display font-semibold text-[15px] text-ink cursor-pointer bg-transparent border-none p-0">
+                {faq.question}
+                <span class="faq-icon text-[20px] text-muted shrink-0 transition-transform">+</span>
+              </button>
+              <div class="faq-a text-[14px] text-ink-2 leading-[1.55] pt-3" style={i === 0 ? "" : "display:none"}>
+                {faq.answer}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-dark py-16 md:py-20">
+      <div class="max-w-[1080px] mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 transition-transform hover:-translate-y-0.5">
+            <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] tracking-[-0.02em] text-white mb-4">
+              Need Help With Your Portfolio?
+            </h2>
+            <p class="text-[17px] text-white/60 leading-[1.55] mb-8">
+              We work with 700+ UGC creators and review portfolios daily. Whether you need a full portfolio audit, niche-specific guidance, or want to join our creator network, we can help you stand out to the brands that matter.
+            </p>
+            <div class="space-y-2.5 mb-8">
+              <p class="text-[13px] text-white/40">Founder: Olga Kad Miller</p>
+              <p class="text-[13px] text-white/40">Email: <a href="mailto:olga@okad.agency" class="text-white hover:text-accent transition-colors no-underline">olga@okad.agency</a></p>
+              <p class="text-[13px] text-white/40">Creator network: <a href="https://okad.agency" class="text-white hover:text-accent transition-colors no-underline">okad.agency</a></p>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              <a href="mailto:olga@okad.agency" class="inline-flex items-center px-5 py-2.5 bg-white text-ink text-[13px] font-semibold rounded-full hover:bg-border transition-colors no-underline">Email Us</a>
+              <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 bg-lime text-ink text-[13px] font-semibold rounded-full hover:bg-[#b8e537] transition-colors no-underline">Book a Call</a>
+              <a href="https://www.linkedin.com/in/o-kad/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 text-white/60 text-[13px] font-semibold rounded-full border border-white/15 hover:text-white hover:border-white/40 transition-colors no-underline">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 transition-transform hover:-translate-y-0.5">
+            <h3 class="font-display font-bold text-[20px] tracking-[-0.02em] text-white mb-4">
+              Quick Portfolio Checklist
+            </h3>
+            <p class="text-[14px] text-white/50 leading-[1.55] mb-6">
+              Use this to audit your own portfolio right now. If you can check every box, your portfolio is in the top 10% of what we see.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-lime mt-0.5 shrink-0">&#9744;</span>
+                One-sentence positioning above the fold
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-lime mt-0.5 shrink-0">&#9744;</span>
+                5 to 8 playable videos with labels
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-lime mt-0.5 shrink-0">&#9744;</span>
+                Brand logos or collaboration names visible
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-lime mt-0.5 shrink-0">&#9744;</span>
+                Starting rates or price range listed
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-lime mt-0.5 shrink-0">&#9744;</span>
+                Turnaround time mentioned
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-lime mt-0.5 shrink-0">&#9744;</span>
+                At least one performance metric or testimonial
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-lime mt-0.5 shrink-0">&#9744;</span>
+                Single clear CTA (email or booking link)
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-lime mt-0.5 shrink-0">&#9744;</span>
+                Works on mobile without breaking
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-lime mt-0.5 shrink-0">&#9744;</span>
+                No content older than 12 months
+              </li>
+              <li class="flex items-start gap-2.5 text-[14px] text-white/70">
+                <span class="text-lime mt-0.5 shrink-0">&#9744;</span>
+                Updated within the last 30 days
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const wasOpen = item.querySelector('.faq-a')?.style.display !== 'none';
+      document.querySelectorAll('.faq-item').forEach(i => {
+        const a = i.querySelector('.faq-a') as HTMLElement;
+        const icon = i.querySelector('.faq-icon');
+        if (a) a.style.display = 'none';
+        if (icon) icon.textContent = '+';
+      });
+      if (!wasOpen) {
+        const a = item.querySelector('.faq-a') as HTMLElement;
+        const icon = item.querySelector('.faq-icon');
+        if (a) a.style.display = 'block';
+        if (icon) icon.textContent = '−';
+      }
+    });
+  });
+</script>

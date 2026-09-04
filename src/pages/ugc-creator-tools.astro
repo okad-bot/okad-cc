@@ -1,0 +1,649 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailTools = "mailto:olga@okad.agency?subject=UGC%20creator%20toolkit%20%E2%80%94%20tell%20us%20about%20your%20needs";
+const emailGeneral = "mailto:olga@okad.agency?subject=UGC%20tools%20%E2%80%94%20general%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Best UGC Creator Tools: The Complete 2026 Toolkit | OKAD"
+  description="The definitive guide to UGC creator tools for 2026. Video editing, portfolio building, pitching, invoicing, contracts, analytics, and scheduling — curated by OKAD's creator network of 700+."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Best UGC Creator Tools: <span class="text-accent">The Complete 2026 Toolkit</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Every tool a UGC creator needs to edit, pitch, invoice, sign contracts, track analytics, and schedule content &mdash; selected from what OKAD's 700+ creators actually use in production every day.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailTools} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get toolkit recommendations &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>9 tool categories</span>
+          <span>30+ tools reviewed</span>
+          <span>3 toolkit stacks</span>
+          <span>Agency-tested picks</span>
+          <span>Updated Sep 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Tools Matter grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Why Your Toolkit Defines Your Career</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x23F1;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Speed Is Revenue</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">The right editing app cuts your production time from hours to minutes. Faster turnaround means more videos per week and more income per month.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4BC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Professional Operations</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Invoicing, contracts, and payment tracking separate hobbyists from professionals. Brands trust creators who handle the business side cleanly.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4CA;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Data-Driven Growth</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Analytics tools reveal which content formats, hooks, and styles convert. Creators who track performance earn more because they iterate based on evidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Video Editing Tools", href: "#video-editing" },
+            { num: "02", text: "Portfolio Tools", href: "#portfolio" },
+            { num: "03", text: "Pitching & Outreach Tools", href: "#pitching" },
+            { num: "04", text: "Invoicing & Payments", href: "#invoicing" },
+            { num: "05", text: "Contracts & Legal", href: "#contracts" },
+            { num: "06", text: "Analytics & Performance", href: "#analytics" },
+            { num: "07", text: "Content Scheduling", href: "#scheduling" },
+            { num: "08", text: "Toolkit Stacks", href: "#stacks" },
+            { num: "09", text: "Common Mistakes", href: "#mistakes" },
+            { num: "10", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Video Editing Tools -->
+    <section class="guide-section" id="video-editing">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Video Editing</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Video editing tools that actually matter</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CapCut remains the dominant mobile editor for short-form UGC in 2026</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">DaVinci Resolve is the best free desktop option for creators who need more control</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most UGC does not need complex editing &mdash; tight cuts and good captions win</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Editing is where raw footage becomes deliverable content. For UGC, the goal is not cinematic production &mdash; it is functional editing that keeps the video tight, adds captions, and maintains the authentic feel brands pay for. The best editing tool is the one that lets you produce faster without making the content look over-produced.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">OKAD's network of 700+ creators reveals a clear pattern: the top earners use the simplest tools. They have mastered one or two apps and can deliver a polished video in under 30 minutes. Creators who chase fancy transitions and color grading produce fewer videos and earn less per month.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Tool</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Platform</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Price</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">CapCut</td><td class="px-4 py-2.5 border-b border-border text-ink-2">iOS, Android, Desktop</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $8/mo Pro</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Short-form UGC, auto-captions, trending templates</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">DaVinci Resolve</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Mac, Windows, Linux</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $295 Studio</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Color grading, multi-track editing, advanced projects</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Adobe Premiere Rush</td><td class="px-4 py-2.5 border-b border-border text-ink-2">iOS, Android, Desktop</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $10/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Cross-device editing, Adobe ecosystem users</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">InShot</td><td class="px-4 py-2.5 border-b border-border text-ink-2">iOS, Android</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $4/mo Pro</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Quick social edits, stickers, ratio conversion</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-medium">Descript</td><td class="px-4 py-2.5 text-ink-2">Mac, Windows, Web</td><td class="px-4 py-2.5 text-ink-2">Free / $24/mo</td><td class="px-4 py-2.5 text-ink-2">Text-based editing, auto-transcription, screen recording</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">OKAD's pick: CapCut + DaVinci Resolve</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most creators in our network use CapCut for 90% of their work. The auto-caption feature alone saves 15&ndash;20 minutes per video. The template system means trending formats can be replicated in minutes rather than built from scratch. For more complex projects &mdash; multi-angle interviews, color-matched batch edits, or longer-form content &mdash; DaVinci Resolve provides professional-grade power at zero cost.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Descript deserves a special mention for <a href="/tech-ugc" class="text-accent hover:underline">tech UGC</a> creators. Its text-based editing approach makes screen recording tutorials dramatically faster to produce. Edit your narration like a Google Doc, and the video follows. For creators who produce software walkthroughs or AI tool demos, Descript has become a genuine competitive advantage.</p>
+      </div>
+    </section>
+
+    <!-- 02 Portfolio Tools -->
+    <section class="guide-section" id="portfolio">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Portfolio</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Portfolio tools that land brand deals</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Your portfolio is your resume &mdash; brands decide in under 60 seconds</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Dedicated UGC portfolio platforms outperform generic website builders</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Show range: different formats, niches, and tones in a single portfolio</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A portfolio does one thing: convince a brand to hire you. No portfolio, no gigs. It is that simple. Brands reviewing creators typically spend under 60 seconds on each portfolio before deciding whether to request a paid test. Your portfolio needs to load fast, play video inline, and demonstrate range across formats.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The biggest mistake new creators make is using a Google Drive link or an Instagram profile as their portfolio. Google Drive does not play video inline. Instagram buries your UGC work under personal posts. Neither presents you as a professional creator.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Tool</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Price</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Strengths</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Limitations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Contra</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Clean layout, video embeds, built-in gig marketplace</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Limited customization, platform branding</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Squarespace</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$16/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Beautiful templates, custom domain, SEO</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Not built for video-first portfolios</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Carrd</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $19/yr Pro</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Single-page simplicity, fast to set up, cheap</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Limited to one page, basic video support</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Notion</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Quick to build, easy to update, sharable link</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Looks generic, slow video playback, not professional</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-medium">Canva Website</td><td class="px-4 py-2.5 text-ink-2">Free / $13/mo Pro</td><td class="px-4 py-2.5 text-ink-2">Visual builder, brand kit integration</td><td class="px-4 py-2.5 text-ink-2">Limited interactivity, not ideal for video portfolios</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What your portfolio must include</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>5&ndash;10 best videos</strong> &mdash; curated, not everything you have ever made. Show your best talking head, your best testimonial, your best product demo. Quality over quantity.</li>
+          <li><strong>Niche labels</strong> &mdash; tag each video with the industry or product type. Brands search for creators in their niche. If a beauty brand cannot immediately see your beauty work, they move on.</li>
+          <li><strong>Rates and availability</strong> &mdash; state your per-video rate or link to a rate card. Brands skip portfolios that require a back-and-forth just to learn your pricing.</li>
+          <li><strong>Contact method</strong> &mdash; email, not just a DM link. Professional brands prefer email for initial outreach and contract discussions.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 03 Pitching & Outreach Tools -->
+    <section class="guide-section" id="pitching">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Pitching &amp; Outreach</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Pitching and outreach tools</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Cold outreach still works when done right &mdash; personalization is everything</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator platforms handle the matching, but limit your rate negotiation</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A CRM is overkill at the start &mdash; a simple spreadsheet tracks your pipeline</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Finding brands to work with is the most underrated skill in UGC. The creators earning $10K+ per month are not passively waiting for inbound requests. They actively pitch brands, follow up systematically, and track their outreach pipeline like a sales operation.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Creator marketplace platforms</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Platforms like Collabstr, Billo, and Insense connect creators with brands. You create a profile, brands browse and select you, and the platform handles payments. The trade-off: platforms take a cut and control your rate negotiation. They are excellent for getting started and building a client base, but top earners eventually transition to direct brand relationships.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Email outreach tools</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">For direct brand pitching, you need a way to find contact information and send personalized emails at scale without landing in spam folders. The tools below solve different parts of this problem.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Tool</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Price</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Use case</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Hunter.io</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $34/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Find verified email addresses for brand marketing contacts</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Apollo.io</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $49/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Contact database + email sequences with follow-up automation</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Loom</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $13/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Record personalized video pitches to send with outreach emails</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-medium">Google Sheets</td><td class="px-4 py-2.5 text-ink-2">Free</td><td class="px-4 py-2.5 text-ink-2">Track outreach pipeline: brand, contact, status, follow-up date</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">OKAD's approach to pitching</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">We coach our creators to lead with a sample video, not a pitch deck. Record a 30-second UGC-style video using the brand's product, attach it to a short email, and let the work speak for itself. This approach converts at 3&ndash;5x the rate of text-only outreach because it immediately demonstrates what you can deliver. Brands do not want to imagine your work &mdash; they want to see it.</p>
+      </div>
+    </section>
+
+    <!-- 04 Invoicing & Payments -->
+    <section class="guide-section" id="invoicing">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Invoicing &amp; Payments</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Invoicing and payment tools</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Professional invoicing signals reliability &mdash; brands pay faster when paperwork is clean</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Track every payment &mdash; late payments are the number one cash flow killer for creators</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">International creators need tools that handle multi-currency payouts</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Getting paid should not be the hardest part of being a creator. Yet unpaid invoices and manual payment tracking drain time and energy from what actually earns money: making content. The right invoicing setup takes 30 minutes to configure and saves hours every month.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Tool</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Price</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Strengths</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Wave</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Full invoicing, receipt scanning, basic accounting</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creators who want free, professional invoices</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">PayPal Business</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free to set up</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Universal acceptance, instant invoicing, buyer protection</td><td class="px-4 py-2.5 border-b border-border text-ink-2">International creators working with US/EU brands</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Wise (TransferWise)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Low conversion fees</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Multi-currency accounts, real exchange rates, invoicing</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creators receiving payments in multiple currencies</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">QuickBooks Self-Employed</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$15/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Invoicing + tax categorization + mileage tracking</td><td class="px-4 py-2.5 border-b border-border text-ink-2">US-based creators preparing for tax season</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-medium">Stripe Invoicing</td><td class="px-4 py-2.5 text-ink-2">0.4% per paid invoice</td><td class="px-4 py-2.5 text-ink-2">Professional invoices, card payments, automated reminders</td><td class="px-4 py-2.5 text-ink-2">High-volume creators who want automated collections</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Payment hygiene rules</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">OKAD's creator operations team has processed thousands of creator payments. These rules prevent the most common payment problems:</p>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Invoice immediately upon delivery</strong> &mdash; do not wait for brand approval to send the invoice. Attach the deliverable and the invoice in the same email. This anchors the payment timeline to the delivery date, not the approval date.</li>
+          <li><strong>Set net-15 terms, not net-30</strong> &mdash; shorter payment terms reduce cash flow gaps. Most brands accept net-15 when asked. Do not assume net-30 is standard just because larger companies default to it.</li>
+          <li><strong>Follow up on day 16</strong> &mdash; if net-15 passes without payment, send a polite reminder the next day. Waiting longer signals that you are flexible on payment timing.</li>
+          <li><strong>Track everything in one place</strong> &mdash; use a spreadsheet or Wave's dashboard. Know exactly how much you are owed, by whom, and when it is due.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 05 Contracts & Legal -->
+    <section class="guide-section" id="contracts">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Contracts &amp; Legal</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Contracts and legal protection</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Never deliver content without a signed agreement on usage rights</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">E-signature tools make contracts frictionless for both sides</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Usage rights, payment terms, and revision limits are the three non-negotiable clauses</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Contracts protect both the creator and the brand. They define what content is being produced, who owns it, how it can be used, and what happens when things go sideways. Operating without contracts is the fastest way to lose money and control over your own content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most common dispute OKAD mediates between brands and creators involves usage rights. A creator delivers a video assuming it will be used in one Instagram ad. The brand runs it across TikTok, YouTube, Facebook, and their website for 18 months. Without a contract specifying scope, the creator has no recourse.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Tool</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Price</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Use case</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">HelloSign (Dropbox Sign)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free (3/mo) / $15/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">E-signatures, contract templates, audit trail</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">PandaDoc</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free e-sign / $19/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Document creation + e-sign + payment collection</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">DocuSign</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$10/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Industry-standard e-signature, enterprise integrations</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-medium">Bonsai</td><td class="px-4 py-2.5 text-ink-2">$21/mo</td><td class="px-4 py-2.5 text-ink-2">All-in-one: contracts + proposals + invoices for freelancers</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Three clauses every UGC contract needs</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Usage rights.</strong> Specify exactly which platforms, for how long, and whether the content can be used in paid ads. Unlimited perpetual usage across all platforms should cost significantly more than a single organic post on one account.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Payment terms.</strong> Amount, currency, payment method, due date. Include late payment penalties &mdash; even a small one signals that you take payment seriously and discourages delays.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Revision limits.</strong> Define how many rounds of revisions are included. Two rounds is standard. Additional revisions should trigger additional fees. Without this clause, brands can request unlimited changes on a flat-fee contract.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need help building your creator toolkit?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD equips every creator in our network with recommended tools, contract templates, and operational workflows. Talk to us about joining or working with our 700+ creator network.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailTools} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get recommendations &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Analytics & Performance -->
+    <section class="guide-section" id="analytics">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Analytics &amp; Performance</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Analytics and performance tracking</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Track hook rate, watch-through rate, and engagement &mdash; not vanity metrics</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creators who share performance data with brands get rehired at 2x the rate</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Free native analytics cover 80% of what you need</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Analytics separate creators who guess from creators who know. When you can tell a brand that your talking-head format averages a 45% <a href="/hook-rate" class="text-accent hover:underline">hook rate</a> compared to 25% for testimonials, you are not just a content producer &mdash; you are a strategic partner. Brands pay more for creators who understand performance because those creators produce content that converts.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Tool</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Price</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What it tracks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">TikTok Analytics (native)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Views, watch time, traffic sources, audience demographics</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Instagram Insights (native)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Reach, plays, shares, saves, profile visits from content</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">YouTube Studio (native)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Retention curves, CTR, impressions, subscriber growth</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Metricool</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $18/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Cross-platform analytics, competitor analysis, reporting</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-medium">Google Sheets (manual)</td><td class="px-4 py-2.5 text-ink-2">Free</td><td class="px-4 py-2.5 text-ink-2">Custom tracking: hook rate, client, format, performance over time</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The metrics that actually matter</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Forget follower counts and like totals. The metrics that determine whether your content works &mdash; and whether brands rehire you &mdash; are:</p>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong><a href="/hook-rate" class="text-accent hover:underline">Hook rate</a></strong> &mdash; percentage of viewers who watch past the first 3 seconds. This measures whether your opening grabs attention. Target: 40%+ for strong performance.</li>
+          <li><strong>Watch-through rate</strong> &mdash; percentage who watch the entire video. Measures whether your content holds attention after the hook. Target: 25%+ for 30-second videos.</li>
+          <li><strong>Share and save rate</strong> &mdash; saves indicate intent; shares indicate endorsement. Both signal content that resonates beyond passive viewing.</li>
+          <li><strong>Conversion (if available)</strong> &mdash; click-through rate, link clicks, profile visits. When brands share this data, it is the most direct measure of content effectiveness.</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">OKAD recommends that creators maintain a simple Google Sheet tracking each video's format, hook type, niche, and key metrics. Over time, patterns emerge: certain hooks outperform others, certain formats convert better for specific industries, and your best work clusters around recognizable patterns. This data is what turns you from a replaceable creator into a strategic asset.</p>
+      </div>
+    </section>
+
+    <!-- 07 Content Scheduling -->
+    <section class="guide-section" id="scheduling">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Content Scheduling</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Content scheduling and workflow tools</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Scheduling tools matter most for <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a> creators posting on brand accounts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Batch production + scheduled publishing = consistent output without daily pressure</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Native scheduling (TikTok, Instagram) is free and sufficient for most creators</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Not every UGC creator needs scheduling tools. If you deliver whitelabel content to brands and they handle distribution, your workflow ends at delivery. But if you participate in <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a> programs or manage brand social accounts, scheduling tools prevent the daily posting grind from consuming your creative energy.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most productive creators in OKAD's network batch their production. They film 5&ndash;10 videos in a single session, edit them over two days, and schedule them for the next two weeks. This production rhythm is more efficient and produces more consistent quality than filming one video per day.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Tool</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Price</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Platforms supported</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Standout feature</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Later</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $25/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Instagram, TikTok, Pinterest, LinkedIn, X</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Visual content calendar, link in bio, best-time suggestions</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Buffer</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $6/mo per channel</td><td class="px-4 py-2.5 border-b border-border text-ink-2">All major platforms</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Simple queue system, analytics, team collaboration</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Metricool</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $18/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">All major platforms + Google Business</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Scheduling + analytics in one tool, competitor tracking</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-medium">Native scheduling</td><td class="px-4 py-2.5 text-ink-2">Free</td><td class="px-4 py-2.5 text-ink-2">TikTok, Instagram, YouTube</td><td class="px-4 py-2.5 text-ink-2">No third-party access needed, full feature support</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">For most UGC creators, native scheduling within TikTok and Instagram is sufficient and free. Third-party tools become valuable when you manage multiple brand accounts simultaneously or need cross-platform analytics in a single dashboard. Start with native, upgrade when the workflow demands it.</p>
+      </div>
+    </section>
+
+    <!-- 08 Toolkit Stacks -->
+    <section class="guide-section" id="stacks">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Toolkit Stacks</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Recommended toolkit stacks</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Starter: $0/month &mdash; everything free, maximizing value before investing</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Growth: ~$30/month &mdash; professional tools that save time and raise your rates</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Pro: ~$80/month &mdash; full operations stack for creators earning $5K+/month</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">You do not need every tool on this page. OKAD recommends three stack tiers based on where you are in your creator career. Each stack is designed to match your current earning level &mdash; you should never spend more on tools than the productivity gain they deliver.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Starter Stack &mdash; $0/month</h3>
+        <p class="text-ink-2 leading-[1.65] mb-2">For creators just starting out or earning under $1K/month.</p>
+        <div class="bg-card border border-border rounded-xl p-5 mb-6">
+          <ul class="pl-5 mb-0 space-y-2 text-ink-2 text-[14px]">
+            <li><strong>Editing:</strong> CapCut (free) &mdash; auto-captions, templates, everything you need</li>
+            <li><strong>Portfolio:</strong> Contra (free) or Carrd ($19/year) &mdash; clean, shareable portfolio link</li>
+            <li><strong>Pitching:</strong> Google Sheets (free) &mdash; track outreach, follow-ups, status</li>
+            <li><strong>Invoicing:</strong> Wave (free) &mdash; professional invoices, payment tracking</li>
+            <li><strong>Contracts:</strong> HelloSign (free, 3/month) &mdash; e-signatures for your agreements</li>
+            <li><strong>Analytics:</strong> Native platform analytics (free) &mdash; TikTok, Instagram, YouTube built-in</li>
+            <li><strong>Scheduling:</strong> Native scheduling (free) &mdash; TikTok and Instagram built-in scheduling</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Growth Stack &mdash; ~$30/month</h3>
+        <p class="text-ink-2 leading-[1.65] mb-2">For creators earning $1K&ndash;$5K/month and ready to invest in efficiency.</p>
+        <div class="bg-card border border-border rounded-xl p-5 mb-6">
+          <ul class="pl-5 mb-0 space-y-2 text-ink-2 text-[14px]">
+            <li><strong>Editing:</strong> CapCut Pro ($8/mo) &mdash; remove watermarks, access premium templates</li>
+            <li><strong>Portfolio:</strong> Squarespace ($16/mo) &mdash; custom domain, SEO, professional presence</li>
+            <li><strong>Pitching:</strong> Hunter.io (free tier) + Loom (free) &mdash; find contacts, send video pitches</li>
+            <li><strong>Invoicing:</strong> Wave (free) + Wise &mdash; multi-currency if working internationally</li>
+            <li><strong>Contracts:</strong> PandaDoc (free e-sign) &mdash; templates and document tracking</li>
+            <li><strong>Analytics:</strong> Metricool ($18/mo) &mdash; cross-platform analytics and competitor tracking</li>
+            <li><strong>Scheduling:</strong> Later (free tier) or native &mdash; visual calendar for batch scheduling</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Pro Stack &mdash; ~$80/month</h3>
+        <p class="text-ink-2 leading-[1.65] mb-2">For creators earning $5K+/month who need full operational infrastructure.</p>
+        <div class="bg-card border border-border rounded-xl p-5 mb-6">
+          <ul class="pl-5 mb-0 space-y-2 text-ink-2 text-[14px]">
+            <li><strong>Editing:</strong> CapCut Pro ($8/mo) + DaVinci Resolve (free) &mdash; mobile speed + desktop power</li>
+            <li><strong>Portfolio:</strong> Squarespace ($16/mo) &mdash; custom domain with SEO and analytics</li>
+            <li><strong>Pitching:</strong> Apollo.io ($49/mo) &mdash; contact database + automated email sequences</li>
+            <li><strong>Invoicing:</strong> QuickBooks Self-Employed ($15/mo) &mdash; invoicing + tax prep + expense tracking</li>
+            <li><strong>Contracts:</strong> Bonsai ($21/mo) &mdash; all-in-one contracts, proposals, and invoicing</li>
+            <li><strong>Analytics:</strong> Metricool ($18/mo) + custom Google Sheets &mdash; deep performance tracking</li>
+            <li><strong>Scheduling:</strong> Later ($25/mo) or Buffer &mdash; multi-account, multi-platform scheduling</li>
+          </ul>
+        </div>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailTools} class="text-ink hover:text-accent transition-colors no-underline">Want a personalized toolkit recommendation?</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">OKAD's creator operations team can assess your workflow and recommend the exact tools for your niche, volume, and growth stage. Email us or book a call.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 Common Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Common Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Common toolkit mistakes</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Tool hopping wastes more time than using an imperfect tool well</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Over-investing in tools before earning enough to justify them</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Neglecting the business side (contracts, invoicing) until problems arise</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">After onboarding hundreds of creators, OKAD sees the same toolkit mistakes repeated. Recognizing them upfront saves months of lost productivity and unnecessary spending.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">1. Tool hopping instead of mastering</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every month a new editing app or AI tool goes viral. Creators who switch tools constantly never develop the muscle memory and speed that comes from deep familiarity. The creator who has mastered CapCut will always out-produce the creator who split their time across five different editors. Pick one editing app, learn its keyboard shortcuts, and use it until you genuinely hit its limits.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">2. Spending before earning</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A $50/month tool subscription is a bad investment when you are earning $200/month. The Starter Stack exists for a reason: every tool you need to begin earning is free. Upgrade only when a paid tool will clearly save enough time to pay for itself. If a $15/month tool saves you 3 hours per month and you earn $50/hour, that is a 10x return. If it saves 15 minutes, it is a loss.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">3. Ignoring the business side</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Creative people gravitate toward creative tools and neglect operational ones. The most talented UGC creator on the planet still needs to invoice correctly, sign contracts, and track payments. OKAD has seen creators lose thousands of dollars to brands who never paid because there was no contract and no invoice &mdash; just a DM agreement. Set up your invoicing and contract tools before your first paid gig, not after your first dispute.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">4. No performance tracking</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Producing content without tracking results is like training without measuring progress. You cannot improve what you do not measure. Creators who maintain even a basic Google Sheet with hook rates and engagement metrics outperform creators who produce blindly. The sheet takes 5 minutes per video to update and provides the data you need to charge higher rates.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">5. Using personal accounts for business</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Mixing personal and business finances, email, and social accounts creates chaos as you scale. Set up a dedicated email address for brand communication, a separate PayPal or Wise account for payments, and a professional portfolio separate from your personal social profiles. The separation takes one afternoon to set up and prevents months of accounting headaches at tax time.</p>
+      </div>
+    </section>
+
+    <!-- 10 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          {
+            q: "What is the single most important tool for a new UGC creator?",
+            a: "CapCut. It handles editing, captions, and basic effects — the three things you need to produce deliverable content. You can build an entire UGC career using nothing but a smartphone and CapCut. Every other tool on this page is secondary until you can consistently produce quality videos."
+          },
+          {
+            q: "Do I need to pay for any tools when starting out?",
+            a: "No. The Starter Stack is entirely free. CapCut, Contra, Wave, HelloSign, native analytics, and Google Sheets cost nothing. Start earning before you start spending. The free tiers of these tools are fully functional — not crippled trial versions. Upgrade only when a paid feature will clearly save enough time to justify its cost."
+          },
+          {
+            q: "Should I use an AI editing tool in 2026?",
+            a: "AI editing features inside existing tools (like CapCut's auto-captions and smart cut) are genuinely useful and save real time. Standalone AI video generators are not yet reliable enough for professional UGC delivery — brands still expect authentic human content, not AI-generated clips. Use AI features within your existing editor, but do not replace your editing workflow with a fully automated AI tool."
+          },
+          {
+            q: "How do I track my income and expenses as a UGC creator?",
+            a: "At minimum, use a Google Sheet with columns for client name, invoice date, amount, payment status, and due date. When you are earning consistently, upgrade to Wave or QuickBooks Self-Employed for automated tracking and tax preparation. The key habit is recording every transaction immediately — do not batch-update monthly, because you will forget invoices and miss payment deadlines."
+          },
+          {
+            q: "What contract template should I use?",
+            a: "Start with a simple one-page agreement covering three things: usage rights (which platforms, how long), payment terms (amount, due date, late fees), and revision limits (how many rounds included). Bonsai and PandaDoc both offer free creator contract templates. OKAD provides contract templates to all creators in our network — reach out if you need one."
+          },
+          {
+            q: "How many tools should I use at once?",
+            a: "As few as possible. A bloated toolkit creates more overhead than it eliminates. The Starter Stack has seven categories but only uses free tools that require minimal setup. Most successful creators in OKAD's network use 4-5 tools total: one editor, one portfolio, one invoicing tool, one contract tool, and native analytics. Add more only when a specific workflow bottleneck demands it."
+          },
+          {
+            q: "Do I need a separate business email?",
+            a: "Yes. A dedicated email like yourname@yourdomain.com or at minimum a separate Gmail address for brand communication keeps your business organized. It also looks more professional in outreach emails than a personal address with numbers and underscores. If you have a custom domain for your portfolio, use it for email — the cost is typically included in your hosting plan."
+          },
+          {
+            q: "What tools does OKAD provide to creators in its network?",
+            a: "OKAD provides contract templates, briefing frameworks, quality checklists, and payment processing for all creators in our 700+ network. We also share performance data and toolkit recommendations based on what works across our creator base. Creators in the network do not need their own invoicing or contract tools — OKAD handles that infrastructure."
+          },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <button class="faq-q flex items-center justify-between w-full text-left py-5 cursor-pointer bg-transparent border-none">
+              <span class="font-display font-semibold text-[16px] text-ink pr-4">{item.q}</span>
+              <span class="faq-icon text-accent text-[20px] font-mono shrink-0">+</span>
+            </button>
+            <div class="faq-a max-h-0 overflow-hidden transition-[max-height] duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to build your creator toolkit?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Whether you are a creator looking for tool recommendations or a brand that needs vetted creators with professional workflows, OKAD can help. Our 700+ creator network runs on the tools and systems covered in this guide.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailTools} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get toolkit help &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on tool usage data from OKAD's network of 700+ UGC creators, direct testing by our creator operations team, and market pricing as of September 2026. Tool recommendations reflect what our most productive and highest-earning creators actually use &mdash; not sponsorship deals or affiliate partnerships. Pricing may vary by region and plan tier. See also: <a href="/ugc-creator" class="text-accent hover:underline">UGC Creator Guide</a>, <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a>, <a href="/tech-ugc" class="text-accent hover:underline">Tech UGC</a>, <a href="/ugc-ads" class="text-accent hover:underline">UGC Ads</a>, <a href="/high-volume-ugc" class="text-accent hover:underline">High-Volume UGC</a>, <a href="/hook-rate" class="text-accent hover:underline">Hook Rate</a>, <a href="/creator-network" class="text-accent hover:underline">Creator Network</a>.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
