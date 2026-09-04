@@ -2,498 +2,541 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+const emailContract = "mailto:olga@okad.agency?subject=UGC%20contracts%20%E2%80%94%20tell%20us%20about%20your%20program";
+const emailGeneral = "mailto:olga@okad.agency?subject=UGC%20contract%20%E2%80%94%20general%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
 ---
 
 <Layout
-  title="UGC Contract Template: Essential Clauses for Creators | OKAD"
+  title="UGC Contract Template: Essential Clauses for Creators & Brands | OKAD"
   description="A practical guide to UGC creator contracts covering usage rights, payment terms, kill fees, exclusivity, and red flags. Written from the agency perspective — we see both sides of every deal."
 >
   <Header />
   <main>
 
     <!-- Hero -->
-    <section class="pt-20 md:pt-24">
-      <div class="max-w-[720px] mx-auto px-6 pt-12 md:pt-16 pb-8">
-        <a href="/" class="inline-flex items-center gap-1 text-[13px] text-muted hover:text-accent transition-colors no-underline mb-6">
-          &larr; Back to OKAD
-        </a>
-        <div class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium uppercase tracking-[.06em] text-ink-2 mb-4">
-          <strong class="text-accent font-semibold">#UGC</strong>
-          <span class="text-muted-2">&middot;</span>
-          <strong class="text-accent font-semibold">#CONTRACTS</strong>
-          <span class="text-muted-2">&middot;</span>
-          <strong class="text-accent font-semibold">#CREATOR_RIGHTS</strong>
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
         </div>
-        <h1 class="font-display font-bold text-[clamp(28px,5vw,42px)] leading-[1.12] tracking-[-0.03em] mb-4 text-ink">
-          UGC Contract Template: Essential Clauses Every Creator and Brand Should Know
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          UGC Contract Template: <span class="text-accent">The Complete Guide</span>
         </h1>
-        <div class="flex items-center gap-2 text-[13px] text-muted-2 mb-8">
-          <span>OKAD Agency</span>
-          <span>&middot;</span>
-          <span>14 min read</span>
-          <span>&middot;</span>
-          <span>September 2026</span>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          A practical walkthrough of every clause that matters in a UGC creator agreement &mdash; why each one exists, what fair terms look like, and where both sides tend to make costly mistakes. Written from the agency side: we see both ends of every deal.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailContract} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get help with UGC contracts &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>8 essential clauses</span>
+          <span>Usage rights tiers</span>
+          <span>Kill fees</span>
+          <span>Red flags</span>
+          <span>Negotiation tactics</span>
         </div>
       </div>
     </section>
 
-    <!-- Article Body -->
-    <section class="pb-16 md:pb-20">
-      <div class="max-w-[720px] mx-auto px-6">
-        <div class="space-y-6 text-[16px] text-ink-2 leading-[1.75]">
-
-          <p>
-            We have managed hundreds of UGC creator relationships at OKAD. We write the briefs, negotiate the terms, and handle the fallout when agreements go sideways. That gives us a view most guides miss: we sit between the brand and the creator, and we know exactly which contract clauses prevent problems and which ones cause them.
-          </p>
-
-          <p>
-            This is not a legal template you can copy and paste. It is a practical walkthrough of every clause that matters in a UGC creator agreement, why each one exists, what fair terms look like, and where both sides tend to make costly mistakes. Whether you are a creator reviewing your first contract or a brand drafting one, this guide gives you the language to negotiate with confidence.
-          </p>
-
-          <!-- Why Contracts Matter -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Why a Written Contract Is Non-Negotiable</h2>
-
-          <p>
-            A handshake deal works until it doesn't. And in UGC, it stops working the moment content performs well. When a video drives real revenue, the brand wants to extend usage. The creator wants additional compensation. Without a written agreement, neither party has a reference point. Disputes arise not from bad intentions but from different assumptions about what was agreed upon.
-          </p>
-
-          <p>
-            From the agency side, we have seen every version of this problem. A creator delivers three videos for a flat fee, the brand runs them as paid ads for eighteen months, and the creator discovers their face is still selling a product they stopped using a year ago. Or the reverse: a brand pays a premium rate, the creator ghosts after one revision request, and there is no clause that addresses incomplete delivery.
-          </p>
-
-          <p>
-            A written contract protects both parties equally. For creators, it guarantees payment terms, limits how content gets used, and sets clear boundaries around revision expectations. For brands, it secures the right to use content as intended, defines deliverables, and establishes recourse if work falls short. Skipping the contract saves ten minutes and risks thousands of dollars.
-          </p>
-
-          <div class="bg-accent-bg border border-accent/15 rounded-xl p-6 my-8">
-            <p class="text-[15px] text-ink-2 leading-[1.65] mb-0">
-              <strong class="text-ink">OKAD's rule:</strong> Every creator we work with signs an agreement before filming begins. No exceptions. This includes paid tests, single-video projects, and ongoing retainers. The contract length scales with the project scope, but it always exists in writing.
-            </p>
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Why UGC Contracts Matter</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4DD;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Define the Deal</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Scope, deliverables, format, and editing responsibilities &mdash; written down before filming starts.</p>
           </div>
-
-          <!-- Essential Clauses -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Eight Essential Clauses for Every UGC Agreement</h2>
-
-          <p>
-            Below are the clauses we include in every UGC creator contract. Each one addresses a specific failure mode we have encountered in real projects. Skip any of them and you are gambling with predictable risks.
-          </p>
-
-          <!-- 1. Scope of Work -->
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">1. Scope of Work and Deliverables</h3>
-
-          <p>
-            This clause answers one question: what exactly is the creator producing? The more specific the language, the fewer disagreements later. Vague scope leads to scope creep, and scope creep leads to resentment on both sides.
-          </p>
-
-          <p>
-            A strong scope clause specifies the number of final videos, the approximate duration of each, the format (vertical 9:16, horizontal 16:9, square), and the content type (talking head, testimonial, product demo, screen recording). It also defines what "final" means. Is the deliverable a raw file, or does the creator handle editing, captions, and sound mixing?
-          </p>
-
-          <p>
-            We also recommend specifying what is not included. If the brand expects the creator to source props, purchase the product, or travel to a location, that needs to be stated explicitly. Otherwise, the creator reasonably assumes they are filming with what they have at home.
-          </p>
-
-          <div class="overflow-x-auto my-6">
-            <table class="w-full border-collapse text-[14px]">
-              <thead>
-                <tr>
-                  <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Element</th>
-                  <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Weak Language</th>
-                  <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Strong Language</th>
-                </tr>
-              </thead>
-              <tbody class="text-ink-2">
-                <tr><td class="p-3 border-b border-border">Quantity</td><td class="p-3 border-b border-border">"A few videos"</td><td class="p-3 border-b border-border">"3 final videos, each 30-45 seconds"</td></tr>
-                <tr><td class="p-3 border-b border-border">Format</td><td class="p-3 border-b border-border">"Vertical video"</td><td class="p-3 border-b border-border">"9:16 vertical, 1080x1920, MP4"</td></tr>
-                <tr><td class="p-3 border-b border-border">Editing</td><td class="p-3 border-b border-border">"Creator edits"</td><td class="p-3 border-b border-border">"Creator delivers edited video with captions, brand-provided intro/outro assets included"</td></tr>
-                <tr><td class="p-3 border-b border-border">Props</td><td class="p-3 border-b border-border">Not mentioned</td><td class="p-3 border-b border-border">"Brand ships product 7 days before shoot date; creator is not responsible for prop sourcing"</td></tr>
-              </tbody>
-            </table>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Protect Both Sides</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Payment terms, kill fees, and revision caps prevent disputes and set clear expectations.</p>
           </div>
-
-          <!-- 2. Usage Rights -->
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">2. Usage Rights</h3>
-
-          <p>
-            Usage rights determine where and for how long the brand can use your content. This is the single most consequential clause in any UGC agreement, and it is the one most frequently handled poorly. The difference between "organic social only" and "all platforms including paid ads, whitelisting, and TV" can represent thousands of dollars in fair value.
-          </p>
-
-          <p>
-            Every usage rights clause should specify three dimensions: <strong class="text-ink">platform</strong> (Meta, TikTok, YouTube, Google Ads, email, website, OTT, print), <strong class="text-ink">type</strong> (organic posting, paid advertising, whitelisting/Spark Ads, landing pages, email campaigns), and <strong class="text-ink">duration</strong> (30 days, 90 days, 12 months, perpetual).
-          </p>
-
-          <p>
-            We dedicate a separate section to usage rights below because the details matter enormously. For now, the key principle: never agree to "unlimited usage" at a flat-fee rate. Perpetual, all-platform rights are a legitimate option, but they should be priced accordingly.
-          </p>
-
-          <!-- 3. Payment Terms -->
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">3. Payment Terms</h3>
-
-          <p>
-            Clear payment terms prevent the most common source of creator frustration: waiting to get paid. The contract should specify the total fee, the payment schedule, the payment method, and the currency.
-          </p>
-
-          <p>
-            For one-off projects, we recommend a 50% deposit before filming begins and the remaining 50% upon delivery of final assets. This protects both sides: the creator has financial commitment from the brand before investing time, and the brand only pays the balance after receiving deliverables.
-          </p>
-
-          <p>
-            For ongoing retainers, monthly invoicing with net-15 terms is standard. Net-30 is acceptable for larger corporations with rigid accounting cycles. Anything beyond net-30 should raise questions, and net-60 or "payment upon campaign launch" is a signal to walk away or demand full prepayment.
-          </p>
-
-          <p>
-            The contract should also specify what happens if the brand cancels mid-project. If you have already started filming, you deserve compensation for work completed. This is where the kill fee clause comes in.
-          </p>
-
-          <!-- 4. Revisions -->
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">4. Revision Policy</h3>
-
-          <p>
-            Without a revision cap, you are agreeing to unlimited rework at a fixed price. That is not a contract; it is a blank check written against your time. Define the number of revision rounds included in the base fee and the cost per additional round.
-          </p>
-
-          <p>
-            Industry standard for UGC is one to two rounds of revisions included. Each round should have a defined turnaround time (typically 48-72 hours). Revisions should address feedback on existing content, not requests for entirely new concepts. If the brand wants a completely different approach after seeing the first cut, that is a new deliverable, not a revision.
-          </p>
-
-          <p>
-            We also recommend specifying a feedback window. If the brand does not provide revision notes within 5 business days of receiving the first cut, the deliverable is considered approved. This prevents projects from stalling indefinitely while the creator's schedule fills up.
-          </p>
-
-          <!-- 5. Kill Fee -->
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">5. Kill Fee and Cancellation</h3>
-
-          <p>
-            Projects get cancelled. Budgets shift, campaigns pivot, brands change direction. A kill fee clause ensures the creator is compensated for work already done and time already blocked.
-          </p>
-
-          <p>
-            A fair kill fee structure looks like this: if the brand cancels before production starts, the deposit (or a percentage of it) is non-refundable. If cancellation happens after filming but before delivery, the creator receives 50-75% of the total agreed fee. If cancellation occurs after delivery of first cuts, full payment applies.
-          </p>
-
-          <p>
-            From the brand perspective, a kill fee is also protective. It establishes that cancellation has a defined cost, which discourages frivolous project starts and encourages proper internal alignment before engaging a creator.
-          </p>
-
-          <!-- 6. Timeline -->
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">6. Timeline and Delivery Schedule</h3>
-
-          <p>
-            Every deliverable needs a deadline. The contract should include a start date, a first-cut delivery date, revision windows, and a final delivery date. If the brand is shipping a product to the creator, the timeline should start from confirmed receipt of the product, not from the contract signing date.
-          </p>
-
-          <p>
-            We typically structure UGC project timelines as follows: product arrives on day zero, filming completes within 5 business days, first cuts delivered within 3 days of filming, brand feedback within 5 days, final delivery within 3 days of receiving feedback. Total project span: approximately 16 business days from product receipt to final assets.
-          </p>
-
-          <p>
-            The contract should also address what happens when either party misses a deadline. A creator who delivers late may lose a rush-fee bonus or face a percentage deduction. A brand that provides feedback late extends the final deadline by an equivalent number of days. Reciprocal accountability keeps the project moving.
-          </p>
-
-          <!-- 7. Exclusivity -->
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">7. Exclusivity</h3>
-
-          <p>
-            An exclusivity clause restricts the creator from working with competing brands during or after the project. This is entirely reasonable from the brand's perspective: they do not want their creator appearing in a competitor's ad the following week. But exclusivity has a cost, and the contract needs to reflect that.
-          </p>
-
-          <p>
-            Short-term exclusivity (during the campaign period, typically 30-90 days) is standard and should be included in the base fee. Extended exclusivity beyond the campaign window should carry an additional monthly fee, often 20-40% of the original project rate per month of exclusivity.
-          </p>
-
-          <p>
-            The clause must define "competing" precisely. "Any skincare brand" is too broad. "Brands selling retinol serums in the US market priced between $30 and $80" is specific enough that both parties understand the boundary. Vague exclusivity language lets the brand claim almost any project you take is a violation.
-          </p>
-
-          <!-- 8. Confidentiality -->
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">8. Confidentiality and NDA</h3>
-
-          <p>
-            Brands often share unreleased products, internal strategies, or upcoming campaign themes with creators before public launch. A confidentiality clause prevents creators from sharing this information before the brand's official announcement.
-          </p>
-
-          <p>
-            Standard NDA language covers: no sharing of unreleased product details, no posting behind-the-scenes content without approval, no discussing campaign strategy or performance data publicly. The confidentiality obligation should have a reasonable time limit (12-24 months is typical) and should not restrict the creator from mentioning the brand relationship in their portfolio after the campaign is public.
-          </p>
-
-          <p>
-            One important nuance: the NDA should not prevent the creator from listing the brand in their portfolio or showing the final published content. Overly aggressive NDAs that forbid any mention of the work essentially erase the project from the creator's track record, which is unfair if the content is already running publicly.
-          </p>
-
-          <!-- Usage Rights Deep Dive -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-8">Usage Rights: The Clause That Determines Your Real Rate</h2>
-
-          <p>
-            Usage rights deserve their own section because they represent the largest variable in UGC pricing. Two identical videos can differ in value by five times or more depending on how the brand intends to use them. Understanding this is the single biggest lever for both negotiating fair rates and avoiding underpriced deals.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">Organic vs. Paid Usage</h3>
-
-          <p>
-            Organic usage means the brand posts your content on their social accounts without paid promotion. Paid usage means the brand runs your content as an advertisement, spending money to put your face and voice in front of potentially millions of people. The distinction matters because paid usage drives direct revenue for the brand and exposes the creator to a far larger audience.
-          </p>
-
-          <p>
-            A video used for a single organic Instagram post has limited reach and lifespan. The same video used as a Meta ad with a $50,000 monthly spend reaches hundreds of thousands of people repeatedly. The creator's compensation should reflect this difference.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">Whitelisting and Spark Ads</h3>
-
-          <p>
-            Whitelisting (on Meta) and Spark Ads (on TikTok) allow brands to run ads through the creator's personal account. From the viewer's perspective, the ad appears to come from the creator, not from the brand. This is powerful for performance but means the creator's personal brand is directly associated with the advertising.
-          </p>
-
-          <p>
-            Whitelisting access should always be time-limited (30, 60, or 90 days), specified by platform, and priced as an add-on to the base production fee. We typically see whitelisting rights priced at 30-50% of the base video fee per 30-day period.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">Duration Tiers</h3>
-
-          <p>
-            Usage duration directly impacts pricing. Here is how we structure it at OKAD:
-          </p>
-
-          <div class="overflow-x-auto my-6">
-            <table class="w-full border-collapse text-[14px]">
-              <thead>
-                <tr>
-                  <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Duration</th>
-                  <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Typical Multiplier</th>
-                  <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Best For</th>
-                </tr>
-              </thead>
-              <tbody class="text-ink-2">
-                <tr><td class="p-3 border-b border-border">30 days</td><td class="p-3 border-b border-border">1x (base rate)</td><td class="p-3 border-b border-border">Campaign testing, seasonal pushes</td></tr>
-                <tr><td class="p-3 border-b border-border">90 days</td><td class="p-3 border-b border-border">1.5x</td><td class="p-3 border-b border-border">Standard ad campaigns, quarterly cycles</td></tr>
-                <tr><td class="p-3 border-b border-border">6 months</td><td class="p-3 border-b border-border">2x</td><td class="p-3 border-b border-border">Evergreen content, landing pages</td></tr>
-                <tr><td class="p-3 border-b border-border">12 months</td><td class="p-3 border-b border-border">2.5&ndash;3x</td><td class="p-3 border-b border-border">Annual campaigns, website testimonials</td></tr>
-                <tr><td class="p-3 border-b border-border">Perpetual / buyout</td><td class="p-3 border-b border-border">4&ndash;5x</td><td class="p-3 border-b border-border">Brands wanting permanent ownership</td></tr>
-              </tbody>
-            </table>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x2696;&#xFE0F;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Price the Rights</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Usage rights determine your real rate. The difference between organic-only and paid-perpetual can be 5x.</p>
           </div>
-
-          <p>
-            These multipliers are guidelines, not rules. Actual rates depend on the creator's experience, the brand's size, and the content's strategic importance. But the framework ensures that longer usage equals higher compensation, which is the principle that matters.
-          </p>
-
-          <!-- Red Flags -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-8">Red Flags: Contract Terms That Should Make You Pause</h2>
-
-          <p>
-            After reviewing hundreds of creator agreements from both sides, these are the warning signs we consistently flag.
-          </p>
-
-          <ul class="list-disc ml-6 space-y-3">
-            <li>
-              <strong class="text-ink">"Perpetual, irrevocable, worldwide rights" at a flat fee.</strong> This language transfers complete ownership of the content forever for a one-time payment. Unless the fee reflects a full buyout (4-5x the base rate), this clause massively undervalues the creator's work. Perpetual rights are legitimate but should be priced as such.
-            </li>
-            <li>
-              <strong class="text-ink">"Unlimited revisions."</strong> There is no such thing as unlimited revisions at a fixed price. This clause converts the creator into an employee without employee protections. Every agreement should cap revision rounds and define what constitutes a revision versus a new brief.
-            </li>
-            <li>
-              <strong class="text-ink">No payment timeline specified.</strong> If the contract describes the fee but not when it gets paid, expect delays. "Payment upon completion" without defining completion is especially dangerous because the brand can withhold payment indefinitely by requesting additional changes.
-            </li>
-            <li>
-              <strong class="text-ink">Exclusivity without additional compensation.</strong> If the contract restricts you from working with competitors but does not increase your fee to reflect the lost opportunity cost, the brand is getting exclusivity for free. Short-term exclusivity during the campaign is reasonable at the base rate; anything beyond that needs its own line item.
-            </li>
-            <li>
-              <strong class="text-ink">Work-for-hire without IP transfer pricing.</strong> Some contracts classify UGC as "work made for hire," which under US copyright law means the brand automatically owns the copyright. This is fine if the rate reflects full IP transfer. It is not fine if you are being paid a standard production fee while signing away all intellectual property.
-            </li>
-            <li>
-              <strong class="text-ink">Verbal agreements to "handle it later."</strong> If a key term is missing from the written contract and the other party says they will "sort it out once we get going," that term will never be sorted out in your favor. If it matters enough to discuss, it matters enough to write down.
-            </li>
-            <li>
-              <strong class="text-ink">NDA that prohibits portfolio usage.</strong> An NDA that prevents you from ever showing or referencing the work in your portfolio is unreasonably restrictive for most UGC projects. The brand benefits from your content; you should benefit from the association in your professional portfolio.
-            </li>
-          </ul>
-
-          <!-- Negotiation Tactics -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-8">Negotiation Tactics That Work on Both Sides</h2>
-
-          <p>
-            Negotiation in UGC is not adversarial. Both sides want the same outcome: quality content delivered on time at a fair price. These tactics help reach that outcome faster.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">For Creators</h3>
-
-          <ul class="list-disc ml-6 space-y-3">
-            <li>
-              <strong class="text-ink">Quote the project, not the hour.</strong> Brands do not care how long a video takes you to make. They care about the final output and the rights they receive. Price based on deliverables and usage, not time spent. A creator who films a great video in 45 minutes should earn the same as one who takes 4 hours.
-            </li>
-            <li>
-              <strong class="text-ink">Separate production from usage.</strong> Present your quote as two line items: production fee (for creating the content) and usage fee (for the rights the brand receives). This makes it easy to adjust scope without renegotiating everything. If the brand wants to extend usage, only the usage fee changes.
-            </li>
-            <li>
-              <strong class="text-ink">Offer tiered options.</strong> Instead of a single take-it-or-leave-it quote, offer two or three options with different usage terms and price points. Most brands pick the middle option, and you have anchored higher while giving them a sense of choice.
-            </li>
-            <li>
-              <strong class="text-ink">Ask about ad spend.</strong> If the brand plans to spend $100,000 promoting your video, your $300 production fee is a rounding error. Knowing the intended ad spend helps you price usage rights appropriately. Not every brand will share this, but asking signals professional sophistication.
-            </li>
-          </ul>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-2">For Brands</h3>
-
-          <ul class="list-disc ml-6 space-y-3">
-            <li>
-              <strong class="text-ink">Offer volume commitments.</strong> A creator will accept a lower per-video rate if you guarantee 10 videos per month for six months. Predictable income is worth a discount. This is how retainer relationships form, and both sides benefit from the stability.
-            </li>
-            <li>
-              <strong class="text-ink">Build in renewal options.</strong> Instead of demanding perpetual rights upfront, negotiate a 90-day initial term with an option to renew at a pre-agreed rate. This reduces upfront cost and gives you flexibility to stop using content that underperforms.
-            </li>
-            <li>
-              <strong class="text-ink">Pay fast.</strong> Creators talk. A brand that pays on delivery (or net-7) attracts better creators and gets priority when schedules are tight. The cost of faster payment is nearly zero; the goodwill is significant.
-            </li>
-            <li>
-              <strong class="text-ink">Share performance data.</strong> Creators who know which of their videos performed best produce better content over time. Sharing view counts, click-through rates, and ROAS data transforms a transactional relationship into a strategic partnership.
-            </li>
-          </ul>
-
-          <!-- Checklist -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-8">UGC Contract Checklist</h2>
-
-          <p>
-            Before you sign or send any UGC agreement, verify that it addresses every item on this list. A missing item is not automatically a dealbreaker, but it should be a conversation.
-          </p>
-
-          <div class="bg-card border border-border rounded-2xl p-6 md:p-8 my-6">
-            <div class="space-y-3 text-[15px]">
-              <div class="flex items-start gap-3">
-                <span class="text-accent font-bold text-[18px] leading-none mt-0.5">&#9744;</span>
-                <span><strong class="text-ink">Scope:</strong> Number of videos, duration, format, content type, editing responsibilities</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-accent font-bold text-[18px] leading-none mt-0.5">&#9744;</span>
-                <span><strong class="text-ink">Usage rights:</strong> Platforms, usage type (organic/paid/whitelisting), duration, geographic scope</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-accent font-bold text-[18px] leading-none mt-0.5">&#9744;</span>
-                <span><strong class="text-ink">Payment:</strong> Total fee, deposit amount, payment schedule, payment method, currency</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-accent font-bold text-[18px] leading-none mt-0.5">&#9744;</span>
-                <span><strong class="text-ink">Revisions:</strong> Number of rounds included, cost per additional round, turnaround time, feedback window</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-accent font-bold text-[18px] leading-none mt-0.5">&#9744;</span>
-                <span><strong class="text-ink">Kill fee:</strong> Cancellation terms at each project stage, non-refundable deposit, partial completion compensation</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-accent font-bold text-[18px] leading-none mt-0.5">&#9744;</span>
-                <span><strong class="text-ink">Timeline:</strong> Start date, first-cut deadline, revision windows, final delivery date, late-delivery consequences</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-accent font-bold text-[18px] leading-none mt-0.5">&#9744;</span>
-                <span><strong class="text-ink">Exclusivity:</strong> Category definition, duration, geographic scope, additional compensation for extended exclusivity</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-accent font-bold text-[18px] leading-none mt-0.5">&#9744;</span>
-                <span><strong class="text-ink">Confidentiality:</strong> What information is covered, time limit, portfolio usage permission</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-accent font-bold text-[18px] leading-none mt-0.5">&#9744;</span>
-                <span><strong class="text-ink">IP ownership:</strong> Who owns the final content, whether it is work-for-hire or licensed, creator's right to use in portfolio</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-accent font-bold text-[18px] leading-none mt-0.5">&#9744;</span>
-                <span><strong class="text-ink">Dispute resolution:</strong> Governing law, mediation process, jurisdiction</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-8">Frequently Asked Questions</h2>
-
-          <div class="space-y-6 mt-4">
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">Do I need a lawyer to review my UGC contract?</h3>
-              <p>
-                For your first few contracts, a legal review is worth the investment. An entertainment or intellectual property attorney can spot problematic clauses you might miss. Once you have reviewed several contracts and understand the standard terms, you can handle routine agreements yourself. But any contract involving perpetual rights, significant exclusivity, or fees above $5,000 warrants professional review regardless of your experience level.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">What if the brand refuses to sign a contract?</h3>
-              <p>
-                Walk away. A brand that will not put terms in writing is either disorganized or intentionally avoiding accountability. Neither scenario ends well for the creator. Even a simple one-page agreement covering deliverables, payment, and usage rights is better than nothing. If a brand pushes back on formal contracts for small projects, propose a brief email summary of agreed terms with both parties confirming in writing. That is not as strong as a signed contract, but it creates a documented record.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">Can I use the same contract template for every project?</h3>
-              <p>
-                You can use a base template, but you should customize the scope, usage rights, payment, and timeline for each project. A one-size-fits-all contract either leaves out important project-specific details or includes irrelevant clauses that confuse the other party. Start with a solid template and adjust the variable sections for each new engagement.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">How do I handle a brand that wants to extend usage rights after the contract period ends?</h3>
-              <p>
-                This is a good problem to have. It means your content is performing. Treat the extension as a new negotiation. Review the original usage fee, consider the content's proven performance, and propose a renewal rate. Many creators charge 60-75% of the original usage fee for renewals since the production cost is already covered. Include automatic renewal terms in your original contract if you want to streamline this process for future projects.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">Should I charge more if my content will be used in multiple countries?</h3>
-              <p>
-                Yes. Geographic scope is a usage dimension that affects pricing. Content running in a single market has limited exposure; the same content running globally reaches a much larger audience. We typically see a 25-50% premium for multi-market usage and a higher premium for global rights. If the brand is a multinational running ads across dozens of countries, your content's reach and value increase proportionally.
-              </p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">What happens if the brand uses my content beyond the agreed terms?</h3>
-              <p>
-                This is a contract breach. Document the unauthorized usage with screenshots and timestamps, then contact the brand in writing referencing the specific contract clause they have violated. Most breaches are unintentional: the media buyer did not track the usage expiration date. A professional reminder usually resolves it, and the brand pays the extension fee. If the brand refuses to comply, the contract's dispute resolution clause determines next steps, which is why that clause needs to be in the agreement from the start.
-              </p>
-            </div>
-
-          </div>
-
-          <!-- Closing -->
-          <hr class="border-t border-border my-10" />
-
-          <p>
-            A well-written contract is not a barrier to working together. It is the foundation that makes the collaboration productive for both sides. At OKAD, we have seen how clear agreements lead to better content, faster turnarounds, and longer creator relationships. The ten minutes you spend reviewing a contract saves hours of dispute resolution later.
-          </p>
-
-          <p>
-            If you are building a UGC program and want contracts that protect your brand while treating creators fairly, or if you are a creator who wants a second opinion on an agreement before signing, we are happy to share what we have learned.
-          </p>
-
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="bg-dark py-16 md:py-20">
-      <div class="max-w-[720px] mx-auto px-6">
-        <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 text-center">
-          <h2 class="font-display font-bold text-[clamp(22px,4vw,28px)] tracking-[-0.02em] text-white mb-4">
-            Need Help Structuring Your UGC Agreements?
-          </h2>
-          <p class="text-[16px] text-white/60 leading-[1.6] mb-8 max-w-[480px] mx-auto">
-            We manage creator contracts for brands running UGC at scale. Whether you need a contract template, a creator network, or a full production pipeline, we can help.
-          </p>
-          <div class="flex flex-wrap gap-3 justify-center">
-            <a
-              href="mailto:olga@okad.agency"
-              class="inline-flex items-center px-6 py-3 bg-white text-ink text-[14px] font-semibold rounded-full hover:bg-border transition-colors no-underline"
-            >
-              Email olga@okad.agency
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "Scope of Work", href: "#scope" },
+            { num: "03", text: "Usage Rights", href: "#usage-rights" },
+            { num: "04", text: "Payment & Kill Fees", href: "#payment" },
+            { num: "05", text: "Revisions & Timeline", href: "#revisions" },
+            { num: "06", text: "Exclusivity & NDA", href: "#exclusivity" },
+            { num: "07", text: "Usage Rights Deep Dive", href: "#usage-deep-dive" },
+            { num: "08", text: "Red Flags", href: "#red-flags" },
+            { num: "09", text: "Negotiation Tactics", href: "#negotiation" },
+            { num: "10", text: "Contract Checklist", href: "#checklist" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
             </a>
-            <a
-              href="https://calendly.com/okad_calls/first"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center px-6 py-3 bg-lime text-ink text-[14px] font-semibold rounded-full hover:bg-[#b8e537] transition-colors no-underline"
-            >
-              Book a Call &rarr;
-            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why a written contract is non-negotiable</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A handshake deal works until the content performs well</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A contract protects creators and brands equally</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Ten minutes of review saves thousands of dollars in disputes</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">We have managed hundreds of UGC creator relationships at OKAD. We write the briefs, negotiate the terms, and handle the fallout when agreements go sideways. That gives us a view most guides miss: we sit between the brand and the creator, and we know exactly which contract clauses prevent problems and which ones cause them.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is not a legal template you can copy and paste. It is a practical walkthrough of every clause that matters in a UGC creator agreement, why each one exists, what fair terms look like, and where both sides tend to make costly mistakes.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A handshake deal works until it doesn't. And in UGC, it stops working the moment content performs well. When a video drives real revenue, the brand wants to extend usage. The creator wants additional compensation. Without a written agreement, neither party has a reference point. Disputes arise not from bad intentions but from different assumptions about what was agreed upon.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">From the agency side, we have seen every version of this problem. A creator delivers three videos for a flat fee, the brand runs them as paid ads for eighteen months, and the creator discovers their face is still selling a product they stopped using a year ago. Or the reverse: a brand pays a premium rate, the creator ghosts after one revision request, and there is no clause that addresses incomplete delivery.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A written contract protects both parties equally. For creators, it guarantees payment terms, limits how content gets used, and sets clear boundaries around revision expectations. For brands, it secures the right to use content as intended, defines deliverables, and establishes recourse if work falls short. Skipping the contract saves ten minutes and risks thousands of dollars.</p>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1">OKAD's rule</h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Every creator we work with signs an agreement before filming begins. No exceptions. This includes paid tests, single-video projects, and ongoing retainers. The contract length scales with the project scope, but it always exists in writing.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 02 Scope of Work -->
+    <section class="guide-section" id="scope">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Scope of Work</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Scope of work and deliverables</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Specify quantity, duration, format, and content type</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Define what &ldquo;final&rdquo; means &mdash; raw file or edited with captions</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">State what is not included (props, travel, product sourcing)</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">This clause answers one question: what exactly is the creator producing? The more specific the language, the fewer disagreements later. Vague scope leads to scope creep, and scope creep leads to resentment on both sides.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A strong scope clause specifies the number of final videos, the approximate duration of each, the format (vertical 9:16, horizontal 16:9, square), and the content type (talking head, testimonial, product demo, screen recording). It also defines what &ldquo;final&rdquo; means. Is the deliverable a raw file, or does the creator handle editing, captions, and sound mixing?</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">We also recommend specifying what is <strong>not</strong> included. If the brand expects the creator to source props, purchase the product, or travel to a location, that needs to be stated explicitly. Otherwise, the creator reasonably assumes they are filming with what they have at home.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Element</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Weak Language</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Strong Language</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Quantity</td><td class="px-4 py-2.5 border-b border-border text-ink-2">&ldquo;A few videos&rdquo;</td><td class="px-4 py-2.5 border-b border-border text-ink-2">&ldquo;3 final videos, each 30&ndash;45 seconds&rdquo;</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Format</td><td class="px-4 py-2.5 border-b border-border text-ink-2">&ldquo;Vertical video&rdquo;</td><td class="px-4 py-2.5 border-b border-border text-ink-2">&ldquo;9:16 vertical, 1080x1920, MP4&rdquo;</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Editing</td><td class="px-4 py-2.5 border-b border-border text-ink-2">&ldquo;Creator edits&rdquo;</td><td class="px-4 py-2.5 border-b border-border text-ink-2">&ldquo;Creator delivers edited video with captions, brand-provided intro/outro assets included&rdquo;</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Props</td><td class="px-4 py-2.5 text-ink-2">Not mentioned</td><td class="px-4 py-2.5 text-ink-2">&ldquo;Brand ships product 7 days before shoot date; creator is not responsible for prop sourcing&rdquo;</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Usage Rights -->
+    <section class="guide-section" id="usage-rights">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Usage Rights</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Usage rights</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The single most consequential clause in any UGC agreement</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Three dimensions: platform, usage type, and duration</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Never agree to &ldquo;unlimited usage&rdquo; at a flat-fee rate</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Usage rights determine where and for how long the brand can use your content. This is the single most consequential clause in any UGC agreement, and it is the one most frequently handled poorly. The difference between &ldquo;organic social only&rdquo; and &ldquo;all platforms including paid ads, whitelisting, and TV&rdquo; can represent thousands of dollars in fair value.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every usage rights clause should specify three dimensions: <strong>platform</strong> (Meta, TikTok, YouTube, Google Ads, email, website, OTT, print), <strong>type</strong> (organic posting, paid advertising, whitelisting/Spark Ads, landing pages, email campaigns), and <strong>duration</strong> (30 days, 90 days, 12 months, perpetual).</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Never agree to &ldquo;unlimited usage&rdquo; at a flat-fee rate. Perpetual, all-platform rights are a legitimate option, but they should be priced accordingly. We dedicate a full deep-dive section to usage rights below because the details matter enormously.</p>
+      </div>
+    </section>
+
+    <!-- 04 Payment & Kill Fees -->
+    <section class="guide-section" id="payment">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Payment &amp; Kill Fees</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Payment terms and kill fees</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">50% deposit before filming, 50% upon delivery</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Net-15 for retainers; anything beyond net-30 is a red flag</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Kill fee protects both sides when projects get cancelled</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Payment terms</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Clear payment terms prevent the most common source of creator frustration: waiting to get paid. The contract should specify the total fee, the payment schedule, the payment method, and the currency.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For one-off projects, we recommend a 50% deposit before filming begins and the remaining 50% upon delivery of final assets. This protects both sides: the creator has financial commitment from the brand before investing time, and the brand only pays the balance after receiving deliverables.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For ongoing retainers, monthly invoicing with net-15 terms is standard. Net-30 is acceptable for larger corporations with rigid accounting cycles. Anything beyond net-30 should raise questions, and net-60 or &ldquo;payment upon campaign launch&rdquo; is a signal to walk away or demand full prepayment.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Kill fee and cancellation</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Projects get cancelled. Budgets shift, campaigns pivot, brands change direction. A kill fee clause ensures the creator is compensated for work already done and time already blocked.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Cancellation stage</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Creator receives</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Rationale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Before production</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Non-refundable deposit</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator blocked time and turned down other work</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">After filming, before delivery</td><td class="px-4 py-2.5 border-b border-border text-ink-2">50&ndash;75% of total fee</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Production work is already done</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">After first cuts delivered</td><td class="px-4 py-2.5 text-ink-2">Full payment</td><td class="px-4 py-2.5 text-ink-2">Deliverables exist; the project is essentially complete</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">From the brand perspective, a kill fee is also protective. It establishes that cancellation has a defined cost, which discourages frivolous project starts and encourages proper internal alignment before engaging a creator.</p>
+      </div>
+    </section>
+
+    <!-- 05 Revisions & Timeline -->
+    <section class="guide-section" id="revisions">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Revisions &amp; Timeline</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Revision policy and delivery schedule</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">1&ndash;2 revision rounds included; cap additional rounds with a fee</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">5-day feedback window &mdash; no feedback means auto-approved</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">~16 business days from product receipt to final delivery</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Revision policy</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Without a revision cap, you are agreeing to unlimited rework at a fixed price. That is not a contract; it is a blank check written against your time. Define the number of revision rounds included in the base fee and the cost per additional round.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Industry standard for UGC is one to two rounds of revisions included. Each round should have a defined turnaround time (typically 48&ndash;72 hours). Revisions should address feedback on existing content, not requests for entirely new concepts. If the brand wants a completely different approach after seeing the first cut, that is a new deliverable, not a revision.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">We also recommend specifying a feedback window. If the brand does not provide revision notes within 5 business days of receiving the first cut, the deliverable is considered approved. This prevents projects from stalling indefinitely while the creator&rsquo;s schedule fills up.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Timeline and delivery schedule</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every deliverable needs a deadline. The contract should include a start date, a first-cut delivery date, revision windows, and a final delivery date. If the brand is shipping a product to the creator, the timeline should start from confirmed receipt of the product, not from the contract signing date.</p>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Product arrives (Day 0).</strong> Timeline starts when the creator confirms receipt of the product.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Filming completes (Day 5).</strong> Creator films all content within 5 business days of product receipt.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>First cuts delivered (Day 8).</strong> Edited first cuts delivered within 3 days of filming.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Brand feedback (Day 13).</strong> Brand provides revision notes within 5 business days.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Final delivery (Day 16).</strong> Final assets delivered within 3 days of receiving feedback.</li>
+        </ol>
+
+        <p class="text-ink-2 leading-[1.65] mt-6 mb-4">The contract should also address what happens when either party misses a deadline. A creator who delivers late may lose a rush-fee bonus or face a percentage deduction. A brand that provides feedback late extends the final deadline by an equivalent number of days. Reciprocal accountability keeps the project moving.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need help structuring your UGC agreements?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We manage creator contracts for brands running UGC at scale. Whether you need a contract template, a creator network, or a full production pipeline, we can help.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailContract} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get help with UGC contracts &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Exclusivity & NDA -->
+    <section class="guide-section" id="exclusivity">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Exclusivity &amp; NDA</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Exclusivity and confidentiality</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Short-term exclusivity (30&ndash;90 days) is standard at the base rate</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Extended exclusivity: 20&ndash;40% additional per month</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">NDA should not block portfolio usage of published work</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Exclusivity</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">An exclusivity clause restricts the creator from working with competing brands during or after the project. This is entirely reasonable from the brand&rsquo;s perspective: they do not want their creator appearing in a competitor&rsquo;s ad the following week. But exclusivity has a cost, and the contract needs to reflect that.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Short-term exclusivity (during the campaign period, typically 30&ndash;90 days) is standard and should be included in the base fee. Extended exclusivity beyond the campaign window should carry an additional monthly fee, often 20&ndash;40% of the original project rate per month of exclusivity.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The clause must define &ldquo;competing&rdquo; precisely. &ldquo;Any skincare brand&rdquo; is too broad. &ldquo;Brands selling retinol serums in the US market priced between $30 and $80&rdquo; is specific enough that both parties understand the boundary. Vague exclusivity language lets the brand claim almost any project you take is a violation.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Confidentiality and NDA</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Brands often share unreleased products, internal strategies, or upcoming campaign themes with creators before public launch. A confidentiality clause prevents creators from sharing this information before the brand&rsquo;s official announcement.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Standard NDA language covers: no sharing of unreleased product details, no posting behind-the-scenes content without approval, no discussing campaign strategy or performance data publicly. The confidentiality obligation should have a reasonable time limit (12&ndash;24 months is typical) and should not restrict the creator from mentioning the brand relationship in their portfolio after the campaign is public.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">One important nuance: the NDA should not prevent the creator from listing the brand in their portfolio or showing the final published content. Overly aggressive NDAs that forbid any mention of the work essentially erase the project from the creator&rsquo;s track record, which is unfair if the content is already running publicly.</p>
+      </div>
+    </section>
+
+    <!-- 07 Usage Rights Deep Dive -->
+    <section class="guide-section" id="usage-deep-dive">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Usage Deep Dive</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Usage rights: the clause that determines your real rate</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Organic vs paid usage can differ in value by 5x or more</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Whitelisting: 30&ndash;50% of base fee per 30-day period</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Perpetual buyout: 4&ndash;5x the base production rate</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Usage rights deserve their own deep dive because they represent the largest variable in UGC pricing. Two identical videos can differ in value by five times or more depending on how the brand intends to use them. Understanding this is the single biggest lever for both negotiating fair rates and avoiding underpriced deals.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Organic vs. paid usage</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Organic usage means the brand posts your content on their social accounts without paid promotion. Paid usage means the brand runs your content as an advertisement, spending money to put your face and voice in front of potentially millions of people. The distinction matters because paid usage drives direct revenue for the brand and exposes the creator to a far larger audience.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A video used for a single organic Instagram post has limited reach and lifespan. The same video used as a Meta ad with a $50,000 monthly spend reaches hundreds of thousands of people repeatedly. The creator&rsquo;s compensation should reflect this difference.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Whitelisting and Spark Ads</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Whitelisting (on Meta) and Spark Ads (on TikTok) allow brands to run ads through the creator&rsquo;s personal account. From the viewer&rsquo;s perspective, the ad appears to come from the creator, not from the brand. This is powerful for performance but means the creator&rsquo;s personal brand is directly associated with the advertising.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Whitelisting access should always be time-limited (30, 60, or 90 days), specified by platform, and priced as an add-on to the base production fee. We typically see whitelisting rights priced at 30&ndash;50% of the base video fee per 30-day period.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Duration tiers</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Usage duration directly impacts pricing. Here is how we structure it at OKAD:</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Duration</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Typical Multiplier</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">30 days</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1x (base rate)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Campaign testing, seasonal pushes</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">90 days</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1.5x</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Standard ad campaigns, quarterly cycles</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">6 months</td><td class="px-4 py-2.5 border-b border-border text-ink-2">2x</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Evergreen content, landing pages</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">12 months</td><td class="px-4 py-2.5 border-b border-border text-ink-2">2.5&ndash;3x</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Annual campaigns, website testimonials</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Perpetual / buyout</td><td class="px-4 py-2.5 text-ink-2">4&ndash;5x</td><td class="px-4 py-2.5 text-ink-2">Brands wanting permanent ownership</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">These multipliers are guidelines, not rules. Actual rates depend on the creator&rsquo;s experience, the brand&rsquo;s size, and the content&rsquo;s strategic importance. But the framework ensures that longer usage equals higher compensation, which is the principle that matters.</p>
+      </div>
+    </section>
+
+    <!-- 08 Red Flags -->
+    <section class="guide-section" id="red-flags">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Red Flags</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Contract terms that should make you pause</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">&ldquo;Perpetual, irrevocable, worldwide rights&rdquo; at a flat fee</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">&ldquo;Unlimited revisions&rdquo; with no cap or additional cost</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Exclusivity without additional compensation</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">After reviewing hundreds of creator agreements from both sides, these are the warning signs we consistently flag.</p>
+
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong class="text-ink">&ldquo;Perpetual, irrevocable, worldwide rights&rdquo; at a flat fee.</strong> This language transfers complete ownership of the content forever for a one-time payment. Unless the fee reflects a full buyout (4&ndash;5x the base rate), this clause massively undervalues the creator&rsquo;s work.</li>
+          <li><strong class="text-ink">&ldquo;Unlimited revisions.&rdquo;</strong> There is no such thing as unlimited revisions at a fixed price. This clause converts the creator into an employee without employee protections. Every agreement should cap revision rounds.</li>
+          <li><strong class="text-ink">No payment timeline specified.</strong> If the contract describes the fee but not when it gets paid, expect delays. &ldquo;Payment upon completion&rdquo; without defining completion is especially dangerous.</li>
+          <li><strong class="text-ink">Exclusivity without additional compensation.</strong> If the contract restricts you from working with competitors but does not increase your fee to reflect the lost opportunity cost, the brand is getting exclusivity for free.</li>
+          <li><strong class="text-ink">Work-for-hire without IP transfer pricing.</strong> Some contracts classify UGC as &ldquo;work made for hire,&rdquo; which under US copyright law means the brand automatically owns the copyright. This is fine if the rate reflects full IP transfer. It is not fine at a standard production fee.</li>
+          <li><strong class="text-ink">Verbal agreements to &ldquo;handle it later.&rdquo;</strong> If a key term is missing from the written contract and the other party says they will &ldquo;sort it out once we get going,&rdquo; that term will never be sorted out in your favor.</li>
+          <li><strong class="text-ink">NDA that prohibits portfolio usage.</strong> An NDA that prevents you from ever showing or referencing the work in your portfolio is unreasonably restrictive for most UGC projects.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 09 Negotiation Tactics -->
+    <section class="guide-section" id="negotiation">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Negotiation</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Negotiation tactics that work on both sides</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creators: separate production fees from usage fees</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brands: offer volume commitments for lower per-video rates</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Both sides want the same outcome &mdash; quality content at a fair price</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Negotiation in UGC is not adversarial. Both sides want the same outcome: quality content delivered on time at a fair price. These tactics help reach that outcome faster.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">For creators</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong class="text-ink">Quote the project, not the hour.</strong> Brands do not care how long a video takes you to make. They care about the final output and the rights they receive. Price based on deliverables and usage, not time spent.</li>
+          <li><strong class="text-ink">Separate production from usage.</strong> Present your quote as two line items: production fee (for creating the content) and usage fee (for the rights the brand receives). This makes it easy to adjust scope without renegotiating everything.</li>
+          <li><strong class="text-ink">Offer tiered options.</strong> Instead of a single take-it-or-leave-it quote, offer two or three options with different usage terms and price points. Most brands pick the middle option.</li>
+          <li><strong class="text-ink">Ask about ad spend.</strong> If the brand plans to spend $100,000 promoting your video, your $300 production fee is a rounding error. Knowing the intended ad spend helps you price usage rights appropriately.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">For brands</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong class="text-ink">Offer volume commitments.</strong> A creator will accept a lower per-video rate if you guarantee 10 videos per month for six months. Predictable income is worth a discount.</li>
+          <li><strong class="text-ink">Build in renewal options.</strong> Instead of demanding perpetual rights upfront, negotiate a 90-day initial term with an option to renew at a pre-agreed rate.</li>
+          <li><strong class="text-ink">Pay fast.</strong> Creators talk. A brand that pays on delivery (or net-7) attracts better creators and gets priority when schedules are tight.</li>
+          <li><strong class="text-ink">Share performance data.</strong> Creators who know which of their videos performed best produce better content over time. Sharing view counts, click-through rates, and ROAS data transforms a transactional relationship into a strategic partnership.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 10 Contract Checklist -->
+    <section class="guide-section" id="checklist">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Checklist</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">UGC contract checklist</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before you sign or send any UGC agreement, verify that it addresses every item on this list. A missing item is not automatically a dealbreaker, but it should be a conversation.</p>
+
+        {[
+          { term: "Scope", def: "Number of videos, duration, format, content type, editing responsibilities." },
+          { term: "Usage rights", def: "Platforms, usage type (organic/paid/whitelisting), duration, geographic scope." },
+          { term: "Payment", def: "Total fee, deposit amount, payment schedule, payment method, currency." },
+          { term: "Revisions", def: "Number of rounds included, cost per additional round, turnaround time, feedback window." },
+          { term: "Kill fee", def: "Cancellation terms at each project stage, non-refundable deposit, partial completion compensation." },
+          { term: "Timeline", def: "Start date, first-cut deadline, revision windows, final delivery date, late-delivery consequences." },
+          { term: "Exclusivity", def: "Category definition, duration, geographic scope, additional compensation for extended exclusivity." },
+          { term: "Confidentiality", def: "What information is covered, time limit, portfolio usage permission." },
+          { term: "IP ownership", def: "Who owns the final content, whether it is work-for-hire or licensed, creator's right to use in portfolio." },
+          { term: "Dispute resolution", def: "Governing law, mediation process, jurisdiction." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "Do I need a lawyer to review my UGC contract?", a: "For your first few contracts, a legal review is worth the investment. An entertainment or intellectual property attorney can spot problematic clauses you might miss. Once you have reviewed several contracts and understand the standard terms, you can handle routine agreements yourself. But any contract involving perpetual rights, significant exclusivity, or fees above $5,000 warrants professional review regardless of your experience level." },
+          { q: "What if the brand refuses to sign a contract?", a: "Walk away. A brand that will not put terms in writing is either disorganized or intentionally avoiding accountability. Neither scenario ends well for the creator. Even a simple one-page agreement covering deliverables, payment, and usage rights is better than nothing. If a brand pushes back on formal contracts for small projects, propose a brief email summary of agreed terms with both parties confirming in writing." },
+          { q: "Can I use the same contract template for every project?", a: "You can use a base template, but you should customize the scope, usage rights, payment, and timeline for each project. A one-size-fits-all contract either leaves out important project-specific details or includes irrelevant clauses that confuse the other party. Start with a solid template and adjust the variable sections for each new engagement." },
+          { q: "How do I handle a brand that wants to extend usage rights after the contract period ends?", a: "This is a good problem to have — it means your content is performing. Treat the extension as a new negotiation. Review the original usage fee, consider the content's proven performance, and propose a renewal rate. Many creators charge 60-75% of the original usage fee for renewals since the production cost is already covered." },
+          { q: "Should I charge more if my content will be used in multiple countries?", a: "Yes. Geographic scope is a usage dimension that affects pricing. Content running in a single market has limited exposure; the same content running globally reaches a much larger audience. We typically see a 25-50% premium for multi-market usage and a higher premium for global rights." },
+          { q: "What happens if the brand uses my content beyond the agreed terms?", a: "This is a contract breach. Document the unauthorized usage with screenshots and timestamps, then contact the brand in writing referencing the specific contract clause they have violated. Most breaches are unintentional — the media buyer did not track the usage expiration date. A professional reminder usually resolves it, and the brand pays the extension fee." },
+          { q: "Can OKAD help structure my UGC contracts?", a: "Yes. We manage creator contracts for brands running UGC at scale. Whether you need a contract template, a creator network, or a full production pipeline, we can help. Write to us at olga@okad.agency and tell us about your program." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to build a UGC program with solid contracts?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">A well-written contract is not a barrier to working together. It is the foundation that makes the collaboration productive for both sides. Tell us about your program and we will help you get the agreements right.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailContract} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get help with UGC contracts &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on hundreds of UGC creator agreements managed by OKAD Agency across multiple industries. The pricing multipliers, payment terms, and negotiation tactics reflect observed market norms for 2025&ndash;2026. This is not legal advice. Individual contracts should be reviewed by a qualified attorney, especially for agreements involving perpetual rights, significant exclusivity, or fees above $5,000.</p>
       </div>
     </section>
 
   </main>
   <Footer />
 </Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

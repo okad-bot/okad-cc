@@ -2,6 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+const emailCreator = "mailto:olga@okad.agency?subject=UGC%20creator%20application%20%E2%80%94%20joining%20OKAD%20network";
+const emailBrand = "mailto:olga@okad.agency?subject=UGC%20campaign%20%E2%80%94%20general%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
 ---
 
 <Layout
@@ -12,419 +16,477 @@ import Footer from "../components/Footer.astro";
   <main>
 
     <!-- Hero -->
-    <section class="pt-20 md:pt-24">
-      <div class="max-w-[720px] mx-auto px-6 pt-12 md:pt-16 pb-8">
-        <a href="/" class="inline-flex items-center gap-1.5 text-[13px] text-muted hover:text-accent transition-colors no-underline mb-6">
-          &larr; Back to OKAD
-        </a>
-
-        <div class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium uppercase tracking-[.06em] text-ink-2 mb-4">
-          <strong class="text-accent font-semibold">#UGC</strong>
-          <span class="text-muted-2">&middot;</span>
-          <strong class="text-accent font-semibold">#CREATOR_JOBS</strong>
-          <span class="text-muted-2">&middot;</span>
-          <strong class="text-accent font-semibold">#GUIDE</strong>
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
         </div>
-
-        <h1 class="font-display font-bold text-[clamp(28px,5vw,42px)] leading-[1.12] tracking-[-0.03em] mb-5 text-ink">
-          UGC Creator Jobs: Where to Find Paid Opportunities in 2026
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          UGC Creator Jobs: <span class="text-accent">Where to Find Paid Opportunities</span>
         </h1>
-
-        <p class="text-[17px] text-ink-2 leading-[1.65] mb-6">
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
           We have hired hundreds of UGC creators across dozens of campaigns. This guide shares what we see from the brand side: where the real jobs are, what makes an application stand out, and how the best creators turn a single gig into steady income.
         </p>
-
-        <div class="flex flex-wrap gap-3 text-[13px] text-muted-2">
-          <span>OKAD Agency</span>
-          <span>&middot;</span>
-          <span>14 min read</span>
-          <span>&middot;</span>
-          <span>September 2026</span>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailCreator} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Join OKAD creator network &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>$150&ndash;$500/video</span>
+          <span>No followers needed</span>
+          <span>$3K&ndash;$15K+/mo</span>
+          <span>Remote &amp; flexible</span>
+          <span>All niches</span>
         </div>
       </div>
     </section>
 
-    <!-- Article Body -->
-    <section class="pb-16 md:pb-20">
-      <div class="max-w-[720px] mx-auto px-6">
-        <div class="space-y-6 text-[16px] text-ink-2 leading-[1.75]">
-
-          <p>
-            The demand for user-generated content has outpaced the supply of reliable creators. Brands are allocating larger portions of their ad budgets to UGC because it outperforms polished studio ads in click-through rate, cost per acquisition, and viewer retention. That shift has created a genuine job market for people who can produce authentic short-form video on a smartphone.
-          </p>
-          <p>
-            But knowing that jobs exist is not the same as knowing where to find them, how to position yourself, or what separates the creators who get hired from those who do not. We run UGC campaigns daily at OKAD, and we see both sides of the equation: the brands struggling to find the right creators, and the creators struggling to land their first paid brief. This guide bridges that gap.
-          </p>
-
-          <!-- Section 1: Job Types -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-6">
-            The Main Types of UGC Jobs Available Right Now
-          </h2>
-
-          <p>
-            UGC is not one thing. The term covers several distinct job types, each with different requirements, pay structures, and client expectations. Understanding these categories helps you target opportunities that match your skills.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            Paid ad creative production
-          </h3>
-          <p>
-            This is the largest segment of the UGC job market. Brands need short-form video ads for Meta, TikTok, YouTube Shorts, and Pinterest. The content runs as paid advertising under the brand's account, not yours. You produce the video, hand it over, and the brand handles distribution. Typical deliverables are 15- to 60-second clips with a strong opening hook, a product demonstration or testimonial, and a clear call to action.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            Organic social content
-          </h3>
-          <p>
-            Some brands hire creators to produce content for their own social channels rather than for paid ads. The style is similar, but the objective shifts from immediate conversion to audience building and engagement. You might create a series of TikToks or Instagram Reels that go on the brand's profile. These roles often pay less per video but come with higher volume and more creative freedom.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            Whitelisted ad content
-          </h3>
-          <p>
-            Whitelisting sits between organic and paid. The brand runs your content as an ad through your social account (or a dedicated handle), so it appears as a creator post rather than a brand ad. This format typically pays more because the brand is leveraging your identity, not just your production skills. Expect usage fees on top of the base production rate.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            Product review and testimonial video
-          </h3>
-          <p>
-            Brands in e-commerce, supplements, beauty, and consumer electronics frequently need authentic-looking reviews. These videos appear on product pages, landing pages, and retargeting ads. The format is straightforward: you receive the product, use it, and record your genuine reaction. Production quality expectations are deliberately low because the content needs to feel real.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            B2B and SaaS UGC
-          </h3>
-          <p>
-            An underserved niche with growing demand. Software companies, fintech startups, and HR platforms need screen-recording walkthroughs, voiceover explainers, and talking-head testimonials. If you can speak naturally about technology and record a clean screen walkthrough, this niche pays well and has far less competition than beauty or lifestyle.
-          </p>
-
-          <!-- Section 2: Where to Find Jobs -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-6">
-            Where to Actually Find UGC Jobs
-          </h2>
-
-          <p>
-            We see creators waste weeks applying in the wrong places. The UGC job market is fragmented, so your strategy should cover multiple channels simultaneously. Here is where legitimate work comes from, ranked roughly by reliability.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            Creator platforms and marketplaces
-          </h3>
-          <p>
-            Dedicated UGC marketplaces connect brands with creators through a structured process. Platforms like Collabstr, Billo, and Insense have become standard sourcing tools for brands running regular UGC campaigns. Create profiles on several of these platforms. Each one has different brands and different price ranges. A strong profile with a demo reel and niche tags makes you discoverable when brands search for creators matching specific criteria.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            Agency creator networks
-          </h3>
-          <p>
-            Creative agencies like ours maintain vetted rosters of reliable creators. When we land a new campaign, we pull from our existing network first. Getting into an agency network means you skip the application queue for individual gigs. Instead, the agency matches you with relevant briefs proactively. The trade-off is that you earn slightly less per video since the agency takes a margin, but the volume and consistency often make up for it. At OKAD, we are always looking for dependable creators across niches. If you produce clean, on-brief content and hit deadlines, reach out.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            Job boards and freelance platforms
-          </h3>
-          <p>
-            General freelance platforms such as Upwork, Fiverr, and LinkedIn have seen a surge in UGC-related postings. Search for "UGC creator," "user generated content," or "short-form video" in the job listings. Specialized job boards focused on creative work sometimes aggregate UGC opportunities from multiple sources. The quality of postings varies, so vet each client before committing.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            Direct brand outreach
-          </h3>
-          <p>
-            The highest-paying UGC relationships often start with a cold pitch. Identify brands whose products you already use or understand well. Record a sample video unprompted, then send it alongside a short message explaining what you can offer. This approach has a lower response rate than marketplace applications, but the relationships that form tend to be longer-lasting and higher-paying because you have eliminated the middleman.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            Social media communities
-          </h3>
-          <p>
-            Active UGC communities on Reddit (r/UGCcreators), Twitter/X, and private Discord servers regularly share open briefs and opportunities. Hashtags like #UGCjobs, #UGCcreator, and #UGCopportunity surface postings from brands and agencies. These channels work best as a supplement to the methods above rather than a primary strategy, since opportunities appear irregularly and competition can be intense.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            Brand career pages directly
-          </h3>
-          <p>
-            Some DTC and e-commerce brands post creator roles on their own websites under "Careers" or "Creator Program." Companies like Gymshark, HelloFresh, and numerous mid-size Shopify brands run ongoing creator programs. Check the footer of brands you admire for a "Work with Us" or "Creators" link. These are often overlooked because creators default to marketplaces, which means less competition.
-          </p>
-
-          <!-- Section 3: How to Apply -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-6">
-            How to Apply So Brands Actually Respond
-          </h2>
-
-          <p>
-            We review creator applications every week. Most are forgettable. The ones that get our attention share a few characteristics.
-          </p>
-
-          <p>
-            <strong class="text-ink">Lead with your work, not your bio.</strong> Open with a link to your best 3-5 videos, ideally ones relevant to the brand's niche. A hiring manager will spend under 10 seconds on your application before deciding whether to look deeper. If the first thing they see is a paragraph about your passion for content creation, you have already lost them.
-          </p>
-
-          <p>
-            <strong class="text-ink">Show niche relevance.</strong> If you are applying for a beauty brand, your portfolio should feature beauty content. If it is a tech product, show screen recordings or talking-head explainers. Generic "I can create content for any brand" pitches do not convert. Brands want evidence that you understand their category.
-          </p>
-
-          <p>
-            <strong class="text-ink">Include a sample or spec video.</strong> Nothing proves your value faster than an unsolicited sample made specifically for the brand you are pitching. Even a 15-second clip using the brand's product shows initiative and gives the hiring manager something concrete to evaluate. This single step puts you ahead of 90% of applicants.
-          </p>
-
-          <p>
-            <strong class="text-ink">State your rates upfront.</strong> Ambiguity about pricing wastes time for both sides. Include your per-video rate, what is included (raw footage, edited video, revisions), and any additional fees for usage rights or whitelisting. Brands appreciate creators who make the business side straightforward.
-          </p>
-
-          <p>
-            <strong class="text-ink">Keep the message short.</strong> Three to five sentences plus a portfolio link. That is all. Brands hiring UGC creators are evaluating dozens of applications. Respect their time and your work will speak for itself.
-          </p>
-
-          <!-- Section 4: What Brands Evaluate -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-6">
-            What Brands Actually Evaluate When Hiring Creators
-          </h2>
-
-          <p>
-            Understanding what sits on the other side of the hiring decision gives you a real advantage. Here is what we look at when selecting creators for campaigns.
-          </p>
-
-          <p>
-            <strong class="text-ink">Hook quality.</strong> The first 1-3 seconds of every video determine whether the ad performs. We evaluate whether a creator understands scroll-stopping openings. Can they grab attention with a question, a visual surprise, or a bold claim? Creators who demonstrate strong hook instincts get hired repeatedly because this single skill drives campaign performance more than anything else.
-          </p>
-
-          <p>
-            <strong class="text-ink">Authenticity and naturalness.</strong> UGC works because it does not look or feel like advertising. If a creator sounds like they are reading a teleprompter or performing for a camera, the content defeats its own purpose. We look for people who speak the way they would talk to a friend, with genuine energy and natural cadence.
-          </p>
-
-          <p>
-            <strong class="text-ink">Technical baseline.</strong> You do not need cinema-quality footage. You do need stable framing, consistent lighting, and clean audio. A well-lit smartphone video with clear sound beats a DSLR recording with echo and harsh shadows. We check that the creator meets a minimum production threshold without over-producing.
-          </p>
-
-          <p>
-            <strong class="text-ink">Brief adherence.</strong> Creativity within constraints is the skill that separates professionals from hobbyists. When a brief specifies three talking points and a CTA, we need all three talking points and the CTA. Improvisation is welcome. Ignoring the brief is not. Creators who consistently deliver on-brief content with personal flair are the ones we build long-term relationships with.
-          </p>
-
-          <p>
-            <strong class="text-ink">Turnaround reliability.</strong> Meeting deadlines matters more than most creators realize. A good video delivered on time is worth more than a great video delivered late. Campaign schedules are tight, and delays cascade across the entire production pipeline. We track delivery reliability as seriously as content quality.
-          </p>
-
-          <p>
-            <strong class="text-ink">Communication responsiveness.</strong> We work across time zones and manage multiple creators simultaneously. A creator who responds within a few hours, asks clarifying questions before filming, and flags issues proactively is dramatically easier to work with. Poor communication is the single most common reason we stop working with otherwise talented creators.
-          </p>
-
-          <!-- Section 5: Pay Models -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-6">
-            How UGC Pay Works: Models, Rates, and What Affects Your Earnings
-          </h2>
-
-          <p>
-            UGC compensation is not standardized, but three dominant pay structures cover the majority of arrangements. Knowing these models helps you evaluate offers and negotiate effectively.
-          </p>
-
-          <div class="overflow-x-auto my-6">
-            <table class="w-full border-collapse text-[14px]">
-              <thead>
-                <tr>
-                  <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Pay Model</th>
-                  <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Typical Range</th>
-                  <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Best For</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="p-3 border-b border-border">Per-video flat fee</td>
-                  <td class="p-3 border-b border-border">$150 - $500</td>
-                  <td class="p-3 border-b border-border">One-off campaigns, whitelabel ads, product launches</td>
-                </tr>
-                <tr>
-                  <td class="p-3 border-b border-border">Volume program</td>
-                  <td class="p-3 border-b border-border">$10 - $25/video + bonuses</td>
-                  <td class="p-3 border-b border-border">High-output creators who prioritize quantity and consistency</td>
-                </tr>
-                <tr>
-                  <td class="p-3 border-b border-border">Monthly retainer</td>
-                  <td class="p-3 border-b border-border">$1,000 - $5,000/month</td>
-                  <td class="p-3 border-b border-border">Ongoing partnerships with agreed deliverable counts</td>
-                </tr>
-                <tr>
-                  <td class="p-3 border-b border-border">Usage licensing</td>
-                  <td class="p-3 border-b border-border">20-100% on top of base</td>
-                  <td class="p-3 border-b border-border">Whitelisting, extended ad runs, multi-platform distribution</td>
-                </tr>
-              </tbody>
-            </table>
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How UGC Creator Jobs Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4F1;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Build Your Portfolio</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Create 5&ndash;10 sample videos on your smartphone. Lead with your best work when applying &mdash; brands spend under 10 seconds on each application.</p>
           </div>
-
-          <p>
-            <strong class="text-ink">Flat fee per video</strong> is the most common model for creators starting out. You agree on a price per deliverable, produce the content, and get paid on delivery. Rates vary widely by niche, creator experience, and whether the video includes editing. Raw footage-only deliverables sit at the lower end. Fully edited, captioned videos with multiple hook variations command premium rates.
-          </p>
-
-          <p>
-            <strong class="text-ink">Volume programs</strong> trade higher per-unit rates for guaranteed volume. These programs work well for creators who can produce quickly and consistently. The per-video rate is lower, but performance bonuses tied to views, clicks, or conversions can substantially increase total earnings. This model rewards speed and efficiency.
-          </p>
-
-          <p>
-            <strong class="text-ink">Retainers</strong> provide income predictability. A brand pays a fixed monthly amount for an agreed number of videos. This model typically emerges after you have completed several successful projects with a brand. From the creator side, retainers reduce the hustle of constantly finding new work. From the brand side, they guarantee access to a proven creator without competing for availability.
-          </p>
-
-          <p>
-            <strong class="text-ink">Usage licensing</strong> is a separate revenue layer. When a brand wants to run your content as paid ads, use your likeness in marketing materials, or distribute across multiple platforms, usage rights should carry an additional fee. Standard practice is a 30-day usage window included in the base rate, with extensions priced monthly. Negotiate this upfront to avoid disagreements later.
-          </p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">
-            Factors that push rates higher
-          </h3>
-          <ul class="list-disc ml-6 space-y-2">
-            <li><strong class="text-ink">Niche expertise</strong> in regulated or technical industries (finance, healthcare, SaaS) commands premiums because fewer creators can speak credibly about these subjects.</li>
-            <li><strong class="text-ink">Proven performance data</strong> from previous campaigns gives you leverage. If your content drove a 3x ROAS for a similar brand, that result justifies a higher rate.</li>
-            <li><strong class="text-ink">Speed and reliability.</strong> Brands pay more for creators who deliver on schedule without needing extensive revisions or hand-holding.</li>
-            <li><strong class="text-ink">Multi-format capability.</strong> If you can deliver talking head, B-roll, screen recordings, and edited compilations, you reduce the number of creators the brand needs to hire.</li>
-            <li><strong class="text-ink">Whitelisting willingness.</strong> Allowing brands to run ads through your account adds value and should come with a corresponding rate increase.</li>
-          </ul>
-
-          <!-- Section 6: Turning Gigs into Recurring Work -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-6">
-            Turning One-Off Gigs into Recurring Revenue
-          </h2>
-
-          <p>
-            The difference between creators who earn sporadically and those who build consistent income is not talent alone. It is the ability to convert a single project into an ongoing relationship. Here is how we see the best creators do it.
-          </p>
-
-          <p>
-            <strong class="text-ink">Over-deliver on the first project.</strong> Your initial deliverable is an audition for future work. Include an extra hook variation the brand did not ask for. Deliver a day early. Add a note suggesting a content angle for their next campaign. These small gestures signal professionalism and make you memorable in a sea of one-and-done creators.
-          </p>
-
-          <p>
-            <strong class="text-ink">Ask for performance feedback.</strong> After the campaign runs for a week or two, follow up and ask how the content performed. This does two things: it shows the brand you care about results (not just getting paid), and it gives you data to improve your work and justify your rates to future clients. Most creators never ask. The ones who do stand out.
-          </p>
-
-          <p>
-            <strong class="text-ink">Propose the next project before they do.</strong> If you created a product launch video and it performed well, suggest a follow-up: a comparison video, a seasonal angle, a "one month later" update. Brands are busy. Making the next step easy for them increases the chance they say yes. You transition from vendor to creative partner.
-          </p>
-
-          <p>
-            <strong class="text-ink">Build a content calendar together.</strong> Once you have two or three successful projects with a brand, suggest a monthly arrangement. Offer a slight discount for commitment in exchange for guaranteed volume. This is how per-video relationships evolve into retainers. The brand gets reliability and you get predictable income.
-          </p>
-
-          <p>
-            <strong class="text-ink">Diversify across 3-5 active brands.</strong> Relying on a single client is risky regardless of how strong the relationship is. Budgets shift, campaigns end, and priorities change. Maintain relationships with multiple brands so that losing one account does not eliminate your income. The creators we work with who earn the most consistently always have several active brand relationships running in parallel.
-          </p>
-
-          <p>
-            <strong class="text-ink">Treat it like a business, not a side hustle.</strong> Track your projects, invoices, and client communications. Use contracts for every engagement, even small ones. Respond promptly to messages. Set clear expectations about timelines, revisions, and usage rights. Professionalism compounds over time and is the foundation of a career that lasts.
-          </p>
-
-          <!-- Section 7: Red Flags -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-6">
-            Red Flags to Watch For
-          </h2>
-
-          <p>
-            Not every job posting deserves your time. Here are warning signs we advise our own creators to look for.
-          </p>
-
-          <ul class="list-disc ml-6 space-y-2">
-            <li><strong class="text-ink">Free test content requests.</strong> Legitimate paid tests exist at $50-$150. A brand that wants free videos "to see if you are a fit" may simply want free content. Always get paid for your work, even during evaluation.</li>
-            <li><strong class="text-ink">Vague or unlimited usage rights.</strong> Your contract should specify exactly where content will be used, on which platforms, and for how long. Perpetual rights across all channels should cost significantly more than a 30-day single-platform license.</li>
-            <li><strong class="text-ink">No written agreement.</strong> Every project needs a contract covering deliverables, payment terms, revision limits, and usage rights. A brand unwilling to put terms in writing is a brand that may not honor those terms.</li>
-            <li><strong class="text-ink">Payment delays or vague terms.</strong> Know exactly when and how you will be paid before you start filming. Net-30 is standard. Anything beyond Net-45 should raise questions. "We pay when the campaign launches" is not a payment term.</li>
-            <li><strong class="text-ink">Rigid word-for-word scripts.</strong> UGC performs because it feels natural. A brand that insists you read a script verbatim will get stiff, underperforming content and may blame you for the results. Good briefs provide talking points and guardrails, not teleprompter text.</li>
-          </ul>
-
-          <!-- FAQ -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-6">
-            Frequently Asked Questions
-          </h2>
-
-          <div class="space-y-6 mt-4">
-            <div class="bg-card border border-border rounded-2xl p-6">
-              <h3 class="font-display font-semibold text-[16px] text-ink mb-2">Do I need a large following to land UGC jobs?</h3>
-              <p class="text-[15px] text-ink-2 leading-[1.65] mb-0">
-                No. Follower count is irrelevant for the vast majority of UGC work. Brands hire you for production skill, on-camera presence, and the ability to create content that looks native to social feeds. Many of the creators in our network have under 1,000 followers on their personal accounts. What matters is your portfolio and your reliability.
-              </p>
-            </div>
-
-            <div class="bg-card border border-border rounded-2xl p-6">
-              <h3 class="font-display font-semibold text-[16px] text-ink mb-2">How much can I realistically earn per month?</h3>
-              <p class="text-[15px] text-ink-2 leading-[1.65] mb-0">
-                Active UGC creators who work across multiple brands typically earn between $3,000 and $15,000 per month. The range depends on your production speed, niche, rate per video, and number of active clients. Creators combining per-video work with volume programs and one or two retainers tend to earn the most consistently. Income scales with reliability and the number of brand relationships you maintain.
-              </p>
-            </div>
-
-            <div class="bg-card border border-border rounded-2xl p-6">
-              <h3 class="font-display font-semibold text-[16px] text-ink mb-2">What equipment do I need to get started?</h3>
-              <p class="text-[15px] text-ink-2 leading-[1.65] mb-0">
-                A modern smartphone with a decent camera, a ring light or window for natural lighting, a phone tripod for stable footage, a quiet room for clean audio, and a free editing app like CapCut. The total investment is under $100. Brands specifically want content that looks authentic, not studio-produced. Over-investing in gear early on can actually work against you by making your content look too polished.
-              </p>
-            </div>
-
-            <div class="bg-card border border-border rounded-2xl p-6">
-              <h3 class="font-display font-semibold text-[16px] text-ink mb-2">How long does it take to land the first paid gig?</h3>
-              <p class="text-[15px] text-ink-2 leading-[1.65] mb-0">
-                With a solid portfolio of 5-10 sample videos and active applications across multiple channels, most creators land their first paid project within 2-4 weeks. The timeline shortens significantly if you create spec videos for specific brands and reach out directly. Creators who join an agency network or marketplace often get matched faster because the platform handles discovery.
-              </p>
-            </div>
-
-            <div class="bg-card border border-border rounded-2xl p-6">
-              <h3 class="font-display font-semibold text-[16px] text-ink mb-2">Should I specialize in a niche or stay general?</h3>
-              <p class="text-[15px] text-ink-2 leading-[1.65] mb-0">
-                Start general, specialize as you grow. Your first 10-20 projects will teach you which niches suit your personality and production style. Once you identify a category where your content consistently performs well, lean into it. Specialists command higher rates because brands value proven experience in their specific market. A creator with 20 beauty campaigns under their belt will always beat a generalist for a beauty brief.
-              </p>
-            </div>
-
-            <div class="bg-card border border-border rounded-2xl p-6">
-              <h3 class="font-display font-semibold text-[16px] text-ink mb-2">What is the difference between UGC and influencer marketing?</h3>
-              <p class="text-[15px] text-ink-2 leading-[1.65] mb-0">
-                As a UGC creator, you are paid for content production, not audience access. The content you produce is owned or licensed by the brand and distributed through their channels and ad accounts. Influencers are paid to post content on their own accounts, leveraging their follower base for reach. UGC does not require an audience. It requires production skill. Many successful UGC creators have minimal social media presence.
-              </p>
-            </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Apply Across Channels</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Marketplaces, agency networks, job boards, and direct outreach. Cover multiple channels simultaneously to maximize your chances.</p>
           </div>
-
-          <!-- Closing -->
-          <div class="border-t border-border mt-12 pt-8">
-            <p>
-              The UGC job market in 2026 rewards creators who treat content production as a professional skill rather than a casual hobby. Opportunities are abundant, but the creators who build sustainable income are the ones who deliver reliably, communicate clearly, and approach each brand relationship as a long-term investment.
-            </p>
-            <p>
-              If you are ready to start or want to level up your UGC career, we work with creators at every stage. Whether you need guidance on building your portfolio, feedback on your current work, or want to join our creator network for consistent briefs, we are here to help.
-            </p>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Get Paid &amp; Scale</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Earn $150&ndash;$500 per video or $1K&ndash;$5K/mo on retainer. Turn one-off gigs into recurring revenue across 3&ndash;5 active brands.</p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="bg-dark py-16 md:py-20">
-      <div class="max-w-[720px] mx-auto px-6">
-        <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10">
-          <h2 class="font-display font-bold text-[clamp(22px,4vw,28px)] tracking-[-0.02em] text-white mb-4">
-            Ready to Work with OKAD?
-          </h2>
-          <p class="text-[17px] text-white/60 leading-[1.55] mb-3">
-            We are always expanding our creator network. Whether you are an experienced UGC creator looking for consistent work or just getting started and want guidance, book a call or drop us an email.
-          </p>
-          <p class="text-[15px] text-white/40 mb-8">
-            We will review your portfolio, share feedback, and discuss how we can work together on upcoming campaigns.
-          </p>
-          <div class="flex flex-wrap gap-2.5 mb-6">
-            <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 bg-lime text-ink text-[13px] font-semibold rounded-full hover:bg-[#b8e537] transition-colors no-underline">
-              Book a Call &rarr;
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "Types of UGC Jobs", href: "#job-types" },
+            { num: "03", text: "Where to Find Jobs", href: "#where" },
+            { num: "04", text: "How to Apply", href: "#apply" },
+            { num: "05", text: "What Brands Evaluate", href: "#evaluate" },
+            { num: "06", text: "Pay Models & Rates", href: "#pay" },
+            { num: "07", text: "From Gigs to Recurring Revenue", href: "#recurring" },
+            { num: "08", text: "Red Flags to Watch For", href: "#red-flags" },
+            { num: "09", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
             </a>
-            <a href="mailto:olga@okad.agency" class="inline-flex items-center px-5 py-2.5 bg-white text-ink text-[13px] font-semibold rounded-full hover:bg-border transition-colors no-underline">
-              Email Us
-            </a>
-          </div>
-          <div class="space-y-1.5">
-            <p class="text-[13px] text-white/40">Email: <a href="mailto:olga@okad.agency" class="text-white hover:text-accent transition-colors no-underline">olga@okad.agency</a></p>
-            <p class="text-[13px] text-white/40">Calendly: <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition-colors no-underline">Book a 20-min intro call</a></p>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The UGC job market in 2026</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Demand for UGC creators has outpaced supply &mdash; brands are shifting budgets from studio ads</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Follower count is irrelevant &mdash; brands hire for production skill and reliability</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Active creators earn $3K&ndash;$15K+/month across multiple brand relationships</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The demand for user-generated content has outpaced the supply of reliable creators. Brands are allocating larger portions of their ad budgets to UGC because it outperforms polished studio ads in click-through rate, cost per acquisition, and viewer retention. That shift has created a genuine job market for people who can produce authentic short-form video on a smartphone.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">But knowing that jobs exist is not the same as knowing where to find them, how to position yourself, or what separates the creators who get hired from those who do not. We run UGC campaigns daily at OKAD, and we see both sides of the equation: the brands struggling to find the right creators, and the creators struggling to land their first paid brief. This guide bridges that gap.</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Pay range:</strong> $150&ndash;$500 per video or $1K&ndash;$5K/mo retainer</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Followers:</strong> not required &mdash; production skill is what matters</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Equipment:</strong> smartphone, ring light, tripod &mdash; under $100 total</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Time to first gig:</strong> 2&ndash;4 weeks with active applications</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 Types of UGC Jobs -->
+    <section class="guide-section" id="job-types">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Job Types</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The main types of UGC jobs available right now</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Paid ad creative &mdash; the largest segment of the market</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Organic social, whitelisted ads, product reviews, B2B/SaaS</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each type has different pay, requirements, and client expectations</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">UGC is not one thing. The term covers several distinct job types, each with different requirements, pay structures, and client expectations. Understanding these categories helps you target opportunities that match your skills.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Paid ad creative production</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is the largest segment of the UGC job market. Brands need short-form video ads for Meta, TikTok, YouTube Shorts, and Pinterest. The content runs as paid advertising under the brand's account, not yours. You produce the video, hand it over, and the brand handles distribution. Typical deliverables are 15- to 60-second clips with a strong opening hook, a product demonstration or testimonial, and a clear call to action.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Organic social content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Some brands hire creators to produce content for their own social channels rather than for paid ads. The style is similar, but the objective shifts from immediate conversion to audience building and engagement. You might create a series of TikToks or Instagram Reels that go on the brand's profile. These roles often pay less per video but come with higher volume and more creative freedom.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Whitelisted ad content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Whitelisting sits between organic and paid. The brand runs your content as an ad through your social account (or a dedicated handle), so it appears as a creator post rather than a brand ad. This format typically pays more because the brand is leveraging your identity, not just your production skills. Expect usage fees on top of the base production rate.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Product review and testimonial video</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Brands in e-commerce, supplements, beauty, and consumer electronics frequently need authentic-looking reviews. These videos appear on product pages, landing pages, and retargeting ads. The format is straightforward: you receive the product, use it, and record your genuine reaction. Production quality expectations are deliberately low because the content needs to feel real.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">B2B and SaaS UGC</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">An underserved niche with growing demand. Software companies, fintech startups, and HR platforms need screen-recording walkthroughs, voiceover explainers, and talking-head testimonials. If you can speak naturally about technology and record a clean screen walkthrough, this niche pays well and has far less competition than beauty or lifestyle.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Job Type</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Typical Deliverable</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Competition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Paid ad creative</td><td class="px-4 py-2.5 border-b border-border text-ink-2">15&ndash;60s video with hook + CTA</td><td class="px-4 py-2.5 border-b border-border text-ink-2">High &mdash; largest segment</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Organic social</td><td class="px-4 py-2.5 border-b border-border text-ink-2">TikToks / Reels for brand profile</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Moderate</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Whitelisted ads</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Ad run through your account</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Moderate &mdash; pays more</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Product reviews</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Authentic testimonial video</td><td class="px-4 py-2.5 border-b border-border text-ink-2">High in beauty/lifestyle</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">B2B / SaaS</td><td class="px-4 py-2.5 text-ink-2">Screen recordings, explainers</td><td class="px-4 py-2.5 text-ink-2">Low &mdash; underserved niche</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Where to Find Jobs -->
+    <section class="guide-section" id="where">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Where to Find Jobs</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Where to actually find UGC jobs</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The job market is fragmented &mdash; cover multiple channels simultaneously</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator marketplaces, agency networks, and direct outreach are the most reliable</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand career pages are overlooked and have less competition</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">We see creators waste weeks applying in the wrong places. The UGC job market is fragmented, so your strategy should cover multiple channels simultaneously. Here is where legitimate work comes from, ranked roughly by reliability.</p>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator platforms and marketplaces.</strong> Dedicated UGC marketplaces like Collabstr, Billo, and Insense connect brands with creators through a structured process. Create profiles on several. A strong profile with a demo reel and niche tags makes you discoverable when brands search for specific criteria.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Agency creator networks.</strong> Agencies like OKAD maintain vetted rosters of reliable creators. Getting into a network means you skip the application queue &mdash; the agency matches you with relevant briefs proactively. Volume and consistency often make up for the margin.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Job boards and freelance platforms.</strong> Upwork, Fiverr, and LinkedIn have seen a surge in UGC postings. Search for "UGC creator," "user generated content," or "short-form video." Quality varies, so vet each client before committing.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Direct brand outreach.</strong> The highest-paying relationships often start with a cold pitch. Record a sample video unprompted for a brand you already use, then send it with a short message. Lower response rate, but longer-lasting and higher-paying relationships.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Social media communities.</strong> Active UGC communities on Reddit (r/UGCcreators), Twitter/X, and private Discord servers share open briefs. Hashtags like #UGCjobs and #UGCcreator surface postings. Best as a supplement, not a primary strategy.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Brand career pages directly.</strong> Some DTC and e-commerce brands post creator roles under "Careers" or "Creator Program." Check the footer of brands you admire for a "Work with Us" link. Often overlooked, which means less competition.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 04 How to Apply -->
+    <section class="guide-section" id="apply">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; How to Apply</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to apply so brands actually respond</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Lead with your work, not your bio &mdash; link to 3&ndash;5 best videos first</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Include a spec video for the brand you are pitching</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">State rates upfront and keep the message to 3&ndash;5 sentences</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">We review creator applications every week. Most are forgettable. The ones that get our attention share a few characteristics.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Lead with your work, not your bio</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Open with a link to your best 3&ndash;5 videos, ideally ones relevant to the brand's niche. A hiring manager will spend under 10 seconds on your application before deciding whether to look deeper. If the first thing they see is a paragraph about your passion for content creation, you have already lost them.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Show niche relevance</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you are applying for a beauty brand, your portfolio should feature beauty content. If it is a tech product, show screen recordings or talking-head explainers. Generic "I can create content for any brand" pitches do not convert. Brands want evidence that you understand their category.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Include a sample or spec video</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Nothing proves your value faster than an unsolicited sample made specifically for the brand you are pitching. Even a 15-second clip using the brand's product shows initiative and gives the hiring manager something concrete to evaluate. This single step puts you ahead of 90% of applicants.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">State your rates upfront</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Ambiguity about pricing wastes time for both sides. Include your per-video rate, what is included (raw footage, edited video, revisions), and any additional fees for usage rights or whitelisting. Brands appreciate creators who make the business side straightforward.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Keep the message short</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Three to five sentences plus a portfolio link. That is all. Brands hiring UGC creators are evaluating dozens of applications. Respect their time and your work will speak for itself.</p>
+      </div>
+    </section>
+
+    <!-- 05 What Brands Evaluate -->
+    <section class="guide-section" id="evaluate">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; What Brands Evaluate</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What brands actually evaluate when hiring creators</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Hook quality in the first 1&ndash;3 seconds is the single biggest factor</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Authenticity, brief adherence, and turnaround reliability matter more than gear</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Poor communication is the #1 reason agencies stop working with talented creators</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Understanding what sits on the other side of the hiring decision gives you a real advantage. Here is what we look at when selecting creators for campaigns.</p>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Hook quality.</strong> The first 1&ndash;3 seconds of every video determine whether the ad performs. We evaluate whether a creator understands scroll-stopping openings. Can they grab attention with a question, a visual surprise, or a bold claim? Creators who demonstrate strong hook instincts get hired repeatedly because this single skill drives campaign performance more than anything else.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Authenticity and naturalness.</strong> UGC works because it does not look or feel like advertising. If a creator sounds like they are reading a teleprompter or performing for a camera, the content defeats its own purpose. We look for people who speak the way they would talk to a friend, with genuine energy and natural cadence.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Technical baseline.</strong> You do not need cinema-quality footage. You do need stable framing, consistent lighting, and clean audio. A well-lit smartphone video with clear sound beats a DSLR recording with echo and harsh shadows.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Brief adherence.</strong> Creativity within constraints is the skill that separates professionals from hobbyists. When a brief specifies three talking points and a CTA, we need all three talking points and the CTA. Improvisation is welcome. Ignoring the brief is not.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Turnaround reliability.</strong> Meeting deadlines matters more than most creators realize. A good video delivered on time is worth more than a great video delivered late. Campaign schedules are tight, and delays cascade across the entire production pipeline.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Communication responsiveness.</strong> We work across time zones and manage multiple creators simultaneously. A creator who responds within a few hours, asks clarifying questions before filming, and flags issues proactively is dramatically easier to work with. Poor communication is the single most common reason we stop working with otherwise talented creators.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Want to join the OKAD creator network?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We are always expanding our roster. Whether you are experienced or just getting started, send us your portfolio and we will match you with relevant briefs.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCreator} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Join creator network &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 06 Pay Models -->
+    <section class="guide-section" id="pay">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Pay Models</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How UGC pay works: models, rates, and what affects your earnings</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Per-video flat fee ($150&ndash;$500) is the most common starting model</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Volume programs, retainers, and usage licensing add earning layers</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Niche expertise, speed, and proven performance push rates higher</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">UGC compensation is not standardized, but three dominant pay structures cover the majority of arrangements. Knowing these models helps you evaluate offers and negotiate effectively.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Pay Model</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Typical Range</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Per-video flat fee</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$150&ndash;$500</td><td class="px-4 py-2.5 border-b border-border text-ink-2">One-off campaigns, whitelabel ads, product launches</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Volume program</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$10&ndash;$25/video + bonuses</td><td class="px-4 py-2.5 border-b border-border text-ink-2">High-output creators prioritizing quantity and consistency</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Monthly retainer</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$1,000&ndash;$5,000/month</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Ongoing partnerships with agreed deliverable counts</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Usage licensing</td><td class="px-4 py-2.5 text-ink-2">20&ndash;100% on top of base</td><td class="px-4 py-2.5 text-ink-2">Whitelisting, extended ad runs, multi-platform distribution</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Flat fee per video</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most common model for creators starting out. You agree on a price per deliverable, produce the content, and get paid on delivery. Rates vary widely by niche, creator experience, and whether the video includes editing. Raw footage-only deliverables sit at the lower end. Fully edited, captioned videos with multiple hook variations command premium rates.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Volume programs</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Volume programs trade higher per-unit rates for guaranteed volume. These programs work well for creators who can produce quickly and consistently. The per-video rate is lower, but performance bonuses tied to views, clicks, or conversions can substantially increase total earnings. This model rewards speed and efficiency.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Retainers</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Retainers provide income predictability. A brand pays a fixed monthly amount for an agreed number of videos. This model typically emerges after you have completed several successful projects with a brand. From the creator side, retainers reduce the hustle of constantly finding new work. From the brand side, they guarantee access to a proven creator without competing for availability.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Usage licensing</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Usage licensing is a separate revenue layer. When a brand wants to run your content as paid ads, use your likeness in marketing materials, or distribute across multiple platforms, usage rights should carry an additional fee. Standard practice is a 30-day usage window included in the base rate, with extensions priced monthly. Negotiate this upfront to avoid disagreements later.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Factors that push rates higher</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Niche expertise</strong> &mdash; regulated or technical industries (finance, healthcare, SaaS) command premiums because fewer creators can speak credibly about these subjects</li>
+          <li><strong>Proven performance data</strong> &mdash; if your content drove a 3x ROAS for a similar brand, that result justifies a higher rate</li>
+          <li><strong>Speed and reliability</strong> &mdash; brands pay more for creators who deliver on schedule without extensive revisions</li>
+          <li><strong>Multi-format capability</strong> &mdash; delivering talking head, B-roll, screen recordings, and edited compilations reduces the number of creators the brand needs</li>
+          <li><strong>Whitelisting willingness</strong> &mdash; allowing brands to run ads through your account adds value and should come with a corresponding rate increase</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 07 From Gigs to Recurring Revenue -->
+    <section class="guide-section" id="recurring">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Recurring Revenue</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Turning one-off gigs into recurring revenue</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Over-deliver on the first project &mdash; it is an audition for future work</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Ask for performance feedback and propose the next project proactively</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Diversify across 3&ndash;5 active brands for income stability</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The difference between creators who earn sporadically and those who build consistent income is not talent alone. It is the ability to convert a single project into an ongoing relationship. Here is how we see the best creators do it.</p>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Over-deliver on the first project.</strong> Your initial deliverable is an audition for future work. Include an extra hook variation the brand did not ask for. Deliver a day early. Add a note suggesting a content angle for their next campaign. These small gestures signal professionalism and make you memorable.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Ask for performance feedback.</strong> After the campaign runs for a week or two, follow up and ask how the content performed. This shows the brand you care about results, and it gives you data to improve your work and justify your rates to future clients. Most creators never ask.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Propose the next project before they do.</strong> If you created a product launch video and it performed well, suggest a follow-up: a comparison video, a seasonal angle, a "one month later" update. Making the next step easy for brands increases the chance they say yes. You transition from vendor to creative partner.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Build a content calendar together.</strong> Once you have two or three successful projects, suggest a monthly arrangement. Offer a slight discount for commitment in exchange for guaranteed volume. This is how per-video relationships evolve into retainers.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Diversify across 3&ndash;5 active brands.</strong> Relying on a single client is risky regardless of how strong the relationship is. Budgets shift, campaigns end, and priorities change. The creators who earn the most consistently always have several active brand relationships running in parallel.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Treat it like a business, not a side hustle.</strong> Track your projects, invoices, and client communications. Use contracts for every engagement, even small ones. Respond promptly to messages. Set clear expectations about timelines, revisions, and usage rights. Professionalism compounds over time.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 08 Red Flags -->
+    <section class="guide-section" id="red-flags">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Red Flags</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Red flags to watch for</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Free test content requests are a warning sign &mdash; paid tests exist at $50&ndash;$150</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every project needs a contract covering deliverables, payment, revisions, and usage</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Rigid word-for-word scripts produce stiff content that defeats the purpose of UGC</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Not every job posting deserves your time. Here are warning signs we advise our own creators to look for.</p>
+
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Free test content requests</strong> &mdash; legitimate paid tests exist at $50&ndash;$150. A brand that wants free videos "to see if you are a fit" may simply want free content. Always get paid for your work, even during evaluation.</li>
+          <li><strong>Vague or unlimited usage rights</strong> &mdash; your contract should specify exactly where content will be used, on which platforms, and for how long. Perpetual rights across all channels should cost significantly more than a 30-day single-platform license.</li>
+          <li><strong>No written agreement</strong> &mdash; every project needs a contract covering deliverables, payment terms, revision limits, and usage rights. A brand unwilling to put terms in writing is a brand that may not honor those terms.</li>
+          <li><strong>Payment delays or vague terms</strong> &mdash; know exactly when and how you will be paid before you start filming. Net-30 is standard. Anything beyond Net-45 should raise questions. "We pay when the campaign launches" is not a payment term.</li>
+          <li><strong>Rigid word-for-word scripts</strong> &mdash; UGC performs because it feels natural. A brand that insists you read a script verbatim will get stiff, underperforming content and may blame you for the results. Good briefs provide talking points and guardrails, not teleprompter text.</li>
+        </ul>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailCreator} class="text-ink hover:text-accent transition-colors no-underline">OKAD protects creators with clear contracts</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Every brief in our network includes defined deliverables, payment terms, revision limits, and usage rights. No surprises, no vague terms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "Do I need a large following to land UGC jobs?", a: "No. Follower count is irrelevant for the vast majority of UGC work. Brands hire you for production skill, on-camera presence, and the ability to create content that looks native to social feeds. Many of the creators in our network have under 1,000 followers on their personal accounts. What matters is your portfolio and your reliability." },
+          { q: "How much can I realistically earn per month?", a: "Active UGC creators who work across multiple brands typically earn between $3,000 and $15,000 per month. The range depends on your production speed, niche, rate per video, and number of active clients. Creators combining per-video work with volume programs and one or two retainers tend to earn the most consistently. Income scales with reliability and the number of brand relationships you maintain." },
+          { q: "What equipment do I need to get started?", a: "A modern smartphone with a decent camera, a ring light or window for natural lighting, a phone tripod for stable footage, a quiet room for clean audio, and a free editing app like CapCut. The total investment is under $100. Brands specifically want content that looks authentic, not studio-produced. Over-investing in gear early on can actually work against you by making your content look too polished." },
+          { q: "How long does it take to land the first paid gig?", a: "With a solid portfolio of 5-10 sample videos and active applications across multiple channels, most creators land their first paid project within 2-4 weeks. The timeline shortens significantly if you create spec videos for specific brands and reach out directly. Creators who join an agency network or marketplace often get matched faster because the platform handles discovery." },
+          { q: "Should I specialize in a niche or stay general?", a: "Start general, specialize as you grow. Your first 10-20 projects will teach you which niches suit your personality and production style. Once you identify a category where your content consistently performs well, lean into it. Specialists command higher rates because brands value proven experience in their specific market." },
+          { q: "What is the difference between UGC and influencer marketing?", a: "As a UGC creator, you are paid for content production, not audience access. The content you produce is owned or licensed by the brand and distributed through their channels and ad accounts. Influencers are paid to post content on their own accounts, leveraging their follower base for reach. UGC does not require an audience. It requires production skill." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to work with OKAD?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Whether you are an experienced UGC creator looking for consistent work or just getting started and want guidance, we will review your portfolio, share feedback, and discuss upcoming campaigns.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCreator} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Join creator network &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on OKAD's direct experience hiring and managing hundreds of UGC creators across dozens of campaigns. Pay ranges, timelines, and evaluation criteria reflect observed market conditions as of September 2026. Individual results depend on niche, production quality, application strategy, and market dynamics. Rates and structures are directional, not guarantees.</p>
       </div>
     </section>
 
   </main>
   <Footer />
 </Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

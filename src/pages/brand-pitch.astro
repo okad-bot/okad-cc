@@ -2,421 +2,691 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+const emailPitch = "mailto:olga@okad.agency?subject=UGC%20brand%20outreach%20%E2%80%94%20tell%20us%20about%20your%20goals";
+const emailGeneral = "mailto:olga@okad.agency?subject=UGC%20outreach%20%E2%80%94%20general%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
 ---
 
 <Layout
-  title="How to Pitch Brands as a UGC Creator | OKAD"
+  title="How to Pitch Brands as a UGC Creator — The Full Playbook | OKAD"
   description="A complete guide to pitching brands as a UGC creator: pre-pitch preparation, finding decision-makers, cold email templates, DM scripts, follow-up sequences, rate negotiation, and common mistakes to avoid."
 >
   <Header />
   <main>
 
     <!-- Hero -->
-    <section class="pt-20 md:pt-24">
-      <div class="max-w-[720px] mx-auto px-6 pt-12 md:pt-16 pb-8">
-        <a href="/" class="inline-flex items-center gap-1 text-[13px] text-muted hover:text-accent transition-colors no-underline mb-6">
-          &larr; Back to OKAD
-        </a>
-        <div class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium uppercase tracking-[.06em] text-ink-2 mb-4">
-          <strong class="text-accent font-semibold">#OUTREACH</strong>
-          <span class="text-muted-2">&middot;</span>
-          <strong class="text-accent font-semibold">#UGC</strong>
-          <span class="text-muted-2">&middot;</span>
-          <strong class="text-accent font-semibold">#BRAND_DEALS</strong>
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
         </div>
-        <h1 class="font-display font-bold text-[clamp(28px,5vw,42px)] leading-[1.12] tracking-[-0.03em] mb-5 text-ink">
-          How to Pitch Brands as a UGC Creator: The Full Playbook
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          How to Pitch Brands: <span class="text-accent">The Full Playbook</span>
         </h1>
-        <p class="text-[15px] text-muted-2 mb-8">By OKAD Agency &middot; 20 min read</p>
-      </div>
-    </section>
-
-    <!-- Article Body -->
-    <section class="pb-16 md:pb-20">
-      <div class="max-w-[720px] mx-auto px-6">
-        <div class="space-y-6 text-[16px] text-ink-2 leading-[1.75]">
-
-          <p>Brand deals do not arrive in your inbox because you exist on the internet. Creators with hundreds of thousands of followers sit idle, refreshing their DMs, while lesser-known creators with sharp outreach skills book three paid projects a month. The difference is never talent alone &mdash; it is whether you treat brand outreach as a repeatable system or leave it to chance.</p>
-
-          <p>At OKAD, we manage creator networks and produce UGC campaigns for brands across e-commerce, SaaS, food and beverage, and lifestyle verticals. We have seen what lands in marketing managers' inboxes &mdash; and what gets deleted in under two seconds. This guide distills everything we have learned into a step-by-step process you can start running today, whether you have fifty followers or fifty thousand.</p>
-
-          <p>What follows covers the entire arc: preparing before you send a single message, identifying the right person at each company, crafting emails and DMs that earn responses, building a follow-up cadence that converts silence into conversations, negotiating rates without leaving money behind, timing your outreach for maximum impact, and sidestepping the errors that sink most creators' pipelines.</p>
-
-          <!-- Section 1: Pre-Pitch Prep -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Pre-Pitch Preparation: What to Do Before You Contact Anyone</h2>
-
-          <p>Every brand contact you reach out to will do the same thing within ten seconds of opening your message: click whatever link you included and decide if you are credible. If that link leads to a disorganized Google Drive folder, a personal TikTok with no clear positioning, or worse, nothing at all &mdash; the conversation is over before it started.</p>
-
-          <p><strong class="text-ink">Build a single, clean portfolio link.</strong> This should contain four to six of your strongest UGC clips or short-form videos, a brief description of the niches and product categories you have created for (paid or unpaid work both count), a clear way to request your rates, and your contact information. Keep it focused &mdash; a brand scanning your work does not want to scroll through forty random clips. They want to see four great ones that feel relevant to what they sell.</p>
-
-          <p><strong class="text-ink">Define your content positioning before you write a word of outreach.</strong> Can you articulate in one sentence what kind of content you make, who it resonates with, and what makes your approach distinct? Brands receive dozens of vague "I'd love to collab" messages daily. The creators who stand out are the ones who can say: "I produce unscripted product demos for wellness brands, filmed in natural light with a conversational tone that performs well in paid social." That specificity signals professionalism.</p>
-
-          <p><strong class="text-ink">Gather proof points.</strong> If previous content has driven measurable results &mdash; views, saves, click-through rates, conversion data &mdash; note those numbers. If you have worked with any recognizable brand, even on a small scale, make that visible. Social proof compresses the trust-building process from paragraphs to a single line.</p>
-
-          <p><strong class="text-ink">Set up a professional email address.</strong> Sending outreach from a Gmail account with your birth year in the handle undercuts everything else. A custom domain is ideal; a clean, name-based address is the minimum.</p>
-
-          <p>If your portfolio and positioning are not ready, stop here and build them first. Every template in this guide assumes you have a polished link to share.</p>
-
-          <!-- Section 2: Finding Contacts -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Finding the Right Contact: How to Reach the Person Who Can Say Yes</h2>
-
-          <p>Sending a pitch to a generic "info@" or "hello@" address is the outreach equivalent of tossing a message in a bottle into the ocean. Your email needs to reach someone with the authority and context to act on it &mdash; typically a marketing manager, a brand partnerships lead, or, at smaller companies, the founder themselves.</p>
-
-          <p><strong class="text-ink">Start with social bios.</strong> Many DTC and e-commerce brands list a dedicated partnerships or press email directly in their Instagram or TikTok bio. This takes thirty seconds to check and is often the most direct route.</p>
-
-          <p><strong class="text-ink">Search LinkedIn strategically.</strong> Look up the company name combined with titles like "marketing manager," "influencer partnerships," "content lead," or "brand manager." At smaller companies with under fifty employees, one person typically manages the entire creator program. That individual is your target.</p>
-
-          <p><strong class="text-ink">Check the company website.</strong> About pages, team pages, and career listings often reveal names and roles. Once you have a name, most companies follow a predictable email format: first@company.com, first.last@company.com, or firstinitial.last@company.com. Test the most common pattern.</p>
-
-          <p><strong class="text-ink">Look at tagged collaborations.</strong> If another creator has posted sponsored content for the brand, check whether they tagged a specific person or thanked someone by name in comments. That person likely manages creator relationships.</p>
-
-          <p><strong class="text-ink">Use DMs only as a last resort.</strong> Direct messages on social platforms can work as an opening move, but they get buried in request folders and lack the formality needed for discussing budgets and contracts. When you do open via DM, move the conversation to email as quickly as possible.</p>
-
-          <p>Finding the right contact is the most labor-intensive part of outreach. At OKAD, when we run creator campaigns, this research phase is where most of the upfront time goes &mdash; because reaching the right person is worth more than perfecting the message sent to the wrong one.</p>
-
-          <!-- Section 3: Email Templates -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Cold Email Templates That Earn Responses</h2>
-
-          <p>A pitch that works answers four questions within the first few lines, without making the reader dig for the answers:</p>
-
-          <ul class="list-disc ml-6 space-y-2">
-            <li><strong class="text-ink">Why are you reaching out to this specific brand?</strong> Proof that the message is not copy-pasted.</li>
-            <li><strong class="text-ink">What do you create?</strong> Your niche, format, and platform in one sentence.</li>
-            <li><strong class="text-ink">What are you proposing?</strong> Paid content, affiliate arrangement, whitelisting rights &mdash; name the structure.</li>
-            <li><strong class="text-ink">What is the next step?</strong> One simple action, not a multi-paragraph negotiation.</li>
-          </ul>
-
-          <p>Every template below follows a five-part skeleton: a specific opener, a brief introduction of who you are, a statement of fit, a concrete offer, and a low-friction ask. Adapt the bracketed sections to each brand. Keep every message under 150 words.</p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">Template 1: The Standard Cold Pitch</h3>
-          <p>Use this as your default when reaching out to a brand you have no prior relationship with.</p>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              <strong class="text-ink">Subject:</strong> Content concept for [Brand]<br><br>
-              Hi [Name],<br><br>
-              I came across [Brand] through [specific detail: a recent product drop, an ad I saw running on Meta, something genuine]. The way you position [product/category] stood out to me.<br><br>
-              I produce short-form UGC in [your niche] &mdash; [one-line description of your style, e.g., "fast-paced product walkthroughs with a casual, unscripted feel"]. I think there is a natural overlap between what I create and what your audience responds to.<br><br>
-              I would love to put together a paid content package for [Brand] &mdash; a few short videos designed for your paid ads or organic feed. My portfolio is here: [link].<br><br>
-              Happy to share rates and turnaround details if this is of interest.<br><br>
-              Best,<br>
-              [Your Name]<br>
-              [Portfolio link] | [Social handle]
-            </p>
-          </blockquote>
-
-          <p><strong class="text-ink">Why this structure works:</strong> the opener proves relevance, the deliverable is named explicitly, and the call to action requires only a yes or no. There is nothing to decode.</p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">Template 2: The Existing Customer Angle</h3>
-          <p>This is the highest-converting pitch format &mdash; use it whenever you genuinely use the product.</p>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              <strong class="text-ink">Subject:</strong> Already using [Product] &mdash; content partnership idea<br><br>
-              Hi [Name],<br><br>
-              I have been a genuine [Product] customer for [timeframe], and I consistently find myself creating content around it organically. It felt like the right time to reach out and see if there is an opportunity to formalize that into a paid collaboration.<br><br>
-              I create [niche] UGC &mdash; portfolio here: [link]. I would love to develop a small content package for [Brand] built around the same authentic angle I already take with your product, just with a proper brief and structure behind it.<br><br>
-              Can I send over a few content concepts and my rates?<br><br>
-              Thanks,<br>
-              [Your Name]
-            </p>
-          </blockquote>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">Template 3: The Paid Media Pitch</h3>
-          <p>Use this when you want to position your content specifically for the brand's advertising campaigns.</p>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              <strong class="text-ink">Subject:</strong> Ad creative for [Brand] &mdash; UGC creator<br><br>
-              Hi [Name],<br><br>
-              I noticed [Brand] is running creator-style ads across Meta and TikTok &mdash; that is exactly the format I specialize in. Portfolio here: [link].<br><br>
-              I would like to propose a small batch of UGC videos engineered specifically for paid performance &mdash; hook-driven openings, product demos, or testimonial-style content, depending on what fits your current campaign goals.<br><br>
-              Usage rights for paid social can be included in the package. Let me know if you would like a rate breakdown.<br><br>
-              Best,<br>
-              [Your Name]
-            </p>
-          </blockquote>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">Template 4: The Revenue-Share Proposal</h3>
-          <p>Effective for brands that may not have large upfront budgets but offer ongoing earning potential.</p>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              <strong class="text-ink">Subject:</strong> Performance partnership &mdash; [Your Name] x [Brand]<br><br>
-              Hi [Name],<br><br>
-              I produce UGC in [niche] and believe there is genuine audience overlap between my content and [Brand]'s customer base. Instead of a flat-fee project, I would like to explore a commission-based or affiliate arrangement &mdash; I create content, drive tracked sales through a code or link, and we both benefit from the performance.<br><br>
-              Portfolio: [link]<br><br>
-              If you already run an affiliate program, I would love to be considered. If not, I am happy to discuss what that structure could look like.<br><br>
-              Thanks,<br>
-              [Your Name]
-            </p>
-          </blockquote>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">Template 5: The Past-Client Re-engagement</h3>
-          <p>Former clients represent your warmest pipeline. Do not let them forget you.</p>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              <strong class="text-ink">Subject:</strong> Round two? New content concepts for [Brand]<br><br>
-              Hi [Name],<br><br>
-              Working together on [previous project] was genuinely one of my highlights this quarter. Since then, I have been experimenting with [new format/trend/angle], and I think it could translate really well for [Brand].<br><br>
-              Would you be open to another collaboration? I can send a few concept ideas whenever works.<br><br>
-              Best,<br>
-              [Your Name]
-            </p>
-          </blockquote>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">Template 6: The Open-Call Application</h3>
-          <p>When a brand publicly announces they are seeking creators, use a focused, efficient response.</p>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              <strong class="text-ink">Subject:</strong> Applying &mdash; [Your Name], UGC creator for [Brand/Campaign]<br><br>
-              Hi [Name],<br><br>
-              Saw you are looking for UGC creators for [campaign/program]. I create [niche] content and believe my approach is a strong match &mdash; portfolio and samples here: [link].<br><br>
-              Happy to share rates or jump on a brief call if helpful. Would love to be part of this.<br><br>
-              Best,<br>
-              [Your Name]
-            </p>
-          </blockquote>
-
-          <!-- Section 4: DM Scripts -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">DM Scripts: When Social Messages Are Your Only Door</h2>
-
-          <p>Direct messages should be treated as a bridge to email, not as the negotiation venue. DM threads get buried, lack threading, and feel informal in ways that make discussing budgets and contracts awkward. That said, some brands &mdash; particularly founder-led or very small companies &mdash; operate DM-first, and reaching them any other way is impractical.</p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">Short DM for Instagram or TikTok</h3>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              Hey [Name] &mdash; I create [niche] UGC content and think there could be a solid fit for paid content for [Brand]. Here is my portfolio: [link]. Happy to share more details here or over email if you have one. Let me know!
-            </p>
-          </blockquote>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">DM After Engaging With Their Content</h3>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              Hey! Been following your content for a while &mdash; your [specific post/campaign] really caught my attention. I produce similar style UGC and would love to create something for [Brand]. Portfolio: [link]. Is email the best way to discuss?
-            </p>
-          </blockquote>
-
-          <p><strong class="text-ink">The rule:</strong> never negotiate scope, rates, or deliverables inside a DM thread. Use the message to open the door, establish interest, and transition to email where the real conversation can happen properly.</p>
-
-          <!-- Section 5: Follow-Up Sequences -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Follow-Up Sequences: Converting Silence Into Conversations</h2>
-
-          <p>The majority of creators send a single outreach message, receive no reply, and conclude the brand is not interested. This is almost always wrong. Marketing teams are overwhelmed, inboxes are crowded, and your email likely arrived during a sprint, a product launch, or simply a busy Tuesday. Following up is not pushy &mdash; it is professional. What crosses the line is following up five times in four days.</p>
-
-          <p>A clean three-touch follow-up sequence, properly spaced, will recover a significant share of opportunities that would otherwise evaporate.</p>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">Follow-Up 1: The Gentle Resurface (3-4 days after initial pitch)</h3>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              Hi [Name],<br><br>
-              Wanted to make sure my earlier message did not get lost &mdash; I still think there is a strong alignment between [Brand] and the type of content I create. Portfolio here if it helps: [link].<br><br>
-              Happy to share rates whenever convenient.<br><br>
-              Best,<br>
-              [Your Name]
-            </p>
-          </blockquote>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">Follow-Up 2: Reduce the Barrier (about one week later)</h3>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              Hi [Name],<br><br>
-              One more quick note. If creator content is on your radar right now, I am happy to send rates directly &mdash; no call needed unless that is easier for you.<br><br>
-              And if the timing is not right, completely understood. No hard feelings.<br><br>
-              Best,<br>
-              [Your Name]
-            </p>
-          </blockquote>
-
-          <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] text-ink pt-3">Follow-Up 3: The Graceful Close (final message)</h3>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              Hi [Name],<br><br>
-              Wrapping up on this thread so I am not cluttering your inbox. If a UGC collaboration ever makes sense for [Brand] down the road, I would genuinely love to reconnect.<br><br>
-              All the best,<br>
-              [Your Name]
-            </p>
-          </blockquote>
-
-          <p>Three touches, each separated by several days, is the right rhythm. After the third, move on. The brands that respond will typically do so after touch one or two. The graceful close leaves the door open without burning any goodwill.</p>
-
-          <!-- Section 6: Negotiation -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Rate Negotiation: How to Talk Money Without Underselling</h2>
-
-          <p>More creators lose income by quoting too low than by getting turned down. Setting and communicating your rates with confidence is a skill that compounds over your entire career. Here are the principles we consistently see successful creators follow:</p>
-
-          <ul class="list-disc ml-6 space-y-2">
-            <li><strong class="text-ink">Never respond with "whatever works for you."</strong> This signals uncertainty about your own value and invites the brand to anchor at the lowest number they can justify. Name your price first.</li>
-            <li><strong class="text-ink">Price the content, not your audience size.</strong> Brands paying for UGC are buying production quality, strong hooks, and content that performs in paid media. Your follower count is irrelevant to that equation.</li>
-            <li><strong class="text-ink">Charge a premium for usage rights.</strong> A video the brand will run as a paid ad for three to six months delivers far more value than a single organic post. Your pricing should reflect that difference explicitly.</li>
-            <li><strong class="text-ink">Present packages, not unit prices.</strong> A bundle of three videos typically gets approved faster and pays more per unit than negotiating each video individually. Structure your rates in tiers.</li>
-            <li><strong class="text-ink">Establish a floor rate and do not breach it.</strong> You can always negotiate downward from your initial quote in response to scope adjustments. You can almost never negotiate upward once a number is on the table.</li>
-          </ul>
-
-          <p><strong class="text-ink">When a brand asks for your rates, respond with structure:</strong></p>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              Here is how I typically price content for a brand like [Brand]:<br><br>
-              &bull; 1 UGC video (organic use only): $[X]<br>
-              &bull; 1 UGC video + 90-day paid media usage rights: $[X]<br>
-              &bull; Package of 3 videos + usage: $[X]<br><br>
-              Happy to adjust scope to fit your budget &mdash; let me know what range works and I can put together a tailored proposal.
-            </p>
-          </blockquote>
-
-          <p><strong class="text-ink">If the brand offers product only with no payment:</strong></p>
-
-          <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-            <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
-              Appreciate the offer! I generally work on a paid basis for produced content, but I would be open to a hybrid model &mdash; product plus a flat fee for the deliverables. Would that be something worth exploring?
-            </p>
-          </blockquote>
-
-          <p><strong class="text-ink">If the brand goes quiet after receiving your rates:</strong> send Follow-Up 2 from the sequence above. Silence after a rate request usually indicates a budget mismatch, not a lack of interest. Offering a smaller package at a lower total price often restarts the conversation.</p>
-
-          <!-- Section 7: Timing -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Timing Your Outreach for Maximum Impact</h2>
-
-          <p>When you send matters almost as much as what you send. Based on what we see across hundreds of brand partnerships at OKAD, certain timing patterns consistently outperform others:</p>
-
-          <ul class="list-disc ml-6 space-y-2">
-            <li><strong class="text-ink">Tuesday through Thursday mornings</strong> are the highest-response window for cold email. Monday inboxes are flooded with weekend backlog. Friday afternoons get deferred to the following week and forgotten.</li>
-            <li><strong class="text-ink">Align with product launch cycles.</strong> Brands ramping up for a new release, seasonal campaign, or major sale event are actively looking for content. Pitching two to four weeks before a known launch shows strategic thinking.</li>
-            <li><strong class="text-ink">Q1 and Q3 tend to have more open budgets.</strong> January marks the start of new annual budgets. Late summer is when Q4 holiday campaigns start getting planned. These windows create natural receptivity to new creator partnerships.</li>
-            <li><strong class="text-ink">Avoid sending during major industry events or holidays.</strong> Your email will be buried under a hundred others. Wait a few days and catch them when the noise subsides.</li>
-            <li><strong class="text-ink">Send in the recipient's time zone.</strong> A message arriving at 9:15 AM local time has a dramatically different open rate than one landing at 2:00 AM.</li>
-          </ul>
-
-          <!-- Section 8: Subject Lines -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Subject Lines That Get Opened</h2>
-
-          <p>Your subject line is a filter. If it reads like spam, it gets treated like spam &mdash; either by the recipient's brain or their literal email filters. Clarity beats cleverness every single time.</p>
-
-          <p><strong class="text-ink">Subject lines that perform:</strong></p>
-          <ul class="list-disc ml-6 space-y-1">
-            <li>Content concept for [Brand]</li>
-            <li>Paid partnership idea &mdash; [Your Name]</li>
-            <li>Already a customer of [Product] &mdash; quick idea</li>
-            <li>Applying &mdash; UGC creator for [campaign name]</li>
-            <li>Creator content for your Q4 campaigns</li>
-          </ul>
-
-          <p><strong class="text-ink">Subject lines to avoid:</strong></p>
-          <ul class="list-disc ml-6 space-y-1">
-            <li>EXCITING OPPORTUNITY!!!</li>
-            <li>Collab??</li>
-            <li>URGENT: partnership inquiry</li>
-            <li>Influencer proposal &mdash; please review</li>
-            <li>Hi I love your brand</li>
-          </ul>
-
-          <p>The subject line has one job: earn the open. It does not need to sell the partnership, explain your background, or convey enthusiasm. Short, specific, and professional.</p>
-
-          <!-- Section 9: Common Mistakes -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Common Mistakes That Kill Your Response Rate</h2>
-
-          <p>After reviewing thousands of creator pitches that flow through brand inboxes, these are the errors we see sabotaging otherwise capable creators:</p>
-
-          <ul class="list-disc ml-6 space-y-3">
-            <li><strong class="text-ink">Sending identical messages to dozens of brands without any personalization.</strong> Marketing managers can recognize a mass-blast instantly. One specific sentence about the brand is worth more than three paragraphs of generic flattery.</li>
-            <li><strong class="text-ink">Hiding the ask.</strong> If the reader has to guess what you want, they will not bother. State whether you are proposing paid content, affiliate work, whitelisting, or something else &mdash; explicitly and early.</li>
-            <li><strong class="text-ink">Including no portfolio link, or a broken one.</strong> This single issue kills more promising pitches than any other factor. Test your link before you send. Then test it again on mobile.</li>
-            <li><strong class="text-ink">Leading with follower metrics instead of content quality.</strong> The vast majority of UGC arrangements are content purchases, not reach deals. Brands want strong videos, not subscriber numbers. Frame your pitch around what you produce, not how many people watch your personal feed.</li>
-            <li><strong class="text-ink">Writing an essay when a paragraph would suffice.</strong> Your initial message should generate curiosity and establish credibility, not explain the entire scope of a potential relationship. Save the details for the conversation that follows a positive reply.</li>
-            <li><strong class="text-ink">Giving up after one unanswered email.</strong> Data consistently shows that most positive responses come from the first or second follow-up, not the initial message. Build follow-ups into your system from the start.</li>
-            <li><strong class="text-ink">Going silent after a rate objection.</strong> When a brand pushes back on pricing, many creators simply disappear. A brief, professional counter-proposal &mdash; a smaller package, adjusted usage terms, or a pilot project &mdash; frequently saves deals that seemed dead.</li>
-            <li><strong class="text-ink">Trying to negotiate full deals inside DM threads.</strong> Social media messages are for opening doors. Contracts, rates, and deliverable details belong in email where they can be referenced, forwarded to decision-makers, and tracked properly.</li>
-          </ul>
-
-          <!-- Section 10: Scaling -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Pitching Is a Numbers Game &mdash; Until Your Reputation Takes Over</h2>
-
-          <p>Even a beautifully crafted pitch will not convert every time. Expect single-digit reply rates on cold outreach when you are starting out, gradually improving as your portfolio strengthens and past brand names build social proof. This is precisely why consistency and volume beat a single "perfect" message: the creators landing the most deals are the ones running the most well-targeted outreach, not the ones spending an hour perfecting one email.</p>
-
-          <p>Over time, the equation shifts. Brands start coming to you. Past clients return for repeat projects. Referrals arrive. But that flywheel only starts spinning once you have done the manual work of proving the system, building the relationships, and establishing a track record that speaks for itself.</p>
-
-          <!-- Section 11: FAQ -->
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] text-ink pt-4">Frequently Asked Questions</h2>
-
-          <div class="space-y-6 mt-4">
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">Can I pitch brands if I have almost no followers?</h3>
-              <p>Absolutely. Most UGC deals are content purchases &mdash; brands are buying videos they can run as ads or post on their own channels, not paying for your personal reach. Your portfolio and the quality of your work matter far more than your follower count. Target brands that are specifically seeking UGC creators rather than influencer-style partnerships.</p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">What are the essential components of a UGC pitch email?</h3>
-              <p>Five elements: a personalized opener that demonstrates you researched the brand, a single line about who you are and what you create, a clear statement of fit between your content and their product, a specific proposal (paid UGC, affiliate, ad creative), and one frictionless next step. The entire message should stay under 150 words.</p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">How many pitches should I send each week?</h3>
-              <p>If you are serious about building a consistent deal flow, aim for fifteen to twenty targeted pitches per week. Cold outreach naturally has low response rates, so volume paired with genuine personalization &mdash; not spam &mdash; is what produces a reliable stream of opportunities.</p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">What is the best way to find a brand contact's email?</h3>
-              <p>Check their social media bios for a partnerships email first. Then search LinkedIn for marketing or partnership roles at the company. Then look at the brand's website for team member names and deduce their email format. Direct messages are a last option, not a first choice.</p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">Should I include pricing in my initial outreach?</h3>
-              <p>No. Offer to send rates once the brand expresses interest rather than leading with numbers. This keeps your first message focused on demonstrating fit, and it gives you room to tailor pricing after you understand what the brand actually needs.</p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">How long should I wait between follow-ups?</h3>
-              <p>Three to four days after your initial pitch for the first follow-up, approximately one week after that for the second, and then a final closing message if you still have not heard back. Three total touchpoints is a professional and effective rhythm.</p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">Is email or DM more effective for brand outreach?</h3>
-              <p>Email is almost always more effective for substantive outreach. It signals professionalism, supports proper threading, and is where budgets and contracts get discussed. Use DMs only when you cannot find an email, when the brand is clearly DM-first, or as a light initial touch before transitioning to email.</p>
-            </div>
-
-            <div>
-              <h3 class="font-display font-semibold text-[17px] text-ink mb-2">How do I handle a brand that offers only product, no payment?</h3>
-              <p>It is perfectly acceptable to decline or to counter-propose a hybrid arrangement: product plus a flat fee for the content. Be polite but clear about your professional rates. Some creators accept product-only deals early in their career to build portfolio examples, but this should be a strategic choice rather than a default.</p>
-            </div>
-          </div>
-
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Brand deals do not arrive because you exist on the internet. This guide covers the entire outreach arc &mdash; preparation, cold emails, DM scripts, follow-ups, rate negotiation, and the mistakes that sink most creators' pipelines.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailPitch} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get outreach help &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>6 email templates</span>
+          <span>DM scripts</span>
+          <span>Follow-up cadence</span>
+          <span>Rate negotiation</span>
+          <span>15&ndash;20 pitches/wk</span>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="bg-dark py-16 md:py-20">
-      <div class="max-w-[720px] mx-auto px-6">
-        <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 text-center">
-          <h2 class="font-display font-bold text-[clamp(22px,4vw,30px)] tracking-[-0.02em] text-white mb-4">
-            Need Help Scaling Your Creator Outreach?
-          </h2>
-          <p class="text-[16px] text-white/60 leading-[1.55] mb-6 max-w-[520px] mx-auto">
-            OKAD manages UGC creator networks and produces content campaigns for brands worldwide. Whether you are a creator looking for guidance or a brand seeking high-performing UGC &mdash; let's talk.
-          </p>
-          <div class="flex flex-wrap gap-3 justify-center">
-            <a href="mailto:olga@okad.agency" class="inline-flex items-center px-6 py-3 bg-white text-ink text-[14px] font-semibold rounded-full hover:bg-border transition-colors no-underline">
-              Email Us &rarr;
-            </a>
-            <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-lime text-ink text-[14px] font-semibold rounded-full hover:bg-[#b8e537] transition-colors no-underline">
-              Book a Call &rarr;
-            </a>
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Brand Outreach Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Prepare &amp; Position</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Build a clean portfolio, define your niche, gather proof points, and set up a professional email before you contact anyone.</p>
           </div>
-          <p class="text-[13px] text-white/40 mt-5">
-            Founder: Olga Kad Miller &middot; <a href="mailto:olga@okad.agency" class="text-white/60 hover:text-white transition-colors no-underline">olga@okad.agency</a>
-          </p>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4E7;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Pitch &amp; Follow Up</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Send targeted cold emails and DMs to decision-makers. Run a three-touch follow-up sequence that converts silence into conversations.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Negotiate &amp; Close</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Name your price with confidence, present packages over unit prices, and handle objections professionally to close paid deals.</p>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "Pre-Pitch Preparation", href: "#preparation" },
+            { num: "03", text: "Finding the Right Contact", href: "#contacts" },
+            { num: "04", text: "Cold Email Templates", href: "#emails" },
+            { num: "05", text: "DM Scripts", href: "#dms" },
+            { num: "06", text: "Follow-Up Sequences", href: "#followup" },
+            { num: "07", text: "Rate Negotiation", href: "#negotiation" },
+            { num: "08", text: "Timing Your Outreach", href: "#timing" },
+            { num: "09", text: "Subject Lines", href: "#subjects" },
+            { num: "10", text: "Common Mistakes", href: "#mistakes" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Outreach is a system, not a one-off message</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand deals go to creators with sharp outreach skills, not the largest followings</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Treating outreach as a repeatable system is what separates booked creators from idle ones</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">This guide covers the entire arc from preparation through closing deals</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Brand deals do not arrive in your inbox because you exist on the internet. Creators with hundreds of thousands of followers sit idle, refreshing their DMs, while lesser-known creators with sharp outreach skills book three paid projects a month. The difference is never talent alone &mdash; it is whether you treat brand outreach as a repeatable system or leave it to chance.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">At OKAD, we manage creator networks and produce UGC campaigns for brands across e-commerce, SaaS, food and beverage, and lifestyle verticals. We have seen what lands in marketing managers' inboxes &mdash; and what gets deleted in under two seconds. This guide distills everything we have learned into a step-by-step process you can start running today, whether you have fifty followers or fifty thousand.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">What follows covers the entire arc: preparing before you send a single message, identifying the right person at each company, crafting emails and DMs that earn responses, building a follow-up cadence that converts silence into conversations, negotiating rates without leaving money behind, timing your outreach for maximum impact, and sidestepping the errors that sink most creators' pipelines.</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Target:</strong> 15&ndash;20 personalized pitches per week</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Channels:</strong> cold email (primary), DMs (bridge to email)</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Follow-ups:</strong> 3-touch sequence, spaced 3&ndash;7 days apart</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Templates:</strong> 6 email templates, 2 DM scripts, 3 follow-up messages</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 Pre-Pitch Preparation -->
+    <section class="guide-section" id="preparation">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Preparation</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What to do before you contact anyone</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Build a single, clean portfolio link with 4&ndash;6 of your strongest clips</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Define your content positioning in one sentence before you write any outreach</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">If your portfolio is not ready, stop and build it first</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every brand contact you reach out to will do the same thing within ten seconds of opening your message: click whatever link you included and decide if you are credible. If that link leads to a disorganized Google Drive folder, a personal TikTok with no clear positioning, or worse, nothing at all &mdash; the conversation is over before it started.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The preparation checklist</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Build a single, clean portfolio link.</strong> Include four to six of your strongest UGC clips, a brief description of the niches and product categories you have created for (paid or unpaid work both count), a clear way to request your rates, and your contact information. A brand scanning your work does not want to scroll through forty random clips. They want to see four great ones that feel relevant to what they sell.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Define your content positioning.</strong> Can you articulate in one sentence what kind of content you make, who it resonates with, and what makes your approach distinct? The creators who stand out are the ones who can say: "I produce unscripted product demos for wellness brands, filmed in natural light with a conversational tone that performs well in paid social." That specificity signals professionalism.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Gather proof points.</strong> If previous content has driven measurable results &mdash; views, saves, click-through rates, conversion data &mdash; note those numbers. If you have worked with any recognizable brand, even on a small scale, make that visible. Social proof compresses the trust-building process from paragraphs to a single line.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Set up a professional email address.</strong> Sending outreach from a Gmail account with your birth year in the handle undercuts everything else. A custom domain is ideal; a clean, name-based address is the minimum.</li>
+        </ol>
+
+        <p class="text-ink-2 leading-[1.65] mt-6 mb-4">If your portfolio and positioning are not ready, stop here and build them first. Every template in this guide assumes you have a polished link to share.</p>
+      </div>
+    </section>
+
+    <!-- 03 Finding Contacts -->
+    <section class="guide-section" id="contacts">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Contacts</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to reach the person who can say yes</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Your pitch needs to reach someone with authority: marketing manager, partnerships lead, or founder</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Check social bios, LinkedIn, team pages, and tagged collaborations</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Reaching the right person is worth more than perfecting the wrong message</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Sending a pitch to a generic "info@" or "hello@" address is the outreach equivalent of tossing a message in a bottle into the ocean. Your email needs to reach someone with the authority and context to act on it &mdash; typically a marketing manager, a brand partnerships lead, or, at smaller companies, the founder themselves.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Where to find contacts</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Start with social bios.</strong> Many DTC and e-commerce brands list a dedicated partnerships or press email directly in their Instagram or TikTok bio. This takes thirty seconds to check and is often the most direct route.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Search LinkedIn strategically.</strong> Look up the company name combined with titles like "marketing manager," "influencer partnerships," "content lead," or "brand manager." At smaller companies with under fifty employees, one person typically manages the entire creator program.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Check the company website.</strong> About pages, team pages, and career listings often reveal names and roles. Once you have a name, most companies follow a predictable email format: first@company.com, first.last@company.com, or firstinitial.last@company.com.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Look at tagged collaborations.</strong> If another creator has posted sponsored content for the brand, check whether they tagged a specific person or thanked someone by name in comments. That person likely manages creator relationships.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Use DMs only as a last resort.</strong> Direct messages on social platforms can work as an opening move, but they get buried in request folders and lack the formality needed for discussing budgets and contracts. When you do open via DM, move the conversation to email as quickly as possible.</li>
+        </ol>
+
+        <p class="text-ink-2 leading-[1.65] mt-6 mb-4">Finding the right contact is the most labor-intensive part of outreach. At OKAD, when we run creator campaigns, this research phase is where most of the upfront time goes &mdash; because reaching the right person is worth more than perfecting the message sent to the wrong one.</p>
+      </div>
+    </section>
+
+    <!-- 04 Cold Email Templates -->
+    <section class="guide-section" id="emails">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Email Templates</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Cold emails that earn responses</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Answer four questions in the first few lines: why this brand, what you create, what you propose, next step</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Keep every message under 150 words</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Six templates below cover every common scenario</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A pitch that works answers four questions within the first few lines, without making the reader dig for the answers:</p>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong class="text-ink">Why are you reaching out to this specific brand?</strong> Proof that the message is not copy-pasted.</li>
+          <li><strong class="text-ink">What do you create?</strong> Your niche, format, and platform in one sentence.</li>
+          <li><strong class="text-ink">What are you proposing?</strong> Paid content, affiliate arrangement, whitelisting rights &mdash; name the structure.</li>
+          <li><strong class="text-ink">What is the next step?</strong> One simple action, not a multi-paragraph negotiation.</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every template below follows a five-part skeleton: a specific opener, a brief introduction of who you are, a statement of fit, a concrete offer, and a low-friction ask. Adapt the bracketed sections to each brand.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Template</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Subject line</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Standard Cold Pitch</td><td class="px-4 py-2.5 border-b border-border text-ink-2">No prior relationship</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Content concept for [Brand]</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Existing Customer</td><td class="px-4 py-2.5 border-b border-border text-ink-2">You genuinely use the product</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Already using [Product] &mdash; content partnership idea</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Paid Media Pitch</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand running creator-style ads</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Ad creative for [Brand] &mdash; UGC creator</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Revenue-Share</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brands without upfront budgets</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Performance partnership &mdash; [Your Name] x [Brand]</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Past-Client Re-engagement</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Former clients (warmest pipeline)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Round two? New content concepts for [Brand]</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Open-Call Application</td><td class="px-4 py-2.5 text-ink-2">Brand publicly seeking creators</td><td class="px-4 py-2.5 text-ink-2">Applying &mdash; [Your Name], UGC creator for [Brand]</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Template 1: The Standard Cold Pitch</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Use this as your default when reaching out to a brand you have no prior relationship with.</p>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            <strong class="text-ink">Subject:</strong> Content concept for [Brand]<br><br>
+            Hi [Name],<br><br>
+            I came across [Brand] through [specific detail: a recent product drop, an ad I saw running on Meta, something genuine]. The way you position [product/category] stood out to me.<br><br>
+            I produce short-form UGC in [your niche] &mdash; [one-line description of your style, e.g., "fast-paced product walkthroughs with a casual, unscripted feel"]. I think there is a natural overlap between what I create and what your audience responds to.<br><br>
+            I would love to put together a paid content package for [Brand] &mdash; a few short videos designed for your paid ads or organic feed. My portfolio is here: [link].<br><br>
+            Happy to share rates and turnaround details if this is of interest.<br><br>
+            Best,<br>
+            [Your Name]<br>
+            [Portfolio link] | [Social handle]
+          </p>
+        </blockquote>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong class="text-ink">Why this structure works:</strong> the opener proves relevance, the deliverable is named explicitly, and the call to action requires only a yes or no. There is nothing to decode.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Template 2: The Existing Customer Angle</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is the highest-converting pitch format &mdash; use it whenever you genuinely use the product.</p>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            <strong class="text-ink">Subject:</strong> Already using [Product] &mdash; content partnership idea<br><br>
+            Hi [Name],<br><br>
+            I have been a genuine [Product] customer for [timeframe], and I consistently find myself creating content around it organically. It felt like the right time to reach out and see if there is an opportunity to formalize that into a paid collaboration.<br><br>
+            I create [niche] UGC &mdash; portfolio here: [link]. I would love to develop a small content package for [Brand] built around the same authentic angle I already take with your product, just with a proper brief and structure behind it.<br><br>
+            Can I send over a few content concepts and my rates?<br><br>
+            Thanks,<br>
+            [Your Name]
+          </p>
+        </blockquote>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Template 3: The Paid Media Pitch</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Use this when you want to position your content specifically for the brand's advertising campaigns.</p>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            <strong class="text-ink">Subject:</strong> Ad creative for [Brand] &mdash; UGC creator<br><br>
+            Hi [Name],<br><br>
+            I noticed [Brand] is running creator-style ads across Meta and TikTok &mdash; that is exactly the format I specialize in. Portfolio here: [link].<br><br>
+            I would like to propose a small batch of UGC videos engineered specifically for paid performance &mdash; hook-driven openings, product demos, or testimonial-style content, depending on what fits your current campaign goals.<br><br>
+            Usage rights for paid social can be included in the package. Let me know if you would like a rate breakdown.<br><br>
+            Best,<br>
+            [Your Name]
+          </p>
+        </blockquote>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Template 4: The Revenue-Share Proposal</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Effective for brands that may not have large upfront budgets but offer ongoing earning potential.</p>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            <strong class="text-ink">Subject:</strong> Performance partnership &mdash; [Your Name] x [Brand]<br><br>
+            Hi [Name],<br><br>
+            I produce UGC in [niche] and believe there is genuine audience overlap between my content and [Brand]'s customer base. Instead of a flat-fee project, I would like to explore a commission-based or affiliate arrangement &mdash; I create content, drive tracked sales through a code or link, and we both benefit from the performance.<br><br>
+            Portfolio: [link]<br><br>
+            If you already run an affiliate program, I would love to be considered. If not, I am happy to discuss what that structure could look like.<br><br>
+            Thanks,<br>
+            [Your Name]
+          </p>
+        </blockquote>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Template 5: The Past-Client Re-engagement</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Former clients represent your warmest pipeline. Do not let them forget you.</p>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            <strong class="text-ink">Subject:</strong> Round two? New content concepts for [Brand]<br><br>
+            Hi [Name],<br><br>
+            Working together on [previous project] was genuinely one of my highlights this quarter. Since then, I have been experimenting with [new format/trend/angle], and I think it could translate really well for [Brand].<br><br>
+            Would you be open to another collaboration? I can send a few concept ideas whenever works.<br><br>
+            Best,<br>
+            [Your Name]
+          </p>
+        </blockquote>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Template 6: The Open-Call Application</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">When a brand publicly announces they are seeking creators, use a focused, efficient response.</p>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            <strong class="text-ink">Subject:</strong> Applying &mdash; [Your Name], UGC creator for [Brand/Campaign]<br><br>
+            Hi [Name],<br><br>
+            Saw you are looking for UGC creators for [campaign/program]. I create [niche] content and believe my approach is a strong match &mdash; portfolio and samples here: [link].<br><br>
+            Happy to share rates or jump on a brief call if helpful. Would love to be part of this.<br><br>
+            Best,<br>
+            [Your Name]
+          </p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 05 DM Scripts -->
+    <section class="guide-section" id="dms">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; DM Scripts</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">When social messages are your only door</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">DMs are a bridge to email, not the negotiation venue</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Never negotiate scope, rates, or deliverables inside a DM thread</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Open the door, establish interest, transition to email</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Direct messages should be treated as a bridge to email, not as the negotiation venue. DM threads get buried, lack threading, and feel informal in ways that make discussing budgets and contracts awkward. That said, some brands &mdash; particularly founder-led or very small companies &mdash; operate DM-first, and reaching them any other way is impractical.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Short DM for Instagram or TikTok</h3>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            Hey [Name] &mdash; I create [niche] UGC content and think there could be a solid fit for paid content for [Brand]. Here is my portfolio: [link]. Happy to share more details here or over email if you have one. Let me know!
+          </p>
+        </blockquote>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">DM after engaging with their content</h3>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            Hey! Been following your content for a while &mdash; your [specific post/campaign] really caught my attention. I produce similar style UGC and would love to create something for [Brand]. Portfolio: [link]. Is email the best way to discuss?
+          </p>
+        </blockquote>
+
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong class="text-ink">The rule:</strong> never negotiate scope, rates, or deliverables inside a DM thread. Use the message to open the door, establish interest, and transition to email where the real conversation can happen properly.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need help scaling your creator outreach?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD manages UGC creator networks and produces content campaigns for brands worldwide. Whether you are a creator looking for guidance or a brand seeking high-performing UGC &mdash; let's talk.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailPitch} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get outreach help &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Follow-Up Sequences -->
+    <section class="guide-section" id="followup">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Follow-Ups</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Converting silence into conversations</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most positive responses come from follow-up 1 or 2, not the initial message</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Three touches, spaced 3&ndash;7 days apart, is the right rhythm</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The graceful close leaves the door open without burning goodwill</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The majority of creators send a single outreach message, receive no reply, and conclude the brand is not interested. This is almost always wrong. Marketing teams are overwhelmed, inboxes are crowded, and your email likely arrived during a sprint, a product launch, or simply a busy Tuesday. Following up is not pushy &mdash; it is professional. What crosses the line is following up five times in four days.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A clean three-touch follow-up sequence, properly spaced, will recover a significant share of opportunities that would otherwise evaporate.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Touch</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Timing</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Follow-Up 1</td><td class="px-4 py-2.5 border-b border-border text-ink-2">3&ndash;4 days after pitch</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Gentle resurface &mdash; re-share portfolio</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Follow-Up 2</td><td class="px-4 py-2.5 border-b border-border text-ink-2">~1 week later</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Reduce barrier &mdash; offer to send rates directly</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Follow-Up 3</td><td class="px-4 py-2.5 text-ink-2">Final message</td><td class="px-4 py-2.5 text-ink-2">Graceful close &mdash; leave door open</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Follow-Up 1: The Gentle Resurface</h3>
+        <p class="text-ink-2 leading-[1.65] mb-2">Send 3&ndash;4 days after the initial pitch.</p>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            Hi [Name],<br><br>
+            Wanted to make sure my earlier message did not get lost &mdash; I still think there is a strong alignment between [Brand] and the type of content I create. Portfolio here if it helps: [link].<br><br>
+            Happy to share rates whenever convenient.<br><br>
+            Best,<br>
+            [Your Name]
+          </p>
+        </blockquote>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Follow-Up 2: Reduce the Barrier</h3>
+        <p class="text-ink-2 leading-[1.65] mb-2">Send about one week after Follow-Up 1.</p>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            Hi [Name],<br><br>
+            One more quick note. If creator content is on your radar right now, I am happy to send rates directly &mdash; no call needed unless that is easier for you.<br><br>
+            And if the timing is not right, completely understood. No hard feelings.<br><br>
+            Best,<br>
+            [Your Name]
+          </p>
+        </blockquote>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Follow-Up 3: The Graceful Close</h3>
+        <p class="text-ink-2 leading-[1.65] mb-2">Final message in the sequence.</p>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            Hi [Name],<br><br>
+            Wrapping up on this thread so I am not cluttering your inbox. If a UGC collaboration ever makes sense for [Brand] down the road, I would genuinely love to reconnect.<br><br>
+            All the best,<br>
+            [Your Name]
+          </p>
+        </blockquote>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Three touches, each separated by several days, is the right rhythm. After the third, move on. The brands that respond will typically do so after touch one or two. The graceful close leaves the door open without burning any goodwill.</p>
+      </div>
+    </section>
+
+    <!-- 07 Rate Negotiation -->
+    <section class="guide-section" id="negotiation">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Negotiation</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to talk money without underselling</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Name your price first &mdash; never respond with "whatever works for you"</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Price the content, not your audience size</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Present packages, not unit prices</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">More creators lose income by quoting too low than by getting turned down. Setting and communicating your rates with confidence is a skill that compounds over your entire career. Here are the principles we consistently see successful creators follow:</p>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Never respond with "whatever works for you."</strong> This signals uncertainty about your own value and invites the brand to anchor at the lowest number they can justify. Name your price first.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Price the content, not your audience size.</strong> Brands paying for UGC are buying production quality, strong hooks, and content that performs in paid media. Your follower count is irrelevant to that equation.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Charge a premium for usage rights.</strong> A video the brand will run as a paid ad for three to six months delivers far more value than a single organic post. Your pricing should reflect that difference explicitly.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Present packages, not unit prices.</strong> A bundle of three videos typically gets approved faster and pays more per unit than negotiating each video individually. Structure your rates in tiers.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Establish a floor rate and do not breach it.</strong> You can always negotiate downward from your initial quote in response to scope adjustments. You can almost never negotiate upward once a number is on the table.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">When a brand asks for your rates</h3>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            Here is how I typically price content for a brand like [Brand]:<br><br>
+            &bull; 1 UGC video (organic use only): $[X]<br>
+            &bull; 1 UGC video + 90-day paid media usage rights: $[X]<br>
+            &bull; Package of 3 videos + usage: $[X]<br><br>
+            Happy to adjust scope to fit your budget &mdash; let me know what range works and I can put together a tailored proposal.
+          </p>
+        </blockquote>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">If the brand offers product only</h3>
+        <blockquote class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
+          <p class="text-ink-2 mb-0 text-[15px] leading-[1.7]">
+            Appreciate the offer! I generally work on a paid basis for produced content, but I would be open to a hybrid model &mdash; product plus a flat fee for the deliverables. Would that be something worth exploring?
+          </p>
+        </blockquote>
+
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong class="text-ink">If the brand goes quiet after receiving your rates:</strong> send Follow-Up 2 from the sequence above. Silence after a rate request usually indicates a budget mismatch, not a lack of interest. Offering a smaller package at a lower total price often restarts the conversation.</p>
+      </div>
+    </section>
+
+    <!-- 08 Timing -->
+    <section class="guide-section" id="timing">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Timing</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">When to send for maximum impact</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Tuesday through Thursday mornings are the highest-response window</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Align pitches with product launches and budget cycles (Q1, Q3)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Always send in the recipient's time zone</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">When you send matters almost as much as what you send. Based on what we see across hundreds of brand partnerships at OKAD, certain timing patterns consistently outperform others.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Timing factor</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best window</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Day of week</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Tue&ndash;Thu mornings</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Monday inboxes are flooded; Friday gets deferred</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Quarterly budget</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Q1 (Jan) &amp; Q3 (late summer)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">New annual budgets; Q4 holiday planning starts</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Product launches</td><td class="px-4 py-2.5 border-b border-border text-ink-2">2&ndash;4 weeks before</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brands actively looking for content</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Time zone</td><td class="px-4 py-2.5 border-b border-border text-ink-2">9:00&ndash;10:00 AM local</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Dramatically higher open rates vs 2:00 AM arrival</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Industry events</td><td class="px-4 py-2.5 text-ink-2">A few days after</td><td class="px-4 py-2.5 text-ink-2">Avoid the noise; catch them when it subsides</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 Subject Lines -->
+    <section class="guide-section" id="subjects">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Subject Lines</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Subject lines that get opened</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Clarity beats cleverness every single time</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The subject line has one job: earn the open</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Short, specific, and professional</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Your subject line is a filter. If it reads like spam, it gets treated like spam &mdash; either by the recipient's brain or their literal email filters.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Subject lines that perform</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Subject lines to avoid</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Content concept for [Brand]</td><td class="px-4 py-2.5 border-b border-border text-ink-2">EXCITING OPPORTUNITY!!!</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Paid partnership idea &mdash; [Your Name]</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Collab??</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Already a customer of [Product] &mdash; quick idea</td><td class="px-4 py-2.5 border-b border-border text-ink-2">URGENT: partnership inquiry</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Applying &mdash; UGC creator for [campaign name]</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Influencer proposal &mdash; please review</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Creator content for your Q4 campaigns</td><td class="px-4 py-2.5 text-ink-2">Hi I love your brand</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The subject line has one job: earn the open. It does not need to sell the partnership, explain your background, or convey enthusiasm. Short, specific, and professional.</p>
+      </div>
+    </section>
+
+    <!-- 10 Common Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Errors that kill your response rate</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Mass-blasting identical messages is the fastest way to get ignored</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">No portfolio link (or a broken one) kills more pitches than any other factor</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Giving up after one email and going silent after rate objections</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">After reviewing thousands of creator pitches that flow through brand inboxes, these are the errors we see sabotaging otherwise capable creators:</p>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Sending identical messages to dozens of brands.</strong> Marketing managers can recognize a mass-blast instantly. One specific sentence about the brand is worth more than three paragraphs of generic flattery.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Hiding the ask.</strong> If the reader has to guess what you want, they will not bother. State whether you are proposing paid content, affiliate work, whitelisting, or something else &mdash; explicitly and early.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Including no portfolio link, or a broken one.</strong> This single issue kills more promising pitches than any other factor. Test your link before you send. Then test it again on mobile.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Leading with follower metrics instead of content quality.</strong> UGC arrangements are content purchases, not reach deals. Frame your pitch around what you produce, not how many people watch your personal feed.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Writing an essay when a paragraph would suffice.</strong> Your initial message should generate curiosity and establish credibility, not explain the entire scope of a potential relationship.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Giving up after one unanswered email.</strong> Most positive responses come from the first or second follow-up, not the initial message. Build follow-ups into your system from the start.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Going silent after a rate objection.</strong> A brief, professional counter-proposal &mdash; a smaller package, adjusted usage terms, or a pilot project &mdash; frequently saves deals that seemed dead.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Negotiating full deals inside DM threads.</strong> Social media messages are for opening doors. Contracts, rates, and deliverable details belong in email where they can be referenced, forwarded, and tracked properly.</li>
+        </ol>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailPitch} class="text-ink hover:text-accent transition-colors no-underline">OKAD helps creators build outreach systems that work</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Portfolio strategy, contact research, pitch templates, follow-up cadences, and rate negotiation coaching. We help creators land more brand deals without guesswork.</p>
+          </div>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Pitching is a numbers game &mdash; until your reputation takes over</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Even a beautifully crafted pitch will not convert every time. Expect single-digit reply rates on cold outreach when you are starting out, gradually improving as your portfolio strengthens and past brand names build social proof. This is precisely why consistency and volume beat a single "perfect" message: the creators landing the most deals are the ones running the most well-targeted outreach, not the ones spending an hour perfecting one email.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Over time, the equation shifts. Brands start coming to you. Past clients return for repeat projects. Referrals arrive. But that flywheel only starts spinning once you have done the manual work of proving the system, building the relationships, and establishing a track record that speaks for itself.</p>
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "Can I pitch brands if I have almost no followers?", a: "Absolutely. Most UGC deals are content purchases — brands are buying videos they can run as ads or post on their own channels, not paying for your personal reach. Your portfolio and the quality of your work matter far more than your follower count. Target brands that are specifically seeking UGC creators rather than influencer-style partnerships." },
+          { q: "What are the essential components of a UGC pitch email?", a: "Five elements: a personalized opener that demonstrates you researched the brand, a single line about who you are and what you create, a clear statement of fit between your content and their product, a specific proposal (paid UGC, affiliate, ad creative), and one frictionless next step. The entire message should stay under 150 words." },
+          { q: "How many pitches should I send each week?", a: "If you are serious about building a consistent deal flow, aim for fifteen to twenty targeted pitches per week. Cold outreach naturally has low response rates, so volume paired with genuine personalization — not spam — is what produces a reliable stream of opportunities." },
+          { q: "What is the best way to find a brand contact's email?", a: "Check their social media bios for a partnerships email first. Then search LinkedIn for marketing or partnership roles at the company. Then look at the brand's website for team member names and deduce their email format. Direct messages are a last option, not a first choice." },
+          { q: "Should I include pricing in my initial outreach?", a: "No. Offer to send rates once the brand expresses interest rather than leading with numbers. This keeps your first message focused on demonstrating fit, and it gives you room to tailor pricing after you understand what the brand actually needs." },
+          { q: "How long should I wait between follow-ups?", a: "Three to four days after your initial pitch for the first follow-up, approximately one week after that for the second, and then a final closing message if you still have not heard back. Three total touchpoints is a professional and effective rhythm." },
+          { q: "Is email or DM more effective for brand outreach?", a: "Email is almost always more effective for substantive outreach. It signals professionalism, supports proper threading, and is where budgets and contracts get discussed. Use DMs only when you cannot find an email, when the brand is clearly DM-first, or as a light initial touch before transitioning to email." },
+          { q: "How do I handle a brand that offers only product, no payment?", a: "It is perfectly acceptable to decline or to counter-propose a hybrid arrangement: product plus a flat fee for the content. Be polite but clear about your professional rates. Some creators accept product-only deals early in their career to build portfolio examples, but this should be a strategic choice rather than a default." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to land more brand deals?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Whether you are a creator building your outreach system or a brand looking for high-performing UGC &mdash; OKAD can help. Tell us about your goals and we will scope a plan.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailPitch} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get outreach help &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on OKAD's experience managing creator networks and producing UGC campaigns for brands across e-commerce, SaaS, food and beverage, and lifestyle verticals. Templates, timing recommendations, and mistake patterns are drawn from reviewing thousands of creator pitches and their outcomes. Response rates and conversion expectations are directional, not guarantees. Individual results depend on niche, portfolio quality, personalization effort, and brand fit.</p>
       </div>
     </section>
 
   </main>
   <Footer />
 </Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
