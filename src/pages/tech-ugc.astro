@@ -1,0 +1,554 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailTechUGC = "mailto:olga@okad.agency?subject=Tech%20UGC%20production%20%E2%80%94%20tell%20us%20about%20your%20product";
+const emailGeneral = "mailto:olga@okad.agency?subject=Tech%20UGC%20%E2%80%94%20general%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Tech UGC — The Complete Guide to Creator-Made Software Content | OKAD"
+  description="Tech UGC is creator-made video content that shows software, apps, and AI tools in action. Unlike lifestyle UGC, it must educate. This guide covers content formats, payment models, creation tips, and metrics."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Tech UGC: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Tech UGC is creator-made video content that shows software, apps, and AI tools in action. Unlike lifestyle UGC that sells emotion, Tech UGC must educate &mdash; the viewer needs to understand how the product works.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailTechUGC} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Order Tech UGC production &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>SaaS</span>
+          <span>Apps</span>
+          <span>AI tools</span>
+          <span>Screen recordings</span>
+          <span>Education-first</span>
+          <span>79% higher CVR</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">What Makes Tech UGC Different</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4BB;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Show, Don't Tell</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Screen recordings, app walkthroughs, and prompt-to-output demos. The viewer must see the product working.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F393;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Educate to Convert</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Unlike lifestyle UGC that sells emotion, tech content must teach. The viewer needs to understand how it works.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">79% Higher CVR</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">UGC drives conversion rates 79% higher than brand content for products requiring downloads.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "What Is Tech UGC?", href: "#what" },
+            { num: "03", text: "Tech UGC vs Lifestyle UGC", href: "#vs-lifestyle" },
+            { num: "04", text: "Content Formats", href: "#formats" },
+            { num: "05", text: "Who Uses Tech UGC", href: "#who" },
+            { num: "06", text: "Payment Models", href: "#payment" },
+            { num: "07", text: "How to Create Good Tech UGC", href: "#how-to" },
+            { num: "08", text: "Metrics & Performance", href: "#metrics" },
+            { num: "09", text: "Glossary", href: "#glossary" },
+            { num: "10", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Tech UGC is a content category, not a delivery model</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Tech UGC = creator-made video about software, apps, AI, and consumer tech</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The core difference from lifestyle UGC: education, not emotion</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Can be delivered as paid ads, organic content, or via Canvas UGC</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Tech UGC describes <strong>what the content is about</strong>, not where it's posted or how it's paid for. It is creator-made video content that shows software, apps, AI tools, and consumer technology in action. The creator demonstrates the product, explains how it works, and shows the viewer what it does.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is fundamentally different from lifestyle UGC, where a creator holds up a product and talks about how it makes them feel. In Tech UGC, the viewer needs to <em>understand</em> the product. They need to see the interface, the workflow, the before-and-after. Education is the conversion mechanism.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Tech UGC can be delivered through different channels: as paid ad creative (whitelabel), on the creator's own account (organic/influencer), or on brand-owned accounts (Canvas UGC). The delivery model is separate from the content category.</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Content about:</strong> software, apps, AI tools, consumer tech</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Core principle:</strong> educate the viewer, show the product working</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Formats:</strong> screen recordings, tutorials, walkthroughs, demos</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Primary users:</strong> SaaS, consumer apps, AI tools, smart home, hardware</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 What Is Tech UGC -->
+    <section class="guide-section" id="what">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What is Tech UGC?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator-made video showing tech products in action</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The content must teach &mdash; viewers need to understand how the product works</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Distinct from Canvas UGC, which is a delivery model</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Tech UGC</strong> is user-generated content focused on technology products: SaaS tools, mobile apps, AI products, smart home devices, and consumer hardware. The defining characteristic is that the content must <em>educate</em> the viewer. Unlike a beauty product where the creator can hold it up and share how it feels, a software product requires demonstration &mdash; the viewer needs to see it working.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">A quick example</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A creator films a 30-second screen recording showing how an AI writing tool rewrites a paragraph. They narrate what they're doing, show the before-and-after, and end with "This saved me 2 hours on my last essay." That's Tech UGC &mdash; a real person demonstrating real software to a real audience.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Tech UGC vs Canvas UGC: different concepts</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Tech UGC</strong> describes the content category &mdash; what the video is about (software, apps, AI). <strong>Canvas UGC</strong> describes the delivery model &mdash; where the content is posted (brand-owned accounts) and how creators are paid (per view). They often overlap &mdash; many tech brands use Canvas UGC to distribute Tech UGC content &mdash; but they are separate concepts.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A tech brand can commission Tech UGC as one-off paid ad creative without any Canvas UGC program. A lifestyle brand can run Canvas UGC with non-tech content. The terms are not synonyms.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What Tech UGC is not</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Not a tech review</strong> &mdash; reviews evaluate; Tech UGC demonstrates and educates</li>
+          <li><strong>Not a product ad</strong> &mdash; it looks and feels like native creator content, not polished brand video</li>
+          <li><strong>Not influencer marketing</strong> &mdash; the creator's audience size is secondary to their ability to demonstrate products clearly</li>
+          <li><strong>Not lifestyle UGC with a tech product</strong> &mdash; holding up a phone and saying "I love this" is lifestyle UGC; showing the app interface and explaining the workflow is Tech UGC</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 03 Tech UGC vs Lifestyle UGC -->
+    <section class="guide-section" id="vs-lifestyle">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Comparison</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Tech UGC vs lifestyle UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Lifestyle UGC sells emotion &mdash; how the product makes you feel</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Tech UGC educates &mdash; how the product works and what it does</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Different content structures, different creator skills, different metrics</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Aspect</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Lifestyle UGC</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Tech UGC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Conversion mechanism</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Emotion, aspiration, trust</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Education, demonstration, understanding</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Key content element</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator's face and energy</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Screen recording, product interface</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">What the viewer learns</td><td class="px-4 py-2.5 border-b border-border text-ink-2">How it feels to use the product</td><td class="px-4 py-2.5 border-b border-border text-ink-2">How the product works</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator skill required</td><td class="px-4 py-2.5 border-b border-border text-ink-2">On-camera presence, storytelling</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Product comprehension, clear explanation</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Typical product</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Beauty, fashion, food, wellness</td><td class="px-4 py-2.5 border-b border-border text-ink-2">SaaS, apps, AI tools, hardware</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Typical format</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Talking head, unboxing, GRWM</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Screen recording, tutorial, before/after</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Script structure</td><td class="px-4 py-2.5 text-ink-2">Hook &rarr; story &rarr; CTA</td><td class="px-4 py-2.5 text-ink-2">Hook &rarr; problem &rarr; demo &rarr; result</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The distinction matters for production. A creator who excels at lifestyle UGC (energy, storytelling, camera presence) may struggle with Tech UGC if they can't clearly explain a software workflow. Conversely, a creator who produces excellent screen-recording tutorials might lack the on-camera charisma needed for lifestyle content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">When hiring creators for Tech UGC, prioritize product comprehension and clarity of explanation over follower count or personal brand.</p>
+      </div>
+    </section>
+
+    <!-- 04 Content Formats -->
+    <section class="guide-section" id="formats">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Formats</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Content formats for Tech UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Screen recordings are the backbone format</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Before/after workflow comparisons show clear value</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Multiple formats should be tested &mdash; you can't predict which wins</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Format</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What it is</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Screen recording</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Full or partial screen capture showing the product in use</td><td class="px-4 py-2.5 border-b border-border text-ink-2">SaaS, web apps, AI tools</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Voiceover + screen</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Screen recording with narrated explanation</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Tutorials, workflow demos</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">App walkthrough</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Step-by-step navigation through an app's features</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Mobile apps, consumer software</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Before / after</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Workflow comparison: old way vs product way</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Productivity tools, AI automation</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Prompt-to-output demo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Show an AI prompt and its result in real time</td><td class="px-4 py-2.5 border-b border-border text-ink-2">AI writing, image gen, chatbots</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Tutorial</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Full educational walkthrough of a specific use case</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Complex products, enterprise tools</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Talking head + screen</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator on camera intercut with screen recordings</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Trust building + education combo</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Product demo</td><td class="px-4 py-2.5 text-ink-2">Hands-on demonstration of physical tech products</td><td class="px-4 py-2.5 text-ink-2">Smart home, hardware, devices</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Format selection principles</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Start with screen recordings</strong> &mdash; they are the fastest to produce and most native to tech content</li>
+          <li><strong>Add voiceover</strong> &mdash; narration dramatically increases comprehension and retention</li>
+          <li><strong>Show the workflow, not the features</strong> &mdash; "here's how I use it" beats "here are its features"</li>
+          <li><strong>Before/after is underused</strong> &mdash; showing the old workflow vs the new one creates immediate perceived value</li>
+          <li><strong>Test multiple formats</strong> &mdash; you cannot predict which format will perform best for your specific product and audience</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 05 Who Uses Tech UGC -->
+    <section class="guide-section" id="who">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Who Uses It</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Who uses Tech UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">SaaS companies, consumer apps, AI tools</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Smart home and consumer hardware brands</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Any product that requires a download, signup, or demo to convert</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Tech UGC is most effective for products where the viewer needs to understand functionality before converting. If your product requires a download, a signup, or a "see it in action" moment, Tech UGC is your content category.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Primary buyers by category</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Category</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Examples</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Key Tech UGC format</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">SaaS</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Project management, CRM, analytics</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Before/after workflows</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Consumer apps</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Productivity, fitness, finance</td><td class="px-4 py-2.5 border-b border-border text-ink-2">App walkthroughs</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">AI tools</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Writing, image gen, code assistants</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Prompt-to-output demos</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Smart home</td><td class="px-4 py-2.5 border-b border-border text-ink-2">IoT devices, security, automation</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Setup + product demos</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Consumer hardware</td><td class="px-4 py-2.5 text-ink-2">Wearables, peripherals, gadgets</td><td class="px-4 py-2.5 text-ink-2">Hands-on product demos</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The common thread: these products all require the viewer to understand something before they'll convert. A supplement brand can sell on emotion alone. A SaaS product cannot &mdash; the viewer needs to see the interface, understand the workflow, and believe it will save them time or effort. Tech UGC is the bridge between "I've heard of it" and "I understand how it works."</p>
+      </div>
+    </section>
+
+    <!-- 06 Payment Models -->
+    <section class="guide-section" id="payment">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Payment</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Payment models for Tech UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Per-video model: $150&ndash;$300 for one-off whitelabel ad content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Volume-based model: $10&ndash;$20 base + view bonuses for high-volume programs</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Top creators earn $3K&ndash;$15K+/month across multiple brands</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Model 1: Per-video (whitelabel ads)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The brand commissions individual Tech UGC videos at a flat rate of $150&ndash;$300 per video. The creator delivers finished content; the brand uses it as paid ad creative. This is the traditional UGC model applied to tech content &mdash; one-off deliverables, flat fee, brand controls distribution.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Best for:</strong> brands that need a small number of high-quality ad creatives, or brands testing Tech UGC before committing to a volume program.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Model 2: Volume-based (Canvas UGC delivery)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The brand runs a high-volume program where creators produce 80&ndash;300 videos per month (across the program, not per creator). Creators receive a base payment of $10&ndash;$20 per video plus view bonuses. Content is posted on brand-owned accounts. This is the Canvas UGC delivery model applied to Tech UGC content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Best for:</strong> brands that need a continuous organic content engine and have the operational infrastructure (or an agency) to manage the program.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Aspect</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Per-video</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Volume-based</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator pay</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$150&ndash;$300 per video</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$10&ndash;$20 base + view bonuses</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Volume</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1&ndash;10 videos per project</td><td class="px-4 py-2.5 border-b border-border text-ink-2">80&ndash;300 videos/month</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Posted where</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Used as paid ads by the brand</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand-owned social accounts</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Operational complexity</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Low &mdash; standard freelancer workflow</td><td class="px-4 py-2.5 border-b border-border text-ink-2">High &mdash; requires tracking + payouts infra</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Best fit</td><td class="px-4 py-2.5 text-ink-2">Ad creative for paid campaigns</td><td class="px-4 py-2.5 text-ink-2">Organic content engine</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need Tech UGC for your product?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We produce Tech UGC content for SaaS, apps, and AI brands &mdash; from individual ad creatives to full-scale Canvas UGC programs. Tell us about your product.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailTechUGC} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Order Tech UGC production &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 How to Create Good Tech UGC -->
+    <section class="guide-section" id="how-to">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Production</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to create good Tech UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Lead with the problem, not the product</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Show the product interface within 5 seconds</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">End with a concrete result the viewer can relate to</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The Tech UGC script structure</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Hook (0&ndash;3s).</strong> State a relatable problem or a surprising outcome. "I used to spend 3 hours editing videos. Now it takes 10 minutes." The hook must be specific and concrete &mdash; vague hooks like "This app is amazing" don't work for tech.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Problem context (3&ndash;8s).</strong> Briefly establish the pain point. What was the old way? Why was it frustrating? One or two sentences maximum.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Product demo (8&ndash;25s).</strong> Show the product working. This is the core of Tech UGC. Screen recording, app walkthrough, or prompt-to-output demo. The viewer must see the interface and understand the workflow.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Result (25&ndash;30s).</strong> Show the concrete outcome. "I wrote a 2,000-word article in 15 minutes." "My studying time dropped by 40%." The result must be specific and relatable.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>CTA (final 2&ndash;3s).</strong> Simple and direct. "Link in bio." "Try it free." Do not oversell &mdash; the demo already did the selling.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Common mistakes in Tech UGC</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Too much talking, not enough showing</strong> &mdash; the product interface should appear within 5 seconds. Don't spend 15 seconds on a talking head before showing the screen.</li>
+          <li><strong>Feature listing instead of workflow demonstration</strong> &mdash; "It has AI writing, templates, and collaboration" is worse than showing one complete workflow end to end.</li>
+          <li><strong>Vague hooks</strong> &mdash; "This app changed my life" doesn't work for tech. Use specific numbers: "I built a landing page in 7 minutes using AI."</li>
+          <li><strong>Too long</strong> &mdash; 15&ndash;45 seconds is the sweet spot. Tech UGC needs to be tight. Every second that doesn't teach something loses viewers.</li>
+          <li><strong>No concrete result</strong> &mdash; always end with a measurable outcome the viewer can relate to.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Equipment for Tech UGC</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A modern smartphone, a screen recording tool (built into iOS and Android), and a free editing app (CapCut, in-app editors). For voiceover content, a quiet room matters more than an expensive microphone. Most top Tech UGC creators produce entirely on their phone.</p>
+      </div>
+    </section>
+
+    <!-- 08 Metrics -->
+    <section class="guide-section" id="metrics">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Metrics</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Metrics and performance</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">UGC drives 79% higher conversion rates than brand content for download products</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Key metrics differ by delivery model (paid ads vs organic)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Retention past 3 seconds is the strongest early signal</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Why Tech UGC outperforms brand content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">UGC drives conversion rates 79% higher than polished brand content for products that require downloads or signups. The reason is trust and context: a real person demonstrating a product in a real workflow is more credible than a brand's own marketing. The viewer sees someone like them solving a problem they have.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For tech products specifically, the educational element compounds this effect. The viewer not only trusts the creator's recommendation &mdash; they also understand how to use the product before they've even downloaded it. The onboarding starts in the ad.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Key metrics by delivery model</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">For paid ads</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">For organic / Canvas UGC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Primary success metric</td><td class="px-4 py-2.5 border-b border-border text-ink-2">CPA (cost per acquisition)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Views + signups</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Hook effectiveness</td><td class="px-4 py-2.5 border-b border-border text-ink-2">3s retention rate</td><td class="px-4 py-2.5 border-b border-border text-ink-2">3s retention rate</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Engagement quality</td><td class="px-4 py-2.5 border-b border-border text-ink-2">CTR (1&ndash;2% benchmark)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Saves, shares, comments</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Business outcome</td><td class="px-4 py-2.5 border-b border-border text-ink-2">ROAS (3x+ benchmark)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Installs, signups, revenue</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Volume signal</td><td class="px-4 py-2.5 text-ink-2">Winner hit rate per batch</td><td class="px-4 py-2.5 text-ink-2">Posts per week, creator output</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The 3-second rule</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Across both paid and organic delivery, retention past 3 seconds is the strongest early predictor of overall performance. If the hook doesn't stop the scroll within 3 seconds, the rest of the content doesn't matter. For Tech UGC specifically, this means showing a concrete result or a surprising interface moment immediately &mdash; not starting with a slow introduction.</p>
+      </div>
+    </section>
+
+    <!-- 09 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+
+        {[
+          { term: "Tech UGC", def: "Creator-made video content that shows software, apps, AI tools, or consumer technology in action. A content category, not a delivery model." },
+          { term: "Lifestyle UGC", def: "Creator content that sells through emotion and aspiration rather than education. Typical for beauty, fashion, and wellness products." },
+          { term: "Screen recording", def: "Video capture of a device screen showing a product's interface and workflow. The backbone format of Tech UGC." },
+          { term: "Before/after", def: "A content format showing the old workflow (without the product) vs the new workflow (with the product). Creates immediate perceived value." },
+          { term: "Prompt-to-output demo", def: "A format specific to AI products: the creator enters a prompt and shows the AI's output in real time." },
+          { term: "App walkthrough", def: "Step-by-step navigation through a mobile or web app's features, showing the user journey." },
+          { term: "Whitelabel UGC", def: "Creator-produced content delivered to the brand for use as paid ad creative. The creator appears in the ad but the brand controls distribution." },
+          { term: "Hook rate", def: "The percentage of viewers who watch past the first 3 seconds. The strongest early predictor of Tech UGC performance." },
+          { term: "Canvas UGC", def: "A delivery model (not a content category) where creators post on brand-owned social accounts and are paid per view." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 10 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What is Tech UGC?", a: "Tech UGC is creator-made video content that shows software, apps, AI tools, and consumer technology in action. Unlike lifestyle UGC that sells through emotion, Tech UGC must educate the viewer — they need to understand how the product works. Common formats include screen recordings, app walkthroughs, tutorials, and prompt-to-output demos." },
+          { q: "How is Tech UGC different from Canvas UGC?", a: "Tech UGC is a content category — it describes what the content is about (software, apps, AI). Canvas UGC is a delivery model — it describes where content is posted (brand accounts) and how creators are paid (per view). They often overlap but are separate concepts. Tech UGC can be delivered as paid ads without a Canvas program, and Canvas UGC can feature non-tech content." },
+          { q: "Why does Tech UGC outperform brand content?", a: "UGC drives conversion rates 79% higher than brand content for products requiring downloads. The reason: trust and education. A real person demonstrating a real workflow is more credible and more instructive than polished marketing. The viewer understands how to use the product before they've even downloaded it." },
+          { q: "What does Tech UGC cost?", a: "Two models: per-video ($150-$300 for one-off whitelabel ads) or volume-based ($10-$20 base + view bonuses for high-volume Canvas programs producing 80-300 videos/month). Top creators across multiple brands earn $3K-$15K+/month." },
+          { q: "How is Tech UGC different from lifestyle UGC?", a: "Lifestyle UGC sells emotion — how the product makes you feel. Tech UGC educates — how the product works and what it does. Different script structures, different creator skills, different formats. A great lifestyle UGC creator (energy, storytelling) may struggle with Tech UGC if they can't clearly explain a software workflow." },
+          { q: "What formats work best for Tech UGC?", a: "Screen recordings are the backbone. Voiceover + screen adds comprehension. Before/after comparisons show clear value. Prompt-to-output demos work specifically for AI products. The best approach is testing multiple formats — you cannot predict which will perform best for your specific product." },
+          { q: "Who should use Tech UGC?", a: "Any brand with a software, app, AI, or tech hardware product that requires the viewer to understand functionality before converting. SaaS companies, consumer apps, AI tools, smart home brands, and consumer hardware brands are the primary buyers." },
+          { q: "How long should Tech UGC videos be?", a: "15-45 seconds is the sweet spot. Every second must teach something. Tech UGC cannot afford slow introductions — show the product interface within 5 seconds and end with a concrete, measurable result." },
+          { q: "Can OKAD produce Tech UGC for my brand?", a: "Yes. We produce Tech UGC content for SaaS, apps, and AI brands — from individual ad creatives to full-scale Canvas UGC programs. Our creators specialize in clear product demonstrations with strong hooks. Write to us at olga@okad.agency." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to produce Tech UGC?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your tech product and what you need. We'll match you with creators who specialize in your category and handle production end to end.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailTechUGC} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Order Tech UGC production &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on observed Tech UGC production patterns, creator marketplace data, and published performance benchmarks. The 79% conversion rate improvement is drawn from aggregate industry data for UGC vs brand content in download-driven categories. Individual results depend on product quality, content execution, creator fit, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

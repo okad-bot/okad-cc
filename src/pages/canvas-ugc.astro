@@ -1,0 +1,546 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailCanvas = "mailto:olga@okad.agency?subject=Canvas%20UGC%20program%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const emailGeneral = "mailto:olga@okad.agency?subject=Canvas%20UGC%20%E2%80%94%20general%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Canvas UGC — The Complete Guide to Brand-Account Content at Scale | OKAD"
+  description="Canvas UGC is the delivery model where creators post on brand-owned social accounts and get paid per view. This guide covers how it works, payment models, warmup, multi-account strategy, and why volume matters."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Canvas UGC: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Canvas UGC is a delivery model where brands pay creators to post on brand-owned social accounts. The brand's account is the "canvas." Creators get paid per view. This guide covers everything operators and brands need to know.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailCanvas} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Order Canvas UGC program &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Brand accounts</span>
+          <span>CPM $2&ndash;$6</span>
+          <span>15&ndash;40 videos/mo</span>
+          <span>Warmup &amp; niching</span>
+          <span>Organic &rarr; paid</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Canvas UGC Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Niche &amp; Warm Up</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Brand creates niched social accounts and warms them up by engaging with relevant content before posting.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Creators Post at Volume</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">10+ creators produce 15-40 videos per month on the brand's accounts. Volume is the strategy.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Pay Per View, Scale Winners</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Creators earn CPM $2-$6. Top organic performers graduate to paid ads (Spark Ads, Partnership Ads).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "What Is Canvas UGC?", href: "#what" },
+            { num: "03", text: "The Niching & Warmup Process", href: "#warmup" },
+            { num: "04", text: "Payment Models", href: "#payment" },
+            { num: "05", text: "Why Volume Matters", href: "#volume" },
+            { num: "06", text: "Canvas UGC vs Traditional UGC", href: "#comparison" },
+            { num: "07", text: "Multi-Account Strategy", href: "#multi" },
+            { num: "08", text: "From Organic to Paid Ads", href: "#organic-to-paid" },
+            { num: "09", text: "Operational Challenges", href: "#operations" },
+            { num: "10", text: "Glossary", href: "#glossary" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The brand's account is the canvas</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Canvas UGC is a delivery model, not a content category</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creators post on brand-owned accounts, not their own</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The brand retains the account, audience signal, and content library</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC describes <strong>where and how</strong> creator content is delivered &mdash; not what the content is about. A brand pays creators to post on brand-owned, niched social accounts. The brand's account is the "canvas" where content appears.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is fundamentally different from traditional UGC, where creators either post on their own profiles or deliver raw footage for the brand to use in paid ads. In Canvas UGC, the brand owns the account, the audience, and the content library. Creators are the production engine.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The model started in late 2023 inside consumer app and SaaS companies. By 2026, it has become the standard organic playbook for apps, SaaS, AI tools, and increasingly fintech and e-commerce brands.</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Posted on:</strong> brand-owned social accounts</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Payment:</strong> CPM $2&ndash;$6 or hybrid (base + view bonuses)</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Volume:</strong> 15&ndash;40 videos per month per account</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Brand retains:</strong> account, audience signal, content library</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 What Is Canvas UGC -->
+    <section class="guide-section" id="what">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What is Canvas UGC?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A delivery model where creators post on brand-owned accounts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The "canvas" is the brand's niched social account</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Distinct from Tech UGC, which describes a content category</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Canvas UGC</strong> is a content delivery model in which a brand creates one or more niched social accounts (the "canvases"), recruits a team of creators, and pays them to produce and publish content directly on those accounts. Creators are compensated based on performance &mdash; typically per 1,000 views (CPM) or through a hybrid of base pay plus view bonuses.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">A quick example</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A productivity SaaS company creates a TikTok account focused on "productivity hacks for remote workers." They warm up the account by engaging with productivity content for two weeks. Then 8 creators start posting 3&ndash;5 videos each per week on the account. Each creator is paid $4 per 1,000 views. The account reaches 500K views per month within 60 days. Top-performing organic posts are then promoted as Spark Ads.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Canvas UGC vs Tech UGC: not the same thing</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Canvas UGC</strong> describes the delivery model &mdash; where content is posted and how creators are paid. <strong>Tech UGC</strong> describes the content category &mdash; creator-made video about software, apps, and AI tools. They often overlap (tech brands frequently use Canvas UGC to distribute Tech UGC content), but they are separate concepts. A lifestyle brand can run Canvas UGC with non-tech content. A tech brand can commission Tech UGC for paid ads without using brand accounts at all.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What Canvas UGC is not</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Not influencer marketing</strong> &mdash; the creator's personal audience is irrelevant; they post on the brand's account</li>
+          <li><strong>Not whitelabel UGC</strong> &mdash; in whitelabel, the brand licenses footage for paid ads; in Canvas, the creator publishes organically</li>
+          <li><strong>Not affiliate marketing</strong> &mdash; payouts are tied to view volume on the brand canvas, not commission on referred sales</li>
+          <li><strong>Not account farming</strong> &mdash; legitimate Canvas UGC requires real native content and proper account management</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 03 Niching & Warmup -->
+    <section class="guide-section" id="warmup">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Niching &amp; Warmup</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The niching and warmup process</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Accounts must be niched before scaling content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Warmup = engaging with niche content to train the algorithm</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Skip warmup and the algorithm ignores your posts</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before a brand can scale content on a canvas account, the account needs a clear niche and a warmup period. A canvas with no theme rarely gets pushed by the algorithm, regardless of how many videos are posted.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The warmup process</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Define the niche.</strong> Choose a specific content angle for the account: "AI tools for students," "workout routines under 15 minutes," "personal finance for millennials." The narrower, the better.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Engage as the audience.</strong> From the brand account, search relevant topics, watch full videos in the niche, save and comment on adjacent posts, follow relevant niche accounts.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Post initial content.</strong> Start with 5+ feed posts per week. Keep the content tightly aligned with the niche. Watch for early signals: retention, saves, comments.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Iterate based on signal.</strong> Double down on formats and hooks that get traction. Drop what doesn't work. Expand to new angles only after the account has a clear content-market fit.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Scale creators.</strong> Once the account has signal, onboard additional creators. Maintain content consistency &mdash; every creator should produce content that feels native to the account's established identity.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">How long does warmup take?</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Typically 1&ndash;3 weeks of active engagement and initial posting before the algorithm starts distributing content meaningfully. Rushing this step is the most common mistake &mdash; brands that skip warmup and immediately flood an account with content see minimal reach.</p>
+      </div>
+    </section>
+
+    <!-- 04 Payment Models -->
+    <section class="guide-section" id="payment">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Payment Models</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How creators get paid</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CPM model: $2&ndash;$6 per 1,000 views</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Hybrid model: base pay + view bonuses</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Top creators earn $3K&ndash;$15K+/month</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">CPM model (pay per view)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most common model. Creators are paid a flat rate per 1,000 views their content generates on the brand's account. Typical CPM in 2025&ndash;2026: $2&ndash;$6, depending on brand category, platform, and creator track record. Payouts are usually processed monthly based on verified view counts.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Hybrid model (base + bonuses)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Some brands offer a small base payment per video ($10&ndash;$20) plus view bonuses once the content crosses performance thresholds. This model reduces creator risk while still aligning incentives with performance. It works well for recruiting new creators who don't yet have a track record on the canvas.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Model</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">How it works</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Pure CPM</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$2&ndash;$6 per 1,000 views</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Established creators with proven hit rates</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Hybrid</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$10&ndash;$20 base + view bonuses</td><td class="px-4 py-2.5 border-b border-border text-ink-2">New creator recruitment, risk reduction</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">CPA (per install)</td><td class="px-4 py-2.5 text-ink-2">Fixed payment per app install or signup</td><td class="px-4 py-2.5 text-ink-2">App brands with attribution in place</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Creator earnings potential</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Active Canvas UGC creators who work across multiple brand accounts earn $3K&ndash;$15K+ per month. Earnings scale with volume (more accounts, more posts) and quality (higher hit rate means more views per post). The model rewards consistency over virality &mdash; a creator who produces 80&ndash;300 videos per month across multiple canvases earns from aggregate volume, not from chasing individual viral hits.</p>
+      </div>
+    </section>
+
+    <!-- 05 Why Volume Matters -->
+    <section class="guide-section" id="volume">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Volume</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why volume is the strategy</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Only ~1.2% of posts cross 10,000 views</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The top 1% of posts drive ~88% of all views</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You can't predict which post will break out &mdash; you need volume to hit it</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC economics are driven by a power law. The vast majority of posts get modest reach. A tiny fraction break out and generate most of the total views. You cannot reliably predict which posts will be the winners.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The data is clear: only about 1.2% of posts cross 10,000 views. The top 1% of posts drive approximately 88% of all views generated across a Canvas UGC program. This means that for every 100 posts, roughly one or two will be responsible for the vast majority of your reach.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is why volume is not optional &mdash; it is the strategy. Brands that post 5 videos per week are simply not generating enough attempts to reliably hit breakout content. The recommended minimum is 15&ndash;40 videos per month per account, with 5+ feed posts per week.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The math</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Monthly posts</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Expected 10K+ posts</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Odds of a breakout</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">10</td><td class="px-4 py-2.5 border-b border-border text-ink-2">0&ndash;1</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Low &mdash; not enough attempts</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">30</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1&ndash;2</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Moderate &mdash; starting to work</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">60</td><td class="px-4 py-2.5 border-b border-border text-ink-2">2&ndash;4</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Reliable &mdash; compound learning</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">120+</td><td class="px-4 py-2.5 text-ink-2">4&ndash;8+</td><td class="px-4 py-2.5 text-ink-2">High &mdash; multi-account scale</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Volume also compounds learning. Every post teaches the team something about hooks, formats, angles, and platform behavior. Teams that post 40+ videos per month learn faster and optimize more aggressively than teams posting 10.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Want OKAD to run your Canvas UGC program?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We handle account setup, creator recruitment, content management, tracking, and payouts. You get a content engine that runs on your brand's accounts.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCanvas} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Order Canvas UGC program &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Comparison -->
+    <section class="guide-section" id="comparison">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Comparison</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Canvas UGC vs traditional UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Traditional UGC: flat fee per video, creator delivers footage</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Canvas UGC: pay per view, creator publishes on brand account</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Different models for different goals</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Aspect</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Traditional UGC</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Canvas UGC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Where content is posted</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator's account or used as paid ads</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand's own accounts</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Payment model</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Flat fee per video ($150&ndash;$500)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">CPM $2&ndash;$6 or hybrid</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Volume per month</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1&ndash;10 videos</td><td class="px-4 py-2.5 border-b border-border text-ink-2">15&ndash;40 per account</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator's audience matters?</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Sometimes (influencer + UGC)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">No &mdash; only production skill</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Who owns the audience</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator (or no audience built)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand retains the account and audience</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Content lifecycle</td><td class="px-4 py-2.5 border-b border-border text-ink-2">One-off deliverable</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Continuous publishing</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Best fit</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Paid ads, landing pages, social proof</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Organic reach, brand building, content engine</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Typical buyers</td><td class="px-4 py-2.5 text-ink-2">DTC, beauty, lifestyle</td><td class="px-4 py-2.5 text-ink-2">Apps, SaaS, AI, fintech</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Neither model is universally better. Traditional UGC works well for brands that need footage for paid ad campaigns. Canvas UGC works for brands that need a continuous organic content engine and want to build brand-owned audience channels.</p>
+      </div>
+    </section>
+
+    <!-- 07 Multi-Account -->
+    <section class="guide-section" id="multi">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Multi-Account</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Multi-account strategy</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Multiple accounts let brands test identities, niches, and geos in parallel</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each account needs its own niche, warmup, and content identity</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Tracking becomes non-negotiable at this scale</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Once a brand has product-content fit on one canvas, the next lever is running multiple accounts. Each account targets a different niche, audience segment, geography, or content identity. This lets teams test multiple approaches in parallel without polluting the signal of the main account.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Why multiple accounts?</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Niche testing</strong> &mdash; one account for "study tips," another for "AI productivity," another for "exam prep"</li>
+          <li><strong>Creator face testing</strong> &mdash; different creator identities on different accounts to find what resonates</li>
+          <li><strong>Geo and language</strong> &mdash; separate accounts for different markets (EN, ES, PT, DE)</li>
+          <li><strong>Format testing</strong> &mdash; test entirely different content formats without confusing the algorithm</li>
+          <li><strong>Risk distribution</strong> &mdash; if one account gets restricted, the others continue</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Important: this is not spam</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Multi-account distribution only works with real native content and proper account quality. Duplicating the same video across many low-quality accounts gets suppressed and damages the brand. Each canvas must have its own identity, its own warmup, and its own content &mdash; not copied-and-pasted posts.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">At this scale &mdash; 5&ndash;20+ accounts, dozens of creators, four platforms &mdash; manual tracking with spreadsheets breaks down. This is where experienced operators and dedicated infrastructure make or break the program.</p>
+      </div>
+    </section>
+
+    <!-- 08 From Organic to Paid -->
+    <section class="guide-section" id="organic-to-paid">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Organic to Paid</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How organic winners graduate to paid ads</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Top organic posts become paid ads via Spark Ads or Partnership Ads</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Organic performance is a free signal for what works in paid</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Canvas UGC feeds the creative testing pipeline</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">One of the most powerful features of Canvas UGC is its bridge to paid advertising. Organic posts that perform well are already proven &mdash; they have real engagement data, retention curves, and conversion signals. These winners can be promoted directly as paid ads.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Paid ad formats from organic</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Spark Ads (TikTok)</strong> &mdash; boost an existing organic post as a paid ad. Retains all engagement (likes, comments, shares). The post appears native, not like an ad.</li>
+          <li><strong>Partnership Ads (Meta)</strong> &mdash; the Meta equivalent of Spark Ads. Promote a brand-account post as a paid ad on Instagram Reels or Facebook.</li>
+          <li><strong>YouTube Shorts Promote</strong> &mdash; boost organic Shorts content for additional reach.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Why this matters</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional creative testing for paid ads requires producing dozens of ad variations and spending money to test all of them. Canvas UGC lets you test at scale for free &mdash; organic reach is the test budget. Only the proven winners get ad spend behind them. This dramatically reduces the cost and risk of creative testing.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The best Canvas UGC programs use organic performance as the first filter: produce 40+ videos per month, see which ones break out organically, then promote the top 5&ndash;10% as paid ads. The hit rate of these pre-validated creatives is significantly higher than cold ad production.</p>
+      </div>
+    </section>
+
+    <!-- 09 Operational Challenges -->
+    <section class="guide-section" id="operations">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Operations</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Operational challenges</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Recruitment: finding and onboarding 10+ creators</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Tracking: attributing views to the right creator across platforms</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Payouts: automated monthly payments at scale</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The creative challenge of Canvas UGC is manageable &mdash; most creators can produce good short-form content with basic training. The operational challenge is where most programs stall.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The five operational bottlenecks</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator recruitment.</strong> A single-account Canvas UGC program needs 10+ active creators. Multi-account programs need dozens. Finding creators who can produce quality content at volume is a constant challenge.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator management.</strong> Briefing, onboarding, quality control, scheduling, feedback loops. Each creator needs clear guidelines while maintaining enough creative freedom to produce native content.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Cross-platform tracking.</strong> One brand, 30 creators, 4 platforms = thousands of posts per quarter. Tracking which creator posted which video and how many views it generated requires dedicated infrastructure.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Automated payouts.</strong> Monthly payouts to 10&ndash;50+ creators based on verified view counts. Manual spreadsheet-based tracking breaks at this scale.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Account management.</strong> Maintaining account health, responding to comments, ensuring posting consistency, managing access permissions, handling platform policy changes.</li>
+        </ol>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailCanvas} class="text-ink hover:text-accent transition-colors no-underline">OKAD handles Canvas UGC operations end to end</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Creator recruitment, briefing, tracking, attribution, payouts, and account management. We run the operational side so you don't have to build it in-house.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+
+        {[
+          { term: "Canvas UGC", def: "A delivery model where creators post content directly on brand-owned social accounts and are paid for performance (views or installs)." },
+          { term: "Canvas", def: "The brand-owned social account where creators publish content. Named because the brand's account is the 'canvas' for creator content." },
+          { term: "CPM", def: "Cost per mille — the dollar amount paid to a creator per 1,000 views. Typical Canvas UGC CPM: $2-$6." },
+          { term: "Hybrid model", def: "A payment structure combining a small base payment per video ($10-$20) with view-based bonuses." },
+          { term: "Account warmup", def: "The process of training a brand's social account signal through niche engagement before scaling content production." },
+          { term: "Niching", def: "Defining a specific content angle for a canvas account so the algorithm understands what audience to serve." },
+          { term: "Spark Ads", def: "TikTok's native ad format that boosts an existing organic post as paid media, retaining all engagement." },
+          { term: "Partnership Ads", def: "Meta's equivalent of Spark Ads — promoting brand-account posts as paid ads on Instagram or Facebook." },
+          { term: "Power law", def: "The distribution pattern where a tiny percentage of posts generate the vast majority of views. In Canvas UGC, ~1.2% of posts cross 10K views." },
+          { term: "Multi-account strategy", def: "Running multiple niched brand accounts in parallel to test identities, geos, and content formats." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What is Canvas UGC?", a: "Canvas UGC is a delivery model where brands pay creators to post content on brand-owned social accounts. The brand's account is the 'canvas.' Creators are paid per view (CPM $2-$6) or through a hybrid model (base pay + view bonuses). The brand retains the account, the audience, and the content library." },
+          { q: "How is Canvas UGC different from Tech UGC?", a: "Canvas UGC describes the delivery model — where content is posted (brand accounts) and how creators are paid (per view). Tech UGC describes the content category — creator-made video about software, apps, and AI tools. They often overlap but are separate concepts. A lifestyle brand can run Canvas UGC. A tech brand can buy Tech UGC content without using brand accounts." },
+          { q: "How many creators do I need?", a: "A single-account Canvas UGC program typically needs 10+ active creators to maintain the recommended volume of 15-40 videos per month. Multi-account programs require proportionally more. OKAD handles creator recruitment from our network." },
+          { q: "How long does warmup take?", a: "Typically 1-3 weeks of active niche engagement and initial posting before the algorithm starts distributing content meaningfully. Skipping warmup is the most common mistake — accounts that immediately flood content without warmup see minimal organic reach." },
+          { q: "What platforms work for Canvas UGC?", a: "Primarily TikTok, Instagram Reels, YouTube Shorts, and Facebook Reels. TikTok is typically the highest-volume channel due to its content discovery algorithm." },
+          { q: "How much do creators earn?", a: "With CPM rates of $2-$6, active creators working across multiple brand accounts earn $3K-$15K+ per month. Earnings scale with volume and quality. The model rewards consistency — aggregate volume across many posts, not chasing individual viral hits." },
+          { q: "Can organic Canvas UGC posts become paid ads?", a: "Yes, and this is one of the model's biggest advantages. Top organic performers can be promoted directly via Spark Ads (TikTok), Partnership Ads (Meta), or YouTube Shorts Promote. Organic performance serves as a free testing signal for what works in paid." },
+          { q: "What does multi-account strategy mean?", a: "Running multiple niched brand accounts in parallel — each targeting a different audience segment, geography, or content identity. Each account needs its own warmup and content. This is not duplicating content across accounts, which gets suppressed." },
+          { q: "What are the main operational challenges?", a: "Recruitment (finding 10+ quality creators), cross-platform tracking (attributing views to the right creator), automated payouts (monthly payments based on verified views), and account management (health, consistency, permissions). These operational challenges are why most brands work with experienced operators." },
+          { q: "Can OKAD run a Canvas UGC program for my brand?", a: "Yes. We handle account setup, creator recruitment, briefing, content management, cross-platform tracking, and automated payouts. Write to us at olga@okad.agency and tell us about your brand and goals." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to launch a Canvas UGC program?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your brand and what you want to achieve. We'll scope a program, handle the operations, and get your canvases running.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCanvas} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Order Canvas UGC program &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on observed Canvas UGC program structures, creator marketplace data, and public short-form platform dynamics. The 1.2% breakout rate and 88% view concentration figures come from aggregate data across multiple Canvas UGC programs. Rates and outcomes are directional, not guarantees. Individual results depend on niche, content quality, platform dynamics, and program operations.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
