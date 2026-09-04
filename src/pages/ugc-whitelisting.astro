@@ -1,0 +1,539 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailSubject = "mailto:olga@okad.agency?subject=UGC%20Whitelisting%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="UGC Whitelisting — The Complete Guide to Creator-Account Paid Ads | OKAD"
+  description="UGC Whitelisting lets brands run paid ads from a creator's personal account instead of the brand account. 50% lower CPA, 2.4x higher CTR. This guide covers Spark Ads, Partnership Ads, contracts, and scaling."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          UGC Whitelisting: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          UGC Whitelisting means running paid ads from a creator's personal account instead of the brand's. The ad appears as creator content in the feed &mdash; because it is. 50% lower CPA, 2.4x higher CTR. This guide covers everything.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailSubject} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Order whitelisted ads &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>50% lower CPA</span>
+          <span>2.4x higher CTR</span>
+          <span>Spark Ads</span>
+          <span>Partnership Ads</span>
+          <span>Creator licensing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Whitelisting Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F91D;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Creator Grants Access</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">The creator gives the brand permission to run paid ads from their personal social account via platform-native tools.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4E2;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Brand Runs the Ads</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">The brand controls targeting, budget, and bidding. But the ad shows the creator's handle, profile photo, and content &mdash; not the brand's.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Native Performance</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">The ad looks 100% organic &mdash; a real person's post in the feed. This bypasses ad fatigue and drives 50% lower CPA.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "What Is Whitelisting?", href: "#what" },
+            { num: "03", text: "Whitelisting on Each Platform", href: "#platforms" },
+            { num: "04", text: "Whitelisting vs Spark Ads vs Partnership Ads", href: "#comparison" },
+            { num: "05", text: "Why Whitelisting Outperforms", href: "#performance" },
+            { num: "06", text: "Creator Agreements & Legal", href: "#legal" },
+            { num: "07", text: "Payment & Pricing", href: "#payment" },
+            { num: "08", text: "How to Set Up Whitelisting", href: "#setup" },
+            { num: "09", text: "Common Mistakes", href: "#mistakes" },
+            { num: "10", text: "Glossary", href: "#glossary" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Ads that look like organic creator content</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Whitelisting = running paid ads from the creator's account, not the brand's</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">50% lower CPA, 40% cheaper CPMs, 2.4x higher CTR vs brand-handle ads</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Also called "creator licensing" or "allowlisting"</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">UGC Whitelisting is the practice of running paid advertisements from a creator's personal social media account instead of the brand's account. The brand controls the ad &mdash; targeting, budget, bidding, creative &mdash; but the ad appears in the feed under the creator's handle, with the creator's profile photo, looking indistinguishable from the creator's organic content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The result: ads that don't look or feel like ads. The viewer sees a real person's post in their feed. The "Paid Partnership" label is present (required by both platforms and regulators), but the content reads as creator content, not brand advertising. This native appearance is why whitelisted ads consistently outperform brand-handle ads on every metric: 50% lower CPA, 40% cheaper CPMs, and 2.4x higher CTR.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The practice goes by several names. "Whitelisting" is the most common industry term. Meta calls it "Partnership Ads." TikTok's version is called "Spark Ads." Some agencies use "creator licensing" or "allowlisting." They all describe the same concept: the brand advertises through the creator's account.</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Also called:</strong> creator licensing, allowlisting, creator-handle ads</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">On Meta:</strong> Partnership Ads (via Branded Content tool)</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">On TikTok:</strong> Spark Ads (via authorization code)</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Performance:</strong> 50% lower CPA, 2.4x higher CTR vs brand-handle ads</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 What Is Whitelisting -->
+    <section class="guide-section" id="what">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What is UGC whitelisting?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand runs paid ads from the creator's personal account</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Ad shows creator's handle and profile &mdash; looks organic</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">"Paid Partnership" label stays, but content reads as creator content</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>UGC Whitelisting</strong> is a paid advertising distribution method where the brand runs ads through a creator's personal social media account. The creator gives the brand permission to use their account as the ad's source. When the ad appears in someone's feed, it shows the creator's name, profile photo, and content &mdash; not the brand's.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">A quick example</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A skincare brand works with a creator named @sarah.skincare. Sarah films a 30-second video showing her morning routine featuring the brand's moisturizer. Instead of posting this as a regular <a href="/ugc-ads" class="text-accent hover:underline">UGC ad</a> from the brand's account, the brand runs it as a whitelisted ad from Sarah's account. When the ad appears in someone's feed, it shows "@sarah.skincare" as the poster, with Sarah's profile photo. There's a small "Paid Partnership" label, but otherwise it looks exactly like one of Sarah's organic posts. The CTR is 2.4x higher than the same ad run from the brand's account.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What whitelisting is not</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Not influencer marketing</strong> &mdash; the brand controls the ad targeting, budget, and placement. The creator is not posting to their organic audience.</li>
+          <li><strong>Not <a href="/whitelabel-ugc" class="text-accent hover:underline">whitelabel UGC</a></strong> &mdash; in whitelabel, the brand receives raw video files and runs ads from the brand's account. In whitelisting, ads run from the creator's account.</li>
+          <li><strong>Not <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a></strong> &mdash; in Canvas UGC, creators post organically on brand-owned accounts. In whitelisting, the brand runs paid ads from the creator's personal account.</li>
+          <li><strong>Not account takeover</strong> &mdash; the creator retains full control of their account. They only grant the brand permission to run specific ads through it.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 03 Whitelisting on Each Platform -->
+    <section class="guide-section" id="platforms">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Platforms</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How whitelisting works on each platform</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok: Spark Ads (authorization code from creator)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Meta: Partnership Ads (via Branded Content tool)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each platform has its own setup flow and creator permissions</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">TikTok: Spark Ads</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok's native whitelisting format. The creator publishes a video on their TikTok profile, then generates an authorization code in TikTok's ad settings. The brand enters that code in TikTok Ads Manager to run the video as a paid ad. The ad appears in the For You feed under the creator's handle, with all engagement (likes, comments, shares) staying on the original post.</p>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator posts the video</strong> on their TikTok profile (or saves as draft for ad-only use).</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator opens ad settings</strong> and toggles on "Ad authorization" for the specific video.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator generates an authorization code</strong> (valid for 7, 30, or 60 days) and shares it with the brand.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Brand enters the code</strong> in TikTok Ads Manager and runs the video as a Spark Ad with their targeting and budget.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Meta: Partnership Ads (Branded Content)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Meta's whitelisting system works through the Branded Content tool. The creator tags the brand as a "paid partner" on their Instagram or Facebook post. This grants the brand permission to run that post as a paid ad (called a Partnership Ad). The ad shows the creator's handle with a "Paid Partnership with [Brand]" label.</p>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator creates a post</strong> (Reel, Story, or Feed post) on Instagram or Facebook.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator enables "Paid Partnership"</strong> in advanced settings and tags the brand's account.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator toggles "Allow brand partner to promote"</strong> so the brand can use the post as an ad.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Brand creates a Partnership Ad</strong> in Ads Manager using the creator's post, with their own targeting and budget.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Key difference between platforms</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">On TikTok, Spark Ads keep all engagement (likes, comments) on the creator's original post &mdash; boosting both the paid and organic performance. On Meta, Partnership Ads create a separate ad unit &mdash; engagement on the ad is separate from the organic post. Both platforms require the "Paid Partnership" or equivalent disclosure label.</p>
+      </div>
+    </section>
+
+    <!-- 04 Comparison -->
+    <section class="guide-section" id="comparison">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Comparison</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Whitelisting vs Spark Ads vs Partnership Ads</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">"Whitelisting" is the umbrella term for running ads from a creator's account</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Spark Ads = TikTok's implementation of whitelisting</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Partnership Ads = Meta's implementation of whitelisting</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Aspect</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Spark Ads (TikTok)</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Partnership Ads (Meta)</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Brand-handle ads</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Ad appears from</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator's TikTok handle</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator's IG/FB handle</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand's account</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Disclosure label</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Sponsored" badge</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Paid Partnership with [Brand]"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Sponsored"</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Engagement flows to</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator's original post (shared)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Separate ad unit</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand's ad unit</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator setup needed</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Generate authorization code</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Tag brand + allow promotion</td><td class="px-4 py-2.5 border-b border-border text-ink-2">None</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Feels organic?</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Very much &mdash; appears in For You</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Yes &mdash; appears as creator content</td><td class="px-4 py-2.5 border-b border-border text-ink-2">No &mdash; clearly branded</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Typical performance lift</td><td class="px-4 py-2.5 text-ink-2">40&ndash;50% lower CPA vs brand ads</td><td class="px-4 py-2.5 text-ink-2">40&ndash;50% lower CPA vs brand ads</td><td class="px-4 py-2.5 text-ink-2">Baseline</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">"Whitelisting" is the industry term for this entire approach. Spark Ads and Partnership Ads are the specific platform implementations. When someone says "whitelisting," they usually mean the general concept. When they say "Spark Ads" or "Partnership Ads," they're referring to the TikTok or Meta version specifically.</p>
+      </div>
+    </section>
+
+    <!-- 05 Why Whitelisting Outperforms -->
+    <section class="guide-section" id="performance">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Performance</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why whitelisted ads outperform</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">50% lower CPA vs brand-handle ads</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">40% cheaper CPMs &mdash; platforms favor creator content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">2.4x higher CTR &mdash; viewers engage with people, not brands</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The performance data</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Across multiple campaign studies and brand case reports, whitelisted ads consistently show:</p>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>50% lower CPA</strong> &mdash; the cost of acquiring a customer through whitelisted ads is roughly half the cost of brand-handle ads with the same content</li>
+          <li><strong>40% cheaper CPMs</strong> &mdash; platforms charge less per thousand impressions for creator-handle ads because they generate higher engagement</li>
+          <li><strong>2.4x higher CTR</strong> &mdash; viewers are more likely to click on content that appears to come from a real person</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Why the performance gap exists</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Native appearance</strong> &mdash; a whitelisted ad looks like organic creator content. The viewer's ad filter doesn't activate as quickly. They watch longer and engage more.</li>
+          <li><strong>Creator trust</strong> &mdash; seeing a real person's handle and profile photo creates implicit trust. The recommendation feels personal, not commercial.</li>
+          <li><strong>Platform incentives</strong> &mdash; platforms (especially TikTok) actively prefer creator content over brand content. Their algorithms are designed to surface real people, not advertisements. Whitelisted ads get better initial distribution.</li>
+          <li><strong>Social proof</strong> &mdash; on TikTok Spark Ads, engagement from the paid campaign accumulates on the creator's original post. High like and comment counts create additional social proof that boosts performance over time.</li>
+        </ul>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The performance advantage is real and consistent. The same piece of content &mdash; identical video, identical CTA &mdash; will perform materially better when run from the creator's account versus the brand's account. This is not an opinion; it's an observable, repeatable pattern across industries and platforms.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Want OKAD to handle whitelisting for you?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We manage the entire whitelisting pipeline &mdash; creator sourcing, contracts, content production, account permissions, and ad management. You get whitelisted ads running without the operational complexity.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Order whitelisted ads &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Creator Agreements & Legal -->
+    <section class="guide-section" id="legal">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Legal</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Creator agreements and legal requirements</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A written agreement is required before running whitelisted ads</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Must specify: usage rights, duration, exclusivity, platforms, payment</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">FTC/ASA disclosure requirements apply &mdash; "Paid Partnership" label is mandatory</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What the agreement must cover</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Usage rights.</strong> Explicitly state that the brand has permission to run paid ads from the creator's account. Specify which platforms (TikTok, Meta, or both).</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Duration.</strong> How long the brand can run ads using the creator's account. Common terms: 30 days, 60 days, 90 days, or ongoing with cancellation notice. TikTok Spark Ad authorization codes have their own expiry (7, 30, or 60 days).</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Exclusivity.</strong> Whether the creator can do whitelisting deals with competing brands during the contract period. Exclusivity costs more but prevents the creator from appearing in competitor ads simultaneously.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Content ownership.</strong> Who owns the content after the contract. Typically the creator owns the content but grants the brand a license to use it for ads during the agreed period.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Payment terms.</strong> Flat fee, performance bonus, or combination. Payment schedule (upfront, on delivery, monthly). Clear deliverables and revision policy.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Disclosure compliance.</strong> The agreement should confirm that both parties will comply with FTC (US), ASA (UK), or applicable advertising disclosure regulations. Platform-native labels ("Paid Partnership") handle most requirements, but the agreement should address this explicitly.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Disclosure requirements</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Both the FTC (United States) and ASA (United Kingdom) require clear disclosure when a paid partnership exists. Platform-native labels &mdash; TikTok's "Sponsored" badge and Meta's "Paid Partnership" label &mdash; satisfy most requirements. However, if the ad appears outside these platforms (e.g., repurposed to YouTube), separate disclosure may be needed.</p>
+      </div>
+    </section>
+
+    <!-- 07 Payment & Pricing -->
+    <section class="guide-section" id="payment">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Payment</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Payment and pricing models</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Flat fee: $200&ndash;$1,000 per video (most common)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Whitelisting premium: +$100&ndash;$300 on top of content production fee</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Performance bonuses: additional payment if ad exceeds targets</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">How whitelisting pricing works</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Whitelisting involves two cost components: the content production fee (the creator films the video) and the whitelisting fee (the creator grants ad access to their account). Some creators bundle these; others charge separately.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Component</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Typical range</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Content production</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$150&ndash;$500 per video</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Same as standard <a href="/ugc-ads" class="text-accent hover:underline">UGC ad</a> production</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Whitelisting access fee</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$100&ndash;$300 per video/month</td><td class="px-4 py-2.5 border-b border-border text-ink-2">For granting ad access to their account</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Total per video (bundled)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$200&ndash;$1,000</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Content + whitelisting combined</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Exclusivity premium</td><td class="px-4 py-2.5 border-b border-border text-ink-2">+25&ndash;50%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">If brand requires category exclusivity</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Performance bonus</td><td class="px-4 py-2.5 text-ink-2">$50&ndash;$500 per milestone</td><td class="px-4 py-2.5 text-ink-2">Bonus if ad exceeds CPA or ROAS targets</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Is whitelisting worth the premium?</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The math usually works. If whitelisting costs $100&ndash;$300 extra per video but delivers 50% lower CPA, the additional production cost is recovered in the first few hundred dollars of ad spend. For any campaign spending $1K+ per month on a single creative, the whitelisting premium pays for itself quickly.</p>
+      </div>
+    </section>
+
+    <!-- 08 How to Set Up Whitelisting -->
+    <section class="guide-section" id="setup">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Setup</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to set up whitelisting</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Step 1: Sign a creator agreement covering usage rights and payment</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Step 2: Creator produces content and posts it</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Step 3: Creator grants ad access; brand runs the ads</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The whitelisting workflow</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Find and vet the creator.</strong> Look for creators whose audience matches your target demographic. For whitelisting, the creator's content quality matters more than their follower count &mdash; but their account should look like a real, active person, not a content farm.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Sign the agreement.</strong> Cover usage rights, duration, exclusivity, payment, and platform access. Both parties should be clear on what happens when the agreement ends (ads stop, access is revoked).</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Brief and produce content.</strong> Provide the creator with a brief covering hooks, key messages, tone, format, and specs. The same <a href="/ugc-ads" class="text-accent hover:underline">UGC ad production</a> principles apply.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator posts and grants access.</strong> On TikTok: creator posts the video and shares a Spark Ad authorization code. On Meta: creator posts and tags the brand as a paid partner with promotion enabled.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Brand creates the ad campaign.</strong> In the platform's Ads Manager, set up the campaign using the whitelisted post. Define targeting, budget, bidding, and schedule.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Monitor and optimize.</strong> Track performance (CPA, CTR, ROAS) and compare against brand-handle ads. Scale winners, pause underperformers, and iterate on new content with the creator.</li>
+        </ol>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailSubject} class="text-ink hover:text-accent transition-colors no-underline">OKAD manages the whitelisting workflow end to end</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Creator sourcing, contracts, content production, platform permissions, ad management, and performance optimization. We handle the operational complexity so you get whitelisted ads running without the overhead.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 Common Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Common mistakes with whitelisting</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">No written agreement = legal risk for both parties</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Expired authorization codes break live campaigns</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Using creators whose audience doesn't match the brand's target</li>
+          </ul>
+        </div>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>No written agreement.</strong> Running whitelisted ads without a signed contract covering usage rights, duration, and payment. This creates legal risk for both the brand and the creator. Always sign before granting access.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Expired authorization codes.</strong> TikTok Spark Ad codes expire after 7, 30, or 60 days. If the code expires while the campaign is running, the ads stop. Set calendar reminders and get new codes before expiry.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Wrong creator-audience match.</strong> Choosing a creator with millions of followers but the wrong audience demographic. For whitelisting, the creator's profile needs to look credible to your target audience, not just have large numbers.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Not comparing to brand-handle.</strong> Running whitelisted ads without also testing the same content from the brand's account. Always A/B test whitelisted vs brand-handle to measure the actual performance lift for your specific case.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Treating it as a one-time thing.</strong> Whitelisting works best as an ongoing relationship with a creator, not a one-off transaction. Creators who understand your brand produce better content over time. Build long-term relationships.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 10 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+
+        {[
+          { term: "Whitelisting", def: "The practice of running paid ads from a creator's personal social media account instead of the brand's account. Also called creator licensing or allowlisting." },
+          { term: "Spark Ads", def: "TikTok's native whitelisting format. The brand boosts an existing creator post as a paid ad. All engagement stays on the creator's original post." },
+          { term: "Partnership Ads", def: "Meta's whitelisting format (Instagram and Facebook). The creator tags the brand as a paid partner, allowing the brand to run the post as an ad." },
+          { term: "Branded Content tool", def: "Meta's feature that enables creators to tag brands and grant ad promotion permissions. The gateway to Partnership Ads." },
+          { term: "Authorization code", def: "A code generated by a TikTok creator that allows a brand to run their video as a Spark Ad. Expires after 7, 30, or 60 days." },
+          { term: "Allowlisting", def: "Alternative term for whitelisting, used by some agencies and platforms. Same concept — running ads from the creator's account." },
+          { term: "Creator licensing", def: "Another term for whitelisting. Emphasizes that the brand is licensing the right to use the creator's account for ads." },
+          { term: "Brand-handle ads", def: "Standard paid ads that run from the brand's own social account. The baseline against which whitelisted ads are compared." },
+          { term: "CPM", def: "Cost per mille — cost per 1,000 ad impressions. Whitelisted ads typically achieve 40% lower CPMs than brand-handle ads." },
+          { term: "CPA", def: "Cost per acquisition — cost to generate one purchase, install, or signup. Whitelisted ads typically achieve 50% lower CPA." },
+          { term: "Whitelabel UGC", def: "A different model: creator delivers raw video files, brand runs ads from brand's account. Distinct from whitelisting, where ads run from the creator's account." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What is UGC whitelisting?", a: "Whitelisting is the practice of running paid ads from a creator's personal social media account instead of the brand's account. The ad appears in the feed under the creator's handle and profile photo, looking like organic content. On TikTok, this is called Spark Ads. On Meta (Instagram/Facebook), it's called Partnership Ads." },
+          { q: "How much does whitelisting cost?", a: "Typical all-in cost: $200-$1,000 per video, covering content production and whitelisting access. Content production runs $150-$500; the whitelisting premium adds $100-$300. Exclusivity (blocking the creator from working with competitors) adds 25-50% to the fee." },
+          { q: "Why do whitelisted ads outperform brand-handle ads?", a: "Four reasons: native appearance (looks like organic content, not an ad), creator trust (viewers trust real people over brands), platform incentives (algorithms favor creator content over brand content), and accumulated social proof (on TikTok, engagement from paid campaigns builds on the organic post)." },
+          { q: "What's the difference between Spark Ads and Partnership Ads?", a: "They're both whitelisting — just on different platforms. Spark Ads are TikTok's version: the creator generates an authorization code, and engagement flows to the original post. Partnership Ads are Meta's version: the creator tags the brand as a paid partner and allows promotion. Both show the creator's handle on the ad." },
+          { q: "What's the difference between whitelisting and whitelabel UGC?", a: "Different models entirely. Whitelisting: the brand runs paid ads from the creator's personal account. The ad shows the creator's handle. Whitelabel UGC: the creator delivers raw video files and the brand runs ads from the brand's own account. The ad shows the brand's handle. See our whitelabel UGC guide for details." },
+          { q: "Do I need a contract for whitelisting?", a: "Yes, always. The agreement must cover usage rights, duration, exclusivity (if any), payment, platform access, and what happens when the contract ends. Running whitelisted ads without a signed agreement creates legal risk for both parties." },
+          { q: "How long can I run whitelisted ads?", a: "As long as the creator agreement allows and the platform access remains active. TikTok Spark Ad authorization codes expire after 7, 30, or 60 days and must be renewed. Meta Partnership Ad access persists until the creator revokes it. Set calendar reminders for renewals." },
+          { q: "Does the creator lose control of their account?", a: "No. Whitelisting does not give the brand access to the creator's account. The creator only grants permission to run specific posts as ads. They retain full control of their account, their content, and their organic posting. They can revoke ad access at any time." },
+          { q: "Can OKAD handle whitelisting for my brand?", a: "Yes. We manage the entire whitelisting pipeline: creator sourcing from our network, contract negotiation, content production, platform permissions setup, ad campaign management, and performance optimization. Write to us at olga@okad.agency." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to run whitelisted ads?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your brand and your paid advertising goals. We'll match you with creators, handle the contracts and platform setup, and get whitelisted campaigns running.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Order whitelisted ads &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on observed whitelisting campaign performance data, published platform documentation for Spark Ads and Partnership Ads, and aggregate brand case reports. The 50% lower CPA, 40% cheaper CPMs, and 2.4x higher CTR figures represent directional industry benchmarks for whitelisted vs brand-handle ads. Individual results depend on creator fit, content quality, audience targeting, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

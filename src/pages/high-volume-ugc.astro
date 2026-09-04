@@ -1,0 +1,587 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailVolume = "mailto:olga@okad.agency?subject=High-volume%20UGC%20program%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const emailGeneral = "mailto:olga@okad.agency?subject=High-volume%20UGC%20%E2%80%94%20general%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="High-Volume UGC — The Complete Guide to 50-300+ Creator Videos Per Month | OKAD"
+  description="High-volume UGC means producing 50-300+ creator videos per month systematically. This guide covers why volume is the strategy, production systems, creator management at scale, cost structures, and common mistakes."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          High-Volume UGC: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          High-volume UGC is the production cadence of 50&ndash;300+ creator videos per month. Not about individual video quality &mdash; about building a production system that generates breakout content through sheer volume of attempts.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailVolume} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Order high-volume UGC program &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>50&ndash;300+ videos/mo</span>
+          <span>$15&ndash;$30/video at scale</span>
+          <span>10&ndash;50+ creators</span>
+          <span>Power law</span>
+          <span>System &gt; talent</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How High-Volume UGC Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Brief &amp; Match</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Standardized brief templates paired with systematic creator matching to keep production moving without bottlenecks.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Produce at Scale</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Batch shooting, rapid editing, and a publishing pipeline that delivers 50&ndash;300+ videos per month consistently.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Test &amp; Learn</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Data-driven iteration across every batch. Identify breakout patterns and double down on winners.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "Why Volume Matters", href: "#why-volume" },
+            { num: "03", text: "Volume Benchmarks", href: "#benchmarks" },
+            { num: "04", text: "The Production System", href: "#production" },
+            { num: "05", text: "Creator Management at Scale", href: "#creators" },
+            { num: "06", text: "Cost Structure", href: "#cost" },
+            { num: "07", text: "High-Volume vs Traditional UGC", href: "#comparison" },
+            { num: "08", text: "Quality vs Quantity", href: "#quality" },
+            { num: "09", text: "Common Mistakes", href: "#mistakes" },
+            { num: "10", text: "Glossary", href: "#glossary" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">A production cadence, not a content type</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">High-volume UGC is a production cadence: 50&ndash;300+ creator videos per month</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Not a content category or delivery model &mdash; it describes the pace</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The point is building a system, not improving individual videos</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">High-volume UGC refers to the systematic production of 50&ndash;300+ creator videos per month for a single brand. It is not a content type (like <a href="/tech-ugc" class="text-accent hover:underline">Tech UGC</a>) or a delivery model (like <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a>). It describes the <strong>production cadence</strong> &mdash; how many videos you produce and how consistently you produce them.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The distinction matters. A brand producing 5 beautiful UGC videos per month is doing UGC. A brand producing 150 videos per month is running a high-volume UGC operation. The economics, the team structure, the tooling, and the creative strategy are fundamentally different at scale.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">High-volume UGC emerged from the realization that short-form video performance follows a power law. You cannot predict which videos will break out. The only reliable strategy is to increase the number of attempts &mdash; and that requires a production system, not just talented creators.</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Cadence:</strong> 50&ndash;300+ creator videos per month</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Creators:</strong> 10&ndash;50+ active creators per program</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Cost per video:</strong> $15&ndash;$30 at scale (Canvas programs)</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Core principle:</strong> system &gt; individual talent</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 Why Volume Matters -->
+    <section class="guide-section" id="why-volume">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Power Law</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why volume matters</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Only ~1.2% of posts cross 10,000 views</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The top 1% of posts drive ~88% of all views</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You can't predict winners &mdash; volume IS the strategy</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Short-form video performance follows a <strong>power law</strong>. The vast majority of posts get modest reach. A tiny fraction break out and generate most of the total views. No one &mdash; not creators, not agencies, not algorithms &mdash; can reliably predict which posts will be the winners before they go live.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The data is consistent across programs: only about 1.2% of posts cross 10,000 views. The top 1% of posts drive approximately 88% of all views generated. This means that for every 100 posts, roughly one or two will be responsible for the vast majority of your reach and results.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The implication</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you produce 10 videos per month, your chance of hitting a breakout is slim. If you produce 100, you are statistically likely to get 1&ndash;2 breakouts. At 300, you are generating enough signal to identify patterns, iterate on what works, and feed a continuous pipeline of winning content into paid ads or organic channels.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is why volume is not a nice-to-have &mdash; it is the strategy. More attempts mean more breakouts. More breakouts mean more learnings. More learnings mean a higher hit rate over time. Volume compounds.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Volume compounds learning</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every post teaches the team something about hooks, formats, angles, and platform behavior. Teams that produce 100+ videos per month learn faster and optimize more aggressively than teams producing 10. After three months of high-volume production, a well-run program has a dramatically better understanding of what works for their specific brand, product, and audience than any competitor running a low-volume approach.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Monthly videos</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Expected 10K+ hits</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Learning velocity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">10&ndash;20</td><td class="px-4 py-2.5 border-b border-border text-ink-2">0&ndash;1</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Slow &mdash; not enough data to iterate</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">50&ndash;80</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1&ndash;3</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Moderate &mdash; patterns start emerging</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">100&ndash;150</td><td class="px-4 py-2.5 border-b border-border text-ink-2">3&ndash;6</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Fast &mdash; compound learning kicks in</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">200&ndash;300+</td><td class="px-4 py-2.5 text-ink-2">6&ndash;12+</td><td class="px-4 py-2.5 text-ink-2">Rapid &mdash; full optimization loop</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Volume Benchmarks -->
+    <section class="guide-section" id="benchmarks">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Benchmarks</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Volume benchmarks by brand stage</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Startups: 20&ndash;50 videos per month</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Growth-stage: 50&ndash;150 videos per month</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Scale-stage: 150&ndash;300+ videos per month</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The right volume depends on your brand stage, budget, creator pool, and product complexity. There is no universal number. However, there are clear benchmarks based on what works at each stage.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Brand stage</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Videos/month</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Creators needed</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Startup</td><td class="px-4 py-2.5 border-b border-border text-ink-2">20&ndash;50</td><td class="px-4 py-2.5 border-b border-border text-ink-2">5&ndash;15</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Focus on finding product-content fit before scaling</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Growth-stage</td><td class="px-4 py-2.5 border-b border-border text-ink-2">50&ndash;150</td><td class="px-4 py-2.5 border-b border-border text-ink-2">15&ndash;30</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Product-content fit established, scaling production</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Scale-stage</td><td class="px-4 py-2.5 text-ink-2">150&ndash;300+</td><td class="px-4 py-2.5 text-ink-2">30&ndash;50+</td><td class="px-4 py-2.5 text-ink-2">Multi-platform, multi-format, full optimization loop</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Factors that affect the right volume</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Budget</strong> &mdash; more videos require more creator payments, more editing capacity, and more management overhead</li>
+          <li><strong>Creator pool</strong> &mdash; the number of available creators who can produce on-brand content limits your ceiling</li>
+          <li><strong>Product complexity</strong> &mdash; simple consumer products are easier to brief at volume than complex SaaS tools</li>
+          <li><strong>Platform count</strong> &mdash; publishing across TikTok, Instagram, YouTube, and Facebook multiplies the output needed</li>
+          <li><strong>Testing velocity</strong> &mdash; brands running aggressive <a href="/creative-testing" class="text-accent hover:underline">creative testing</a> need more raw material</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 04 The Production System -->
+    <section class="guide-section" id="production">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Production</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The production system</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A production system separates high-volume from "lots of videos"</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Five components: briefs, matching, batch shooting, editing, publishing</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Without a system, quality collapses at scale</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Producing 50&ndash;300+ videos per month is not just "more videos." It requires a fundamentally different approach. Without a production system, quality drops, deadlines slip, creators churn, and the operation becomes chaotic. The system is what separates a high-volume UGC program from a brand that just orders a lot of videos.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The five components</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Brief templates.</strong> Standardized brief formats for each content type (testimonial, tutorial, hook-first, problem-solution). Creators receive clear structure without needing a custom brief for every video. See our <a href="/guide" class="text-accent hover:underline">UGC guide</a> for brief fundamentals.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator matching.</strong> Systematic pairing of creators to content types based on strengths, past performance, and availability. Not every creator fits every brief &mdash; the matching layer ensures the right person gets the right assignment.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Batch shooting.</strong> Creators film multiple videos in a single session. A creator who shoots 8&ndash;12 videos in one batch day is far more efficient than producing one video at a time. Batching reduces per-video cost and turnaround time.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Rapid editing.</strong> A dedicated editing pipeline processes raw footage into final videos within 24&ndash;48 hours. Templates for captions, hooks, and CTAs speed up the process. At scale, editing is often the bottleneck &mdash; not filming.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Publishing pipeline.</strong> Scheduled publishing across platforms with tracking and attribution. Each video is tagged by creator, brief type, hook style, and content angle so performance data feeds back into the system.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Why the system matters</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">At 10 videos per month, a skilled operator can manage everything manually. At 100+, manual processes collapse. Brief creation becomes a bottleneck. Creator communication becomes chaotic. Editing falls behind. Publishing becomes inconsistent. The production system is not overhead &mdash; it is the infrastructure that makes high-volume possible.</p>
+      </div>
+    </section>
+
+    <!-- 05 Creator Management at Scale -->
+    <section class="guide-section" id="creators">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Creator Management</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Managing creators at scale</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">High-volume programs require 10&ndash;50+ active creators</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Quality control, scheduling, feedback loops, and onboarding must be systematized</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator churn is constant &mdash; the onboarding pipeline must always be running</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Managing 3 creators is relationship management. Managing 30+ creators is operations. At high volume, you need systems for onboarding, quality control, scheduling, feedback, and replacement. The human side of high-volume UGC is often the hardest part to get right.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Key operational areas</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Onboarding pipeline</strong> &mdash; a repeatable process that takes a new creator from application to first published video in under a week. Includes brand guidelines, brief templates, example content, and a test assignment.</li>
+          <li><strong>Quality control</strong> &mdash; every video must meet a minimum quality bar before publishing. Review cadence, revision limits, and clear acceptance criteria prevent quality from dropping as volume scales.</li>
+          <li><strong>Scheduling</strong> &mdash; coordinating filming schedules, deadlines, and publishing windows across dozens of creators requires dedicated tooling, not group chats.</li>
+          <li><strong>Feedback loops</strong> &mdash; creators need regular performance data and constructive feedback. Showing a creator which of their videos performed best (and why) is more effective than abstract quality notes.</li>
+          <li><strong>Churn management</strong> &mdash; expect 10&ndash;20% monthly creator churn. Some creators burn out, some don't meet quality standards, some find other work. The onboarding pipeline must run continuously to replace attrition.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Self-managed vs agency-managed</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Aspect</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Self-managed</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Agency-managed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator sourcing</td><td class="px-4 py-2.5 border-b border-border text-ink-2">You recruit, vet, and onboard</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Agency taps existing <a href="/creator-network" class="text-accent hover:underline">creator network</a></td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Quality control</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Your team reviews every video</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Agency handles review and revisions</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Scheduling</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Internal coordination</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Agency manages creator schedules</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Ramp-up time</td><td class="px-4 py-2.5 border-b border-border text-ink-2">4&ndash;8 weeks to build pipeline</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1&ndash;2 weeks with existing infrastructure</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Scalability</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Limited by internal team bandwidth</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Scales with agency capacity</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Best for</td><td class="px-4 py-2.5 text-ink-2">Brands with dedicated content ops team</td><td class="px-4 py-2.5 text-ink-2">Brands that want to scale fast without building in-house</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Want OKAD to run your high-volume UGC program?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We handle creator sourcing, briefing, production management, quality control, and delivery. 700+ creators in our network. You get a production engine that runs at the cadence you need.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailVolume} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Order high-volume UGC program &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Cost Structure -->
+    <section class="guide-section" id="cost">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Cost Structure</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How much high-volume UGC costs</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Canvas programs: $15&ndash;$30 per video at volume</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Whitelabel/traditional: $150&ndash;$300 per video</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Monthly retainer and hybrid models available</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Cost per video drops dramatically at high volume &mdash; but only if you use the right model. The three main pricing structures each have different economics at scale.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Model</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Cost per video</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">How it works</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Canvas UGC</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$15&ndash;$30</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creators paid per view (CPM) on brand accounts</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Maximum volume, organic reach</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Whitelabel</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$150&ndash;$300</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Flat fee per video, brand owns footage</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Paid ads, higher production value</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Monthly retainer</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Varies</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Fixed monthly fee for agreed volume + management</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Predictable budgeting, full-service</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Hybrid</td><td class="px-4 py-2.5 text-ink-2">$30&ndash;$80</td><td class="px-4 py-2.5 text-ink-2">Base fee per video + performance bonuses</td><td class="px-4 py-2.5 text-ink-2">Balancing quality incentives with volume</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Why Canvas programs are cheapest at volume</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a> programs achieve the lowest per-video cost because creators are paid for performance (views), not for production. A creator posting on a brand's account is incentivized to produce content quickly and iterate based on what gets views. The brand does not pay $200 per video regardless of performance &mdash; they pay based on actual results.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">At 100+ videos per month using a Canvas model, effective cost per video typically lands between $15&ndash;$30 including creator payments, management overhead, and editing. This is 5&ndash;10x cheaper than traditional whitelabel UGC at comparable quality levels.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Budget examples</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>50 videos/mo (Canvas)</strong> &mdash; $750&ndash;$1,500/mo in creator costs + management</li>
+          <li><strong>150 videos/mo (Canvas)</strong> &mdash; $2,250&ndash;$4,500/mo in creator costs + management</li>
+          <li><strong>50 videos/mo (whitelabel)</strong> &mdash; $7,500&ndash;$15,000/mo in production costs</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 07 High-Volume vs Traditional UGC -->
+    <section class="guide-section" id="comparison">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Comparison</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">High-volume vs traditional UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Traditional UGC: 5&ndash;20 videos/month, $150&ndash;$500/video, polished</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">High-volume UGC: 50&ndash;300+/month, $15&ndash;$80/video, systematic</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Different strategies for different goals</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Aspect</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Traditional UGC</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">High-Volume UGC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Volume</td><td class="px-4 py-2.5 border-b border-border text-ink-2">5&ndash;20 videos/month</td><td class="px-4 py-2.5 border-b border-border text-ink-2">50&ndash;300+ videos/month</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Cost per video</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$150&ndash;$500</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$15&ndash;$80 (model dependent)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Production approach</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Custom brief per video, individual production</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Template briefs, batch shooting, pipeline</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator count</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1&ndash;5 creators</td><td class="px-4 py-2.5 border-b border-border text-ink-2">10&ndash;50+ creators</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Quality model</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Maximum polish per video</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Minimum quality bar + maximum quantity</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Best fit</td><td class="px-4 py-2.5 text-ink-2">Hero ads, landing pages, brand campaigns</td><td class="px-4 py-2.5 text-ink-2">Organic scale, <a href="/ugc-ads" class="text-accent hover:underline">creative testing</a>, content engine</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Neither approach is universally better. Traditional UGC produces polished, high-production assets for hero campaigns and paid ads. High-volume UGC builds a content engine that generates breakouts through volume and iteration. Many brands use both &mdash; high-volume for organic scale and testing, traditional for their top-tier paid creative.</p>
+      </div>
+    </section>
+
+    <!-- 08 Quality vs Quantity -->
+    <section class="guide-section" id="quality">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Quality Balance</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Quality vs quantity: finding the balance</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The formula: minimum quality bar + maximum quantity = optimal output</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Over-polishing kills volume; no standards kill the brand</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Define the quality bar explicitly, then produce as much as possible above it</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most common debate in high-volume UGC is quality versus quantity. It is a false dichotomy when framed as an either/or choice. The correct approach is: <strong>define a minimum quality bar, then produce the maximum quantity above that bar.</strong></p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What the quality bar includes</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Clear audio</strong> &mdash; the viewer can understand every word without effort</li>
+          <li><strong>Adequate lighting</strong> &mdash; the creator's face and any product are clearly visible</li>
+          <li><strong>On-brand messaging</strong> &mdash; the video communicates the right message and does not misrepresent the product</li>
+          <li><strong>Platform-native format</strong> &mdash; vertical, correct aspect ratio, appropriate length, captions</li>
+          <li><strong>Strong hook</strong> &mdash; the first 1&ndash;3 seconds give the viewer a reason to keep watching</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The two common mistakes</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Mistake 1: sacrificing quality for speed.</strong> Brands push creators to produce faster, skip review steps, and publish everything. The result is a flood of low-quality content that damages brand perception and gets suppressed by algorithms. Volume without a quality floor is waste.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Mistake 2: over-polishing at the expense of volume.</strong> Brands spend days perfecting each video, require multiple rounds of revisions, and produce 10 beautiful videos per month instead of 100 good ones. The math does not work &mdash; 10 perfect videos will almost certainly underperform 100 good ones because the power law demands volume.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The optimal zone is clear: define explicit quality standards that every video must meet, then maximize the number of videos that clear that bar. Do not invest in making good videos perfect &mdash; invest in making more good videos.</p>
+      </div>
+    </section>
+
+    <!-- 09 Common Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Common Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Common mistakes in high-volume UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most programs fail on operations, not creative</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The biggest risks: too few creators, no system, ignoring data</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every mistake below is avoidable with the right infrastructure</li>
+          </ul>
+        </div>
+
+        <ul class="pl-5 mb-4 space-y-3 text-ink-2">
+          <li><strong>Not enough creators.</strong> Relying on 3&ndash;5 creators for a high-volume program is fragile. One creator goes on vacation and output drops 25%. Build a bench of 15&ndash;50+ creators with a continuous sourcing pipeline. See our <a href="/ugc-creator" class="text-accent hover:underline">UGC creator guide</a> for sourcing strategies.</li>
+          <li><strong>No testing framework.</strong> Producing 100 videos per month without systematically tracking what works is just noise. Every video should be tagged by hook type, format, angle, and creator. Performance data should feed back into brief templates within days, not months.</li>
+          <li><strong>No brief templates.</strong> Writing a custom brief for every video does not scale. Standardized brief templates for each content type (testimonial, tutorial, problem-solution, reaction) let creators self-serve and reduce the briefing bottleneck.</li>
+          <li><strong>Manual processes.</strong> Managing 50+ creators, 200+ videos, and 4 platforms with spreadsheets and group chats breaks down fast. High-volume programs need dedicated tooling for assignment tracking, review workflows, and publishing schedules.</li>
+          <li><strong>Ignoring data.</strong> The entire point of high volume is generating enough data to learn. Programs that produce at scale but never analyze which hooks, formats, and creators drive results are wasting the primary advantage of the model.</li>
+          <li><strong>No quality bar.</strong> Volume without standards produces garbage. Define explicit minimum requirements for audio, lighting, messaging, and format. Reject videos that don't meet the bar &mdash; it is cheaper to reshoot than to publish bad content.</li>
+          <li><strong>Scaling too fast.</strong> Going from 0 to 200 videos per month in week one is a recipe for chaos. Start at 30&ndash;50, build the system, then scale. The infrastructure needs to be proven before you push volume.</li>
+          <li><strong>Single-platform dependency.</strong> Publishing all content on one platform is risky. Algorithm changes, account restrictions, or policy shifts can wipe out an entire channel overnight. Distribute across TikTok, Instagram, YouTube, and Facebook.</li>
+        </ul>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailVolume} class="text-ink hover:text-accent transition-colors no-underline">OKAD manages high-volume UGC programs end to end</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Creator sourcing, briefing, production management, quality control, and delivery. 700+ creators in our network. We build and run the production system so you don't have to.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+
+        {[
+          { term: "High-volume UGC", def: "A production cadence of 50-300+ creator videos per month for a single brand. Describes the pace and scale of production, not the content type or delivery model." },
+          { term: "Power law", def: "The distribution pattern where a tiny percentage of posts generate the vast majority of views. In short-form video, ~1.2% of posts cross 10K views, and the top 1% drives ~88% of all views." },
+          { term: "Hit rate", def: "The percentage of videos that cross a defined performance threshold (e.g., 10K views, 100K views). Higher hit rate = more efficient production. Volume increases total hits even at the same hit rate." },
+          { term: "Brief template", def: "A standardized content brief format for a specific video type (testimonial, tutorial, problem-solution). Enables creators to self-serve and reduces the briefing bottleneck at scale." },
+          { term: "Batch shooting", def: "Filming multiple videos in a single session. A creator shooting 8-12 videos in one batch day is far more efficient than producing one video at a time." },
+          { term: "Creator network", def: "A managed pool of vetted creators available for assignment. OKAD's network includes 700+ creators across niches, languages, and content styles." },
+          { term: "Quality bar", def: "The minimum standard every video must meet before publishing: clear audio, adequate lighting, on-brand messaging, platform-native format, and a strong hook." },
+          { term: "Volume benchmark", def: "The recommended monthly video output for a given brand stage. Startups: 20-50, growth: 50-150, scale: 150-300+." },
+          { term: "Creative testing", def: "Systematically testing different hooks, formats, angles, and creators to identify what drives performance. High volume provides the raw material for testing at scale." },
+          { term: "Canvas UGC", def: "A delivery model where creators post on brand-owned social accounts and get paid per view. The lowest cost-per-video model for high-volume production. See the full Canvas UGC guide." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What is high-volume UGC?", a: "High-volume UGC is the systematic production of 50-300+ creator videos per month for a single brand. It is a production cadence, not a content type or delivery model. The focus is on building a production system that generates breakout content through volume of attempts, leveraging the power law of short-form video performance." },
+          { q: "How many videos per month is high-volume?", a: "The threshold depends on brand stage. Startups typically produce 20-50 videos per month, growth-stage brands 50-150, and scale-stage brands 150-300+. Generally, 50+ videos per month is where high-volume operations begin and dedicated production systems become necessary." },
+          { q: "Why does volume matter more than individual quality?", a: "Short-form video follows a power law: only ~1.2% of posts cross 10K views, and the top 1% drives ~88% of all views. No one can predict which videos will break out. Volume increases the number of attempts, which increases the number of breakouts. 100 good videos will almost always outperform 10 perfect ones." },
+          { q: "How much does high-volume UGC cost?", a: "Cost per video varies by model. Canvas UGC programs achieve $15-$30 per video at volume. Whitelabel UGC costs $150-$300 per video. Hybrid models fall between $30-$80. A 100-video/month Canvas program typically costs $1,500-$3,000/month in creator payments plus management overhead." },
+          { q: "How many creators do I need?", a: "Plan for 10-50+ active creators depending on volume targets. A 50-video/month program needs 10-15 creators. A 150-video/month program needs 25-35. A 300+ program needs 40-50+. Always maintain a sourcing pipeline because 10-20% monthly churn is normal." },
+          { q: "What's the difference between high-volume and traditional UGC?", a: "Traditional UGC produces 5-20 polished videos per month at $150-$500 each with 1-5 creators. High-volume UGC produces 50-300+ videos per month at $15-$80 each with 10-50+ creators. Traditional optimizes for individual video quality; high-volume optimizes for system output and statistical breakouts." },
+          { q: "Do I need a testing framework?", a: "Yes. Producing at high volume without tracking what works wastes the primary advantage of the model. Every video should be tagged by hook type, format, angle, and creator. Performance data should feed back into brief templates within days. Without a testing framework, you are just producing noise, not learning." },
+          { q: "What tech stack do I need?", a: "At minimum: a project management tool for creator assignments, a review/approval workflow, a publishing scheduler, and an analytics dashboard that tracks performance by creator, hook type, and format. At 100+ videos per month, spreadsheet-based tracking breaks down and dedicated tooling becomes essential." },
+          { q: "What are the most common mistakes?", a: "The biggest mistakes are: not having enough creators (single point of failure), no brief templates (briefing bottleneck), no testing framework (no learning from volume), manual processes that break at scale, ignoring performance data, and scaling too fast before the system is proven." },
+          { q: "Can OKAD run a high-volume UGC program for my brand?", a: "Yes. We handle creator sourcing from our 700+ creator network, brief development, production management, quality control, and delivery. We run programs from 50 to 300+ videos per month. Write to us at olga@okad.agency and tell us about your brand and volume goals." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to scale your UGC production?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your brand, your volume goals, and your timeline. We'll scope a high-volume program, source the creators, build the system, and run production.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailVolume} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Order high-volume UGC program &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on observed high-volume UGC program structures, creator marketplace data, and public short-form platform dynamics. The 1.2% breakout rate and 88% view concentration figures come from aggregate data across multiple UGC programs. Cost ranges and volume benchmarks are directional, not guarantees. Individual results depend on niche, content quality, creator pool, platform dynamics, and program operations.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
