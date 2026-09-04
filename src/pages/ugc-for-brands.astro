@@ -3,32 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-const faqs = [
-  {
-    q: "How much does UGC content cost per video?",
-    a: "Rates depend on deliverable complexity, usage scope, and creator tier. A single whitelabel video from a mid-level creator typically runs $200 to $450. When you factor in ad usage rights for 90 days across Meta and TikTok, expect $350 to $800 per asset. Volume packages — 10 or more videos per month — bring the per-unit cost down 20 to 35 percent. At OKAD we quote fixed project pricing so there are no surprises.",
-  },
-  {
-    q: "What is the difference between UGC and influencer marketing?",
-    a: "Influencer marketing pays for distribution — you are renting someone's audience. UGC pays for production skill — you own the content and run it through your own ad accounts. The creator's follower count is irrelevant in UGC. What matters is their ability to deliver authentic, high-converting video that performs in paid media.",
-  },
-  {
-    q: "How long does it take to receive finished UGC videos?",
-    a: "From brief approval to final delivery, most projects take 10 to 14 business days. That includes creator matching (2 to 3 days), product shipping if needed (3 to 5 days), filming and editing (3 to 5 days), and one round of revisions (1 to 2 days). Rush timelines of 5 to 7 days are possible with creators who already have the product.",
-  },
-  {
-    q: "Do we need to ship products to every creator?",
-    a: "For physical products, yes — creators need the real item to film authentic content. Digital products, apps, and services can be demonstrated via screen recordings or access credentials. At OKAD we coordinate all product shipments, provide tracking, and confirm receipt before filming begins.",
-  },
-  {
-    q: "Can we use UGC videos as paid ads?",
-    a: "Yes, and that is the primary use case. UGC videos consistently outperform studio-produced ads on Meta, TikTok, and YouTube Shorts. The key is securing proper usage rights upfront. Every OKAD contract includes ad usage licensing with clear duration and platform terms so your media buying team can run campaigns without legal ambiguity.",
-  },
-  {
-    q: "How do you match creators to our brand?",
-    a: "We filter from our network of 700+ vetted creators based on product category, target demographic, content style, language, and location. You receive a shortlist of 3 to 5 creators with portfolio samples relevant to your niche. You approve the final selection before any filming begins.",
-  },
-];
+const emailUGC = "mailto:olga@okad.agency?subject=UGC%20for%20brands%20%E2%80%94%20tell%20us%20about%20your%20project";
+const emailGeneral = "mailto:olga@okad.agency?subject=UGC%20for%20brands%20%E2%80%94%20general%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
 ---
 
 <Layout
@@ -39,461 +16,486 @@ const faqs = [
   <main>
 
     <!-- Hero -->
-    <section class="pt-20 md:pt-24">
-      <div class="max-w-[780px] mx-auto px-6 pt-12 md:pt-16 pb-8 text-center">
-        <div class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium uppercase tracking-[.06em] text-ink-2 mb-6">
-          <strong class="text-accent font-semibold">#UGC</strong>
-          <span class="text-muted-2">&middot;</span>
-          <strong class="text-accent font-semibold">#BRANDS</strong>
-          <span class="text-muted-2">&middot;</span>
-          <strong class="text-accent font-semibold">#CREATOR_MANAGEMENT</strong>
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
         </div>
-
-        <h1 class="font-display font-bold text-[clamp(32px,5.5vw,48px)] leading-[1.1] tracking-[-0.035em] mb-6 text-ink">
-          UGC for Brands: How to Hire and<br />
-          <span class="font-script text-accent text-[1.1em]">Manage Creators</span><br />
-          That Actually Convert
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          UGC for Brands: <span class="text-accent">How to Hire and Manage Creators</span>
         </h1>
-
-        <p class="text-[17px] text-ink-2 leading-[1.65] max-w-[620px] mx-auto mb-8">
-          Your customers trust real people more than polished studio ads. This guide breaks down everything a marketing team needs to know about sourcing, vetting, briefing, and scaling user-generated content — from first hire to a full production pipeline.
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Your customers trust real people more than polished studio ads. This guide breaks down everything a marketing team needs to know about sourcing, vetting, briefing, and scaling user-generated content &mdash; from first hire to a full production pipeline.
         </p>
-
-        <div class="flex flex-wrap gap-2.5 justify-center mb-6">
-          <span class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-accent-bg border border-accent/15 text-accent font-medium">700+ vetted creators</span>
-          <span class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-accent-bg border border-accent/15 text-accent font-medium">10,000+ ads delivered</span>
-          <span class="inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[13px] bg-accent-bg border border-accent/15 text-accent font-medium">DTC &middot; SaaS &middot; E-com</span>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Book a strategy call &rarr;</a>
+          <a href={emailUGC} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Email us &rarr;</a>
         </div>
-
-        <div class="flex flex-wrap gap-2.5 justify-center">
-          <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-lime text-ink hover:bg-[#b8e537] transition-all no-underline">
-            Book a strategy call &rarr;
-          </a>
-          <a href="mailto:olga@okad.agency" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-white text-ink border border-[#d1d5db] hover:border-ink hover:bg-ink hover:text-white transition-all no-underline">
-            Email us &rarr;
-          </a>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>700+ vetted creators</span>
+          <span>10,000+ ads delivered</span>
+          <span>DTC &middot; SaaS &middot; E-com</span>
+          <span>30+ niches</span>
+          <span>15 languages</span>
         </div>
       </div>
     </section>
 
-    <!-- Table of Contents -->
+    <!-- How it works grid -->
     <section class="py-8">
-      <div class="max-w-[780px] mx-auto px-6">
-        <div class="bg-card border border-border rounded-2xl p-6 md:p-8">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-4">In this guide</p>
-          <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2">
-            <a href="#what-is-ugc" class="text-[14px] text-ink-2 hover:text-accent transition-colors no-underline py-1">1. What UGC actually means for paid media</a>
-            <a href="#where-to-find" class="text-[14px] text-ink-2 hover:text-accent transition-colors no-underline py-1">2. Where to find UGC creators</a>
-            <a href="#how-to-vet" class="text-[14px] text-ink-2 hover:text-accent transition-colors no-underline py-1">3. How to vet creators before hiring</a>
-            <a href="#rate-benchmarks" class="text-[14px] text-ink-2 hover:text-accent transition-colors no-underline py-1">4. Rate benchmarks and pricing models</a>
-            <a href="#writing-briefs" class="text-[14px] text-ink-2 hover:text-accent transition-colors no-underline py-1">5. How to write a brief that works</a>
-            <a href="#managing-creators" class="text-[14px] text-ink-2 hover:text-accent transition-colors no-underline py-1">6. Managing creators at scale</a>
-            <a href="#measuring-performance" class="text-[14px] text-ink-2 hover:text-accent transition-colors no-underline py-1">7. Measuring content performance</a>
-            <a href="#building-pipeline" class="text-[14px] text-ink-2 hover:text-accent transition-colors no-underline py-1">8. Building a repeatable pipeline</a>
-            <a href="#common-mistakes" class="text-[14px] text-ink-2 hover:text-accent transition-colors no-underline py-1">9. Common mistakes brands make</a>
-            <a href="#faq" class="text-[14px] text-ink-2 hover:text-accent transition-colors no-underline py-1">10. FAQ</a>
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How UGC for Brands Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Source &amp; Vet Creators</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Filter from 700+ vetted creators by niche, language, and style. Run paid tests before committing to volume orders.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Brief, Produce &amp; QC</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Structured briefs with hook variations. Three-stage QC catches 95% of issues before delivery.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Test, Scale &amp; Optimize</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Run UGC as paid ads on Meta and TikTok. Track CPA by creator. Scale winners, phase out underperformers.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Article Body -->
-    <section class="py-8 md:py-12">
-      <div class="max-w-[780px] mx-auto px-6">
-
-        <!-- Section 1: What UGC Is -->
-        <div id="what-is-ugc" class="mb-16 scroll-mt-24">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 01</p>
-          <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-6 text-ink">
-            What UGC Actually Means for Paid Media
-          </h2>
-          <div class="space-y-4 text-[16px] text-ink-2 leading-[1.75]">
-            <p>
-              User-generated content in a marketing context is not the same as a customer leaving a spontaneous review on Amazon. When brands talk about UGC today, they mean professionally produced video that <strong class="text-ink">looks</strong> organic — filmed by real people on real phones in real environments — but is strategically scripted, directed, and optimized for ad performance.
-            </p>
-            <p>
-              The distinction matters because it shapes how you budget, brief, and measure results. A UGC creator is not an influencer. You are not paying for their audience. You are paying for their ability to deliver content that feels native to social feeds while following direct-response principles: a strong hook in the first two seconds, a clear pain-point articulation, social proof, and a call to action.
-            </p>
-            <p>
-              Performance data consistently backs this up. Across our client base at OKAD, UGC-style ads deliver 30 to 65 percent lower cost per acquisition compared to polished studio creative on Meta and TikTok. The reason is straightforward: platform algorithms reward content that keeps users engaged, and users engage with content that resembles what their friends post — not what looks like a television commercial.
-            </p>
-            <p>
-              For marketing managers, the operational implication is clear. UGC is not a creative format you experiment with once. It is the foundational layer of any performance creative strategy in 2026. If your brand is spending more than $10,000 per month on paid social, you need a systematic approach to sourcing, producing, and testing UGC at volume.
-            </p>
-          </div>
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "What UGC Actually Means for Paid Media", href: "#what-is-ugc" },
+            { num: "02", text: "Where to Find UGC Creators", href: "#where-to-find" },
+            { num: "03", text: "How to Vet Creators Before Hiring", href: "#how-to-vet" },
+            { num: "04", text: "Rate Benchmarks & Pricing Models", href: "#rate-benchmarks" },
+            { num: "05", text: "How to Write a Brief That Works", href: "#writing-briefs" },
+            { num: "06", text: "Managing Creators at Scale", href: "#managing-creators" },
+            { num: "07", text: "Measuring Content Performance", href: "#measuring-performance" },
+            { num: "08", text: "Building a Repeatable Pipeline", href: "#building-pipeline" },
+            { num: "09", text: "Common Mistakes Brands Make", href: "#common-mistakes" },
+            { num: "10", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
         </div>
-
-        <!-- Section 2: Where to Find Creators -->
-        <div id="where-to-find" class="mb-16 scroll-mt-24">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 02</p>
-          <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-6 text-ink">
-            Where to Find UGC Creators
-          </h2>
-          <div class="space-y-4 text-[16px] text-ink-2 leading-[1.75]">
-            <p>
-              There are five primary channels for sourcing UGC creators, and each one comes with trade-offs in speed, quality, and cost.
-            </p>
-
-            <h3 class="font-display font-semibold text-[18px] text-ink tracking-[-0.01em] pt-2">Creator marketplaces</h3>
-            <p>
-              Platforms like Billo, Insense, and JoinBrands let you post a brief and receive applications. The upside is speed — you can have creator options within 24 hours. The downside is inconsistency. Marketplace creators apply to dozens of briefs simultaneously, and quality ranges wildly. You will spend significant time reviewing portfolios and managing revisions.
-            </p>
-
-            <h3 class="font-display font-semibold text-[18px] text-ink tracking-[-0.01em] pt-2">Social media outreach</h3>
-            <p>
-              Searching TikTok, Instagram Reels, and YouTube Shorts for creators already making content in your niche gives you the highest signal on style fit. The challenge is that cold outreach conversion rates sit around 5 to 10 percent, and the process is manual and slow. Most marketing teams burn 15 to 20 hours per month on outreach alone.
-            </p>
-
-            <h3 class="font-display font-semibold text-[18px] text-ink tracking-[-0.01em] pt-2">Freelancer platforms</h3>
-            <p>
-              Fiverr and Upwork have UGC creators, but the term gets diluted. Many sellers offer templated videos with stock footage overlays. Genuine UGC requires the creator to physically interact with your product. Always request portfolio samples showing real product integration before committing.
-            </p>
-
-            <h3 class="font-display font-semibold text-[18px] text-ink tracking-[-0.01em] pt-2">Referrals from other brands</h3>
-            <p>
-              If you are in a DTC community or Slack group, asking peers who they use is one of the most reliable sourcing methods. Creators who have delivered for similar brands carry lower risk. The limitation is scale — referrals give you two or three names, not the 15 to 20 you need for proper creative testing.
-            </p>
-
-            <h3 class="font-display font-semibold text-[18px] text-ink tracking-[-0.01em] pt-2">UGC-focused agencies</h3>
-            <p>
-              Working with a specialized creative agency eliminates the sourcing bottleneck entirely. At OKAD, we maintain a vetted network of 700+ creators across 30+ niches and 15 languages. When a client needs 20 videos for a creative testing sprint, we match creators from an existing pool instead of starting from scratch. The trade-off is cost — agency pricing includes project management, quality control, and revisions — but for brands spending $30K or more per month on paid media, the time savings more than justify the investment.
-            </p>
-          </div>
-        </div>
-
-        <!-- Section 3: How to Vet -->
-        <div id="how-to-vet" class="mb-16 scroll-mt-24">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 03</p>
-          <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-6 text-ink">
-            How to Vet Creators Before Hiring
-          </h2>
-          <div class="space-y-4 text-[16px] text-ink-2 leading-[1.75]">
-            <p>
-              A creator's portfolio tells you what they are capable of. A paid test tells you what they will actually deliver for your brand. Both steps are non-negotiable.
-            </p>
-            <p>
-              <strong class="text-ink">Portfolio review checklist:</strong> Look at video quality on mobile (not desktop — your audience sees it on a phone). Check lighting consistency across multiple clips. Listen to audio — background noise and echo are the most common quality issues. Evaluate hook variety: can this creator open a video five different ways, or do they rely on the same pattern? Finally, watch for genuine product interaction. Creators who hold the product, use it on camera, and speak about it naturally will outperform those who film talking heads with the product sitting on a shelf.
-            </p>
-            <p>
-              <strong class="text-ink">The paid test:</strong> Before committing to a volume order, commission one video. Give the creator a real brief with a specific hook, key messages, and a CTA. Pay full rate — never ask for free samples. Evaluate turnaround time, communication quality, willingness to follow direction, and the final output. A creator who delivers a strong paid test on time and asks clarifying questions is worth ten creators with impressive portfolios who ghost after the deposit.
-            </p>
-            <p>
-              <strong class="text-ink">Red flags to watch for:</strong> Creators who cannot show content for products they actually received and used. Portfolios built entirely from one brand (suggests they recycle the same approach). Slow response times during the proposal stage — this only gets worse after payment. Resistance to revisions or unwillingness to follow a script structure.
-            </p>
-          </div>
-        </div>
-
-        <!-- Section 4: Rate Benchmarks -->
-        <div id="rate-benchmarks" class="mb-16 scroll-mt-24">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 04</p>
-          <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-6 text-ink">
-            Rate Benchmarks and Pricing Models
-          </h2>
-          <div class="space-y-4 text-[16px] text-ink-2 leading-[1.75]">
-            <p>
-              UGC pricing has three components that should always be quoted separately: the creation fee, usage rights, and any add-ons like raw footage delivery or additional hooks.
-            </p>
-          </div>
-
-          <!-- Pricing Table -->
-          <div class="overflow-x-auto my-8">
-            <table class="w-full text-[14px] border-collapse">
-              <thead>
-                <tr class="border-b-2 border-border">
-                  <th class="text-left font-display font-semibold text-ink py-3 pr-4">Deliverable</th>
-                  <th class="text-left font-display font-semibold text-ink py-3 pr-4">Entry-Level Creator</th>
-                  <th class="text-left font-display font-semibold text-ink py-3 pr-4">Mid-Level Creator</th>
-                  <th class="text-left font-display font-semibold text-ink py-3">Top-Tier Creator</th>
-                </tr>
-              </thead>
-              <tbody class="text-ink-2">
-                <tr class="border-b border-border">
-                  <td class="py-3 pr-4 font-medium text-ink">Single video (30-60s)</td>
-                  <td class="py-3 pr-4">$100 &ndash; $200</td>
-                  <td class="py-3 pr-4">$200 &ndash; $450</td>
-                  <td class="py-3">$450 &ndash; $800</td>
-                </tr>
-                <tr class="border-b border-border">
-                  <td class="py-3 pr-4 font-medium text-ink">30-day ad usage rights</td>
-                  <td class="py-3 pr-4">+50%</td>
-                  <td class="py-3 pr-4">+50 &ndash; 75%</td>
-                  <td class="py-3">+75 &ndash; 100%</td>
-                </tr>
-                <tr class="border-b border-border">
-                  <td class="py-3 pr-4 font-medium text-ink">90-day ad usage rights</td>
-                  <td class="py-3 pr-4">+100%</td>
-                  <td class="py-3 pr-4">+100 &ndash; 150%</td>
-                  <td class="py-3">+150 &ndash; 200%</td>
-                </tr>
-                <tr class="border-b border-border">
-                  <td class="py-3 pr-4 font-medium text-ink">Perpetual / unlimited rights</td>
-                  <td class="py-3 pr-4">+200%</td>
-                  <td class="py-3 pr-4">+200 &ndash; 300%</td>
-                  <td class="py-3">+300 &ndash; 400%</td>
-                </tr>
-                <tr class="border-b border-border">
-                  <td class="py-3 pr-4 font-medium text-ink">Additional hook variation</td>
-                  <td class="py-3 pr-4">$30 &ndash; $50</td>
-                  <td class="py-3 pr-4">$50 &ndash; $100</td>
-                  <td class="py-3">$100 &ndash; $150</td>
-                </tr>
-                <tr>
-                  <td class="py-3 pr-4 font-medium text-ink">Monthly retainer (8-12 videos)</td>
-                  <td class="py-3 pr-4">$1,000 &ndash; $2,000</td>
-                  <td class="py-3 pr-4">$2,000 &ndash; $4,000</td>
-                  <td class="py-3">$4,000 &ndash; $8,000</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="space-y-4 text-[16px] text-ink-2 leading-[1.75]">
-            <p>
-              Volume discounts are standard. Ordering 10 or more videos in a single batch typically reduces per-unit costs by 20 to 35 percent. Monthly retainers lock in better rates and ensure creator availability. When evaluating agency pricing, compare the all-in cost per usable asset — including project management, revisions, and usage rights — not just the raw creator fee.
-            </p>
-          </div>
-        </div>
-
-        <!-- Section 5: Writing Briefs -->
-        <div id="writing-briefs" class="mb-16 scroll-mt-24">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 05</p>
-          <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-6 text-ink">
-            How to Write a Brief That Gets Usable Content
-          </h2>
-          <div class="space-y-4 text-[16px] text-ink-2 leading-[1.75]">
-            <p>
-              The brief is the single highest-leverage document in your UGC workflow. A vague brief produces content you cannot use. An overly prescriptive brief produces content that feels stiff and defeats the purpose of UGC. The goal is structured flexibility.
-            </p>
-            <p>
-              <strong class="text-ink">Every brief should include these seven elements:</strong>
-            </p>
-            <ol class="list-decimal list-outside ml-6 space-y-3">
-              <li><strong class="text-ink">Product overview:</strong> What the product does, who it serves, and one sentence on why it exists. Ship the product with the brief if physical.</li>
-              <li><strong class="text-ink">Target viewer:</strong> Describe the person watching the ad. Age range, pain points, what they are doing when they see this content. "Women 25-40 scrolling Instagram after putting kids to bed" is useful. "Women 25-40" is not.</li>
-              <li><strong class="text-ink">Hook options:</strong> Provide 3 to 5 specific opening lines or visual hooks. The first two seconds determine whether someone watches or scrolls. Never leave this to the creator's discretion on a first project.</li>
-              <li><strong class="text-ink">Key messages:</strong> List 2 to 3 benefits or proof points the video must cover. Prioritize them. If the video can only fit one, which one matters most?</li>
-              <li><strong class="text-ink">CTA:</strong> What should the viewer do? Visit a landing page, download an app, use a discount code. Be specific about the action and any promo details.</li>
-              <li><strong class="text-ink">Visual direction:</strong> Lighting preference (natural daylight, warm indoor), setting (kitchen, bathroom, desk), wardrobe notes if relevant. Include 2 to 3 reference videos that show the tone and energy you want.</li>
-              <li><strong class="text-ink">Technical specs:</strong> Aspect ratio (9:16 for Reels/TikTok, 1:1 for feed), duration range (15 to 45 seconds), whether you need raw footage in addition to the edited version, and file delivery format.</li>
-            </ol>
-            <p>
-              At OKAD, we build brief templates for each client during onboarding. Once the template exists, spinning up a new batch of 10 to 20 videos takes hours, not days. The brief becomes a reusable asset that improves with each production cycle.
-            </p>
-          </div>
-        </div>
-
-        <!-- Mid-article CTA -->
-        <div class="my-16 rounded-3xl p-8 md:p-10" style="background: rgba(99,102,241,.04)">
-          <div class="text-center max-w-[520px] mx-auto">
-            <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Ready to start?</p>
-            <h3 class="font-display font-bold text-[clamp(20px,3vw,26px)] leading-[1.2] tracking-[-0.02em] mb-4 text-ink">
-              Let us handle creator sourcing, briefing, and QA
-            </h3>
-            <p class="text-[15px] text-ink-2 leading-[1.6] mb-6">
-              Book a 20-minute strategy call. We will review your current creative, identify gaps, and outline a UGC plan tailored to your ad spend and growth targets.
-            </p>
-            <div class="flex flex-wrap gap-2.5 justify-center">
-              <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">
-                Book a call &rarr;
-              </a>
-              <a href="mailto:olga@okad.agency" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full font-sans text-[13px] font-semibold bg-white text-ink border border-[#d1d5db] hover:border-ink transition-all no-underline">
-                olga@okad.agency
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Section 6: Managing Creators -->
-        <div id="managing-creators" class="mb-16 scroll-mt-24">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 06</p>
-          <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-6 text-ink">
-            Managing Creators Without Losing Your Mind
-          </h2>
-          <div class="space-y-4 text-[16px] text-ink-2 leading-[1.75]">
-            <p>
-              One creator is manageable. Ten creators producing 40 videos per month across four product lines is a logistics operation. The brands that scale UGC successfully treat creator management like supply chain management — with systems, not heroics.
-            </p>
-            <p>
-              <strong class="text-ink">Communication structure:</strong> Set expectations on day one. Define your feedback turnaround time (we recommend 24 hours), number of included revision rounds (two is standard), and the escalation path if something goes wrong. Use a shared project board — Notion, Asana, or even a structured Google Sheet — so both sides see deadlines, deliverable status, and feedback in one place.
-            </p>
-            <p>
-              <strong class="text-ink">Contracts and usage rights:</strong> Never start production without a signed agreement covering deliverables, payment terms, revision policy, usage rights duration, and exclusivity if applicable. Verbal agreements lead to disputes. A simple two-page contract protects both parties and takes 15 minutes to set up.
-            </p>
-            <p>
-              <strong class="text-ink">Payment timing:</strong> The industry standard is 50 percent upfront and 50 percent on delivery. Some brands pay 100 percent on delivery for established relationships. Regardless of structure, pay on time. Creators talk to each other. A reputation for late payments dries up your talent pool faster than anything else.
-            </p>
-            <p>
-              <strong class="text-ink">Quality control process:</strong> Review raw footage before the creator invests time in editing. A 30-second raw clip review catches framing issues, audio problems, and script deviations before they become expensive re-shoots. At OKAD we run a three-stage QC process — raw footage check, rough cut review, final delivery approval — that catches 95 percent of issues before the client ever sees the content.
-            </p>
-          </div>
-        </div>
-
-        <!-- Section 7: Measuring Performance -->
-        <div id="measuring-performance" class="mb-16 scroll-mt-24">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 07</p>
-          <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-6 text-ink">
-            Measuring UGC Performance
-          </h2>
-          <div class="space-y-4 text-[16px] text-ink-2 leading-[1.75]">
-            <p>
-              Content production without performance measurement is a cost center. Content production with systematic measurement is a growth engine. Here are the metrics that matter and the benchmarks to aim for.
-            </p>
-            <p>
-              <strong class="text-ink">Hook rate (3-second view rate):</strong> The percentage of viewers who watch past the first three seconds. This measures how well your opening grabs attention. Benchmark: 30 percent or higher on Meta, 40 percent or higher on TikTok. If you are below these thresholds, the problem is the hook, not the rest of the video.
-            </p>
-            <p>
-              <strong class="text-ink">Hold rate (view-to-25% and view-to-50%):</strong> How much of the video people actually watch. Strong UGC holds 50 percent of viewers to the midpoint. If viewers drop off sharply after the hook, the body content is not delivering on the promise the hook made.
-            </p>
-            <p>
-              <strong class="text-ink">Click-through rate (CTR):</strong> For ads driving to a landing page, aim for 1.5 percent or higher on Meta and 0.8 percent or higher on TikTok. Low CTR with high hold rate usually means a weak or missing CTA.
-            </p>
-            <p>
-              <strong class="text-ink">Cost per acquisition (CPA):</strong> The ultimate metric. Compare UGC ads against your studio creative, static ads, and other formats. Track CPA by creator, by hook style, and by product to identify what combinations produce the best results.
-            </p>
-            <p>
-              <strong class="text-ink">Creative fatigue timeline:</strong> UGC ads on Meta typically maintain performance for 10 to 21 days before fatigue sets in. TikTok creative fatigues faster — often 7 to 14 days. This determines your production cadence. If you are running $50K per month in ad spend, you need 15 to 25 fresh UGC assets every two weeks to maintain performance.
-            </p>
-          </div>
-        </div>
-
-        <!-- Section 8: Building a Pipeline -->
-        <div id="building-pipeline" class="mb-16 scroll-mt-24">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 08</p>
-          <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-6 text-ink">
-            Building a Repeatable Content Pipeline
-          </h2>
-          <div class="space-y-4 text-[16px] text-ink-2 leading-[1.75]">
-            <p>
-              The brands winning with UGC are not the ones who produce the best individual video. They are the ones who produce the most testable variations the fastest. Creative testing is a volume game, and volume requires a pipeline.
-            </p>
-            <p>
-              <strong class="text-ink">Phase 1 — Foundation (Month 1):</strong> Hire 3 to 5 creators through paid tests. Build your first brief template. Produce 10 to 15 videos targeting your core product. Run them as ads, identify the top 2 to 3 performers, and document what worked — hook style, creator energy, product angle.
-            </p>
-            <p>
-              <strong class="text-ink">Phase 2 — Expansion (Months 2-3):</strong> Double your creator roster to 8 to 10 active creators. Introduce hook variation testing — same script body with 3 to 5 different opening hooks per video. Begin testing different content formats: testimonial, problem-solution, unboxing, day-in-the-life, comparison. Aim for 20 to 30 new assets per month.
-            </p>
-            <p>
-              <strong class="text-ink">Phase 3 — Scale (Month 4+):</strong> Establish a rolling two-week production cycle. Maintain a creator bench of 15 to 20 vetted creators who can be activated within 48 hours. Implement a creative scorecard that tags every asset by hook type, creator, format, and product — so your media buyer can pull performance patterns and feed insights back into briefing. At this stage, you should be producing 40 to 60 assets per month and spending less time per asset than you did in month one.
-            </p>
-            <p>
-              This is exactly the model we run for clients at OKAD. We handle the entire pipeline — creator matching, brief creation, production management, QC, and delivery — while the brand's marketing team focuses on media buying and strategy. Most clients reach Phase 3 within 90 days of onboarding.
-            </p>
-          </div>
-        </div>
-
-        <!-- Section 9: Common Mistakes -->
-        <div id="common-mistakes" class="mb-16 scroll-mt-24">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 09</p>
-          <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-6 text-ink">
-            Nine Mistakes Brands Make With UGC
-          </h2>
-          <div class="space-y-4 text-[16px] text-ink-2 leading-[1.75]">
-            <ol class="list-decimal list-outside ml-6 space-y-4">
-              <li><strong class="text-ink">Treating UGC as a one-time experiment.</strong> Running three videos, seeing mediocre results, and concluding "UGC does not work for us." Creative testing requires statistical significance. You need 15 to 20 variations minimum to identify a winner with confidence.</li>
-              <li><strong class="text-ink">Skipping the paid test.</strong> Hiring a creator based on their portfolio and ordering 10 videos immediately. If the first delivery is unusable, you have wasted thousands of dollars and weeks of timeline.</li>
-              <li><strong class="text-ink">Writing vague briefs.</strong> "Make a fun video about our product" is not a brief. It is a recipe for content you will not use. Every brief needs a specific hook, defined messages, and a clear CTA.</li>
-              <li><strong class="text-ink">Ignoring usage rights.</strong> Running a creator's video as a paid ad without a written usage agreement exposes your brand to legal risk. Separate creation fees from usage fees. Put platform and duration terms in writing.</li>
-              <li><strong class="text-ink">Paying below market rate.</strong> Budget creators deliver budget content. If a video is going to have $10,000 of ad spend behind it, the difference between a $150 video and a $350 video is negligible relative to the cost of running a low-performing ad.</li>
-              <li><strong class="text-ink">Not testing hooks separately.</strong> The hook determines 80 percent of a video's performance. If you produce one video with one hook, you are running one test. Produce one video with four hook variations, and you are running four tests for roughly the same production cost.</li>
-              <li><strong class="text-ink">Managing everything in email.</strong> Email threads bury feedback, miss deadlines, and create confusion when multiple stakeholders are involved. Use a project management tool. It takes 30 minutes to set up and saves hours every week.</li>
-              <li><strong class="text-ink">Failing to track performance by creator.</strong> Not all creators perform equally in ads. Track CPA, hook rate, and hold rate by creator. Double down on top performers. Phase out underperformers. This simple feedback loop improves your average content quality month over month.</li>
-              <li><strong class="text-ink">Not budgeting for ad usage rights.</strong> A $300 video with 90-day unlimited ad rights costs $600 to $900 all-in. Brands that budget only the base creation fee are consistently surprised when the real invoice arrives. Build usage rights into your content budget from day one.</li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- Section 10: FAQ -->
-        <div id="faq" class="mb-16 scroll-mt-24">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-3">Section 10</p>
-          <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] leading-[1.15] tracking-[-0.03em] mb-6 text-ink">
-            Frequently Asked Questions
-          </h2>
-          <div class="space-y-4">
-            {faqs.map((faq) => (
-              <details class="group bg-card border border-border rounded-2xl overflow-hidden">
-                <summary class="flex items-center justify-between cursor-pointer px-6 py-5 text-[16px] font-semibold text-ink hover:text-accent transition-colors list-none [&::-webkit-details-marker]:hidden">
-                  <span>{faq.q}</span>
-                  <svg class="w-5 h-5 text-muted-2 shrink-0 ml-4 transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14" /></svg>
-                </summary>
-                <div class="px-6 pb-5 text-[15px] text-ink-2 leading-[1.7]">
-                  {faq.a}
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- Bottom CTA -->
-    <section class="bg-dark py-16 md:py-20">
-      <div class="max-w-[1080px] mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-5">
-          <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 transition-transform hover:-translate-y-0.5">
-            <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-4">Work with OKAD</p>
-            <h2 class="font-display font-bold text-[clamp(24px,4vw,32px)] tracking-[-0.02em] text-white mb-4">
-              Stop Searching for Creators. Start Scaling Content.
-            </h2>
-            <p class="text-[17px] text-white/60 leading-[1.55] mb-8">
-              We source, vet, brief, and manage UGC creators so your team can focus on media buying and strategy. 700+ vetted creators. 10,000+ ads delivered. From your first UGC test to 50+ videos per month.
-            </p>
-            <div class="space-y-2.5 mb-8">
-              <p class="text-[13px] text-white/40">Founder: Olga Kad Miller</p>
-              <p class="text-[13px] text-white/40">Email: <a href="mailto:olga@okad.agency" class="text-white hover:text-accent transition-colors no-underline">olga@okad.agency</a></p>
-              <p class="text-[13px] text-white/40">WhatsApp: <a href="https://wa.me/351939209099" class="text-white hover:text-accent transition-colors no-underline">+351 939 209 099</a></p>
-            </div>
-            <div class="flex flex-wrap gap-2.5">
-              <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 bg-lime text-ink text-[13px] font-semibold rounded-full hover:bg-[#b8e537] transition-colors no-underline">Book a call &rarr;</a>
-              <a href="mailto:olga@okad.agency" class="inline-flex items-center px-5 py-2.5 bg-white text-ink text-[13px] font-semibold rounded-full hover:bg-border transition-colors no-underline">Email Us</a>
-              <a href="https://www.linkedin.com/in/o-kad/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 text-white/60 text-[13px] font-semibold rounded-full border border-white/15 hover:text-white hover:border-white/40 transition-colors no-underline">LinkedIn</a>
-            </div>
-          </div>
+    <!-- 01 What UGC Is -->
+    <section class="guide-section" id="what-is-ugc">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What UGC actually means for paid media</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">UGC in marketing = professionally produced video that looks organic</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You pay for production skill, not audience &mdash; creators are not influencers</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">UGC ads deliver 30&ndash;65% lower CPA vs studio creative on Meta and TikTok</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">User-generated content in a marketing context is not the same as a customer leaving a spontaneous review on Amazon. When brands talk about UGC today, they mean professionally produced video that <strong>looks</strong> organic &mdash; filmed by real people on real phones in real environments &mdash; but is strategically scripted, directed, and optimized for ad performance.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The distinction matters because it shapes how you budget, brief, and measure results. A UGC creator is not an influencer. You are not paying for their audience. You are paying for their ability to deliver content that feels native to social feeds while following direct-response principles: a strong hook in the first two seconds, a clear pain-point articulation, social proof, and a call to action.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Performance data consistently backs this up. Across our client base at OKAD, UGC-style ads deliver 30 to 65 percent lower cost per acquisition compared to polished studio creative on Meta and TikTok. The reason is straightforward: platform algorithms reward content that keeps users engaged, and users engage with content that resembles what their friends post &mdash; not what looks like a television commercial.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For marketing managers, the operational implication is clear. UGC is not a creative format you experiment with once. It is the foundational layer of any performance creative strategy in 2026. If your brand is spending more than $10,000 per month on paid social, you need a systematic approach to sourcing, producing, and testing UGC at volume.</p>
+      </div>
+    </section>
 
-          <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 transition-transform hover:-translate-y-0.5">
-            <p class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-white/40 mb-4">What you get</p>
-            <ul class="space-y-4">
-              <li class="flex gap-3">
-                <span class="text-accent text-[18px] leading-none mt-0.5">&#10003;</span>
-                <div>
-                  <p class="text-[15px] font-semibold text-white mb-1">Creator matching from 700+ vetted network</p>
-                  <p class="text-[13px] text-white/50 leading-[1.5]">Filtered by niche, language, style, and proven ad performance. Shortlist delivered in 48 hours.</p>
-                </div>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-accent text-[18px] leading-none mt-0.5">&#10003;</span>
-                <div>
-                  <p class="text-[15px] font-semibold text-white mb-1">End-to-end production management</p>
-                  <p class="text-[13px] text-white/50 leading-[1.5]">Briefing, product shipment coordination, filming oversight, three-stage QC, and on-time delivery.</p>
-                </div>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-accent text-[18px] leading-none mt-0.5">&#10003;</span>
-                <div>
-                  <p class="text-[15px] font-semibold text-white mb-1">Hook variation testing built in</p>
-                  <p class="text-[13px] text-white/50 leading-[1.5]">Every video comes with 3 to 5 hook alternatives so your media buyer can test what grabs attention.</p>
-                </div>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-accent text-[18px] leading-none mt-0.5">&#10003;</span>
-                <div>
-                  <p class="text-[15px] font-semibold text-white mb-1">Usage rights and contracts handled</p>
-                  <p class="text-[13px] text-white/50 leading-[1.5]">Every deliverable includes clear ad usage licensing. No legal ambiguity for your media buying team.</p>
-                </div>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-accent text-[18px] leading-none mt-0.5">&#10003;</span>
-                <div>
-                  <p class="text-[15px] font-semibold text-white mb-1">Scalable from 5 to 60+ videos per month</p>
-                  <p class="text-[13px] text-white/50 leading-[1.5]">Start with a small test batch. Scale to full production pipeline within 90 days.</p>
-                </div>
-              </li>
-            </ul>
+    <!-- 02 Where to Find Creators -->
+    <section class="guide-section" id="where-to-find">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Sourcing</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Where to find UGC creators</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Five sourcing channels: marketplaces, social outreach, freelancer platforms, referrals, agencies</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each channel has trade-offs in speed, quality, and cost</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Agencies eliminate the sourcing bottleneck entirely</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">There are five primary channels for sourcing UGC creators, and each one comes with trade-offs in speed, quality, and cost.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Creator marketplaces</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Platforms like Billo, Insense, and JoinBrands let you post a brief and receive applications. The upside is speed &mdash; you can have creator options within 24 hours. The downside is inconsistency. Marketplace creators apply to dozens of briefs simultaneously, and quality ranges wildly. You will spend significant time reviewing portfolios and managing revisions.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Social media outreach</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Searching TikTok, Instagram Reels, and YouTube Shorts for creators already making content in your niche gives you the highest signal on style fit. The challenge is that cold outreach conversion rates sit around 5 to 10 percent, and the process is manual and slow. Most marketing teams burn 15 to 20 hours per month on outreach alone.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Freelancer platforms</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Fiverr and Upwork have UGC creators, but the term gets diluted. Many sellers offer templated videos with stock footage overlays. Genuine UGC requires the creator to physically interact with your product. Always request portfolio samples showing real product integration before committing.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Referrals from other brands</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you are in a DTC community or Slack group, asking peers who they use is one of the most reliable sourcing methods. Creators who have delivered for similar brands carry lower risk. The limitation is scale &mdash; referrals give you two or three names, not the 15 to 20 you need for proper creative testing.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">UGC-focused agencies</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Working with a specialized creative agency eliminates the sourcing bottleneck entirely. At OKAD, we maintain a vetted network of 700+ creators across 30+ niches and 15 languages. When a client needs 20 videos for a creative testing sprint, we match creators from an existing pool instead of starting from scratch. The trade-off is cost &mdash; agency pricing includes project management, quality control, and revisions &mdash; but for brands spending $30K or more per month on paid media, the time savings more than justify the investment.</p>
+      </div>
+    </section>
+
+    <!-- 03 How to Vet -->
+    <section class="guide-section" id="how-to-vet">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Vetting</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to vet creators before hiring</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Portfolio review + paid test &mdash; both steps are non-negotiable</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Always review on mobile, not desktop &mdash; your audience sees it on a phone</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A strong paid test beats an impressive portfolio every time</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A creator's portfolio tells you what they are capable of. A paid test tells you what they will actually deliver for your brand. Both steps are non-negotiable.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Portfolio review checklist</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Look at video quality on mobile (not desktop &mdash; your audience sees it on a phone). Check lighting consistency across multiple clips. Listen to audio &mdash; background noise and echo are the most common quality issues. Evaluate hook variety: can this creator open a video five different ways, or do they rely on the same pattern? Finally, watch for genuine product interaction. Creators who hold the product, use it on camera, and speak about it naturally will outperform those who film talking heads with the product sitting on a shelf.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The paid test</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before committing to a volume order, commission one video. Give the creator a real brief with a specific hook, key messages, and a CTA. Pay full rate &mdash; never ask for free samples. Evaluate turnaround time, communication quality, willingness to follow direction, and the final output. A creator who delivers a strong paid test on time and asks clarifying questions is worth ten creators with impressive portfolios who ghost after the deposit.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Red flags to watch for</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Recycled portfolios</strong> &mdash; creators who cannot show content for products they actually received and used</li>
+          <li><strong>Single-brand portfolios</strong> &mdash; built entirely from one brand, suggests they recycle the same approach</li>
+          <li><strong>Slow response times</strong> &mdash; during the proposal stage this only gets worse after payment</li>
+          <li><strong>Revision resistance</strong> &mdash; unwillingness to follow a script structure or accept feedback</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 04 Rate Benchmarks -->
+    <section class="guide-section" id="rate-benchmarks">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Pricing</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Rate benchmarks and pricing models</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Single video: $100&ndash;$800 depending on creator tier</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Always quote creation fee, usage rights, and add-ons separately</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Volume packages reduce per-unit cost by 20&ndash;35%</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">UGC pricing has three components that should always be quoted separately: the creation fee, usage rights, and any add-ons like raw footage delivery or additional hooks.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Deliverable</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Entry-Level</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Mid-Level</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Top-Tier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Single video (30&ndash;60s)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$100&ndash;$200</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$200&ndash;$450</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$450&ndash;$800</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">30-day ad usage rights</td><td class="px-4 py-2.5 border-b border-border text-ink-2">+50%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">+50&ndash;75%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">+75&ndash;100%</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">90-day ad usage rights</td><td class="px-4 py-2.5 border-b border-border text-ink-2">+100%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">+100&ndash;150%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">+150&ndash;200%</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Perpetual / unlimited</td><td class="px-4 py-2.5 border-b border-border text-ink-2">+200%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">+200&ndash;300%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">+300&ndash;400%</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Additional hook variation</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$30&ndash;$50</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$50&ndash;$100</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$100&ndash;$150</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Monthly retainer (8&ndash;12 vids)</td><td class="px-4 py-2.5 text-ink-2">$1,000&ndash;$2,000</td><td class="px-4 py-2.5 text-ink-2">$2,000&ndash;$4,000</td><td class="px-4 py-2.5 text-ink-2">$4,000&ndash;$8,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Volume discounts are standard. Ordering 10 or more videos in a single batch typically reduces per-unit costs by 20 to 35 percent. Monthly retainers lock in better rates and ensure creator availability. When evaluating agency pricing, compare the all-in cost per usable asset &mdash; including project management, revisions, and usage rights &mdash; not just the raw creator fee.</p>
+      </div>
+    </section>
+
+    <!-- 05 Writing Briefs -->
+    <section class="guide-section" id="writing-briefs">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Briefing</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to write a brief that gets usable content</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The brief is the single highest-leverage document in your UGC workflow</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every brief needs seven elements: product, viewer, hooks, messages, CTA, visuals, specs</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Goal is structured flexibility &mdash; not vague, not overly prescriptive</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The brief is the single highest-leverage document in your UGC workflow. A vague brief produces content you cannot use. An overly prescriptive brief produces content that feels stiff and defeats the purpose of UGC. The goal is structured flexibility.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Seven elements every brief must include</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Product overview.</strong> What the product does, who it serves, and one sentence on why it exists. Ship the product with the brief if physical.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Target viewer.</strong> Describe the person watching the ad. Age range, pain points, what they are doing when they see this content. "Women 25&ndash;40 scrolling Instagram after putting kids to bed" is useful. "Women 25&ndash;40" is not.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Hook options.</strong> Provide 3 to 5 specific opening lines or visual hooks. The first two seconds determine whether someone watches or scrolls. Never leave this to the creator's discretion on a first project.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Key messages.</strong> List 2 to 3 benefits or proof points the video must cover. Prioritize them. If the video can only fit one, which one matters most?</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>CTA.</strong> What should the viewer do? Visit a landing page, download an app, use a discount code. Be specific about the action and any promo details.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Visual direction.</strong> Lighting preference (natural daylight, warm indoor), setting (kitchen, bathroom, desk), wardrobe notes if relevant. Include 2 to 3 reference videos that show the tone and energy you want.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Technical specs.</strong> Aspect ratio (9:16 for Reels/TikTok, 1:1 for feed), duration range (15 to 45 seconds), whether you need raw footage in addition to the edited version, and file delivery format.</li>
+        </ol>
+
+        <p class="text-ink-2 leading-[1.65] mt-6 mb-4">At OKAD, we build brief templates for each client during onboarding. Once the template exists, spinning up a new batch of 10 to 20 videos takes hours, not days. The brief becomes a reusable asset that improves with each production cycle.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Let us handle creator sourcing, briefing, and QA</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Book a 20-minute strategy call. We will review your current creative, identify gaps, and outline a UGC plan tailored to your ad spend and growth targets.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+            <a href={emailUGC} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Email us &rarr;</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 06 Managing Creators -->
+    <section class="guide-section" id="managing-creators">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Management</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Managing creators at scale</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">10+ creators producing 40 videos/month = supply chain management</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Set communication structure, contracts, and payment timing on day one</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Three-stage QC catches 95% of issues before client delivery</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">One creator is manageable. Ten creators producing 40 videos per month across four product lines is a logistics operation. The brands that scale UGC successfully treat creator management like supply chain management &mdash; with systems, not heroics.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Communication structure</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Set expectations on day one. Define your feedback turnaround time (we recommend 24 hours), number of included revision rounds (two is standard), and the escalation path if something goes wrong. Use a shared project board &mdash; Notion, Asana, or even a structured Google Sheet &mdash; so both sides see deadlines, deliverable status, and feedback in one place.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Contracts and usage rights</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Never start production without a signed agreement covering deliverables, payment terms, revision policy, usage rights duration, and exclusivity if applicable. Verbal agreements lead to disputes. A simple two-page contract protects both parties and takes 15 minutes to set up.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Payment timing</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The industry standard is 50 percent upfront and 50 percent on delivery. Some brands pay 100 percent on delivery for established relationships. Regardless of structure, pay on time. Creators talk to each other. A reputation for late payments dries up your talent pool faster than anything else.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Quality control process</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Review raw footage before the creator invests time in editing. A 30-second raw clip review catches framing issues, audio problems, and script deviations before they become expensive re-shoots. At OKAD we run a three-stage QC process &mdash; raw footage check, rough cut review, final delivery approval &mdash; that catches 95 percent of issues before the client ever sees the content.</p>
+      </div>
+    </section>
+
+    <!-- 07 Measuring Performance -->
+    <section class="guide-section" id="measuring-performance">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Performance</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Measuring UGC performance</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Key metrics: hook rate, hold rate, CTR, CPA, creative fatigue timeline</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">UGC ads on Meta fatigue in 10&ndash;21 days; TikTok in 7&ndash;14 days</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Track CPA by creator, hook style, and product to find winning combos</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Content production without performance measurement is a cost center. Content production with systematic measurement is a growth engine. Here are the metrics that matter and the benchmarks to aim for.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What it measures</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Benchmark</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Hook rate (3s view rate)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">How well the opening grabs attention</td><td class="px-4 py-2.5 border-b border-border text-ink-2">30%+ Meta, 40%+ TikTok</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Hold rate (25%/50% view)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">How much of the video people watch</td><td class="px-4 py-2.5 border-b border-border text-ink-2">50% of viewers to midpoint</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Click-through rate (CTR)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Percentage who click to landing page</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1.5%+ Meta, 0.8%+ TikTok</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Cost per acquisition (CPA)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">The ultimate performance metric</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Compare vs studio creative</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Creative fatigue</td><td class="px-4 py-2.5 text-ink-2">How long before performance degrades</td><td class="px-4 py-2.5 text-ink-2">10&ndash;21 days Meta, 7&ndash;14 days TikTok</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">If you are below hook rate thresholds, the problem is the hook, not the rest of the video. If viewers drop off sharply after the hook, the body content is not delivering on the promise the hook made. Low CTR with high hold rate usually means a weak or missing CTA.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Creative fatigue determines your production cadence. If you are running $50K per month in ad spend, you need 15 to 25 fresh UGC assets every two weeks to maintain performance.</p>
+      </div>
+    </section>
+
+    <!-- 08 Building a Pipeline -->
+    <section class="guide-section" id="building-pipeline">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Pipeline</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Building a repeatable content pipeline</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Winning brands produce the most testable variations the fastest</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Three phases: Foundation (Month 1), Expansion (Months 2&ndash;3), Scale (Month 4+)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most OKAD clients reach Phase 3 within 90 days of onboarding</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The brands winning with UGC are not the ones who produce the best individual video. They are the ones who produce the most testable variations the fastest. Creative testing is a volume game, and volume requires a pipeline.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Phase 1 &mdash; Foundation (Month 1)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Hire 3 to 5 creators through paid tests. Build your first brief template. Produce 10 to 15 videos targeting your core product. Run them as ads, identify the top 2 to 3 performers, and document what worked &mdash; hook style, creator energy, product angle.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Phase 2 &mdash; Expansion (Months 2&ndash;3)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Double your creator roster to 8 to 10 active creators. Introduce hook variation testing &mdash; same script body with 3 to 5 different opening hooks per video. Begin testing different content formats: testimonial, problem-solution, unboxing, day-in-the-life, comparison. Aim for 20 to 30 new assets per month.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Phase 3 &mdash; Scale (Month 4+)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Establish a rolling two-week production cycle. Maintain a creator bench of 15 to 20 vetted creators who can be activated within 48 hours. Implement a creative scorecard that tags every asset by hook type, creator, format, and product &mdash; so your media buyer can pull performance patterns and feed insights back into briefing. At this stage, you should be producing 40 to 60 assets per month and spending less time per asset than you did in month one.</p>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailUGC} class="text-ink hover:text-accent transition-colors no-underline">OKAD runs this exact pipeline for clients end to end</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Creator matching, brief creation, production management, QC, and delivery &mdash; while your marketing team focuses on media buying and strategy. Most clients reach Phase 3 within 90 days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 Common Mistakes -->
+    <section class="guide-section" id="common-mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Nine mistakes brands make with UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Treating UGC as a one-time experiment instead of a systematic approach</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Skipping paid tests, writing vague briefs, ignoring usage rights</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Not tracking performance by creator &mdash; the key feedback loop</li>
+          </ul>
+        </div>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Treating UGC as a one-time experiment.</strong> Running three videos, seeing mediocre results, and concluding "UGC does not work for us." Creative testing requires statistical significance. You need 15 to 20 variations minimum to identify a winner with confidence.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Skipping the paid test.</strong> Hiring a creator based on their portfolio and ordering 10 videos immediately. If the first delivery is unusable, you have wasted thousands of dollars and weeks of timeline.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Writing vague briefs.</strong> "Make a fun video about our product" is not a brief. It is a recipe for content you will not use. Every brief needs a specific hook, defined messages, and a clear CTA.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Ignoring usage rights.</strong> Running a creator's video as a paid ad without a written usage agreement exposes your brand to legal risk. Separate creation fees from usage fees. Put platform and duration terms in writing.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Paying below market rate.</strong> Budget creators deliver budget content. If a video is going to have $10,000 of ad spend behind it, the difference between a $150 video and a $350 video is negligible relative to the cost of running a low-performing ad.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Not testing hooks separately.</strong> The hook determines 80 percent of a video's performance. Produce one video with four hook variations, and you are running four tests for roughly the same production cost.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Managing everything in email.</strong> Email threads bury feedback, miss deadlines, and create confusion. Use a project management tool. It takes 30 minutes to set up and saves hours every week.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Failing to track performance by creator.</strong> Not all creators perform equally in ads. Track CPA, hook rate, and hold rate by creator. Double down on top performers. Phase out underperformers.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Not budgeting for ad usage rights.</strong> A $300 video with 90-day unlimited ad rights costs $600 to $900 all-in. Brands that budget only the base creation fee are consistently surprised when the real invoice arrives. Build usage rights into your content budget from day one.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 10 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "How much does UGC content cost per video?", a: "Rates depend on deliverable complexity, usage scope, and creator tier. A single whitelabel video from a mid-level creator typically runs $200 to $450. When you factor in ad usage rights for 90 days across Meta and TikTok, expect $350 to $800 per asset. Volume packages — 10 or more videos per month — bring the per-unit cost down 20 to 35 percent. At OKAD we quote fixed project pricing so there are no surprises." },
+          { q: "What is the difference between UGC and influencer marketing?", a: "Influencer marketing pays for distribution — you are renting someone's audience. UGC pays for production skill — you own the content and run it through your own ad accounts. The creator's follower count is irrelevant in UGC. What matters is their ability to deliver authentic, high-converting video that performs in paid media." },
+          { q: "How long does it take to receive finished UGC videos?", a: "From brief approval to final delivery, most projects take 10 to 14 business days. That includes creator matching (2 to 3 days), product shipping if needed (3 to 5 days), filming and editing (3 to 5 days), and one round of revisions (1 to 2 days). Rush timelines of 5 to 7 days are possible with creators who already have the product." },
+          { q: "Do we need to ship products to every creator?", a: "For physical products, yes — creators need the real item to film authentic content. Digital products, apps, and services can be demonstrated via screen recordings or access credentials. At OKAD we coordinate all product shipments, provide tracking, and confirm receipt before filming begins." },
+          { q: "Can we use UGC videos as paid ads?", a: "Yes, and that is the primary use case. UGC videos consistently outperform studio-produced ads on Meta, TikTok, and YouTube Shorts. The key is securing proper usage rights upfront. Every OKAD contract includes ad usage licensing with clear duration and platform terms so your media buying team can run campaigns without legal ambiguity." },
+          { q: "How do you match creators to our brand?", a: "We filter from our network of 700+ vetted creators based on product category, target demographic, content style, language, and location. You receive a shortlist of 3 to 5 creators with portfolio samples relevant to your niche. You approve the final selection before any filming begins." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Stop searching for creators. Start scaling content.</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We source, vet, brief, and manage UGC creators so your team can focus on media buying and strategy. 700+ vetted creators. 10,000+ ads delivered. From your first UGC test to 50+ videos per month.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+            <a href={emailUGC} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Email us &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on OKAD's operational data from managing 700+ creators and delivering 10,000+ UGC assets for DTC, SaaS, and e-commerce brands. Rate benchmarks reflect 2025&ndash;2026 market pricing across multiple creator tiers and geographies. Performance benchmarks (hook rate, hold rate, CTR, CPA) are directional ranges from aggregate campaign data on Meta and TikTok. Individual results depend on product category, creative quality, targeting, and ad spend levels.</p>
       </div>
     </section>
 
   </main>
   <Footer />
 </Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

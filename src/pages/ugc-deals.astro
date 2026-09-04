@@ -2,298 +2,418 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+const emailCreator = "mailto:olga@okad.agency?subject=UGC%20Creator%20Application";
+const emailBrand = "mailto:olga@okad.agency?subject=UGC%20brand%20deal%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
 ---
 
 <Layout
-  title="How to Get UGC Brand Deals: A Step-by-Step Guide | OKAD"
+  title="How to Get UGC Brand Deals — The Complete Guide | OKAD"
   description="Learn how to land UGC brand deals from scratch. OKAD Agency breaks down profile optimization, finding brands, writing pitches, negotiating rates, delivering content, and building consistent creator income."
 >
   <Header />
   <main>
 
     <!-- Hero -->
-    <section class="pt-20 md:pt-24">
-      <div class="max-w-[720px] mx-auto px-6 pt-12 md:pt-16 pb-8">
-        <a href="/" class="inline-flex items-center gap-1 text-[13px] text-muted hover:text-accent transition-colors no-underline mb-6">
-          &larr; Back to OKAD
-        </a>
-        <div class="inline-flex items-center gap-1.5 font-mono text-[12px] font-medium uppercase tracking-[.06em] text-ink-2 mb-4">
-          <strong class="text-accent font-semibold">#UGC</strong>
-          <span class="text-muted-2">&middot;</span>
-          <strong class="text-accent font-semibold">#BRAND_DEALS</strong>
-          <span class="text-muted-2">&middot;</span>
-          <strong class="text-accent font-semibold">#CREATOR_INCOME</strong>
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
         </div>
-        <h1 class="font-display font-bold text-[clamp(28px,5vw,40px)] leading-[1.1] tracking-[-0.03em] mb-4 text-ink">
-          How to Get UGC Brand Deals: A Step-by-Step Guide
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          How to Get UGC Brand Deals: <span class="text-accent">A Step-by-Step Guide</span>
         </h1>
-        <div class="flex items-center gap-2 text-[13px] text-muted-2 mb-8">
-          <span>OKAD Agency</span>
-          <span>&middot;</span>
-          <span>20 min read</span>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          We have sourced, briefed, and managed over 600 UGC creators at OKAD. This guide distills what we have learned from both sides of the table into a practical roadmap for creators who want to move from zero deals to reliable monthly income.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailCreator} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Join our creator network &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
         </div>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          We have sourced, briefed, and managed over 600 UGC creators at OKAD. We see the pitches that land on brand desks every day. We also see the ones that get deleted in two seconds. This guide distills what we have learned from both sides of the table into a practical roadmap for creators who want to move from zero deals to reliable monthly income.
-        </p>
-        <p class="text-[16px] text-ink-2 leading-[1.75]">
-          Whether you are filming your first sample video or trying to break past the feast-or-famine cycle, every section below is built on patterns we see working right now, in real campaigns, with real budgets. No theory. No motivational fluff. Just the steps that actually produce signed deals.
-        </p>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>600+ creators managed</span>
+          <span>$150&ndash;$500/video</span>
+          <span>30-day action plan</span>
+          <span>Pitch templates</span>
+          <span>Rate negotiation</span>
+        </div>
       </div>
     </section>
 
-    <!-- Article Body -->
-    <section class="pb-16 md:pb-20">
-      <div class="max-w-[720px] mx-auto px-6">
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Landing Brand Deals in Three Steps</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Build Your Portfolio</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Optimize your profile, film spec content, and demonstrate range across formats before you pitch a single brand.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4E8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Pitch &amp; Negotiate</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Find brands actively buying UGC, send personalized pitches, and negotiate rates with structure instead of guesswork.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Deliver &amp; Scale</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Over-deliver on quality and timing, turn one-off gigs into retainers, and build consistent $3K&ndash;$15K+/month income.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Section 1: Optimize Profile & Portfolio -->
-        <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] mt-10 mb-4 pt-2 text-ink">1. Optimize Your Profile and Portfolio Before Anything Else</h2>
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Profile & Portfolio", href: "#portfolio" },
+            { num: "02", text: "Where to Find Brands", href: "#find-brands" },
+            { num: "03", text: "Writing Pitches That Get Replies", href: "#pitches" },
+            { num: "04", text: "Negotiating Rates", href: "#rates" },
+            { num: "05", text: "Delivering Content", href: "#delivery" },
+            { num: "06", text: "Scaling to Consistent Income", href: "#scaling" },
+            { num: "07", text: "Common Mistakes", href: "#mistakes" },
+            { num: "08", text: "30-Day Action Plan", href: "#action-plan" },
+            { num: "09", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
 
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Every brand you contact will do the same thing within ten seconds of reading your message: click your link and decide if your work is worth a reply. If that link leads to a chaotic Google Drive folder, an Instagram feed full of personal photos, or worse, nothing at all, the conversation ends before it begins.
-        </p>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Your portfolio is your storefront. At OKAD, when we evaluate creators for our campaigns, we look for four things in a portfolio, and we decide within thirty seconds:
-        </p>
-        <ul class="text-[16px] text-ink-2 leading-[1.75] mb-4 ml-6 list-disc space-y-2">
-          <li><strong class="text-ink font-semibold">Range of formats</strong> &mdash; talking-head reviews, product demonstrations, unboxings, testimonials. Show that you can adapt to different briefs, not just repeat one style.</li>
-          <li><strong class="text-ink font-semibold">Production baseline</strong> &mdash; clean audio, stable footage, proper lighting. You do not need cinema-grade equipment, but you need to prove that your content will not need a reshoot.</li>
-          <li><strong class="text-ink font-semibold">Hook awareness</strong> &mdash; the first three seconds of every sample video should demonstrate that you understand how to capture attention. Brands care about thumb-stop rate above almost everything else.</li>
-          <li><strong class="text-ink font-semibold">Niche clarity</strong> &mdash; if you create for beauty, show beauty content. If you do tech reviews, show tech. A portfolio that tries to cover everything signals that you have not found your lane yet.</li>
-        </ul>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          <strong class="text-ink font-semibold">Social profiles matter too.</strong> Even though UGC is not about your follower count, brands will check your Instagram or TikTok to confirm you are a real person. Make sure your bio clearly states that you create UGC content, lists the niches you serve, and includes a way to contact you. Remove anything that contradicts the professional image you are building.
-        </p>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          If you do not have paid work to show yet, create spec content. Pick three to five products you already own, film sample videos as though a brand had hired you, and treat those as your portfolio. Many creators in our network started with exactly this approach and booked their first paid deal within weeks.
-        </p>
+    <!-- 01 Profile & Portfolio -->
+    <section class="guide-section" id="portfolio">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Portfolio</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Optimize your profile and portfolio before anything else</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Your portfolio is your storefront &mdash; brands decide in 30 seconds</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Show range: talking-head, demos, unboxings, testimonials</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">No paid work yet? Film spec content with products you own</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every brand you contact will do the same thing within ten seconds of reading your message: click your link and decide if your work is worth a reply. If that link leads to a chaotic Google Drive folder, an Instagram feed full of personal photos, or worse, nothing at all, the conversation ends before it begins.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Your portfolio is your storefront. At OKAD, when we evaluate creators for our campaigns, we look for four things in a portfolio, and we decide within thirty seconds:</p>
 
-        <!-- Section 2: Where to Find Brands -->
-        <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] mt-10 mb-4 pt-2 text-ink">2. Where to Find Brands That Actually Pay for UGC</h2>
-
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          The biggest mistake new creators make is assuming brands will find them. They will not. Even creators who post consistently and use all the right hashtags sit around waiting for inbound messages that rarely arrive. The creators who earn steadily are the ones who go looking for opportunities.
-        </p>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Here are the channels that consistently produce real, paying brand deals, ranked by how likely they are to convert:
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Creator platforms and marketplaces</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Platforms like Collabstr, Billo, Insense, and newer entrants connect creators directly with brands posting active briefs. Create profiles on multiple platforms to maximize your visibility. These are especially effective when you are starting out because the brand has already committed budget and is actively seeking creators.
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Agency creator networks</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Production agencies like OKAD maintain vetted creator rosters. Getting into a managed network means consistent briefs, reliable payment, and structured feedback on your work. The trade-off is that rates may be standardized, but the volume and reliability often make up for it. We onboard new creators every month for our client campaigns and prioritize reliability and content quality over social following.
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Brand ad libraries</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Open Meta Ad Library or TikTok Creative Center and search for brands in your niche. If a company is already running UGC-style ads, they have budget for creators and are actively producing content. These brands are warm leads because you can reference specific ads in your pitch, proving you have done your research.
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Direct outreach to DTC brands</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Small to mid-size direct-to-consumer brands are the sweet spot. Their marketing teams are lean, their founders often check their own inbox, and they are more likely to respond to a well-crafted cold pitch than a Fortune 500 company with a formal influencer procurement process. Look for brands with 5K to 100K social followers that are actively posting and running ads.
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Job boards and creator communities</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Reddit communities, Twitter/X creator circles, dedicated UGC job boards, and Discord servers regularly surface opportunities. Follow hashtags like #UGCcreator, #UGCjobs, and #BrandDeals. These channels require consistent monitoring but can surface opportunities that never make it to larger platforms.
-        </p>
-
-        <!-- Section 3: Writing Pitches -->
-        <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] mt-10 mb-4 pt-2 text-ink">3. Writing Pitches That Get Replies</h2>
-
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          We receive creator pitches at OKAD on behalf of our clients daily. The ones that get a response share a consistent structure. The ones that get ignored almost always fail for the same reasons: they are too generic, too long, or too vague about what the creator actually wants.
-        </p>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          A pitch that works answers four questions in under 120 words:
-        </p>
-        <ul class="text-[16px] text-ink-2 leading-[1.75] mb-4 ml-6 list-disc space-y-2">
-          <li><strong class="text-ink font-semibold">Why this brand?</strong> &mdash; a specific reference that proves you looked at their product, their ads, or their content. Not a generic compliment.</li>
-          <li><strong class="text-ink font-semibold">What do you create?</strong> &mdash; one sentence about your content style, format, and niche.</li>
-          <li><strong class="text-ink font-semibold">What are you proposing?</strong> &mdash; paid UGC, whitelisting rights, an affiliate arrangement. Be explicit.</li>
-          <li><strong class="text-ink font-semibold">What is the next step?</strong> &mdash; a single, easy action the brand can take to move forward.</li>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What we look for</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Range of formats</strong> &mdash; talking-head reviews, product demonstrations, unboxings, testimonials. Show that you can adapt to different briefs, not just repeat one style.</li>
+          <li><strong>Production baseline</strong> &mdash; clean audio, stable footage, proper lighting. You do not need cinema-grade equipment, but you need to prove that your content will not need a reshoot.</li>
+          <li><strong>Hook awareness</strong> &mdash; the first three seconds of every sample video should demonstrate that you understand how to capture attention. Brands care about thumb-stop rate above almost everything else.</li>
+          <li><strong>Niche clarity</strong> &mdash; if you create for beauty, show beauty content. If you do tech reviews, show tech. A portfolio that tries to cover everything signals that you have not found your lane yet.</li>
         </ul>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">The anatomy of a strong cold pitch</h3>
-        <div class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-          <p class="text-[16px] text-ink-2 leading-[1.75] mb-0">
-            <strong class="text-ink">Subject:</strong> UGC content idea for [Brand]<br><br>
-            Hi [Name],<br><br>
-            I noticed [Brand] is running native-style ads on Meta with creator content &mdash; [reference a specific ad or campaign]. That is exactly the type of content I produce.<br><br>
-            I am a UGC creator specializing in [niche] &mdash; I shoot product demos, testimonial-style reviews, and hook-driven short-form video. Portfolio: [link]<br><br>
-            I would love to put together a content package for [Brand]. If this sounds relevant, I can send over my rates and a couple of content concepts.<br><br>
-            Best,<br>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Social profiles matter too</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Even though UGC is not about your follower count, brands will check your Instagram or TikTok to confirm you are a real person. Make sure your bio clearly states that you create UGC content, lists the niches you serve, and includes a way to contact you. Remove anything that contradicts the professional image you are building.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you do not have paid work to show yet, create spec content. Pick three to five products you already own, film sample videos as though a brand had hired you, and treat those as your portfolio. Many creators in our network started with exactly this approach and booked their first paid deal within weeks.</p>
+      </div>
+    </section>
+
+    <!-- 02 Where to Find Brands -->
+    <section class="guide-section" id="find-brands">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Finding Brands</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Where to find brands that actually pay for UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brands will not find you &mdash; you have to go looking</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Best channels: marketplaces, agency networks, ad libraries, direct outreach</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">DTC brands with 5K&ndash;100K followers are the sweet spot</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The biggest mistake new creators make is assuming brands will find them. They will not. Even creators who post consistently and use all the right hashtags sit around waiting for inbound messages that rarely arrive. The creators who earn steadily are the ones who go looking for opportunities.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Creator platforms and marketplaces</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Platforms like Collabstr, Billo, Insense, and newer entrants connect creators directly with brands posting active briefs. Create profiles on multiple platforms to maximize your visibility. These are especially effective when you are starting out because the brand has already committed budget and is actively seeking creators.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Agency creator networks</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Production agencies like OKAD maintain vetted creator rosters. Getting into a managed network means consistent briefs, reliable payment, and structured feedback on your work. The trade-off is that rates may be standardized, but the volume and reliability often make up for it. We onboard new creators every month for our client campaigns and prioritize reliability and content quality over social following.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Brand ad libraries</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Open Meta Ad Library or TikTok Creative Center and search for brands in your niche. If a company is already running UGC-style ads, they have budget for creators and are actively producing content. These brands are warm leads because you can reference specific ads in your pitch, proving you have done your research.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Direct outreach to DTC brands</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Small to mid-size direct-to-consumer brands are the sweet spot. Their marketing teams are lean, their founders often check their own inbox, and they are more likely to respond to a well-crafted cold pitch than a Fortune 500 company with a formal influencer procurement process. Look for brands with 5K to 100K social followers that are actively posting and running ads.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Job boards and creator communities</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Reddit communities, Twitter/X creator circles, dedicated UGC job boards, and Discord servers regularly surface opportunities. Follow hashtags like #UGCcreator, #UGCjobs, and #BrandDeals. These channels require consistent monitoring but can surface opportunities that never make it to larger platforms.</p>
+      </div>
+    </section>
+
+    <!-- 03 Writing Pitches -->
+    <section class="guide-section" id="pitches">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Pitches</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Writing pitches that get replies</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Answer four questions in under 120 words</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Reference a specific ad or campaign to prove research</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most replies come from follow-ups, not the initial pitch</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">We receive creator pitches at OKAD on behalf of our clients daily. The ones that get a response share a consistent structure. The ones that get ignored almost always fail for the same reasons: they are too generic, too long, or too vague about what the creator actually wants.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A pitch that works answers four questions in under 120 words:</p>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Why this brand?</strong> &mdash; a specific reference that proves you looked at their product, their ads, or their content. Not a generic compliment.</li>
+          <li><strong>What do you create?</strong> &mdash; one sentence about your content style, format, and niche.</li>
+          <li><strong>What are you proposing?</strong> &mdash; paid UGC, whitelisting rights, an affiliate arrangement. Be explicit.</li>
+          <li><strong>What is the next step?</strong> &mdash; a single, easy action the brand can take to move forward.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The anatomy of a strong cold pitch</h3>
+        <div class="bg-card border border-border rounded-xl p-6 my-6">
+          <p class="text-ink-2 leading-[1.65] mb-0">
+            <strong class="text-ink">Subject:</strong> UGC content idea for [Brand]<br /><br />
+            Hi [Name],<br /><br />
+            I noticed [Brand] is running native-style ads on Meta with creator content &mdash; [reference a specific ad or campaign]. That is exactly the type of content I produce.<br /><br />
+            I am a UGC creator specializing in [niche] &mdash; I shoot product demos, testimonial-style reviews, and hook-driven short-form video. Portfolio: [link]<br /><br />
+            I would love to put together a content package for [Brand]. If this sounds relevant, I can send over my rates and a couple of content concepts.<br /><br />
+            Best,<br />
             [Your Name]
           </p>
         </div>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          <strong class="text-ink font-semibold">Subject lines that work:</strong> "UGC content idea for [Brand]," "Creator collab &mdash; [Your Name] x [Brand]," "Paid ad creative for [Brand]." Clear, specific, and obviously not spam.
-        </p>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          <strong class="text-ink font-semibold">Subject lines that fail:</strong> "Collab??", "Exciting partnership opportunity!!!", "Influencer proposal." These get filtered, mentally or literally.
-        </p>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Follow-up cadence</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Most replies come from follow-ups, not the initial pitch. Send a light bump three to four days after your first message. Follow up again roughly a week later with a lower-friction offer such as "happy to send rates directly, no call needed." If there is still no response, send one final message closing the loop politely. Three touches total. After that, move on.
-        </p>
-
-        <!-- Section 4: Negotiating Rates -->
-        <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] mt-10 mb-4 pt-2 text-ink">4. Negotiating Rates Without Underselling Yourself</h2>
-
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          From the agency side, we see creators lose money in negotiations more often than they get rejected. The most common mistake is saying "whatever you think is fair," which signals uncertainty and invites lowball offers. The second most common mistake is quoting a per-video rate without specifying what is included.
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Understand the payment models</h3>
-        <div class="overflow-x-auto mb-4">
-          <table class="w-full border-collapse text-[14px] my-6">
-            <thead>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Subject lines that work vs. fail</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
               <tr>
-                <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Model</th>
-                <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Typical Range</th>
-                <th class="text-left font-semibold text-ink p-3 border-b-2 border-border bg-bg-alt">Best For</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Type</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Example</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Why</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="hover:bg-accent-bg/30">
-                <td class="p-3 border-b border-border text-ink-2">Per-video flat fee</td>
-                <td class="p-3 border-b border-border text-ink-2">$150&ndash;$500</td>
-                <td class="p-3 border-b border-border text-ink-2">One-off campaigns, whitelabel ads</td>
-              </tr>
-              <tr class="hover:bg-accent-bg/30">
-                <td class="p-3 border-b border-border text-ink-2">Volume-based</td>
-                <td class="p-3 border-b border-border text-ink-2">$10&ndash;$25/video + bonuses</td>
-                <td class="p-3 border-b border-border text-ink-2">High-output programs, brand channels</td>
-              </tr>
-              <tr class="hover:bg-accent-bg/30">
-                <td class="p-3 border-b border-border text-ink-2">Monthly retainer</td>
-                <td class="p-3 border-b border-border text-ink-2">$1,000&ndash;$5,000</td>
-                <td class="p-3 border-b border-border text-ink-2">Ongoing partnerships, stable income</td>
-              </tr>
-              <tr class="hover:bg-accent-bg/30">
-                <td class="p-3 border-b border-border text-ink-2">Hybrid (base + performance)</td>
-                <td class="p-3 border-b border-border text-ink-2">Varies</td>
-                <td class="p-3 border-b border-border text-ink-2">Performance-driven brands, affiliate deals</td>
-              </tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Works</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"UGC content idea for [Brand]"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Clear, specific, obviously not spam</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Works</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Creator collab &mdash; [Name] x [Brand]"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Professional, personalized</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Fails</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Collab??"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Vague, no context</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Fails</td><td class="px-4 py-2.5 text-ink-2">"Exciting partnership opportunity!!!"</td><td class="px-4 py-2.5 text-ink-2">Gets filtered, mentally or literally</td></tr>
             </tbody>
           </table>
         </div>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Rate negotiation principles</h3>
-        <ul class="text-[16px] text-ink-2 leading-[1.75] mb-4 ml-6 list-disc space-y-2">
-          <li><strong class="text-ink font-semibold">Price the deliverable, not your audience.</strong> Brands paying for UGC care about production quality, hook strength, and usage rights. Your follower count is irrelevant to the equation.</li>
-          <li><strong class="text-ink font-semibold">Charge separately for usage rights.</strong> A video the brand runs as a paid ad for six months is worth significantly more than one they post once on their organic feed. Itemize this clearly.</li>
-          <li><strong class="text-ink font-semibold">Bundle strategically.</strong> Offering a package of three to five videos at a slight per-unit discount often gets approved faster than individual video quotes. It also locks in more revenue per deal.</li>
-          <li><strong class="text-ink font-semibold">Set a floor rate and hold it.</strong> You can always negotiate down from your initial quote. You almost never get to negotiate up. Know your minimum and do not go below it in the first message.</li>
-          <li><strong class="text-ink font-semibold">Present rates with structure.</strong> Instead of quoting a single number, show tiers: one video without usage rights, one video with three-month paid ad rights, a three-video package. This anchors the conversation around your terms.</li>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Follow-up cadence</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Light bump.</strong> Send three to four days after your first message. Keep it short &mdash; one or two sentences referencing your original pitch.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Lower-friction offer.</strong> Roughly one week later. Try "happy to send rates directly, no call needed." Remove friction from the next step.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Close the loop.</strong> One final polite message. Three touches total. After that, move on to the next brand.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 04 Negotiating Rates -->
+    <section class="guide-section" id="rates">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Rates</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Negotiating rates without underselling yourself</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">"Whatever you think is fair" signals uncertainty &mdash; never say it</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Price the deliverable, not your audience</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Present tiers: single video, usage rights, packages</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">From the agency side, we see creators lose money in negotiations more often than they get rejected. The most common mistake is saying "whatever you think is fair," which signals uncertainty and invites lowball offers. The second most common mistake is quoting a per-video rate without specifying what is included.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Payment models</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Model</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Typical Range</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Per-video flat fee</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$150&ndash;$500</td><td class="px-4 py-2.5 border-b border-border text-ink-2">One-off campaigns, whitelabel ads</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Volume-based</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$10&ndash;$25/video + bonuses</td><td class="px-4 py-2.5 border-b border-border text-ink-2">High-output programs, brand channels</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Monthly retainer</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$1,000&ndash;$5,000</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Ongoing partnerships, stable income</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Hybrid (base + performance)</td><td class="px-4 py-2.5 text-ink-2">Varies</td><td class="px-4 py-2.5 text-ink-2">Performance-driven brands, affiliate deals</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Rate negotiation principles</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Price the deliverable, not your audience.</strong> Brands paying for UGC care about production quality, hook strength, and usage rights. Your follower count is irrelevant to the equation.</li>
+          <li><strong>Charge separately for usage rights.</strong> A video the brand runs as a paid ad for six months is worth significantly more than one they post once on their organic feed. Itemize this clearly.</li>
+          <li><strong>Bundle strategically.</strong> Offering a package of three to five videos at a slight per-unit discount often gets approved faster than individual video quotes. It also locks in more revenue per deal.</li>
+          <li><strong>Set a floor rate and hold it.</strong> You can always negotiate down from your initial quote. You almost never get to negotiate up. Know your minimum and do not go below it in the first message.</li>
+          <li><strong>Present rates with structure.</strong> Instead of quoting a single number, show tiers: one video without usage rights, one video with three-month paid ad rights, a three-video package. This anchors the conversation around your terms.</li>
         </ul>
+      </div>
+    </section>
 
-        <!-- Section 5: Delivering Content -->
-        <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] mt-10 mb-4 pt-2 text-ink">5. Delivering Content That Gets You Rehired</h2>
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Want OKAD to source and manage creators for your brand?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We handle creator sourcing, briefing, quality control, and delivery. From your first UGC campaign to 200+ creatives per month &mdash; we scale with you.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailBrand} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Email olga@okad.agency &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Landing the deal is only half the work. How you deliver determines whether you get one payment or an ongoing relationship. At OKAD, the creators who stay in our roster long-term share a consistent set of habits that go beyond just "making good content."
-        </p>
-        <ul class="text-[16px] text-ink-2 leading-[1.75] mb-4 ml-6 list-disc space-y-2">
-          <li><strong class="text-ink font-semibold">Read the brief twice before filming.</strong> Most revision requests happen because the creator missed a requirement that was clearly stated in the brief. Read it once for the big picture, then again for specific details like product name pronunciation, mandatory talking points, and visual do-nots.</li>
-          <li><strong class="text-ink font-semibold">Deliver early.</strong> If the deadline is Friday, send the content on Wednesday. Early delivery gives the brand time to review, request minor changes, and still stay on their campaign schedule. This single habit puts you ahead of 80 percent of creators.</li>
-          <li><strong class="text-ink font-semibold">Send raw footage alongside the edit.</strong> Many brands want to re-edit UGC internally for different ad formats. Proactively including raw clips and B-roll shows professionalism and reduces back-and-forth requests later.</li>
-          <li><strong class="text-ink font-semibold">Handle revisions gracefully.</strong> Revision requests are normal, not a criticism. Respond within 24 hours, confirm you understand the feedback, and deliver the updated version promptly. The creators who get defensive about revisions do not get rehired.</li>
-          <li><strong class="text-ink font-semibold">Communicate proactively.</strong> If you are going to miss a deadline, say so immediately with a new estimated delivery date. Silence followed by a late delivery is the fastest way to lose a client permanently.</li>
-        </ul>
+    <!-- 05 Delivering Content -->
+    <section class="guide-section" id="delivery">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Delivery</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Delivering content that gets you rehired</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Read the brief twice before filming</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Deliver early &mdash; Wednesday if the deadline is Friday</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Handle revisions gracefully &mdash; they are normal, not criticism</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Landing the deal is only half the work. How you deliver determines whether you get one payment or an ongoing relationship. At OKAD, the creators who stay in our roster long-term share a consistent set of habits that go beyond just "making good content."</p>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">File delivery standards</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Export in the highest quality your phone supports, typically 4K or 1080p at 30fps. Use the aspect ratio specified in the brief (9:16 for Reels/TikTok, 1:1 for feed, 16:9 for YouTube). Name your files clearly: <code class="text-[14px] bg-accent-bg px-1.5 py-0.5 rounded">BrandName_Hook1_v1.mp4</code>. Deliver through the method the brand specifies, whether that is Google Drive, WeTransfer, or a platform upload. Never send final content as a compressed attachment in an email.
-        </p>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The habits that get you rehired</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Read the brief twice before filming.</strong> Most revision requests happen because the creator missed a requirement that was clearly stated in the brief. Read it once for the big picture, then again for specific details like product name pronunciation, mandatory talking points, and visual do-nots.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Deliver early.</strong> If the deadline is Friday, send the content on Wednesday. Early delivery gives the brand time to review, request minor changes, and still stay on their campaign schedule. This single habit puts you ahead of 80 percent of creators.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Send raw footage alongside the edit.</strong> Many brands want to re-edit UGC internally for different ad formats. Proactively including raw clips and B-roll shows professionalism and reduces back-and-forth requests later.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Handle revisions gracefully.</strong> Revision requests are normal, not a criticism. Respond within 24 hours, confirm you understand the feedback, and deliver the updated version promptly. The creators who get defensive about revisions do not get rehired.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Communicate proactively.</strong> If you are going to miss a deadline, say so immediately with a new estimated delivery date. Silence followed by a late delivery is the fastest way to lose a client permanently.</li>
+        </ol>
 
-        <!-- Section 6: Scaling to Consistent Income -->
-        <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] mt-10 mb-4 pt-2 text-ink">6. Scaling from One-Off Gigs to Consistent Monthly Income</h2>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">File delivery standards</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Export in the highest quality your phone supports, typically 4K or 1080p at 30fps. Use the aspect ratio specified in the brief (9:16 for Reels/TikTok, 1:1 for feed, 16:9 for YouTube). Name your files clearly: <code class="text-[14px] bg-[rgba(99,102,241,.06)] px-1.5 py-0.5 rounded font-mono">BrandName_Hook1_v1.mp4</code>. Deliver through the method the brand specifies, whether that is Google Drive, WeTransfer, or a platform upload. Never send final content as a compressed attachment in an email.</p>
+      </div>
+    </section>
 
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          The transition from occasional deals to predictable income is where most creators stall. It requires shifting your mindset from "getting lucky" to running a structured operation. Here is how the highest-earning creators in our network think about scale.
-        </p>
+    <!-- 06 Scaling -->
+    <section class="guide-section" id="scaling">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Scaling</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Scaling from one-off gigs to consistent monthly income</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Never depend on one brand for more than 40% of income</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Keep your pipeline active even when busy</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Specialists get premium rates &mdash; generalists get started</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The transition from occasional deals to predictable income is where most creators stall. It requires shifting your mindset from "getting lucky" to running a structured operation. Here is how the highest-earning creators in our network think about scale.</p>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Diversify across brands and income models</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Never depend on a single brand for more than 40 percent of your income. Campaigns get paused, budgets get reallocated, marketing managers change jobs. If all your revenue comes from one relationship, you are one email away from starting over. Aim to work with at least three to five brands simultaneously, mixing per-video work with retainers and volume programs.
-        </p>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Diversify across brands and income models</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Never depend on a single brand for more than 40 percent of your income. Campaigns get paused, budgets get reallocated, marketing managers change jobs. If all your revenue comes from one relationship, you are one email away from starting over. Aim to work with at least three to five brands simultaneously, mixing per-video work with retainers and volume programs.</p>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Keep your pipeline active even when busy</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          The biggest income dips happen when creators stop pitching during busy periods. When current projects end, there is nothing in the queue. Dedicate at least two hours per week to outreach, portfolio updates, and responding to new opportunities, regardless of how much active work you have.
-        </p>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Keep your pipeline active even when busy</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The biggest income dips happen when creators stop pitching during busy periods. When current projects end, there is nothing in the queue. Dedicate at least two hours per week to outreach, portfolio updates, and responding to new opportunities, regardless of how much active work you have.</p>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Raise rates with new clients first</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          After three to six months of consistent delivery and a solid body of work, raise your rates. Start with new clients rather than renegotiating with existing ones. Existing clients can receive a grandfather rate for a transitional period, but your baseline should increase as your portfolio and track record grow.
-        </p>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Raise rates with new clients first</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">After three to six months of consistent delivery and a solid body of work, raise your rates. Start with new clients rather than renegotiating with existing ones. Existing clients can receive a grandfather rate for a transitional period, but your baseline should increase as your portfolio and track record grow.</p>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Specialize as you grow</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Generalists get started. Specialists get premium rates. Once you identify a niche where your content consistently performs &mdash; beauty, health supplements, SaaS apps, food and beverage, fitness &mdash; lean into it hard. Brands in that niche will pay more for a creator with proven results in their specific category than for a generalist with a broader but less relevant portfolio.
-        </p>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Specialize as you grow</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Generalists get started. Specialists get premium rates. Once you identify a niche where your content consistently performs &mdash; beauty, health supplements, SaaS apps, food and beverage, fitness &mdash; lean into it hard. Brands in that niche will pay more for a creator with proven results in their specific category than for a generalist with a broader but less relevant portfolio.</p>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Track what performs</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Ask every brand for performance data on your content. Which hooks generated the highest thumb-stop rate? Which video formats drove the most conversions? Understanding what works in ads, not just what looks good on your reel, is the difference between a creator who charges $150 per video and one who charges $400. Data-informed creators get rehired because they actively improve campaign results over time.
-        </p>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Track what performs</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Ask every brand for performance data on your content. Which hooks generated the highest thumb-stop rate? Which video formats drove the most conversions? Understanding what works in ads, not just what looks good on your reel, is the difference between a creator who charges $150 per video and one who charges $400. Data-informed creators get rehired because they actively improve campaign results over time.</p>
+      </div>
+    </section>
 
-        <!-- Section 7: Common Mistakes -->
-        <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] mt-10 mb-4 pt-2 text-ink">7. Common Mistakes That Kill Brand Deals</h2>
+    <!-- 07 Common Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Common mistakes that kill brand deals</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">No portfolio link in the pitch kills more deals than anything else</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Never accept unpaid "test" content from a brand</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Always work with a contract &mdash; even small projects</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">After reviewing thousands of creator applications and managing hundreds of brand partnerships, here are the patterns we see derailing deals most often:</p>
 
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          After reviewing thousands of creator applications and managing hundreds of brand partnerships, here are the patterns we see derailing deals most often:
-        </p>
-        <ul class="text-[16px] text-ink-2 leading-[1.75] mb-4 ml-6 list-disc space-y-2">
-          <li><strong class="text-ink font-semibold">No portfolio link in the pitch.</strong> This alone kills more opportunities than anything else. If the brand has to ask to see your work, the conversation is already losing momentum.</li>
-          <li><strong class="text-ink font-semibold">Accepting unpaid "test" content.</strong> A legitimate paid test costs the brand $50 to $150. If someone asks you to produce content for free before deciding whether to work with you, they may simply want free content. A test should always be compensated.</li>
-          <li><strong class="text-ink font-semibold">Ignoring the brief and freestyling.</strong> Creative interpretation is valuable. Ignoring specific brand requirements is not. If the brief says "mention the product name in the first five seconds," do that before adding your creative spin.</li>
-          <li><strong class="text-ink font-semibold">Slow communication.</strong> Responding to brand messages after 48 hours signals that you are either disorganized or uninterested. Aim for same-day responses, especially during the deal-closing phase.</li>
-          <li><strong class="text-ink font-semibold">Over-promising turnaround times.</strong> Quoting a two-day turnaround to seem eager and then delivering on day five is worse than quoting five days and delivering on day four. Be honest about your timeline and then beat it.</li>
-          <li><strong class="text-ink font-semibold">Working without a contract.</strong> Even small projects need a written agreement specifying deliverables, payment terms, usage rights, revision limits, and timelines. No contract means no protection when something goes wrong.</li>
-          <li><strong class="text-ink font-semibold">Sending identical pitches to 50 brands.</strong> Brands can tell. The lack of specificity communicates that you are mass-mailing rather than genuinely interested in their product.</li>
-          <li><strong class="text-ink font-semibold">Disappearing after one successful project.</strong> Many creators deliver well on a first deal and then never follow up for repeat work. A quick "loved working together, open to another round?" message two to four weeks after delivery converts past clients into recurring ones at a very high rate.</li>
-        </ul>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>No portfolio link in the pitch.</strong> This alone kills more opportunities than anything else. If the brand has to ask to see your work, the conversation is already losing momentum.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Accepting unpaid "test" content.</strong> A legitimate paid test costs the brand $50 to $150. If someone asks you to produce content for free before deciding whether to work with you, they may simply want free content.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Ignoring the brief and freestyling.</strong> Creative interpretation is valuable. Ignoring specific brand requirements is not. If the brief says "mention the product name in the first five seconds," do that before adding your creative spin.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Slow communication.</strong> Responding to brand messages after 48 hours signals that you are either disorganized or uninterested. Aim for same-day responses, especially during the deal-closing phase.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Over-promising turnaround times.</strong> Quoting a two-day turnaround to seem eager and then delivering on day five is worse than quoting five days and delivering on day four. Be honest about your timeline and then beat it.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Working without a contract.</strong> Even small projects need a written agreement specifying deliverables, payment terms, usage rights, revision limits, and timelines. No contract means no protection when something goes wrong.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Sending identical pitches to 50 brands.</strong> Brands can tell. The lack of specificity communicates that you are mass-mailing rather than genuinely interested in their product.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Disappearing after one successful project.</strong> Many creators deliver well on a first deal and then never follow up for repeat work. A quick "loved working together, open to another round?" message two to four weeks after delivery converts past clients into recurring ones at a very high rate.</li>
+        </ol>
+      </div>
+    </section>
 
-        <!-- Section 8: 30-Day Action Plan -->
-        <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] mt-10 mb-4 pt-2 text-ink">8. Your 30-Day Action Plan to Land Your First Deal</h2>
+    <!-- 08 30-Day Action Plan -->
+    <section class="guide-section" id="action-plan">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Action Plan</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Your 30-day action plan to land your first deal</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Week 1: foundation &mdash; niche, setup, practice videos</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Week 2&ndash;3: portfolio, platforms, outreach blitz</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Week 4: close your first deal and start the next cycle</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">This plan assumes you are starting from scratch with no portfolio, no brand relationships, and no prior UGC experience. If you are further along, skip ahead to the relevant week.</p>
 
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          This plan assumes you are starting from scratch with no portfolio, no brand relationships, and no prior UGC experience. If you are further along, skip ahead to the relevant week.
-        </p>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Week</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Focus</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Key Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">1</td><td class="px-4 py-2.5 border-b border-border text-ink">Foundation</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Choose niche, set up filming space, film 5 practice videos, update bio</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">2</td><td class="px-4 py-2.5 border-b border-border text-ink">Portfolio &amp; Platforms</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Assemble portfolio, join 2&ndash;3 marketplaces, research 20 brands, join communities</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">3</td><td class="px-4 py-2.5 border-b border-border text-ink">Outreach Blitz</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Send 15&ndash;20 personalized pitches, apply to open briefs, follow up, film brand-specific samples</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">4</td><td class="px-4 py-2.5 text-ink">Close &amp; Iterate</td><td class="px-4 py-2.5 text-ink-2">Second follow-ups, negotiate with structure, accept first project, ask for repeat work</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Week 1: Foundation</h3>
-        <ul class="text-[16px] text-ink-2 leading-[1.75] mb-4 ml-6 list-disc space-y-2">
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Week 1: Foundation</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
           <li>Choose your primary niche based on products you already use and understand.</li>
           <li>Set up your filming space: quiet room, natural light or ring light, phone tripod.</li>
           <li>Film five practice videos for products you own. Aim for 30 to 60 seconds each. Review and reshoot until audio is clean and hooks feel natural.</li>
           <li>Update your Instagram or TikTok bio: "UGC Creator | [Niche] | Available for brand partnerships | [email]."</li>
         </ul>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Week 2: Portfolio and Platform Setup</h3>
-        <ul class="text-[16px] text-ink-2 leading-[1.75] mb-4 ml-6 list-disc space-y-2">
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Week 2: Portfolio and platform setup</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
           <li>Select your six strongest videos and assemble them into a clean portfolio. Use a dedicated portfolio platform, a simple one-page website, or a well-organized Google Drive folder with a single shareable link.</li>
           <li>Create profiles on two to three creator marketplaces (Collabstr, Billo, Insense). Upload your best samples.</li>
           <li>Research 20 brands in your niche that are actively running ads. Use Meta Ad Library and TikTok Creative Center.</li>
           <li>Join two to three UGC creator communities on Reddit, Discord, or Facebook.</li>
         </ul>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Week 3: Outreach Blitz</h3>
-        <ul class="text-[16px] text-ink-2 leading-[1.75] mb-4 ml-6 list-disc space-y-2">
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Week 3: Outreach blitz</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
           <li>Send 15 to 20 personalized pitches to brands on your research list. Use the pitch structure from Section 3.</li>
           <li>Apply to every relevant open brief on the creator platforms you joined.</li>
           <li>Follow up on pitches from three to four days ago that have not received a response.</li>
           <li>Film two to three new sample videos targeting specific brands you are pitching, demonstrating their products if you own them.</li>
         </ul>
 
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Week 4: Close and Iterate</h3>
-        <ul class="text-[16px] text-ink-2 leading-[1.75] mb-4 ml-6 list-disc space-y-2">
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Week 4: Close and iterate</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
           <li>Send second follow-ups on unanswered pitches. Close the loop on non-responders with a polite final message.</li>
           <li>Respond to any incoming interest with your rate card. Negotiate with structure, not desperation.</li>
           <li>Accept your first paid test or project. Over-deliver on quality and timing.</li>
@@ -301,98 +421,134 @@ import Footer from "../components/Footer.astro";
           <li>Research your next batch of 20 brands and begin the cycle again.</li>
         </ul>
 
-        <div class="border-l-[3px] border-accent pl-5 py-3 my-6 bg-accent-bg rounded-r-lg">
-          <p class="text-[16px] text-ink-2 leading-[1.75] mb-0">
-            <strong class="text-ink">Realistic expectation:</strong> following this plan with genuine effort, most creators book their first paid deal by the end of week three or four. Creators who already have strong on-camera skills or relevant content sometimes close within the first week.
-          </p>
-        </div>
-
-        <!-- Section 9: FAQ -->
-        <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] mt-10 mb-4 pt-2 text-ink">Frequently Asked Questions</h2>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Do I need a large following to get UGC brand deals?</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          No. UGC deals are fundamentally different from influencer sponsorships. Brands hire UGC creators for production skill and content authenticity, not audience size. Many creators in our network have fewer than 1,000 followers on their personal accounts and earn consistently from brand work. Your portfolio and delivery reliability are what matter.
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">How much can I realistically earn per month from UGC?</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          It depends on your output volume, rate tier, and number of active brand relationships. Creators working with three to five brands and delivering five to ten videos per week typically earn between $3,000 and $10,000 per month. The highest earners who combine retainers with per-video work and have established themselves in a profitable niche can exceed $15,000 monthly.
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">What equipment do I need to get started?</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          A modern smartphone (iPhone 12 or equivalent Android), a $30 ring light or a window with natural light, a quiet room for clean audio, a $15 to $25 phone tripod, and a free editing app like CapCut. The entire setup costs under $100. Brands want authentic-looking content, not studio-grade production. Over-investing in equipment before you have clients is a common trap.
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">Should I create content for free to build my portfolio?</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Create spec content with products you already own to build your initial portfolio &mdash; that is different from working for free for a brand. Never produce content at a brand's request without compensation. Spec work you create on your own terms demonstrates initiative. Free work requested by a brand devalues your labor and sets a precedent that is difficult to reverse.
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">How do I handle a brand that offers product-only compensation?</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Product-only offers are common, especially from newer brands with limited marketing budgets. You can politely counter with a hybrid arrangement: product plus a reduced flat fee per video. If the product has significant value (over $200) and aligns with your niche, it may be worth accepting for your first one or two deals to build your portfolio with real brand work. After that, hold to paid arrangements.
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">How many brands should I pitch per week?</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Aim for 15 to 20 well-researched, personalized pitches per week when you are actively building your client base. Cold outreach has naturally low response rates, even with excellent pitches. Volume paired with genuine personalization is what produces consistent results. Sending three perfect pitches per week will not generate the momentum you need.
-        </p>
-
-        <h3 class="font-display font-semibold text-[18px] tracking-[-0.01em] mt-8 mb-3 text-ink">What should be in a UGC contract?</h3>
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          Every contract should specify: deliverables (number and format of videos), payment amount and timeline (net-15 or net-30 is standard), usage rights (platforms, duration, paid vs. organic), revision limits (one to two rounds is typical), and cancellation terms. If a brand does not offer a contract, draft a simple agreement yourself. Working without one is never advisable.
-        </p>
-
-        <hr class="border-none border-t border-border my-10" />
-
-        <p class="text-[16px] text-ink-2 leading-[1.75] mb-4">
-          The path from zero to consistent UGC income is not complicated, but it is not passive either. It requires a portfolio that demonstrates real skill, outreach that proves genuine interest, rates that reflect your value, and delivery habits that turn one-off clients into recurring partners. Every creator in our network started exactly where you are now. The difference between those who built sustainable income and those who gave up was not talent. It was consistency in execution.
-        </p>
-
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="bg-dark py-16 md:py-20">
-      <div class="max-w-[720px] mx-auto px-6">
-        <div class="bg-white/8 border border-white/10 rounded-2xl p-8 md:p-10 text-center">
-          <h2 class="font-display font-bold text-[clamp(22px,4vw,28px)] tracking-[-0.02em] text-white mb-3">
-            Want OKAD to Source and Manage Creators for Your Brand?
-          </h2>
-          <p class="text-[16px] text-white/60 leading-[1.55] mb-6 max-w-[500px] mx-auto">
-            We handle creator sourcing, briefing, quality control, and delivery. From your first UGC campaign to 200+ creatives per month &mdash; we scale with you.
-          </p>
-          <div class="flex flex-wrap gap-3 justify-center">
-            <a href="mailto:olga@okad.agency" class="inline-flex items-center px-5 py-2.5 bg-white text-ink text-[13px] font-semibold rounded-full hover:bg-border transition-colors no-underline">
-              Email olga@okad.agency
-            </a>
-            <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 bg-lime text-ink text-[13px] font-semibold rounded-full hover:bg-[#b8e537] transition-colors no-underline">
-              Book a Call &rarr;
-            </a>
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1 text-ink">Realistic expectation</h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Following this plan with genuine effort, most creators book their first paid deal by the end of week three or four. Creators who already have strong on-camera skills or relevant content sometimes close within the first week.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Creator CTA -->
-    <section class="py-16 md:py-20">
-      <div class="max-w-[720px] mx-auto px-6">
-        <div class="bg-card border border-border rounded-2xl p-8 md:p-10 text-center">
-          <h2 class="font-display font-bold text-[22px] tracking-[-0.02em] mb-2 text-ink">
-            Are you a UGC creator looking for work?
-          </h2>
-          <p class="text-[15px] text-muted mb-5 leading-[1.55]">
-            We are always looking for reliable creators to join our roster. Send your portfolio and we will get back to you within 48 hours.
-          </p>
-          <a href="mailto:olga@okad.agency?subject=UGC%20Creator%20Application" class="inline-flex items-center px-6 py-3 bg-accent text-white text-[15px] font-semibold rounded-full hover:bg-accent-hover transition-colors no-underline">
-            Apply to Join Our Creator Network &rarr;
-          </a>
+    <!-- 09 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "Do I need a large following to get UGC brand deals?", a: "No. UGC deals are fundamentally different from influencer sponsorships. Brands hire UGC creators for production skill and content authenticity, not audience size. Many creators in our network have fewer than 1,000 followers on their personal accounts and earn consistently from brand work. Your portfolio and delivery reliability are what matter." },
+          { q: "How much can I realistically earn per month from UGC?", a: "It depends on your output volume, rate tier, and number of active brand relationships. Creators working with three to five brands and delivering five to ten videos per week typically earn between $3,000 and $10,000 per month. The highest earners who combine retainers with per-video work and have established themselves in a profitable niche can exceed $15,000 monthly." },
+          { q: "What equipment do I need to get started?", a: "A modern smartphone (iPhone 12 or equivalent Android), a $30 ring light or a window with natural light, a quiet room for clean audio, a $15-$25 phone tripod, and a free editing app like CapCut. The entire setup costs under $100. Brands want authentic-looking content, not studio-grade production." },
+          { q: "Should I create content for free to build my portfolio?", a: "Create spec content with products you already own to build your initial portfolio — that is different from working for free for a brand. Never produce content at a brand's request without compensation. Spec work you create on your own terms demonstrates initiative. Free work requested by a brand devalues your labor and sets a precedent that is difficult to reverse." },
+          { q: "How do I handle a brand that offers product-only compensation?", a: "Product-only offers are common, especially from newer brands with limited marketing budgets. You can politely counter with a hybrid arrangement: product plus a reduced flat fee per video. If the product has significant value (over $200) and aligns with your niche, it may be worth accepting for your first one or two deals to build your portfolio with real brand work. After that, hold to paid arrangements." },
+          { q: "How many brands should I pitch per week?", a: "Aim for 15 to 20 well-researched, personalized pitches per week when you are actively building your client base. Cold outreach has naturally low response rates, even with excellent pitches. Volume paired with genuine personalization is what produces consistent results." },
+          { q: "What should be in a UGC contract?", a: "Every contract should specify: deliverables (number and format of videos), payment amount and timeline (net-15 or net-30 is standard), usage rights (platforms, duration, paid vs. organic), revision limits (one to two rounds is typical), and cancellation terms. If a brand does not offer a contract, draft a simple agreement yourself." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Are you a UGC creator looking for work?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We are always looking for reliable creators to join our roster. Send your portfolio and we will get back to you within 48 hours.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCreator} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Apply to join our creator network &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on OKAD Agency's direct experience sourcing, briefing, and managing over 600 UGC creators across hundreds of brand campaigns. Rate ranges, response patterns, and timeline estimates reflect real campaign data. Individual results depend on niche, content quality, outreach volume, and market conditions.</p>
       </div>
     </section>
 
   </main>
   <Footer />
 </Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
