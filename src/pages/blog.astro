@@ -1,0 +1,280 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const guides = [
+  {
+    title: "Creative Testing",
+    subtitle: "The complete guide to paid ad experimentation",
+    href: "/guide",
+    tag: "Strategy",
+    bg: "from-[#6366F1] to-[#4F46E5]",
+    tagBg: "bg-white/20",
+  },
+  {
+    title: "Canvas UGC",
+    subtitle: "Brand-account content at scale",
+    href: "/canvas-ugc",
+    tag: "Content Model",
+    bg: "from-[#1a1a1f] to-[#2a2a2f]",
+    tagBg: "bg-white/15",
+  },
+  {
+    title: "Tech UGC",
+    subtitle: "Creator-made software content",
+    href: "/tech-ugc",
+    tag: "Content Model",
+    bg: "from-[#9333EA] to-[#7C3AED]",
+    tagBg: "bg-white/20",
+  },
+  {
+    title: "UGC Ads",
+    subtitle: "Creator content as paid advertising",
+    href: "/ugc-ads",
+    tag: "Ads",
+    bg: "from-[#059669] to-[#047857]",
+    tagBg: "bg-white/20",
+  },
+  {
+    title: "Spark Ads",
+    subtitle: "TikTok's organic-to-paid format",
+    href: "/spark-ads",
+    tag: "Platform",
+    bg: "from-[#111] to-[#EE1D52]",
+    tagBg: "bg-white/15",
+  },
+  {
+    title: "Partnership Ads",
+    subtitle: "Meta's creator ad format",
+    href: "/partnership-ads",
+    tag: "Platform",
+    bg: "from-[#1877F2] to-[#0C5DC7]",
+    tagBg: "bg-white/20",
+  },
+  {
+    title: "Hook Rate",
+    subtitle: "The 3-second metric that predicts everything",
+    href: "/hook-rate",
+    tag: "Metrics",
+    bg: "from-[#F59E0B] to-[#D97706]",
+    tagBg: "bg-black/15",
+  },
+  {
+    title: "Ad Fatigue",
+    subtitle: "Why winning ads stop working",
+    href: "/ad-fatigue",
+    tag: "Metrics",
+    bg: "from-[#DC2626] to-[#B91C1C]",
+    tagBg: "bg-white/20",
+  },
+  {
+    title: "Performance Creative",
+    subtitle: "Data-driven ad production",
+    href: "/performance-creative",
+    tag: "Strategy",
+    bg: "from-[#6366F1] to-[#9333EA]",
+    tagBg: "bg-white/20",
+  },
+  {
+    title: "Modular Creative",
+    subtitle: "6 hooks × 4 bodies × 3 CTAs = 72 ads",
+    href: "/modular-creative",
+    tag: "Strategy",
+    bg: "from-[#0891B2] to-[#0E7490]",
+    tagBg: "bg-white/20",
+  },
+  {
+    title: "UGC Whitelisting",
+    subtitle: "Running ads from creator accounts",
+    href: "/ugc-whitelisting",
+    tag: "Ads",
+    bg: "from-[#7C3AED] to-[#5B21B6]",
+    tagBg: "bg-white/20",
+  },
+  {
+    title: "Whitelabel UGC",
+    subtitle: "Creator content for your ad library",
+    href: "/whitelabel-ugc",
+    tag: "Content Model",
+    bg: "from-[#1a1a1f] to-[#374151]",
+    tagBg: "bg-white/15",
+  },
+  {
+    title: "High-Volume UGC",
+    subtitle: "50–300+ videos per month",
+    href: "/high-volume-ugc",
+    tag: "Content Model",
+    bg: "from-[#059669] to-[#0891B2]",
+    tagBg: "bg-white/20",
+  },
+  {
+    title: "Branded Content Ads",
+    subtitle: "Creator-powered advertising",
+    href: "/branded-content-ads",
+    tag: "Ads",
+    bg: "from-[#EC4899] to-[#DB2777]",
+    tagBg: "bg-white/20",
+  },
+  {
+    title: "Social Proof Ads",
+    subtitle: "Testimonials and reviews as ads",
+    href: "/social-proof-ads",
+    tag: "Ads",
+    bg: "from-[#F59E0B] to-[#EC4899]",
+    tagBg: "bg-black/15",
+  },
+  {
+    title: "UGC Creator",
+    subtitle: "What they do and how to hire them",
+    href: "/ugc-creator",
+    tag: "Creators",
+    bg: "from-[#10B981] to-[#059669]",
+    tagBg: "bg-white/20",
+  },
+  {
+    title: "Creator Network",
+    subtitle: "Building and managing creator pools",
+    href: "/creator-network",
+    tag: "Creators",
+    bg: "from-[#1a1a1f] to-[#6366F1]",
+    tagBg: "bg-white/15",
+  },
+];
+---
+
+<Layout
+  title="Blog — Open Guides on UGC, Creative Testing & Paid Ads | OKAD"
+  description="17 in-depth guides on Canvas UGC, Tech UGC, creative testing, Spark Ads, hook rate, ad fatigue, and more. Free, research-based resources by OKAD Agency."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-8 text-center bg-bg">
+      <div class="max-w-[960px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-5">
+          {guides.length} open guides &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,44px)] leading-[1.1] tracking-[-0.03em] text-ink mb-3">
+          The OKAD <span class="text-accent">Knowledge Base</span>
+        </h1>
+        <p class="text-[17px] text-ink-2 max-w-[540px] mx-auto leading-[1.6] mb-6">
+          Research-based guides on UGC, creative testing, and paid ads. Written for brands and operators who want to understand how things actually work.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filter tags -->
+    <section class="pb-6">
+      <div class="max-w-[960px] mx-auto px-6">
+        <div class="flex gap-2 flex-wrap justify-center">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Strategy">Strategy</button>
+          <button class="filter-btn" data-filter="Content Model">Content Model</button>
+          <button class="filter-btn" data-filter="Ads">Ads</button>
+          <button class="filter-btn" data-filter="Platform">Platform</button>
+          <button class="filter-btn" data-filter="Metrics">Metrics</button>
+          <button class="filter-btn" data-filter="Creators">Creators</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid -->
+    <section class="pb-16">
+      <div class="max-w-[960px] mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="guides-grid">
+          {guides.map((g) => (
+            <a href={g.href} class="guide-card group block no-underline" data-tag={g.tag}>
+              <div class={`relative overflow-hidden rounded-xl bg-gradient-to-br ${g.bg} aspect-[16/10] flex flex-col justify-between p-5`}>
+                <div class={`self-start ${g.tagBg} rounded-full px-2.5 py-1 text-[10px] font-mono font-medium text-white uppercase tracking-[.08em]`}>
+                  {g.tag}
+                </div>
+                <div>
+                  <h2 class="font-display font-bold text-[clamp(18px,2.5vw,24px)] leading-[1.15] tracking-[-0.02em] text-white mb-1 group-hover:translate-x-0.5 transition-transform">
+                    {g.title}
+                  </h2>
+                  <p class="text-[12px] text-white/70 leading-[1.4] font-sans">
+                    {g.subtitle}
+                  </p>
+                </div>
+                <div class="absolute top-3 right-3 w-7 h-7 rounded-full bg-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span class="text-white text-[12px]">&rarr;</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="pb-16">
+      <div class="max-w-[960px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need help implementing any of this?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD handles creative testing, UGC production, and paid ad creative for DTC and tech brands. Tell us what you need.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href="mailto:olga@okad.agency?subject=OKAD%20%E2%80%94%20tell%20us%20about%20your%20brand" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Write to us &rarr;</a>
+            <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .filter-btn {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    background: var(--color-card);
+    color: var(--color-muted);
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .filter-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+  .filter-btn.active {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+  }
+  .guide-card {
+    transition: transform .2s, box-shadow .2s;
+  }
+  .guide-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,.12);
+  }
+  .guide-card.hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+      document.querySelectorAll('.guide-card').forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-tag') === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>

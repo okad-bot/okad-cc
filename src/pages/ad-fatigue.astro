@@ -1,0 +1,650 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailFatigue = "mailto:olga@okad.agency?subject=Ad%20fatigue%20prevention%20%E2%80%94%20tell%20us%20about%20your%20ads";
+const emailGeneral = "mailto:olga@okad.agency?subject=Ad%20fatigue%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Ad Fatigue &mdash; The Complete Guide to Creative Decay & Prevention | OKAD"
+  description="Ad fatigue is the decline in ad performance caused by audience overexposure. Meta's Andromeda system has compressed creative lifespan to roughly 10 days. This guide covers the signs, the timeline, platform-specific decay rates, and how to build a prevention pipeline."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Ad Fatigue: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Ad fatigue is the gradual decline in ad performance caused by audience overexposure. Meta&rsquo;s Andromeda system has compressed creative lifespan from 6 weeks to roughly 10 days. This guide covers the signs, the timeline, and how to build a pipeline that outpaces decay.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailFatigue} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get a fatigue audit &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Paid ads</span>
+          <span>Creative decay</span>
+          <span>~10-day lifespan</span>
+          <span>Frequency &gt;2.5</span>
+          <span>Continuous pipeline</span>
+          <span>6&ndash;12 concepts/week</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Ad Fatigue Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C9;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Performance Declines</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">CTR drops 30&ndash;50% by days 8&ndash;10. CPA rises. The algorithm deprioritizes stale creative in favor of fresher ads.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x23F3;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Compressed Lifespan</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Meta&rsquo;s Andromeda system (2024+) saturates audiences faster. Creative lifespan dropped from 6 weeks to ~10 days on average.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F504;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Pipeline Is the Only Fix</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">You can&rsquo;t prevent fatigue entirely. You prevent the gap between winners with a continuous testing pipeline: 6&ndash;12 new concepts/week.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "What Is Ad Fatigue?", href: "#what" },
+            { num: "03", text: "The Fatigue Timeline", href: "#timeline" },
+            { num: "04", text: "Signs of Fatigue", href: "#signs" },
+            { num: "05", text: "Fatigue vs Poor Creative", href: "#diagnostic" },
+            { num: "06", text: "The Andromeda Effect", href: "#andromeda" },
+            { num: "07", text: "Platform-Specific Decay Rates", href: "#platforms" },
+            { num: "08", text: "Extending Creative Life", href: "#extending" },
+            { num: "09", text: "The Prevention Pipeline", href: "#pipeline" },
+            { num: "10", text: "Fatigue Monitoring System", href: "#monitoring" },
+            { num: "11", text: "Glossary", href: "#glossary" },
+            { num: "12", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Every winning ad has an expiration date</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Ad fatigue is the inevitable decline in performance from audience overexposure</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">On Meta in 2026, most creatives peak within 3&ndash;7 days and die by day 14&ndash;21</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The only structural solution is a continuous creative pipeline</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Ad fatigue is the single biggest reason ad accounts plateau. You find a winning creative, scale it, watch CPA drop &mdash; and then, within days or weeks, performance starts sliding. CTR drops. CPA rises. The algorithm quietly deprioritizes your ad. By the time most teams notice, the creative is already dead.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This isn&rsquo;t a bug in the system. It&rsquo;s a feature. Ad platforms are designed to show users fresh, relevant content. When the same user sees the same ad for the fifth time, they scroll past. The platform notices and shifts impressions elsewhere. Your ad enters a death spiral: fewer impressions &rarr; worse delivery &rarr; higher CPA &rarr; even fewer impressions.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Understanding fatigue is essential for anyone running paid ads. Not because you can prevent it &mdash; you can&rsquo;t &mdash; but because you can build a system that outpaces it. The brands that win on paid media are not the ones with one brilliant ad. They are the ones with a pipeline that produces new winners faster than old ones decay.</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">What:</strong> gradual decline in ad performance from audience overexposure</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">When:</strong> CTR drops 30&ndash;50% by days 8&ndash;10 on Meta</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Trigger:</strong> frequency exceeds 2.5&ndash;3.0 in the target audience</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Solution:</strong> continuous creative pipeline: 6&ndash;12 new concepts/week</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 What Is Ad Fatigue -->
+    <section class="guide-section" id="what">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What is ad fatigue?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Audience sees the same ad too many times and stops responding</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Platform algorithms detect declining engagement and reduce delivery</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Not the same as a bad creative &mdash; fatigue happens to winners, not losers</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Ad fatigue</strong> is the measurable decline in ad performance caused by repeated exposure to the same creative. It affects every ad that runs long enough, on every platform. The mechanism is straightforward: when a user has seen your ad three, four, five times, they develop &ldquo;banner blindness&rdquo; &mdash; they scroll past without registering it. The platform detects this declining engagement and reduces the ad&rsquo;s delivery priority.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The frequency threshold</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Fatigue correlates strongly with <strong>frequency</strong> &mdash; the average number of times each user in your audience has seen the ad. The critical threshold on Meta is a frequency of <strong>2.5&ndash;3.0</strong>. Once your ad crosses this threshold, you will see CTR begin to drop, CPA begin to rise, and delivery volume decrease. On TikTok, fatigue sets in faster &mdash; sometimes at a frequency of 1.5&ndash;2.0 &mdash; because the platform&rsquo;s content feed moves faster and users expect constant novelty.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Fatigue vs failure</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">This distinction is critical. A <em>bad</em> creative never performs well &mdash; its CPA is above target from day one. A <em>fatigued</em> creative performed well and then declined. The data signatures are completely different, and the response should be different too. A bad creative should be killed and analyzed. A fatigued creative should be iterated &mdash; its core concept is proven; it just needs a fresh execution. See <a href="#diagnostic" class="text-accent hover:underline">Section 05</a> for the diagnostic framework.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What fatigue looks like in the data</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>CTR drops 30&ndash;50%</strong> from peak by days 8&ndash;10</li>
+          <li><strong>CPA increases 40&ndash;80%</strong> from its best-performing window</li>
+          <li><strong>Frequency climbs past 2.5</strong> in the target audience</li>
+          <li><strong>Impression volume decreases</strong> as the algorithm deprioritizes the ad</li>
+          <li><strong>CPM stays flat or rises</strong> &mdash; you&rsquo;re paying more per impression for worse results</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 03 The Fatigue Timeline -->
+    <section class="guide-section" id="timeline">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Timeline</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The fatigue timeline: launch to death</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Launch &rarr; Peak (days 3&ndash;7) &rarr; Plateau (days 7&ndash;14) &rarr; Decline &rarr; Death</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">On Meta in 2026, the full cycle takes roughly 10&ndash;21 days</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Higher spend compresses the timeline &mdash; $1K/day fatigues faster than $100/day</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Every winning ad follows a predictable lifecycle. Understanding each phase helps you make better decisions about when to iterate, when to extend, and when to replace.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Phase</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Timing (Meta)</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What happens</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold" style="color: #1565c0">Launch</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Days 1&ndash;3</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Algorithm explores audiences. CPA volatile, data unreliable.</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Wait. Don&rsquo;t make decisions yet.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold" style="color: #2e7d32">Peak</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Days 3&ndash;7</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Best CPA window. Algorithm found the right audiences. CTR highest.</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Scale gradually (20&ndash;30%/day). Start producing iterations.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold" style="color: #f57f17">Plateau</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Days 7&ndash;14</td><td class="px-4 py-2.5 border-b border-border text-ink-2">CPA stable but no longer improving. Frequency approaching 2.0. First signs of decay.</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Launch fresh variations. Prepare replacements.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold" style="color: #e65100">Decline</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Days 14&ndash;21</td><td class="px-4 py-2.5 border-b border-border text-ink-2">CTR dropping steadily. CPA 30&ndash;60% above peak. Frequency past 2.5.</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Reduce spend. Move budget to new winners.</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-semibold" style="color: #c62828">Death</td><td class="px-4 py-2.5 text-ink-2">Day 21+</td><td class="px-4 py-2.5 text-ink-2">CPA 2&ndash;3&times; peak. Algorithm barely delivering. Impressions near zero.</td><td class="px-4 py-2.5 text-ink-2">Kill. Archive learnings. Move on.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Budget accelerates fatigue</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A creative running at $100/day might last 4&ndash;6 weeks. The same creative at $1,000/day will fatigue in 1&ndash;2 weeks. Higher spend means the algorithm exhausts your audience faster. This creates a paradox for scaling: the more you spend on a winner, the faster it dies. The only way out is to have new winners ready before the current one decays.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Audience size matters</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Narrower audiences fatigue faster because there are fewer people to show the ad to. A lookalike audience of 1M people will fatigue faster than a broad audience of 20M. If you&rsquo;re running niche targeting, expect shorter creative lifespans and plan accordingly.</p>
+      </div>
+    </section>
+
+    <!-- 04 Signs of Fatigue -->
+    <section class="guide-section" id="signs">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Signs</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to spot fatigue before it kills performance</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Frequency climbing past 2.5 is the earliest reliable signal</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CTR decline precedes CPA increase by 2&ndash;3 days</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Monitor daily &mdash; weekly reviews miss the decline window</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Fatigue doesn&rsquo;t arrive suddenly. It follows a predictable sequence of signals. If you monitor the right metrics daily, you can catch fatigue early enough to act &mdash; before CPA spikes wreck your weekly numbers.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The signal sequence (in order of appearance)</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Frequency rises past 2.0.</strong> The audience is seeing your ad more often. This is the earliest warning. You have 3&ndash;5 days before performance impact.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>CTR begins to drop.</strong> Users who have seen the ad before scroll past it. CTR typically drops 15&ndash;25% before CPA is affected.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Hook rate declines.</strong> Even the first 3 seconds stop holding attention. The audience recognizes the creative instantly and swipes away. See our <a href="/hook-rate" class="text-accent hover:underline">hook rate guide</a> for benchmarks.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>CPA increases.</strong> This is the metric most teams notice, but it&rsquo;s a lagging indicator. By the time CPA has risen 30%+, fatigue has been active for several days.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Impression volume drops.</strong> The algorithm has decided your ad is no longer competitive. Delivery decreases even if your bid and budget remain the same.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>CPM rises or stays flat while volume drops.</strong> You&rsquo;re paying the same (or more) per impression for increasingly worse results. The ad is effectively dead.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The 3-day rule</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If CTR drops for 3 consecutive days and frequency is above 2.0, fatigue has started. Don&rsquo;t wait for CPA to confirm it. Begin rotating in fresh creative immediately while reducing spend on the fatiguing ad. Waiting for weekly reviews to catch this pattern costs 3&ndash;5 days of wasted spend.</p>
+      </div>
+    </section>
+
+    <!-- 05 Fatigue vs Poor Creative -->
+    <section class="guide-section" id="diagnostic">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Diagnostic</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Fatigue vs poor creative: the diagnostic framework</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Fatigue shows a decline curve &mdash; performance was good, then dropped</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Poor creative shows flat underperformance from launch</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The response is different: iterate fatigued concepts, kill bad ones</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">One of the most expensive mistakes in paid media is misdiagnosing fatigue as a bad creative (and vice versa). A fatigued creative&rsquo;s underlying concept is proven &mdash; it should be iterated, not abandoned. A poor creative should be killed and analyzed, not given more time. Here&rsquo;s how to tell the difference.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Signal</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Ad fatigue</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Poor creative</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Performance curve</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Good &rarr; declining</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Bad from day 1</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CPA trend</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Below target initially, rising over time</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Above target from launch</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Frequency</td><td class="px-4 py-2.5 border-b border-border text-ink-2">High (2.5+)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Low (1.0&ndash;1.5)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Hook rate trend</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Was good, now declining</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Low from start</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CTR trend</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Declining over time</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Consistently low</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Time running</td><td class="px-4 py-2.5 border-b border-border text-ink-2">7+ days</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Any duration</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Correct response</td><td class="px-4 py-2.5 border-b border-border text-ink-2 font-semibold" style="color: #2e7d32">Iterate the concept with fresh execution</td><td class="px-4 py-2.5 border-b border-border text-ink-2 font-semibold" style="color: #c62828">Kill and analyze why</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Concept value</td><td class="px-4 py-2.5 text-ink-2">Proven &mdash; the angle works</td><td class="px-4 py-2.5 text-ink-2">Unproven &mdash; the angle may not resonate</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The iteration opportunity</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">When a creative fatigues, you have a proven concept. The messaging angle, the core hook idea, the value proposition &mdash; all validated by real purchase data. The execution (specific footage, specific creator, specific edit) is stale. The fix is a fresh execution of the same concept: new hook variant, different creator, updated visuals, same underlying message. This is the core logic behind <a href="/modular-creative" class="text-accent hover:underline">modular creative production</a> &mdash; building components that can be recombined into fresh variations.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Struggling with creative fatigue?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We build continuous creative pipelines that outpace fatigue. Strategy, production, testing, iteration &mdash; all handled. You get a steady flow of fresh creatives, not a handful that die in two weeks.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailFatigue} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a fatigue audit &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 The Andromeda Effect -->
+    <section class="guide-section" id="andromeda">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Andromeda</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The Andromeda effect: why fatigue accelerated in 2024&ndash;2026</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Meta&rsquo;s Andromeda ad-ranking system (2024) changed the game</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creative lifespan compressed from ~6 weeks average to ~10 days</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The system aggressively penalizes stale creative and rewards freshness</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">In 2024, Meta rolled out Andromeda &mdash; a new ad-ranking system that fundamentally changed how ads are evaluated and delivered. Andromeda processes far more ad candidates per impression (up from ~1,000 to ~100,000+) and weights <strong>creative freshness</strong> as a significant ranking signal. The result: ads that would have run profitably for 4&ndash;6 weeks in 2023 now decay in 10&ndash;14 days.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What Andromeda changed</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Faster audience saturation.</strong> Andromeda finds the optimal audience faster, which means it also exhausts that audience faster. Peak performance arrives sooner, but so does fatigue.</li>
+          <li><strong>Freshness as a ranking signal.</strong> New ads get a distribution boost. Old ads get penalized. The system actively favors novelty, not just relevance.</li>
+          <li><strong>Broader competition.</strong> Your ad now competes against ~100&times; more candidates for each impression. A stale ad that would have won a 1,000-candidate auction loses a 100,000-candidate one.</li>
+          <li><strong>Advantage+ acceleration.</strong> Advantage+ shopping campaigns and Advantage+ creative leverage Andromeda heavily. They deliver fast results but also compress creative lifespan further.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What this means in practice</h3>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Pre-Andromeda (2023)</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Post-Andromeda (2025&ndash;2026)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Average creative lifespan</td><td class="px-4 py-2.5 border-b border-border text-ink-2">4&ndash;6 weeks</td><td class="px-4 py-2.5 border-b border-border text-ink-2">10&ndash;14 days</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Time to peak CPA</td><td class="px-4 py-2.5 border-b border-border text-ink-2">5&ndash;7 days</td><td class="px-4 py-2.5 border-b border-border text-ink-2">3&ndash;5 days</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">New concepts needed/week</td><td class="px-4 py-2.5 border-b border-border text-ink-2">3&ndash;5</td><td class="px-4 py-2.5 border-b border-border text-ink-2">6&ndash;12+</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">CTR drop by day 10</td><td class="px-4 py-2.5 text-ink-2">10&ndash;20%</td><td class="px-4 py-2.5 text-ink-2">30&ndash;50%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The practical consequence is clear: brands that relied on finding one or two winning ads per month can no longer compete. You need a continuous pipeline of fresh creative &mdash; not as a nice-to-have, but as a structural requirement of the post-Andromeda ad ecosystem. See <a href="/guide" class="text-accent hover:underline">our creative testing guide</a> for the full system.</p>
+      </div>
+    </section>
+
+    <!-- 07 Platform-Specific Decay Rates -->
+    <section class="guide-section" id="platforms">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Platforms</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Platform-specific fatigue rates</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok: fastest fatigue (1&ndash;3 weeks), demands constant novelty</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Meta: moderate (2&ndash;4 weeks), accelerated by Andromeda</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">YouTube: slowest (4&ndash;8 weeks), intent-based viewing reduces fatigue</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Platform</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Typical lifespan</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Fatigue trigger</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">TikTok</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1&ndash;3 weeks</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Frequency 1.5&ndash;2.0</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Users expect constant novelty. Content feed moves fastest. Native = ephemeral.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Meta (FB + IG)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">2&ndash;4 weeks</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Frequency 2.5&ndash;3.0</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Andromeda penalizes stale creative. Broad Advantage+ targeting exhausts audiences faster.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">YouTube</td><td class="px-4 py-2.5 border-b border-border text-ink-2">4&ndash;8 weeks</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Frequency 3.0&ndash;4.0</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Intent-based viewing. Users actively searching or watching; higher tolerance for repeated ads.</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Google (Search/Display)</td><td class="px-4 py-2.5 text-ink-2">6&ndash;12 weeks</td><td class="px-4 py-2.5 text-ink-2">Variable</td><td class="px-4 py-2.5 text-ink-2">Intent-driven. Less visual. Creative matters less than offer and keyword relevance.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Cross-platform fatigue strategy</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The insight (hook, angle, messaging) from a winning ad transfers across platforms. The execution must be refreshed per platform. When a TikTok creative fatigues at week 2, its concept can be re-shot in a Meta-native style and run fresh there. When the Meta version fatigues at week 4, the same concept can be adapted for YouTube with a longer format. This staggered approach extends the total value extracted from each winning concept.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">See our <a href="/performance-creative" class="text-accent hover:underline">performance creative guide</a> for the full cross-platform production system.</p>
+      </div>
+    </section>
+
+    <!-- 08 Extending Creative Life -->
+    <section class="guide-section" id="extending">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Extending</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to extend creative life</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You can delay fatigue, but you can&rsquo;t prevent it</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Modular variations are the primary extension tool</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each technique adds days to weeks, not months</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">While fatigue is inevitable, there are tactics that can delay it. None of these are permanent solutions &mdash; they buy time while your pipeline produces the next batch of fresh creative.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Seven techniques to extend creative lifespan</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Swap the hook.</strong> Keep the body and CTA, replace the first 3 seconds. This is the single most effective extension tactic. The same body with a fresh hook registers as a &ldquo;new&rdquo; ad to the audience. See <a href="/hook-rate" class="text-accent hover:underline">hook rate guide</a> for hook types.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Change the thumbnail / first frame.</strong> On Meta, the thumbnail is the first thing users see in the feed. A new thumbnail can restart the creative&rsquo;s life by 5&ndash;10 days.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Re-edit with different pacing.</strong> Same footage, different cuts. Faster pacing, different music, new text overlays. Costs nothing in production but registers as fresh content to the algorithm.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Switch the creator.</strong> Same script, different face. This works because the audience&rsquo;s familiarity is visual &mdash; a new person reading the same words feels like a new ad.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Change the format.</strong> Turn a talking-head into a voiceover + B-roll. Turn a voiceover into a text-on-screen. The same message in a different wrapper extends life by 1&ndash;2 weeks.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Expand the audience.</strong> If fatigue is driven by narrow targeting, broaden your audience. A larger pool means lower frequency at the same spend level. Use Advantage+ audience on Meta for automatic expansion.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Reduce spend gradually.</strong> Instead of killing a fatiguing winner outright, reduce spend by 20&ndash;30% every 3 days. This slows frequency growth and extends the creative&rsquo;s tail, buying time for replacements.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The modular advantage</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If your creative is built with <a href="/modular-creative" class="text-accent hover:underline">modular components</a> (interchangeable hooks, bodies, and CTAs), extending life is trivial. You simply swap one component and launch a fresh combination. A modular system with 6 hooks &times; 4 bodies &times; 3 CTAs gives you 72 unique combinations from the same production effort &mdash; weeks or months of runway before the concept is truly exhausted.</p>
+      </div>
+    </section>
+
+    <!-- 09 The Prevention Pipeline -->
+    <section class="guide-section" id="pipeline">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Pipeline</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The fatigue prevention pipeline</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">6&ndash;12 new concepts per week for active brands</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">New creative must be ready before current winners decay</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The pipeline is the product &mdash; individual ads are disposable</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The only structural solution to ad fatigue is a continuous creative pipeline. Not a burst of production followed by weeks of running the same ads. A continuous, predictable flow of new concepts, tested and iterated on a weekly cadence. The <a href="/guide" class="text-accent hover:underline">creative testing system</a> is the backbone of this pipeline.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Pipeline math</h3>
+        <div class="bg-card border border-border rounded-xl p-6 mb-6">
+          <p class="text-ink-2 leading-[1.65] mb-3">If a winning ad lasts ~10 days, and you need 3&ndash;5 active winners at any time, and your hit rate is 20&ndash;30%:</p>
+          <div class="bg-bg rounded-lg p-4 font-mono text-[14px] text-ink text-center mb-3">
+            Winners needed &divide; Hit rate = Concepts to test<br/>
+            5 &divide; 0.25 = <strong>20 concepts per testing cycle</strong>
+          </div>
+          <p class="text-ink-2 leading-[1.65]">With a 10-day cycle, that means producing and testing ~20 concepts every 10 days, or roughly <strong>14 per week</strong>. This is why high-performing ad accounts need a production machine, not a one-off shoot.</p>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The weekly pipeline rhythm</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Monday: Data review.</strong> Tag every running creative: Scale, Extend, Kill. Identify fatiguing winners that need iterations. Calculate remaining runway for active winners.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Tuesday: Concept &amp; script.</strong> Write new concepts based on learnings from killed and fatiguing ads. Assign to creators. Prioritize iterations of proven angles and fresh concepts (60/30/10 split).</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Wednesday&ndash;Thursday: Production.</strong> Creators shoot. Editors cut. Variations assembled. <a href="/canvas-ugc" class="text-accent hover:underline">UGC content</a> and AI-enhanced footage produced in parallel.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Friday: QA &amp; launch.</strong> Review all new creatives. Launch fresh batch. Begin next test cycle.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Weekend: Data collection.</strong> New ads run for 48&ndash;72 hours. Early signals begin appearing. Monday review starts the cycle again.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Pipeline by spend level</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Monthly ad spend</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">New concepts/week</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Active creatives needed</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Replacement cycle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">$10K&ndash;$50K</td><td class="px-4 py-2.5 border-b border-border text-ink-2">3&ndash;6</td><td class="px-4 py-2.5 border-b border-border text-ink-2">2&ndash;3</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Every 2&ndash;3 weeks</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">$50K&ndash;$200K</td><td class="px-4 py-2.5 border-b border-border text-ink-2">6&ndash;12</td><td class="px-4 py-2.5 border-b border-border text-ink-2">3&ndash;5</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Weekly</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">$200K+</td><td class="px-4 py-2.5 text-ink-2">12&ndash;20+</td><td class="px-4 py-2.5 text-ink-2">5&ndash;10+</td><td class="px-4 py-2.5 text-ink-2">Continuous (multiple per week)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 Fatigue Monitoring System -->
+    <section class="guide-section" id="monitoring">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Monitoring</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Building a fatigue monitoring system</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Daily monitoring of frequency, CTR, and CPA per creative</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Automated alerts when frequency hits 2.0 or CTR drops 3 days in a row</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creative health dashboard: Green / Yellow / Red status per ad</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Reactive fatigue management &mdash; noticing CPA is up in the weekly review &mdash; is too slow. By the time weekly data shows a problem, you&rsquo;ve already wasted days of budget on a dying creative. A proper monitoring system catches fatigue at the first signal and triggers action immediately.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The creative health dashboard</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Status</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Criteria</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold" style="color: #2e7d32">Green</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Frequency &lt;2.0, CPA at/below target, CTR stable or rising</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Scale. Maintain or increase budget.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold" style="color: #f57f17">Yellow</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Frequency 2.0&ndash;2.5, CTR declining 2+ days, CPA rising &lt;20%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Prepare replacement. Launch variations. Don&rsquo;t increase spend.</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-semibold" style="color: #c62828">Red</td><td class="px-4 py-2.5 text-ink-2">Frequency &gt;2.5, CTR dropping 3+ days, CPA &gt;20% above peak</td><td class="px-4 py-2.5 text-ink-2">Reduce spend immediately. Replace. Move budget to fresh creative.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Metrics to track daily per creative</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Frequency</strong> &mdash; average times each user has seen the ad. Threshold: 2.0 (yellow), 2.5 (red).</li>
+          <li><strong>CTR (click-through rate)</strong> &mdash; track the daily trend, not the absolute number. 3 consecutive days of decline = fatigue signal.</li>
+          <li><strong>CPA</strong> &mdash; compare to the creative&rsquo;s own peak, not to the account average. A 30% increase from peak = action required.</li>
+          <li><strong>Hook rate (3s)</strong> &mdash; declining hook rate confirms fatigue. The audience recognizes and skips the creative instantly.</li>
+          <li><strong>Impression share</strong> &mdash; if the algorithm is reducing delivery, the ad is losing competitiveness.</li>
+          <li><strong>Days active</strong> &mdash; simple but effective. Any creative running past 14 days on Meta should be watched closely.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Automation</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Set up automated rules in your ad platform: if frequency &gt; 2.5 AND CTR drops &gt;20% from 7-day average, automatically reduce budget by 30% and send an alert. This prevents the worst case: a dying creative burning through budget over a weekend when nobody&rsquo;s monitoring. Most ad platforms (Meta, TikTok) support rule-based automation natively.</p>
+      </div>
+    </section>
+
+    <!-- 11 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+
+        {[
+          { term: "Ad fatigue", def: "The gradual decline in ad performance caused by audience overexposure. Measured by rising frequency, declining CTR, and increasing CPA over time." },
+          { term: "Frequency", def: "The average number of times each user in your target audience has seen a specific ad. The critical fatigue threshold on Meta is 2.5-3.0." },
+          { term: "Andromeda", def: "Meta's ad-ranking system (2024+) that evaluates ~100,000 ad candidates per impression and weights creative freshness as a ranking signal, compressing creative lifespan from ~6 weeks to ~10 days." },
+          { term: "Creative lifespan", def: "The period during which an ad performs at or near its peak CPA. On Meta in 2026, average lifespan is 10-14 days for a scaled winning creative." },
+          { term: "Banner blindness", def: "A user behavior where repeated exposure to the same ad causes the viewer to scroll past without consciously registering it. The primary mechanism behind ad fatigue." },
+          { term: "Creative decay", def: "Synonym for ad fatigue. The measurable decline in performance metrics as an ad ages and audience exposure increases." },
+          { term: "Hook swap", def: "Replacing the first 3 seconds of a video ad while keeping the body and CTA intact. The most effective single technique for extending creative lifespan." },
+          { term: "Fatigue signal", def: "An early metric change that indicates fatigue is beginning: frequency > 2.0, CTR declining for 3+ days, or hook rate dropping below historical average." },
+          { term: "Creative pipeline", def: "A continuous production system that delivers 6-12+ new ad concepts per week, ensuring fresh creative is always ready to replace fatiguing winners." },
+          { term: "Dead zone", def: "The gap between one winning creative fatiguing and the next being validated. Causes CPA spikes and budget waste. Prevented by maintaining a continuous pipeline." },
+          { term: "Creative health status", def: "A monitoring classification (Green/Yellow/Red) based on frequency, CTR trend, and CPA trend that guides real-time budget allocation decisions." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 12 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">12 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What is ad fatigue?", a: "Ad fatigue is the decline in ad performance caused by audience overexposure. When users see the same ad too many times, they stop engaging. The ad platform's algorithm detects this declining engagement and reduces the ad's delivery priority, creating a death spiral of fewer impressions, worse results, and higher CPA." },
+          { q: "How do I know if my ad is fatiguing or just bad?", a: "Check the performance curve. A fatigued ad performed well initially and then declined — good CPA that rose over time, high frequency (2.5+), CTR that was strong but is now dropping. A bad ad underperforms from day one — poor CPA from launch, low frequency (the ad hasn't been shown enough to fatigue), consistently low CTR. Fatigued concepts should be iterated; bad concepts should be killed." },
+          { q: "How long do ads last on Meta in 2026?", a: "Average creative lifespan on Meta is roughly 10-14 days for a scaled winning ad. Meta's Andromeda system (launched 2024) compressed lifespan significantly — down from 4-6 weeks in 2023. Higher daily spend accelerates fatigue further. Ads running at $1,000/day fatigue faster than those at $100/day." },
+          { q: "What is the frequency threshold for fatigue?", a: "On Meta, fatigue typically begins when frequency hits 2.5-3.0. On TikTok, it can start as low as 1.5-2.0 because users expect more content novelty. On YouTube, the threshold is higher (3.0-4.0) because intent-based viewing means users are more tolerant of repeated ads." },
+          { q: "What is the fastest way to fix a fatiguing ad?", a: "Swap the hook — replace the first 3 seconds while keeping the body and CTA intact. This is the single most effective extension technique because the opening is what the audience recognizes most strongly. A new hook on a proven body often performs like a fresh ad for another 7-14 days." },
+          { q: "How many new creatives do I need per week?", a: "Depends on your ad spend. At $10K-50K/month: 3-6 new concepts per week. At $50K-200K/month: 6-12. At $200K+: 12-20 or more. The math is driven by your hit rate (typically 20-30%) and creative lifespan (~10 days). You need enough new concepts to maintain 3-5 active winners at any time." },
+          { q: "What is Meta's Andromeda system and why does it matter?", a: "Andromeda is Meta's ad-ranking system, rolled out in 2024. It evaluates roughly 100,000 ad candidates per impression (up from ~1,000) and uses creative freshness as a significant ranking signal. This means new ads get a distribution boost while older ads get penalized — compressing the average creative lifespan from ~6 weeks to ~10 days." },
+          { q: "Can I prevent ad fatigue entirely?", a: "No. Fatigue is inherent to paid advertising — any ad shown repeatedly to the same audience will eventually lose effectiveness. What you can do is delay fatigue (through hook swaps, audience expansion, modular variations) and outpace it (through a continuous creative pipeline). The goal is to always have fresh winners entering the rotation before current ones decay." },
+          { q: "What is a creative pipeline?", a: "A creative pipeline is a continuous production system that delivers new ad concepts on a predictable weekly cadence. It includes research, scripting, production (with UGC creators, B-roll, and AI), testing, and iteration. The pipeline replaces the traditional model of periodic 'creative shoots' with an always-on creative operation." },
+          { q: "Can OKAD help with ad fatigue prevention?", a: "Yes. We build and run continuous creative pipelines — strategy, scripts, UGC production, testing, and data-driven iteration on a weekly cadence. Our clients get a steady flow of fresh, tested creative instead of a handful of ads that die in two weeks. Write to us at olga@okad.agency or book a call to discuss your current fatigue challenges." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to outpace ad fatigue?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your ad setup and fatigue challenges. We&rsquo;ll audit your current creative rotation, estimate remaining lifespan, and scope a pipeline that keeps fresh winners flowing.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailFatigue} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a fatigue audit &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on ad fatigue patterns observed across OKAD Agency&rsquo;s paid media clients (DTC, SaaS, consumer tech) and publicly available research on Meta&rsquo;s Andromeda ad-ranking system, creative lifespan benchmarks, and platform-specific decay rates. Specific timelines and thresholds are directional industry ranges. Individual outcomes depend on ad spend, audience size, targeting strategy, creative quality, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

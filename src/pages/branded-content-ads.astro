@@ -1,0 +1,632 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailSubject = "mailto:olga@okad.agency?subject=Branded%20Content%20Ads%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Branded Content Ads — The Complete Guide to Creator-Powered Advertising | OKAD"
+  description="Branded content ads use real creator content as paid advertising across TikTok, Meta, and YouTube. This guide covers delivery methods, creator selection, legal requirements, measurement, and how to run branded content at scale."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Branded Content Ads: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Branded content ads are paid promotions powered by real creator content. They combine the trust of authentic creator voices with the targeting power of paid media. This guide covers every platform, delivery method, and operational detail.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailSubject} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Order branded content ads &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Cross-platform</span>
+          <span>Creator-powered</span>
+          <span>Authentic feel</span>
+          <span>TikTok &middot; Meta &middot; YouTube</span>
+          <span>Full-funnel</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Branded Content Ads Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Creator Produces Content</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">A real person films authentic content featuring your product, following a brief that balances brand messaging with creative freedom.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F91D;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Partnership Is Disclosed</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">The content carries a "Paid Partnership" or "Sponsored" label. Transparent, compliant, and built into the platform.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Brand Amplifies as Ad</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">The creator content is promoted as a paid ad via Spark Ads, Partnership Ads, or whitelabel &mdash; reaching targeted audiences at scale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "What Makes Content \"Branded\"", href: "#branded" },
+            { num: "03", text: "Three Delivery Methods", href: "#delivery" },
+            { num: "04", text: "Why Branded Content Outperforms", href: "#performance" },
+            { num: "05", text: "Cross-Platform Comparison", href: "#platforms" },
+            { num: "06", text: "Creator Selection Criteria", href: "#creators" },
+            { num: "07", text: "Brief Structure", href: "#brief" },
+            { num: "08", text: "Legal Requirements", href: "#legal" },
+            { num: "09", text: "Measurement and ROI", href: "#measurement" },
+            { num: "10", text: "OKAD's Branded Content Service", href: "#okad-service" },
+            { num: "11", text: "Glossary", href: "#glossary" },
+            { num: "12", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What branded content ads are and why they matter</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Branded content ads = paid promotions powered by creator-made content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Umbrella term covering Spark Ads, Partnership Ads, and creator-powered YouTube ads</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Content feels authentic because it is &mdash; made by real people, not brand studios</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">"Branded content ads" is the umbrella term for any paid advertisement that uses content created by a real person &mdash; a creator, influencer, or micro-influencer &mdash; rather than content produced entirely by the brand's in-house team or agency. The creator films, edits, and often publishes the content. The brand then amplifies it as a paid ad, leveraging the creator's authentic voice while applying the targeting and scale of paid media.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Each major platform has its own branded content ad format. TikTok calls them <a href="/spark-ads" class="text-accent hover:underline">Spark Ads</a>. Meta calls them <a href="/partnership-ads" class="text-accent hover:underline">Partnership Ads</a> (formerly Branded Content Ads). YouTube has BrandConnect and creator-powered video ads. Despite the different names, the underlying mechanic is the same: take content made by a real person and run it as a paid promotion.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The reason branded content ads have become the dominant format in performance marketing is straightforward: they outperform traditional brand-produced ads. Across industries, branded content ads consistently deliver higher click-through rates, lower cost per acquisition, and stronger engagement than polished studio creatives. The "Paid Partnership" label is visible, but the content itself feels native to the platform &mdash; because it was made by someone who lives on that platform.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This guide covers the complete landscape: what makes content "branded," the three delivery methods, platform-by-platform mechanics, creator selection, briefing, legal requirements, measurement, and how to run branded content ads at scale. For related reading, see our guides on <a href="/guide" class="text-accent hover:underline">creative testing</a>, <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a>, and <a href="/tech-ugc" class="text-accent hover:underline">Tech UGC</a>.</p>
+      </div>
+    </section>
+
+    <!-- 02 What Makes Content "Branded" -->
+    <section class="guide-section" id="branded">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What makes content "branded content"</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Created by a real person, not a brand's internal production team</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Carries a "Paid Partnership" or "Sponsored" label for transparency</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Feels native to the platform despite being a paid promotion</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content sits at the intersection of creator authenticity and brand messaging. The content is produced by a creator who has a genuine voice, visual style, and audience relationship. The brand provides direction &mdash; product information, key messages, tone guidelines &mdash; but the creator retains enough creative freedom that the final piece feels like their own content, not a scripted commercial.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every major platform requires disclosure when content is the result of a commercial relationship. On TikTok, the "Paid Partnership" toggle labels the post. On Instagram and Facebook, the "Paid partnership with [brand]" header appears above the content. On YouTube, the "Includes paid promotion" disclosure is mandatory. These labels satisfy both platform policy and regulatory requirements (FTC, ASA, and equivalents in other jurisdictions).</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Branded content vs. traditional ads</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional ads are conceived, scripted, filmed, and edited entirely by the brand or its agency. They look like ads. Branded content is conceived collaboratively, produced by a creator, and published in a format native to the platform. The production quality is deliberately "real" rather than polished &mdash; shot on a phone, natural lighting, casual delivery. This is not a weakness; it is the entire point. Platform users have been trained to scroll past anything that looks like an ad. Branded content survives that filter because it looks like content.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The authenticity spectrum</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Not all branded content is equally authentic. At one end, a creator receives a product, uses it genuinely, and shares their honest opinion with minimal brand direction. At the other end, a creator reads a word-for-word script provided by the brand. Both qualify as "branded content," but they perform very differently. The most effective branded content falls in the middle: the brand provides a clear brief with key messages and product facts, but the creator translates those into their own words, shooting style, and storytelling format.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Over-scripted branded content defeats the purpose. If the creator sounds like they are reading a press release, the audience notices immediately. Under-briefed content risks missing the brand's core message or violating compliance requirements. The brief is the lever that determines where content lands on this spectrum &mdash; see <a href="#brief">Section 07</a> for how to structure it.</p>
+      </div>
+    </section>
+
+    <!-- 03 Three Delivery Methods -->
+    <section class="guide-section" id="delivery">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Delivery Methods</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Three ways to deliver branded content ads</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Whitelisting: brand runs ads from the creator's account</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Branded content (tagged): creator posts, brand promotes the post</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Whitelabel: creator delivers footage, brand runs ads from its own account</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Once a creator produces content for a brand, there are three distinct ways that content can be delivered as a paid ad. Each method differs in whose account the ad runs from, what permissions are required, and how the ad appears to the audience. Understanding these three methods is essential for choosing the right approach for your campaign.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Method 1: Whitelisting (creator account access)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">In whitelisting, the creator grants the brand permission to run paid ads directly from the creator's account. The ad appears in the feed as if it were posted by the creator, which maximizes authenticity. On Meta, this is done through Business Manager partnerships. On TikTok, the creator generates an authorization code for <a href="/spark-ads" class="text-accent hover:underline">Spark Ads</a>. The creator's profile picture, name, and handle appear on the ad. All engagement (likes, comments, shares) accrues to the creator's post.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Whitelisting delivers the strongest native feel but requires the most creator cooperation. Some creators are uncomfortable granting ad account access, especially if they have limited experience with brand partnerships. Clear contracts and transparent communication about how the content will be used are essential.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Method 2: Branded content (tagged promotion)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">In this method, the creator publishes the content on their own account and tags the brand as a paid partner. The brand can then promote this tagged post as a paid ad through its own ad account. On Meta, this is the <a href="/partnership-ads" class="text-accent hover:underline">Partnership Ads</a> format. The post shows the creator's identity but includes the "Paid partnership with [brand]" label. The brand controls targeting, budget, and optimization.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This method is the most common for branded content ads because it balances authenticity with brand control. The creator publishes organically, the content appears native, and the brand can promote the best-performing posts with paid budget. It requires less account access than whitelisting while preserving the creator's identity in the ad.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Method 3: Whitelabel (brand runs creator footage)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">In whitelabel delivery, the creator produces content and delivers raw footage to the brand. The brand then publishes and promotes the content from its own account. The creator's identity does not appear on the ad &mdash; the brand's account is the publisher. This gives the brand full control over editing, posting schedule, and ad optimization, but sacrifices the social proof of having a real creator's name and profile attached to the ad.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Whitelabel is common in performance marketing campaigns where the brand needs maximum creative control and plans to test many variations of the same footage. It is also used when creators prefer not to have their profile associated with paid ads or when the brand wants to run the content across multiple platforms simultaneously.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Aspect</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Whitelisting</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Branded Content (Tagged)</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Whitelabel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Ad runs from</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator's account</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator's post, promoted by brand</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand's account</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator identity visible</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Yes &mdash; full profile</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Yes &mdash; with "Paid Partnership" label</td><td class="px-4 py-2.5 border-b border-border text-ink-2">No &mdash; brand only</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Authenticity level</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Highest</td><td class="px-4 py-2.5 border-b border-border text-ink-2">High</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Moderate</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Brand control</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Limited (targeting only)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Moderate (targeting + budget)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Full (edit, post, optimize)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator permission needed</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Account access</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand tag approval</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Usage rights only</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Engagement accrues to</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator's post</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator's post</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand's post</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Best for</td><td class="px-4 py-2.5 text-ink-2">Max authenticity, social proof</td><td class="px-4 py-2.5 text-ink-2">Balanced approach, most campaigns</td><td class="px-4 py-2.5 text-ink-2">Performance testing, full control</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most brands use a combination of all three methods depending on the campaign objective, creator relationship, and platform. OKAD typically recommends starting with branded content (tagged) for initial campaigns and layering in whitelisting for top-performing creators who are comfortable with deeper partnerships.</p>
+      </div>
+    </section>
+
+    <!-- 04 Why Branded Content Outperforms -->
+    <section class="guide-section" id="performance">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Performance</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why branded content outperforms traditional ads</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Trust: people trust people more than brands</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Native feel: content survives the "scroll past ads" reflex</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Algorithm preference: platforms reward engagement, and branded content gets more of it</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content ads outperform traditional studio-produced ads for reasons that are structural, not accidental. The advantages compound: each factor reinforces the others to create a meaningful performance gap.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Trust and credibility</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Audiences have developed sophisticated instincts for detecting advertisements. A polished, brand-produced video triggers an immediate "this is an ad" response, activating skepticism. Branded content bypasses this filter because it is delivered by a real person whose content style matches what the viewer already consumes. The message is the same &mdash; "this product is good" &mdash; but the messenger is trusted. Studies consistently show that consumers trust recommendations from individuals over brand messaging, even when they know the individual is being compensated.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Native format and platform fit</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content is produced in the same format, aspect ratio, editing style, and pacing that performs natively on each platform. A TikTok branded content ad looks like a TikTok. An Instagram Reel branded content ad looks like a Reel. This is not cosmetic &mdash; platform algorithms prioritize content that keeps users on the platform, and native-feeling content achieves higher watch time, completion rates, and engagement than content that disrupts the feed experience.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Social proof</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">When a branded content ad runs from a creator's account (via whitelisting or tagged promotion), it inherits the creator's social context: their followers, their content history, their engagement patterns. A viewer can tap the creator's profile and see a real person with real content. This social proof is impossible to replicate with brand-account ads. It transforms the ad from an anonymous promotion into a personal recommendation.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Algorithm preference</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Platform algorithms optimize for engagement. Branded content consistently generates more likes, comments, shares, and saves than traditional ad creatives because it feels like organic content. Higher engagement signals tell the algorithm to show the content to more people, creating a positive feedback loop. On TikTok, Spark Ads that use existing high-performing organic posts benefit from accumulated engagement signals, often achieving 30&ndash;50% lower CPMs compared to standard in-feed ads.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Creative diversity at scale</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Working with multiple creators produces natural creative variation. Each creator brings their own voice, delivery style, hooks, and visual approach. This diversity is extremely difficult to replicate internally. A brand working with 10 creators gets 10 distinct perspectives on the same product, which feeds the <a href="/guide" class="text-accent hover:underline">creative testing</a> process with diverse hypotheses. In traditional production, generating this level of variation requires deliberate scripting and multiple production days.</p>
+      </div>
+    </section>
+
+    <!-- 05 Cross-Platform Comparison -->
+    <section class="guide-section" id="platforms">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Platforms</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Cross-platform comparison</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok: Spark Ads &mdash; strongest native ad format, highest organic discovery</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Meta: Partnership Ads &mdash; most mature targeting, largest audience</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">YouTube: BrandConnect &amp; creator ads &mdash; longest watch time, strongest for consideration</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Each platform implements branded content ads differently. The format names, setup workflows, permission structures, and performance characteristics vary significantly. This comparison covers the three major platforms for branded content advertising as of 2026.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Feature</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">TikTok (Spark Ads)</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Meta (Partnership Ads)</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">YouTube</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Format name</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Spark Ads</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Partnership Ads (formerly Branded Content Ads)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">BrandConnect / creator-powered ads</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator authorization</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Auth code (valid 30&ndash;365 days)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Business Manager partnership</td><td class="px-4 py-2.5 border-b border-border text-ink-2">BrandConnect linking or raw footage</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Ad placement</td><td class="px-4 py-2.5 border-b border-border text-ink-2">For You feed, Search, Profile</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Feed, Reels, Stories, Explore</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Shorts, In-stream, Discovery</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Organic engagement retained</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Yes &mdash; all likes, comments, shares</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Yes &mdash; on the original post</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Partial &mdash; depends on format</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Targeting capabilities</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Interest, behavior, lookalike, custom</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Most granular: demographics, interests, lookalike, retargeting</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Keywords, topics, placements, audiences</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Typical content length</td><td class="px-4 py-2.5 border-b border-border text-ink-2">15&ndash;60 seconds</td><td class="px-4 py-2.5 border-b border-border text-ink-2">15&ndash;90 seconds (Reels), 15s (Stories)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">60s (Shorts), 30s&ndash;5min (in-stream)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Best funnel stage</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Awareness + direct response</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Full-funnel (strongest retargeting)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Consideration + brand lift</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Disclosure label</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Paid Partnership" toggle</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Paid partnership with [brand]"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Includes paid promotion"</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Key strength</td><td class="px-4 py-2.5 text-ink-2">Organic discovery + native feel</td><td class="px-4 py-2.5 text-ink-2">Precision targeting + retargeting</td><td class="px-4 py-2.5 text-ink-2">Long-form trust + search intent</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">TikTok Spark Ads</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><a href="/spark-ads" class="text-accent hover:underline">Spark Ads</a> are TikTok's native branded content format. They allow brands to boost existing creator posts (or brand-account posts) as paid ads while retaining all organic engagement. The creator generates an authorization code, which the brand uses to promote the post through TikTok Ads Manager. Spark Ads appear in the For You feed alongside organic content and consistently outperform standard in-feed ads in engagement rate and CPM efficiency. They are the most popular branded content ad format globally.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Meta Partnership Ads</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><a href="/partnership-ads" class="text-accent hover:underline">Partnership Ads</a> (formerly Branded Content Ads) are Meta's equivalent. Creators publish content on Instagram or Facebook and tag the brand as a paid partner. The brand can then promote the post through its Ads Manager with full targeting capabilities. Meta's strength is its targeting infrastructure &mdash; lookalike audiences, retargeting pixels, detailed demographic and interest targeting make it the platform of choice for brands with established first-party data. Partnership Ads on Instagram Reels have become a particularly strong format for direct response campaigns.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">YouTube branded content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">YouTube's branded content ecosystem is more fragmented than TikTok or Meta. BrandConnect matches brands with creators for sponsored integrations. Creator-made content can also be used as standard YouTube ad creative (in-stream, Shorts, discovery). YouTube's unique advantage is intent: users search for products, reviews, and tutorials. A branded content ad that appears as a relevant video in search results or before related content captures users in an active consideration mindset, which drives stronger brand lift and purchase intent compared to passive feed formats.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Want OKAD to run your branded content ads?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We handle creator casting, content production, platform setup, and ad optimization across TikTok, Meta, and YouTube. From brief to performance report.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get started &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Creator Selection Criteria -->
+    <section class="guide-section" id="creators">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Creator Selection</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to select the right creators</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Niche fit matters more than follower count</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Evaluate content quality, audience demographics, and engagement rate</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Vet creators for brand safety and compliance history</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Creator selection is the single most important variable in branded content performance. The wrong creator produces content that feels forced, misses the target audience, or fails to communicate the brand's value proposition. The right creator makes it look effortless &mdash; because for them, it nearly is. They already create content in the brand's niche, their audience matches the brand's target customer, and their production quality meets the bar for paid media.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The five selection criteria</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Niche fit.</strong> The creator's existing content should naturally overlap with the brand's product category. A fitness creator reviewing a protein supplement is believable. A gaming creator reviewing the same supplement is not &mdash; unless their audience is gym-going gamers. Look at the creator's last 30 posts, not just their bio.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Content quality.</strong> Evaluate production value (lighting, audio, framing), storytelling ability (hooks, pacing, payoff), and platform fluency (trends, editing techniques, format awareness). A creator does not need professional equipment, but they do need to produce content that holds attention for the full duration.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Audience demographics.</strong> Request audience data or use third-party analytics tools. Key metrics: age distribution, gender split, geographic concentration, and interests. A creator with 500K followers is worthless for your campaign if 80% of their audience is in a country you do not serve.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Engagement rate.</strong> Calculate engagement rate as (likes + comments) / followers or views. Industry benchmarks vary by platform: TikTok 3&ndash;8%, Instagram 1&ndash;4%, YouTube 2&ndash;6%. A high engagement rate signals an active, responsive audience. Low engagement relative to follower count often indicates purchased followers or an inactive audience.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Brand safety and compliance.</strong> Review the creator's content history for controversial statements, competitor partnerships, compliance violations, and overall tone alignment with the brand. Check whether the creator has experience with disclosure requirements (FTC, platform labels). A creator who has never done a brand deal may need additional guidance on compliance.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Micro-creators vs. macro-creators</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">For branded content ads, micro-creators (10K&ndash;100K followers) often outperform macro-creators (500K+). Micro-creators have higher engagement rates, more niche audiences, lower rates, and greater willingness to follow briefs closely. They also produce content that feels more authentic &mdash; a recommendation from someone with 25K followers reads differently than one from a celebrity. The optimal strategy for most brands is working with 5&ndash;15 micro-creators simultaneously rather than 1&ndash;2 large influencers.</p>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#x1F3AF;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailSubject} class="text-ink hover:text-accent transition-colors no-underline">OKAD's creator network handles casting for you</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">We maintain a vetted network of 600+ creators across niches, platforms, and geos. Tell us your product and target audience &mdash; we match you with creators who already produce content in your space, handle contracts, and manage the relationship end to end.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Brief Structure -->
+    <section class="guide-section" id="brief">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Brief Structure</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to brief creators for branded content</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A good brief constrains the message, not the creative execution</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Include: product story, key messages, hooks, tone, format flexibility</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Over-scripting kills authenticity; under-briefing misses the message</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The brief is the single document that determines whether branded content will feel authentic or forced. A well-structured brief gives the creator everything they need to tell the brand's story while leaving room for their own creative voice. A poorly structured brief &mdash; either too rigid or too vague &mdash; produces content that either sounds scripted or misses the mark entirely.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The seven elements of a branded content brief</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Product story.</strong> What is the product? What problem does it solve? Why should the viewer care? Give the creator enough context to understand the product genuinely &mdash; not just the marketing pitch, but the real value proposition. If possible, let the creator use the product before filming.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Key messages.</strong> List 2&ndash;3 messages that must appear in the content. These are non-negotiable talking points: the product name, the core benefit, and a call to action. Keep the list short. Every additional mandatory message reduces the creator's creative freedom and makes the content feel more scripted.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Hook suggestions.</strong> Provide 3&ndash;5 hook ideas the creator can use or adapt. Hooks are the first 1&ndash;3 seconds of the video &mdash; the part that determines whether someone watches or scrolls. Good hooks are specific, curiosity-driven, or pattern-interrupting. Bad hooks are generic ("You need to see this product").</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Tone and style.</strong> Describe the desired tone: conversational, educational, humorous, aspirational. Reference specific creators or posts that exemplify the tone you want. Avoid abstract descriptors like "authentic" or "relatable" &mdash; every brand says that. Show, don't tell.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Format flexibility.</strong> Specify which formats are acceptable: talking head, get-ready-with-me, tutorial, before/after, day-in-my-life, unboxing, comparison. If possible, let the creator choose their strongest format rather than prescribing one. The best content comes from formats the creator already knows how to execute well.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Do's and don'ts.</strong> Explicit constraints: do mention the website URL, don't make medical claims, do show the product in use, don't mention competitors by name. These guardrails prevent compliance issues and off-brand content without micromanaging the creative process.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Deliverables and timeline.</strong> Number of videos, aspect ratio, minimum and maximum duration, delivery format (native post vs. raw footage), revision policy, and deadline. Be specific: "2 videos, 9:16, 30&ndash;60 seconds each, delivered as .mp4 by [date]."</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Common briefing mistakes</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Word-for-word scripts</strong> &mdash; kill authenticity. The audience can tell when someone is reading. Provide talking points, not a teleprompter script.</li>
+          <li><strong>Too many mandatory messages</strong> &mdash; cramming 6+ talking points into a 30-second video makes every one of them weaker. Pick 2&ndash;3 and let the creator integrate them naturally.</li>
+          <li><strong>No visual references</strong> &mdash; describing the desired content in text alone leads to misalignment. Link to example videos that capture the tone, pacing, and style you want.</li>
+          <li><strong>Ignoring the creator's strengths</strong> &mdash; if a creator excels at humor and you brief them for a serious testimonial, the result will be awkward. Cast for the format you need, or adapt the brief to the creator's strengths.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 08 Legal Requirements -->
+    <section class="guide-section" id="legal">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Legal</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Legal requirements and disclosure rules</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">FTC requires "clear and conspicuous" disclosure of material connections</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each platform has its own built-in disclosure tools &mdash; use them</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">International rules vary: UK (ASA), EU (UCPD), and others have their own standards</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content advertising is subject to disclosure requirements in every major market. The core principle is consistent across jurisdictions: when there is a "material connection" between a creator and a brand (payment, free product, commission, or any other compensation), that connection must be disclosed clearly to the audience. Failure to disclose is a legal violation that can result in fines, enforcement actions, and reputational damage for both the brand and the creator.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">United States: FTC guidelines</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The Federal Trade Commission requires that endorsements reflect the honest opinion of the endorser and that material connections be disclosed "clearly and conspicuously." In practice, this means: the disclosure must be hard to miss (not buried in hashtags or at the end of a long caption), in the same language as the content, and unambiguous. "#ad" or "Paid partnership with [brand]" at the beginning of the caption meets the standard. "#sp" buried among 30 other hashtags does not. The FTC has actively pursued enforcement actions against both brands and creators for inadequate disclosure.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Platform-specific disclosure tools</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Platform</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Built-in tool</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Label shown to audience</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">TikTok</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Branded content toggle in post settings</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Paid Partnership"</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Instagram / Facebook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Branded content tag (select brand partner)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Paid partnership with [brand name]"</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">YouTube</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Paid promotion checkbox in video details</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Includes paid promotion"</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Pinterest</td><td class="px-4 py-2.5 text-ink-2">Paid partnership label</td><td class="px-4 py-2.5 text-ink-2">"Paid partnership"</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Using the platform's built-in disclosure tool is the minimum requirement, not a substitute for clear text disclosure. Best practice is to use both: activate the platform's branded content toggle and include "#ad" or "Paid partnership" in the caption or verbal disclosure within the first few seconds of the video.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">International requirements</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">In the UK, the Advertising Standards Authority (ASA) and Competition and Markets Authority (CMA) require clear labeling of paid content. The standard labels are "#ad" or "AD" &mdash; not "#gifted," "#collab," or "#spon." The EU's Unfair Commercial Practices Directive (UCPD) provides a framework that member states implement individually, but the principle is the same: undisclosed commercial content is considered misleading. Australia (AANA), Canada (Ad Standards), and Brazil (CONAR) all have equivalent rules with varying levels of enforcement.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">When running branded content ads across multiple markets, the safest approach is to comply with the strictest applicable standard. In practice, this means: use the platform's disclosure tool, include "#ad" prominently in the caption, and include a verbal disclosure in the video when possible. OKAD builds compliance checks into every branded content brief to ensure creators meet all applicable requirements before content is published or promoted.</p>
+      </div>
+    </section>
+
+    <!-- 09 Measurement and ROI -->
+    <section class="guide-section" id="measurement">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Measurement</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Measuring branded content performance</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Direct response metrics: CTR, CPA, ROAS, conversion rate</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand metrics: lift studies, recall, consideration, favorability</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Incrementality testing isolates the true impact of branded content</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Measuring branded content ads requires tracking both direct response performance and brand impact. Unlike standard display or search ads, branded content often delivers value across the funnel simultaneously &mdash; driving immediate clicks while building long-term brand awareness. A measurement framework that only captures one dimension will undervalue the investment.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Direct response metrics</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">These are the standard performance marketing metrics applied to branded content ads. They measure whether the ad is driving immediate, measurable actions.</p>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What it measures</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Benchmark range</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CTR (click-through rate)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">% of viewers who click the CTA</td><td class="px-4 py-2.5 border-b border-border text-ink-2">0.8&ndash;2.5% (branded content typically 1.5&ndash;3x standard ads)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CPA (cost per acquisition)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Cost to acquire a customer or lead</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Varies by vertical; aim for 20&ndash;40% lower than standard ads</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">ROAS (return on ad spend)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Revenue generated per dollar of ad spend</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Category-dependent; 3&ndash;8x for e-commerce, 1&ndash;3x for SaaS</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CPM (cost per 1,000 impressions)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Efficiency of media spend</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$5&ndash;$15 (Spark Ads), $8&ndash;$25 (Meta), $10&ndash;$30 (YouTube)</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Engagement rate</td><td class="px-4 py-2.5 text-ink-2">Likes + comments + shares / impressions</td><td class="px-4 py-2.5 text-ink-2">2&ndash;5x higher than standard ad creatives</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Brand lift studies</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Brand lift studies measure the impact of branded content on awareness, recall, consideration, and purchase intent. Both TikTok and Meta offer built-in brand lift study tools that compare a test group (exposed to the ad) against a control group (not exposed). These studies answer questions that direct response metrics cannot: "Did this campaign make people more aware of the brand?" and "Did it change their likelihood to purchase?" Brand lift is particularly important for branded content because its effects often extend beyond the immediate click.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Incrementality testing</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Incrementality testing is the gold standard for measuring the true impact of branded content ads. It isolates what the ad campaign caused vs. what would have happened without it. The standard approach is a geographic holdout test: run branded content ads in some regions but not others, then compare conversion rates between the groups. This eliminates attribution noise (users who would have converted anyway, cross-channel effects) and provides a clean measure of incremental value. OKAD recommends running incrementality tests quarterly for any branded content program with monthly spend above $10K.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Creative-level analysis</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Beyond campaign-level metrics, branded content programs should track performance at the individual creative level. Which creator's content drives the lowest CPA? Which hook style generates the highest CTR? Which format (talking head vs. tutorial vs. unboxing) delivers the best ROAS? This creative-level data feeds back into the <a href="/guide" class="text-accent hover:underline">creative testing</a> process and informs future briefs, creator selection, and format decisions. Over time, a brand builds a data-driven understanding of what branded content works for their specific product and audience.</p>
+      </div>
+    </section>
+
+    <!-- 10 OKAD's Branded Content Service -->
+    <section class="guide-section" id="okad-service">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; OKAD Service</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">OKAD's branded content ads service</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">End-to-end: creator casting, production, platform setup, ad optimization</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Network of 600+ vetted creators across niches and platforms</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Cross-platform: TikTok Spark Ads, Meta Partnership Ads, YouTube</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">OKAD provides a full-service branded content ads solution. We handle every stage of the process &mdash; from identifying the right creators for your brand to optimizing ad performance after launch. The service is designed for brands that want the performance benefits of branded content without building an internal creator operations team.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What OKAD handles</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator casting.</strong> We match your brand with creators from our network of 600+ vetted creators. Selection is based on niche fit, content quality, audience demographics, engagement rate, and brand safety. We handle outreach, negotiation, and contracting.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Brief development.</strong> We write the creative brief based on your product, target audience, and campaign objectives. The brief includes product story, key messages, hook suggestions, tone guidelines, format options, and compliance requirements.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Content production.</strong> Creators produce content according to the brief. We manage the review process, provide feedback, and ensure all content meets quality and compliance standards before publication.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Platform setup.</strong> We configure Spark Ads authorization codes, Meta Partnership Ads partnerships, YouTube BrandConnect integrations, and all platform-specific technical requirements. Disclosure labels are applied correctly on every post.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Ad optimization.</strong> We manage campaign setup, audience targeting, budget allocation, and ongoing optimization. Performance data feeds back into creator selection and briefing for continuous improvement.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Reporting and analysis.</strong> Monthly performance reports covering direct response metrics, engagement analytics, creative-level insights, and recommendations for the next cycle. We track performance across platforms in a unified dashboard.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">How it connects to other OKAD services</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content ads are part of OKAD's broader creator-powered advertising ecosystem. Top-performing branded content can be repurposed for <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a> programs. <a href="/tech-ugc" class="text-accent hover:underline">Tech UGC</a> content feeds branded content ad campaigns for software and AI companies. Our <a href="/guide" class="text-accent hover:underline">creative testing</a> methodology ensures that branded content is systematically tested and optimized rather than produced ad hoc.</p>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailSubject} class="text-ink hover:text-accent transition-colors no-underline">Start your branded content ads program with OKAD</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Email olga@okad.agency with your brand, product, target audience, and goals. We will scope a branded content program, recommend creators, and deliver a detailed proposal within 48 hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+
+        {[
+          { term: "Branded Content Ad", def: "A paid advertisement that uses content created by a real person (creator/influencer) rather than brand-produced creative. The umbrella term for Spark Ads, Partnership Ads, and creator-powered YouTube ads." },
+          { term: "Spark Ads", def: "TikTok's native branded content format. Brands boost existing organic creator posts as paid ads, retaining all engagement (likes, comments, shares). The most popular branded content ad format globally." },
+          { term: "Partnership Ads", def: "Meta's branded content ad format (formerly Branded Content Ads). Creators tag the brand as a paid partner, and the brand promotes the tagged post through Ads Manager on Instagram and Facebook." },
+          { term: "Whitelisting", def: "A delivery method where the creator grants the brand permission to run paid ads directly from the creator's social account. Maximizes authenticity but requires the most creator cooperation." },
+          { term: "Whitelabel", def: "A delivery method where the creator delivers raw footage and the brand publishes/promotes the content from its own account. The creator's identity does not appear on the ad." },
+          { term: "Paid Partnership Label", def: "The platform-generated disclosure that appears on branded content. Shows the audience that the content is a commercial collaboration. Required by both platform policy and advertising regulations." },
+          { term: "FTC Disclosure", def: "The Federal Trade Commission's requirement that material connections between endorsers and brands be disclosed 'clearly and conspicuously' to the audience." },
+          { term: "Creator Brief", def: "The document that outlines what a creator should produce: product story, key messages, hook suggestions, tone, format, do's and don'ts, and deliverable specifications." },
+          { term: "Incrementality Testing", def: "A measurement methodology that isolates the true causal impact of an ad campaign by comparing conversion rates in exposed vs. unexposed groups (typically geographic holdouts)." },
+          { term: "Brand Lift Study", def: "A controlled experiment that measures changes in brand awareness, recall, consideration, and purchase intent among audiences exposed to branded content vs. a control group." },
+          { term: "Authorization Code", def: "A code generated by a TikTok creator that grants a brand permission to use their post as a Spark Ad. Codes can be set to expire after 30, 60, or 365 days." },
+          { term: "BrandConnect", def: "YouTube's platform for matching brands with creators for sponsored content integrations. Provides campaign management, measurement, and creator discovery tools." },
+          { term: "Creative Testing", def: "The systematic process of testing multiple ad creative variations to identify top performers before scaling spend. Branded content feeds this process with diverse creator perspectives." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 12 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">12 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What are branded content ads?", a: "Branded content ads are paid advertisements that use content created by real people (creators, influencers, micro-influencers) rather than brand-produced studio creative. The content carries a 'Paid Partnership' or 'Sponsored' label but feels authentic because it was made by someone who lives on the platform. Branded content ads include TikTok Spark Ads, Meta Partnership Ads, and creator-powered YouTube ads." },
+          { q: "How are branded content ads different from influencer marketing?", a: "In traditional influencer marketing, a creator posts about a brand on their own account and the brand pays for the organic reach of that post. In branded content ads, the creator's content is amplified as a paid advertisement with targeting, budget control, and optimization. The brand controls who sees the ad, not just the creator's existing audience. Branded content ads combine the authenticity of influencer content with the precision of paid media." },
+          { q: "Which delivery method should I use: whitelisting, tagged, or whitelabel?", a: "For most campaigns, start with branded content (tagged). The creator posts and tags your brand, you promote the tagged post. This balances authenticity with brand control. Use whitelisting for top-performing creators who are comfortable granting account access. Use whitelabel when you need maximum creative control or plan to test many variations of the same footage." },
+          { q: "How do I choose the right creators?", a: "Prioritize niche fit and content quality over follower count. Evaluate five criteria: niche alignment (their content naturally overlaps with your product), content quality (hooks, pacing, production), audience demographics (age, gender, geography match your target), engagement rate (active audience, not just followers), and brand safety (content history, compliance experience). Micro-creators (10K-100K followers) often outperform larger creators in branded content campaigns." },
+          { q: "What are the legal requirements for branded content?", a: "In the US, the FTC requires 'clear and conspicuous' disclosure of material connections. Use the platform's built-in disclosure tools (Paid Partnership toggle on TikTok, brand tag on Meta, paid promotion checkbox on YouTube) and include '#ad' prominently in the caption. The UK (ASA), EU (UCPD), and other jurisdictions have equivalent requirements. When running across markets, comply with the strictest applicable standard." },
+          { q: "How do I measure branded content ROI?", a: "Track both direct response metrics (CTR, CPA, ROAS, engagement rate) and brand metrics (lift studies for awareness, recall, consideration). For the most accurate measurement, run incrementality tests using geographic holdouts to isolate the true causal impact. Analyze performance at the creative level to understand which creators, hooks, and formats drive the best results." },
+          { q: "How much do branded content ads cost?", a: "Costs have three components: creator fees (micro-creators $200-$1,000 per video, macro-creators $2,000-$20,000+), media spend (CPMs range from $5-$30 depending on platform and targeting), and management (agency fees or internal team costs). OKAD provides all-in pricing that includes creator casting, production, and optimization. Contact olga@okad.agency for a custom quote." },
+          { q: "Can I use the same creator content across multiple platforms?", a: "Yes, with caveats. Whitelabel content (where the brand has full usage rights) can be repurposed across platforms. Branded content (tagged) and whitelisted ads are platform-specific because they depend on the creator's account on each platform. When planning cross-platform campaigns, brief creators to produce platform-native versions rather than posting identical content everywhere." },
+          { q: "How many creators do I need for a branded content program?", a: "For a meaningful branded content testing program, start with 5-10 creators. This generates enough creative diversity to identify what works. Scale to 15-30 creators as you learn which niches, formats, and creator profiles drive the best performance. OKAD's network of 600+ creators allows rapid scaling once winning formulas are identified." },
+          { q: "Can OKAD manage branded content ads for my brand?", a: "Yes. OKAD provides end-to-end branded content ads management: creator casting from our network of 600+ vetted creators, brief development, content production oversight, platform setup (Spark Ads, Partnership Ads, YouTube), ad optimization, and monthly performance reporting. We work across TikTok, Meta, and YouTube. Email olga@okad.agency with your brand, product, and goals to get started." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to launch branded content ads?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your brand and what you want to achieve. We will match you with creators, produce the content, set up the ads, and optimize performance across platforms.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get started &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on observed branded content campaign structures across TikTok, Meta, and YouTube; platform documentation and advertising policies; FTC and ASA regulatory guidelines; and aggregate performance data from branded content programs managed by OKAD and published by platform partners. CPM ranges, engagement benchmarks, and performance comparisons are directional, not guarantees. Individual results depend on product category, creator quality, targeting, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

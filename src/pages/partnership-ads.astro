@@ -1,0 +1,579 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailSubject = "mailto:olga@okad.agency?subject=Partnership%20Ads%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Partnership Ads — The Complete Guide to Meta's Creator-Powered Ad Format | OKAD"
+  description="Partnership Ads (formerly Branded Content Ads) let brands run paid ads using a creator's identity on Instagram and Facebook. This guide covers setup, permissions, formats, performance benchmarks, and how they compare to Spark Ads."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Partnership Ads: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Meta Partnership Ads let brands run paid ads using a creator&rsquo;s identity on Instagram and Facebook. The creator&rsquo;s handle appears as the ad source &mdash; not the brand&rsquo;s. This guide covers everything brands and agencies need to know to set up, launch, and scale Partnership Ads.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailSubject} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Order Partnership Ads setup &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Instagram &amp; Facebook</span>
+          <span>Creator identity</span>
+          <span>Native trust</span>
+          <span>Reels &amp; Stories</span>
+          <span>Meta Ads Manager</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Partnership Ads Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F91D;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Creator Tags Brand</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Creator publishes content and tags the brand as a &ldquo;Paid Partnership.&rdquo; The post appears on the creator&rsquo;s profile with a partnership label.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Brand Promotes in Ads Manager</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Brand takes the tagged post and runs it as a paid ad through Meta Ads Manager. Full targeting, bidding, and optimization controls apply.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4F1;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Ad Runs Under Creator&rsquo;s Handle</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">The ad appears in feeds with the creator&rsquo;s name and profile photo &mdash; not the brand&rsquo;s. Users see creator content, not a brand ad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "How Partnership Ads Work", href: "#how-it-works" },
+            { num: "03", text: "Requirements & Permissions", href: "#requirements" },
+            { num: "04", text: "Formats & Placements", href: "#formats" },
+            { num: "05", text: "Partnership Ads vs Standard Ads", href: "#vs-standard" },
+            { num: "06", text: "Partnership Ads vs Spark Ads", href: "#vs-spark" },
+            { num: "07", text: "Best Practices", href: "#best-practices" },
+            { num: "08", text: "Measurement & Optimization", href: "#measurement" },
+            { num: "09", text: "Glossary", href: "#glossary" },
+            { num: "10", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What are Partnership Ads?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Meta&rsquo;s ad format that lets brands run paid ads using a creator&rsquo;s identity</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Formerly called Branded Content Ads &mdash; rebranded to Partnership Ads in 2023</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The ad appears under the creator&rsquo;s handle, not the brand&rsquo;s account</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Partnership Ads</strong> are Meta&rsquo;s creator-powered ad format for Instagram and Facebook. They allow a brand to take content that a creator has tagged as a &ldquo;Paid Partnership&rdquo; and promote it as a paid ad through Meta Ads Manager. The resulting ad appears in users&rsquo; feeds with the creator&rsquo;s name, profile photo, and handle &mdash; not the brand&rsquo;s. This creates a native trust signal that standard brand ads cannot replicate.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Meta originally launched this format as <strong>Branded Content Ads</strong> in 2019. The rebrand to &ldquo;Partnership Ads&rdquo; happened in mid-2023 as part of a broader update to Meta&rsquo;s creator monetization tools. The underlying mechanics remain the same: a creator publishes content with a paid partnership tag, and the brand promotes it as an ad. But the expanded toolkit now includes more granular permissions, ad-level identity controls, and improved reporting for both parties.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For brands running <a href="/guide" class="text-accent hover:underline">creative testing</a> programs, Partnership Ads are a critical format. They let you amplify top-performing creator content &mdash; whether from <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a> programs, influencer collaborations, or dedicated <a href="/branded-content-ads" class="text-accent hover:underline">branded content</a> campaigns &mdash; as paid media with the creator&rsquo;s identity intact. The result is ads that feel like organic creator posts, not polished brand advertising.</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Platform:</strong> Instagram and Facebook (Meta ecosystem)</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Ad identity:</strong> creator&rsquo;s handle appears as the ad source</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Setup:</strong> creator tags brand, brand promotes from Ads Manager</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Formats:</strong> Reels, Stories, Feed posts, Carousel (Instagram and Facebook)</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">TikTok equivalent:</strong> <a href="/spark-ads" class="text-accent hover:underline">Spark Ads</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 How Partnership Ads Work -->
+    <section class="guide-section" id="how-it-works">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Setup Process</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How Partnership Ads work, step by step</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator publishes content with a &ldquo;Paid Partnership&rdquo; tag</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand approves the tag and gets access to promote the post</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand creates the ad in Meta Ads Manager using the partnership post</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The Partnership Ads workflow involves coordination between the creator and the brand. Unlike standard ads where the brand uploads creative directly, Partnership Ads require the creator to initiate the process by publishing content and granting the brand permission to promote it. Here is the full sequence.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The setup process</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator switches to a Professional account.</strong> Partnership Ads require the creator to have an Instagram Professional account (Creator or Business). Personal accounts cannot tag paid partnerships.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Brand adds creator as an approved partner.</strong> In Meta Business Suite, the brand navigates to Settings &rarr; Branded Content and adds the creator&rsquo;s Instagram handle as an approved partner. This allows the creator to tag the brand in paid partnership posts.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator publishes content with the Paid Partnership tag.</strong> When creating a post, Reel, or Story, the creator enables &ldquo;Add paid partnership label&rdquo; in advanced settings and selects the brand as the partner. The post goes live with a &ldquo;Paid partnership with [Brand]&rdquo; label.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator grants ad creation access.</strong> The creator toggles &ldquo;Allow brand partner to promote&rdquo; when adding the partnership label. This gives the brand permission to use the post as an ad creative in Ads Manager.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Brand creates the ad in Meta Ads Manager.</strong> The brand opens Ads Manager, creates a new campaign, and selects the partnership post as the ad creative. The brand applies its own targeting, budget, bidding strategy, and optimization goals.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Ad runs under the creator&rsquo;s identity.</strong> The promoted post appears in users&rsquo; feeds with the creator&rsquo;s name, handle, and profile photo. A &ldquo;Sponsored&rdquo; label and the &ldquo;Paid partnership&rdquo; tag are visible, but the primary identity is the creator &mdash; not the brand.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What users see</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">When a Partnership Ad appears in someone&rsquo;s feed, the creator&rsquo;s profile photo and handle are displayed at the top of the post &mdash; exactly as if the creator had posted it organically. Below the handle, a small &ldquo;Paid partnership with [Brand]&rdquo; label appears, along with the standard &ldquo;Sponsored&rdquo; tag. The visual hierarchy prioritizes the creator&rsquo;s identity, which is why Partnership Ads consistently outperform standard brand ads on trust and engagement metrics.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is the fundamental advantage. Users scroll past brand ads reflexively. A post that appears to come from a real creator &mdash; someone they might follow or whose content they consume &mdash; gets more attention, more engagement, and more trust. The ad is still clearly labeled as sponsored, but the psychological framing is &ldquo;creator content&rdquo; rather than &ldquo;brand advertisement.&rdquo;</p>
+      </div>
+    </section>
+
+    <!-- 03 Requirements & Permissions -->
+    <section class="guide-section" id="requirements">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Requirements</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Requirements and permissions</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator needs an Instagram Professional account (Creator or Business)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand must add creator as an approved partner in Meta Business Suite</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator must explicitly grant &ldquo;Allow brand partner to promote&rdquo; permission</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Creator requirements</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The creator must have a <strong>Professional account</strong> on Instagram &mdash; either the Creator or Business account type. Personal accounts do not have access to the paid partnership tag. Switching to a Professional account is free and takes about two minutes in Instagram settings. Once switched, the creator gains access to branded content tools, insights, and the ability to tag commercial partners.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The creator must also comply with Meta&rsquo;s <strong>Branded Content Policies</strong>. These prohibit misleading claims, require transparent disclosure, and restrict certain product categories (tobacco, weapons, adult content). Creators who violate these policies risk losing access to branded content tools entirely.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Brand requirements</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The brand needs an active <strong>Meta Business Suite</strong> (formerly Business Manager) account with a connected Instagram Business account and an Ads Manager account. The brand must add the creator as an <strong>approved branded content partner</strong> in Business Suite settings. This creates a two-way connection: the creator can tag the brand, and the brand can promote the tagged content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Brands also need to ensure their Ads Manager account is in good standing &mdash; no policy violations, active payment method, and verified business identity. Partnership Ads use the same campaign infrastructure as standard Meta ads, so all standard Ads Manager requirements apply.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Permission levels</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Permission</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Who grants it</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What it allows</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Paid Partnership tag</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator (per post)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator labels the post as a paid partnership with the brand</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Approved partner status</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand (in Business Suite)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator can tag this brand without manual approval per post</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Ad creation access</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator (per post toggle)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand can use this specific post as an ad creative in Ads Manager</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Ad-level creator identity</td><td class="px-4 py-2.5 text-ink-2">Automatic (Meta)</td><td class="px-4 py-2.5 text-ink-2">The ad displays the creator&rsquo;s name, handle, and profile photo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The key distinction is that ad creation access is <strong>opt-in per post</strong>. The creator must explicitly allow the brand to promote each piece of content. This protects creators from having their identity used in ads they did not approve. It also means brands need to coordinate with creators to ensure the permission toggle is enabled before launching campaigns.</p>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailSubject} class="text-ink hover:text-accent transition-colors no-underline">OKAD handles creator permissions and partnership setup</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">We manage the entire onboarding flow &mdash; from switching creators to Professional accounts, to setting up approved partner connections, to ensuring ad creation access is granted on every post. No back-and-forth for your team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Formats & Placements -->
+    <section class="guide-section" id="formats">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Formats</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Formats and placements</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Partnership Ads work across Reels, Stories, Feed, and Carousel on both Instagram and Facebook</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Instagram Reels are the highest-performing placement for most brands</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each format has different specs, best practices, and performance profiles</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Partnership Ads support every major content format across both Instagram and Facebook. The format of the original creator post determines where it can be placed as an ad. A Reel can be promoted as a Reels ad. A Feed photo can run in Feed placements. This flexibility lets brands test different content types while maintaining the creator identity advantage.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Format</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Platform</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Specs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Reels</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Instagram, Facebook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Top-funnel awareness, engagement, reach</td><td class="px-4 py-2.5 border-b border-border text-ink-2">9:16, up to 90s</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Stories</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Instagram, Facebook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Direct response, swipe-up CTAs, urgency</td><td class="px-4 py-2.5 border-b border-border text-ink-2">9:16, up to 60s</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Feed (video)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Instagram, Facebook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Longer storytelling, product demos</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1:1 or 4:5, up to 60min</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Feed (image)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Instagram, Facebook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Product shots, lifestyle, static promos</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1:1 or 4:5</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Carousel</td><td class="px-4 py-2.5 text-ink-2">Instagram, Facebook</td><td class="px-4 py-2.5 text-ink-2">Multi-product, tutorials, before/after</td><td class="px-4 py-2.5 text-ink-2">1:1, up to 10 cards</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Instagram Reels: the dominant format</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">For most brands in 2026, Instagram Reels is the primary format for Partnership Ads. Reels are full-screen, sound-on, and algorithmically distributed to users beyond the creator&rsquo;s follower base. When promoted as a Partnership Ad, a Reel retains its native feel &mdash; users encounter it in the Reels feed alongside organic content. The creator identity is displayed at the top, and the ad integrates seamlessly into the browsing experience.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The performance advantage of Reels over static feed placements is significant. Reels Partnership Ads typically deliver 20&ndash;40% lower cost-per-engagement compared to feed image ads, and the format naturally supports the kind of authentic, creator-led storytelling that Partnership Ads are designed for. If you are running Partnership Ads for the first time, start with Reels.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Stories: the direct-response workhorse</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Stories Partnership Ads are ideal for direct-response campaigns. The full-screen format combined with swipe-up (or link sticker) CTAs creates a short path from attention to action. Stories feel intimate and time-sensitive, which makes them effective for limited-time offers, product launches, and app install campaigns. The trade-off is that Stories have a shorter content lifespan and lower organic reach than Reels.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Facebook placements</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Partnership Ads are not limited to Instagram. Facebook Feed, Facebook Reels, and Facebook Stories all support the format. For brands targeting demographics that skew older or are more active on Facebook (particularly in markets outside the US), Facebook placements can deliver significantly lower CPMs. The creative format and partnership mechanics work identically across both platforms.</p>
+      </div>
+    </section>
+
+    <!-- 05 Partnership Ads vs Standard Ads -->
+    <section class="guide-section" id="vs-standard">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Comparison</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Partnership Ads vs standard brand ads</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Partnership Ads outperform standard ads on trust, engagement, and conversion</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The creator identity is the key differentiator</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Standard ads still have advantages in speed and creative control</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The core question for most brands is straightforward: why use Partnership Ads instead of running standard ads from the brand&rsquo;s own account? The answer comes down to identity and trust. When an ad appears under a creator&rsquo;s handle, users process it differently than when it appears under a brand&rsquo;s logo. The creator identity triggers a &ldquo;content&rdquo; frame rather than an &ldquo;advertisement&rdquo; frame, which leads to measurably different performance.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Partnership Ads</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Standard Brand Ads</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Ad identity</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator&rsquo;s handle and profile photo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand&rsquo;s logo and account name</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Trust signal</td><td class="px-4 py-2.5 border-b border-border text-ink-2">High &mdash; perceived as creator content</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Lower &mdash; immediately recognized as brand ad</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Engagement rate</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Typically 2&ndash;3x higher than standard ads</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Baseline</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CTR (click-through rate)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">15&ndash;50% higher on average</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Baseline</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CPM (cost per 1,000 impressions)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Comparable or slightly higher</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Baseline</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Conversion rate</td><td class="px-4 py-2.5 border-b border-border text-ink-2">10&ndash;25% higher with strong creator match</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Baseline</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creative control</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Requires creator coordination</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Full control &mdash; brand uploads directly</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Speed to launch</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Slower &mdash; depends on creator posting and permissions</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Fast &mdash; brand creates ad immediately</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Best for</td><td class="px-4 py-2.5 text-ink-2">Trust-driven campaigns, top-funnel, social proof</td><td class="px-4 py-2.5 text-ink-2">Retargeting, promotions, brand-controlled messaging</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The performance gap is most pronounced at the top of the funnel &mdash; awareness and consideration campaigns where trust is the primary barrier. Users who have never heard of a brand are significantly more likely to engage with content that appears to come from a creator they relate to than from an unfamiliar brand account. At the bottom of the funnel (retargeting, cart abandonment), the gap narrows because users already know the brand.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The trade-off is operational complexity. Standard ads give the brand complete control &mdash; upload creative, set targeting, launch. Partnership Ads require coordination with the creator, dependency on their posting schedule, and a permission-granting workflow. For brands running <a href="/guide" class="text-accent hover:underline">creative testing</a> at scale, this operational overhead is worth the performance gain, but it requires either dedicated internal resources or an agency partner to manage.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Want OKAD to run your Partnership Ads?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We handle creator sourcing, partnership setup, content production, and ad management on Meta. You get creator-powered ads without the coordination overhead.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get Partnership Ads setup &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Partnership Ads vs Spark Ads -->
+    <section class="guide-section" id="vs-spark">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Cross-Platform</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Partnership Ads vs Spark Ads</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Partnership Ads = Meta&rsquo;s creator-powered ad format (Instagram &amp; Facebook)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Spark Ads = TikTok&rsquo;s creator-powered ad format</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Same concept, different platforms, different mechanics</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Partnership Ads and <a href="/spark-ads" class="text-accent hover:underline">Spark Ads</a> solve the same problem on different platforms: allowing brands to run paid ads using a creator&rsquo;s identity instead of the brand&rsquo;s own account. Both formats produce ads that look like organic creator content rather than polished brand advertising. But the implementation details, authorization workflows, and platform dynamics differ significantly.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Aspect</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Partnership Ads (Meta)</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Spark Ads (TikTok)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Platform</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Instagram and Facebook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">TikTok</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Authorization method</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Paid Partnership tag + ad creation access toggle</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Auth code generated by creator, valid 30&ndash;365 days</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Engagement retention</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Paid engagement shown separately from organic</td><td class="px-4 py-2.5 border-b border-border text-ink-2">All engagement (paid + organic) accumulates on original post</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Content source</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator must publish on their profile first</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Can use existing posts or brand&rsquo;s own account posts</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Targeting</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Meta&rsquo;s full targeting stack (demographics, interests, lookalike, custom audiences)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">TikTok&rsquo;s targeting (interest, behavior, custom, lookalike)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Formats supported</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Reels, Stories, Feed (image/video), Carousel</td><td class="px-4 py-2.5 border-b border-border text-ink-2">In-Feed video only</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CTA options</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Standard Meta CTA buttons (Shop Now, Learn More, etc.)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Standard TikTok CTA buttons</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Audience demographics</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Broader age range, strong 25&ndash;54 segment</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Skews younger, strong 18&ndash;34 segment</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Best for</td><td class="px-4 py-2.5 text-ink-2">Brands active on Instagram/Facebook, multi-format campaigns</td><td class="px-4 py-2.5 text-ink-2">Brands active on TikTok, short-form video-first campaigns</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Key differences in practice</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Authorization workflow.</strong> Spark Ads use a simpler auth code system &mdash; the creator generates a code in TikTok, sends it to the brand, and the brand enters it in TikTok Ads Manager. The code has a set validity period (30, 60, or 365 days). Partnership Ads require a more structured setup through Meta Business Suite, with approved partner status and per-post permission toggles. The Meta workflow is more rigid but provides tighter control over which specific posts can be promoted.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Engagement handling.</strong> This is the biggest practical difference. On TikTok, Spark Ads accumulate all engagement (likes, comments, shares from both organic and paid distribution) on the original post. This means a Spark Ad campaign can permanently boost a post&rsquo;s social proof. Meta Partnership Ads separate paid engagement from organic &mdash; the ad&rsquo;s likes and comments are not added to the original post&rsquo;s counts.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Running both simultaneously.</strong> For brands with a cross-platform strategy, running both Partnership Ads (Meta) and Spark Ads (TikTok) with the same creator content is a common and effective approach. The same creator can produce a Reel for Instagram and a TikTok video with similar messaging, then authorize both as paid ads. OKAD&rsquo;s creator network and production pipeline are built to support this cross-platform workflow.</p>
+      </div>
+    </section>
+
+    <!-- 07 Best Practices -->
+    <section class="guide-section" id="best-practices">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Best Practices</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Best practices for Partnership Ads</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Match the creator to the audience, not to the brand</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brief for authenticity, not for polish</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Test organic performance before committing ad spend</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Creator selection</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The creator&rsquo;s identity is the ad&rsquo;s primary trust signal. Selecting the right creator is the single most important decision in a Partnership Ads campaign. The ideal creator is someone whose audience overlaps with the brand&rsquo;s target demographic, whose content style feels native to the platform, and whose voice is genuinely relatable to the people the ad will reach. Follower count matters far less than audience quality and content style.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Look for creators who already produce content in your product&rsquo;s category or adjacent categories. A skincare brand benefits more from a creator who regularly posts skincare routines than from a general lifestyle creator with a larger following. The audience&rsquo;s existing trust in the creator&rsquo;s expertise in that category transfers directly to the ad&rsquo;s credibility.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Content briefs</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The biggest mistake brands make with Partnership Ads is over-scripting the creator. Partnership Ads work because they look and feel like organic creator content. A heavily scripted ad with brand-approved talking points defeats the purpose. The brief should define the key message, any mandatory disclosures, and the desired CTA &mdash; then let the creator produce content in their natural style.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Effective briefs include: the product or service being promoted, the key benefit to highlight (one, not five), any specific claims to avoid, the desired CTA (link in bio, swipe up, shop now), and examples of the creator&rsquo;s own content that the brand likes. The brief should be one page, not ten. More creative freedom for the creator typically means better-performing ads.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Test organic before paying for paid</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most efficient Partnership Ads strategy is to let creator content perform organically first, then promote the winners. When a creator publishes a partnership post, it reaches their organic audience. Posts that generate strong engagement organically &mdash; high saves, shares, comments, retention &mdash; are statistically more likely to perform well as paid ads. This organic-first approach turns every creator post into a free creative test.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This strategy is especially powerful when combined with <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a> programs, where creators are already producing high-volume content on brand accounts. The organic winners from the canvas become Partnership Ad candidates, creating a natural pipeline from organic testing to paid amplification.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Scaling</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Scale Partnership Ads by adding more creators, not by increasing spend on a single creator&rsquo;s post. Each creator brings a unique identity and audience signal. Running Partnership Ads from 5&ndash;10 different creators simultaneously gives you multiple trust signals to test against different audience segments. The same product message delivered by different creators performs differently with different demographics.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">OKAD&rsquo;s creator network includes hundreds of vetted creators across categories and demographics. When scaling Partnership Ads, we match creators to audience segments, produce content at volume, manage permissions across all partnerships, and run the ad campaigns from a single Ads Manager account.</p>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#x1F3AC;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailSubject} class="text-ink hover:text-accent transition-colors no-underline">OKAD sources creators and produces Partnership Ad content</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">From creator matching and briefing to content production and partnership setup &mdash; we run the full pipeline so your team focuses on strategy and results, not creator coordination.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 Measurement & Optimization -->
+    <section class="guide-section" id="measurement">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Measurement</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Measurement and optimization</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Track creator-level performance, not just campaign-level aggregates</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Key metrics: engagement rate, hook rate, CTR, CVR, ROAS</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Meta brand lift studies measure the trust advantage quantitatively</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Measuring Partnership Ads requires a different lens than standard ad measurement. Because the creator&rsquo;s identity is a key variable, you need to track performance at the creator level &mdash; not just at the campaign or ad set level. Two Partnership Ads with identical targeting but different creators can produce wildly different results. The creator is the creative variable.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Key metrics to track</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What it measures</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Why it matters for Partnership Ads</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Hook rate</td><td class="px-4 py-2.5 border-b border-border text-ink-2">% of viewers who watch past 3 seconds</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Measures if the creator&rsquo;s identity and opening grab attention</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Engagement rate</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Likes + comments + shares / impressions</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Partnership Ads should outperform standard ads here by 2&ndash;3x</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CTR</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Click-through rate to destination</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Indicates strength of the creator&rsquo;s CTA and audience trust</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CVR</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Conversion rate (purchase, signup, install)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Measures whether trust translates to action down-funnel</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CPE</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Cost per engagement</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Should be lower than standard ads due to higher engagement</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">ROAS</td><td class="px-4 py-2.5 text-ink-2">Return on ad spend</td><td class="px-4 py-2.5 text-ink-2">The ultimate efficiency metric &mdash; compare across creators</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Brand lift studies</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Meta offers <strong>brand lift studies</strong> that measure the incremental impact of your Partnership Ads on brand awareness, ad recall, and purchase intent. These studies compare a test group (people who saw the ad) against a control group (similar people who did not) and quantify the lift attributable to the campaign. For Partnership Ads specifically, brand lift studies typically show a higher lift in ad recall and favorability compared to standard brand ads &mdash; a direct measurement of the trust advantage.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Brand lift studies require a minimum spend threshold (typically $30,000+ per study) and are best suited for larger campaigns. For smaller-budget campaigns, focus on engagement rate differentials and CTR comparisons between Partnership Ads and standard ads running the same product message to the same audiences.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Attribution and reporting</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Partnership Ads use Meta&rsquo;s standard attribution windows (1-day click, 7-day click, 1-day view). Both the brand and the creator can see performance data for partnership content: the brand sees full ad-level metrics in Ads Manager, and the creator sees organic and paid reach insights on their post. This dual visibility makes it easy to align on what&rsquo;s working and what needs to change.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For brands running Partnership Ads alongside <a href="/spark-ads" class="text-accent hover:underline">Spark Ads</a> on TikTok, maintaining a unified cross-platform dashboard is essential. Track creator-level performance across both Meta and TikTok to identify which creators drive results on which platform. Some creators perform better on Instagram; others excel on TikTok. The data tells you where to allocate spend and which creators to scale.</p>
+      </div>
+    </section>
+
+    <!-- 09 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+
+        {[
+          { term: "Partnership Ads", def: "Meta's ad format that lets brands run paid ads on Instagram and Facebook using a creator's identity. The ad displays the creator's handle and profile photo as the source. Formerly called Branded Content Ads." },
+          { term: "Branded Content Ads", def: "The original name for Partnership Ads, used by Meta before the mid-2023 rebrand. The mechanics are identical; only the naming changed." },
+          { term: "Paid Partnership tag", def: "The disclosure label that appears on creator posts when they tag a brand as a commercial partner. Required by Meta's branded content policies and by advertising regulations in most jurisdictions." },
+          { term: "Ad creation access", def: "A per-post permission toggle that the creator enables to allow the brand to use their post as an ad creative in Meta Ads Manager." },
+          { term: "Meta Business Suite", def: "Meta's business management platform (formerly Business Manager) where brands manage Pages, Instagram accounts, ad accounts, and branded content partnerships." },
+          { term: "Brand Collabs Manager", def: "Meta's marketplace for connecting brands with creators. Provides search, outreach, and partnership management tools. Integrated into Meta Business Suite." },
+          { term: "Professional account", def: "An Instagram account type (Creator or Business) that provides access to branded content tools, insights, and monetization features. Required for Partnership Ads." },
+          { term: "Spark Ads", def: "TikTok's equivalent of Partnership Ads. Allows brands to promote existing creator posts as paid ads on TikTok, retaining all engagement on the original post." },
+          { term: "Hook rate", def: "The percentage of viewers who watch past the first 3 seconds of a video ad. A key early indicator of creative effectiveness for Reels and Stories Partnership Ads." },
+          { term: "Brand lift study", def: "A Meta measurement tool that quantifies the incremental impact of an ad campaign on brand awareness, ad recall, and purchase intent by comparing exposed vs. control groups." },
+          { term: "Creative testing", def: "The practice of systematically testing multiple ad creatives — hooks, formats, creators, angles — to identify top performers before scaling spend. See the full guide at /guide." },
+          { term: "Canvas UGC", def: "A delivery model where creators post content on brand-owned social accounts and get paid per view. Top organic performers from Canvas UGC programs often graduate to Partnership Ads." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 10 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What are Partnership Ads?", a: "Partnership Ads are Meta's creator-powered ad format for Instagram and Facebook. They allow a brand to promote a creator's post as a paid ad while keeping the creator's identity (name, handle, profile photo) as the ad source. The ad appears as creator content with a 'Paid partnership' and 'Sponsored' label." },
+          { q: "What happened to Branded Content Ads?", a: "Branded Content Ads were rebranded to Partnership Ads in mid-2023. The underlying mechanics are the same — creator tags brand, brand promotes the post. Meta updated the name as part of a broader refresh of its creator monetization tools." },
+          { q: "Do creators need a certain follower count?", a: "No. There is no minimum follower count to use Partnership Ads. The creator needs an Instagram Professional account (Creator or Business type) and must comply with Meta's branded content policies. Follower count is irrelevant to eligibility — what matters is account type and policy compliance." },
+          { q: "How are Partnership Ads different from Spark Ads?", a: "Partnership Ads run on Meta (Instagram and Facebook). Spark Ads run on TikTok. Both use the creator's identity as the ad source. Key difference: Spark Ads accumulate all engagement (paid + organic) on the original post, while Meta Partnership Ads separate paid engagement from organic. Authorization workflows also differ — Spark Ads use auth codes, Partnership Ads use Meta Business Suite approvals." },
+          { q: "Can I run Partnership Ads and Spark Ads at the same time?", a: "Yes, and this is a common cross-platform strategy. The same creator produces similar content for both Instagram and TikTok, then authorizes both as paid ads. This lets brands reach audiences across both platforms with creator-powered content. OKAD manages cross-platform campaigns with unified reporting." },
+          { q: "What formats work with Partnership Ads?", a: "Reels, Stories, Feed posts (image and video), and Carousels on both Instagram and Facebook. The format of the original creator post determines the available ad placements. Reels are the highest-performing format for most brands in 2026." },
+          { q: "How much do Partnership Ads cost?", a: "Partnership Ads use the same auction system as standard Meta ads. CPMs vary by targeting, placement, and competition. The ad delivery cost is comparable to standard ads, but Partnership Ads typically deliver higher engagement and CTR — meaning the effective cost per engagement or cost per action is lower. Budget for creator compensation separately from ad spend." },
+          { q: "Can the creator control which posts get promoted?", a: "Yes. The creator must explicitly enable 'Allow brand partner to promote' on each individual post. The brand cannot promote a creator's post without this permission. The creator can also revoke access at any time." },
+          { q: "How do I find creators for Partnership Ads?", a: "Options include Meta's Brand Collabs Manager (built into Business Suite), creator marketplaces, agency networks, and direct outreach. The most important criteria are audience overlap with your target demographic and content style that matches the platform's native feel. Follower count is a secondary consideration." },
+          { q: "Can OKAD manage my Partnership Ads?", a: "Yes. OKAD handles the full Partnership Ads workflow: creator sourcing from our network, partnership setup and permissions, content briefing and production, ad campaign management in Meta Ads Manager, and cross-platform coordination with Spark Ads on TikTok. Write to us at olga@okad.agency to discuss your brand and goals." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to launch Partnership Ads?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your brand and objectives. We source creators, handle partnership setup, produce the content, and manage your campaigns on Meta.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get Partnership Ads setup &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on Meta&rsquo;s published documentation for Partnership Ads (formerly Branded Content Ads), observed campaign performance data across multiple verticals, and cross-platform comparison data with TikTok Spark Ads. Performance benchmarks (engagement rate lifts, CTR improvements, conversion rate gains) are directional ranges observed across campaigns and should not be taken as guarantees. Individual results depend on creator selection, content quality, targeting, product-market fit, and competitive dynamics. Meta&rsquo;s ad platform features and policies are subject to change.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
