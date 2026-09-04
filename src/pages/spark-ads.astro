@@ -1,0 +1,665 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailSubject = "mailto:olga@okad.agency?subject=Spark%20Ads%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Spark Ads — The Complete Guide to TikTok's Native Ad Format | OKAD"
+  description="TikTok Spark Ads let brands boost organic posts as paid ads while retaining all engagement. This guide covers how they work, authorization codes, budgeting, optimization, and how to combine them with Canvas UGC for maximum ROI."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Spark Ads: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          TikTok Spark Ads let brands boost existing organic posts as paid ads &mdash; keeping all likes, comments, and shares intact. This guide covers how they work, how to set them up, and how to combine them with Canvas UGC for maximum ROI.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailSubject} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Order Spark Ads setup &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>TikTok</span>
+          <span>+142% engagement</span>
+          <span>Native format</span>
+          <span>Organic &rarr; paid</span>
+          <span>From $50/day</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Spark Ads Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Post Goes Organic</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">A brand or creator publishes a native TikTok post. It collects organic views, likes, comments, and shares.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Authorize &amp; Boost</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">The post is authorized for paid promotion via TikTok Ads Manager. All existing engagement carries over.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Scale the Winner</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Paid reach amplifies a proven organic post. New engagement merges back into the original &mdash; compounding social proof.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "How Spark Ads Work", href: "#mechanics" },
+            { num: "03", text: "Two Types of Spark Ads", href: "#types" },
+            { num: "04", text: "Spark Ads vs Standard In-Feed Ads", href: "#comparison" },
+            { num: "05", text: "Canvas UGC + Spark Ads", href: "#canvas-ugc" },
+            { num: "06", text: "How to Identify Winners", href: "#winners" },
+            { num: "07", text: "Budget and Bidding", href: "#budget" },
+            { num: "08", text: "Key Metrics and Optimization", href: "#metrics" },
+            { num: "09", text: "Glossary", href: "#glossary" },
+            { num: "10", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Organic posts, paid reach, compounding engagement</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Spark Ads boost existing organic TikTok posts as paid ads</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">All organic engagement (likes, comments, shares) is retained</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">142% higher engagement, 25% higher CTR, 24% higher CVR than standard ads</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Spark Ads are TikTok's native advertising format that lets brands promote existing organic posts &mdash; either from the brand's own account or from a creator's account &mdash; as paid ads. Unlike standard in-feed ads, which are created from scratch inside TikTok Ads Manager, Spark Ads use real posts that already live on TikTok. The ad links back to the original post, and all engagement generated by paid reach merges into the organic post's metrics.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This distinction matters because social proof compounds. When a user sees a Spark Ad with 15,000 likes and 400 comments, that credibility came from organic engagement &mdash; not from ad spend. New viewers interact with the post naturally, and their likes and comments add to the total. The result is a paid ad that looks and feels like organic content, because it is organic content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok's own data shows that Spark Ads deliver 142% higher engagement rates than non-Spark ads, 25% higher click-through rates than standard in-feed ads, and 24% higher conversion rates than ads run from a brand's own account without the Spark format. These numbers reflect a simple reality: users engage more with content that feels native to their feed.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Spark Ads are especially powerful when combined with a high-volume organic content strategy like <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a>. Post 40+ organic videos per month, identify the top performers, and promote them with paid budget. The organic phase serves as a free testing ground; the paid phase scales what already works.</p>
+      </div>
+    </section>
+
+    <!-- 02 How Spark Ads Work -->
+    <section class="guide-section" id="mechanics">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Mechanics</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How Spark Ads work under the hood</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand authorizes an organic post for paid promotion in TikTok Ads Manager</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Paid views and engagement merge into the original post</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The ad links to the creator's or brand's real TikTok profile</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">At a technical level, Spark Ads work by linking an existing TikTok post to a campaign inside TikTok Ads Manager. The ad unit is not a separate piece of creative &mdash; it is the original post, served to a targeted paid audience. When someone taps the avatar or username on a Spark Ad, they land on the actual TikTok profile that published the post, not a disconnected landing page.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is fundamentally different from standard in-feed ads, where the creative exists only inside Ads Manager and engagement disappears when the campaign ends. With Spark Ads, every like, comment, share, and follow generated during the paid campaign is permanently attributed to the original organic post. The post continues to accumulate engagement even after the ad budget is exhausted.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The setup process</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Publish an organic post.</strong> The post goes live on TikTok and begins collecting organic engagement. Let it run for 24&ndash;72 hours to gather initial performance signals.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Authorize the post.</strong> If it is the brand's own post, authorize it directly in TikTok Ads Manager. If it is a creator's post, the creator generates an authorization code from their TikTok account settings.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Create the Spark Ad campaign.</strong> In TikTok Ads Manager, create a new campaign, select "Spark Ads" as the ad format, and paste the authorization code or select the brand's own post.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Set targeting and budget.</strong> Define your audience targeting, daily budget, bid strategy, and campaign objective (traffic, conversions, app installs, etc.).</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Launch and monitor.</strong> The ad goes live. Paid engagement merges into the original post. Monitor CTR, CVR, CPA, and engagement rate to optimize.</li>
+        </ol>
+
+        <p class="text-ink-2 leading-[1.65] mb-4 mt-6">One important nuance: Spark Ads support multiple campaign objectives &mdash; including traffic, conversions, app installs, video views, and reach. The choice of objective determines how TikTok's algorithm optimizes delivery. For most performance-focused brands, conversion or traffic objectives paired with Spark Ads produce the strongest results, because the native format reduces friction while the algorithm optimizes for the desired action.</p>
+      </div>
+    </section>
+
+    <!-- 03 Two Types of Spark Ads -->
+    <section class="guide-section" id="types">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Types</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Two types of Spark Ads</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Type 1: Boost the brand's own TikTok posts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Type 2: Boost a creator's post via authorization code</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Authorization codes are valid for 7, 30, or 60 days</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Type 1: Brand's own posts</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The simplest form. The brand publishes a post on its own TikTok account, then promotes it as a Spark Ad directly through TikTok Ads Manager. No authorization code is needed &mdash; the brand already controls the account. This is the default path for brands running <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a> programs, where creators post on brand-owned accounts. Every post on the brand's canvas is immediately eligible for Spark Ads promotion.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The advantage of promoting brand-owned posts is operational simplicity. There is no code exchange, no expiration window, and no risk of a creator revoking access mid-campaign. The brand has full control over the creative lifecycle &mdash; from organic publication to paid amplification to eventual archival.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Type 2: Creator's posts via authorization code</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">When a brand wants to promote a post that lives on a creator's personal TikTok account, the creator must generate an authorization code. This is done inside TikTok's app under Settings &rarr; Creator Tools &rarr; Ad Authorization. The creator selects the specific post, chooses a validity period (7, 30, or 60 days), and generates a code. The brand then inputs this code in TikTok Ads Manager to link the post to their ad campaign.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This approach is common in influencer and <a href="/ugc-whitelisting" class="text-accent hover:underline">whitelisting</a> strategies, where the brand benefits from the creator's authentic voice and audience. The ad appears under the creator's handle, which adds credibility. However, it requires coordination: the creator must grant access proactively, the code has an expiration date, and the creator can revoke authorization at any time.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Authorization code validity</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Validity period</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">7 days</td>
+                <td class="px-4 py-3 text-ink-2">Quick tests, one-off promotions</td>
+                <td class="px-4 py-3 text-ink-2">Minimal commitment from creator; renew if the ad performs well</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">30 days</td>
+                <td class="px-4 py-3 text-ink-2">Standard campaigns, ongoing partnerships</td>
+                <td class="px-4 py-3 text-ink-2">Most common choice; balances flexibility with campaign duration</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-ink font-medium">60 days</td>
+                <td class="px-4 py-3 text-ink-2">Long-running evergreen campaigns</td>
+                <td class="px-4 py-3 text-ink-2">Best for proven performers you want to scale over time</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A practical tip: always request 30-day authorization as the default. Seven days is too short for meaningful optimization, and 60 days is only worth it for posts you have already validated. If you are working with creators through an agency like OKAD, the authorization code exchange is handled as part of the production workflow &mdash; creators know the process and provide codes promptly.</p>
+      </div>
+    </section>
+
+    <!-- 04 Spark Ads vs Standard In-Feed Ads -->
+    <section class="guide-section" id="comparison">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Comparison</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Spark Ads vs standard in-feed ads</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Spark Ads retain engagement; standard ads do not</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Spark Ads link to a real profile; standard ads link to a landing page</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Spark Ads outperform on every major metric</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The core difference is ownership. A standard in-feed ad is a piece of creative that exists only inside TikTok Ads Manager. It has no organic presence, no profile link, and no persistent engagement. When the campaign ends, the ad disappears. A Spark Ad, by contrast, is a real post that lives on a real profile. It accumulates engagement over time, and that engagement persists whether the ad is running or not.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This distinction drives measurable performance differences across every metric that matters.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Dimension</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Spark Ads</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Standard in-feed ads</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Engagement rate</td>
+                <td class="px-4 py-3 text-ink-2">+142% vs non-Spark</td>
+                <td class="px-4 py-3 text-ink-2">Baseline</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Click-through rate (CTR)</td>
+                <td class="px-4 py-3 text-ink-2">+25% vs standard</td>
+                <td class="px-4 py-3 text-ink-2">Baseline</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Conversion rate (CVR)</td>
+                <td class="px-4 py-3 text-ink-2">+24% vs brand-account ads</td>
+                <td class="px-4 py-3 text-ink-2">Baseline</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Social proof</td>
+                <td class="px-4 py-3 text-ink-2">Retains and compounds organic engagement</td>
+                <td class="px-4 py-3 text-ink-2">Starts at zero; lost when campaign ends</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Profile link</td>
+                <td class="px-4 py-3 text-ink-2">Links to real TikTok profile</td>
+                <td class="px-4 py-3 text-ink-2">Links to landing page or app store</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Native feel</td>
+                <td class="px-4 py-3 text-ink-2">Indistinguishable from organic in-feed content</td>
+                <td class="px-4 py-3 text-ink-2">Clearly marked as ad; feels interruptive</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Post-campaign value</td>
+                <td class="px-4 py-3 text-ink-2">Post continues earning organic reach</td>
+                <td class="px-4 py-3 text-ink-2">No residual value</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-ink font-medium">Creative source</td>
+                <td class="px-4 py-3 text-ink-2">Existing organic post</td>
+                <td class="px-4 py-3 text-ink-2">Custom creative uploaded to Ads Manager</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The performance advantage of Spark Ads comes from a single factor: users do not perceive them as ads. A Spark Ad appears in the For You feed with a real username, real comments, and real like counts. It behaves exactly like an organic post &mdash; because it is one. Standard in-feed ads, by contrast, are clearly marked, link to external destinations, and lack the social proof that drives trust-based engagement.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For brands running <a href="/ugc-ads" class="text-accent hover:underline">UGC ad campaigns</a>, Spark Ads are almost always the better format. The organic foundation provides a performance floor that standard ads cannot match. The only scenario where standard in-feed ads make more sense is when the brand needs to run creative that does not exist as an organic post &mdash; for example, a highly produced commercial or a creative with a specific CTA overlay that would not work as organic content.</p>
+      </div>
+    </section>
+
+    <!-- 05 Canvas UGC + Spark Ads -->
+    <section class="guide-section" id="canvas-ugc">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Canvas UGC + Spark Ads</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The organic-to-paid pipeline</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Post 40+ organic videos per month on brand accounts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Identify top 5&ndash;10% performers based on organic signals</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Promote winners as Spark Ads with paid budget</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most powerful application of Spark Ads is not as a standalone tactic &mdash; it is as the paid amplification layer on top of a high-volume organic content strategy. This is where <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a> and Spark Ads become a unified system.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The logic is straightforward. In a Canvas UGC program, a team of 10+ creators produces 40 or more organic videos per month on brand-owned TikTok accounts. Most of these videos will perform at baseline levels. But a small percentage &mdash; typically 5&ndash;10% &mdash; will break out with above-average retention, engagement, and share rates. These are the winners. Instead of guessing which creative will work as a paid ad (the traditional approach), you let TikTok's organic algorithm identify winners for free. Then you put paid budget behind proven content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This approach eliminates the most expensive problem in paid social advertising: creative testing. Traditional creative testing requires spending $50&ndash;$200 per ad variant just to gather enough data to judge performance. With Canvas UGC + Spark Ads, the organic phase is the test. By the time you spend a single dollar on paid promotion, you already know the content works.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The pipeline in practice</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Produce at volume.</strong> 10+ creators post 3&ndash;5 videos each per week on brand accounts. Target 40+ posts per month across all accounts.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Monitor organic performance.</strong> Track retention rate, engagement rate, saves, shares, and comments for every post over 48&ndash;72 hours.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Flag top performers.</strong> Any post that exceeds 2x the account's average engagement rate or retention rate is a Spark Ad candidate.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Launch Spark Ad campaigns.</strong> Promote flagged posts with $50&ndash;$100/day initial budget. Test multiple campaign objectives (traffic, conversions) per post.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Scale or kill.</strong> After 3&ndash;5 days of paid data, double budget on winners and pause underperformers. Reallocate spend weekly.</li>
+        </ol>
+
+        <!-- Feat-card: OKAD Canvas UGC + Spark Ads -->
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailSubject} class="text-ink hover:text-accent transition-colors no-underline">OKAD runs the full organic-to-paid pipeline</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">We produce 40+ organic videos per month through our creator network, identify winners using performance data, and manage Spark Ads campaigns end-to-end. You get a complete content engine &mdash; organic reach plus paid amplification &mdash; without building an in-house team.</p>
+          </div>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">This pipeline is also how Spark Ads integrate with other paid formats. A post that performs well as a Spark Ad can be repurposed for <a href="/partnership-ads" class="text-accent hover:underline">Partnership Ads</a> on Meta, <a href="/branded-content-ads" class="text-accent hover:underline">Branded Content Ads</a> on Instagram, or standard <a href="/ugc-ads" class="text-accent hover:underline">UGC ad campaigns</a> across platforms. The organic-to-paid pipeline on TikTok is the starting point for a multi-platform paid content strategy. For a deeper look at how <a href="/guide" class="text-accent hover:underline">creative testing</a> works across the full funnel, see our main guide.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA Banner -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Stop guessing which ads will work</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD produces the organic content, identifies winners, and runs Spark Ads campaigns. You get proven creative backed by real performance data.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a Spark Ads proposal &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 How to Identify Winners -->
+    <section class="guide-section" id="winners">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Identifying Winners</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to pick the right posts to Spark</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Retention rate is the single most important signal</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Saves and shares indicate intent, not just passive viewing</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Wait 48&ndash;72 hours for organic signals before promoting</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Not every organic post deserves paid budget. The goal is to identify the small percentage of posts that have already proven their ability to hold attention and drive engagement organically. Promoting a mediocre post with paid spend does not make it better &mdash; it just makes it a mediocre post with more impressions.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The selection process starts 48&ndash;72 hours after publication, once TikTok's algorithm has had time to distribute the post organically and gather meaningful performance data. Evaluating too early (under 24 hours) risks promoting a post that got a lucky initial push but lacks staying power. Waiting too long (over 5 days) means missing the window where paid amplification compounds the organic momentum.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Key signals to evaluate</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Signal</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What it measures</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Spark threshold</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Retention rate</td>
+                <td class="px-4 py-3 text-ink-2">% of viewers who watch past key moments (3s, 50%, full)</td>
+                <td class="px-4 py-3 text-ink-2">Above 50% at 3 seconds; above 30% at halfway</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Engagement rate</td>
+                <td class="px-4 py-3 text-ink-2">(Likes + comments + shares) / views</td>
+                <td class="px-4 py-3 text-ink-2">2x+ the account's 30-day average</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Save rate</td>
+                <td class="px-4 py-3 text-ink-2">Saves / views &mdash; indicates high-intent interest</td>
+                <td class="px-4 py-3 text-ink-2">Above 2% (strong signal of utility or desire)</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Share rate</td>
+                <td class="px-4 py-3 text-ink-2">Shares / views &mdash; indicates content worth spreading</td>
+                <td class="px-4 py-3 text-ink-2">Above 1% (strong virality indicator)</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Comment quality</td>
+                <td class="px-4 py-3 text-ink-2">Whether comments show genuine interest, questions, tags</td>
+                <td class="px-4 py-3 text-ink-2">Presence of "where do I get this?" or friend-tagging</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-ink font-medium">View velocity</td>
+                <td class="px-4 py-3 text-ink-2">How quickly the post accumulates views in first 48h</td>
+                <td class="px-4 py-3 text-ink-2">Top 10% of the account's recent posts by 48h view count</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Retention rate is the most reliable predictor of paid performance. A post with high retention tells TikTok's algorithm that viewers find the content worth watching, which translates directly into lower CPMs and better delivery when the post is promoted as a Spark Ad. Save rate is the second-most important signal, because saves indicate intent &mdash; the viewer found something useful enough to return to later.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Avoid the trap of promoting posts purely based on view count. A post with 100,000 views but low retention and low engagement often performs poorly as a Spark Ad, because the algorithm already distributed it widely and the audience signal is diluted. A post with 15,000 views but exceptional retention and save rates is almost always the better Spark Ad candidate.</p>
+      </div>
+    </section>
+
+    <!-- 07 Budget and Bidding -->
+    <section class="guide-section" id="budget">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Budget &amp; Bidding</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Budget, bidding, and scaling strategy</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Start at $50&ndash;$100/day per Spark Ad test</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Scale winners by 20&ndash;30% per day to avoid resetting the algorithm</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Kill underperformers after 3&ndash;5 days of data</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Spark Ads budgeting follows the same principles as any TikTok paid campaign, with one important difference: because the creative has already been validated organically, the risk of wasting budget on bad creative is substantially lower. This means you can start with lower test budgets and scale faster once performance is confirmed.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Starting budget</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">For most brands, $50&ndash;$100 per day per Spark Ad is the right starting point. This budget is large enough to exit TikTok's learning phase (typically 50 conversions) within a reasonable timeframe, but small enough that you can test 3&ndash;5 Spark Ads simultaneously without overcommitting. A monthly Spark Ads testing budget of $3,000&ndash;$5,000 is sufficient for most mid-market brands to run a continuous test-and-scale cycle.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Scaling strategy</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">When a Spark Ad is performing well (CTR above target, CPA below threshold), increase the daily budget by 20&ndash;30% per day. Avoid doubling budgets overnight &mdash; TikTok's algorithm re-enters the learning phase when budgets change dramatically, which can temporarily degrade performance. Gradual scaling preserves the algorithm's optimization and maintains consistent delivery.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For high-performing Spark Ads, consider duplicating the ad group with a higher budget rather than scaling the original. This allows the original ad group to continue performing at its optimized level while the duplicate explores a larger audience at the new budget. Compare results over 48 hours and keep the better performer.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Bid strategies</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Strategy</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">When to use</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Risk level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Lowest cost (auto bid)</td>
+                <td class="px-4 py-3 text-ink-2">Initial testing phase; let TikTok find the cheapest conversions</td>
+                <td class="px-4 py-3 text-ink-2">Low &mdash; safe default for new campaigns</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Cost cap</td>
+                <td class="px-4 py-3 text-ink-2">Scaling phase; set a target CPA and let the algorithm optimize within it</td>
+                <td class="px-4 py-3 text-ink-2">Medium &mdash; may under-deliver if cap is too aggressive</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-ink font-medium">Bid cap</td>
+                <td class="px-4 py-3 text-ink-2">Mature campaigns with clear CPA targets and high volume</td>
+                <td class="px-4 py-3 text-ink-2">Higher &mdash; requires accurate CPA data to set correctly</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Start with lowest cost bidding for every new Spark Ad. Switch to cost cap once you have 50+ conversions and a clear understanding of your target CPA. Bid cap is reserved for mature campaigns where you have enough historical data to set precise bid limits without throttling delivery.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">One often-overlooked advantage of Spark Ads: because the organic post continues to earn free organic reach alongside the paid campaign, the effective cost per result is lower than what TikTok Ads Manager reports. The platform only counts paid impressions in its CPA calculation, but the organic impressions that compound during the campaign period are a free bonus that reduces true blended cost.</p>
+      </div>
+    </section>
+
+    <!-- 08 Key Metrics and Optimization -->
+    <section class="guide-section" id="metrics">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Metrics &amp; Optimization</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key metrics and how to optimize them</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CTR, CVR, CPA, and engagement rate are the four metrics that matter</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Optimize creative first, targeting second, bidding third</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Refresh creative every 7&ndash;14 days to prevent fatigue</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Spark Ads optimization follows the same hierarchy as any paid social campaign: creative quality drives the majority of performance, followed by audience targeting, then bid strategy. The difference with Spark Ads is that creative quality has already been validated by organic performance, so the optimization focus shifts more heavily toward targeting and scaling decisions.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The four metrics that matter</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What it tells you</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Benchmark</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">CTR (click-through rate)</td>
+                <td class="px-4 py-3 text-ink-2">How effectively the ad drives clicks to your destination</td>
+                <td class="px-4 py-3 text-ink-2">1&ndash;3% for Spark Ads (vs 0.5&ndash;1.5% for standard)</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">CVR (conversion rate)</td>
+                <td class="px-4 py-3 text-ink-2">% of clickers who complete the desired action</td>
+                <td class="px-4 py-3 text-ink-2">Varies by vertical; track against your baseline</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">CPA (cost per action)</td>
+                <td class="px-4 py-3 text-ink-2">Total spend divided by conversions</td>
+                <td class="px-4 py-3 text-ink-2">Should be 15&ndash;30% lower than standard ad CPA</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-ink font-medium">Engagement rate</td>
+                <td class="px-4 py-3 text-ink-2">Total paid + organic interactions / impressions</td>
+                <td class="px-4 py-3 text-ink-2">3&ndash;8% for well-performing Spark Ads</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Optimization playbook</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Days 1&ndash;3: Observe.</strong> Let the campaign run without changes. TikTok needs time to exit the learning phase. Do not adjust budgets, targeting, or bids during this window.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Days 3&ndash;5: Evaluate.</strong> Check CTR, CVR, and CPA against your targets. If CTR is below 1%, the creative may not resonate with the paid audience &mdash; test a different Spark Ad. If CTR is strong but CVR is low, the issue is likely the landing page or offer, not the ad.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Days 5&ndash;7: Optimize.</strong> Scale winners by 20&ndash;30% daily budget increase. Pause underperformers. Test new audience segments on proven creative. Avoid changing creative and targeting simultaneously.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Days 7&ndash;14: Refresh.</strong> Even high-performing Spark Ads experience creative fatigue. Monitor frequency &mdash; when average frequency exceeds 3&ndash;4, introduce new organic winners from your content pipeline.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Ongoing: Maintain the pipeline.</strong> The organic-to-paid pipeline must be continuous. New organic content every week feeds new Spark Ad candidates. A steady supply of fresh creative prevents fatigue from ever becoming a bottleneck.</li>
+        </ol>
+
+        <!-- Feat-card: OKAD optimization -->
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailSubject} class="text-ink hover:text-accent transition-colors no-underline">OKAD handles Spark Ads optimization end-to-end</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Our team monitors performance daily, manages budget scaling, refreshes creative from the organic pipeline, and reports weekly on CTR, CVR, CPA, and ROAS. You focus on your product &mdash; we handle the ads.</p>
+          </div>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">One critical point about Spark Ads optimization: the biggest lever is always the creative. Targeting and bidding adjustments produce incremental improvements, but the difference between a great Spark Ad and a mediocre one is 3&ndash;5x in performance. This is why the continuous organic content pipeline is essential &mdash; it ensures you always have fresh, validated creative to rotate into paid campaigns. For more on how to structure creative testing across your entire ad account, see our <a href="/guide" class="text-accent hover:underline">creative testing guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- 09 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Glossary</h2>
+        {[
+          { term: "Spark Ads", def: "TikTok's native ad format that lets brands promote existing organic posts as paid ads. All engagement is retained on the original post." },
+          { term: "Authorization code", def: "A code generated by a TikTok creator that grants a brand permission to use the creator's post as a Spark Ad. Valid for 7, 30, or 60 days." },
+          { term: "In-feed ad", def: "A standard TikTok ad that appears in the For You feed. Created inside Ads Manager with no organic presence." },
+          { term: "CTR (click-through rate)", def: "The percentage of ad viewers who click through to the destination URL or landing page. Calculated as clicks / impressions." },
+          { term: "CVR (conversion rate)", def: "The percentage of ad clickers who complete the desired action (purchase, sign-up, install). Calculated as conversions / clicks." },
+          { term: "CPA (cost per action)", def: "The average cost to acquire one conversion. Calculated as total ad spend / total conversions." },
+          { term: "CPM (cost per mille)", def: "The cost per 1,000 impressions. Used to compare relative cost efficiency across campaigns and platforms." },
+          { term: "ROAS (return on ad spend)", def: "Revenue generated divided by ad spend. A ROAS of 3.0 means $3 in revenue for every $1 spent." },
+          { term: "Learning phase", def: "The initial period (typically 50 conversions) during which TikTok's algorithm optimizes ad delivery. Performance may be volatile during this phase." },
+          { term: "Creative fatigue", def: "The decline in ad performance that occurs when the same audience sees the same creative too many times. Monitored via frequency metrics." },
+          { term: "Retention rate", def: "The percentage of viewers who continue watching a video past key timestamps (3 seconds, midpoint, completion). The strongest organic signal for Spark Ad selection." },
+          { term: "Canvas UGC", def: "A content delivery model where creators post on brand-owned accounts at volume. See the full guide at /canvas-ugc." },
+          { term: "Whitelisting", def: "Granting a brand permission to run paid ads through a creator's account or using a creator's content. See /ugc-whitelisting." },
+          { term: "Partnership Ads", def: "Meta's equivalent of Spark Ads, where a brand promotes a creator's post as a paid ad on Facebook or Instagram. See /partnership-ads." },
+          { term: "Branded Content Ads", def: "Instagram and TikTok's format for promoting creator posts that disclose a brand partnership. See /branded-content-ads." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 10 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+        {[
+          { q: "What is the difference between Spark Ads and regular TikTok ads?", a: "Spark Ads promote existing organic TikTok posts as paid ads. Regular in-feed ads are created from scratch inside Ads Manager. The key difference is that Spark Ads retain all organic engagement (likes, comments, shares) and link to a real TikTok profile, while regular ads have no organic presence and disappear when the campaign ends." },
+          { q: "Do I need a creator's permission to run a Spark Ad on their post?", a: "Yes. If the post is on a creator's account, the creator must generate an authorization code from TikTok's Creator Tools settings. The code grants you permission to use their post as a Spark Ad for 7, 30, or 60 days. If the post is on your own brand account, no authorization code is needed." },
+          { q: "How much should I spend on Spark Ads?", a: "Start with $50-$100 per day per Spark Ad. This is enough to exit TikTok's learning phase and gather meaningful performance data. A monthly testing budget of $3,000-$5,000 allows you to run 3-5 simultaneous tests and continuously rotate in new creative. Scale winning ads by 20-30% per day." },
+          { q: "How do I know which organic posts to promote as Spark Ads?", a: "Look for posts with above-average retention rates (50%+ at 3 seconds), engagement rates (2x your account average), and high save/share ratios. Wait 48-72 hours after publication for organic signals to stabilize before making a decision. Prioritize retention rate over raw view count." },
+          { q: "Can I use Spark Ads with content from multiple creators?", a: "Yes. In fact, testing Spark Ads from multiple creators is recommended. Different creators resonate with different audience segments. Run 3-5 Spark Ads from different creators simultaneously, compare performance, and scale the winners. This is especially effective with a Canvas UGC program where you have 10+ creators producing content." },
+          { q: "What happens to the engagement when the Spark Ad campaign ends?", a: "All engagement generated during the paid campaign stays on the original organic post permanently. Likes, comments, shares, and follows earned during the campaign are retained. The post also continues to earn organic reach after the campaign ends, often at a higher baseline than before because the algorithm sees the post as high-performing." },
+          { q: "Can Spark Ads be used with other ad formats?", a: "Yes. A post that performs well as a Spark Ad on TikTok can also be repurposed for Partnership Ads on Meta, Branded Content Ads on Instagram, or standard UGC ad campaigns on other platforms. The organic-to-paid pipeline on TikTok is often the starting point for a multi-platform paid content strategy." },
+          { q: "How often should I refresh my Spark Ads creative?", a: "Monitor frequency metrics. When average frequency exceeds 3-4 (meaning the average user has seen the ad 3-4 times), introduce new creative. For most campaigns, this means refreshing every 7-14 days. A continuous organic content pipeline ensures you always have fresh, validated creative ready to promote." },
+          { q: "Can OKAD manage my Spark Ads?", a: "Yes. OKAD runs the full organic-to-paid pipeline: we produce 40+ organic videos per month through our creator network, identify top performers using retention and engagement data, set up and optimize Spark Ads campaigns, and provide weekly reporting on all key metrics. Email olga@okad.agency to discuss your brand's Spark Ads strategy." },
+          { q: "Do Spark Ads work for e-commerce brands or only for apps?", a: "Spark Ads work across all verticals. E-commerce brands use them to promote product demos, unboxing videos, and customer testimonials. App companies use them for install campaigns. SaaS brands use them to promote tutorial and use-case content. The format is effective wherever authentic, native-feeling content drives conversions." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to turn organic content into high-performing ads?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD produces the content, identifies winners, and manages Spark Ads from setup to scale. Tell us about your brand and we will build a proposal.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a Spark Ads proposal &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-3">Methodology</div>
+        <p class="text-[13px] text-muted leading-[1.6] mb-2">Performance benchmarks cited in this guide (142% higher engagement, 25% higher CTR, 24% higher CVR) are sourced from TikTok's published advertising research and platform documentation. Tactical recommendations &mdash; including budget ranges, scaling strategies, and optimization playbooks &mdash; are based on OKAD's operational experience managing Spark Ads campaigns across consumer apps, SaaS, e-commerce, and fintech verticals.</p>
+        <p class="text-[13px] text-muted leading-[1.6]">This guide is maintained by OKAD and updated as the platform evolves. Last updated: September 2026. For the latest version, visit <a href="/spark-ads" class="text-accent hover:underline">okad.cc/spark-ads</a>. Related guides: <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a>, <a href="/tech-ugc" class="text-accent hover:underline">Tech UGC</a>, <a href="/guide" class="text-accent hover:underline">Creative Testing</a>, <a href="/ugc-ads" class="text-accent hover:underline">UGC Ads</a>, <a href="/ugc-whitelisting" class="text-accent hover:underline">UGC Whitelisting</a>, <a href="/partnership-ads" class="text-accent hover:underline">Partnership Ads</a>, <a href="/branded-content-ads" class="text-accent hover:underline">Branded Content Ads</a>.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

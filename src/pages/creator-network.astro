@@ -1,0 +1,596 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailNetwork = "mailto:olga@okad.agency?subject=Creator%20network%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const emailGeneral = "mailto:olga@okad.agency?subject=Creator%20network%20%E2%80%94%20general%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Creator Network — The Complete Guide to Building & Managing UGC Talent Pools | OKAD"
+  description="A creator network is an organized pool of vetted UGC creators a brand or agency can deploy for content production at scale. This guide covers network sizes, managed vs self-serve models, creator categories, retention, operations, and key metrics."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Creator Network: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          A creator network is an organized, vetted pool of UGC creators that a brand or agency can deploy for content production at scale. This guide covers how to build, manage, and scale a creator network&mdash;from sourcing and vetting to operations and retention.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailNetwork} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Access OKAD's creator network &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>700+ creators</span>
+          <span>Instant deployment</span>
+          <span>Managed matching</span>
+          <span>Quality control</span>
+          <span>Scale on demand</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Creator Networks Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Source &amp; Vet</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Find, screen, and onboard creators into a categorized talent pool with verified portfolios and test deliverables.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Match &amp; Brief</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Match the right creators to each project based on niche, style, and skill. Distribute briefs with clear deliverables.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Manage &amp; Scale</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Handle QC, payments, and performance tracking. Scale from 10 to 500+ creators as your content needs grow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "Why Networks Beat Individual Hiring", href: "#networks-vs-hiring" },
+            { num: "03", text: "Network Sizes", href: "#network-sizes" },
+            { num: "04", text: "Building a Network", href: "#building" },
+            { num: "05", text: "Managed vs Self-Serve", href: "#managed-vs-selfserve" },
+            { num: "06", text: "Creator Categories", href: "#creator-categories" },
+            { num: "07", text: "Network Operations", href: "#operations" },
+            { num: "08", text: "Creator Retention", href: "#retention" },
+            { num: "09", text: "Building vs Buying", href: "#build-vs-buy" },
+            { num: "10", text: "Key Metrics", href: "#metrics" },
+            { num: "11", text: "Glossary", href: "#glossary" },
+            { num: "12", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 — Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What is a creator network?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A creator network is an organized pool of UGC creators a brand or agency can deploy for content production at scale</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Not a marketplace listing&mdash;a managed, vetted, categorized talent pool with operational infrastructure</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Networks are the infrastructure behind every high-volume UGC program</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          A creator network is not a database of freelancer profiles. It is a structured, operational system: vetted creators organized by niche, style, and skill level, with processes for matching, briefing, quality control, and payment. The network is the engine that makes consistent, high-volume content production possible.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          When a brand needs 50 <a href="/ugc-ads" class="text-accent hover:underline">UGC ads</a> in a month, they don&rsquo;t post 50 job listings. They activate a creator network. The network already has the right people, the onboarding is done, the payment rails exist, and the quality benchmarks are established. This is the difference between &ldquo;we need content&rdquo; and &ldquo;content is shipping.&rdquo;
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Every serious <a href="/high-volume-ugc" class="text-accent hover:underline">high-volume UGC</a> program runs on a creator network. The question is whether you build your own or plug into an existing one. This guide covers both paths.
+        </p>
+      </div>
+    </section>
+
+    <!-- 02 — Why Networks Beat Individual Hiring -->
+    <section class="guide-section" id="networks-vs-hiring">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Why Networks Beat Individual Hiring</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The structural advantages of a network</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Speed: instant deployment vs weeks of sourcing and vetting</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Variety: multiple styles, niches, and demographics on demand</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Redundancy: no single point of failure when a creator drops out</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Scale: ramp up or down quickly without rebuilding from scratch</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Hiring individual <a href="/ugc-creator" class="text-accent hover:underline">UGC creators</a> works when you need one or two videos. It breaks down the moment you need consistent output. Every new project restarts the sourcing cycle: find candidates, review portfolios, negotiate rates, onboard, brief, review, pay. Multiply that by 20 creators and you have a full-time job that produces content as a side effect.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          A network eliminates the sourcing overhead. Creators are already vetted, rates are established, onboarding is done. When a new campaign launches, the only step is matching and briefing&mdash;which takes hours, not weeks.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Redundancy is underrated. When your star creator goes on vacation, gets sick, or ghosts, a network has five replacements in the same niche. Individual hiring has zero backup. At scale, creator attrition is not an exception&mdash;it is a constant. Networks are designed for it.
+        </p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Factor</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Individual Hiring</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Creator Network</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Time to first deliverable</td><td class="px-4 py-2.5 border-b border-border text-ink">2&ndash;4 weeks</td><td class="px-4 py-2.5 border-b border-border text-ink">2&ndash;5 days</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Style variety</td><td class="px-4 py-2.5 border-b border-border text-ink">Limited to who you find</td><td class="px-4 py-2.5 border-b border-border text-ink">Multiple styles on demand</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Backup if creator drops</td><td class="px-4 py-2.5 border-b border-border text-ink">Start over</td><td class="px-4 py-2.5 border-b border-border text-ink">Instant replacement</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Scaling capacity</td><td class="px-4 py-2.5 border-b border-border text-ink">Linear (hire more = more work)</td><td class="px-4 py-2.5 border-b border-border text-ink">Elastic (activate more creators)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Management overhead</td><td class="px-4 py-2.5 border-b border-border text-ink">High per creator</td><td class="px-4 py-2.5 border-b border-border text-ink">Centralized systems</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Quality consistency</td><td class="px-4 py-2.5 text-ink">Varies wildly</td><td class="px-4 py-2.5 text-ink">Benchmarked and tracked</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 — Network Sizes -->
+    <section class="guide-section" id="network-sizes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Network Sizes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Small, medium, and large networks</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Small (10&ndash;30 creators): single brand, single market, manageable by one person</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Medium (30&ndash;100 creators): multi-brand or multi-market, needs dedicated ops</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Large (100&ndash;500+ creators): agency-scale, requires tooling and systems</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Network size should match your content volume, not your ambition. A 10-creator network producing 30 videos per month is more effective than a 200-creator network where 180 creators sit idle. The right size depends on how many deliverables you need, how many niches you cover, and how much operational capacity you have.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Small networks are perfect for brands running their first <a href="/guide" class="text-accent hover:underline">UGC program</a>. You get enough variety to test styles without drowning in management. Medium networks support agencies or brands with multiple product lines. Large networks are agency infrastructure&mdash;the kind OKAD operates with 700+ creators across niches and geographies.
+        </p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Size</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Creators</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Monthly capacity</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Use case</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Management</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Small</td><td class="px-4 py-2.5 border-b border-border text-ink">10&ndash;30</td><td class="px-4 py-2.5 border-b border-border text-ink">20&ndash;60 videos</td><td class="px-4 py-2.5 border-b border-border text-ink">Single brand, single market</td><td class="px-4 py-2.5 border-b border-border text-ink">1 person, spreadsheet</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Medium</td><td class="px-4 py-2.5 border-b border-border text-ink">30&ndash;100</td><td class="px-4 py-2.5 border-b border-border text-ink">60&ndash;200 videos</td><td class="px-4 py-2.5 border-b border-border text-ink">Multi-brand or multi-market</td><td class="px-4 py-2.5 border-b border-border text-ink">Dedicated ops person + CRM</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Large</td><td class="px-4 py-2.5 text-ink">100&ndash;500+</td><td class="px-4 py-2.5 text-ink">200&ndash;1,000+ videos</td><td class="px-4 py-2.5 text-ink">Agency serving multiple clients</td><td class="px-4 py-2.5 text-ink">Team + tooling + automation</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 — Building a Network -->
+    <section class="guide-section" id="building">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Building a Network</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">From zero to a functioning creator pool</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Sourcing: social media, creator platforms, referrals, inbound applications</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Vetting: portfolio review, test video, communication check</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Onboarding: briefs, brand guidelines, payment setup, contracts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Categorization: tag by niche, content style, skill level, language, location</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Building a creator network is not recruiting&mdash;it is building infrastructure. Recruiting finds people. Infrastructure means those people can be activated, briefed, managed, and paid at any moment. The difference is operational readiness.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Sourcing starts broad. Scan TikTok, Instagram Reels, and YouTube Shorts for creators already making content in your target niches. Use creator platforms like Collabstr, Fiverr, and Upwork to find talent actively seeking work. Ask your best creators for referrals&mdash;strong creators know other strong creators. Post application forms on your website and social channels for inbound leads.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Vetting is where most networks fail. A good portfolio does not guarantee a good deliverable. The only reliable signal is a paid test video with a real brief. This filters out creators who look great on their own account but cannot follow brand direction. Communication speed and reliability matter as much as video quality.
+        </p>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Source candidates.</strong> Search social platforms, creator marketplaces, and referral networks. Aim for 3&ndash;5x the number of creators you actually need&mdash;expect a 20&ndash;30% pass rate through vetting.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Screen portfolios.</strong> Review each creator&rsquo;s existing content for production quality, on-camera presence, audio clarity, and niche relevance. Reject obvious mismatches early.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Run paid test videos.</strong> Send a real brief with specific deliverables. Pay the creator&rsquo;s standard rate. Evaluate the result for brief adherence, quality, turnaround time, and communication.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Onboard approved creators.</strong> Set up contracts, payment information, and access to brief templates and brand guidelines. Add them to your creator CRM with tags for niche, style, skill level, and availability.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Categorize and activate.</strong> Tag each creator by content type (talking head, lifestyle, product demo), niche (beauty, tech, food), language, and location. The network is ready when you can filter and deploy within hours.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 05 — Managed vs Self-Serve -->
+    <section class="guide-section" id="managed-vs-selfserve">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Managed vs Self-Serve</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Agency-managed networks vs self-serve platforms</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Managed (OKAD model): full service&mdash;matching, QC, payment, creative direction</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Self-serve (Billo, Collabstr): brand does the work&mdash;search, brief, review, pay</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Managed networks cost more per video but save 80%+ of internal time</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          The managed vs self-serve decision is really a time vs money decision. Self-serve platforms give you access to creators, but you do everything else: searching, vetting, briefing, reviewing, requesting revisions, and processing payments. The platform is a directory. You are the operator.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          A managed network like OKAD&rsquo;s handles the entire pipeline. You describe what you need. The network matches creators, distributes briefs, reviews deliverables, manages revisions, and handles payments. Your involvement is approval, not operations. For brands running <a href="/high-volume-ugc" class="text-accent hover:underline">high-volume UGC</a> programs, this difference is the difference between a content program and a content headache.
+        </p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Factor</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Managed Network</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Self-Serve Platform</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator matching</td><td class="px-4 py-2.5 border-b border-border text-ink">Done for you</td><td class="px-4 py-2.5 border-b border-border text-ink">You search and select</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Brief creation</td><td class="px-4 py-2.5 border-b border-border text-ink">Collaborative or handled</td><td class="px-4 py-2.5 border-b border-border text-ink">You write everything</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Quality control</td><td class="px-4 py-2.5 border-b border-border text-ink">Pre-screened before delivery</td><td class="px-4 py-2.5 border-b border-border text-ink">You review and request revisions</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Payment processing</td><td class="px-4 py-2.5 border-b border-border text-ink">Handled by the network</td><td class="px-4 py-2.5 border-b border-border text-ink">Through the platform</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Your time per video</td><td class="px-4 py-2.5 border-b border-border text-ink">5&ndash;10 minutes (review + approve)</td><td class="px-4 py-2.5 border-b border-border text-ink">1&ndash;3 hours (end to end)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Cost per video</td><td class="px-4 py-2.5 border-b border-border text-ink">Higher (includes management)</td><td class="px-4 py-2.5 border-b border-border text-ink">Lower (but your time is not free)</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Best for</td><td class="px-4 py-2.5 text-ink">Brands needing 20+ videos/month</td><td class="px-4 py-2.5 text-ink">Brands testing with 1&ndash;5 videos</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Skip the sourcing. Access 700+ vetted creators.</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD&rsquo;s managed creator network handles matching, briefing, QC, and payments. You focus on creative strategy&mdash;we handle operations.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailNetwork} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Access OKAD's creator network &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 — Creator Categories -->
+    <section class="guide-section" id="creator-categories">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Creator Categories</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Content types inside a network</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every network needs creators categorized by content type, not just niche</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Different ad formats require different creator skills</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A strong network covers at least 4&ndash;5 content categories</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Niche categorization (beauty, tech, food) is obvious. Content type categorization is where operational networks differentiate themselves. A creator who excels at talking-head testimonials may be terrible at lifestyle B-roll. Matching the right creator to the right content format is half the battle in <a href="/tech-ugc" class="text-accent hover:underline">UGC production</a>.
+        </p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Category</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Description</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Talking head</td><td class="px-4 py-2.5 border-b border-border text-ink">Creator speaks directly to camera, delivering a script or ad-lib</td><td class="px-4 py-2.5 border-b border-border text-ink"><a href="/social-proof-ads" class="text-accent hover:underline">Social proof ads</a>, testimonials, reviews</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Screen recording</td><td class="px-4 py-2.5 border-b border-border text-ink">Screen capture with voiceover, showing app or website usage</td><td class="px-4 py-2.5 border-b border-border text-ink">SaaS, apps, digital products</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Lifestyle</td><td class="px-4 py-2.5 border-b border-border text-ink">Product integrated into everyday life scenes</td><td class="px-4 py-2.5 border-b border-border text-ink">CPG, fashion, home goods</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Testimonial</td><td class="px-4 py-2.5 border-b border-border text-ink">Authentic review format, often unscripted or semi-scripted</td><td class="px-4 py-2.5 border-b border-border text-ink">Trust building, conversion ads</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">B-roll</td><td class="px-4 py-2.5 border-b border-border text-ink">Product shots, aesthetic clips, no speaking</td><td class="px-4 py-2.5 border-b border-border text-ink">Ad overlays, website content, organic posts</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Product demo</td><td class="px-4 py-2.5 text-ink">Unboxing, setup, or usage walkthrough</td><td class="px-4 py-2.5 text-ink">E-commerce, DTC, physical products</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 — Network Operations -->
+    <section class="guide-section" id="operations">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Network Operations</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How a creator network runs day to day</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Matching: assign creators based on niche, style, availability, and past performance</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brief distribution: standardized templates with clear deliverables and deadlines</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Quality control: review every deliverable before it reaches the client</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Payment processing: regular cycles (weekly or bi-weekly), transparent tracking</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Performance tracking: measure delivery speed, revision rates, and content performance</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Network operations is the unglamorous part that makes everything work. A new campaign enters the pipeline. The operations team reviews the brief, identifies the content types needed, filters the network for matching creators, and sends offers. Accepted creators receive standardized briefs with reference examples, brand guidelines, deliverable specs, and deadlines.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Quality control happens before delivery, not after. Every video is reviewed against the brief requirements: correct messaging, acceptable audio and video quality, proper product visibility, and brand guideline compliance. Videos that miss the mark go back for revision with specific, actionable feedback. Only approved content reaches the client.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Payment processing needs to be predictable. Creators who don&rsquo;t know when they&rsquo;ll be paid start looking for other work. The best networks pay on a fixed cycle&mdash;weekly or bi-weekly&mdash;with transparent tracking so creators always know what they&rsquo;re owed. Late or unpredictable payments are the fastest way to lose your best talent.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Performance tracking closes the loop. Track each creator&rsquo;s delivery time, revision rate, and&mdash;when possible&mdash;how their content performs in ads. This data feeds back into matching: high performers get priority on premium projects. Consistent underperformers get coaching or exit the network.
+        </p>
+      </div>
+    </section>
+
+    <!-- 08 — Creator Retention -->
+    <section class="guide-section" id="retention">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Creator Retention</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why creators stay&mdash;and why they leave</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Competitive rates: pay at or above market&mdash;creators talk to each other</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Fast payment: weekly or bi-weekly, never net-60</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Clear briefs: ambiguous briefs create frustration and revisions</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creative freedom: guidelines, not scripts&mdash;let creators be creators</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Feedback that improves: coaching, not criticism</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Creator retention is the single most important metric for a network&rsquo;s long-term health. Sourcing and vetting new creators costs 5&ndash;10x more than retaining existing ones. When experienced creators leave, they take institutional knowledge with them&mdash;they know your brands, your style preferences, and your quality standards. Replacing that takes months.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Creators leave networks for five reasons: low pay, late pay, confusing briefs, no creative freedom, and harsh feedback. Fix all five and your retention rate will exceed 80%. Let any one slide and you&rsquo;ll be constantly recruiting to replace churn.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Pay is table stakes. If your rates are below market, creators will find networks that pay better. But pay alone does not retain creators&mdash;the experience matters. Creators want to do good work for clients who appreciate it. Clear briefs, reasonable deadlines, and feedback that helps them improve create a working relationship, not just a transaction.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Creative freedom is counterintuitive for brands that want control. But the best UGC comes from creators who understand the goal and bring their own approach. Give them the &ldquo;what&rdquo; and the &ldquo;why&rdquo;&mdash;let them figure out the &ldquo;how.&rdquo; The result is more authentic than any word-for-word script.
+        </p>
+      </div>
+    </section>
+
+    <!-- 09 — Building vs Buying -->
+    <section class="guide-section" id="build-vs-buy">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Building vs Buying</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Build your own network or use an agency&rsquo;s?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Building: 6&ndash;12 months, $50K+ investment, ongoing management overhead</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Buying: instant access, managed operations, predictable cost per deliverable</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most brands should buy first, then decide if building makes sense at scale</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Building a creator network from scratch is a business, not a project. It requires dedicated headcount for sourcing, vetting, and operations. It requires tooling for CRM, brief management, and payment processing. It requires 6&ndash;12 months before the network is large and reliable enough to support consistent content production. Total investment to reach a functional 100-creator network: $50,000&ndash;$100,000+ in time, tooling, and test content.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Using an agency&rsquo;s existing network gives you instant access to vetted, categorized creators with established workflows. No setup time, no recruitment costs, no payment infrastructure to build. You pay per deliverable or on a retainer, and the agency handles everything behind the scenes.
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          The right answer for most brands: start with an agency network to validate your UGC program and learn what works. If you&rsquo;re consistently producing 100+ videos per month and want to bring operations in-house, then consider building your own. Until then, the agency network is more cost-effective and immediately operational.
+        </p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Factor</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Build Your Own</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Use Agency Network</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Time to launch</td><td class="px-4 py-2.5 border-b border-border text-ink">6&ndash;12 months</td><td class="px-4 py-2.5 border-b border-border text-ink">Immediate</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Upfront investment</td><td class="px-4 py-2.5 border-b border-border text-ink">$50K&ndash;$100K+</td><td class="px-4 py-2.5 border-b border-border text-ink">$0 (pay per deliverable)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Ongoing management</td><td class="px-4 py-2.5 border-b border-border text-ink">1&ndash;3 FTEs dedicated</td><td class="px-4 py-2.5 border-b border-border text-ink">Handled by agency</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Network size</td><td class="px-4 py-2.5 border-b border-border text-ink">Grows slowly (10&ndash;20/month)</td><td class="px-4 py-2.5 border-b border-border text-ink">700+ creators available now</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Control</td><td class="px-4 py-2.5 border-b border-border text-ink">Full control over everything</td><td class="px-4 py-2.5 border-b border-border text-ink">Collaborative with agency</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Best for</td><td class="px-4 py-2.5 text-ink">Agencies, 100+ videos/month</td><td class="px-4 py-2.5 text-ink">Brands, 10&ndash;100 videos/month</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Inline promo -->
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#x26A1;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailNetwork} class="text-ink hover:text-accent transition-colors no-underline">OKAD&rsquo;s creator network&mdash;700+ vetted creators, instant deployment</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Managed matching, quality control, weekly payments, and performance tracking. Skip the 12-month build and start producing content this week.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 — Key Metrics -->
+    <section class="guide-section" id="metrics">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Key Metrics</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What to measure in a creator network</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Track operational metrics (speed, revisions) and outcome metrics (hit rate, cost)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator retention rate is the leading indicator of network health</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Hit rate (% of content that performs) determines if your network is actually good</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          A creator network without metrics is a contact list. Metrics tell you whether the network is healthy, efficient, and producing content that actually works. Track both operational metrics (how the network runs) and outcome metrics (what the content achieves).
+        </p>
+        <p class="text-ink-2 leading-[1.65] mb-4">
+          Hit rate is the metric that matters most for <a href="/ugc-ads" class="text-accent hover:underline">UGC ads</a>. If 100 videos go into ad testing and 8 become profitable winners, your hit rate is 8%. That number determines your effective cost per winning ad&mdash;and whether your network is producing the right content. A network with a 3% hit rate costs 2.7x more per winner than one with an 8% hit rate.
+        </p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What it measures</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Benchmark</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator response rate</td><td class="px-4 py-2.5 border-b border-border text-ink">% of creators who accept a brief offer</td><td class="px-4 py-2.5 border-b border-border text-ink">60&ndash;80%</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Delivery time</td><td class="px-4 py-2.5 border-b border-border text-ink">Days from brief to first deliverable</td><td class="px-4 py-2.5 border-b border-border text-ink">3&ndash;7 days</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Revision rate</td><td class="px-4 py-2.5 border-b border-border text-ink">% of deliverables needing revisions</td><td class="px-4 py-2.5 border-b border-border text-ink">&lt;25%</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Hit rate</td><td class="px-4 py-2.5 border-b border-border text-ink">% of content that performs in ads</td><td class="px-4 py-2.5 border-b border-border text-ink">5&ndash;10%</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator retention rate</td><td class="px-4 py-2.5 border-b border-border text-ink">% of creators active after 6 months</td><td class="px-4 py-2.5 border-b border-border text-ink">&gt;75%</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Cost per deliverable</td><td class="px-4 py-2.5 text-ink">Total cost including management overhead</td><td class="px-4 py-2.5 text-ink">$150&ndash;$500 per video</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 — Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+        {[
+          { term: "Creator network", def: "An organized, vetted pool of UGC creators that can be deployed for content production on demand. Not a marketplace listing—a managed talent infrastructure." },
+          { term: "Managed network", def: "A creator network operated by an agency or production company. The operator handles matching, briefing, QC, and payments on behalf of the client." },
+          { term: "Self-serve platform", def: "A marketplace where brands search for and hire creators directly. The platform provides the directory; the brand does the operational work." },
+          { term: "Creator vetting", def: "The process of screening creators before adding them to a network. Includes portfolio review, paid test videos, and communication evaluation." },
+          { term: "Creator matching", def: "Assigning the right creator to a project based on niche expertise, content style, skill level, availability, and past performance data." },
+          { term: "Brief distribution", def: "The process of sending standardized project briefs to matched creators with clear deliverables, brand guidelines, reference examples, and deadlines." },
+          { term: "Hit rate", def: "The percentage of produced content that meets performance thresholds in paid advertising. A key measure of network quality and matching accuracy." },
+          { term: "Creator retention", def: "The percentage of creators who remain active in a network over time. High retention reduces sourcing costs and maintains institutional knowledge." },
+          { term: "Network capacity", def: "The maximum number of deliverables a network can produce in a given period based on its active creator count and average output per creator." },
+          { term: "Creator CRM", def: "A database or tool used to track creator profiles, availability, performance history, payment records, and categorization tags within a network." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 12 — FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">12 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+        {[
+          { q: "What is a creator network?", a: "A creator network is an organized pool of vetted UGC creators that a brand or agency can activate for content production. Unlike a marketplace where you search for individuals, a network is pre-built infrastructure with established workflows for matching, briefing, quality control, and payment." },
+          { q: "Why is a network better than hiring individual creators?", a: "Networks provide speed (instant deployment vs weeks of sourcing), variety (multiple styles and niches on demand), redundancy (replacements when creators drop out), and scale (ramp production up or down without rebuilding). Individual hiring works for 1–2 videos but breaks down at volume." },
+          { q: "How big should a creator network be?", a: "It depends on your content volume. A small network of 10–30 creators supports 20–60 videos per month for a single brand. Medium networks (30–100) handle multi-brand or multi-market programs. Large networks (100–500+) are agency-scale infrastructure serving multiple clients." },
+          { q: "How do you build a creator network?", a: "Five steps: source candidates from social platforms and marketplaces, screen portfolios for quality and niche fit, run paid test videos with real briefs, onboard approved creators with contracts and payment setup, then categorize by content type, niche, and skill level. Expect 6–12 months to reach a functional 100-creator network." },
+          { q: "What’s the difference between managed and self-serve networks?", a: "A managed network (like OKAD’s) handles everything: creator matching, brief distribution, quality control, revisions, and payments. A self-serve platform gives you a directory of creators, but you do all the operational work yourself. Managed costs more per video but saves 80%+ of internal time." },
+          { q: "What types of creators are in a network?", a: "Networks categorize creators by content type: talking head, screen recording, lifestyle, testimonial, B-roll, and product demo. Each type requires different skills. A strong network covers at least 4–5 categories across multiple niches, demographics, and languages." },
+          { q: "How do you retain creators in a network?", a: "Five factors: competitive rates (at or above market), fast payment (weekly or bi-weekly), clear briefs (no ambiguity), creative freedom (guidelines not scripts), and constructive feedback (coaching not criticism). Fix all five and retention exceeds 80%." },
+          { q: "Should I build my own network or use an agency’s?", a: "Start with an agency network to validate your UGC program. Building your own takes 6–12 months and $50K–$100K+ in time and tooling. Once you consistently need 100+ videos per month, building in-house may make sense. Until then, an agency network is more cost-effective." },
+          { q: "What metrics should I track for a creator network?", a: "Six key metrics: creator response rate (60–80% target), delivery time (3–7 days), revision rate (under 25%), hit rate (5–10% of content performs in ads), creator retention rate (above 75% at 6 months), and cost per deliverable ($150–$500 per video including management)." },
+          { q: "Can OKAD provide access to a creator network?", a: "Yes. OKAD operates a managed creator network of 700+ vetted creators across niches and content types. We handle matching, briefing, quality control, and payments. Brands get instant access to a fully operational network without the 6–12 month build time. Email olga@okad.agency to get started." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to deploy a creator network?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">700+ vetted creators. Managed matching, QC, and payments. Start producing content this week&mdash;no 12-month build required.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailNetwork} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Access OKAD's creator network &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">
+          This guide is based on OKAD&rsquo;s operational experience managing a creator network of 700+ UGC creators across multiple niches, content types, and geographies. Benchmarks and best practices reflect real data from thousands of creator engagements, deliverables, and ad performance cycles. Network size recommendations, retention strategies, and cost benchmarks are derived from agency operations data and validated against industry standards. Cross-references: <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a>, <a href="/tech-ugc" class="text-accent hover:underline">Tech UGC</a>, <a href="/guide" class="text-accent hover:underline">UGC Guide</a>, <a href="/ugc-ads" class="text-accent hover:underline">UGC Ads</a>, <a href="/high-volume-ugc" class="text-accent hover:underline">High-Volume UGC</a>, <a href="/social-proof-ads" class="text-accent hover:underline">Social Proof Ads</a>, <a href="/ugc-creator" class="text-accent hover:underline">UGC Creator</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section { padding: 56px 0; border-bottom: 1px solid var(--color-border); }
+  .guide-section:last-of-type { border-bottom: none; }
+  .tldr { background: rgba(99,102,241,.06); border: 1px solid rgba(99,102,241,.12); border-radius: 12px; padding: 20px 24px; margin-bottom: 28px; }
+  .guide-step { counter-increment: step; }
+  .guide-step::before { content: counter(step); position: absolute; left: 0; top: 14px; width: 34px; height: 34px; border-radius: 50%; background: rgba(99,102,241,.06); border: 1px solid rgba(99,102,241,.15); color: #6366F1; font-family: "JetBrains Mono", monospace; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+  ol:has(.guide-step) { counter-reset: step; }
+  .faq-item.open .faq-a { max-height: 500px; }
+  @media (max-width: 640px) { .guide-section { padding: 40px 0; } }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

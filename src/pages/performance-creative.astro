@@ -1,0 +1,570 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailPerformance = "mailto:olga@okad.agency?subject=Performance%20creative%20%E2%80%94%20tell%20us%20about%20your%20product";
+const emailGeneral = "mailto:olga@okad.agency?subject=Performance%20creative%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Performance Creative — The Complete Guide to Ad Creative That Drives Results | OKAD"
+  description="Performance creative is ad creative designed and optimized for measurable results (CPA, ROAS), not brand awareness. This guide covers the system: research, concept, production, testing, analysis, iteration, and how to build a pipeline that finds winners."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Performance Creative: <span class="text-accent">The Complete Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Performance creative is ad creative designed and optimized for measurable results &mdash; CPA, ROAS, and revenue &mdash; not brand awareness or aesthetics. This guide covers how to build a system that turns creative production into a growth engine.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailPerformance} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Order performance creative &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>CPA &amp; ROAS</span>
+          <span>Hook-first production</span>
+          <span>1 new ad per $3K spend</span>
+          <span>UGC-dominant</span>
+          <span>Modular &amp; data-driven</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Performance Creative Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Data Decides, Not Taste</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Creative is judged by purchase data &mdash; CPA and ROAS &mdash; not by aesthetics, likes, or creative director opinions.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Hook-First Production</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">The first 3 seconds decide everything. Hook rate 30&ndash;40% is the benchmark. Production starts with hooks, not scripts.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F504;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Continuous Iteration</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Research, concept, produce, test, analyze, iterate. The system never stops. One new ad per $3K of ad spend is the 2026 benchmark.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "What Is Performance Creative?", href: "#what" },
+            { num: "03", text: "Performance vs Brand Creative", href: "#vs-brand" },
+            { num: "04", text: "The Performance Creative System", href: "#system" },
+            { num: "05", text: "Hook-First Production", href: "#hooks" },
+            { num: "06", text: "UGC as the Dominant Format", href: "#ugc" },
+            { num: "07", text: "Modular Production", href: "#modular" },
+            { num: "08", text: "Data-Driven Iteration", href: "#iteration" },
+            { num: "09", text: "Key Roles & Platform Adaptation", href: "#roles" },
+            { num: "10", text: "Glossary", href: "#glossary" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Performance creative is judged by purchase data, not aesthetics</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Performance creative = ad creative optimized for measurable results (CPA, ROAS)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">In 2026: one new ad per $3K of ad spend is the production benchmark</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The system: research &rarr; concept &rarr; production &rarr; test &rarr; analyze &rarr; iterate</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Performance creative is ad creative where the only judge is data. A beautiful ad that doesn't convert is a failure. An ugly ad with a CPA 30% below target is a winner. This distinction separates performance creative from brand creative, where goals like awareness, recall, and aesthetic consistency matter.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The shift happened gradually, then all at once. By 2026, platforms like Meta and TikTok have made creative the primary lever for ad performance. Targeting is largely automated. Bidding is algorithmic. The creative itself &mdash; what the viewer sees in the first 3 seconds &mdash; is the single biggest variable a brand controls.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The 2026 benchmark: brands spending $50K&ndash;$500K/month on paid media need approximately one new ad per $3K of ad spend to maintain performance. At $150K/month, that's 50 new ads per month. This volume is only achievable with a systematic approach to creative production.</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Goal:</strong> measurable business results &mdash; CPA, ROAS, revenue</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Method:</strong> systematic production, testing, and iteration</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Format:</strong> UGC-dominant, hook-first, modular components</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Cadence:</strong> 1 new ad per $3K spend; continuous pipeline</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 What Is Performance Creative -->
+    <section class="guide-section" id="what">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What is performance creative?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Ad creative designed, produced, and measured by business outcomes</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every creative is a hypothesis tested with real purchase data</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The opposite of "make it look great and hope it works"</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Performance creative</strong> is ad content &mdash; video, image, or carousel &mdash; where the creative decisions are driven by data, not taste. Every element is chosen to maximize a measurable outcome: lower CPA, higher ROAS, more conversions. The creative is not the end product; the conversion is.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">A quick example</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A DTC skincare brand produces 15 video ads in a week: 5 different hooks &times; 3 different body narratives. All 15 run simultaneously as Meta ads with $75/day each. After 5 days and $5,625 in test spend, three ads have a CPA 25% below target. Those three get scaled to $500/day. The other twelve get killed or iterated. That's performance creative &mdash; the data chose the winners.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What performance creative is not</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Not brand video production</strong> &mdash; the goal is conversions, not polish or brand recall</li>
+          <li><strong>Not random ad production</strong> &mdash; every creative tests a specific hypothesis with isolated variables</li>
+          <li><strong>Not influencer marketing</strong> &mdash; creators produce content for ads, measured by CPA, not their audience reach</li>
+          <li><strong>Not organic content</strong> &mdash; performance creative is specifically for paid media; <a href="/canvas-ugc" class="text-accent hover:underline">Canvas UGC</a> covers organic</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 03 Performance vs Brand Creative -->
+    <section class="guide-section" id="vs-brand">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Comparison</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Performance creative vs brand creative</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand creative: awareness, recall, consistency &mdash; measured in impressions and lift</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Performance creative: CPA, ROAS, revenue &mdash; measured in purchases</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Different goals, different production, different measurement</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Aspect</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Brand Creative</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Performance Creative</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Primary goal</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Awareness, recall, brand equity</td><td class="px-4 py-2.5 border-b border-border text-ink-2">CPA, ROAS, conversions</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Success metric</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Impressions, brand lift, sentiment</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Purchase data, revenue</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Production style</td><td class="px-4 py-2.5 border-b border-border text-ink-2">High polish, brand guidelines, agency</td><td class="px-4 py-2.5 border-b border-border text-ink-2">UGC-native, fast, modular</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Volume</td><td class="px-4 py-2.5 border-b border-border text-ink-2">2&ndash;5 hero ads per quarter</td><td class="px-4 py-2.5 border-b border-border text-ink-2">20&ndash;50+ new ads per month</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Decision maker</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creative director, CMO</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Data &mdash; CPA below target = winner</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Timeline</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Weeks to months per campaign</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Days &mdash; produce, test, decide in a week</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Iteration</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Rare &mdash; campaigns run as planned</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Constant &mdash; iterate winners, kill losers</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Typical format</td><td class="px-4 py-2.5 text-ink-2">Polished video, studio shoots</td><td class="px-4 py-2.5 text-ink-2">UGC, talking head, screen recordings</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Neither approach is universally right. Brand creative builds long-term equity. Performance creative drives immediate, measurable growth. Most brands at scale need both &mdash; but the production system, team, and measurement are completely different. Treating performance creative like brand creative (slow, polished, few variations) is the most common and most expensive mistake.</p>
+      </div>
+    </section>
+
+    <!-- 04 The Performance Creative System -->
+    <section class="guide-section" id="system">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; System</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The performance creative system</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Six stages: research &rarr; concept &rarr; production &rarr; test &rarr; analyze &rarr; iterate</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The system is a loop, not a funnel &mdash; it never stops</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each stage feeds the next with data and learnings</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Performance creative is not a project with a start and end date. It is a continuous system. The six stages form a loop: analysis from the last round of tests informs research for the next round. Winners get iterated. Losers provide data on what to avoid. The system compounds learning over time.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The six stages</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Research.</strong> Analyze competitor ads (Meta Ad Library, TikTok Creative Center), review past test data, identify audience pain points and messaging gaps. Collect hooks that are working in the category.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Concept.</strong> Develop 6&ndash;12 creative concepts per testing cycle. Each concept has a clear hypothesis: "This pain point will resonate with X audience." Write scripts with modular components &mdash; interchangeable hooks, bodies, and CTAs.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Production.</strong> Shoot components, not finished ads. Hooks in one session, product demos in another, CTAs separately. UGC creators produce the majority of content. Modular production enables 72+ variations from 13 components.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Test.</strong> Launch all variations simultaneously as ads. $50&ndash;$100/day per creative for 3&ndash;7 days. Follow the <a href="/guide" class="text-accent hover:underline">creative testing</a> framework: isolated variables, clear metrics, pre-set thresholds.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Analyze.</strong> After reaching statistical significance (1,000+ impressions, 100+ clicks, 50+ conversions), tag every creative: Scale, Kill, or Iterate. Identify which components drive performance.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Iterate.</strong> Scale winners (increase budget 20&ndash;30% every 3 days). Iterate near-misses (change one variable, retest). Kill losers. Feed learnings back into research for the next cycle.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Why it must be a system</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">One-off creative production is a bet. A system is a portfolio of bets with compounding returns. Each cycle teaches the team what hooks, angles, formats, and creators work. Over time, the hit rate improves, the cost per winner drops, and the scaling speed increases. Brands that run performance creative as a system outperform those that produce ads in batches.</p>
+      </div>
+    </section>
+
+    <!-- 05 Hook-First Production -->
+    <section class="guide-section" id="hooks">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Hooks</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Hook-first production: 3 seconds decide everything</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Hook rate benchmark: 30&ndash;40% on Meta (3-second views &divide; impressions)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The hook is the single largest predictor of ad performance</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Produce 5&ndash;10 hook variants per concept &mdash; test hooks before anything else</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">In a feed-based environment, the first 3 seconds determine whether someone watches or scrolls. A strong hook can make an average script profitable. A weak hook kills even a brilliant concept. This is why performance creative production starts with hooks, not scripts.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><a href="/hook-rate" class="text-accent hover:underline">Hook rate</a> &mdash; the percentage of viewers who watch past 3 seconds &mdash; is the earliest creative health signal. On Meta in 2026, 30&ndash;40% is good, 35%+ is strong, and below 20% means the opening needs to be replaced. Hook rate predicts CPA before you've spent enough to measure CPA directly.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Hook types that work in performance creative</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Hook type</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Example</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Why it works</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Question hook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Why is nobody talking about this?"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creates curiosity gap</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Stat hook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"I cut my ad costs by 47% with one change"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Specific numbers create credibility</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Before/after hook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"My skin 6 months ago vs now"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Visual contrast stops the scroll</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Controversy hook</td><td class="px-4 py-2.5 border-b border-border text-ink-2">"Your skincare routine is making it worse"</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Challenges assumptions, triggers engagement</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">"I tried X" hook</td><td class="px-4 py-2.5 text-ink-2">"I tried this AI tool for 30 days"</td><td class="px-4 py-2.5 text-ink-2">Personal experience creates trust</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">How to test hooks</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Keep the body and CTA identical. Swap only the first 3 seconds. Run 5&ndash;10 hook variants with $50&ndash;$100/day each. After 3 days, compare hook rates and early CPA signals. Kill hooks below 20% hook rate. Iterate hooks in the 20&ndash;30% range. Scale hooks above 35%. This is the highest-leverage test in performance creative.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Want OKAD to produce performance creative for your brand?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We handle strategy, scripts, UGC creator production, modular editing, and data analysis. You get tested creatives ready to scale &mdash; with clear data on what works and why.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailPerformance} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Order performance creative &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 UGC as the Dominant Format -->
+    <section class="guide-section" id="ugc">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; UGC Format</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">UGC is the dominant format for performance creative in 2026</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">UGC-style ads outperform polished brand ads on CPA across most categories</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Platform algorithms favor native-looking content in feeds</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">UGC production is faster, cheaper, and more modular than studio production</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The data is clear: across most DTC, SaaS, and consumer tech categories in 2026, UGC-style video ads outperform polished brand ads on CPA. The reasons are structural, not aesthetic.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Trust.</strong> A real person talking about a product is more credible than a brand talking about itself. Viewers have learned to skip anything that looks like an ad. UGC doesn't look like an ad &mdash; it looks like content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Algorithm preference.</strong> Meta, TikTok, and YouTube algorithms serve content that looks native to the feed. UGC matches the visual language of organic content. Polished brand ads trigger "ad blindness" and get lower initial distribution.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Production speed.</strong> A UGC creator can produce a finished ad in hours. A studio production takes weeks. When you need 20&ndash;50 new ads per month, UGC is the only production model that scales.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For deeper context on UGC for ads, see our <a href="/ugc-ads" class="text-accent hover:underline">UGC ads guide</a>. For <a href="/tech-ugc" class="text-accent hover:underline">Tech UGC</a> specifically, the education-first approach applies the same principles to software and app products.</p>
+      </div>
+    </section>
+
+    <!-- 07 Modular Production -->
+    <section class="guide-section" id="modular">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Modular</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Modular production: shoot components, remix into dozens of variations</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">6 hooks &times; 4 bodies &times; 3 CTAs = 72 unique ads from 13 components</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Modular production cuts cost 80%+ vs shooting individual ads</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Test at the component level: find winning hooks, then winning bodies, then CTAs</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Modular production is the backbone of performance creative at scale. Instead of shooting 72 individual ads, you shoot 13 components (6 hooks, 4 body narratives, 3 CTAs) and combine them in the edit. The math: 6 &times; 4 &times; 3 = 72 unique ad variations from a single production session.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For a complete breakdown of the <a href="/modular-creative" class="text-accent hover:underline">modular creative</a> approach &mdash; including production workflow, naming conventions, component analytics, and scaling strategy &mdash; see our dedicated guide.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Production workflow</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Script modular concepts.</strong> Write scripts where hooks, bodies, and CTAs are designed as separate, interchangeable components.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Shoot all hooks in one session.</strong> Same creator, same setup, different openings. Maximize hook variants &mdash; these are the highest-leverage component.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Shoot bodies and CTAs separately.</strong> Product demos, testimonials, problem/solution narratives, and CTA closings in dedicated sessions.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Edit into combinations.</strong> Assemble hook + body + CTA combinations. Name each variation systematically: [concept]_[hook-variant]_[body-variant]_[cta-variant] for tracking.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Why modular beats traditional</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional ad production creates finished, monolithic ads. If the hook doesn't work, the entire ad is wasted. Modular production lets you swap the hook while keeping the body &mdash; recycling what works and replacing what doesn't. This dramatically increases the hit rate and reduces the cost per winning ad.</p>
+      </div>
+    </section>
+
+    <!-- 08 Data-Driven Iteration -->
+    <section class="guide-section" id="iteration">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Iteration</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Data-driven iteration: CPA-based decisions, not opinions</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CPA is the decision metric &mdash; everything else is supporting data</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Scale winners, kill losers within 72h, iterate near-misses</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Winning ads are iterated versions of near-misses, not first-try home runs</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">In performance creative, the creative director is the data. A beautiful ad with high CPA gets killed. An "ugly" ad with low CPA gets scaled. This discipline is what separates performance creative from brand creative &mdash; and what makes it uncomfortable for teams used to judging creative by how it looks.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The decision framework</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Decision</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">CPA Signal</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold" style="color: #2e7d32">Scale</td><td class="px-4 py-2.5 border-b border-border text-ink-2">CPA &gt;20% below target</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Increase budget 20&ndash;30% every 3 days, produce variations</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold" style="color: #f57f17">Iterate</td><td class="px-4 py-2.5 border-b border-border text-ink-2">CPA within &plusmn;20% of target</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Change one variable (hook, angle, creator), retest</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-semibold" style="color: #c62828">Kill</td><td class="px-4 py-2.5 text-ink-2">CPA &gt;50% above target</td><td class="px-4 py-2.5 text-ink-2">Stop spend immediately, analyze why, apply learnings</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Diagnosing with hook rate</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">CPA tells you <em>what</em> happened. <a href="/hook-rate" class="text-accent hover:underline">Hook rate</a> tells you <em>why</em>. If hook rate is bad and CPA is bad, the problem is the opening &mdash; the ad isn't stopping the scroll. If hook rate is good but CPA is bad, the problem is the body or offer &mdash; people are watching but not converting. This diagnostic framework prevents the most common mistake: changing the hook when the real problem is the body.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Creative fatigue and replacement</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every winning ad eventually fatigues. On Meta in 2026, performance typically starts declining at weekly frequency &gt;2.5 and crashes past 4.0. The question is not whether fatigue happens, but how fast you replace fatigued creatives. A continuous performance creative system ensures new winners are always in the pipeline. For more on identifying and managing fatigue, see our <a href="/ad-fatigue" class="text-accent hover:underline">ad fatigue guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- 09 Key Roles & Platform Adaptation -->
+    <section class="guide-section" id="roles">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Roles &amp; Platforms</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key roles and platform adaptation</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Four key roles: creative strategist, performance buyer, creator/talent, editor</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each platform needs adapted creative &mdash; Meta, TikTok, YouTube have different norms</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Insights transfer across platforms; execution must be platform-native</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The performance creative team</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Role</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Responsibility</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Key skill</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creative strategist</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Research, concept development, script writing, creative direction</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Translating data into creative hypotheses</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Performance buyer</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Ad account management, budget allocation, testing execution, data analysis</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Reading data and making scale/kill decisions</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator / talent</td><td class="px-4 py-2.5 border-b border-border text-ink-2">On-camera performance, product demonstrations, authentic delivery</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Natural, platform-native delivery</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Editor</td><td class="px-4 py-2.5 text-ink-2">Modular editing, component assembly, text overlays, pacing optimization</td><td class="px-4 py-2.5 text-ink-2">Fast turnaround, platform-specific formatting</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Platform-native creative</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Platform</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Creative style</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best formats</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Fatigue speed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Meta (FB + IG)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Slightly more produced, text overlays, polished UGC</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Reels, stories, feed ads</td><td class="px-4 py-2.5 border-b border-border text-ink-2">2&ndash;4 weeks</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">TikTok</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Raw, native, trend-aware, creator-led</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Full-screen vertical, Spark Ads</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1&ndash;3 weeks</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">YouTube</td><td class="px-4 py-2.5 text-ink-2">Longer, more educational, higher production</td><td class="px-4 py-2.5 text-ink-2">Shorts, skippable in-stream</td><td class="px-4 py-2.5 text-ink-2">4&ndash;8 weeks</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The core insight &mdash; which angle, which hook, which pain point resonates &mdash; transfers across platforms. But the execution must be adapted. A winning Meta ad needs to be re-shot or re-edited for TikTok. Taking the same file and uploading it to both platforms underperforms native creative on both.</p>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailPerformance} class="text-ink hover:text-accent transition-colors no-underline">OKAD produces performance creative end to end</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Strategy, scripts, UGC creators, modular production, testing, and data analysis. We run the full performance creative system so you get tested winners ready to scale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+
+        {[
+          { term: "Performance creative", def: "Ad creative designed and optimized for measurable business results (CPA, ROAS, revenue), not brand awareness or aesthetics." },
+          { term: "CPA", def: "Cost per acquisition — the dollar amount spent on ads to acquire one customer. The primary decision metric in performance creative." },
+          { term: "ROAS", def: "Return on ad spend — revenue generated per dollar spent on ads. 3x+ is the benchmark for most categories." },
+          { term: "Hook rate", def: "The percentage of viewers who watch past the first 3 seconds. 30-40% is the 2026 benchmark on Meta. The strongest early predictor of CPA." },
+          { term: "Modular production", def: "Producing ad components (hooks, bodies, CTAs) separately and combining them in the edit. 6 hooks x 4 bodies x 3 CTAs = 72 unique ads from 13 components." },
+          { term: "Hook-first production", def: "A production approach where hooks are written, shot, and tested before body and CTA content — because hooks have the highest leverage on performance." },
+          { term: "Creative fatigue", def: "The gradual decline in ad performance as the audience sees it too often. On Meta, performance declines at weekly frequency >2.5." },
+          { term: "Scale / Iterate / Kill", def: "The three outcomes for every tested creative. Scale = CPA >20% below target. Iterate = CPA near target. Kill = CPA >50% above target." },
+          { term: "Creative strategist", def: "The person who translates performance data into creative hypotheses — research, concept development, and script writing." },
+          { term: "Performance buyer", def: "The person who manages ad accounts, allocates budgets, executes tests, and makes scale/kill decisions from data." },
+          { term: "Platform-native creative", def: "Ad creative adapted to match the visual language and norms of a specific platform (Meta, TikTok, YouTube)." },
+          { term: "UGC ad", def: "An ad produced by a creator in a native, user-generated style — as opposed to polished brand video. The dominant format in performance creative." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What is performance creative?", a: "Performance creative is ad creative designed, produced, and measured by business outcomes — CPA, ROAS, and revenue. Every creative is a hypothesis tested with real purchase data. The creative that converts best wins, regardless of how it looks." },
+          { q: "How is performance creative different from brand creative?", a: "Brand creative aims for awareness, recall, and brand equity — measured in impressions and lift. Performance creative aims for conversions and revenue — measured in CPA and ROAS. Different goals, different production models, different measurement. Brand creative produces 2-5 hero ads per quarter; performance creative produces 20-50+ new ads per month." },
+          { q: "How many ads do I need per month?", a: "The 2026 benchmark is one new ad per $3K of ad spend. At $60K/month in ad spend, that's 20 new ads per month. At $150K/month, that's 50. Modular production makes this achievable — 13 components can generate 72 unique ad variations." },
+          { q: "Why is UGC the dominant format?", a: "Three reasons: trust (real people are more credible than brand messaging), algorithm preference (native-looking content gets better distribution), and production speed (UGC creators can produce finished ads in hours, not weeks). UGC-style ads outperform polished brand ads on CPA across most categories in 2026." },
+          { q: "What should I test first?", a: "Hooks. The first 3 seconds have more impact on performance than everything else combined. Produce 5-10 hook variants per concept, keep the body and CTA identical, and test with $50-100/day each. Once you find winning hooks, test body narratives. CTAs last." },
+          { q: "What is modular production?", a: "Producing ad components (hooks, bodies, CTAs) separately and combining them in the edit. 6 hooks x 4 bodies x 3 CTAs = 72 unique variations from 13 components. This cuts production cost 80%+ vs shooting 72 individual ads. See our modular creative guide for the full breakdown." },
+          { q: "How do I know when an ad is fatiguing?", a: "Rising CPA, falling CTR, declining hook rate, and increasing frequency. On Meta, performance typically starts declining at weekly frequency >2.5. The solution is a continuous testing pipeline — new winners must be ready before current ones fatigue. See our ad fatigue guide for the complete diagnostic framework." },
+          { q: "Which platform should I start on?", a: "Meta (Facebook + Instagram). It has the most mature optimization algorithm, the largest audience, and the most reliable attribution. Once you find winners, adapt them for TikTok and YouTube. The insight (which angle works) transfers; the execution must be platform-native." },
+          { q: "What does a performance creative team look like?", a: "Four key roles: creative strategist (research and concepts), performance buyer (testing and data), creator/talent (on-camera production), and editor (modular assembly). Many brands outsource this entire function to an agency rather than building it in-house." },
+          { q: "Can OKAD produce performance creative for my brand?", a: "Yes. We handle the full system: strategy, scripts, UGC creator production, modular editing, testing, and data analysis. You get tested creatives ready to scale — with clear data on what works and why. Write to us at olga@okad.agency." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to build a performance creative system?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your product and current ad setup. We'll review your creative, suggest what to test first, and scope a program based on your goals, budget, and platforms.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailPerformance} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Order performance creative &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on performance creative programs run by OKAD Agency for DTC, SaaS, and consumer tech brands, supplemented by publicly available paid media benchmarks. The "1 ad per $3K spend" benchmark, hook rate ranges, and CPA thresholds are directional industry figures. Individual outcomes depend on product, ad spend, target audience, creative quality, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
