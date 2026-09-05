@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<Layout title="Page Not Found — OKAD" description="The page you're looking for doesn't exist.">
+  <Header />
+  <main style="min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 20px;">
+    <div>
+      <div style="font-family:var(--mono);font-size:72px;font-weight:800;color:var(--accent);margin-bottom:16px;">404</div>
+      <h1 style="font-family:var(--display);font-size:24px;font-weight:700;margin-bottom:12px;">Page Not Found</h1>
+      <p style="color:var(--ink-2);font-size:15px;margin-bottom:24px;">The page you're looking for doesn't exist or has been moved.</p>
+      <a href="/" style="display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--accent);color:white;border-radius:12px;font-weight:600;font-size:14px;text-decoration:none;">← Back to Home</a>
+    </div>
+  </main>
+  <Footer />
+</Layout>

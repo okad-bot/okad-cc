@@ -4,12 +4,16 @@ import "../styles/global.css";
 interface Props {
   title?: string;
   description?: string;
+  canonical?: string;
 }
 
 const {
   title = "OKAD Creative Testing — Find Your Winning Hooks Before You Scale",
   description = "Stop guessing which ads will work. Get a personalized Hook Testing Matrix, test 15+ video concepts, and only produce what's proven to convert.",
+  canonical,
 } = Astro.props;
+
+const canonicalURL = canonical || Astro.url.href;
 ---
 
 <!doctype html>
@@ -18,10 +22,14 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="canonical" href={canonicalURL} />
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image" content="https://okad.cc/og-image.png" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YS34PNP7XN"></script>
