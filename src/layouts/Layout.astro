@@ -24,6 +24,13 @@ const {
     <meta property="og:image" content="/og-image.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YS34PNP7XN"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YS34PNP7XN');
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
