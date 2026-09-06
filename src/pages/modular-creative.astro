@@ -476,6 +476,42 @@ const calHref = "https://calendly.com/okad_calls/first";
 
   </main>
   <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Modular Creative — The Complete Guide to Component-Based Ad Production",
+    "description": "Modular creative is producing ad components (hooks, bodies, CTAs) separately and combining them into dozens of unique variations. This guide covers the math, production workflow, testing approach, naming conventions, and how to scale winners.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/modular-creative/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Modular Creative" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is modular creative?", "acceptedAnswer": { "@type": "Answer", "text": "Modular creative is a production methodology where ads are built from interchangeable components — hooks, bodies, CTAs — rather than produced as complete, standalone ads. 6 hooks x 4 bodies x 3 CTAs = 72 unique ad variations from just 13 components." } },
+      { "@type": "Question", "name": "How much does modular production save vs traditional?", "acceptedAnswer": { "@type": "Answer", "text": "80%+ cost reduction. 72 traditional ads at $500 each would cost $36,000+. 13 modular components that generate 72 variations typically cost $5,000-$8,000 to produce." } },
+      { "@type": "Question", "name": "What should I test first in a modular system?", "acceptedAnswer": { "@type": "Answer", "text": "Hooks, always. They have the highest leverage on ad performance. Keep the body and CTA constant, test 6 hook variants. Once you find winning hooks, test bodies against them. CTAs last — they have the smallest marginal impact." } },
+      { "@type": "Question", "name": "How do I name modular creative files?", "acceptedAnswer": { "@type": "Answer", "text": "Use the format: [concept]_[hook-variant]_[body-variant]_[cta-variant]. Example: skincare-routine_hook-question_body-beforeafter_cta-tryfree. Consistent naming is non-negotiable — without it, you can't do component-level analytics." } },
+      { "@type": "Question", "name": "What if the components don't flow together?", "acceptedAnswer": { "@type": "Answer", "text": "Design for interchangeability from the start. Hooks should end at natural transition points. Bodies should start without referencing specific hooks. CTAs should work after any body. This requires scripting discipline — each component is self-contained but designed to connect cleanly." } },
+      { "@type": "Question", "name": "Is modular creative the same as dynamic creative optimization?", "acceptedAnswer": { "@type": "Answer", "text": "No. DCO is platform-side automated variation — the algorithm mixes and matches elements. Modular creative is production-side intentional variation — you design, produce, and test specific combinations. They can work together, but they're different concepts." } },
+      { "@type": "Question", "name": "How does modular creative help with ad fatigue?", "acceptedAnswer": { "@type": "Answer", "text": "When a winning ad starts to fatigue, you can quickly produce variations: swap the hook, change the music, add new text overlays. This extends the creative's lifespan without starting from scratch. Modular production makes the response to fatigue faster and cheaper." } },
+      { "@type": "Question", "name": "What tools do I need for modular creative?", "acceptedAnswer": { "@type": "Answer", "text": "Standard video editing software (CapCut, Premiere, DaVinci Resolve), a file naming convention, a component library (organized by type: hooks, bodies, demos, CTAs), and a spreadsheet or tool to track which components are in which ads." } },
+      { "@type": "Question", "name": "How many components should I start with?", "acceptedAnswer": { "@type": "Answer", "text": "Start with one concept: 6 hooks, 2 bodies, 2 CTAs = 24 variations. This is enough to test hook types and body narratives. Once you have winners, expand to more concepts and more components." } },
+      { "@type": "Question", "name": "Can OKAD produce modular creative for my brand?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We produce component libraries for brands — hooks, bodies, demos, CTAs — and assemble them into tested ad variations. We handle scripting, production, assembly, testing, and component-level analytics. Write to us at olga@okad.agency." } }
+    ]
+  }
+])} />
 </Layout>
 
 <style>
