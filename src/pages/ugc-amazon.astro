@@ -1,0 +1,424 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailAmazon = "mailto:olga@okad.agency?subject=UGC%20for%20Amazon%20%E2%80%94%20tell%20us%20about%20your%20product";
+const emailGeneral = "mailto:olga@okad.agency?subject=Amazon%20UGC%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="UGC for Amazon Sellers: Complete Guide to Video Content | OKAD"
+  description="UGC video content for Amazon sellers. Covers Sponsored Brands Video, Premium A+ Content, product demos, compliance guidelines, and scaling creator content across ASINs."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Amazon UGC &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          UGC for Amazon Sellers: <span class="text-accent">Complete Guide to Video Content</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Amazon has shifted to video-first shopping. Sponsored Brands Video, Premium A+ Content, and Amazon Posts all reward sellers who show rather than tell. UGC is the fastest way to produce authentic, high-converting video at the volume Amazon demands.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailAmazon} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Start Amazon UGC &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>700+ vetted creators</span>
+          <span>10,000+ ads delivered</span>
+          <span>Amazon-compliant</span>
+          <span>All ad placements</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Points Grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Why Amazon Sellers Need UGC</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4E6;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Product Demos</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Authentic creator demos outperform studio product shots by 3&ndash;5x on click-through rate.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Every Placement</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Sponsored Brands Video, A+ Content, Amazon Posts &mdash; UGC works across every Amazon ad format.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Scale by ASIN</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Batch production across your catalog. One creator session can cover 5&ndash;10 ASINs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Why Amazon Needs UGC Now", href: "#why-ugc-now" },
+            { num: "02", text: "Amazon Video Ad Placements", href: "#placements" },
+            { num: "03", text: "Types of UGC That Work on Amazon", href: "#ugc-types" },
+            { num: "04", text: "Creating Product Demo Videos", href: "#product-demos" },
+            { num: "05", text: "Compliance and Amazon Guidelines", href: "#compliance" },
+            { num: "06", text: "Measuring UGC Performance on Amazon", href: "#measuring" },
+            { num: "07", text: "Scaling Content Across ASINs", href: "#scaling-asins" },
+            { num: "08", text: "Agency vs DIY Approach", href: "#agency-vs-diy" },
+            { num: "09", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Why Amazon Needs UGC Now -->
+    <section class="guide-section" id="why-ugc-now">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; The Shift</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why Amazon needs UGC now</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Sponsored Brands Video ads outperform static by 3&ndash;5x on CTR</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Amazon Posts, Amazon Live, and Premium A+ video are all video-first</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Competitor saturation makes authentic content the last real differentiator</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Amazon is no longer a search engine with product listings. It is a visual commerce platform where video drives discovery, engagement, and conversion. Over the past two years, Amazon has rolled out video slots in search results, on product detail pages, in brand storefronts, and inside the social-style Amazon Posts feed. Sellers who ignore video are invisible in placements that their competitors already occupy.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Sponsored Brands Video ads consistently deliver click-through rates three to five times higher than static Sponsored Brands ads. The reason is structural: video auto-plays in mobile search results, occupying more screen real estate and triggering the same thumb-stopping behavior that makes short-form video dominant on social platforms. Amazon has built the infrastructure to reward video. The algorithm surfaces it, the UI prioritizes it, and the data proves it converts.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The problem most sellers face is production cost and speed. Studio-quality product videos take weeks to produce and cost thousands per ASIN. UGC solves both constraints. A single creator can film authentic, relatable product content in a day. The footage feels native to how people actually shop &mdash; watching real people use products before buying. That authenticity is not a nice-to-have. In categories with dozens of near-identical listings, it is the differentiator that separates sellers who grow from sellers who stagnate.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Amazon Live and Amazon Posts have further accelerated this shift. Both formats reward creator-style content that looks personal rather than produced. Brands running UGC in these placements see higher engagement rates because the content matches the format's intent &mdash; discovery and social proof, not hard selling.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The competitive math is simple. If your competitor runs Sponsored Brands Video with a compelling creator demo and you are still relying on static product images, their listing captures the click. Every category on Amazon is moving toward video. The sellers who build a UGC production pipeline now will have a structural advantage over those who wait &mdash; more content, more data, and more placements locked down before the cost of attention rises further.</p>
+      </div>
+    </section>
+
+    <!-- 02 Amazon Video Ad Placements -->
+    <section class="guide-section" id="placements">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Placements</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Amazon video ad placements</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Sponsored Brands Video: auto-plays in search results, 16:9 or 1:1, 6&ndash;45 seconds</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Sponsored Display Video: product pages and off-Amazon retargeting</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Premium A+ Content: video modules on your own detail page</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Sponsored Brands Video (SBV)</strong> appears in search results on both mobile and desktop. Videos auto-play on mute as shoppers scroll, which means the first three seconds must communicate value visually without relying on audio. SBV supports 16:9 and 1:1 aspect ratios with a duration of 6 to 45 seconds. The sweet spot for performance is 15 to 30 seconds. Anything longer loses attention in a search results context. SBV is the single highest-impact placement for UGC on Amazon.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Sponsored Display Video</strong> runs on product detail pages and extends to off-Amazon placements through Amazon's advertising network. This is retargeting territory. Shoppers who viewed your product or a competitor's product see your video ad while browsing other sites. The format supports 16:9 at 6 to 30 seconds. UGC performs particularly well here because the viewer is already in consideration mode &mdash; a real person demonstrating the product provides the social proof needed to close the sale.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Amazon DSP Video</strong> gives brand-registered sellers access to programmatic video placements across Amazon properties (IMDb, Twitch, Fire TV) and third-party sites. This is a higher-budget play suited for brands spending at least $10,000 per month on Amazon advertising. UGC works in DSP when the goal is awareness &mdash; authentic creator content in a video pre-roll feels less intrusive than polished brand spots.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Premium A+ Content</strong> lets brand-registered sellers add video modules directly to their product detail page. Videos appear inline with your A+ Content layout and can be up to three minutes long. This is where longer-form UGC excels &mdash; detailed demos, comparison reviews, and how-to tutorials that answer purchase objections.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Amazon Posts</strong> function like a social feed within Amazon, displaying image and video content to shoppers following your brand or browsing related categories. UGC content here drives organic impressions at zero ad cost. Posts appear on your brand feed, on related product pages, and in category-based feeds. The format rewards consistent posting &mdash; sellers who publish 3&ndash;5 posts per week accumulate followers and impressions that compound over time. Repurposing UGC clips as Posts is one of the highest-ROI uses of existing creator content.</p>
+      </div>
+    </section>
+
+    <!-- 03 Types of UGC That Work on Amazon -->
+    <section class="guide-section" id="ugc-types">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Content Types</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Types of UGC that work on Amazon</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Product demos and unboxings drive the highest conversion for physical goods</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Before/after and comparison content works best in beauty, home, and fitness</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">How-to tutorials reduce return rates by setting accurate expectations</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Product demos</strong> are the foundation of Amazon UGC. A creator unboxes the product, shows it from multiple angles, and demonstrates its core function. For Sponsored Brands Video, a concise 15&ndash;20 second demo that opens with a visual hook consistently outperforms talking-head formats. The key is showing the product in use within the first three seconds &mdash; Amazon shoppers have high purchase intent, and they want to see the product work, not hear a pitch.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Unboxing videos</strong> tap into the anticipation of receiving a package. They work especially well for premium or gift-oriented products where packaging quality matters. <strong>Comparison reviews</strong> position your product against alternatives without naming competitors directly (Amazon prohibits competitor brand mentions). Instead, the creator compares "this product" against "the one I used before" &mdash; same effect, zero compliance risk.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>How-to tutorials</strong> serve a dual purpose: they sell the product by demonstrating its value and they reduce returns by setting accurate expectations. A 60&ndash;90 second tutorial placed in Premium A+ Content can lower your return rate measurably. Categories where this format excels include kitchen gadgets, electronics accessories, skincare, and home organization.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Before/after transformations</strong> are the highest-converting format in beauty, cleaning, fitness, and home improvement categories. The visual proof of results bypasses skepticism in a way that text reviews cannot. <strong>Lifestyle usage</strong> content shows the product integrated into daily routines, which helps shoppers imagine ownership. For products where the value proposition is experiential rather than functional &mdash; candles, decor, apparel &mdash; lifestyle UGC drives more detail page engagement than any other format.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Match the format to the placement. Short-form demos (15&ndash;20s) for Sponsored Brands Video, where attention is fleeting. Medium-form tutorials (45&ndash;90s) for Premium A+ Content, where the shopper is already on your page and evaluating. Lifestyle clips and before/after content for Amazon Posts, where discovery and social proof matter more than conversion pressure. Planning content by placement during the briefing stage means one creator shoot can produce assets for all three contexts.</p>
+      </div>
+    </section>
+
+    <!-- 04 Creating Product Demo Videos -->
+    <section class="guide-section" id="product-demos">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Production</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Creating product demo videos</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The 15-second framework: hook (0&ndash;3s), problem (3&ndash;6s), demo (6&ndash;12s), CTA (12&ndash;15s)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Clean, well-lit backgrounds &mdash; Amazon rejects cluttered or dark footage</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Natural delivery outperforms scripted reads on every engagement metric</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most effective structure for an Amazon demo video follows a 15-second framework. Seconds 0 through 3 are the hook &mdash; a visual that stops the scroll. Show the product in action or present a surprising result. Seconds 3 through 6 state the problem the product solves. Seconds 6 through 12 are the demo itself, showing the product doing what it claims. Seconds 12 through 15 close with a call to action, typically "check the link" or a brand tagline. This framework works because Amazon auto-plays video on mute in search results, so the visual sequence must tell a complete story without audio.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Lighting and background matter more on Amazon than on social platforms. Amazon's review team rejects videos with poor lighting, cluttered backgrounds, or low resolution. Use natural light or a simple ring light setup. Backgrounds should be clean and uncluttered &mdash; a kitchen counter, a desk, or a neutral wall. The product must be clearly visible and the focus of every shot. Avoid filters, heavy color grading, or effects that obscure the product's true appearance.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Script versus natural delivery is a common decision point. On Amazon specifically, natural delivery wins. Shoppers on Amazon are further down the purchase funnel than social media scrollers &mdash; they are comparing products, not being entertained. A creator who sounds like they are reading a teleprompter triggers the same skepticism as a stock photo in a listing. Give creators bullet points instead of scripts. Specify the three key product benefits to mention and let them use their own words. The resulting footage sounds genuine because it is.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For audio, always add captions. Amazon auto-plays video on mute, and a significant percentage of shoppers never unmute. Burnt-in captions ensure your message lands regardless of audio state. Keep caption text large enough to read on mobile &mdash; at least 24px equivalent &mdash; and position them in the lower third to avoid obscuring the product.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">One production tip that pays for itself: have the creator film three different hooks for every demo. Same product, same demo sequence, but three distinct opening lines or visual hooks. This gives you three ad variations from a single shoot, which triples your testing surface area in Sponsored Brands Video campaigns without tripling your production cost. The winning hook often outperforms the runner-up by 2&ndash;3x on CTR, so this is not a marginal optimization &mdash; it is the single most impactful thing you can do during production.</p>
+      </div>
+    </section>
+
+    <!-- 05 Compliance and Amazon Guidelines -->
+    <section class="guide-section" id="compliance">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Compliance</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Compliance and Amazon guidelines</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">No superlatives without substantiation, no medical claims, no competitor brand names</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Minimum 720p resolution, 500 KB to 500 MB file size, .mp4 or .mov</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">FTC disclosure required if the creator received the product for free</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Amazon's content policy for video ads is stricter than Meta or TikTok. The most common rejection reasons are unsubstantiated superlatives ("best," "number one," "#1" without third-party verification), medical or health claims without FDA clearance, and mentioning competitor brands by name. Creators must also avoid pricing references that could become inaccurate, external URLs or QR codes, and any language that pressures the viewer ("limited time," "act now") unless tied to an active Amazon promotion.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Technical requirements vary by placement. Sponsored Brands Video requires a minimum resolution of 1280&times;720 (16:9) or 720&times;720 (1:1), file size between 500 KB and 500 MB, and .mp4 or .mov format. Duration must be 6 to 45 seconds. Premium A+ Content video allows up to 180 seconds. All video must include captions or be comprehensible without audio. Amazon will reject videos with black frames at the beginning or end, letterboxing, or pillarboxing.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">FTC disclosure is required when the creator received the product for free or was compensated for the content. On Amazon, this typically takes the form of a brief text overlay or verbal statement. The safest approach is including "Ad" or "Paid partnership" as a text overlay in the first few seconds. Amazon does not currently enforce FTC disclosure as aggressively as the FTC itself, but non-compliance creates legal liability for the brand regardless of platform enforcement.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Build a compliance checklist into your production workflow. Review every video against Amazon's prohibited content list before submission. Common avoidable rejections include creators saying "this is the best product I have ever used" (unsubstantiated superlative), showing the product next to a recognizable competitor (implicit comparison), and using background music with uncleared rights. OKAD runs a three-stage QC process that catches these issues before upload, which is why our Amazon rejection rate stays below 5%.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">One frequently overlooked rule: Amazon prohibits videos that show the product being used in a way that contradicts the listing's intended use. If your listing says "for indoor use only," a creator filming it outdoors can trigger rejection. Align your creator brief with your listing copy precisely. This sounds obvious, but it accounts for roughly 15% of first-time rejections across our projects.</p>
+      </div>
+    </section>
+
+    <!-- 06 Measuring UGC Performance on Amazon -->
+    <section class="guide-section" id="measuring">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Metrics</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Measuring UGC performance on Amazon</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Primary metrics: Video Completion Rate, CTR, ACOS, detail page view rate</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Amazon Attribution tracks off-Amazon UGC traffic back to your listings</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand Analytics correlates UGC launches with search rank improvements</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Video Completion Rate (VCR)</strong> tells you whether your content holds attention. For Sponsored Brands Video, a VCR above 50% indicates the content resonates. Below 40% means the hook is weak or the video is too long for the placement. <strong>Click-Through Rate (CTR)</strong> measures whether viewers take the next step. Amazon SBV benchmarks sit around 0.3&ndash;0.8% for most categories &mdash; UGC consistently pushes this to 0.8&ndash;1.5% because authentic content drives curiosity about the product.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>ACOS (Advertising Cost of Sales)</strong> is the Amazon-specific metric that replaces ROAS in most seller conversations. A lower ACOS means you are spending less on advertising per dollar of revenue. When UGC replaces static creative in SBV campaigns, sellers typically see ACOS drop by 15&ndash;30% within the first 30 days. <strong>Detail page view rate</strong> &mdash; the percentage of ad viewers who click through to your product page &mdash; is the bridge metric between awareness and conversion. UGC lifts this metric because it pre-qualifies the shopper with social proof before they ever reach your listing.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Amazon Attribution</strong> is essential if you are running UGC content off-Amazon (social media, email, influencer partnerships) to drive Amazon sales. Attribution provides tracking links that measure which external traffic sources lead to detail page views, add-to-carts, and purchases on Amazon. Without Attribution, off-Amazon UGC campaigns are a black box. Set up Attribution tags before launching any external campaign so you have data from day one.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Use <strong>Brand Analytics</strong> to measure the indirect effects of UGC. After launching video content on a listing, track your search query rank for target keywords over the following 2&ndash;4 weeks. UGC improves conversion rate, which signals Amazon's algorithm to rank the listing higher in organic search. This organic lift is the compounding return on UGC investment that most sellers undervalue &mdash; it reduces your long-term dependence on paid advertising for the same keywords.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Set up a simple tracking cadence. Pull SBV campaign reports weekly and compare CTR and ACOS for video ads versus your static campaigns. After 30 days, you will have enough data to calculate the incremental value of UGC. Most sellers find that UGC-equipped campaigns deliver 20&ndash;40% lower ACOS, which directly translates to higher profit margins at the same ad spend level. Document these results &mdash; they justify expanding UGC production to additional ASINs.</p>
+      </div>
+    </section>
+
+    <!-- 07 Scaling Content Across ASINs -->
+    <section class="guide-section" id="scaling-asins">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Scaling</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Scaling content across ASINs</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Build a content matrix: ASIN &times; format &times; placement &times; creator</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">One creator session can cover 5&ndash;10 related ASINs in a single day</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Prioritize by BSR and current ad spend to maximize ROI</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most Amazon sellers have dozens or hundreds of ASINs. Creating unique UGC for every product is not practical at the start. The solution is a content matrix that maps each ASIN against content formats and placements. Start by listing your top-performing ASINs by Best Sellers Rank (BSR) and current advertising spend. These are the products that already have traffic and revenue &mdash; UGC amplifies what is already working rather than trying to rescue underperformers.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Batch production is the key to scaling efficiently. Ship 5&ndash;10 related products to a single creator and film all of them in one session. This reduces per-video cost by 30&ndash;40% compared to individual shoots. Group products by category so the creator's setup (lighting, background, wardrobe) stays consistent. A creator filming a line of kitchen tools can knock out ten 15-second demos in a day because the context does not change between products.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Adapt content across placements without reshooting. A 45-second demo filmed for Premium A+ Content can be trimmed to a 15-second version for Sponsored Brands Video. The raw footage from an unboxing can yield a full-length A+ video, a 20-second SBV cut, and three still frames for Amazon Posts. Plan for this during production by filming extra b-roll and ensuring the creator delivers complete sentences that can be isolated as standalone clips.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For catalogs of 50+ ASINs, create a rolling production schedule. Cover your top 10 ASINs in month one, the next 15 in month two, and so on. Track which UGC-equipped ASINs show the strongest improvement in CTR and conversion rate, then double down on those categories with additional creators and format variations. This data-driven approach prevents wasting budget on content for products where UGC does not move the needle.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Variation strategy matters at scale. Do not use the same creator for every ASIN. Rotate 3&ndash;5 creators across your catalog so shoppers browsing multiple products in your brand store see different faces. This prevents the content from feeling like a corporate campaign and preserves the authenticity that makes UGC effective in the first place. For seasonal products, plan production 6&ndash;8 weeks ahead of the selling season so content is live when search volume spikes.</p>
+      </div>
+    </section>
+
+    <!-- 08 Agency vs DIY Approach -->
+    <section class="guide-section" id="agency-vs-diy">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Execution</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Agency vs DIY approach</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">DIY works for 1&ndash;5 videos, but quality and consistency degrade at scale</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Cost comparison: $150&ndash;300/video DIY vs $200&ndash;400/video agency (with QC and compliance)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">OKAD handles Amazon UGC end-to-end: brief, creator matching, shipping, filming, editing, compliance</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Managing UGC creators directly works when you need a small volume of content. For 1 to 5 videos, the process is manageable: find a creator on a marketplace, negotiate terms, ship the product, review footage, request revisions, and export final files. The per-video cost is typically $150 to $300 depending on the creator's experience. But the time investment is 3&ndash;5 hours per video when you factor in sourcing, communication, feedback rounds, and editing.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">At 10+ videos, DIY breaks down. Creator communication becomes a bottleneck. Quality varies between creators. Shipping logistics multiply. Revision cycles stretch timelines. The real cost of DIY is not the creator fee &mdash; it is the founder or marketing manager hours consumed by project management. For a 25-video project managed in-house, expect 60&ndash;80 hours of total management time across sourcing, briefing, communication, review, and revisions.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">An agency charges more per video ($200&ndash;400 at OKAD) but absorbs all the operational overhead. The cost comparison favors agencies at volume: 10 videos DIY costs roughly $3,500 (creator fees plus your time), while 10 videos through OKAD costs $2,500&ndash;4,000 with compliance review, Amazon-specific formatting, and one revision round included. At 50 videos, the agency model saves significant time and delivers more consistent quality because the agency has systems for exactly this workflow.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">OKAD handles Amazon UGC from brief to delivery. The process: you provide product details and key messaging points. We match you with creators from our 700+ network based on your product category and target demographic. We coordinate product shipment, direct the shoots remotely, run three-stage quality control (content accuracy, technical specs, Amazon compliance), edit to platform specifications, and deliver ad-ready files with captions. Turnaround is 10&ndash;14 business days for most projects. Every video is checked against Amazon's content policy before delivery, which is why our approval rate exceeds 95%.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The decision framework is straightforward. If you sell fewer than 10 ASINs and need fewer than 5 videos per quarter, DIY can work. If you sell 10+ ASINs, run Sponsored Brands Video campaigns, or need to produce content at a consistent cadence, the agency model pays for itself in time savings and rejection avoidance alone.</p>
+      </div>
+    </section>
+
+    <!-- 09 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "How much does UGC video cost for Amazon listings?", a: "Typically $200 to $500 per video depending on complexity, product category, and whether the video requires editing with captions and overlays. Volume discounts apply at 10 or more videos. OKAD offers batch pricing that reduces per-video cost by 20 to 30 percent for orders of 15 or more." },
+          { q: "What video length works best for Amazon Sponsored Brands?", a: "15 to 30 seconds for Sponsored Brands Video ads. This is the range where completion rates and click-through rates are highest. For Premium A+ Content on your product detail page, you can go up to 60 seconds for tutorials and detailed demos. Longer is not better — say what you need to say and stop." },
+          { q: "Do I need to ship products to UGC creators?", a: "Yes, for physical products. The creator needs the actual product to film authentic content. OKAD coordinates all shipments and confirms receipt before filming begins. For multi-ASIN projects, we batch ship related products to the same creator to reduce shipping costs and speed up production." },
+          { q: "Can I use the same UGC video on Amazon and Meta ads?", a: "Yes, but optimize the aspect ratio for each platform. Amazon Sponsored Brands Video uses 16:9, while Meta Reels and Stories use 9:16. Plan for both cuts during production by having the creator film in 9:16 and editing a 16:9 crop for Amazon. This costs less than shooting twice." },
+          { q: "How many UGC videos do I need per ASIN?", a: "Start with 3 to 5 per hero ASIN: one product demo, one testimonial-style review, and one lifestyle usage video. This gives you content for Sponsored Brands Video, A+ Content, and Amazon Posts. For top-selling ASINs, scale to 10 or more variations to enable ongoing ad testing and combat creative fatigue." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Related Guides -->
+  <section style="padding:60px 24px;border-top:1px solid var(--border);">
+    <div style="max-width:960px;margin:0 auto;">
+      <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Keep Reading</div>
+      <h2 class="font-display text-[28px] font-bold text-ink mb-6">Related Guides</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;">
+        <a href="/ugc-for-brands" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Brands</div>
+          <div class="font-display text-[16px] font-semibold text-ink mb-1.5">UGC for Brands</div>
+          <div class="text-[13px] text-ink-2 leading-relaxed">Complete guide to hiring and managing UGC creators.</div>
+        </a>
+        <a href="/ugc-rates" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Pricing</div>
+          <div class="font-display text-[16px] font-semibold text-ink mb-1.5">UGC Rates</div>
+          <div class="text-[13px] text-ink-2 leading-relaxed">Detailed rate benchmarks by experience level and deliverable type.</div>
+        </a>
+        <a href="/ugc-video-ads" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Ads</div>
+          <div class="font-display text-[16px] font-semibold text-ink mb-1.5">UGC Video Ads</div>
+          <div class="text-[13px] text-ink-2 leading-relaxed">Creator-filmed paid creative that outperforms studio ads.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-10">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+        <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to launch UGC for your Amazon products?</h2>
+        <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD produces Amazon-compliant UGC videos from brief to delivery. 700+ creators, 10,000+ ads delivered.</p>
+        <div class="flex gap-3 justify-center flex-wrap">
+          <a href={emailAmazon} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Start Amazon UGC &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "UGC for Amazon Sellers: Complete Guide to Video Content | OKAD",
+      "description": "UGC video content for Amazon sellers. Covers Sponsored Brands Video, Premium A+ Content, product demos, compliance guidelines, and scaling creator content across ASINs.",
+      "url": "https://okad.cc/ugc-amazon/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "OKAD Agency",
+        "url": "https://okad.cc"
+      },
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://okad.cc/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "UGC for Amazon"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "How much does UGC video cost for Amazon listings?", "acceptedAnswer": {"@type": "Answer", "text": "Typically $200 to $500 per video depending on complexity, product category, and whether the video requires editing with captions and overlays. Volume discounts apply at 10 or more videos. OKAD offers batch pricing that reduces per-video cost by 20 to 30 percent for orders of 15 or more."}},
+        {"@type": "Question", "name": "What video length works best for Amazon Sponsored Brands?", "acceptedAnswer": {"@type": "Answer", "text": "15 to 30 seconds for Sponsored Brands Video ads. This is the range where completion rates and click-through rates are highest. For Premium A+ Content on your product detail page, you can go up to 60 seconds for tutorials and detailed demos. Longer is not better — say what you need to say and stop."}},
+        {"@type": "Question", "name": "Do I need to ship products to UGC creators?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for physical products. The creator needs the actual product to film authentic content. OKAD coordinates all shipments and confirms receipt before filming begins. For multi-ASIN projects, we batch ship related products to the same creator to reduce shipping costs and speed up production."}},
+        {"@type": "Question", "name": "Can I use the same UGC video on Amazon and Meta ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but optimize the aspect ratio for each platform. Amazon Sponsored Brands Video uses 16:9, while Meta Reels and Stories use 9:16. Plan for both cuts during production by having the creator film in 9:16 and editing a 16:9 crop for Amazon. This costs less than shooting twice."}},
+        {"@type": "Question", "name": "How many UGC videos do I need per ASIN?", "acceptedAnswer": {"@type": "Answer", "text": "Start with 3 to 5 per hero ASIN: one product demo, one testimonial-style review, and one lifestyle usage video. This gives you content for Sponsored Brands Video, A+ Content, and Amazon Posts. For top-selling ASINs, scale to 10 or more variations to enable ongoing ad testing and combat creative fatigue."}}
+      ]
+    }
+  ]
+})} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

@@ -1,0 +1,398 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="How to Build a UGC Portfolio That Gets Brand Deals | OKAD"
+  description="Step-by-step guide to building a UGC portfolio that lands paid brand deals. What to include, which platforms to use, and how to stand out. From an agency that reviews 100+ creator portfolios weekly."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Portfolio guide &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          How to Build a UGC Portfolio <span class="text-accent">That Gets Brand Deals</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Your portfolio is the single asset that turns a cold pitch into a paid project. This guide breaks down exactly what to include, how to build one from zero, and the mistakes that quietly cost creators thousands in lost deals &mdash; drawn from reviewing 100+ portfolios every week at OKAD.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href="mailto:olga@okad.agency?subject=UGC%20portfolio%20review%20%E2%80%94%20help%20me%20land%20brand%20deals" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get portfolio feedback &rarr;</a>
+          <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>700+ creators managed</span>
+          <span>10,000+ ads delivered</span>
+          <span>8-section deep dive</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Makes a Portfolio Work -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">What Makes a Portfolio Work</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Lead With Your Best Work</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Four to six clips that prove you can produce content brands would confidently put behind ad spend. Quality over quantity, always.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Show Range Within a Niche</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Brands hire specialists, not generalists. Demonstrate depth in two to three content formats within your chosen vertical.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4CA;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Include Proof &amp; Context</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Add performance metrics, brand names, and brief descriptions. Context transforms clips into case studies that close deals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "What Brands Look For", href: "#brands-look-for" },
+            { num: "02", text: "Essential Portfolio Elements", href: "#essential-elements" },
+            { num: "03", text: "Choosing Your Niche", href: "#niche" },
+            { num: "04", text: "Filming Your First Pieces", href: "#filming" },
+            { num: "05", text: "Building Without Clients", href: "#without-clients" },
+            { num: "06", text: "Portfolio Platforms & Tools", href: "#platforms" },
+            { num: "07", text: "Common Mistakes", href: "#mistakes" },
+            { num: "08", text: "Portfolio Launch Checklist", href: "#checklist" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 What Brands Look For -->
+    <section class="guide-section" id="brands-look-for">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; What Brands Want</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What brands actually look for in portfolios</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brands evaluate your portfolio in under ten seconds &mdash; clarity and quality decide everything</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">They want to see content that looks like it could run as a paid ad tomorrow</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Follower count is irrelevant &mdash; production quality and format versatility matter</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">At OKAD, we have reviewed thousands of creator portfolios while building campaigns for brands across beauty, food, tech, and lifestyle. The pattern is remarkably consistent: marketing managers spend fewer than ten seconds on a portfolio before making a decision. That decision is not based on your follower count, your aesthetic grid, or how many brands you have tagged in posts. It is based on one question &mdash; can this person produce content I would confidently put behind ad spend?</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The content brands are buying in 2026 is not polished commercial footage. It is authentic, native-feeling video that blends into a social feed while still communicating a clear product message. Think unboxing clips that feel genuine, product demos shot on a phone with natural lighting, testimonial-style pieces where the creator speaks directly to camera with conviction. The production value sweet spot sits between amateur and cinematic &mdash; professional enough to represent the brand, raw enough to feel real.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">What separates portfolios that get responses from those that get ignored is specificity. A portfolio that says "I make content" tells the brand nothing. A portfolio that says "I produce hook-driven unboxing and product demo videos for skincare and wellness brands, optimized for Meta and TikTok paid campaigns" tells them everything. Brands are not looking for generalists who can do a bit of everything. They are looking for creators who clearly understand their vertical and can demonstrate it through finished work.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The other factor that consistently surfaces is format range within a niche. A creator who shows only talking-head videos is limited. A creator who shows talking-head testimonials, product-in-use demos, unboxing sequences, and before-and-after comparisons &mdash; all within the same vertical &mdash; signals that they can adapt to whatever the brand's campaign requires. That adaptability is what moves you from "maybe" to "let's book this." If you want to understand how <a href="/ugc-deals" class="text-accent hover:underline">brand deals</a> work from the other side, start there.</p>
+      </div>
+    </section>
+
+    <!-- 02 Essential Portfolio Elements -->
+    <section class="guide-section" id="essential-elements">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Elements</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Essential portfolio elements</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Include 4&ndash;6 of your strongest clips, not everything you have ever made</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Add context to each piece &mdash; brand, format, and any performance data</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Make your contact information and rates request process obvious</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A portfolio is not a dump of every video you have ever recorded. It is a curated presentation designed to answer a brand's questions before they have to ask. The difference between a portfolio that books calls and one that gets closed in three seconds comes down to structure and intentional curation. Every element should serve a purpose: demonstrate skill, build trust, or make it easy to hire you.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Start with a curated reel or hero video &mdash; your strongest 30&ndash;60 seconds of work, edited into a single showreel that demonstrates your range. This is the first thing anyone sees, and it needs to hook attention immediately. Lead with your best hook, show three to four different styles, and end with a clean outro that includes your name and contact. Below that, present four to six individual clips with context: what the product was, what format you used (unboxing, testimonial, demo, tutorial), and any results if available. Context turns a random video into a case study.</p>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The five must-have components</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>1. A curated reel or hero video.</strong> Your strongest 30&ndash;60 seconds of work, edited into a single showreel that demonstrates your range. This is the first thing anyone sees, and it needs to hook attention immediately. Lead with your best hook, show three to four different styles, and end with a clean outro that includes your name and contact information.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>2. Four to six individual clips with context.</strong> Each clip should include a brief description: what the product was, what format you used (unboxing, testimonial, demo, tutorial), and any results if available (views, engagement rate, ad performance). Context turns a random video into a case study that brands can evaluate against their own needs.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>3. A short bio or positioning statement.</strong> Two to three sentences maximum. State your niche, the types of content you create, and the platforms you are experienced with. This is not your life story &mdash; it is a professional positioning statement that helps brands determine fit in seconds.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>4. Clear contact information.</strong> Your professional email, a link to request your rate card, and optionally your social handles. If a brand wants to hire you and cannot figure out how to reach you within five seconds, you have lost them. Place contact details in the header, in the bio section, and again at the bottom of the page.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>5. Brand logos or social proof.</strong> If you have worked with recognizable brands &mdash; even on small projects &mdash; display their logos. Social proof compresses the trust-building process from minutes to milliseconds. Even listing brand names in text form is better than omitting them entirely.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The order matters. Lead with video, not text. A brand reviewing your portfolio wants to see your work within two seconds of landing on the page, not read three paragraphs about your content philosophy. Structure your portfolio so the very first thing visible is a playable video or a grid of thumbnails. For real-world examples of how top creators structure these elements, check our <a href="/ugc-portfolio-examples" class="text-accent hover:underline">UGC portfolio examples</a> breakdown.</p>
+      </div>
+    </section>
+
+    <!-- 03 Choosing Your Niche -->
+    <section class="guide-section" id="niche">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Niche &amp; Style</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Choosing your niche and style</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A focused niche wins more deals than a broad one &mdash; brands hire specialists</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Pick a vertical based on genuine interest, product access, and market demand</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You can expand later &mdash; starting narrow builds credibility faster</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">One of the most consequential decisions you will make as a UGC creator is choosing which vertical to focus on. The instinct is to stay broad &mdash; "I can create content for any product" &mdash; but this approach actively works against you. Brands reviewing portfolios are looking for evidence that you understand their specific audience, their product category, and the content formats that perform in their vertical. A creator who specializes in food and beverage UGC and shows five polished recipe-style product integrations will beat a generalist with twenty mediocre clips across ten categories every time.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Start by considering three factors. First, genuine interest: creating content for products you actually care about produces better work and sustains your motivation across dozens of shoots. Second, product access: if you already own or can easily acquire products in a category, you can build spec work without waiting for brand deals. Third, market demand: verticals like beauty, skincare, food, fitness, tech accessories, and pet products have enormous UGC budgets in 2026. Check platforms like the <a href="/ugc-deals" class="text-accent hover:underline">UGC deals board</a> to see which niches are actively hiring.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Your niche does not need to be a single product type. It can be defined by audience (content for millennial parents), by format (fast-paced product demos), by aesthetic (minimalist, earth-toned lifestyle content), or by use case (UGC ads optimized for Meta conversion campaigns). The key is that your positioning tells a brand immediately whether you are a fit &mdash; and more importantly, makes the brands that are a fit confident in reaching out.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Do not worry about being locked in permanently. Most successful creators start narrow, build a track record, and then expand into adjacent verticals once they have proof points. A skincare creator who later adds wellness and supplements to their portfolio has a credible expansion path. A creator who starts by trying to be everything to everyone rarely builds enough depth in any single area to stand out. If you are completely new to UGC, our <a href="/ugc-beginner" class="text-accent hover:underline">beginner guide</a> walks through the fundamentals before you start niching down.</p>
+      </div>
+    </section>
+
+    <!-- 04 Filming Your First Spec Pieces -->
+    <section class="guide-section" id="filming">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Filming</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Filming your first spec pieces</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A modern smartphone, natural light, and a clean background are enough to start</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Shoot in 9:16 vertical format &mdash; this is where UGC ads live</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Focus on strong hooks in the first 2&ndash;3 seconds of every clip</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">You do not need a studio, a camera crew, or expensive equipment to create portfolio-worthy UGC. The entire point of user-generated content is that it looks native to social platforms &mdash; shot on a phone, in natural environments, with the kind of authentic energy that over-produced commercial content cannot replicate. That said, there is a meaningful difference between "authentically casual" and "poorly made," and your first portfolio pieces need to land on the right side of that line.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Start with equipment you already have. A smartphone from the last three years, a window for natural light, and a clean background are genuinely all you need for your first shoots. If you want to invest a small amount, a ring light (under $30) and a basic phone tripod ($15&ndash;$20) will noticeably improve your consistency. Shoot in 9:16 vertical format at 1080p or 4K &mdash; this is the native format for TikTok, Reels, and Shorts, which is where the vast majority of UGC ads run in 2026.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The single most important technical skill to develop early is hook creation. The first two to three seconds of a UGC video determine whether someone keeps watching or scrolls past. Practice opening with a question ("Have you tried this yet?"), a bold claim ("This replaced three products in my routine"), a visual pattern interrupt (product toss, dramatic before-and-after reveal), or a direct address ("If you have been looking for a budget-friendly alternative, stop scrolling"). Study the hooks on top-performing UGC ads in your niche &mdash; the Meta Ad Library is a free resource for this.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Aim to film at least three to four different formats for your portfolio: a talking-head testimonial, a product-in-use demonstration, an unboxing or first-impression video, and a problem-solution narrative. Each format demonstrates a different production skill and shows brands that you can adapt to various brief styles. Edit your clips to be 15&ndash;45 seconds each &mdash; tight, punchy, and with no dead air. Use CapCut, InShot, or Adobe Premiere Rush for editing; all are more than sufficient for portfolio-quality UGC.</p>
+      </div>
+    </section>
+
+    <!-- 05 Building Without Paid Clients -->
+    <section class="guide-section" id="without-clients">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Without Clients</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Building a portfolio without paid clients</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Spec work &mdash; content for brands you love but have not been hired by &mdash; is how every creator starts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use products you already own; do not wait for brands to send you anything</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Treat spec work exactly like a real brief &mdash; research the brand, match their tone, nail the CTA</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every UGC creator faces the same chicken-and-egg problem at the start: brands want to see a portfolio before they hire you, but you need clients to build a portfolio. The solution is spec work &mdash; content you create for brands you admire using products you already own, filmed and edited exactly as if you were fulfilling a paid brief. This is not a workaround or a lesser approach; it is the standard path that the majority of successful UGC creators have followed.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Choose three to five products you genuinely use and enjoy. They do not need to be from major brands &mdash; a thoughtful, well-produced video for a small skincare brand or a local coffee company demonstrates the same production skills as one for a multinational. Research each brand before you film: look at their existing content, understand their tone of voice, identify the key selling points they emphasize in their marketing. Then create content that matches their style while adding your own authentic perspective.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The critical difference between good spec work and amateur spec work is intentionality. Good spec work includes a clear hook, addresses a specific audience pain point, highlights specific product features, and ends with a call to action. It feels like a real ad because you treated it like one. Amateur spec work is a vague "I love this product" monologue with no structure, no hook, and no clear purpose. Brands can tell the difference instantly, and the gap between these two approaches often determines whether a pitch email gets a reply or gets archived.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Once you have filmed your spec pieces, there is an additional benefit: you can use them as proof of concept in your outreach. If you create a spec video for Brand X and then pitch Brand X directly, you are not just telling them you can make content for them &mdash; you are showing them finished work featuring their actual product. This is an extraordinarily powerful sales tool that very few creators use. For more on how to turn spec work into paid gigs and find open opportunities, see our <a href="/ugc-deals" class="text-accent hover:underline">UGC deals</a> guide.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Want expert eyes on your portfolio?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD manages 700+ creators and reviews portfolios daily. We know what converts &mdash; let us help you refine yours before you start pitching.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href="mailto:olga@okad.agency?subject=UGC%20portfolio%20review%20%E2%80%94%20help%20me%20land%20brand%20deals" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get portfolio feedback &rarr;</a>
+            <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Portfolio Platforms & Tools -->
+    <section class="guide-section" id="platforms">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Platforms &amp; Tools</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Portfolio platforms and tools</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Your portfolio needs a single, shareable link &mdash; not scattered content across five platforms</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Dedicated portfolio builders, personal websites, and polished Google Drive folders all work</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Choose based on your budget and technical comfort; upgrade as you grow</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The platform you use matters less than having a single, clean, shareable link. When you send a pitch email, the brand should be able to click one URL and immediately see your work. Anything that requires navigating multiple pages, downloading files, or requesting access creates friction that kills conversions. The best portfolio link is one that loads fast, plays video inline, and presents your work with zero barriers between the brand and your content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For creators just starting out with no budget, a well-organized Google Drive folder with clearly named files and a brief cover document works fine. Notion portfolio pages are another free option that allow video embeds and look surprisingly professional. As you grow and start landing paid work, move to a dedicated portfolio site on Carrd ($19/year), Squarespace ($16/month), or Wix (free tier available) &mdash; these give you more control over presentation, custom domain support, and analytics so you can see who is viewing your work.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">AI-powered portfolio tools have emerged as a compelling option in 2026, automatically generating polished portfolio pages from your video clips with minimal setup. Our <a href="/ai-portfolio-builder" class="text-accent hover:underline">AI portfolio builder</a> guide covers the best options and how to get the most out of them. Whichever platform you choose, make sure it renders well on mobile &mdash; the majority of marketing managers review portfolios on their phones, often while commuting or between meetings.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For editing, CapCut (free) handles everything most UGC creators need: text overlays, transitions, speed adjustments, and auto-captions. InShot is a strong mobile alternative. If you want more control, Adobe Premiere Rush or DaVinci Resolve offer professional-grade editing without a steep learning curve. The tool matters far less than the output &mdash; brands do not care what you edited in, they care how the final video looks and performs. Social media pinned posts can supplement your portfolio but should never replace a proper, dedicated link.</p>
+      </div>
+    </section>
+
+    <!-- 07 Common Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Common portfolio mistakes</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Including too many clips dilutes your strongest work</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Missing contact information or broken links kill deals silently</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Ignoring mobile optimization when most reviewers check on their phones</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">After reviewing creator portfolios across hundreds of campaigns at OKAD, these are the errors we see costing creators real money &mdash; not theoretical problems, but specific issues that cause brands to pass on otherwise talented creators. The frustrating thing is that most of these mistakes are easy to fix once you know to look for them.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most common mistake is including everything instead of curating ruthlessly. Twenty mediocre clips are worse than four excellent ones. Every weak video in your portfolio undermines the strong ones &mdash; brands judge you by your worst clip, not your best. A close second is having no clear niche or positioning: when a brand cannot determine within three seconds what kind of content you specialize in and which verticals you serve, they move on. A portfolio that tries to showcase everything actually showcases nothing.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Missing or buried contact information is another deal-killer that happens far more often than it should. If a brand has to scroll through your entire portfolio to find your email, you have already lost opportunities you will never know about. Contact details should be visible without scrolling &mdash; in the header, in the bio section, and again at the bottom. Similarly, broken links, slow-loading videos, or access-restricted files destroy credibility. Test your portfolio link from an incognito browser window on both desktop and mobile before including it in any pitch.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Two more mistakes that quietly cost creators thousands: only showing organic content when most UGC brand deals in 2026 are for paid advertising (include at least two clips structured like ads &mdash; hook, product feature, call to action), and ignoring mobile optimization entirely. The majority of marketing managers reviewing portfolios do so on their phones, often while multitasking. If your portfolio does not render well on mobile, videos do not play inline, or text is unreadable on a small screen, you are losing deals without ever knowing it. See our <a href="/ugc-portfolio-examples" class="text-accent hover:underline">portfolio examples</a> page to compare what good and bad look like side by side.</p>
+      </div>
+    </section>
+
+    <!-- 08 Portfolio Launch Checklist -->
+    <section class="guide-section" id="checklist">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Launch Checklist</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Your portfolio launch checklist</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Run through this checklist before sending your portfolio to any brand</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every item below directly impacts whether a brand responds to your pitch</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before you include your portfolio link in any pitch, run through this list. Every item below is something we have seen directly impact whether a brand responds or moves on. Treat this as a pre-flight check &mdash; do it every time, even if you think nothing has changed since your last outreach push.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Category</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Item</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Content</td><td class="px-4 py-2.5 border-b border-border text-ink-2">4&ndash;6 of your absolute best clips, ruthlessly curated</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Content</td><td class="px-4 py-2.5 border-b border-border text-ink-2">At least 2 different UGC formats (testimonial, demo, unboxing, tutorial)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Content</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Strong hook in the first 2&ndash;3 seconds of every clip</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Content</td><td class="px-4 py-2.5 border-b border-border text-ink-2">All videos shot in 9:16 vertical format</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Context</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brief description for each clip (brand, format, results if available)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Context</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Clear niche or positioning statement (2&ndash;3 sentences max)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Context</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand logos or names for past clients (if applicable)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Technical</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Single shareable link (not multiple URLs)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Technical</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Link tested in incognito on desktop and mobile</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Technical</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Videos load quickly (no buffering or download required)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Contact</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Professional email visible without scrolling</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-medium">Contact</td><td class="px-4 py-2.5 text-ink-2">Clear process for requesting rates</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Once every item is checked off, your portfolio is ready to include in outreach. Pair it with a strong pitch &mdash; our <a href="/brand-pitch" class="text-accent hover:underline">brand pitch playbook</a> covers email templates, DM scripts, and follow-up sequences designed to convert portfolio views into paid projects.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Revisit and update your portfolio monthly. Replace older clips with stronger recent work, refresh your positioning statement if your niche evolves, and always test the link before a new outreach push. A stale portfolio signals an inactive creator, and brands are far less likely to engage with someone whose most recent work appears to be six months old.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "How many clips should a UGC portfolio include?", a: "Four to six clips is the ideal range. This gives brands enough to evaluate your style, format range, and production quality without overwhelming them. Every additional clip beyond your best work dilutes the overall impression. If you have more than six strong pieces, rotate them based on the vertical you are pitching." },
+          { q: "Can I build a UGC portfolio without any paid brand work?", a: "Absolutely. The majority of successful UGC creators started with spec work — content created for products they already owned, filmed and edited as if it were a real brand brief. Brands care about the quality and relevance of your content, not whether it was paid for. A polished spec piece is indistinguishable from a commissioned one to a marketing manager reviewing your portfolio." },
+          { q: "What is the best platform to host a UGC portfolio?", a: "Any platform that gives you a single, clean, shareable link works. Carrd and Notion are popular free or low-cost options that allow video embeds. A personal website on Squarespace or Wix offers more customization. Even a well-organized Google Drive folder with clearly labeled files is acceptable when starting out. The platform matters far less than the content and organization." },
+          { q: "Should I include performance metrics in my portfolio?", a: "Yes, whenever possible. Metrics like view counts, engagement rates, click-through rates, or conversion data add concrete proof that your content performs. If you do not have performance data yet, include contextual information instead: what the brief was, what format you used, and what the intended outcome was. Context of any kind transforms a clip from a random video into a case study." },
+          { q: "How often should I update my UGC portfolio?", a: "Review and update your portfolio at least once a month. Replace older clips with stronger recent work, ensure all links are functional, and refresh your positioning statement if your niche or skill set has evolved. Before any major outreach push — such as pitching a batch of brands in a new vertical — do a full review. A stale portfolio with outdated clips signals an inactive creator, which makes brands hesitant to engage." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to build a portfolio that books deals?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Whether you are starting from scratch or refining an existing portfolio &mdash; OKAD helps creators build the assets that land paid brand partnerships. We review 100+ portfolios every week and know exactly what converts.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href="mailto:olga@okad.agency?subject=UGC%20portfolio%20review%20%E2%80%94%20help%20me%20land%20brand%20deals" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get portfolio feedback &rarr;</a>
+            <a href="https://calendly.com/okad_calls/first" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+
+  <!-- JSON-LD FAQPage schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many clips should a UGC portfolio include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Four to six clips is the ideal range. This gives brands enough to evaluate your style, format range, and production quality without overwhelming them. Every additional clip beyond your best work dilutes the overall impression. If you have more than six strong pieces, rotate them based on the vertical you are pitching."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I build a UGC portfolio without any paid brand work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. The majority of successful UGC creators started with spec work - content created for products they already owned, filmed and edited as if it were a real brand brief. Brands care about the quality and relevance of your content, not whether it was paid for. A polished spec piece is indistinguishable from a commissioned one to a marketing manager reviewing your portfolio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best platform to host a UGC portfolio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Any platform that gives you a single, clean, shareable link works. Carrd and Notion are popular free or low-cost options that allow video embeds. A personal website on Squarespace or Wix offers more customization. Even a well-organized Google Drive folder with clearly labeled files is acceptable when starting out. The platform matters far less than the content and organization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include performance metrics in my portfolio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, whenever possible. Metrics like view counts, engagement rates, click-through rates, or conversion data add concrete proof that your content performs. If you do not have performance data yet, include contextual information instead: what the brief was, what format you used, and what the intended outcome was. Context of any kind transforms a clip from a random video into a case study."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I update my UGC portfolio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Review and update your portfolio at least once a month. Replace older clips with stronger recent work, ensure all links are functional, and refresh your positioning statement if your niche or skill set has evolved. Before any major outreach push - such as pitching a batch of brands in a new vertical - do a full review. A stale portfolio with outdated clips signals an inactive creator, which makes brands hesitant to engage."
+        }
+      }
+    ]
+  })} />
+</Layout>
+
+<style>
+  .guide-section { padding: 2.5rem 0; }
+  .tldr { background: rgba(99,102,241,.04); border-left: 3px solid var(--color-accent); border-radius: 0 8px 8px 0; padding: 12px 16px; margin-bottom: 1.5rem; }
+  .faq-item.open .faq-a { max-height: 500px; }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

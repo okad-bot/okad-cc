@@ -1,0 +1,519 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailSubject = "mailto:olga@okad.agency?subject=TikTok%20Shop%20UGC%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="UGC for TikTok Shop: How to Get Started in 2026 | OKAD"
+  description="A practical guide to UGC for TikTok Shop &mdash; how shoppable creator content works, affiliate vs commissioned models, content formats that drive sales, and how to scale TikTok Shop UGC with a managed creator network."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          UGC for TikTok Shop: <span class="text-accent">How to Get Started</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          TikTok Shop turns creator content into a direct sales channel. This guide covers how shoppable UGC works, how to choose between affiliate and commissioned models, which content formats convert, and how to scale from your first video to hundreds per month.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailSubject} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get TikTok Shop UGC &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>TikTok Shop</span>
+          <span>700+ creators</span>
+          <span>Shoppable UGC</span>
+          <span>Affiliate + Commissioned</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-card grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Why TikTok Shop UGC Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F6D2;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">In-App Checkout</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Viewers buy without leaving TikTok. No redirect friction, no abandoned carts from link-in-bio funnels.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Creator Trust</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">UGC from real people converts 2&ndash;3x higher than polished brand ads. Authenticity drives purchase decisions.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Algorithm Boost</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">TikTok prioritizes shoppable content in the For You feed, giving UGC with product tags organic reach advantages.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "What TikTok Shop Changes for UGC", href: "#what-changes" },
+            { num: "02", text: "How TikTok Shop Content Differs", href: "#content-differs" },
+            { num: "03", text: "Affiliate vs Commissioned Content", href: "#affiliate-vs-commissioned" },
+            { num: "04", text: "Creating Shoppable UGC Videos", href: "#shoppable-videos" },
+            { num: "05", text: "Finding TikTok Shop Creators", href: "#finding-creators" },
+            { num: "06", text: "Content Formats That Drive Sales", href: "#content-formats" },
+            { num: "07", text: "Measuring Performance", href: "#measuring-performance" },
+            { num: "08", text: "Scaling TikTok Shop Content", href: "#scaling" },
+            { num: "09", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 What TikTok Shop Changes for UGC -->
+    <section class="guide-section" id="what-changes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; The Shift</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What TikTok Shop changes for UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok Shop adds native checkout &mdash; UGC becomes a direct sales channel</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Product tags in videos let viewers buy without leaving the app</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator content now has measurable GMV attribution, not just engagement</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before TikTok Shop, UGC on TikTok was an awareness play. Creators made videos, viewers watched them, and the best you could measure was engagement rate, profile visits, or link clicks to an external store. The purchase happened somewhere else &mdash; on Shopify, Amazon, or a brand's website &mdash; and attribution was messy. TikTok Shop eliminates that gap. The entire transaction happens inside TikTok: a viewer watches a creator's video, taps the product tag, and checks out without ever leaving the app.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This changes UGC economics fundamentally. When every creator video carries a product tag and every purchase is tracked end-to-end, you can measure exactly how much revenue each piece of content generates. That means creator compensation can shift from flat fees to commission-based models, content briefs can prioritize conversion over views, and scaling decisions become data-driven rather than gut-feel.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For brands already running <a href="/ugc-for-brands" class="text-accent hover:underline">UGC programs</a>, TikTok Shop is not a separate strategy &mdash; it is an upgrade to the existing one. The same creators, the same content formats, and the same production workflows apply. The difference is that every video now has a direct path to purchase, and performance is measured in gross merchandise value (GMV) instead of impressions.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok Shop reached $33 billion in global GMV in 2025 and is projected to surpass $50 billion in 2026. The brands winning on the platform are the ones producing high volumes of authentic creator content with product tags &mdash; not polished ads, but real people showing real products. That is exactly what UGC does best.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The competitive window is still open. Most brands on TikTok Shop are running basic product listings with minimal creator content. Brands that invest in structured UGC programs now &mdash; with dedicated creators, optimized briefs, and systematic scaling &mdash; will build a content moat that is difficult to replicate once the marketplace becomes more crowded. Early movers on TikTok Shop are seeing 3&ndash;5x lower customer acquisition costs compared to Meta and Google channels.</p>
+      </div>
+    </section>
+
+    <!-- 02 How TikTok Shop Content Differs -->
+    <section class="guide-section" id="content-differs">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Content Differences</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How TikTok Shop content differs from regular UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Shop UGC must include a clear call to purchase, not just brand awareness</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Product demonstration and pricing transparency increase conversion rates</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Videos need strong hooks in the first 2 seconds to survive the feed</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Regular UGC is optimized for engagement &mdash; likes, comments, shares, saves. TikTok Shop UGC is optimized for purchase. That distinction changes how content is briefed, scripted, and produced. A standard UGC video might end with "check the link in bio" or simply build brand affinity. A TikTok Shop video ends with "tap the product link below" and needs to give the viewer enough information to make a buying decision within 30&ndash;60 seconds.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most important structural difference is the hook. TikTok Shop content must stop the scroll and establish purchase intent within the first 2 seconds. Hooks like "this $24 product replaced my entire skincare routine" or "I was skeptical until I tried it for a week" work because they combine curiosity with a price anchor. For a deeper breakdown of what makes hooks effective, see our <a href="/hook-rate" class="text-accent hover:underline">hook rate guide</a>.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Price transparency is another key differentiator. In standard UGC, creators rarely mention price &mdash; the goal is to drive interest, not close a sale. In TikTok Shop UGC, mentioning the price builds trust and pre-qualifies the viewer. When a creator says "and it is only $29 right now," viewers who tap the product tag are already primed to buy. This reduces browse-to-purchase drop-off by 30&ndash;40% compared to videos that hide pricing.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Product demonstration depth also matters more. A standard UGC video can get away with a quick product flash and a voiceover. TikTok Shop videos that convert best show the product being used in real context &mdash; applying the serum, assembling the gadget, wearing the outfit in natural light. The viewer needs to see enough to answer the question "will this work for me?" before they tap buy.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Finally, TikTok Shop UGC must account for the shopping basket overlay. The yellow basket icon appears in the bottom-left corner of every shoppable video. Smart creators keep their key visual elements (product close-ups, text overlays, face-to-camera delivery) centered or in the upper third of the frame so the basket icon does not obscure critical content. This is a small detail that meaningfully affects conversion &mdash; if the viewer cannot see the product demonstration because it is blocked by the UI, they will scroll past.</p>
+      </div>
+    </section>
+
+    <!-- 03 Affiliate vs Commissioned -->
+    <section class="guide-section" id="affiliate-vs-commissioned">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Creator Models</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Affiliate vs commissioned creator content</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Affiliate creators earn commission per sale &mdash; low upfront cost, variable quality</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Commissioned creators deliver to a brief for a flat fee &mdash; predictable quality, higher control</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The best programs combine both models for volume and quality</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok Shop supports two creator models, and most successful brands use both. The affiliate model works through TikTok Shop's built-in affiliate marketplace: brands list their products with a commission rate (typically 10&ndash;25%), and creators choose which products to promote. The creator earns a percentage of every sale their content generates. The brand pays nothing upfront &mdash; commissions are deducted automatically from each transaction.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The commissioned model is what most brands think of as traditional UGC. You hire a creator for a flat fee &mdash; typically $150&ndash;$500 per video depending on the creator's tier and the content complexity &mdash; and they produce content to your brief. You own the content, control the messaging, and can repurpose the video for <a href="/spark-ads" class="text-accent hover:underline">Spark Ads</a> or other paid channels. For current pricing benchmarks, see our <a href="/ugc-rates" class="text-accent hover:underline">UGC rates guide</a>.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The affiliate model scales faster because you are not bottlenecked by budget. Offering a 15% commission on a $30 product costs you $4.50 per sale &mdash; but only when a sale happens. You can have 50 or 100 affiliates promoting your product simultaneously with zero upfront investment. The trade-off is quality control: affiliate content varies widely, and you cannot dictate scripts, angles, or messaging. Some affiliates will produce compelling demos; others will post low-effort clips that reflect poorly on your brand.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The commissioned model gives you quality control but limits volume. A $300 video from a briefed creator will hit your brand messaging and product positioning exactly right. But at $300 per video, producing 50 videos per month costs $15,000 &mdash; a significant investment. The hybrid approach works best: use commissioned content for your hero videos and Spark Ad candidates, and use the affiliate program for volume, discovery, and long-tail reach. OKAD's network of 700+ creators supports both models, letting brands ramp affiliates and commissioned creators in parallel.</p>
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Affiliate vs commissioned at a glance</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Dimension</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Affiliate</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Commissioned</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Upfront cost</td>
+                <td class="px-4 py-3 text-ink-2">$0 (commission only)</td>
+                <td class="px-4 py-3 text-ink-2">$150&ndash;$500 per video</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Quality control</td>
+                <td class="px-4 py-3 text-ink-2">Limited &mdash; creator chooses angle and script</td>
+                <td class="px-4 py-3 text-ink-2">High &mdash; content follows your brief</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Scale speed</td>
+                <td class="px-4 py-3 text-ink-2">Fast &mdash; 50+ creators in weeks</td>
+                <td class="px-4 py-3 text-ink-2">Moderate &mdash; limited by budget and briefing capacity</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Content ownership</td>
+                <td class="px-4 py-3 text-ink-2">Creator owns the content</td>
+                <td class="px-4 py-3 text-ink-2">Brand owns the content (per contract)</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-ink font-medium">Best for</td>
+                <td class="px-4 py-3 text-ink-2">Volume, discovery, long-tail reach</td>
+                <td class="px-4 py-3 text-ink-2">Hero content, Spark Ads, brand consistency</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">One important legal note: TikTok Shop affiliate content is automatically marked with a commerce disclosure, but commissioned content requires separate FTC-compliant disclosure. Ensure your creator contracts include disclosure requirements and that every commissioned video includes the "Paid partnership" label or equivalent. Non-compliance can result in both FTC penalties and TikTok account restrictions. For a detailed breakdown of creator compensation benchmarks, see our <a href="/ugc-rates" class="text-accent hover:underline">UGC rates guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- 04 Creating Shoppable UGC Videos -->
+    <section class="guide-section" id="shoppable-videos">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Shoppable Videos</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Creating shoppable UGC videos</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Product must be linked in TikTok Shop before creators can tag it</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Structure: hook (2s) &rarr; problem (5s) &rarr; demo (15&ndash;20s) &rarr; CTA (3s)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Vertical 9:16 format, 30&ndash;60 seconds, shot on phone for authenticity</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before any creator can tag your product, you need a TikTok Shop seller account with your product catalog uploaded and approved. Products must have compliant images, accurate descriptions, and competitive pricing. TikTok reviews new product listings within 24&ndash;48 hours. Once approved, creators can tag those products directly in their videos, and the yellow shopping basket icon appears on the video.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most effective shoppable UGC follows a four-part structure. The hook (first 2 seconds) must stop the scroll &mdash; lead with a surprising result, a bold claim, or a relatable problem. The problem statement (next 3&ndash;5 seconds) establishes why the viewer should care. The product demonstration (15&ndash;20 seconds) shows the product in action, ideally with a before/after or a real-time transformation. The call to action (final 3 seconds) directs viewers to tap the product link. Keep total length between 30 and 60 seconds &mdash; anything longer loses the casual viewer.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Shoot on a phone, not a professional camera. TikTok Shop content that looks too polished gets skipped because it triggers ad blindness. Natural lighting, casual settings (kitchen counter, bathroom mirror, living room), and conversational tone outperform studio setups consistently. The creator should talk to the camera the way they would talk to a friend recommending a product &mdash; no scripts that sound scripted.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">One technical detail that matters: ensure the product tag is added before publishing, not after. Videos published without a product tag and edited later receive less algorithmic distribution than videos tagged at the moment of posting. TikTok's algorithm treats shoppable content as a distinct category and gives it preferential placement in the Shop tab and For You feed &mdash; but only if the tag is present from the start.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Sample brief structure for shoppable UGC</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Hook (0&ndash;2s).</strong> Open with a surprising claim, relatable problem, or visual transformation. Example: "This $18 product fixed my skin in one week."</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Problem (2&ndash;7s).</strong> Establish the pain point the product solves. Be specific: "I tried everything for my dark circles &mdash; concealer, eye cream, cold spoons &mdash; nothing worked."</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Demo (7&ndash;25s).</strong> Show the product in use. Apply it, assemble it, wear it. Include a close-up of the result. This is where conversion happens.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Social proof (25&ndash;30s).</strong> Mention reviews, ratings, or personal results. "Over 10,000 five-star reviews" or "I have been using it for three months and the difference is wild."</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>CTA (30&ndash;35s).</strong> Direct the viewer to the product tag. "Tap the link below to grab it before it sells out." Create urgency without being pushy.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Mid CTA Banner -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need TikTok Shop content at scale?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD manages 700+ creators who produce shoppable UGC for TikTok Shop. We handle briefs, production, and product tagging &mdash; you handle fulfillment.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a proposal &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Finding TikTok Shop Creators -->
+    <section class="guide-section" id="finding-creators">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Finding Creators</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Finding TikTok Shop creators</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok Shop's affiliate marketplace is the fastest way to recruit at volume</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Look for creators with 10K&ndash;100K followers and strong engagement, not celebrity accounts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Agencies with existing creator networks eliminate the sourcing bottleneck</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The TikTok Shop Affiliate Marketplace is the platform's built-in creator sourcing tool. Brands post their products with commission rates, and creators browse and apply to promote them. This is the fastest way to get affiliate content flowing &mdash; set a competitive commission (15&ndash;20% for most product categories), add product samples if possible, and wait for applications. Within a week, you should have 10&ndash;30 creators producing content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For commissioned content, the sourcing criteria are different. You want creators who have demonstrated the ability to sell, not just entertain. Look at their TikTok Shop tab (if visible) to see what products they have promoted previously and how those videos performed. Creators in the 10K&ndash;100K follower range typically offer the best ROI: they have enough audience to drive meaningful sales but are not so large that their rates price out most brands. Engagement rate matters more than follower count &mdash; a creator with 25K followers and 8% engagement will outsell a creator with 500K followers and 1% engagement almost every time.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Direct outreach on TikTok is another effective channel. Search for creators already making content in your product category, check their bio for contact information, and send a concise pitch. Mention the commission rate or flat fee upfront &mdash; creators receive dozens of DMs daily and ignore anything that does not lead with compensation. Include a sample product offer to lower the friction.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The fastest path to scale is working with an agency that already has a vetted creator network. OKAD manages 700+ creators across beauty, fashion, tech, food, and lifestyle verticals. Instead of spending weeks sourcing and vetting individual creators, brands tap into an existing pool of proven performers who already understand TikTok Shop workflows, product tagging, and shoppable content structures. This cuts time-to-first-video from weeks to days.</p>
+
+        <!-- Feat-card: OKAD creator network -->
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailSubject} class="text-ink hover:text-accent transition-colors no-underline">Skip the sourcing phase entirely</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">OKAD's 700+ creator network includes TikTok Shop specialists across major product categories. We match creators to your brand, handle contracts and sample logistics, and deliver shoppable content ready to post. Time from brief to first video: 5&ndash;7 business days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Content Formats That Drive Sales -->
+    <section class="guide-section" id="content-formats">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Content Formats</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Content formats that drive sales</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">"Get ready with me" and routine videos convert best for beauty and fashion</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Unboxing and first-impression videos drive impulse purchases</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Comparison and "honest review" formats build trust for higher-priced items</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Not all content formats convert equally on TikTok Shop. Based on performance data across thousands of shoppable videos, certain structures consistently outperform. The "get ready with me" (GRWM) format works exceptionally well for beauty and fashion &mdash; the creator walks through a routine while naturally incorporating 2&ndash;4 tagged products. Viewers watch the full routine (high retention) and buy the products that caught their attention. GRWM videos average 3&ndash;5x higher conversion rates than simple product showcases.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Unboxing and first-impression videos drive impulse purchases. The format creates a sense of discovery &mdash; the viewer experiences the product reveal alongside the creator, which triggers the "I want that too" response. These videos work best for products with strong visual appeal or satisfying packaging. Keep unboxings under 45 seconds and lead with the reaction shot, not the box.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For higher-priced items ($50+), comparison and "honest review" formats build the trust necessary for considered purchases. A creator comparing two similar products and explaining why they prefer one over the other gives the viewer the decision-making framework they need. The key is credibility: the creator must acknowledge trade-offs and downsides. "It is not perfect &mdash; the battery only lasts 6 hours &mdash; but for the price, nothing else comes close" converts better than unqualified praise.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok LIVE shopping is an underused format that deserves attention. Creators go live, demonstrate products in real time, answer viewer questions, and offer time-limited discounts. LIVE sessions with product pins generate 5&ndash;10x the GMV per viewer of standard shoppable videos because the interactive format creates urgency. Brands that combine regular shoppable UGC with weekly LIVE sessions see 40&ndash;60% higher total GMV than those running short-form video alone. For guidance on how to boost top-performing videos with paid budget, see our <a href="/spark-ads" class="text-accent hover:underline">Spark Ads guide</a>.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The "problem &rarr; solution" format remains the highest-converting structure across all product categories. The creator identifies a specific, relatable frustration in the first 3 seconds ("My kitchen counter was always cluttered and I could not find anything"), then introduces the product as the solution ("until I found this $22 organizer"). This format works because it mirrors how people actually discover products in real life &mdash; through a need, not through an ad. Keep the problem specific and the solution visual. Abstract pain points ("I wanted to be more organized") convert far worse than concrete ones ("I kept losing my keys every morning").</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Seasonal and trend-based content provides short bursts of high performance. Tie your TikTok Shop UGC to trending sounds, seasonal events (back to school, holiday gifting, summer essentials), or platform trends. A product video using a trending sound can see 3&ndash;5x the organic reach of the same content without the trend hook. The trade-off is a shorter content shelf life &mdash; trend-based videos peak within 48&ndash;72 hours, so you need to produce and publish them quickly. Have 2&ndash;3 creators on standby for rapid-response trend content.</p>
+      </div>
+    </section>
+
+    <!-- 07 Measuring Performance -->
+    <section class="guide-section" id="measuring-performance">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Performance</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Measuring TikTok Shop UGC performance</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">GMV per video is the primary metric, not views or engagement</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Track video-to-purchase conversion rate to compare creator effectiveness</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Commission cost as percentage of GMV determines program profitability</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok Shop gives brands something most social commerce channels do not: closed-loop attribution. Every sale is tracked from video view to checkout, with clear data on which creator, which video, and which product drove the transaction. This makes measurement straightforward, but it also requires shifting your KPI framework from engagement metrics to commerce metrics.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">GMV (gross merchandise value) per video is the single most important metric. A video that generates $2,000 in sales from 50,000 views is worth more than a video with 500,000 views and $200 in sales. Calculate GMV per video for every piece of content and rank creators accordingly. Over time, this ranking reveals which creators consistently drive revenue and which produce content that entertains but does not convert.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Video-to-purchase conversion rate (purchases / video views) lets you compare content effectiveness independently of reach. A 0.5% conversion rate is average for TikTok Shop content; anything above 1% is strong; above 2% is exceptional. Track this metric at both the video level and the creator level to identify patterns. Some creators consistently hit 1.5%+ conversion rates regardless of the product &mdash; those are the ones to retain on commissioned contracts.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For affiliate programs, total commission paid as a percentage of GMV is your profitability metric. If you offer 15% commission and your average order value is $40, you are paying $6 per order in creator costs. Compare this to your customer acquisition cost on other channels. Most brands find that TikTok Shop affiliate costs run 30&ndash;50% lower than Meta or Google acquisition costs, making the channel highly efficient when you factor in the content production benefit &mdash; you get both the sale and the content asset.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Key metrics at a glance</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What it measures</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Strong benchmark</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">GMV per video</td>
+                <td class="px-4 py-3 text-ink-2">Total revenue generated by a single shoppable video</td>
+                <td class="px-4 py-3 text-ink-2">$500+ per video (varies by product price)</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Video conversion rate</td>
+                <td class="px-4 py-3 text-ink-2">Purchases / video views</td>
+                <td class="px-4 py-3 text-ink-2">Above 1% is strong; 2%+ is exceptional</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Average order value</td>
+                <td class="px-4 py-3 text-ink-2">Revenue per transaction from TikTok Shop</td>
+                <td class="px-4 py-3 text-ink-2">Track against your site AOV; aim within 10%</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="px-4 py-3 text-ink font-medium">Creator ROAS</td>
+                <td class="px-4 py-3 text-ink-2">GMV generated / total creator cost (fee + commission)</td>
+                <td class="px-4 py-3 text-ink-2">3x+ for commissioned; 5x+ for affiliate</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-ink font-medium">Content velocity</td>
+                <td class="px-4 py-3 text-ink-2">Number of new shoppable videos published per week</td>
+                <td class="px-4 py-3 text-ink-2">10+ per week for meaningful Shop tab presence</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">One underrated metric is content velocity &mdash; how many new shoppable videos you publish per week. TikTok Shop's algorithm rewards consistent publishing with higher placement in the Shop tab and product search results. Brands that publish fewer than 5 shoppable videos per week often see their Shop tab traffic plateau. Aim for 10+ new videos per week to maintain momentum, which typically requires a roster of 15&ndash;25 active creators.</p>
+      </div>
+    </section>
+
+    <!-- 08 Scaling TikTok Shop Content -->
+    <section class="guide-section" id="scaling">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Scaling</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Scaling TikTok Shop content</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Start with 5&ndash;10 creators and scale to 50+ once you identify winning formats</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Systematize briefs, shipping, and QA to avoid bottlenecks</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Repurpose top TikTok Shop content across <a href="/ugc-for-brands" class="text-accent hover:underline">other UGC channels</a></li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Scaling TikTok Shop UGC is a logistics challenge more than a creative one. The first bottleneck is product samples: every commissioned creator needs the product in hand before filming, and every affiliate needs access to purchase or receive a sample. Set up a dedicated sample fulfillment pipeline &mdash; pre-pack sample kits, use a shipping service that provides tracking, and send samples in batches rather than one-off. Brands that scale past 20 creators without a sample system inevitably hit delays that stall content production for weeks.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The second bottleneck is briefing. As your creator roster grows, you cannot brief each creator individually over DMs. Build a standardized brief template that covers product positioning, key claims, required CTAs, visual guidelines, and compliance restrictions. Share briefs through a centralized system &mdash; a shared Google Doc, Notion page, or project management tool. The brief should be specific enough to ensure brand consistency but flexible enough to let each creator bring their authentic voice. A rigid script defeats the purpose of UGC.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Quality assurance is the third bottleneck. At 10 videos per week, you can review each one manually. At 50+ videos per week, you need a QA process. OKAD runs a tiered review system: first-pass QA checks compliance (product tags present, claims accurate, no competitor mentions), second-pass reviews content quality (hook strength, demo clarity, audio quality). Videos that pass both go live. Videos that fail get specific revision notes &mdash; never vague feedback like "make it better," always actionable direction like "reshoot the demo under natural light and mention the price before the CTA."</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Once you have a library of high-performing TikTok Shop videos, repurpose them. Top converters can be promoted as <a href="/spark-ads" class="text-accent hover:underline">Spark Ads</a>, re-edited for Instagram Reels or YouTube Shorts, or used as raw material for <a href="/ugc-for-brands" class="text-accent hover:underline">cross-platform UGC campaigns</a>. The content you produce for TikTok Shop is not single-use &mdash; it is the foundation of a multi-channel content engine. Brands working with OKAD typically see 10,000+ pieces of content delivered across all platforms from a single production pipeline.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The final piece of the scaling puzzle is creator retention. Your top-performing creators &mdash; the ones consistently hitting 1%+ conversion rates &mdash; are your most valuable assets. Move them from one-off commissions to recurring contracts with guaranteed monthly volume. Offer higher commission tiers, priority access to new product launches, and performance bonuses tied to GMV milestones. A creator who generates $10,000+ in monthly GMV is worth investing in &mdash; losing them to a competitor costs far more than a modest rate increase.</p>
+
+        <!-- Feat-card: OKAD scaling -->
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailSubject} class="text-ink hover:text-accent transition-colors no-underline">OKAD scales TikTok Shop content end-to-end</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">From your first 5 creators to 50+, we handle sourcing, briefing, sample logistics, QA, and performance tracking. You focus on product and fulfillment &mdash; we deliver the content engine that drives TikTok Shop sales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+        {[
+          { q: "What is the difference between TikTok Shop UGC and regular UGC ads?", a: "Regular UGC ads drive traffic to an external website or app store. TikTok Shop UGC includes a native product tag that lets viewers purchase directly inside TikTok without leaving the app. This eliminates redirect friction, enables closed-loop attribution (you can see exactly which video drove each sale), and allows commission-based creator compensation tied to actual revenue rather than flat fees." },
+          { q: "How much does TikTok Shop UGC cost?", a: "Commissioned TikTok Shop UGC typically costs $150–$500 per video depending on creator tier and content complexity. Affiliate content costs nothing upfront — creators earn 10–25% commission per sale. Most brands run a hybrid model: commissioned content for hero videos at $200–$400 each, plus an affiliate program for volume. A typical monthly budget for a mid-market brand is $3,000–$8,000 for commissioned content plus commission payouts on affiliate sales." },
+          { q: "Do I need to set up TikTok Shop before ordering UGC?", a: "Yes. Creators cannot tag products that are not listed in TikTok Shop. You need a TikTok Shop seller account with your product catalog uploaded and approved before any creator content can be made shoppable. Product approval typically takes 24–48 hours. If you are not yet set up, OKAD can advise on the registration process while content production begins in parallel." },
+          { q: "Can OKAD handle both content creation and TikTok Shop setup?", a: "OKAD manages the full content production pipeline: creator sourcing from our 700+ creator network, briefing, sample shipping coordination, content QA, and delivery. For TikTok Shop setup, we provide guidance on seller account registration, product catalog optimization, and affiliate program configuration. We also manage Spark Ads campaigns to amplify your top-performing shoppable content with paid budget." },
+          { q: "What commission rates should I offer TikTok Shop affiliates?", a: "Standard commission rates range from 10% to 25% depending on your product category and margins. Beauty and fashion brands typically offer 15–20%. Electronics and higher-priced items offer 10–15%. To attract top-performing affiliates, consider offering 20%+ for the first 30 days or tiered rates that increase with volume. Products priced under $30 generally need commissions at 15% or higher to be attractive to creators, since the per-sale payout must be worth their production effort." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to sell on TikTok Shop with creator content?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD produces shoppable UGC, manages affiliate programs, and scales TikTok Shop content from first video to full pipeline. Tell us about your brand.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a proposal &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-3">Methodology</div>
+        <p class="text-[13px] text-muted leading-[1.6] mb-2">Tactical recommendations in this guide are based on OKAD's operational experience producing TikTok Shop content across beauty, fashion, consumer electronics, and food verticals. GMV benchmarks and conversion rate ranges reflect aggregated data from campaigns managed through our 700+ creator network. Commission rate ranges reflect current TikTok Shop marketplace standards as of September 2026.</p>
+        <p class="text-[13px] text-muted leading-[1.6]">This guide is maintained by OKAD and updated as the platform evolves. Last updated: September 2026. For the latest version, visit <a href="/ugc-tiktok-shop" class="text-accent hover:underline">okad.cc/ugc-tiktok-shop</a>. Related guides: <a href="/spark-ads" class="text-accent hover:underline">Spark Ads</a>, <a href="/ugc-for-brands" class="text-accent hover:underline">UGC for Brands</a>, <a href="/ugc-rates" class="text-accent hover:underline">UGC Rates</a>, <a href="/hook-rate" class="text-accent hover:underline">Hook Rate</a>.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "UGC for TikTok Shop: How to Get Started in 2026",
+    "description": "A practical guide to UGC for TikTok Shop — how shoppable creator content works, affiliate vs commissioned models, content formats that drive sales, and how to scale TikTok Shop UGC with a managed creator network.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/ugc-tiktok-shop/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "UGC for TikTok Shop" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the difference between TikTok Shop UGC and regular UGC ads?", "acceptedAnswer": { "@type": "Answer", "text": "Regular UGC ads drive traffic to an external website or app store. TikTok Shop UGC includes a native product tag that lets viewers purchase directly inside TikTok without leaving the app. This eliminates redirect friction, enables closed-loop attribution (you can see exactly which video drove each sale), and allows commission-based creator compensation tied to actual revenue rather than flat fees." } },
+      { "@type": "Question", "name": "How much does TikTok Shop UGC cost?", "acceptedAnswer": { "@type": "Answer", "text": "Commissioned TikTok Shop UGC typically costs $150-$500 per video depending on creator tier and content complexity. Affiliate content costs nothing upfront — creators earn 10-25% commission per sale. Most brands run a hybrid model: commissioned content for hero videos at $200-$400 each, plus an affiliate program for volume. A typical monthly budget for a mid-market brand is $3,000-$8,000 for commissioned content plus commission payouts on affiliate sales." } },
+      { "@type": "Question", "name": "Do I need to set up TikTok Shop before ordering UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Creators cannot tag products that are not listed in TikTok Shop. You need a TikTok Shop seller account with your product catalog uploaded and approved before any creator content can be made shoppable. Product approval typically takes 24-48 hours. If you are not yet set up, OKAD can advise on the registration process while content production begins in parallel." } },
+      { "@type": "Question", "name": "Can OKAD handle both content creation and TikTok Shop setup?", "acceptedAnswer": { "@type": "Answer", "text": "OKAD manages the full content production pipeline: creator sourcing from our 700+ creator network, briefing, sample shipping coordination, content QA, and delivery. For TikTok Shop setup, we provide guidance on seller account registration, product catalog optimization, and affiliate program configuration. We also manage Spark Ads campaigns to amplify your top-performing shoppable content with paid budget." } },
+      { "@type": "Question", "name": "What commission rates should I offer TikTok Shop affiliates?", "acceptedAnswer": { "@type": "Answer", "text": "Standard commission rates range from 10% to 25% depending on your product category and margins. Beauty and fashion brands typically offer 15-20%. Electronics and higher-priced items offer 10-15%. To attract top-performing affiliates, consider offering 20%+ for the first 30 days or tiered rates that increase with volume. Products priced under $30 generally need commissions at 15% or higher to be attractive to creators, since the per-sale payout must be worth their production effort." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
