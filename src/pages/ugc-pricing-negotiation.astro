@@ -1,0 +1,495 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailNegotiation = "mailto:olga@okad.agency?subject=UGC%20pricing%20negotiation%20%E2%80%94%20tell%20us%20about%20your%20needs";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="UGC Pricing Negotiation: How to Set & Defend Your Rates | OKAD"
+  description="A creator's guide to negotiating UGC rates with confidence. Scripts, tactics, when to say no, and how to raise prices without losing clients. From an agency managing 700+ creators."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Creator pricing &middot; September 2026
+        </div>
+
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          UGC Pricing Negotiation: <span class="text-accent">Set &amp; Defend Your Rates</span>
+        </h1>
+
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Every creator undercharges at first. Most keep undercharging because they never learn how negotiation actually works. This guide covers the scripts, tactics, and decision frameworks we see working across 700+ creator relationships &mdash; from both sides of the table.
+        </p>
+
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailNegotiation} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">
+            Get pricing advice &rarr;
+          </a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">
+            Book a call &rarr;
+          </a>
+        </div>
+
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>700+ creators</span>
+          <span>Rate defense scripts</span>
+          <span>Scope protection</span>
+          <span>Package structuring</span>
+          <span>Walk-away signals</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why negotiation skills matter grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Why Negotiation Skills Matter</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Revenue Compounds</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">A $50 increase per video across 20 monthly projects adds $12,000 to your annual income. Negotiation skill is the highest-leverage activity in a creator&rsquo;s career.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F6E1;&#xFE0F;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Client Quality Filter</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Creators who negotiate attract better clients. Brands that respect your pricing tend to respect your time, creative input, and revision boundaries too.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Market Calibration</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Without negotiation, you are price-taking &mdash; accepting whatever number the brand offers. With it, you are price-setting based on your actual value and market data.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Why Negotiation Matters", href: "#why-negotiation" },
+            { num: "02", text: "Knowing Your Floor", href: "#your-floor" },
+            { num: "03", text: "Anchoring Your Rates", href: "#anchoring" },
+            { num: "04", text: "Handling Pushback", href: "#pushback" },
+            { num: "05", text: "Scope Creep", href: "#scope-creep" },
+            { num: "06", text: "Raising Your Rates", href: "#raising-rates" },
+            { num: "07", text: "Volume Deals", href: "#volume-deals" },
+            { num: "08", text: "Walking Away", href: "#walking-away" },
+            { num: "09", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Why Negotiation Matters -->
+    <section class="guide-section" id="why-negotiation">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Why Negotiation Matters</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why negotiation matters more than your rate card</h2>
+
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A rate card is a starting position &mdash; negotiation determines what you actually earn</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brands expect negotiation; accepting the first offer signals inexperience</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The gap between top and bottom earners at the same skill level is almost entirely negotiation ability</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Most UGC pricing guides focus on setting rates. This one focuses on defending them. The distinction matters because having a rate card is the easy part &mdash; anyone can write numbers on a page. The hard part is what happens when a brand says &ldquo;our budget is lower,&rdquo; or asks for three extra hooks at no additional cost, or offers &ldquo;exposure&rdquo; instead of payment.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">At OKAD, we sit between creators and brands every day. We see the same patterns repeat: creators who negotiate earn 40&ndash;80% more than equally skilled creators who accept whatever is offered. That is not a small difference. Over a year of steady work, it is the difference between a side hustle and a real income.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Negotiation is not confrontation. It is a conversation about value. The best negotiations end with both sides feeling they got a fair deal &mdash; the creator earns what the work is worth, and the brand gets quality content at a price that makes their unit economics work. That outcome requires skill, not aggression.</p>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1">Agency perspective</h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Brands budget for negotiation. The first number they offer is almost never the maximum they can pay. We see this daily &mdash; the initial offer is a starting point, and creators who counter-offer professionally almost always land at a higher figure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 Knowing Your Floor -->
+    <section class="guide-section" id="your-floor">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Your Floor</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Knowing your floor: calculating true costs</h2>
+
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Your floor is the minimum rate below which a project costs you money</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Include time for pre-production, filming, editing, revisions, and admin</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Factor in equipment depreciation, software subscriptions, and self-employment taxes</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Before you can negotiate effectively, you need one number: your floor. This is the absolute minimum you can accept for a project without losing money. Every negotiation decision flows from this number &mdash; it is your walk-away point, and knowing it removes emotion from the process.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Most creators dramatically underestimate their true costs. They think about filming time and forget everything else. A typical 60-second UGC video requires 15&ndash;30 minutes of brief review, 30&ndash;60 minutes of setup and filming, 45&ndash;90 minutes of editing, and 15&ndash;30 minutes of communication and file delivery. That is 2&ndash;3.5 hours of work, not the &ldquo;quick 30-minute shoot&rdquo; many creators imagine.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Add your fixed costs: equipment depreciation (phones, lighting, microphones), software subscriptions (editing tools, cloud storage), self-employment taxes (15&ndash;30% depending on your country), and the unbilled hours you spend on outreach, portfolio updates, and admin. A creator who charges $150 per video but spends 3 hours per project and has $800/month in overhead is earning less per hour than they think.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Calculate your effective hourly rate honestly. If it falls below the minimum wage in your market, your rates are too low &mdash; and no amount of volume will fix that. Volume at an unsustainable rate just accelerates burnout.</p>
+      </div>
+    </section>
+
+    <!-- 03 Anchoring -->
+    <section class="guide-section" id="anchoring">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Anchoring</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Anchoring: how to present rates effectively</h2>
+
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Quote your rate first &mdash; the first number shapes the entire negotiation</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Present a range or tiered options to give the brand room to choose</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Frame rates around value delivered, not hours worked</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Anchoring is the most powerful tactic in any pricing conversation. The first number mentioned in a negotiation disproportionately influences the final outcome. If a brand asks &ldquo;what are your rates?&rdquo; and you say $250, the negotiation will orbit around $250. If you say $150, the brand will try to push below $150. Whoever sets the anchor controls the range.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Always try to name your price first. When a brand says &ldquo;what&rsquo;s your rate?&rdquo; do not respond with &ldquo;what&rsquo;s your budget?&rdquo; That hands them the anchor. Instead, present your standard rate confidently and let them respond. If your rate is $300 per video, say it clearly: &ldquo;My standard rate for a 30&ndash;60 second UGC video with one revision round is $300.&rdquo;</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Even better: present tiered options. Offering three packages (basic, standard, premium) shifts the conversation from &ldquo;yes or no&rdquo; to &ldquo;which one.&rdquo; It also anchors the brand to your middle tier while making the lower option feel stripped-down by comparison. Most brands will pick the middle option, which is exactly where you set your target rate.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Frame your rates around the value the brand receives, not the time you spend. &ldquo;$300 for a conversion-optimized UGC ad with a hook, body, and CTA&rdquo; sounds different from &ldquo;$300 for 3 hours of my time.&rdquo; Brands pay for outcomes &mdash; content that performs in their ad campaigns &mdash; not for your labor by the hour.</p>
+      </div>
+    </section>
+
+    <!-- 04 Handling Pushback -->
+    <section class="guide-section" id="pushback">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Pushback</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Handling common pushback</h2>
+
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">&ldquo;Our budget is $X&rdquo; &mdash; ask what scope adjustments they are open to</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">&ldquo;We&rsquo;ll give you exposure&rdquo; &mdash; politely decline unless you can quantify the value</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every objection is a negotiation signal, not a rejection</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Pushback is normal. A brand pushing back on your rate does not mean they do not want to work with you &mdash; it means they are negotiating. The worst thing you can do is immediately drop your price. That signals your initial rate was inflated, and the brand will push harder next time.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>&ldquo;Our budget is lower than that.&rdquo;</strong> This is the most common objection. Respond with curiosity, not concession: &ldquo;I understand. What budget are you working with? I can see if we can adjust the scope to make it work.&rdquo; This reframes the conversation from price reduction to scope adjustment. If they need the same deliverable at a lower price, that is a different conversation from wanting a simpler deliverable at a lower price.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>&ldquo;Other creators charge less.&rdquo;</strong> Maybe they do. Your response: &ldquo;That may be true. My pricing reflects [specific value &mdash; proven ad performance, niche expertise, fast turnaround, zero reshoots]. If those factors are not a priority for this project, a lower-cost creator may be a better fit.&rdquo; Do not disparage other creators. Let your value proposition stand on its own.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>&ldquo;We can offer exposure / affiliate / future paid work.&rdquo;</strong> Exposure has value only when it is measurable and significant. A brand with 500 followers offering exposure is offering nothing. A brand with 2 million engaged followers featuring your content might genuinely drive business. Ask for specifics: what platform, what audience size, what format, what duration. If they cannot answer those questions, the exposure is not real.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>&ldquo;Can you do a test video at a lower rate?&rdquo;</strong> Paid tests are acceptable &mdash; unpaid tests are not. If a brand wants a test, offer a single video at a 15&ndash;20% discount with a written commitment to book the full package at your standard rate if the test performs. Never produce free content as a &ldquo;trial.&rdquo;</p>
+      </div>
+    </section>
+
+    <!-- 05 Scope Creep -->
+    <section class="guide-section" id="scope-creep">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Scope Creep</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Scope creep: protecting your time</h2>
+
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Define revision limits, hook variations, and format changes in the contract</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Additional requests beyond the agreed scope are new line items, not favors</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Politely restate the scope before doing any extra work</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Scope creep is the silent rate killer. You agree to three videos at $250 each, and somewhere between delivery and final approval the brand asks for two extra hooks, a different aspect ratio, and &ldquo;just one more version with a different opening.&rdquo; Each request is small on its own. Together, they turn a $750 project into ten hours of unpaid work.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Prevention starts before filming. Your contract or written agreement should specify: the number of final deliverables, the number of revision rounds included (we recommend capping at two), what constitutes a &ldquo;revision&rdquo; versus a &ldquo;new concept,&rdquo; and the rate for additional work beyond the agreed scope. When these terms are written down, scope creep becomes a simple conversation: &ldquo;That falls outside our agreed scope. I can add it for $X.&rdquo;</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The script for handling scope creep mid-project: &ldquo;Happy to do that. Just to confirm &mdash; our original agreement covered [specific deliverables]. This additional [hook/format/version] would be [rate]. Want me to add it?&rdquo; This is professional, not adversarial. Most brands respect it because they have budgets and need to track costs too.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The creators who struggle most with scope creep are the ones who want to be &ldquo;easy to work with.&rdquo; Being easy to work with means delivering quality on time and communicating clearly. It does not mean doing free work. Brands that push for unlimited revisions at a fixed price are not looking for a partner &mdash; they are looking for cheap labor.</p>
+      </div>
+    </section>
+
+    <!-- 06 Raising Your Rates -->
+    <section class="guide-section" id="raising-rates">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Rate Increases</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">When and how to raise your rates</h2>
+
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Raise rates when you are consistently booked at 80%+ capacity</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Give existing clients 30 days notice and frame the increase around value growth</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Expect to lose 10&ndash;20% of clients &mdash; the remaining ones pay more, so your revenue still grows</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">There are three clear signals that it is time to raise your rates. First, you are consistently turning down work because your schedule is full. If you are booked at 80%+ capacity for two or more consecutive months, the market is telling you your price is below your value. Second, your portfolio has grown significantly &mdash; more proven results, higher-profile brands, better-performing content. Third, your costs have increased (software, equipment, taxes), and your margins are shrinking.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">For new clients, simply update your rate card and present the new prices. No explanation needed. New clients have no frame of reference for your old rates. For existing clients, give 30 days written notice: &ldquo;Starting [date], my standard rate will be [new rate]. This reflects [brief reason &mdash; expanded portfolio, increased demand, additional value I am providing]. I wanted to give you advance notice so we can plan accordingly.&rdquo;</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">You will lose some clients. That is the point. If you raise your rate by 25% and lose 15% of your clients, you are earning more money with fewer projects and less stress. The clients who stay are the ones who value your work. The ones who leave were only staying because you were cheap.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">A common mistake: raising rates only once a year in a big jump. Instead, raise incrementally &mdash; 10&ndash;15% every 4&ndash;6 months as your portfolio and demand justify it. Small, frequent increases are easier for clients to absorb and keep your pricing aligned with your growing value.</p>
+      </div>
+    </section>
+
+    <!-- 07 Volume Deals -->
+    <section class="guide-section" id="volume-deals">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Volume Deals</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Volume deals: structuring package pricing</h2>
+
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Volume discounts should reward commitment, not desperation</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Structure packages with a minimum commitment and defined deliverables per batch</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Never discount more than 25&ndash;30% from your standard per-video rate</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Volume deals are one of the most effective ways to build predictable income as a creator. A brand that commits to 10&ndash;20 videos per month at a discounted per-unit rate is worth more than sporadic one-off projects at full price. The key is structuring the deal so the discount reflects real value exchange, not just a lower rate because the brand asked for one.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">A good volume package has three components: a minimum monthly or quarterly commitment (number of videos), a per-unit rate that reflects the guaranteed volume (typically 15&ndash;25% below your standard one-off rate), and clear terms for what happens if the brand orders fewer than the committed amount. Without a minimum commitment, you are just offering a discount with no reciprocal guarantee.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Example structure for a creator with a $300 standard rate:</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Package</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Videos/month</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Per video</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Monthly total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">One-off</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1&ndash;3</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$300</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$300&ndash;$900</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Starter</td><td class="px-4 py-2.5 border-b border-border text-ink-2">5</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$255 (&minus;15%)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$1,275</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Growth</td><td class="px-4 py-2.5 border-b border-border text-ink-2">10</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$240 (&minus;20%)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$2,400</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Scale</td><td class="px-4 py-2.5 border-b border-border text-ink-2">20+</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$225 (&minus;25%)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$4,500+</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Notice the discount tops out at 25%. Going deeper &mdash; say 40&ndash;50% off &mdash; signals that your standard rate is inflated. Brands will anchor to the discounted price and resist paying full rate in the future. Also, require 3-month minimums for package pricing. If a brand can dip in for one discounted month and leave, it is not a real volume deal.</p>
+      </div>
+    </section>
+
+    <!-- 08 Walking Away -->
+    <section class="guide-section" id="walking-away">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Walking Away</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Walking away: when the deal is not worth it</h2>
+
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A bad deal does not become good with enough volume</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Red flags: unlimited revisions, no contract, payment upon &ldquo;satisfaction,&rdquo; perpetual rights at a flat fee</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Saying no to bad deals creates space for good ones</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The willingness to walk away is the strongest negotiating position you can have. If you genuinely cannot say no, you have no leverage. Every creator needs a clear set of deal-breakers &mdash; conditions under which no amount of negotiation will make the project worth taking.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Walk away when: the offered rate falls below your floor (the number from section 02), the brand refuses to put terms in writing, the contract demands perpetual worldwide rights at a flat fee with no usage premium, the brand expects unlimited revisions with no cap, or payment is contingent on subjective &ldquo;satisfaction&rdquo; with no objective criteria. These are not negotiating positions &mdash; they are signs the brand does not value creator work.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">How to walk away gracefully: &ldquo;Thank you for considering me for this project. Based on the scope and budget, I do not think I am the right fit. I would be happy to revisit if your budget or requirements change.&rdquo; This is professional, leaves the door open, and does not burn a bridge. Some of the best client relationships we have seen started with a polite decline that impressed the brand enough to come back with better terms.</p>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The hardest part about walking away is the fear that nothing better will come along. But in our experience, creators who hold their boundaries consistently attract better clients faster than creators who accept everything. Your reputation is built on the projects you take &mdash; and the ones you do not.</p>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1">OKAD&rsquo;s rule</h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">We counsel our creators to decline any deal that requires more than 20% price concession without a corresponding scope reduction. If the math does not work, the relationship will not either.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "How do I respond when a brand asks me to name my price first?", a: "Name it. The first number shapes the negotiation, so you want to set the anchor. State your rate clearly and confidently: 'My standard rate for a 30–60 second UGC video with one revision round is $X.' If you are uncomfortable picking a single number, present three tiered options. Never deflect with 'what's your budget?' — that hands the anchor to the other side." },
+          { q: "Should I negotiate on price or scope?", a: "Scope first, price second. If a brand cannot meet your rate, ask what deliverables you can adjust: fewer revision rounds, shorter video length, raw footage instead of edited. Reducing scope preserves your per-hour rate while giving the brand a way to work within their budget. Only reduce price if the scope stays the same and the brand offers something valuable in return — guaranteed volume, long-term contract, or usage rights that benefit you." },
+          { q: "What if I already quoted a low rate and want to raise it with an existing client?", a: "Be direct. Send a message 30 days before the next project: 'Starting next month, my rate for this type of content will be $X. This reflects my updated portfolio and current market rates.' Do not apologize or over-explain. If the client pushes back, offer to honor the old rate for one final project as a transition. Most clients who value your work will accept a reasonable increase." },
+          { q: "Is it unprofessional to decline a project because the pay is too low?", a: "No. It is unprofessional to accept a rate you resent, deliver mediocre work because you are unmotivated, and create a strained relationship where neither side is satisfied. Declining politely and recommending another creator at a lower price point is one of the most professional things you can do. It protects your standards and helps the brand find the right fit." },
+          { q: "Can OKAD help me set my rates and find brand deals?", a: "Yes. We manage pricing, negotiations, and brand relationships for our creator network. If you are a UGC creator looking for consistent work at fair rates, reach out at olga@okad.agency. We handle the business side so you can focus on creating." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section style="padding:60px 24px;border-top:1px solid var(--border);">
+      <div style="max-width:960px;margin:0 auto;">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Keep Reading</div>
+        <h2 class="font-display text-[28px] font-bold text-ink mb-6">Related Guides</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;">
+          <a href="/ugc-rates" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
+            <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Pricing</div>
+            <div class="font-display text-[16px] font-semibold text-ink mb-1.5">UGC Creator Rates</div>
+            <div class="text-[13px] text-ink-2 leading-relaxed">Detailed rate benchmarks by experience level, niche, and deliverable type.</div>
+          </a>
+          <a href="/ugc-contract" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
+            <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Contracts</div>
+            <div class="font-display text-[16px] font-semibold text-ink mb-1.5">UGC Contract Template</div>
+            <div class="text-[13px] text-ink-2 leading-relaxed">Essential clauses for usage rights, payment terms, and revision caps.</div>
+          </a>
+          <a href="/ugc-deals" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
+            <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Deals</div>
+            <div class="font-display text-[16px] font-semibold text-ink mb-1.5">How to Get UGC Brand Deals</div>
+            <div class="text-[13px] text-ink-2 leading-relaxed">From zero deals to reliable monthly income &mdash; a step-by-step guide.</div>
+          </a>
+          <a href="/brand-pitch" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
+            <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Outreach</div>
+            <div class="font-display text-[16px] font-semibold text-ink mb-1.5">How to Pitch Brands as a UGC Creator</div>
+            <div class="text-[13px] text-ink-2 leading-relaxed">Cold outreach templates, portfolio positioning, and follow-up sequences.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to earn what your content is worth?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Whether you are setting rates for the first time or renegotiating with existing clients, we can help. OKAD works with 700+ creators and handles the pricing conversations so you do not have to.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailNegotiation} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get pricing advice &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on negotiation patterns observed across hundreds of UGC creator engagements managed by OKAD Agency. The scripts, tactics, and pricing structures reflect real-world outcomes from 2025&ndash;2026. Individual results depend on niche, experience level, and market conditions. This is not financial or legal advice &mdash; consult appropriate professionals for contract and tax matters.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "UGC Pricing Negotiation: How to Set & Defend Your Rates | OKAD",
+      "description": "A creator's guide to negotiating UGC rates with confidence. Scripts, tactics, when to say no, and how to raise prices without losing clients. From an agency managing 700+ creators.",
+      "url": "https://okad.cc/ugc-pricing-negotiation/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "OKAD Agency",
+        "url": "https://okad.cc"
+      },
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://okad.cc/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "UGC Pricing Negotiation"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "How do I respond when a brand asks me to name my price first?", "acceptedAnswer": {"@type": "Answer", "text": "Name it. The first number shapes the negotiation, so you want to set the anchor. State your rate clearly and confidently. If you are uncomfortable picking a single number, present three tiered options. Never deflect with 'what's your budget?' - that hands the anchor to the other side."}},
+        {"@type": "Question", "name": "Should I negotiate on price or scope?", "acceptedAnswer": {"@type": "Answer", "text": "Scope first, price second. If a brand cannot meet your rate, ask what deliverables you can adjust: fewer revision rounds, shorter video length, raw footage instead of edited. Reducing scope preserves your per-hour rate while giving the brand a way to work within their budget. Only reduce price if the brand offers something valuable in return - guaranteed volume, long-term contract, or beneficial usage rights."}},
+        {"@type": "Question", "name": "What if I already quoted a low rate and want to raise it with an existing client?", "acceptedAnswer": {"@type": "Answer", "text": "Be direct. Send a message 30 days before the next project stating your new rate and a brief reason. Do not apologize or over-explain. If the client pushes back, offer to honor the old rate for one final project as a transition. Most clients who value your work will accept a reasonable increase."}},
+        {"@type": "Question", "name": "Is it unprofessional to decline a project because the pay is too low?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is unprofessional to accept a rate you resent, deliver mediocre work because you are unmotivated, and create a strained relationship where neither side is satisfied. Declining politely and recommending another creator at a lower price point is one of the most professional things you can do."}},
+        {"@type": "Question", "name": "Can OKAD help me set my rates and find brand deals?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We manage pricing, negotiations, and brand relationships for our creator network. If you are a UGC creator looking for consistent work at fair rates, reach out at olga@okad.agency. We handle the business side so you can focus on creating."}}
+      ]
+    }
+  ]
+})} />
+</Layout>
+
+<style>
+  .guide-section {
+    border-bottom: 1px solid var(--color-border);
+    padding: 56px 0;
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.04);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    margin-bottom: 1.5rem;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section {
+      padding: 40px 0;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach((q) => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const wasOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = wasOpen ? '+' : '−';
+    });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
