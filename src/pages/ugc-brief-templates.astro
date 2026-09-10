@@ -1,0 +1,450 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailBrief = "mailto:olga@okad.agency?subject=UGC%20brief%20templates%20%E2%80%94%20tell%20us%20about%20your%20project";
+const emailGeneral = "mailto:olga@okad.agency?subject=UGC%20brief%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="How to Brief UGC Creators: Templates That Actually Work | OKAD"
+  description="Practical UGC brief templates and a step-by-step system for briefing creators. Covers hook direction, visual guidelines, format-specific templates, and how to scale briefs for high-volume production."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          UGC Briefing &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          How to Brief UGC Creators: <span class="text-accent">Templates That Actually Work</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          The brief is the most underrated part of UGC production. A great brief reduces revision rounds by 60%, speeds up delivery by days, and produces higher-converting content &mdash; because creators know exactly what you need before they hit record.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailBrief} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get brief templates &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Points Grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4CB;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Structured Briefs</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Clear briefs reduce revision rounds by 60% and cut production timelines in half.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Format-Specific</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Testimonial, unboxing, tutorial, lifestyle &mdash; each format needs a tailored brief approach.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F680;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Scale-Ready</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Master templates let you brief 50+ creators per month without sacrificing quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Why Briefs Matter", href: "#why-briefs-matter" },
+            { num: "02", text: "Anatomy of a Great Brief", href: "#anatomy" },
+            { num: "03", text: "Hook Section Breakdown", href: "#hooks" },
+            { num: "04", text: "Visual Direction Guidelines", href: "#visual-direction" },
+            { num: "05", text: "What to Include vs What to Leave Open", href: "#include-vs-open" },
+            { num: "06", text: "Brief Templates by Format", href: "#templates-by-format" },
+            { num: "07", text: "Common Briefing Mistakes", href: "#mistakes" },
+            { num: "08", text: "Scaling Briefs for Volume Production", href: "#scaling" },
+            { num: "09", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Why Briefs Matter -->
+    <section class="guide-section" id="why-briefs-matter">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Why Briefs Matter</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The single biggest factor in UGC quality</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Structured briefs reduce revision rounds by 60% on average</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Vague briefs are the #1 cause of reshoots and missed deadlines</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A 30-minute brief saves 5&ndash;10 hours of back-and-forth per video</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most brands blame creators when UGC content misses the mark. In reality, the brief is almost always the problem. A vague brief forces the creator to guess &mdash; what tone you want, how to frame the product, which claims to emphasize, what the hook should be. Every guess is a coin flip. Multiply those guesses across a 60-second video and the odds of nailing it on the first take are close to zero.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The data backs this up. Across OKAD&rsquo;s production pipeline of 700+ creators, projects with structured briefs average 1.2 revision rounds versus 3.1 rounds for projects with loose or verbal briefs. That&rsquo;s a 60% reduction in revisions &mdash; which translates directly to faster delivery, lower costs, and less creative fatigue for everyone involved.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The cost of a bad brief compounds quickly. A reshoot means re-shipping the product, re-scheduling the creator, and losing 5&ndash;7 business days. If you&rsquo;re running paid media on a deadline, that delay can tank an entire campaign launch. The brief is not paperwork &mdash; it is the foundation of your production system.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Great briefs also improve creator relationships. Creators prefer working with brands that communicate clearly. When a creator receives a well-structured brief, they can focus on what they do best &mdash; performing on camera &mdash; instead of decoding vague instructions. This leads to better content, faster turnaround, and creators who actually want to work with you again.</p>
+      </div>
+    </section>
+
+    <!-- 02 Anatomy of a Great Brief -->
+    <section class="guide-section" id="anatomy">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Anatomy of a Great Brief</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Essential components every brief needs</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Six core sections: brand overview, product info, audience, deliverables, timeline, dos/don&rsquo;ts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creators should be able to scan the entire brief in under 2 minutes</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use bullet points and headers &mdash; never walls of text</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A great UGC brief has six sections, and every section should fit on a single screen. <strong>Brand overview</strong> gives the creator context &mdash; who you are, what you sell, and your brand voice in 2&ndash;3 sentences. <strong>Product information</strong> covers the specific product being featured: name, key features, price point, and the one thing that makes it different. <strong>Target audience</strong> describes who the video is for &mdash; age, interests, pain points, and what would make them stop scrolling.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Deliverables specification</strong> is where most briefs fail. Be explicit: number of videos, aspect ratio (9:16, 1:1), duration range (15&ndash;60 seconds), number of hook variations, and whether you need raw footage or edited finals. <strong>Timeline</strong> should include the filming deadline, first draft due date, and final delivery date. <strong>Dos and don&rsquo;ts</strong> is the guardrail section &mdash; competitor mentions to avoid, claims you cannot make, required disclaimers, and any visual restrictions.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Structure the document so creators can scan it in 2 minutes flat. Use headers, bullet points, and bold text for key information. Put the most important instructions first. Creators receive dozens of briefs &mdash; if yours is a 5-page essay, they will skim it and miss critical details. One page is ideal. Two pages is the maximum for any single deliverable.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Include a section at the top labeled &ldquo;Quick Reference&rdquo; with the absolute essentials: product name and pronunciation, deliverable count, aspect ratio, duration, and deadline. This gives the creator everything they need to start planning before they read the full brief.</p>
+      </div>
+    </section>
+
+    <!-- 03 Hook Section Breakdown -->
+    <section class="guide-section" id="hooks">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Hook Section Breakdown</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The first 3 seconds determine everything</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The hook is the single most important element in any UGC ad</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Give direction without over-scripting &mdash; provide the framework, not the exact words</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Three proven frameworks: question hook, bold claim, problem-agitation</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">If the <a href="/hook-rate" class="text-accent hover:underline">hook rate</a> is bad, the rest of the video is irrelevant &mdash; nobody will see it. This makes the hook section of your brief the highest-leverage part of the entire document. But there is a tension: you need to give the creator enough direction to nail the opening, without scripting it so tightly that it sounds forced and kills authenticity.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The solution is to brief hooks using frameworks, not scripts. Give the creator the structure and intent of the hook, then let them deliver it in their own voice. Three frameworks consistently perform across categories. The <strong>question hook</strong> opens with a direct question that targets a specific pain point: &ldquo;Why does your skincare routine stop working after two weeks?&rdquo; The <strong>bold claim hook</strong> makes a specific, attention-grabbing statement: &ldquo;This $12 serum replaced my entire medicine cabinet.&rdquo; The <strong>problem-agitation hook</strong> describes a frustrating situation the viewer recognizes: &ldquo;I used to spend 45 minutes every morning on my hair until I found this.&rdquo;</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">In the brief, write 2&ndash;3 hook options per framework and label them clearly. Tell the creator: &ldquo;Choose one of these or create your own version using the same structure.&rdquo; This gives them creative freedom within a proven format. Always request 3&ndash;5 hook variations per video concept &mdash; you want options to test in paid media.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Avoid writing hooks that sound like ad copy. Hooks that work in UGC sound like something a real person would say to a friend. If your hook reads like a headline from a landing page, it will feel scripted on camera and viewers will scroll past it. The brief should specify the <em>intent</em> of the hook (stop the scroll by calling out a problem) rather than the exact phrasing.</p>
+      </div>
+    </section>
+
+    <!-- 04 Visual Direction Guidelines -->
+    <section class="guide-section" id="visual-direction">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Visual Direction Guidelines</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Communicate look and feel without a moodboard</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Reference videos are more effective than written descriptions for visual direction</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Specify lighting, framing, and setting &mdash; skip wardrobe unless brand-critical</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Two reference videos with timestamps beat a 10-slide moodboard</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most brands either skip visual direction entirely or over-produce a 20-page moodboard that no creator reads. The sweet spot is 2&ndash;3 reference videos with specific timestamps and a short list of visual requirements. Link to existing ads or organic posts that match the aesthetic you want, and add a note like: &ldquo;See 0:02&ndash;0:08 for the framing style we like&rdquo; or &ldquo;Notice the natural lighting &mdash; no ring lights.&rdquo;</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For written visual direction, focus on three elements: <strong>lighting</strong> (natural daylight, warm indoor, overhead kitchen light), <strong>framing</strong> (talking head, over-the-shoulder, product close-up), and <strong>setting</strong> (bathroom counter, kitchen table, car interior, walking outside). These three variables account for 80% of the visual feel. Wardrobe only matters if your brand has a specific aesthetic &mdash; most UGC performs better when creators wear what they normally wear.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">When to use reference videos vs. written descriptions: use references when the visual style is nuanced or hard to describe (e.g., &ldquo;GRWM energy but slightly elevated&rdquo;). Use written descriptions when the direction is straightforward (e.g., &ldquo;film at your kitchen counter with natural light&rdquo;). Combining both is ideal &mdash; a short written list plus one reference video gives the creator maximum clarity with minimum reading.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">One common mistake: sending reference videos of polished studio content and expecting UGC creators to replicate it. Choose references that match the production level you actually want. If you are hiring UGC creators for authentic, phone-shot content, your references should be authentic, phone-shot content &mdash; not a Nike commercial.</p>
+      </div>
+    </section>
+
+    <!-- 05 What to Include vs What to Leave Open -->
+    <section class="guide-section" id="include-vs-open">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; What to Include vs What to Leave Open</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The balance between control and authenticity</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Mandatory: product name pronunciation, key claims, CTA, platform specs</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Leave open: tone of voice, pacing, setting, personal anecdotes</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Over-scripting kills the authenticity that makes UGC outperform studio ads</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The entire value of UGC is that it feels real. If you script every word, you end up with an actor reading a teleprompter &mdash; and audiences can tell instantly. The brief needs to lock down what matters legally and strategically while leaving space for the creator&rsquo;s personality. This is the hardest balance in UGC production, and most brands err on the side of too much control.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Here is what must be specified in every brief: the correct pronunciation of your product and brand name, the exact claims the creator is allowed to make (especially for regulated categories like supplements, finance, or health), the call-to-action (link in bio, swipe up, visit site), and the technical specs (aspect ratio, duration, deliverable count). These are non-negotiable because getting them wrong means reshoots or legal risk.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Here is what you should leave open: the creator&rsquo;s natural speaking tone, the pacing and rhythm of the video, the specific setting and background, personal stories or anecdotes about using the product, and transitional phrases between sections. The more a creator can use their own words, the more authentic the final video will feel &mdash; and authenticity is the entire reason UGC works in paid media.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A useful test: read your brief out loud. If it sounds like a script, you have over-specified. If it sounds like a set of guidelines, you are in the right zone. The brief should tell the creator <em>what</em> to communicate and <em>why</em>, but not <em>how</em> to say it. &ldquo;Mention that the product saved you time on your morning routine&rdquo; is a guideline. &ldquo;Say: This product saved me 20 minutes every morning&rdquo; is a script.</p>
+      </div>
+    </section>
+
+    <!-- 06 Brief Templates by Format -->
+    <section class="guide-section" id="templates-by-format">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Brief Templates by Format</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Different formats need different briefs</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Four core formats: testimonial, unboxing, tutorial, lifestyle</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each format changes the hook structure, pacing, and visual requirements</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Keep a master brief template and adapt it per format</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Testimonial briefs</strong> focus on the creator&rsquo;s personal experience with the product. The hook should establish a relatable problem (&ldquo;I&rsquo;ve tried everything for my acne&rdquo;). The body covers the discovery moment, the experience of using the product, and the result. Key brief elements: specify which benefit to emphasize, whether to show before/after, and the emotional tone (relieved, excited, matter-of-fact). Duration: 30&ndash;60 seconds. Keep it conversational &mdash; this format dies if it feels rehearsed.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Unboxing briefs</strong> are built around visual reveal and first impressions. The hook should create anticipation (&ldquo;This just arrived and I&rsquo;m so excited to try it&rdquo;). Brief the creator on how to handle the packaging &mdash; slow reveal vs. quick tear, close-ups of branding, genuine reactions. Specify whether you want first-use footage in the same video. Duration: 30&ndash;45 seconds. Unboxing briefs should note which product details to highlight as they appear (texture, color, size comparison).</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Tutorial briefs</strong> require the most structure because the creator is teaching a process. List the exact steps to demonstrate, the order of operations, and any common mistakes to call out. The hook should promise a clear outcome (&ldquo;How to get glass skin in 3 steps&rdquo;). Duration: 30&ndash;90 seconds depending on complexity. Tutorial briefs need the most visual direction &mdash; specify camera angles for each step, especially close-ups during application or assembly.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Lifestyle briefs</strong> are the most open-ended format and require the least scripting. The product appears naturally within the creator&rsquo;s routine &mdash; morning coffee, gym bag dump, desk setup. The hook is situational (&ldquo;A day in my life as a...&rdquo;). Brief the creator on when and how the product should appear, but let them integrate it into their actual routine. Duration: 15&ndash;45 seconds. The key instruction: the product should feel like a natural part of the scene, not the centerpiece.</p>
+      </div>
+    </section>
+
+    <!-- 07 Common Briefing Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Common Briefing Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What brands get wrong (and how to fix it)</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The 8 most common briefing mistakes &mdash; most are fixable in 15 minutes</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Too vague and too detailed are equally damaging</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Missing platform specs and usage rights cause the most expensive errors</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>1. Too vague.</strong> &ldquo;Make a fun video about our product&rdquo; is not a brief. Without direction on hook style, key messages, and visual approach, the creator is guessing &mdash; and guessing means revisions. <strong>2. Too long.</strong> A 5-page brief with paragraph-length instructions for every scene overwhelms creators. They skim it, miss key details, and you end up with the same revision cycles you were trying to avoid. Keep it to 1&ndash;2 pages maximum.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>3. Conflicting direction.</strong> &ldquo;Be authentic and natural, but make sure to say these exact 4 sentences.&rdquo; Contradictory instructions paralyze creators. Pick a lane: either give a script or give guidelines. <strong>4. No reference examples.</strong> Describing the visual style you want in words is inefficient. A single reference video with a timestamp communicates more than a page of written direction. Always include at least one reference.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>5. Ignoring platform specs.</strong> Briefing for a &ldquo;social media video&rdquo; without specifying 9:16 aspect ratio, 15&ndash;60 second duration, or safe zones for text overlays guarantees re-edits. Specify the platform and format in the Quick Reference section. <strong>6. Forgetting usage rights.</strong> If you plan to run the video as a paid ad, the brief and contract must specify this upfront. Discovering after delivery that you need ad usage rights creates legal issues and delays.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>7. Not specifying deliverable count.</strong> &ldquo;We need a few videos&rdquo; leads to scope creep disputes. State the exact number: &ldquo;3 videos, each 30&ndash;45 seconds, 9:16, with 3 hook variations per video.&rdquo; <strong>8. Skipping the dos and don&rsquo;ts.</strong> Every brand has things creators must avoid &mdash; competitor mentions, unsubstantiated health claims, profanity, specific visual elements. If you don&rsquo;t list them in the brief, you will discover them in the review round, which means reshoots.</p>
+      </div>
+    </section>
+
+    <!-- 08 Scaling Briefs for Volume Production -->
+    <section class="guide-section" id="scaling">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Scaling Briefs for Volume Production</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to brief 50+ creators without losing quality</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Master brief + per-creator brief = scalable system</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Version control and naming conventions prevent chaos at 50+ videos/month</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">OKAD manages briefs across 700+ creators using a two-layer template system</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">When you are producing 20&ndash;50+ videos per month, writing a custom brief for each creator from scratch is not sustainable. The answer is a two-layer template system: a <strong>master brief</strong> that covers everything constant across all videos (brand overview, product info, target audience, dos/don&rsquo;ts, usage rights), and a <strong>per-creator brief</strong> that covers what changes (assigned format, specific hook direction, individual deliverable specs, personalized notes based on their portfolio style).</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The master brief is created once and updated monthly. It lives in a shared Google Doc or Notion page that all creators can access. The per-creator brief is a short document &mdash; often just half a page &mdash; that references the master brief and adds the assignment-specific details. This approach cuts briefing time from 30 minutes per creator to 5&ndash;10 minutes while maintaining consistency across all deliverables.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Version control becomes critical at scale. Use a clear naming convention: <code>[Brand]_[Format]_[Version]_[Date]</code> &mdash; for example, <code>Acme_Testimonial_v3_Sep2026</code>. When you update the master brief, increment the version number and add a changelog at the top so creators know what changed. Without version control, you will inevitably have creators working from outdated briefs, which means off-brand content and wasted production cycles.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">At OKAD, we manage briefs across 700+ creators using this two-layer system. The master brief is maintained by the production lead and reviewed weekly. Per-creator briefs are generated semi-automatically based on the creator&rsquo;s assigned format, past performance data, and any brand-specific notes from previous rounds. The result: consistent quality at <a href="/high-volume-ugc" class="text-accent hover:underline">high-volume production</a> speeds, with briefing overhead that does not scale linearly with creator count.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">One final tip for scale: build a brief feedback loop. After each production round, note which sections of the brief caused confusion or led to revision requests. Update the master brief accordingly. Over time, your brief becomes a living document that encodes everything your team has learned about producing effective content &mdash; and that institutional knowledge is far more valuable than any individual video.</p>
+      </div>
+    </section>
+
+    <!-- 09 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "How long should a UGC brief be?", a: "One to two pages maximum, in a scannable format with headers, bullet points, and bold text for key information. The creator should be able to read the entire brief in under 2 minutes and start planning immediately. If your brief is longer than two pages for a single deliverable, you are over-specifying. Use a Quick Reference section at the top with the absolute essentials: product name, deliverable count, aspect ratio, duration, and deadline." },
+          { q: "Should I script the entire video for the creator?", a: "No. Give structure, not scripts. Specify the hook framework, key messages to hit, and the CTA, but let the creator deliver everything in their own words and tone. Over-scripted UGC sounds forced and performs worse than authentic, creator-driven content. The entire value proposition of UGC is that it feels real. If you want word-for-word control, hire an actor, not a UGC creator." },
+          { q: "What file format should I deliver the brief in?", a: "Google Doc or Notion page, not PDF. Editable formats let you update the brief in real time if details change, and the creator always sees the latest version. PDFs become outdated the moment you update a detail, and you have no way of knowing which version the creator downloaded. For high-volume programs, a shared Notion workspace with a template database is the most efficient setup." },
+          { q: "How many hook variations should I request per video?", a: "Three to five hook variations per concept. This gives your media buying team enough options to test in paid media without overwhelming the creator. Each hook variation should use a different framework (question, bold claim, problem-agitation) or angle. Hooks are the highest-leverage variable in ad performance, so testing multiple hooks per video is the fastest path to finding winners." },
+          { q: "Can I reuse the same brief for different products?", a: "Yes, with a master template approach. Create a master brief template that covers your brand overview, target audience, general dos and don'ts, and usage rights. Then create product-specific modules that slot into the template with product details, key claims, and unique selling points. This lets you brief new products in 10 to 15 minutes instead of starting from scratch each time." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Related Guides -->
+  <section style="padding:60px 24px;border-top:1px solid var(--border);">
+    <div style="max-width:960px;margin:0 auto;">
+      <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Keep Reading</div>
+      <h2 class="font-display text-[28px] font-bold text-ink mb-6">Related Guides</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;">
+        <a href="/ugc-for-brands" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">UGC for Brands</div>
+          <div class="font-display text-[16px] font-semibold text-ink mb-1.5">Hiring &amp; Managing UGC Creators</div>
+          <div class="text-[13px] text-ink-2 leading-relaxed">Complete guide to hiring, vetting, and managing UGC creators for your brand.</div>
+        </a>
+        <a href="/modular-creative" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Modular Creative</div>
+          <div class="font-display text-[16px] font-semibold text-ink mb-1.5">Building Modular Ad Systems</div>
+          <div class="text-[13px] text-ink-2 leading-relaxed">How to build modular ad systems that multiply creative output from every shoot.</div>
+        </a>
+        <a href="/hook-rate" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Hook Rate</div>
+          <div class="font-display text-[16px] font-semibold text-ink mb-1.5">Thumb-Stop Ratio Guide</div>
+          <div class="text-[13px] text-ink-2 leading-relaxed">Complete guide to measuring and improving the first 3 seconds of your video ads.</div>
+        </a>
+        <a href="/high-volume-ugc" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
+          <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">High-Volume UGC</div>
+          <div class="font-display text-[16px] font-semibold text-ink mb-1.5">Scaling Creator Content Production</div>
+          <div class="text-[13px] text-ink-2 leading-relaxed">How to produce 50&ndash;300+ creator videos per month with a systematic production pipeline.</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-10">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+        <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need help briefing creators at scale?</h2>
+        <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD manages briefs for 700+ creators across every UGC format. Let us handle the production pipeline &mdash; from brief development to final delivery.</p>
+        <div class="flex gap-3 justify-center flex-wrap">
+          <a href={emailBrief} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get brief templates &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "How to Brief UGC Creators: Templates That Actually Work",
+      "description": "Practical UGC brief templates and a step-by-step system for briefing creators. Covers hook direction, visual guidelines, format-specific templates, and how to scale briefs for high-volume production.",
+      "url": "https://okad.cc/ugc-brief-templates/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "OKAD Agency",
+        "url": "https://okad.cc"
+      },
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://okad.cc/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "UGC Brief Templates"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long should a UGC brief be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One to two pages maximum, in a scannable format with headers, bullet points, and bold text for key information. The creator should be able to read the entire brief in under 2 minutes and start planning immediately. If your brief is longer than two pages for a single deliverable, you are over-specifying."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I script the entire video for the creator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Give structure, not scripts. Specify the hook framework, key messages to hit, and the CTA, but let the creator deliver everything in their own words and tone. Over-scripted UGC sounds forced and performs worse than authentic, creator-driven content."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What file format should I deliver the brief in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Doc or Notion page, not PDF. Editable formats let you update the brief in real time if details change, and the creator always sees the latest version. PDFs become outdated the moment you update a detail."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many hook variations should I request per video?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three to five hook variations per concept. This gives your media buying team enough options to test in paid media without overwhelming the creator. Each hook variation should use a different framework or angle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I reuse the same brief for different products?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with a master template approach. Create a master brief template that covers your brand overview, target audience, general dos and don'ts, and usage rights. Then create product-specific modules that slot into the template with product details, key claims, and unique selling points."
+          }
+        }
+      ]
+    }
+  ]
+})} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

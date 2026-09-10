@@ -1,0 +1,396 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailSubject = "mailto:olga@okad.agency?subject=UGC%20Video%20Production%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="How to Make UGC Videos That Convert: Production Guide | OKAD"
+  description="A data-backed guide to UGC video production that drives conversions. Covers hook frameworks, scripting, filming, editing, sound strategy, and systematic testing &mdash; from OKAD's 10,000+ ad library."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          How to Make UGC Videos <span class="text-accent">That Convert</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Most UGC looks authentic but fails to sell. This guide breaks down the exact frameworks, filming techniques, and editing patterns that separate scroll-stopping content from high-converting UGC video production &mdash; backed by data from 10,000+ ads we have delivered.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailSubject} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Order UGC videos &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>10,000+ ads delivered</span>
+          <span>700+ creators</span>
+          <span>Direct response</span>
+          <span>Data-driven</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why UGC outperforms -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Why UGC Videos Outperform</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Native Feel</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">UGC blends into feeds instead of triggering ad-skip reflexes &mdash; driving 2&ndash;3x higher watch-through rates than polished studio spots.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4CA;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Proven ROI</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Brands running UGC ads see an average 30&ndash;50% lower CPA compared to traditional video, because trust converts faster than production value.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x26A1;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Rapid Iteration</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">UGC videos ship in days, not weeks. Fast production cycles let you test 10+ concepts in the time a studio delivers one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "What Makes UGC Convert (Data)", href: "#what-converts" },
+            { num: "02", text: "The Hook Framework", href: "#hook-framework" },
+            { num: "03", text: "Scripting for Direct Response", href: "#scripting" },
+            { num: "04", text: "Filming Techniques That Feel Authentic", href: "#filming" },
+            { num: "05", text: "Editing for Performance", href: "#editing" },
+            { num: "06", text: "Sound and Music Strategy", href: "#sound-music" },
+            { num: "07", text: "Testing Variations Systematically", href: "#testing" },
+            { num: "08", text: "Case Study Breakdowns", href: "#case-studies" },
+            { num: "09", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 01 -->
+    <section class="guide-section" id="what-converts">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Data</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What Makes UGC Videos Convert</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Ads that feel like organic posts see 2.4x higher click-through rates on average</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The first 2 seconds determine 70% of a video's conversion potential</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Conversion-focused UGC follows a repeatable structure, not random authenticity</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">When we analyze performance data across 10,000+ UGC ads delivered through OKAD, a clear pattern emerges: the videos that convert are not simply the most authentic-looking ones. They are the ones that combine perceived authenticity with deliberate persuasion architecture. A creator talking casually to camera can outperform a $50K studio spot &mdash; but only if the script, pacing, and visual cues are engineered for action.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The data shows three metrics matter above all: <a href="/hook-rate" class="text-accent hover:underline">hook rate</a> (percentage of viewers who watch past 3 seconds), hold rate (percentage reaching the midpoint), and completion-to-click ratio. Top-performing UGC videos consistently achieve a hook rate above 40%, a hold rate above 25%, and a click-through rate 2&ndash;3x the platform median. These numbers are not aspirational &mdash; they are benchmarks our 700+ creator network hits regularly through structured briefs.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">One counterintuitive finding: production quality has almost zero correlation with conversion rate once you cross a minimum clarity threshold. A well-lit iPhone video with strong scripting will outperform a cinema-grade spot with weak messaging every time. The variable that matters is structure &mdash; specifically, whether the video follows a hook-problem-solution-CTA arc or rambles without purpose.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Platform also matters. On TikTok, vertical UGC videos under 30 seconds with text overlays convert 35% better than longer formats. On Meta, 15&ndash;45 second videos with a strong opening pattern perform best. YouTube Shorts favors slightly longer UGC (25&ndash;50 seconds) with a clear payoff moment. Every platform rewards native-feeling content, but the definition of "native" differs &mdash; and your UGC video production process needs to account for that from the scripting stage.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Vertical matters more than most brands realize. A beauty UGC video that works on TikTok rarely translates directly to a B2B SaaS audience on LinkedIn or YouTube. The tone, pacing, visual style, and even vocabulary shift by category. Data from our library shows that vertical-specific creators &mdash; people who genuinely use and understand products in a given niche &mdash; outperform generalist creators by roughly 25% on conversion metrics, even when reading the exact same script.</p>
+      </div>
+    </section>
+
+    <!-- Section 02 -->
+    <section class="guide-section" id="hook-framework">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Hooks</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The Hook Framework</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use one of five proven hook types: question, statement, visual interrupt, POV setup, or pattern break</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The hook must create an open loop the viewer needs closed</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Test 3&ndash;5 hooks per script to find a winner before scaling spend</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Your <a href="/hook-rate" class="text-accent hover:underline">hook rate</a> is the single most important metric in UGC video production. If viewers scroll past your first 2 seconds, nothing else matters &mdash; your script, your offer, your CTA never get seen. At OKAD, we treat the hook as a separate creative unit: it gets its own brief, its own variations, and its own testing budget.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The five hook types that consistently perform across our data: (1) The question hook &mdash; "Why is everyone switching to [product]?" creates curiosity. (2) The bold statement &mdash; "This $12 product replaced my entire skincare routine" promises a payoff. (3) The visual interrupt &mdash; an unexpected action in the first frame (pouring, unboxing, a before/after cut) stops the scroll physically. (4) The POV setup &mdash; "POV: you just found out about..." leverages platform-native language. (5) The pattern break &mdash; starting mid-sentence or with an unusual camera angle disrupts autopilot scrolling.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Each hook type works by creating an open loop: a question the viewer needs answered, a claim they want verified, or a visual sequence they want completed. The key rule is that the hook must connect to the product. A sensational hook that has nothing to do with your offer will generate views but tank your conversion rate. We have seen this repeatedly &mdash; high hook rates paired with low click-through rates always trace back to disconnected hooks.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For systematic testing, we recommend producing 3&ndash;5 hook variations per script body. Keep the middle and end of the video identical and swap only the first 3 seconds. Run each variation at $20&ndash;30/day for 48 hours, then kill the underperformers and scale the winner. This approach &mdash; which we detail in our <a href="/modular-creative" class="text-accent hover:underline">modular creative</a> guide &mdash; lets you isolate hook performance cleanly without confounding variables.</p>
+      </div>
+    </section>
+
+    <!-- Section 03 -->
+    <section class="guide-section" id="scripting">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Script</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Scripting for Direct Response</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Follow the Hook &rarr; Problem &rarr; Solution &rarr; Proof &rarr; CTA arc</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Write at a 6th-grade reading level &mdash; shorter sentences convert better</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Include exactly one CTA &mdash; multiple CTAs split attention and reduce conversions</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Great UGC videos are written, not improvised. Even when the delivery sounds spontaneous, the highest-converting videos follow a deliberate script structure. The framework we use across our 700+ creator network is Hook &rarr; Problem &rarr; Solution &rarr; Proof &rarr; CTA. Each section gets a specific time allocation: hook (0&ndash;3s), problem (3&ndash;8s), solution (8&ndash;18s), proof (18&ndash;25s), CTA (25&ndash;30s). These timings flex slightly, but the proportions stay consistent.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The problem section is where most scripts fail. Brands want to jump straight to features, but viewers need to feel understood first. A line like "I was so tired of foundations that oxidize by noon" does more selling than any feature list because it mirrors the viewer's internal monologue. Write the problem as if you are reading the customer's mind, using their exact language. Pull phrasing from product reviews, Reddit threads, and TikTok comments &mdash; real customer language always outperforms marketing copy.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For the solution section, lead with the transformation, not the mechanism. "Now my skin actually looks like skin" beats "contains hyaluronic acid and niacinamide." Features can appear as secondary proof points, but the emotional shift is what drives the click. Keep sentences under 12 words when possible. Our data shows scripts at a 6th-grade reading level convert 22% better than those written at a 10th-grade level &mdash; not because audiences are unsophisticated, but because simple language processes faster during a scroll.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">End with a single, clear CTA. "Link in bio" or "tap the link below" outperforms clever CTAs by a wide margin. Never include two actions ("follow and click the link") because split attention kills conversion. If your <a href="/performance-creative" class="text-accent hover:underline">performance creative</a> strategy includes retargeting, your first-touch CTA should drive the click; save the follow request for the retarget layer.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">One technique that consistently lifts script quality: write the proof section before the solution. When you start with real customer results, specific numbers, or a concrete before-and-after, the solution section practically writes itself. Scripts built proof-first tend to be more grounded and less hype-driven, which aligns with the authenticity that makes UGC work in the first place.</p>
+      </div>
+    </section>
+
+    <!-- Section 04 -->
+    <section class="guide-section" id="filming">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Filming</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Filming Techniques That Feel Authentic</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Shoot on a phone, not a cinema camera &mdash; native device footage performs 40% better</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Natural lighting near a window outperforms ring lights for perceived authenticity</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Slight camera movement (handheld) signals real content, not an ad</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The paradox of UGC video production is that looking too polished kills performance. When a video feels like an ad, viewers scroll. When it feels like a friend sharing a recommendation, they watch. This does not mean you should film in the dark with shaky hands &mdash; it means you need to hit a specific quality sweet spot: clear enough to understand, casual enough to trust.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Film on a recent-model smartphone in 1080p or 4K at 30fps. Avoid 24fps (it looks cinematic, which signals "ad") and 60fps (it looks like a tech review, not a recommendation). Position the creator near a large window for soft, directional natural light. If you must use artificial lighting, bounce a single LED off a white wall rather than pointing it directly at the creator. Ring lights create a telltale catchlight in the eyes that sophisticated viewers associate with sponsored content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Camera placement matters enormously. The front-facing camera at arm's length is the native UGC position &mdash; it reads as someone talking to their phone, which is exactly what you want. For product demos, switch to the rear camera but keep it handheld with slight natural movement. A tripod-mounted product shot screams "produced content." The small imperfections &mdash; a slight wobble, a quick refocus, a casual pan &mdash; are authenticity signals that increase trust and, by extension, conversion.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Background selection is the most overlooked variable. A lived-in bedroom, a kitchen counter with items on it, or a bathroom vanity with real products all perform better than clean, styled backgrounds. The clutter signals real life. Our creators are briefed to film in their actual spaces with minimal tidying &mdash; just enough to avoid distraction, not enough to look staged. This single instruction consistently lifts perceived authenticity scores in post-test surveys.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Wardrobe matters too. Creators should wear what they would actually wear on a normal day &mdash; not brand colors, not all-black "influencer" outfits. Casual, relatable clothing reinforces the peer-recommendation framing. We ask creators to avoid logos (which cause legal issues) and busy patterns (which distract on small screens), but otherwise dress as themselves. The goal is always the same: make the viewer feel like they are watching a real person, not a spokesperson.</p>
+      </div>
+    </section>
+
+    <!-- Section 05 -->
+    <section class="guide-section" id="editing">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Editing</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Editing for Performance</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Cut every pause longer than 0.3 seconds &mdash; dead air kills retention</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Add text overlays that reinforce key points for sound-off viewers</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use jump cuts every 3&ndash;5 seconds to maintain visual momentum</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Editing is where UGC videos become conversion machines. Raw footage captures authenticity; editing injects pace. The goal is to remove all friction between the viewer and the message. Start by cutting every pause, filler word ("um," "like," "so"), and dead moment. A 3-minute raw take should compress into a 25&ndash;35 second final cut with zero wasted frames.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Jump cuts are your primary tool. Cut between sentences, between thoughts, even mid-sentence if the pacing demands it. The visual reset of a jump cut re-engages attention and mimics the rhythm viewers are conditioned to from organic TikTok and Reels content. Our editing team targets a cut every 3&ndash;5 seconds for talking-head segments and every 2&ndash;3 seconds during product demonstration sequences.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Text overlays are non-negotiable. Up to 85% of social video is watched without sound, and even sound-on viewers process text reinforcement faster than audio alone. Use bold, high-contrast captions that highlight key phrases &mdash; not full transcriptions. The text should emphasize the hook, the core benefit, and the CTA. Keep the font large enough to read on a phone screen (minimum 40px equivalent), and position it in the center-third of the frame to avoid being cropped by platform UI elements.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">B-roll inserts &mdash; quick 1&ndash;2 second clips of the product, the result, or a lifestyle moment &mdash; break visual monotony and demonstrate claims. When a creator says "the texture is incredible," cut to a close-up of the product texture for 1.5 seconds, then cut back. This technique lifts hold rate by 15&ndash;20% compared to unbroken talking-head footage, because it provides visual proof alongside verbal claims.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Color grading should be minimal. Resist the temptation to add cinematic color grades, heavy contrast, or stylized filters. Native phone footage with slight exposure and white-balance correction is ideal. If anything, lean slightly warm &mdash; warm tones feel inviting and personal. Cool-toned, desaturated grades read as editorial or branded, which triggers the same ad-avoidance response you are trying to prevent. The editing should be invisible: the viewer should not notice the craft, only feel the pace.</p>
+      </div>
+    </section>
+
+    <!-- Section 06 -->
+    <section class="guide-section" id="sound-music">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Audio</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Sound and Music Strategy</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use trending audio on organic posts; licensed lo-fi for paid UGC ads</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Background music should sit at 15&ndash;20% volume relative to voice</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Clean voice capture (phone mic within 2 feet) is the single biggest audio upgrade</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Sound strategy for UGC videos splits into two tracks: organic-first content and paid ads. For organic UGC that will later be boosted via <a href="/ugc-ads" class="text-accent hover:underline">UGC ad campaigns</a>, trending sounds and music can drive initial organic reach before the paid push begins. For content produced directly as paid creative, you need commercially licensed music to avoid takedowns and platform penalties.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Voice quality is the most underrated performance variable in UGC. A creator's voice captured cleanly &mdash; phone mic within two feet, no echo, no background noise &mdash; carries more authority and trust than the same words recorded from across a room. We brief our 700+ creators to film in soft-furnished rooms (bedroom, living room with a couch) rather than hard-surfaced spaces (kitchen, bathroom) precisely because the acoustics produce a warmer, more intimate vocal tone.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">When adding background music, keep it at 15&ndash;20% of the voice volume. Music that competes with the voice degrades message clarity and reduces conversion. Choose lo-fi, ambient, or light acoustic tracks that match the energy of the script. High-energy music under a calm talking-head delivery creates cognitive dissonance. Match the BPM of the music to the pacing of the edit &mdash; cuts that land on beats feel intentional rather than jarring.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For the hook specifically, consider starting with a sound effect or audio cue that draws attention. A notification ping, a satisfying product sound (a click, a spray, a pour), or even a brief moment of silence followed by the creator's voice can all serve as audio hooks that complement the visual hook. These micro-details compound: each one adds a fraction of a percentage to your hold rate, and together they can shift performance meaningfully.</p>
+      </div>
+    </section>
+
+    <!-- Section 07 -->
+    <section class="guide-section" id="testing">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Testing</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Testing Variations Systematically</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Test one variable at a time: hook, creator, script angle, or CTA</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Minimum 8&ndash;12 variations per product launch for statistical validity</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Kill losers fast (48 hours), scale winners aggressively</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The difference between UGC videos that convert and UGC that wastes budget is almost never a single creative insight &mdash; it is a testing system. At OKAD, we use a <a href="/modular-creative" class="text-accent hover:underline">modular creative</a> framework where each video is decomposed into swappable components: hook, body script, creator, B-roll package, CTA, and music. This lets us test 20+ variations from just 4&ndash;5 base shoots, because we can remix components without reshooting.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The testing hierarchy matters. Start by testing hooks, because a bad hook means the rest of the video never gets seen. Once you have a winning hook, test script angles (problem-first vs. result-first vs. curiosity-based). Then test creators &mdash; the same script delivered by different people can see conversion rate swings of 50% or more. Finally, test CTAs and visual treatments. This sequence ensures you optimize the highest-leverage variable first.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Budget each test variation at $20&ndash;30/day and run for exactly 48 hours to accumulate enough data. After 48 hours, rank by your primary KPI (CPA, ROAS, or click-through rate depending on your funnel). Kill the bottom 60%, reduce spend on the middle 20%, and scale the top 20% to 3&ndash;5x budget. This ruthless culling is essential &mdash; letting mediocre variations run "just in case" is the most common waste of ad budget we see.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Plan for creative fatigue. Even winning UGC videos decay &mdash; typically after 2&ndash;4 weeks of scaled spend, performance begins to drop as the audience saturates. Build a pipeline that delivers fresh variations every two weeks. With access to a deep creator network (OKAD works with 700+ vetted creators), you can maintain consistent output without the bottleneck of recruiting and onboarding new talent for each cycle. This is what separates brands that sustain <a href="/performance-creative" class="text-accent hover:underline">performance creative</a> results from those that spike and crash.</p>
+      </div>
+    </section>
+
+    <!-- Section 08 -->
+    <section class="guide-section" id="case-studies">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Results</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Case Study Breakdowns</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">DTC skincare brand cut CPA by 42% by switching from studio to UGC-first creative</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">SaaS app achieved 3.2x ROAS with problem-solution UGC targeting pain points</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Food delivery brand scaled to 500+ UGC variations using modular production</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A DTC skincare brand came to OKAD spending $40K/month on Meta ads with a $38 CPA using studio-produced video. We replaced their creative suite with 24 UGC videos from 6 creators, each following the Hook &rarr; Problem &rarr; Solution &rarr; Proof &rarr; CTA framework. Within three weeks, CPA dropped to $22 &mdash; a 42% reduction &mdash; while spend scaled to $65K/month. The winning creative was a 28-second video of a creator applying the product in her bathroom, filmed on an iPhone with natural light. No script felt scripted. No shot felt produced.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A B2B SaaS productivity app wanted to run <a href="/ugc-ads" class="text-accent hover:underline">UGC ads</a> but struggled with the format &mdash; how do you make software feel like user-generated content? We developed a "screen-share testimony" format: creators filmed themselves using the app on their laptop, talking through their workflow while screen-recording. The combination of face-cam and screen capture maintained the UGC feel while demonstrating the product. ROAS hit 3.2x within 30 days, up from 1.4x with their previous explainer-style ads.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A food delivery startup needed volume. With 12 regional markets and constantly rotating promotions, they needed 50+ new creatives per month. We built a modular production pipeline with 15 creators, each filming reusable components: unboxing reactions, meal reveals, taste reactions, and promo callouts. The components were remixed into 500+ unique variations over six months, with the editing team swapping hooks, offers, and CTAs per market. Average CPA dropped from $8.50 to $5.20 across all markets while creative never went stale.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The throughline across every case study is the same: UGC videos that convert are not happy accidents. They are the output of a structured production and testing system. The creative looks casual; the process behind it is rigorous. Brands that treat UGC as a format rather than a strategy will always underperform those that build repeatable systems for scripting, filming, editing, and testing at scale.</p>
+      </div>
+    </section>
+
+    <!-- Section 09 — FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+        {[
+          { q: "What makes a UGC video convert better than traditional video ads?", a: "UGC videos convert better because they bypass the viewer's ad-detection instinct. Traditional ads signal 'sponsored content' through polished production, and viewers have learned to scroll past them. UGC feels like a peer recommendation, which triggers higher trust and engagement. Our data across 10,000+ ads shows UGC consistently delivers 30–50% lower CPA than studio-produced equivalents, primarily because the native feel drives higher watch-through rates and stronger click intent." },
+          { q: "How long should a UGC video be for best conversion rates?", a: "The optimal length depends on the platform and objective. For TikTok and Reels, 15–30 seconds performs best for direct-response goals. On Meta feed placements, 20–45 seconds gives enough time for the full Hook-Problem-Solution-CTA arc without losing attention. YouTube Shorts can go slightly longer at 25–50 seconds. The key principle: every second must earn the next second. A tight 20-second video will always outperform a padded 60-second one." },
+          { q: "Do UGC videos need professional equipment to perform well?", a: "No. In fact, overly professional equipment can hurt performance by making the video look too polished. A recent-model smartphone shooting in 1080p, natural window light, and the phone's built-in microphone (within 2 feet of the creator) is the ideal setup. The only upgrade worth investing in is a $15 phone tripod or grip for steady handheld shots. Ring lights, DSLR cameras, and studio backdrops actively reduce the authenticity signals that make UGC effective." },
+          { q: "How many UGC video variations should I test per product?", a: "We recommend a minimum of 8–12 variations per product launch, built from 3–4 base scripts performed by 2–3 different creators. Using a modular approach, you can remix hooks, CTAs, and B-roll to reach 20+ unique variations without additional filming. Test each at $20–30/day for 48 hours, then scale winners and cut losers. For ongoing campaigns, plan for 4–6 fresh variations every two weeks to stay ahead of creative fatigue." },
+          { q: "Can OKAD produce high-converting UGC videos for my brand?", a: "Yes. OKAD manages a network of 700+ vetted creators across 30+ verticals and has delivered over 10,000 UGC ads. We handle the full pipeline: strategy, creator matching, scripting, production oversight, editing, and performance optimization. Each project begins with a brief call to understand your brand, audience, and goals, followed by a structured production cycle that typically delivers first cuts within 7–10 business days. Reach out at olga@okad.agency or book a call to discuss your project." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready for UGC videos that actually convert?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your brand, audience, and goals. We will match you with creators from our 700+ network and build a production plan designed for measurable results.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a proposal &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-3">Methodology</div>
+        <p class="text-[13px] text-muted leading-[1.6] mb-2">This guide draws on performance data from 10,000+ UGC ads delivered by OKAD Agency across Meta, TikTok, YouTube, and Snapchat between 2023 and 2026. Conversion benchmarks are based on aggregated, anonymized client data across DTC, SaaS, food &amp; beverage, and consumer electronics verticals. All recommendations are regularly updated as platform algorithms and user behavior evolve.</p>
+        <p class="text-[13px] text-muted leading-[1.6]">Related guides: <a href="/hook-rate" class="text-accent hover:underline">Hook Rate</a> &middot; <a href="/modular-creative" class="text-accent hover:underline">Modular Creative</a> &middot; <a href="/performance-creative" class="text-accent hover:underline">Performance Creative</a> &middot; <a href="/ugc-ads" class="text-accent hover:underline">UGC Ads</a></p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Make UGC Videos That Convert: Production Guide",
+      "description": "A data-backed guide to UGC video production that drives conversions. Covers hook frameworks, scripting, filming, editing, sound strategy, and systematic testing.",
+      "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+      "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/ugc-videos-convert/" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "UGC Videos That Convert" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What makes a UGC video convert better than traditional video ads?", "acceptedAnswer": { "@type": "Answer", "text": "UGC videos convert better because they bypass the viewer's ad-detection instinct. Traditional ads signal 'sponsored content' through polished production, and viewers have learned to scroll past them. UGC feels like a peer recommendation, which triggers higher trust and engagement. Our data across 10,000+ ads shows UGC consistently delivers 30–50% lower CPA than studio-produced equivalents, primarily because the native feel drives higher watch-through rates and stronger click intent." } },
+        { "@type": "Question", "name": "How long should a UGC video be for best conversion rates?", "acceptedAnswer": { "@type": "Answer", "text": "The optimal length depends on the platform and objective. For TikTok and Reels, 15–30 seconds performs best for direct-response goals. On Meta feed placements, 20–45 seconds gives enough time for the full Hook-Problem-Solution-CTA arc without losing attention. YouTube Shorts can go slightly longer at 25–50 seconds. The key principle: every second must earn the next second. A tight 20-second video will always outperform a padded 60-second one." } },
+        { "@type": "Question", "name": "Do UGC videos need professional equipment to perform well?", "acceptedAnswer": { "@type": "Answer", "text": "No. In fact, overly professional equipment can hurt performance by making the video look too polished. A recent-model smartphone shooting in 1080p, natural window light, and the phone's built-in microphone (within 2 feet of the creator) is the ideal setup. The only upgrade worth investing in is a $15 phone tripod or grip for steady handheld shots. Ring lights, DSLR cameras, and studio backdrops actively reduce the authenticity signals that make UGC effective." } },
+        { "@type": "Question", "name": "How many UGC video variations should I test per product?", "acceptedAnswer": { "@type": "Answer", "text": "We recommend a minimum of 8–12 variations per product launch, built from 3–4 base scripts performed by 2–3 different creators. Using a modular approach, you can remix hooks, CTAs, and B-roll to reach 20+ unique variations without additional filming. Test each at $20–30/day for 48 hours, then scale winners and cut losers. For ongoing campaigns, plan for 4–6 fresh variations every two weeks to stay ahead of creative fatigue." } },
+        { "@type": "Question", "name": "Can OKAD produce high-converting UGC videos for my brand?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. OKAD manages a network of 700+ vetted creators across 30+ verticals and has delivered over 10,000 UGC ads. We handle the full pipeline: strategy, creator matching, scripting, production oversight, editing, and performance optimization. Each project begins with a brief call to understand your brand, audience, and goals, followed by a structured production cycle that typically delivers first cuts within 7–10 business days. Reach out at olga@okad.agency or book a call to discuss your project." } }
+      ]
+    }
+  ])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
