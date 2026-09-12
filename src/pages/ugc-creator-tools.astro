@@ -554,31 +554,6 @@ const calHref = "https://calendly.com/okad_calls/first";
       </div>
     </section>
 
-    <!-- Related Guides -->
-    <section style="padding:60px 24px;border-top:1px solid var(--border);">
-      <div style="max-width:960px;margin:0 auto;">
-        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Keep Reading</div>
-        <h2 class="font-display text-[28px] font-bold text-ink mb-6">Related Guides</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;">
-          <a href="/ai-portfolio-builder" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
-            <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">AI Tools</div>
-            <div class="font-display text-[16px] font-semibold text-ink mb-1.5">AI Portfolio Builder</div>
-            <div class="text-[13px] text-ink-2 leading-relaxed">How AI tools help creators build professional portfolios in minutes.</div>
-          </a>
-          <a href="/ugc-portfolio-examples" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
-            <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Portfolio</div>
-            <div class="font-display text-[16px] font-semibold text-ink mb-1.5">UGC Portfolio Examples</div>
-            <div class="text-[13px] text-ink-2 leading-relaxed">What separates good UGC portfolios from great ones, with real analysis.</div>
-          </a>
-          <a href="/ugc-rates" class="block rounded-xl border border-border bg-card p-5 no-underline hover:border-accent transition-colors">
-            <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Pricing</div>
-            <div class="font-display text-[16px] font-semibold text-ink mb-1.5">UGC Creator Rates</div>
-            <div class="text-[13px] text-ink-2 leading-relaxed">Detailed rate benchmarks by experience level, niche, and deliverable type.</div>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- Final CTA -->
     <section class="py-10">
       <div class="max-w-[800px] mx-auto px-6">
@@ -611,6 +586,73 @@ const calHref = "https://calendly.com/okad_calls/first";
           <p class="text-[13px] text-muted leading-[1.5]">Portfolio builder, rate calculator, contract templates — all free.</p>
         </div>
         <a href="https://reelpilot.co/ugc-creator-tools/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[13px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline whitespace-nowrap shrink-0">View tools &rarr;</a>
+      </div>
+    </section>
+
+  
+    <!-- Lead Form -->
+    <section class="py-16 border-t border-border" id="get-started">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-card border border-border rounded-2xl p-8 sm:p-10">
+          <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-4">Free consultation</div>
+            <h2 class="font-display font-bold text-[clamp(22px,3.5vw,30px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Get a Custom UGC Plan for Your Brand</h2>
+            <p class="text-[15px] text-ink-2 max-w-[500px] mx-auto leading-[1.5]">Tell us about your brand and we'll send you a custom UGC strategy — content formats, creator count, estimated costs, and timeline.</p>
+          </div>
+          <form id="canvas-form" class="space-y-4 max-w-[480px] mx-auto">
+            <div>
+              <label for="cf-company" class="block text-[13px] font-medium text-ink mb-1.5">Company / Brand *</label>
+              <input type="text" id="cf-company" name="company" required placeholder="Acme Inc." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-email" class="block text-[13px] font-medium text-ink mb-1.5">Work email *</label>
+              <input type="email" id="cf-email" name="email" required placeholder="you@company.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-website" class="block text-[13px] font-medium text-ink mb-1.5">Website</label>
+              <input type="url" id="cf-website" name="website" placeholder="https://yoursite.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-budget" class="block text-[13px] font-medium text-ink mb-1.5">Monthly content budget</label>
+              <select id="cf-budget" name="budget" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] focus:outline-none focus:border-accent transition-colors appearance-none">
+                <option value="">Select range</option>
+                <option value="under-2k">Under $2,000</option>
+                <option value="2k-5k">$2,000 – $5,000</option>
+                <option value="5k-10k">$5,000 – $10,000</option>
+                <option value="10k+">$10,000+</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label for="cf-message" class="block text-[13px] font-medium text-ink mb-1.5">What are you looking to achieve?</label>
+              <textarea id="cf-message" name="message" rows="3" placeholder="E.g. We want to grow our TikTok presence with 20+ videos per month..." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors resize-y"></textarea>
+            </div>
+            <button type="submit" id="cf-submit" class="w-full py-3.5 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all cursor-pointer border-none">Get my UGC plan &rarr;</button>
+            <div id="cf-status" class="text-center text-[13px] hidden"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="/ugc-platforms/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Best UGC Platforms</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Top platforms for brands and creators in 2026</p>
+          </a>
+          <a href="/ugc-jobs/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Creator Jobs</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Where to find paid UGC opportunities</p>
+          </a>
+          <a href="/ugc-portfolio-guide/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Portfolio Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Build a portfolio that wins brand deals</p>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -722,4 +764,40 @@ const calHref = "https://calendly.com/okad_calls/first";
       if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
+
+  const form = document.getElementById('canvas-form');
+  const status = document.getElementById('cf-status');
+  const submitBtn = document.getElementById('cf-submit');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      status.className = 'text-center text-[13px] hidden';
+      try {
+        const fd = new FormData(form);
+        const data = Object.fromEntries(fd.entries());
+        data.source = window.location.pathname;
+        const resp = await fetch('https://okad.cc/api/canvas-form/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (resp.ok) {
+          status.textContent = 'Thank you! We\'ll get back to you within 24 hours.';
+          status.className = 'text-center text-[13px] text-green-400 mt-2';
+          form.reset();
+        } else {
+          const err = await resp.json().catch(() => ({}));
+          status.textContent = err.error || 'Something went wrong. Please try again.';
+          status.className = 'text-center text-[13px] text-red-400 mt-2';
+        }
+      } catch {
+        status.textContent = 'Network error. Please try again.';
+        status.className = 'text-center text-[13px] text-red-400 mt-2';
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get my UGC plan →';
+    });
+  }
 </script>
