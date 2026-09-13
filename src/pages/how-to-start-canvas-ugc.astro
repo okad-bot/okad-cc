@@ -1,0 +1,645 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailCreator = "mailto:olga@okad.agency?subject=Canvas%20UGC%20%E2%80%94%20I%20want%20to%20get%20started";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="How to Start Canvas UGC — Step-by-Step Guide for Beginners | OKAD"
+  description="Learn how to start Canvas UGC from scratch. Step-by-step guide covering equipment, niche selection, portfolio building, finding brands, creating your first videos, and scaling to full-time income."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Beginner guide &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          How to Start Canvas UGC: <span class="text-accent">Step-by-Step Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Canvas UGC is one of the most accessible ways to earn money as a content creator in 2026. You don't need a following, expensive equipment, or prior experience. This guide walks you through every step from zero to your first paid videos.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailCreator} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get started with OKAD &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>No following needed</span>
+          <span>Smartphone is enough</span>
+          <span>$200&ndash;$8,000+/mo</span>
+          <span>7 steps to first videos</span>
+          <span>Complete beginner guide</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick-start grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">What You Need to Get Started</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4F1;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">A Smartphone</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Any phone from 2022 or later shoots good enough video. A $30 tripod and natural light is your starter studio.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">A Niche You Know</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Pick a topic you can talk about naturally for 60 seconds. Tech, beauty, finance, fitness &mdash; authenticity matters.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x23F0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">5&ndash;10 Hours/Week</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Most beginners produce 10&ndash;15 videos per month alongside a day job. Batch filming makes this manageable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "What You Need Before Starting", href: "#prerequisites" },
+            { num: "02", text: "Step 1: Understand the Model", href: "#understand" },
+            { num: "03", text: "Step 2: Pick Your Niche", href: "#niche" },
+            { num: "04", text: "Step 3: Build a Mini Portfolio", href: "#portfolio" },
+            { num: "05", text: "Step 4: Find Your First Brand", href: "#find-brands" },
+            { num: "06", text: "Step 5: Create Your First Videos", href: "#first-videos" },
+            { num: "07", text: "Step 6: Optimize for Views", href: "#optimize" },
+            { num: "08", text: "Step 7: Scale to Multiple Brands", href: "#scale" },
+            { num: "09", text: "Common Mistakes Beginners Make", href: "#mistakes" },
+            { num: "10", text: "Timeline Expectations", href: "#timeline" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Prerequisites -->
+    <section class="guide-section" id="prerequisites">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Prerequisites</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What you need before starting Canvas UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You do NOT need a personal following, expensive equipment, or prior creator experience</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Minimum gear: smartphone, tripod ($20&ndash;$30), and a quiet space with natural light</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Key skills: speaking naturally on camera, basic video editing, following brand guidelines</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Equipment (start minimal)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The biggest myth about content creation is that you need expensive gear. For Canvas UGC, you need exactly three things:</p>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Smartphone:</strong> Any phone from 2022 or later with a decent front-facing camera. iPhone 13+ or Samsung Galaxy S22+ are more than enough.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Tripod:</strong> A $20&ndash;$30 phone tripod from Amazon. Stable footage beats shaky handheld every time. Get one with adjustable height.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Lighting:</strong> Natural window light is your best friend and costs nothing. Film facing a window during daytime. A $30 ring light helps for evening sessions.</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Optional upgrades (not needed to start):</strong> External microphone ($30&ndash;$60), ring light ($25&ndash;$40), background screen ($30). Total starter kit cost: $20&ndash;$30. You probably already have the phone.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Skills you'll develop</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">You don't need these skills perfected before starting &mdash; you'll develop them through practice. But knowing what to work on helps you improve faster:</p>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">On-camera presence:</strong> Speaking naturally, maintaining eye contact with the lens, varying your tone</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">Scriptwriting:</strong> Writing concise, engaging scripts that hook viewers in the first 2 seconds</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">Video editing:</strong> Basic cuts, text overlays, and pacing using free tools like CapCut</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">Brand interpretation:</strong> Translating brand guidelines into authentic, natural-sounding content</li>
+        </ul>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Software (all free)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>CapCut</strong> is the industry standard for Canvas UGC editing &mdash; it's free, powerful, and available on both mobile and desktop. For screen recordings (common in tech niches), use your phone's built-in screen recorder. For scripts, a simple notes app or Google Docs works fine.</p>
+      </div>
+    </section>
+
+    <!-- 02 Understand the Model -->
+    <section class="guide-section" id="understand">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Step 1</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Understand how Canvas UGC works</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You create videos that are posted on the brand's social accounts, not yours</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You get paid per view (CPM $2&ndash;$6), not per video</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Volume and consistency matter more than going viral</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before creating your first video, you need to understand what <a href="/canvas-ugc/" class="text-accent hover:underline">Canvas UGC</a> actually is and how it differs from traditional UGC work. The <a href="/canvas-ugc/" class="text-accent hover:underline">complete Canvas UGC guide</a> covers this in depth, but here's the essential version.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">In traditional UGC, you shoot video and deliver raw footage to a brand. They use it in their paid ads. You get a flat fee per video ($150&ndash;$500). The work is project-based &mdash; you constantly need to find new clients.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">In <strong>Canvas UGC</strong>, brands give you access to post directly on their social media accounts (TikTok, Instagram, YouTube Shorts). The brand's account is the "canvas" where your content lives. You're paid based on how many views your videos generate &mdash; typically $2&ndash;$6 per 1,000 views (CPM). For detailed earning benchmarks, see our <a href="/canvas-ugc-earnings/" class="text-accent hover:underline">Canvas UGC earnings guide</a>.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This model has three key advantages for beginners:</p>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">No following needed:</strong> Content goes on the brand's account, so your personal follower count is irrelevant</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">Ongoing income:</strong> Unlike project-based UGC, you have a continuous relationship with the brand</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">Lower quality bar:</strong> Canvas UGC prioritizes authenticity and volume over polished production</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">To understand the full terminology around this model, read our <a href="/canvas-ugc/" class="text-accent hover:underline">Canvas UGC meaning explainer</a>.</p>
+      </div>
+    </section>
+
+    <!-- 03 Pick Your Niche -->
+    <section class="guide-section" id="niche">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Step 2</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Pick your niche</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Choose a niche where you have genuine knowledge or strong interest</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">High-CPM niches (tech, finance, SaaS) pay more but require subject matter fluency</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Start with one niche &mdash; you can expand later</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Your niche determines your CPM rate, your audience, and how naturally your content comes across. The best niche is one where you can speak for 60 seconds without a script and sound knowledgeable. Don't chase the highest-paying niche if you have nothing genuine to say about it &mdash; viewers can tell.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Popular Canvas UGC niches</h3>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[14px] border-collapse">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Niche</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Typical CPM</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Good For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Tech / SaaS / AI tools</td><td class="px-4 py-2.5 text-ink-2">$4&ndash;$6</td><td class="px-4 py-2.5 text-ink-2">People comfortable doing screen recordings and app demos</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Finance / Fintech</td><td class="px-4 py-2.5 text-ink-2">$3.50&ndash;$5.50</td><td class="px-4 py-2.5 text-ink-2">Anyone with basic financial literacy and comfort discussing money</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">E-commerce / DTC</td><td class="px-4 py-2.5 text-ink-2">$2.50&ndash;$4</td><td class="px-4 py-2.5 text-ink-2">Product review style content, unboxing, lifestyle integration</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Beauty / Skincare</td><td class="px-4 py-2.5 text-ink-2">$2&ndash;$3.50</td><td class="px-4 py-2.5 text-ink-2">Demos, routines, before/afters &mdash; large audience but competitive</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Health / Fitness</td><td class="px-4 py-2.5 text-ink-2">$3&ndash;$5</td><td class="px-4 py-2.5 text-ink-2">Workout routines, supplement reviews, wellness app walkthroughs</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Education / Online courses</td><td class="px-4 py-2.5 text-ink-2">$3&ndash;$4.50</td><td class="px-4 py-2.5 text-ink-2">"I tried this course" format, skill demonstrations, study tips</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">How to validate your niche</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before committing, do this 10-minute validation exercise: Open TikTok and search for your niche keyword (e.g., "AI tools", "skincare routine"). Watch 20 videos in that niche. Can you make content at this level or better? Do the topics interest you enough to post 15+ videos per month about them? If yes, you've found your niche. If not, try another.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Don't overthink this step. You can always pivot niches after your first month. The important thing is to pick something and start creating.</p>
+      </div>
+    </section>
+
+    <!-- 04 Build a Mini Portfolio -->
+    <section class="guide-section" id="portfolio">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Step 3</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Build a mini portfolio</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Create 3&ndash;5 sample videos before applying to programs &mdash; brands want to see what you can do</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Make the samples look like real brand content: pick real products/apps in your niche</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Keep them 30&ndash;60 seconds, vertical format, with strong hooks</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">No brand or program will hire you without seeing examples of your work. But you don't need a massive portfolio &mdash; 3&ndash;5 solid sample videos are enough to get started. For detailed portfolio advice, see our <a href="/ugc-portfolio-guide/" class="text-accent hover:underline">UGC portfolio guide</a>.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">What to create for your portfolio</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Pick 3&ndash;5 real products, apps, or services in your chosen niche. Create sample videos as if a brand had briefed you. These don't need to be posted anywhere &mdash; they're just demos of your capability. Here's a practical framework:</p>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[100px]">Video 1:</strong> Talking-head review or recommendation ("I've been using [product] for a week and here's what I think...")</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[100px]">Video 2:</strong> Screen recording walkthrough or demo (for tech niche) or before/after (for beauty/fitness)</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[100px]">Video 3:</strong> Problem-solution format ("Stop doing [X], try [product] instead")</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[100px]">Video 4:</strong> Listicle or tips format ("3 things I wish I knew about [topic]")</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[100px]">Video 5:</strong> Day-in-the-life or routine that naturally features a product</li>
+        </ul>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Portfolio presentation</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Upload your samples to Google Drive or create a simple portfolio page. Include a brief bio, your niche focus, and the sample videos. When applying to programs, share this link. First impressions matter &mdash; make sure the videos load quickly and are organized clearly. Check out real examples in our <a href="/ugc-portfolio-guide/" class="text-accent hover:underline">portfolio examples guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- 05 Find Your First Brand -->
+    <section class="guide-section" id="find-brands">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Step 4</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Find your first brand</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Join creator networks and agencies that connect creators with Canvas UGC programs</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Apply directly to brands running Canvas UGC &mdash; look for multi-account TikTok/Reels operations</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Your first brand doesn't need to be perfect &mdash; it's a learning opportunity</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Finding your first Canvas UGC opportunity is the hardest step because you have no track record yet. Here are the most effective channels, ranked by success rate for beginners:</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">1. Creator networks and agencies</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The fastest path is joining an established creator network that already has relationships with brands running Canvas UGC programs. Agencies like OKAD manage the brand relationships, handle payments, and match you with programs in your niche. You focus entirely on creating content. This is the path we recommend for beginners because it removes the burden of client acquisition and contract negotiation.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">2. Direct outreach to brands</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Identify brands that are already running Canvas UGC programs. Look for companies with multiple TikTok accounts posting creator-style content (not polished brand videos). Reach out via email or LinkedIn with your portfolio and a short <a href="/brand-pitch/" class="text-accent hover:underline">pitch</a>. Keep it to 3&ndash;4 sentences: who you are, your niche, a link to your portfolio, and what you're proposing.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">3. Creator platforms and job boards</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Platforms like Billo, JoinBrands, and Insense occasionally list Canvas UGC opportunities alongside traditional UGC gigs. Filter for "ongoing" or "multiple videos" to find Canvas-style programs versus one-off projects. The pay may be lower through these platforms, but they provide a low-friction entry point.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">4. Social media (Twitter/X, Reddit, TikTok)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Search "Canvas UGC hiring" or "looking for Canvas UGC creators" on Twitter/X. Several Canvas UGC program managers post hiring calls regularly. Reddit communities like r/UGCcreators occasionally have opportunity threads. On TikTok itself, search for #canvasugc and connect with creators who share their experience &mdash; they often know which programs are hiring.</p>
+      </div>
+    </section>
+
+    <!-- 06 Create Your First Videos -->
+    <section class="guide-section" id="first-videos">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Step 5</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Create your first videos</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Follow the brand's brief closely but keep the delivery natural and authentic</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Nail the hook &mdash; the first 2 seconds determine whether the video gets views</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Aim for 30&ndash;60 second videos; batch-film 5&ndash;10 per session</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Once you're accepted into a program, you'll receive a brand brief covering the product, key talking points, content guidelines, and posting schedule. Here's how to turn that brief into performing content:</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">The video creation workflow</h3>
+        <ol class="list-none p-0 m-0 space-y-4 mb-6" style="counter-reset: step;">
+          <li class="guide-step relative pl-12 py-2">
+            <h4 class="font-display text-[15px] font-semibold text-ink mb-1">Script the hook and key points</h4>
+            <p class="text-[14px] text-ink-2 leading-[1.55]">Write your opening line word-for-word. This is the most important part of the video. Then outline 2&ndash;3 key points and your closing statement. Don't script every word &mdash; bullet points keep the delivery natural.</p>
+          </li>
+          <li class="guide-step relative pl-12 py-2">
+            <h4 class="font-display text-[15px] font-semibold text-ink mb-1">Set up and film</h4>
+            <p class="text-[14px] text-ink-2 leading-[1.55]">Position your phone on the tripod, check your framing (head and shoulders, slight angle), and verify lighting. Film 2&ndash;3 takes of each video. The best take is usually the second one &mdash; first take has nerves, third starts to feel rehearsed.</p>
+          </li>
+          <li class="guide-step relative pl-12 py-2">
+            <h4 class="font-display text-[15px] font-semibold text-ink mb-1">Edit for pacing</h4>
+            <p class="text-[14px] text-ink-2 leading-[1.55]">Import into CapCut. Cut dead air, long pauses, and filler words. Add text overlays for key points. Add background music at 10&ndash;15% volume. Keep the final video between 30&ndash;60 seconds. Faster pacing keeps viewers watching.</p>
+          </li>
+          <li class="guide-step relative pl-12 py-2">
+            <h4 class="font-display text-[15px] font-semibold text-ink mb-1">Review against the brief</h4>
+            <p class="text-[14px] text-ink-2 leading-[1.55]">Watch the final cut and check: Does the hook grab attention? Are all required talking points covered? Does it feel authentic, not salesy? Is it the right length? If yes, submit or post.</p>
+          </li>
+        </ol>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Hook formulas that work</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Your <a href="/hook-rate/" class="text-accent hover:underline">hook rate</a> (percentage of viewers who stay past the first 1&ndash;3 seconds) determines how far the algorithm pushes your video. Here are proven hook templates:</p>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink">"Stop scrolling if you..."</strong> &mdash; calls out a specific audience segment</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink">"I found [something] that..."</strong> &mdash; creates curiosity about a discovery</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink">"This [product] changed how I..."</strong> &mdash; implies transformation</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink">"Nobody talks about [topic], but..."</strong> &mdash; positions as insider knowledge</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink">"Here's why [common belief] is wrong"</strong> &mdash; creates tension through contrarianism</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 07 Optimize for Views -->
+    <section class="guide-section" id="optimize">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Step 6</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Optimize for views</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Track which videos perform best and replicate those formats</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Post at consistent times &mdash; the algorithm rewards predictability</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Respond to comments to boost engagement signals</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">After your first 10&ndash;15 videos, you'll have enough data to start optimizing. Since your earnings are tied directly to views, optimization directly increases your income. Here's what to focus on:</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Analyze your performance data</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Look at your top 3 performing videos and your bottom 3. What's different? Usually it comes down to: the hook (how compelling were the first 2 seconds?), the topic (was this something viewers actively care about?), and the format (talking head vs. screen recording vs. POV). Double down on whatever your top performers have in common.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Posting timing and frequency</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Algorithms reward accounts that post consistently. Aim for a regular posting schedule &mdash; ideally once per day or every other day. The best posting times vary by niche and audience, but generally: weekdays between 7&ndash;9 AM and 6&ndash;9 PM local time for the target audience. Consistency matters more than finding the "perfect" time.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Engagement signals</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Comments, shares, and saves tell the algorithm to distribute your content more widely. Encourage engagement naturally: ask questions in your videos, create mild controversy (hot takes), or share surprising information. Reply to comments on your posts &mdash; responses boost the video's engagement score and often trigger additional algorithmic distribution.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">A/B test your hooks</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Try creating two versions of the same content with different hooks. Post them on different days or on different brand accounts. Compare hook rates (viewers who stayed past 3 seconds). Over time, you'll build a mental library of hooks that reliably work in your niche. This single practice can double your average views per video within a month.</p>
+      </div>
+    </section>
+
+    <!-- 08 Scale -->
+    <section class="guide-section" id="scale">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Step 7</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Scale to multiple brands</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Once you're consistent on 1&ndash;2 accounts, add more brand accounts to multiply income</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Batch production is the key to managing multiple accounts without burning out</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Negotiate higher CPM rates after proving consistent performance</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Scaling is where Canvas UGC earnings go from side income to serious money. The math is straightforward: if you earn $600/month from one brand account, working with four accounts earns you $2,400/month &mdash; assuming similar performance and CPM rates.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">When to scale</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Don't add accounts too early. Scale when you can consistently produce 10&ndash;15 quality videos per month on your current accounts without stress. If you're still figuring out your content style, adding more accounts will spread thin effort across too many places. A good signal: your average views per video have stabilized or are growing, and production feels routine rather than effortful.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Batch production at scale</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Batching is non-negotiable at scale. Set aside 2&ndash;3 dedicated filming days per week. On each day: script 5&ndash;8 videos in the morning, film them all back-to-back in the afternoon, edit them in the evening or the next day. Most creators managing 4+ accounts spend 15&ndash;20 hours per week total, not 15&ndash;20 hours per account.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Negotiate as you grow</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">After 2&ndash;3 months of consistent performance, you have leverage. Ask for higher CPM rates by showing your track record: total views delivered, average views per video, engagement rates. Brands retain proven creators because recruiting and onboarding new ones costs time and money. Even a $0.50 CPM increase across 300,000+ monthly views adds $150+/month. See our <a href="/canvas-ugc-earnings/" class="text-accent hover:underline">earnings guide</a> for detailed negotiation strategies.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Cross-niche expansion</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Once you've mastered one niche, consider expanding to adjacent niches. A tech reviewer can naturally branch into productivity tools, AI tools, and SaaS. A beauty creator can expand to wellness, fitness, or fashion. Each new niche opens up new brand account opportunities. Just make sure you can speak authentically about the new topic.</p>
+      </div>
+    </section>
+
+    <!-- 09 Common Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Common mistakes beginners make</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Overproducing content instead of shipping fast and iterating</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Ignoring analytics and repeating underperforming formats</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Giving up too early &mdash; the first month is always the slowest</li>
+          </ul>
+        </div>
+
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mb-2">Perfectionism over volume</h3>
+            <p class="text-ink-2 leading-[1.65]">The number one mistake is spending 2 hours perfecting a single video when you could create 4 decent videos in the same time. Canvas UGC rewards volume. A "good enough" video that gets posted beats a perfect video still sitting in your drafts. Your tenth video will be dramatically better than your first regardless of how much time you spend on either one.</p>
+          </div>
+          <div>
+            <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mb-2">Sounding like an ad</h3>
+            <p class="text-ink-2 leading-[1.65]">Viewers scroll past anything that feels like a commercial. The whole point of Canvas UGC is authentic, creator-style content. Talk about the product the way you'd tell a friend about it &mdash; with genuine enthusiasm where it's warranted and honest commentary where it's not. Forced enthusiasm is worse than no enthusiasm.</p>
+          </div>
+          <div>
+            <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mb-2">Neglecting the hook</h3>
+            <p class="text-ink-2 leading-[1.65]">Spending 5 seconds on an intro before getting to the point. In short-form video, you have 1&ndash;2 seconds to capture attention. Your hook should be the very first thing out of your mouth. No "Hey guys, welcome back" &mdash; jump straight into the value proposition or the surprising statement. Read our <a href="/hook-rate/" class="text-accent hover:underline">hook rate guide</a> for data-backed strategies.</p>
+          </div>
+          <div>
+            <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mb-2">Not tracking analytics</h3>
+            <p class="text-ink-2 leading-[1.65]">Posting content without reviewing performance data is flying blind. After every batch of 10 videos, review: which hooks worked? Which topics got views? What time of day performed best? The creators who earn the most are the ones who treat this as a data-informed process, not guesswork.</p>
+          </div>
+          <div>
+            <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mb-2">Quitting after month one</h3>
+            <p class="text-ink-2 leading-[1.65]">Month one is always the worst. The brand account may still be warming up, you're still learning the format, and your content quality hasn't hit its stride yet. Most creators who stick with it see a 2&ndash;3x improvement in views by month two. Give yourself at least 60 days before evaluating whether Canvas UGC works for you.</p>
+          </div>
+          <div>
+            <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mb-2">Copying other creators instead of finding your style</h3>
+            <p class="text-ink-2 leading-[1.65]">It's fine to study what works, but directly copying another creator's style makes your content feel inauthentic. Viewers and algorithms both favor originality. Use other creators for inspiration on formats and topics, but develop your own voice, delivery style, and perspective.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 Timeline -->
+    <section class="guide-section" id="timeline">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Timeline</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Realistic timeline expectations</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Week 1&ndash;2: Build portfolio and apply to programs</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Month 1: First paid videos, learning curve, $100&ndash;$400 earnings</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Month 3&ndash;6: Consistent income, $800&ndash;$2,500/month</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[14px] border-collapse">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Phase</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Timeline</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">What Happens</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Expected Income</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Setup</td><td class="px-4 py-2.5 text-ink-2">Week 1&ndash;2</td><td class="px-4 py-2.5 text-ink-2">Build portfolio, apply to 5&ndash;10 programs</td><td class="px-4 py-2.5 text-ink-2">$0</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Learning</td><td class="px-4 py-2.5 text-ink-2">Month 1</td><td class="px-4 py-2.5 text-ink-2">First videos, finding your style, learning platform dynamics</td><td class="px-4 py-2.5 text-ink-2">$100&ndash;$400</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Building</td><td class="px-4 py-2.5 text-ink-2">Month 2&ndash;3</td><td class="px-4 py-2.5 text-ink-2">Consistent posting, analytics-driven optimization</td><td class="px-4 py-2.5 text-ink-2">$400&ndash;$1,200</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Growing</td><td class="px-4 py-2.5 text-ink-2">Month 3&ndash;6</td><td class="px-4 py-2.5 text-ink-2">Multiple brand accounts, reliable production system</td><td class="px-4 py-2.5 text-ink-2">$800&ndash;$2,500</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Scaling</td><td class="px-4 py-2.5 text-ink-2">Month 6+</td><td class="px-4 py-2.5 text-ink-2">4&ndash;8 brand accounts, negotiated CPM rates, cross-niche expansion</td><td class="px-4 py-2.5 text-ink-2">$2,500&ndash;$8,000+</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">These timelines assume 8&ndash;15 hours per week of dedicated effort. Creators who go full-time from the start may progress faster. Part-time creators should expect the same progression, just stretched across a longer period. The critical success factor isn't time invested &mdash; it's consistency. Posting regularly, reviewing analytics, and iterating on what works compounds over time.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For detailed earnings data at each level, check our <a href="/canvas-ugc-earnings/" class="text-accent hover:underline">Canvas UGC earnings guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "Do I need a social media following to start Canvas UGC?", a: "No. Canvas UGC content is posted on brand-owned accounts, not your personal profiles. Your follower count is completely irrelevant. What matters is your ability to create engaging short-form video content. Many successful Canvas UGC creators have zero personal social media presence." },
+          { q: "What equipment do I need to start?", a: "Minimum: a smartphone (2022 or later), a phone tripod ($20-$30), and natural lighting (a window). Optional upgrades include a ring light ($25-$40) and an external microphone ($30-$60). You can start with under $30 in equipment. CapCut (free) is the standard editing software." },
+          { q: "How much can I earn as a beginner Canvas UGC creator?", a: "Beginners typically earn $200-$800 per month in their first 1-3 months. This grows to $800-$2,500/month by month 3-6, and $2,500-$8,000+ after 6 months of consistent work. Earnings depend on CPM rate ($2-$6 per 1,000 views), content volume, and niche selection." },
+          { q: "How many videos do I need to create per month?", a: "Most Canvas UGC programs expect 10-15 videos per month as a minimum. Higher-volume creators producing 20-40 videos per month earn proportionally more. At a batch-production pace, 15 videos takes roughly 6-8 hours per week including scripting, filming, and editing." },
+          { q: "What's the difference between Canvas UGC and regular UGC?", a: "In traditional UGC, you deliver raw video footage and the brand uses it in their paid ads. You get a flat fee per video ($150-$500). In Canvas UGC, you post content directly on brand-owned social accounts and get paid per view (CPM). Canvas UGC offers ongoing income versus one-off payments." },
+          { q: "Can I do Canvas UGC alongside a full-time job?", a: "Yes, most beginners start Canvas UGC as a side hustle. Producing 10-15 videos per month takes 5-8 hours per week if you batch your production. Many creators do all their filming on weekends and edit during weekday evenings." },
+          { q: "How long until I get my first payment?", a: "Typically 30-45 days from your first posted video. Programs usually pay monthly in arrears — you post content in month 1 and receive payment early in month 2. Allow 1-2 weeks for portfolio building and application before that." },
+          { q: "What niche should I choose?", a: "Pick a niche where you have genuine knowledge or strong interest. Tech/SaaS pays the highest CPM ($4-$6) but requires comfort with screen recordings and app demos. Lifestyle and beauty niches have lower barriers to entry but more competition and lower CPM ($2-$3.50). The best niche is one you can talk about naturally." },
+          { q: "What if my first videos don't get many views?", a: "This is completely normal. First-month videos typically get fewer views because the brand account may still be warming up and you're still learning what works. Focus on volume and iteration rather than perfection. Most creators see a 2-3x improvement in views by month two as they refine their hooks and content style." },
+          { q: "How do I find Canvas UGC programs that are hiring?", a: "Three main channels: (1) Join creator networks like OKAD that match you with programs, (2) search social media for 'Canvas UGC hiring' posts on Twitter/X and Reddit, (3) identify brands running multi-account TikTok operations and reach out directly with your portfolio." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to start creating Canvas UGC?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Join our creator network and get matched with brands in your niche. We handle the brand relationships, tracking, and payments &mdash; you focus on creating great content.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCreator} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get started with OKAD &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on onboarding data from 700+ Canvas UGC creators managed by OKAD Agency, supplemented by creator community feedback and platform analytics. Timelines and earnings figures represent typical ranges, not guarantees. Individual outcomes depend on content quality, niche selection, consistency, platform algorithm dynamics, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">The complete guide to brand-account content</p>
+          </a>
+          <a href="/canvas-ugc-earnings/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Earnings</p>
+            <p class="text-[12px] text-muted leading-[1.4]">How much do Canvas UGC creators make?</p>
+          </a>
+          <a href="/ugc-portfolio-guide/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Portfolio Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Build a portfolio that gets you hired</p>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3">
+          <a href="/brand-pitch/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Brand Pitch Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">How to pitch yourself to brands</p>
+          </a>
+          <a href="/hook-rate/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Hook Rate Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Master the first 2 seconds</p>
+          </a>
+          <a href="/ugc-rates/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Rates</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Complete pricing guide for creators</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Start Canvas UGC — Step-by-Step Guide for Beginners",
+    "description": "Learn how to start Canvas UGC from scratch. Step-by-step guide covering equipment, niche selection, portfolio building, finding brands, creating your first videos, and scaling to full-time income.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/how-to-start-canvas-ugc/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "How to Start Canvas UGC" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Start Canvas UGC",
+    "description": "Step-by-step guide to starting Canvas UGC as a complete beginner",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Understand the Canvas UGC model", "text": "Learn how Canvas UGC works: creators post on brand-owned accounts and get paid per view (CPM $2-$6). No personal following needed." },
+      { "@type": "HowToStep", "position": 2, "name": "Pick your niche", "text": "Choose a niche where you have genuine knowledge. Tech/SaaS pays $4-$6 CPM, lifestyle $2-$3.50. Pick what you can talk about naturally." },
+      { "@type": "HowToStep", "position": 3, "name": "Build a mini portfolio", "text": "Create 3-5 sample videos in your chosen niche. Pick real products and create content as if briefed by a brand. Upload to Google Drive." },
+      { "@type": "HowToStep", "position": 4, "name": "Find your first brand", "text": "Join creator networks, apply directly to brands running Canvas UGC, or search job boards and social media for opportunities." },
+      { "@type": "HowToStep", "position": 5, "name": "Create your first videos", "text": "Follow the brand brief, nail the hook in the first 2 seconds, film 2-3 takes per video, and edit for pacing in CapCut." },
+      { "@type": "HowToStep", "position": 6, "name": "Optimize for views", "text": "Analyze performance data, A/B test hooks, post consistently, and engage with comments to boost algorithmic distribution." },
+      { "@type": "HowToStep", "position": 7, "name": "Scale to multiple brands", "text": "Once consistent on 1-2 accounts, add more brand accounts. Batch production and negotiate higher CPM rates based on proven performance." }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Do I need a social media following to start Canvas UGC?", "acceptedAnswer": { "@type": "Answer", "text": "No. Canvas UGC content is posted on brand-owned accounts, not your personal profiles. Your follower count is completely irrelevant. What matters is your ability to create engaging short-form video content." } },
+      { "@type": "Question", "name": "What equipment do I need to start?", "acceptedAnswer": { "@type": "Answer", "text": "Minimum: a smartphone (2022 or later), a phone tripod ($20-$30), and natural lighting (a window). Optional upgrades include a ring light ($25-$40) and an external microphone ($30-$60). You can start with under $30 in equipment." } },
+      { "@type": "Question", "name": "How much can I earn as a beginner Canvas UGC creator?", "acceptedAnswer": { "@type": "Answer", "text": "Beginners typically earn $200-$800 per month in their first 1-3 months. This grows to $800-$2,500/month by month 3-6, and $2,500-$8,000+ after 6 months of consistent work." } },
+      { "@type": "Question", "name": "How many videos do I need to create per month?", "acceptedAnswer": { "@type": "Answer", "text": "Most Canvas UGC programs expect 10-15 videos per month as a minimum. Higher-volume creators producing 20-40 videos per month earn proportionally more. At a batch-production pace, 15 videos takes roughly 6-8 hours per week." } },
+      { "@type": "Question", "name": "What's the difference between Canvas UGC and regular UGC?", "acceptedAnswer": { "@type": "Answer", "text": "In traditional UGC, you deliver raw video footage and the brand uses it in their paid ads. You get a flat fee per video ($150-$500). In Canvas UGC, you post content directly on brand-owned social accounts and get paid per view (CPM)." } },
+      { "@type": "Question", "name": "Can I do Canvas UGC alongside a full-time job?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, most beginners start Canvas UGC as a side hustle. Producing 10-15 videos per month takes 5-8 hours per week if you batch your production." } },
+      { "@type": "Question", "name": "How long until I get my first payment?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 30-45 days from your first posted video. Programs usually pay monthly in arrears. Allow 1-2 weeks for portfolio building and application before that." } },
+      { "@type": "Question", "name": "What niche should I choose?", "acceptedAnswer": { "@type": "Answer", "text": "Pick a niche where you have genuine knowledge or strong interest. Tech/SaaS pays the highest CPM ($4-$6) but requires comfort with screen recordings. The best niche is one you can talk about naturally." } },
+      { "@type": "Question", "name": "What if my first videos don't get many views?", "acceptedAnswer": { "@type": "Answer", "text": "Completely normal. First-month videos typically get fewer views because the brand account may still be warming up. Focus on volume and iteration. Most creators see a 2-3x improvement in views by month two." } },
+      { "@type": "Question", "name": "How do I find Canvas UGC programs that are hiring?", "acceptedAnswer": { "@type": "Answer", "text": "Three main channels: join creator networks like OKAD that match you with programs, search social media for hiring posts, or identify brands running multi-account TikTok operations and reach out directly." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

@@ -1,0 +1,475 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailCanvas = "mailto:olga@okad.agency?subject=Canvas%20UGC%20program%20%E2%80%94%20getting%20started";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Canvas UGC Meaning — What It Is, How It Works & Why Brands Use It | OKAD"
+  description="Canvas UGC is a delivery model where creators post on brand-owned social accounts and get paid per view. Learn what canvas UGC means, how it differs from regular UGC, and how to get started as a brand or creator."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Definition guide &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Canvas UGC Meaning: <span class="text-accent">What It Actually Is</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Canvas UGC is a content delivery model where creators post directly on brand-owned social accounts instead of their own. The brand&rsquo;s account is the &ldquo;canvas.&rdquo; Here is everything the term means, how it works, and why it matters.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailCanvas} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Start your Canvas UGC program &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Delivery model</span>
+          <span>Brand-owned accounts</span>
+          <span>CPM $2&ndash;$6</span>
+          <span>Pay-per-view</span>
+          <span>Volume-first</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick answer grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Canvas UGC in Three Sentences</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3A8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">The &ldquo;Canvas&rdquo;</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">A brand-owned social media account. TikTok, Instagram, YouTube Shorts, or Facebook. The brand controls the account, the audience, and all content posted to it.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">The &ldquo;UGC&rdquo;</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Creators produce short-form video content that looks and feels like user-generated content &mdash; natural, unpolished, authentic &mdash; but post it on the brand&rsquo;s account.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">The Model</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Creators get paid per view (CPM $2&ndash;$6) or a hybrid of base pay plus view bonuses. The brand keeps the account, the audience data, and the entire content library.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Definition", href: "#definition" },
+            { num: "02", text: "Canvas UGC vs Regular UGC", href: "#vs-regular" },
+            { num: "03", text: "The \"Canvas\" Metaphor", href: "#metaphor" },
+            { num: "04", text: "Who Uses Canvas UGC", href: "#who-uses" },
+            { num: "05", text: "How Creators Get Paid", href: "#payment" },
+            { num: "06", text: "How to Get Started", href: "#get-started" },
+            { num: "07", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Definition -->
+    <section class="guide-section" id="definition">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What does &ldquo;Canvas UGC&rdquo; mean?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Canvas UGC is a delivery model, not a content type or aesthetic</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creators post on brand-owned accounts rather than their own profiles</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The brand retains the account, the audience, and the full content library</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Canvas UGC</strong> refers to a specific way of delivering creator-made content. Instead of creators posting on their own profiles (traditional influencer marketing) or handing raw footage to a brand (traditional UGC), the creator posts directly on one or more social accounts that the brand owns.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The word &ldquo;canvas&rdquo; is a metaphor. The brand&rsquo;s social account is the canvas. Creators are the painters. They produce short-form video &mdash; typically TikTok, Instagram Reels, YouTube Shorts, or Facebook Reels &mdash; and upload it to the brand&rsquo;s page. The content looks and feels like organic user-generated content, but it lives on a brand-controlled property.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is a meaningful distinction because it changes who owns the output. In traditional UGC workflows, the brand licenses content from a creator or buys it outright, then re-uploads it to their own channels or uses it in paid ads. In Canvas UGC, the creator is effectively a guest poster on the brand&rsquo;s account. The brand never has to re-upload, re-license, or negotiate usage rights &mdash; the content is already on their property from the moment it goes live.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The model emerged in late 2023 among consumer app and SaaS companies that needed high volumes of organic short-form video. By mid-2026, it has become the standard organic growth playbook for apps, AI tools, fintech products, and increasingly e-commerce brands.</p>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Content type:</strong> short-form video (15&ndash;90 seconds)</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Posted on:</strong> brand-owned social accounts</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Creator role:</strong> produce and post on the brand&rsquo;s account</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Payment:</strong> per-view (CPM $2&ndash;$6) or hybrid</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Brand retains:</strong> account, audience, content library, analytics</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">If someone asks you &ldquo;what does canvas UGC mean?&rdquo; the simplest accurate answer is: <strong>creators make UGC-style videos and post them on a brand&rsquo;s social accounts instead of their own.</strong></p>
+      </div>
+    </section>
+
+    <!-- 02 Canvas UGC vs Regular UGC -->
+    <section class="guide-section" id="vs-regular">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Canvas UGC vs Regular UGC</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How canvas UGC differs from traditional UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Same content style, completely different delivery and ownership model</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Traditional UGC = creator delivers files; Canvas UGC = creator posts on brand account</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Canvas UGC gives the brand organic reach, audience data, and algorithmic signal</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The confusion between Canvas UGC and &ldquo;regular&rdquo; UGC is the most common misunderstanding in this space. Both use the same type of content &mdash; authentic, creator-made video that looks natural rather than produced. The difference is entirely in how and where that content is delivered.</p>
+
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="text-left py-3 px-3 font-display font-semibold text-ink"></th>
+                <th class="text-left py-3 px-3 font-display font-semibold text-ink">Traditional UGC</th>
+                <th class="text-left py-3 px-3 font-display font-semibold text-accent">Canvas UGC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border">
+                <td class="py-3 px-3 font-medium text-ink">Where content lives</td>
+                <td class="py-3 px-3 text-ink-2">Creator&rsquo;s profile or brand&rsquo;s ad account</td>
+                <td class="py-3 px-3 text-ink-2">Brand-owned social account</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-3 px-3 font-medium text-ink">Who posts</td>
+                <td class="py-3 px-3 text-ink-2">Creator posts on own profile, or brand uploads raw files</td>
+                <td class="py-3 px-3 text-ink-2">Creator posts on brand&rsquo;s account</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-3 px-3 font-medium text-ink">Content ownership</td>
+                <td class="py-3 px-3 text-ink-2">Negotiated via license or buyout</td>
+                <td class="py-3 px-3 text-ink-2">Brand owns from the start (it&rsquo;s on their account)</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-3 px-3 font-medium text-ink">Payment model</td>
+                <td class="py-3 px-3 text-ink-2">Per-video flat fee</td>
+                <td class="py-3 px-3 text-ink-2">Per-view CPM or hybrid</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-3 px-3 font-medium text-ink">Organic reach</td>
+                <td class="py-3 px-3 text-ink-2">None (unless creator posts on their own)</td>
+                <td class="py-3 px-3 text-ink-2">Yes &mdash; algorithm distributes content organically</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-3 px-3 font-medium text-ink">Audience data</td>
+                <td class="py-3 px-3 text-ink-2">Brand gets none (or limited)</td>
+                <td class="py-3 px-3 text-ink-2">Brand retains all follower and engagement data</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-3 font-medium text-ink">Volume</td>
+                <td class="py-3 px-3 text-ink-2">Typically 1&ndash;5 videos per deal</td>
+                <td class="py-3 px-3 text-ink-2">15&ndash;40+ videos per month per account</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Why this matters for brands</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">With traditional UGC, a brand pays $200&ndash;$500 for a video, gets the file, and uploads it to their ad account or social page. The content performs based on the ad spend behind it. There is no organic distribution unless the brand also posts it organically.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">With Canvas UGC, that same video is posted directly on a niched brand account, gets organic distribution from the platform algorithm, and the brand keeps every follower, comment, and engagement signal the video generates. If the video performs well organically, it can be amplified into a paid ad via <a href="/spark-ads/" class="text-accent hover:underline">Spark Ads</a> or <a href="/partnership-ads/" class="text-accent hover:underline">Partnership Ads</a> without re-uploading.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Why this matters for creators</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">For creators, the canvas model means you do not need a large personal following to earn money. Your content&rsquo;s value comes from the views it generates on the brand&rsquo;s account, not from your own audience size. This makes Canvas UGC one of the most accessible entry points for new creators &mdash; the barrier to entry is content quality, not follower count.</p>
+      </div>
+    </section>
+
+    <!-- 03 The Canvas Metaphor -->
+    <section class="guide-section" id="metaphor">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; The &ldquo;Canvas&rdquo; Metaphor</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why it&rsquo;s called &ldquo;canvas&rdquo;</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">The term &ldquo;canvas&rdquo; was not coined by a marketing committee. It emerged organically in creator communities and agency Slack channels around 2023&ndash;2024 as a shorthand to distinguish this model from the standard &ldquo;deliver raw files&rdquo; UGC workflow.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The metaphor is straightforward: the brand&rsquo;s social account is a blank canvas. The creator is a painter. The creator&rsquo;s job is to fill that canvas with content. The canvas (account) belongs to the brand. The art (content) stays on the canvas. The painter (creator) gets paid for the work.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This metaphor is useful because it immediately clarifies the ownership structure. A painter who works on someone else&rsquo;s canvas does not take the painting home. Similarly, a Canvas UGC creator does not own the content once it is posted &mdash; it lives on the brand&rsquo;s account and the brand controls what happens to it.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Related terms you might encounter</h3>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px]">Brand account UGC:</strong> Same concept, less common term</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px]">Guest posting UGC:</strong> Informal synonym used in some communities</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px]">Managed account UGC:</strong> Enterprise variation where an agency manages both creators and accounts</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px]">Tech UGC:</strong> A content category (creator-made video about software/apps), often overlaps with Canvas but is <a href="/canvas-ugc/" class="text-accent hover:underline">a separate concept</a></li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">Do not confuse Canvas UGC with the <strong>Canva</strong> design platform. Despite the similar spelling, they are unrelated. Canvas UGC is a content delivery model. Canva is a graphic design tool.</p>
+      </div>
+    </section>
+
+    <!-- 04 Who Uses Canvas UGC -->
+    <section class="guide-section" id="who-uses">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Who Uses Canvas UGC</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Brands and creators in the Canvas UGC ecosystem</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Apps, SaaS, AI tools, and fintech brands are the primary buyers</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creators do not need a large following &mdash; content quality is what matters</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Agencies and operators often sit in between, managing programs at scale</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Brands that buy Canvas UGC</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC works best for products that can be demonstrated on screen and benefit from high-volume organic visibility. The most common buyers are:</p>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">SaaS &amp; apps:</strong> Software products with a visual interface that can be shown in a screen recording or tutorial format</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">AI tools:</strong> Rapidly growing category &mdash; AI writing tools, image generators, productivity apps, coding assistants</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Fintech:</strong> Trading platforms, budgeting apps, crypto tools, neobanks</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">E-commerce:</strong> Increasingly adopting the model for product showcases, especially DTC brands</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Education:</strong> Online courses, learning platforms, study tools</li>
+        </ul>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Creators who make Canvas UGC</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC creators are fundamentally different from influencers. An influencer&rsquo;s value is their audience. A Canvas UGC creator&rsquo;s value is their ability to produce content that performs on someone else&rsquo;s account.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This means you can start as a Canvas UGC creator with zero followers. Brands do not care about your follower count &mdash; they care about whether your content gets views on their account. The skill set is content creation, not audience building.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Common Canvas UGC creator profiles include:</p>
+        <ul class="list-none p-0 space-y-1 mb-4">
+          <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Side-hustle creators who produce 5&ndash;15 videos per week across multiple brand accounts</li>
+          <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Full-time Canvas creators earning $3K&ndash;$15K+/month by working with multiple programs</li>
+          <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Traditional UGC creators who add Canvas work as an additional revenue stream</li>
+          <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Aspiring content creators who use Canvas UGC as a paid training ground</li>
+        </ul>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Operators and agencies</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Running a Canvas UGC program requires operational infrastructure &mdash; creator recruitment, content scheduling, view tracking, automated payouts, account warmup, and multi-account management. Most brands do not have this in-house, which is why operators and agencies handle the program on their behalf. The brand provides the product, budget, and brand guidelines. The operator handles everything else.</p>
+      </div>
+    </section>
+
+    <!-- 05 How Creators Get Paid -->
+    <section class="guide-section" id="payment">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; How Creators Get Paid</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Canvas UGC payment models</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CPM (cost per mille): $2&ndash;$6 per 1,000 views is the standard range</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Hybrid model: small base pay + per-view bonuses for predictable income</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Active creators earn $3K&ndash;$15K+/month across multiple programs</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC flipped the traditional UGC payment model. Instead of paying a flat fee per video ($200&ndash;$500 is typical in traditional UGC), brands pay based on performance &mdash; specifically, the number of views each creator&rsquo;s content generates.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Pure CPM model</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most common structure. The brand sets a CPM rate (e.g., $4 per 1,000 views). At the end of each month, the operator tallies each creator&rsquo;s total views across all their posts and pays accordingly. If your videos generated 500,000 views at $4 CPM, you earn $2,000 that month.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">CPM rates vary by niche, platform, and program maturity. Finance and AI content typically commands higher CPMs ($4&ndash;$6) because the audience is more valuable. Lifestyle and entertainment content sits at the lower end ($2&ndash;$3). Check our <a href="/ugc-rates/" class="text-accent hover:underline">UGC rates guide</a> for detailed benchmarks.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Hybrid model</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Some programs offer a small base payment per video (e.g., $15&ndash;$30) plus a lower CPM rate on top. This gives creators more predictable income while still incentivizing performance. The hybrid model is often used for programs that are recruiting new creators, since it reduces the risk of a creator posting 20 videos and earning almost nothing because the account is still warming up.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Payment logistics</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Payments are typically monthly. Operators track views across all platforms (TikTok, Instagram, YouTube, Facebook) and compile a payout report. Creators are paid via bank transfer, PayPal, Wise, or cryptocurrency, depending on the program. Professional operators automate this process &mdash; manual view counting does not scale past a handful of creators.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The key difference from traditional UGC is that Canvas UGC income is <strong>cumulative</strong>. A traditional UGC creator delivers one video and gets one payment. A Canvas UGC creator&rsquo;s posts continue generating views (and therefore income) for weeks or months after posting. Posts that go viral can generate outsized returns on a single piece of content.</p>
+      </div>
+    </section>
+
+    <!-- 06 How to Get Started -->
+    <section class="guide-section" id="get-started">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; How to Get Started</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Getting started with Canvas UGC</h2>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">For brands</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you are a brand considering a Canvas UGC program, here is the typical launch process:</p>
+        <ol class="list-none p-0 space-y-3 mb-6 counter-reset: steps">
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Define your niche and audience.</strong> Each brand account should target a specific audience segment. A productivity app might run one account focused on students and another on remote workers. The narrower the niche, the faster the algorithm learns who to show your content to.</li>
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Set up and warm up accounts.</strong> Create dedicated social accounts (not your main corporate page) and spend 1&ndash;3 weeks engaging with niche content before posting. Follow relevant creators, comment genuinely, and let the algorithm understand what your account is about.</li>
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Recruit creators.</strong> You need 10+ creators per account to maintain the recommended volume of 15&ndash;40 videos per month. Look for creators who can produce content consistently, not just one-off viral hits.</li>
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Set up tracking and payments.</strong> You need a system to track views per creator per platform and automate monthly payouts. This is the operational infrastructure that makes or breaks a program.</li>
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Launch and iterate.</strong> Start posting, monitor performance, identify top-performing content styles, and scale what works. Top organic performers can graduate to <a href="/spark-ads/" class="text-accent hover:underline">Spark Ads</a> or <a href="/partnership-ads/" class="text-accent hover:underline">Partnership Ads</a>.</li>
+        </ol>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most brands outsource steps 2&ndash;5 to an experienced operator. Running a Canvas UGC program in-house requires dedicated staff for creator management, content scheduling, cross-platform analytics, and payroll. For a deep dive into every step, read our <a href="/canvas-ugc/" class="text-accent hover:underline">complete Canvas UGC guide</a>.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">For creators</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Getting started as a Canvas UGC creator is more straightforward than traditional UGC because you do not need an existing audience:</p>
+        <ol class="list-none p-0 space-y-3 mb-6">
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Build a portfolio.</strong> Create 3&ndash;5 sample videos in niches you want to work in (tech, lifestyle, finance, etc.). These do not need to be posted anywhere &mdash; they are audition pieces. See our <a href="/ugc-portfolio-guide/" class="text-accent hover:underline">UGC portfolio guide</a> for specifics.</li>
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Find programs.</strong> Apply to Canvas UGC programs through agencies, creator networks, and job boards. Look for <a href="/canvas-ugc-jobs/" class="text-accent hover:underline">Canvas UGC jobs</a> listings on Twitter/X, LinkedIn, and UGC communities.</li>
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Pitch brands directly.</strong> If you know a product well, reach out to the brand or their agency and offer to create Canvas content. Our <a href="/brand-pitch/" class="text-accent hover:underline">brand pitch guide</a> walks through the process.</li>
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Start producing at volume.</strong> Canvas UGC rewards consistency. Aim for 3&ndash;5 videos per week per account you work with. The more you post, the more data the algorithm has to find your content&rsquo;s audience.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 07 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What does Canvas UGC mean?", a: "Canvas UGC is a content delivery model where creators produce short-form videos and post them on brand-owned social accounts. The brand's account is the 'canvas' — creators make the content, but it lives on the brand's property. Creators are paid based on the views their content generates, typically at a CPM of $2-$6." },
+          { q: "Is Canvas UGC the same as regular UGC?", a: "No. The content style is similar — authentic, creator-made video — but the delivery model is completely different. Traditional UGC creators deliver raw video files to a brand. Canvas UGC creators post directly on the brand's social accounts. This means the brand gets organic reach, audience data, and algorithmic signal that traditional UGC does not provide." },
+          { q: "Do I need followers to do Canvas UGC?", a: "No. Canvas UGC creators post on brand accounts, not their own. Your follower count is irrelevant — what matters is your ability to create content that generates views. This makes Canvas UGC one of the most accessible entry points for new creators." },
+          { q: "How much can I earn from Canvas UGC?", a: "With CPM rates of $2-$6, active Canvas UGC creators working across multiple brand programs earn $3K-$15K+ per month. Earnings depend on the number of programs you work with, the volume of content you produce, and how well your content performs organically." },
+          { q: "Is Canvas UGC related to Canva?", a: "No. Despite the similar spelling, Canvas UGC has nothing to do with the Canva design platform. 'Canvas' in this context refers to the brand's social account being the blank canvas where creator content is posted." },
+          { q: "What platforms support Canvas UGC?", a: "Primarily TikTok, Instagram Reels, YouTube Shorts, and Facebook Reels. TikTok is the highest-volume channel because its algorithm favors content discovery over follower count, which aligns perfectly with the Canvas UGC model." },
+          { q: "How is Canvas UGC different from influencer marketing?", a: "In influencer marketing, the value is the creator's audience — they post on their own account and their followers see it. In Canvas UGC, creators post on a brand's account. The creator's personal audience size doesn't matter. The brand retains the content, the account growth, and all engagement data." },
+          { q: "Can OKAD help me start a Canvas UGC program?", a: "Yes. We handle the entire operation — account setup, warmup, creator recruitment from our 600+ creator network, content management, cross-platform view tracking, and automated payouts. Email olga@okad.agency or book a call to discuss your goals." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to start a Canvas UGC program?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Whether you are a brand looking to launch your first Canvas UGC program or a creator ready to start earning, we can help you get there.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCanvas} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Start your program &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC: The Complete Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Deep dive into operations, payment models, multi-account strategy</p>
+          </a>
+          <a href="/canvas-ugc-jobs/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Jobs</p>
+            <p class="text-[12px] text-muted leading-[1.4]">How to find, apply, and land paid Canvas UGC work</p>
+          </a>
+          <a href="/ugc-rates/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Creator Rates</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Complete pricing benchmarks by niche and experience</p>
+          </a>
+          <a href="/spark-ads/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Spark Ads</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Amplify top Canvas UGC content into paid TikTok ads</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Canvas UGC Meaning — What It Is, How It Works & Why Brands Use It",
+    "description": "Canvas UGC is a delivery model where creators post on brand-owned social accounts and get paid per view. Learn what canvas UGC means, how it differs from regular UGC, and how to get started.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/canvas-ugc-meaning/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Canvas UGC Meaning" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What does Canvas UGC mean?", "acceptedAnswer": { "@type": "Answer", "text": "Canvas UGC is a content delivery model where creators produce short-form videos and post them on brand-owned social accounts. The brand's account is the 'canvas' — creators make the content, but it lives on the brand's property. Creators are paid based on the views their content generates, typically at a CPM of $2-$6." } },
+      { "@type": "Question", "name": "Is Canvas UGC the same as regular UGC?", "acceptedAnswer": { "@type": "Answer", "text": "No. The content style is similar — authentic, creator-made video — but the delivery model is completely different. Traditional UGC creators deliver raw video files to a brand. Canvas UGC creators post directly on the brand's social accounts. This means the brand gets organic reach, audience data, and algorithmic signal that traditional UGC does not provide." } },
+      { "@type": "Question", "name": "Do I need followers to do Canvas UGC?", "acceptedAnswer": { "@type": "Answer", "text": "No. Canvas UGC creators post on brand accounts, not their own. Your follower count is irrelevant — what matters is your ability to create content that generates views. This makes Canvas UGC one of the most accessible entry points for new creators." } },
+      { "@type": "Question", "name": "How much can I earn from Canvas UGC?", "acceptedAnswer": { "@type": "Answer", "text": "With CPM rates of $2-$6, active Canvas UGC creators working across multiple brand programs earn $3K-$15K+ per month. Earnings depend on the number of programs you work with, the volume of content you produce, and how well your content performs organically." } },
+      { "@type": "Question", "name": "Is Canvas UGC related to Canva?", "acceptedAnswer": { "@type": "Answer", "text": "No. Despite the similar spelling, Canvas UGC has nothing to do with the Canva design platform. 'Canvas' in this context refers to the brand's social account being the blank canvas where creator content is posted." } },
+      { "@type": "Question", "name": "What platforms support Canvas UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Primarily TikTok, Instagram Reels, YouTube Shorts, and Facebook Reels. TikTok is the highest-volume channel because its algorithm favors content discovery over follower count, which aligns perfectly with the Canvas UGC model." } },
+      { "@type": "Question", "name": "How is Canvas UGC different from influencer marketing?", "acceptedAnswer": { "@type": "Answer", "text": "In influencer marketing, the value is the creator's audience — they post on their own account and their followers see it. In Canvas UGC, creators post on a brand's account. The creator's personal audience size doesn't matter. The brand retains the content, the account growth, and all engagement data." } },
+      { "@type": "Question", "name": "Can OKAD help me start a Canvas UGC program?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We handle the entire operation — account setup, warmup, creator recruitment from our 600+ creator network, content management, cross-platform view tracking, and automated payouts. Email olga@okad.agency or book a call to discuss your goals." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

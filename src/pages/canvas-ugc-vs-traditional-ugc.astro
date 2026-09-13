@@ -1,0 +1,472 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailCanvas = "mailto:olga@okad.agency?subject=Canvas%20UGC%20program%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Canvas UGC vs Traditional UGC — Key Differences, Pros & Cons | OKAD"
+  description="Canvas UGC vs traditional UGC compared side by side. Understand the key differences in ownership, distribution, payment, scale, and brand control — and when to use each model."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Canvas UGC &middot; Comparison
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Canvas UGC vs Traditional UGC: <span class="text-accent">Key Differences</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Both models use creator-made content. But where it lives, who owns it, how creators get paid, and how it scales are fundamentally different. This guide breaks down every difference so you can choose the right model for your brand.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailCanvas} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get a Canvas UGC plan &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Side-by-side comparison</span>
+          <span>Ownership &amp; control</span>
+          <span>Cost analysis</span>
+          <span>When to use each</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Quick Comparison Table", href: "#comparison" },
+            { num: "02", text: "What Is Traditional UGC?", href: "#traditional" },
+            { num: "03", text: "What Is Canvas UGC?", href: "#canvas" },
+            { num: "04", text: "Key Differences", href: "#differences" },
+            { num: "05", text: "When to Use Traditional UGC", href: "#when-traditional" },
+            { num: "06", text: "When to Use Canvas UGC", href: "#when-canvas" },
+            { num: "07", text: "Can You Do Both?", href: "#both" },
+            { num: "08", text: "Cost Comparison", href: "#cost" },
+            { num: "09", text: "Which Is Better for Brands", href: "#for-brands" },
+            { num: "10", text: "Which Is Better for Creators", href: "#for-creators" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Quick Comparison -->
+    <section class="guide-section" id="comparison">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; At a Glance</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Quick comparison table</h2>
+        <p class="text-ink-2 leading-[1.65] mb-6">The core difference: traditional UGC is content you buy. Canvas UGC is a content system you operate.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Feature</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Traditional UGC</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Canvas UGC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Where content lives</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator's account or brand's ad account</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand-owned social account</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Content ownership</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Licensed or bought outright</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand owns account + content library</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Audience ownership</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Creator keeps the audience</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brand keeps the audience</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Payment model</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Per video ($150&ndash;$500+)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Per 1,000 views (CPM $2&ndash;$6)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Distribution</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Paid ads or creator's organic reach</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Organic on brand accounts + paid promotion of winners</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Volume</td><td class="px-4 py-2.5 border-b border-border text-ink-2">5&ndash;20 videos per campaign</td><td class="px-4 py-2.5 border-b border-border text-ink-2">30&ndash;200+ videos per month</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Brand control</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Approval before posting</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brief-based; creators post directly</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Scale mechanism</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Hire more creators per campaign</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Add accounts + creators systematically</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Ongoing relationship</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Campaign-based (one-off or retainer)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Continuous production system</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-medium">Best for</td><td class="px-4 py-2.5 text-ink-2">Paid ad creative, testimonials, product launches</td><td class="px-4 py-2.5 text-ink-2">Organic reach engine, always-on content</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 Traditional UGC -->
+    <section class="guide-section" id="traditional">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Traditional UGC</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What is traditional UGC?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand pays creators to produce video content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Content is used in paid ads or posted on creator's own account</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Transaction is per-video, campaign-based</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional UGC (user-generated content) is the model most brands have been using since 2020. A brand hires a creator &mdash; either through a platform, an agency, or direct outreach &mdash; to produce one or more videos. The creator films content that looks authentic and native to social platforms, and the brand receives the finished video files.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The brand then uses that content in one of two ways: running it as paid advertising through their ad accounts, or having the creator post it on the creator's own social profile (essentially <a href="/ugc-vs-influencer/" class="text-accent hover:underline">influencer marketing</a> with UGC-style content).</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">How traditional UGC typically works</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li>Brand writes a creative brief specifying the product, angle, and deliverables</li>
+          <li>Creator produces 1&ndash;5 videos per brief, usually with one round of revisions</li>
+          <li>Brand pays $150&ndash;$500+ per video depending on creator experience and usage rights</li>
+          <li>Brand receives raw files and runs them as paid ads, or the creator posts on their own account</li>
+          <li>The engagement ends when deliverables are submitted</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional UGC is well-understood and widely available. There are dozens of platforms (Billo, Insense, JoinBrands, Trend) that connect brands with creators for this kind of work. The model's strength is simplicity: you pay for content, you get content, you run it in ads. Its weakness is that it produces static assets, not a compounding content engine.</p>
+      </div>
+    </section>
+
+    <!-- 03 Canvas UGC -->
+    <section class="guide-section" id="canvas">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Canvas UGC</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What is canvas UGC?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creators post directly on brand-owned social accounts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand retains the account, audience, and content library</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creators are paid per view (CPM), not per video</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><a href="/canvas-ugc/" class="text-accent hover:underline">Canvas UGC</a> is a delivery model where creators produce and publish content directly on brand-owned social accounts. The brand's account is the "canvas" &mdash; the surface where content lives and audience accumulates. Instead of buying finished video files, the brand builds and operates a content production system on accounts it owns.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Creators are paid based on performance &mdash; typically $2&ndash;$6 per 1,000 views (CPM) or through a hybrid model combining a small base payment with view bonuses. This aligns creator incentives with content performance rather than just delivery.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">How canvas UGC typically works</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li>Brand creates niched social accounts and warms them up through targeted engagement</li>
+          <li>10&ndash;30+ creators are recruited and onboarded with account-specific briefs</li>
+          <li>Creators post 3&ndash;8 videos per week directly on the brand's accounts</li>
+          <li>Creators are paid monthly based on verified view counts</li>
+          <li>Top organic performers are promoted as <a href="/spark-ads/" class="text-accent hover:underline">Spark Ads</a> or <a href="/partnership-ads/" class="text-accent hover:underline">Partnership Ads</a></li>
+          <li>The system runs continuously &mdash; not as campaigns but as an ongoing content engine</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC is newer (the model emerged in late 2023) and more operationally complex than traditional UGC. It requires account management, creator coordination at scale, cross-platform tracking, and automated payouts. Most brands work with an <a href="/canvas-ugc-agency/" class="text-accent hover:underline">agency</a> or experienced operator to run canvas programs.</p>
+      </div>
+    </section>
+
+    <!-- 04 Key Differences -->
+    <section class="guide-section" id="differences">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Key Differences</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key differences explained</h2>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Ownership</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is the most consequential difference. In traditional UGC, the brand licenses or buys the content &mdash; but the audience stays with the creator (or disperses when the ad stops running). In canvas UGC, the brand owns the account, the followers, the algorithmic signal, and the entire content library. When a creator leaves, the content remains and the account's audience stays intact.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Distribution</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional UGC relies on paid distribution (ads) or the creator's existing audience. Canvas UGC is built for organic distribution first &mdash; content is published on brand accounts and distributed by the platform's algorithm. Top performers can then be amplified with paid promotion, but the organic reach comes first, for free.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Payment</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional UGC pays per deliverable: $150&ndash;$500+ per video regardless of performance. Canvas UGC pays per result: $2&ndash;$6 per 1,000 views. This means the brand only pays proportionally to the value generated. It also means creators with strong content skills can earn significantly more than flat-rate UGC work &mdash; top canvas creators earn <a href="/ugc-rates/" class="text-accent hover:underline">$3K&ndash;$15K+ per month</a>.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Scale</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional UGC scales linearly: more videos means more one-off creator contracts, more briefs, more review cycles. Canvas UGC scales systemically: add more creators to existing accounts, add new accounts, compound the audience and algorithmic signal over time. A well-run canvas program can produce <a href="/high-volume-ugc/" class="text-accent hover:underline">50&ndash;300+ videos per month</a> with a fraction of the per-video management overhead.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Brand control</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional UGC gives brands full approval control &mdash; every video is reviewed before it goes live. Canvas UGC operates on a brief-and-trust model: creators are given guidelines, hooks, and format templates, then post directly without per-video approval. This trades some control for speed and volume. The tradeoff works because canvas programs use performance data (views, retention, engagement) as the feedback mechanism instead of pre-publication review.</p>
+      </div>
+    </section>
+
+    <!-- 05 When Traditional -->
+    <section class="guide-section" id="when-traditional">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; When to Use Traditional</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">When to use traditional UGC</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional UGC is the better choice in several specific scenarios.</p>
+
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Product launches.</strong> When you need polished, on-message content for a specific launch window. You need control over every detail and exact timing.</li>
+          <li><strong>Paid ad creative testing.</strong> When your primary goal is generating 10&ndash;20 ad variations to test in your paid media funnel. Traditional UGC gives you finished assets you can A/B test immediately.</li>
+          <li><strong>Highly regulated industries.</strong> Pharma, finance, and legal services often require legal review of every piece of content before publication. The pre-approval workflow of traditional UGC fits this requirement.</li>
+          <li><strong>Testimonial and review content.</strong> When you need genuine customer stories with specific talking points, a structured brief with approval works better than a volume-based approach.</li>
+          <li><strong>Small budgets.</strong> If your total content budget is under $2,000/month, traditional UGC (5&ndash;10 videos) gives you more control over quality than a canvas program, which needs scale to work.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 06 When Canvas -->
+    <section class="guide-section" id="when-canvas">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; When to Use Canvas</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">When to use canvas UGC</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC is the better choice when your goal is building a long-term organic content engine.</p>
+
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Always-on organic presence.</strong> When you want consistent content on brand accounts without your internal team filming every video.</li>
+          <li><strong>Volume-based strategies.</strong> When you need 30&ndash;200+ videos per month because your model depends on hitting breakout content through sheer volume of attempts.</li>
+          <li><strong>Building owned audience.</strong> When you want to own the followers, not rent them. Canvas programs build an audience asset that compounds over time.</li>
+          <li><strong>Organic-to-paid pipeline.</strong> When you want organic performance as a free signal for what works in paid. Top canvas posts become your best-performing ad creative.</li>
+          <li><strong>Multi-niche or multi-geo expansion.</strong> When you want to test different audience segments, content identities, or geographic markets through separate niched accounts.</li>
+          <li><strong>Cost efficiency at scale.</strong> When you need the lowest possible cost per view. At scale, canvas UGC delivers organic reach at $0.003&ndash;$0.006 per view &mdash; far cheaper than paid media.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 07 Can You Do Both -->
+    <section class="guide-section" id="both">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Hybrid Approach</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Can you do both?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Yes &mdash; the two models are complementary, not competing</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use traditional UGC for paid ad creative, canvas UGC for organic reach</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Many brands run both simultaneously</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Absolutely. The two models serve different functions, and many brands run them in parallel. Traditional UGC feeds your paid ad pipeline with polished, on-message creative. Canvas UGC builds your organic presence and generates a constant stream of content that tests hooks, formats, and angles at scale.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A common hybrid approach: run a canvas UGC program for always-on organic content, then commission traditional UGC specifically for product launches, seasonal campaigns, or when the paid team needs new ad variations that require tighter creative control.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The canvas program also feeds insights into the traditional UGC briefs. When you see which hooks, formats, and angles perform organically on canvas accounts, you can brief traditional UGC creators to produce similar content optimized for paid ads. The two systems reinforce each other.</p>
+      </div>
+    </section>
+
+    <!-- 08 Cost Comparison -->
+    <section class="guide-section" id="cost">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Cost Comparison</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Cost comparison</h2>
+        <p class="text-ink-2 leading-[1.65] mb-6">The cost structures are fundamentally different. Traditional UGC has a fixed cost per asset. Canvas UGC has a variable cost tied to performance.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Cost element</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Traditional UGC</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Canvas UGC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Creator payment</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$150&ndash;$500+ per video</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$2&ndash;$6 CPM (per 1K views)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">10 videos</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$1,500&ndash;$5,000</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$300&ndash;$600 (at avg. views)</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">100 videos/month</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$15,000&ndash;$50,000</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$3,000&ndash;$8,000</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Distribution cost</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Additional (paid ads required)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Organic reach included</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Management overhead</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Brief, review, approve per video</td><td class="px-4 py-2.5 border-b border-border text-ink-2">System setup, then ongoing monitoring</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Effective cost per view</td><td class="px-4 py-2.5 text-ink-2">$0.01&ndash;$0.05 (with paid media)</td><td class="px-4 py-2.5 text-ink-2">$0.003&ndash;$0.006 (organic)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">At small volumes (under 10 videos), traditional UGC is simpler and the cost difference is minimal once you factor in account setup and warmup time for canvas. At scale (50+ videos/month), canvas UGC becomes dramatically more cost-efficient because the organic distribution is essentially free and the per-video creator cost is a fraction of flat-rate pricing.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The hidden cost in canvas UGC is operations: account management, creator coordination, tracking, and payouts. This is why most brands at scale work with an agency rather than building the operational infrastructure in-house.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Not sure which model fits your brand?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your goals and budget. We'll recommend the right approach &mdash; canvas, traditional, or a hybrid of both.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCanvas} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a recommendation &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 Better for Brands -->
+    <section class="guide-section" id="for-brands">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; For Brands</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Which is better for brands?</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">It depends on what you are optimizing for. Here is a decision framework.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[14px] font-semibold mb-2 text-ink">Choose Traditional UGC if you:</h3>
+            <ul class="pl-4 space-y-1.5 text-[13px] text-ink-2">
+              <li>Need ad creative for an existing paid media funnel</li>
+              <li>Have a small team and limited operational capacity</li>
+              <li>Are in a regulated industry requiring legal review</li>
+              <li>Want 5&ndash;20 high-quality videos per campaign</li>
+              <li>Prioritize creative control over volume</li>
+            </ul>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[14px] font-semibold mb-2 text-ink">Choose Canvas UGC if you:</h3>
+            <ul class="pl-4 space-y-1.5 text-[13px] text-ink-2">
+              <li>Want to build an organic content engine</li>
+              <li>Need 30&ndash;200+ videos per month</li>
+              <li>Want to own the audience, not rent it</li>
+              <li>Are willing to invest in a system that compounds</li>
+              <li>Need the lowest possible cost per view at scale</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">For brands serious about social media as a growth channel (not just a presence), canvas UGC is increasingly becoming the default. The model's compounding nature &mdash; owned audience, growing content library, improving algorithmic signal &mdash; makes it more valuable the longer you run it. Traditional UGC, by contrast, delivers value only for as long as you're paying for distribution.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">That said, nearly every brand can benefit from traditional UGC for targeted campaigns. The question is not which model to choose exclusively, but which one should be your primary organic strategy.</p>
+      </div>
+    </section>
+
+    <!-- 10 Better for Creators -->
+    <section class="guide-section" id="for-creators">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; For Creators</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Which is better for creators?</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Both models offer legitimate income paths, but they reward different skills and work styles.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Factor</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Traditional UGC</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Canvas UGC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Income ceiling</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Limited by hours (1 video = 1 payment)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Higher ceiling through volume + viral upside</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Income predictability</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Fixed rate per video &mdash; predictable</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Variable &mdash; depends on views</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Portfolio building</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Builds a <a href="/ugc-portfolio-guide/" class="text-accent hover:underline">portfolio</a> of brand work</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Builds proven performance metrics</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Skill development</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Scripting, filming, editing</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Hooks, trends, platform algorithms</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Getting started</td><td class="px-4 py-2.5 text-ink-2">Need a portfolio and pitch to brands</td><td class="px-4 py-2.5 text-ink-2">Apply to programs, start posting</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">For creators who are strong content producers and understand what makes content go viral, canvas UGC offers a higher income ceiling. A creator posting across 3&ndash;5 brand accounts, producing 80&ndash;300 videos per month, can earn $3K&ndash;$15K+ monthly from aggregate views. The downside is variability &mdash; monthly income fluctuates with view counts.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For creators who prefer predictable income and enjoy the craft of producing polished content, traditional UGC offers more stability. You know exactly what each video pays before you film it. The tradeoff is a lower ceiling &mdash; each video requires time to produce, and income scales linearly with hours worked.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Many successful creators do both: traditional UGC for predictable baseline income, canvas UGC for upside potential. A <a href="/brand-pitch/" class="text-accent hover:underline">strong pitch</a> and <a href="/ugc-portfolio-guide/" class="text-accent hover:underline">portfolio</a> help with landing traditional UGC work, while canvas programs are more accessible to newer creators.</p>
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "Is canvas UGC replacing traditional UGC?", a: "Not replacing — complementing. Traditional UGC remains the best model for paid ad creative and campaign-specific content. Canvas UGC is becoming the default for brands that need always-on organic content at scale. Most brands will eventually use both." },
+          { q: "Can traditional UGC creators switch to canvas UGC?", a: "Yes. The core skill — creating authentic, engaging video content — transfers directly. The main adjustment is shifting from 'one polished video per brief' to 'high volume, iterative content' and learning to write hooks that drive organic discovery. Many creators successfully do both simultaneously." },
+          { q: "Which model is cheaper?", a: "At small volumes (under 10 videos), traditional UGC is comparable or cheaper. At scale (50+ videos/month), canvas UGC is dramatically cheaper because organic distribution is free. A 100-video/month canvas program costs $3K-$8K in creator payments vs. $15K-$50K for the same volume in traditional UGC." },
+          { q: "Do I need an agency for canvas UGC?", a: "Not required, but strongly recommended at scale. Canvas UGC involves account management, creator recruitment, cross-platform tracking, and automated payouts — operational complexity that most brands aren't set up to handle in-house. OKAD manages canvas UGC programs end to end." },
+          { q: "What if my canvas content doesn't perform?", a: "That's expected — the model is built on a power law. Only about 1.2% of posts cross 10,000 views. The strategy is volume: produce enough content that the breakout posts generate outsized returns. If no content performs after 60+ posts, the issue is usually niche selection or content quality, not the model itself." },
+          { q: "Can I use the same creators for both models?", a: "Yes, but be clear about expectations. Traditional UGC briefs typically require polished, scripted content with revisions. Canvas briefs are looser — frameworks and hooks, not scripts. Some creators excel at both; others have a strong preference for one style." },
+          { q: "How does content quality compare?", a: "Traditional UGC is typically more polished (scripted, edited, reviewed). Canvas UGC is typically more native and authentic (shot quickly, minimal editing, feels organic). Both can be high quality — they just optimize for different things. Polished ≠ better performance on social platforms." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">The complete guide to brand-account content</p>
+          </a>
+          <a href="/ugc-vs-influencer/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC vs Influencer</p>
+            <p class="text-[12px] text-muted leading-[1.4]">When creator content beats influencer reach</p>
+          </a>
+          <a href="/high-volume-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">High-Volume UGC</p>
+            <p class="text-[12px] text-muted leading-[1.4]">50-300+ videos per month at scale</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Canvas UGC vs Traditional UGC — Key Differences, Pros & Cons",
+    "description": "Canvas UGC vs traditional UGC compared side by side. Understand the key differences in ownership, distribution, payment, scale, and brand control — and when to use each model.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/canvas-ugc-vs-traditional-ugc/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Canvas UGC", "item": "https://okad.cc/canvas-ugc/" },
+      { "@type": "ListItem", "position": 3, "name": "Canvas UGC vs Traditional UGC" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is canvas UGC replacing traditional UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Not replacing — complementing. Traditional UGC remains the best model for paid ad creative and campaign-specific content. Canvas UGC is becoming the default for brands that need always-on organic content at scale." } },
+      { "@type": "Question", "name": "Which model is cheaper?", "acceptedAnswer": { "@type": "Answer", "text": "At small volumes (under 10 videos), traditional UGC is comparable or cheaper. At scale (50+ videos/month), canvas UGC is dramatically cheaper because organic distribution is free." } },
+      { "@type": "Question", "name": "Do I need an agency for canvas UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Not required, but strongly recommended at scale. Canvas UGC involves account management, creator recruitment, cross-platform tracking, and automated payouts — operational complexity that most brands aren't set up to handle in-house." } },
+      { "@type": "Question", "name": "Can I use the same creators for both models?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, but be clear about expectations. Traditional UGC briefs typically require polished, scripted content with revisions. Canvas briefs are looser — frameworks and hooks, not scripts." } },
+      { "@type": "Question", "name": "How does content quality compare?", "acceptedAnswer": { "@type": "Answer", "text": "Traditional UGC is typically more polished (scripted, edited, reviewed). Canvas UGC is typically more native and authentic (shot quickly, minimal editing, feels organic). Both can be high quality — they optimize for different things." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

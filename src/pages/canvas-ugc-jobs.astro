@@ -1,0 +1,511 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailCreator = "mailto:olga@okad.agency?subject=Canvas%20UGC%20creator%20application";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Canvas UGC Jobs — How to Find, Apply & Land Your First Deal | OKAD"
+  description="A practical guide to finding Canvas UGC jobs. Where to look, what brands expect, how to apply, portfolio requirements, payment expectations, and red flags to avoid."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Creator guide &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Canvas UGC Jobs: <span class="text-accent">Find &amp; Land Paid Work</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Canvas UGC is one of the fastest-growing creator income streams in 2026. This guide covers where the jobs are, what brands actually look for, how to apply, and what to watch out for.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailCreator} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Join our creator network &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>CPM $2&ndash;$6</span>
+          <span>No followers needed</span>
+          <span>$3K&ndash;$15K+/mo</span>
+          <span>Remote &amp; flexible</span>
+          <span>Growing demand</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick answer grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">What Makes Canvas UGC Jobs Different</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3A8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Post on Brand Accounts</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">You create content and post it on the brand&rsquo;s social accounts &mdash; not your own. Your personal following does not matter.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Paid Per View</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Instead of flat fees per video, you earn based on the views your content generates. More views = more money. CPM rates range from $2 to $6.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Volume-Based Income</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">The model rewards consistency. Post 3&ndash;5 videos per week, work with multiple brands, and compound your earnings over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "What Canvas UGC Jobs Look Like", href: "#what-jobs" },
+            { num: "02", text: "Where to Find Them", href: "#where" },
+            { num: "03", text: "What Brands Look For", href: "#brands-want" },
+            { num: "04", text: "How to Apply", href: "#apply" },
+            { num: "05", text: "Portfolio Requirements", href: "#portfolio" },
+            { num: "06", text: "Payment Expectations", href: "#payment" },
+            { num: "07", text: "Red Flags to Avoid", href: "#red-flags" },
+            { num: "08", text: "Day in the Life", href: "#day-in-life" },
+            { num: "09", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 What Canvas UGC Jobs Look Like -->
+    <section class="guide-section" id="what-jobs">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; What Canvas UGC Jobs Look Like</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The typical Canvas UGC gig</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You get access to a brand&rsquo;s social account and post content directly</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Typical commitment: 3&ndash;5 videos per week, ongoing relationship</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most jobs are remote, flexible-schedule, and open to international creators</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A Canvas UGC job is not a one-off gig. Unlike traditional UGC where a brand sends you a product, you film one video, and the deal is done, Canvas UGC is an ongoing role. You become a regular content producer for one or more brand accounts.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Here is what a typical Canvas UGC arrangement looks like:</p>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Commitment:</strong> 3&ndash;5 videos per week, sometimes more for high-volume programs</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Duration:</strong> Ongoing (monthly rolling, or 3&ndash;6 month contracts)</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Access:</strong> You receive login credentials or posting access to the brand&rsquo;s accounts</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Content style:</strong> UGC-native &mdash; selfie-style, screen recordings, tutorials, reactions, day-in-the-life</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Platforms:</strong> TikTok, Instagram Reels, YouTube Shorts, Facebook Reels</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Location:</strong> Remote, anywhere in the world</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">The brand (or its operator/agency) provides a content brief, brand guidelines, and sometimes a list of hooks or topics. You produce the videos, post them on the brand&rsquo;s account according to a schedule, and get paid based on the views your content generates. For a full explanation of the model, see our <a href="/canvas-ugc/" class="text-accent hover:underline">Canvas UGC guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- 02 Where to Find Them -->
+    <section class="guide-section" id="where">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Where to Find Them</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Where Canvas UGC jobs are posted</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC is still a relatively new model, which means jobs are not always posted in the same places as traditional UGC work. Here are the channels where active programs recruit creators:</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Social media</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Twitter/X</strong> is the single best channel for finding Canvas UGC jobs in 2026. Search for &ldquo;canvas UGC hiring,&rdquo; &ldquo;brand account creators,&rdquo; or &ldquo;UGC creators needed.&rdquo; Operators and agencies post opportunities directly, often tagging #CanvasUGC or #UGCJobs. Follow known operators and agencies &mdash; they announce new programs regularly.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>LinkedIn</strong> is increasingly used for Canvas UGC recruitment, especially by SaaS companies and agencies. Search &ldquo;UGC creator&rdquo; or &ldquo;Canvas UGC&rdquo; in the jobs section. Companies posting here tend to be more established and offer structured programs.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Creator communities</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Discord servers and Facebook groups dedicated to UGC creators regularly share Canvas UGC opportunities. Look for communities focused on &ldquo;Tech UGC,&rdquo; &ldquo;UGC Creators,&rdquo; or &ldquo;Creator Economy.&rdquo; Some operators run their own Discord servers where they post new brand openings.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Job boards and platforms</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional freelance platforms (Upwork, Fiverr) sometimes list Canvas UGC roles, though the terminology varies. Search for &ldquo;brand account content creator,&rdquo; &ldquo;social media content creator,&rdquo; or &ldquo;UGC creator.&rdquo; Specialized UGC platforms and marketplaces are also adding Canvas-specific categories.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Direct outreach to agencies</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Many Canvas UGC programs are managed by agencies and operators who recruit creators directly into their networks. Reaching out with a portfolio and a clear pitch can get you into multiple programs at once. This is often more efficient than applying to individual job postings because one agency relationship can lead to ongoing work across several brands.</p>
+      </div>
+    </section>
+
+    <!-- 03 What Brands Look For -->
+    <section class="guide-section" id="brands-want">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; What Brands Look For</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What brands actually want from Canvas UGC creators</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Consistency beats one-time virality &mdash; brands want reliable weekly output</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Content quality means &ldquo;authentic and engaging,&rdquo; not &ldquo;highly produced&rdquo;</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Niche knowledge matters more than general content skills</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The number one thing brands and operators look for is <strong>reliability</strong>. A Canvas UGC program depends on consistent content volume. A creator who delivers 4 solid videos every week for three months is infinitely more valuable than one who makes one viral video and then disappears.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Specific qualities brands evaluate</h3>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">Consistency:</strong> Can you produce 3&ndash;5 videos per week on a schedule? This is the most important trait.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">Content quality:</strong> Good lighting, clear audio, natural delivery. You do not need professional equipment &mdash; a smartphone and decent lighting are enough.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">Hook writing:</strong> The first 1&ndash;3 seconds of every video determine whether it gets views. Strong <a href="/hook-rate/" class="text-accent hover:underline">hook rates</a> are what separate top performers from average creators.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">Niche fluency:</strong> If you are creating content about a finance app, you need to understand basic finance concepts. If it is an AI tool, you need to be able to demo it credibly.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">Platform awareness:</strong> Understanding what works on TikTok vs. Reels vs. Shorts. Each platform has different pacing, aspect ratios, and audience expectations.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[160px]">Communication:</strong> Being responsive, meeting deadlines, asking questions when the brief is unclear, and taking feedback without friction.</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">Notice what is <strong>not</strong> on this list: follower count, personal brand, or past influencer deals. Canvas UGC is a content production role, not an influencer relationship. Brands want skilled content producers who can work within a system.</p>
+      </div>
+    </section>
+
+    <!-- 04 How to Apply -->
+    <section class="guide-section" id="apply">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; How to Apply</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to apply for Canvas UGC jobs</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Applying for Canvas UGC work is different from applying for traditional UGC gigs. Here is a step-by-step approach that works:</p>
+
+        <ol class="list-none p-0 space-y-3 mb-6">
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Prepare your portfolio first.</strong> Do not apply to anything until you have 3&ndash;5 sample videos ready. These should be in a niche you want to work in &mdash; tech, lifestyle, finance, health, etc. Quality matters more than quantity at this stage. See section 05 below for portfolio specifics.</li>
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Write a concise application.</strong> Operators review hundreds of applications. Keep yours short: who you are, what niche you create in, a link to your portfolio, your availability (videos per week), and one line about why you are interested in Canvas UGC specifically.</li>
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Apply to multiple programs.</strong> Do not put all your eggs in one basket. Apply to 5&ndash;10 programs simultaneously. Some will not respond. Some will be full. The more applications you send, the faster you land your first deal.</li>
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Be ready for a trial.</strong> Most programs start with a paid trial period (typically 1&ndash;2 weeks) where you produce a small batch of videos. This is normal and expected. It lets both sides evaluate the fit before committing long-term.</li>
+          <li class="relative pl-12 py-3 text-ink-2 guide-step"><strong class="text-ink">Follow up.</strong> If you do not hear back within a week, send one polite follow-up. Operators are busy and applications get buried. A single follow-up shows professionalism, not desperation. Our <a href="/brand-pitch/" class="text-accent hover:underline">brand pitch guide</a> covers follow-up strategies in detail.</li>
+        </ol>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">What a strong application looks like</h3>
+        <div class="bg-card border border-border rounded-[10px] p-5 mb-4">
+          <p class="text-[13px] text-ink-2 leading-[1.6] italic">&ldquo;Hi, I&rsquo;m [Name]. I create short-form UGC content focused on [niche &mdash; e.g., productivity apps and AI tools]. I can produce 4&ndash;5 videos per week and I&rsquo;m familiar with the Canvas UGC model. Here&rsquo;s my portfolio: [link]. I&rsquo;m available to start a trial this week. Happy to jump on a quick call if useful.&rdquo;</p>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">That is it. No multi-paragraph life story. No list of every brand you have ever heard of. Operators value clarity and professionalism over enthusiasm.</p>
+      </div>
+    </section>
+
+    <!-- 05 Portfolio Requirements -->
+    <section class="guide-section" id="portfolio">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Portfolio Requirements</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Building a portfolio that gets you hired</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Your portfolio is the single most important factor in getting hired for Canvas UGC work. Operators make a yes/no decision within 30 seconds of watching your samples. Here is what you need:</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Minimum requirements</h3>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">3&ndash;5 videos:</strong> In the niche you want to work in. Not random content &mdash; targeted samples.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">15&ndash;60 seconds:</strong> Standard short-form length. Show you understand pacing for vertical video.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Strong hooks:</strong> The first 3 seconds of each video should demonstrate your ability to grab attention.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Clean production:</strong> Good lighting, clear audio, steady framing. Phone is fine &mdash; bad audio is not.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Hosted online:</strong> Google Drive, Dropbox, personal website, or a portfolio platform. Make it easy to view.</li>
+        </ul>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">What makes a portfolio stand out</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The best Canvas UGC portfolios include sample videos for a specific product or product category. Instead of generic &ldquo;talking to camera&rdquo; clips, show that you can create a compelling demo of a real app, a genuine-feeling product review, or a tutorial that actually teaches something.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you are targeting tech/SaaS brands (the largest Canvas UGC segment), include screen recordings with voiceover, or face-to-camera videos where you reference a real product interface. Showing you can make software look interesting on camera is a rare and valuable skill.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For a comprehensive breakdown of what works, read our <a href="/ugc-portfolio-guide/" class="text-accent hover:underline">UGC portfolio guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- 06 Payment Expectations -->
+    <section class="guide-section" id="payment">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Payment Expectations</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How much Canvas UGC jobs pay</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CPM model: $2&ndash;$6 per 1,000 views (niche-dependent)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Monthly earnings: $500&ndash;$3K for part-time, $3K&ndash;$15K+ for full-time</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Payments are monthly, based on verified view counts</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC payment is fundamentally different from traditional UGC. You are not getting $300 per video. You are getting paid based on the aggregate performance of all your content over the month.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Realistic earnings by commitment level</h3>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="text-left py-3 px-3 font-display font-semibold text-ink">Level</th>
+                <th class="text-left py-3 px-3 font-display font-semibold text-ink">Videos/week</th>
+                <th class="text-left py-3 px-3 font-display font-semibold text-ink">Programs</th>
+                <th class="text-left py-3 px-3 font-display font-semibold text-ink">Monthly range</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border">
+                <td class="py-3 px-3 font-medium text-ink">Side hustle</td>
+                <td class="py-3 px-3 text-ink-2">3&ndash;5</td>
+                <td class="py-3 px-3 text-ink-2">1&ndash;2</td>
+                <td class="py-3 px-3 text-ink-2">$500&ndash;$2,000</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-3 px-3 font-medium text-ink">Part-time</td>
+                <td class="py-3 px-3 text-ink-2">8&ndash;12</td>
+                <td class="py-3 px-3 text-ink-2">2&ndash;3</td>
+                <td class="py-3 px-3 text-ink-2">$2,000&ndash;$5,000</td>
+              </tr>
+              <tr class="border-b border-border">
+                <td class="py-3 px-3 font-medium text-ink">Full-time</td>
+                <td class="py-3 px-3 text-ink-2">15&ndash;25</td>
+                <td class="py-3 px-3 text-ink-2">3&ndash;5</td>
+                <td class="py-3 px-3 text-ink-2">$5,000&ndash;$15,000+</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">These ranges assume standard CPM rates and average organic reach. Individual results vary significantly based on content quality, niche, platform algorithm changes, and whether the brand&rsquo;s account has been properly warmed up.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Important payment details</h3>
+        <ul class="list-none p-0 space-y-1 mb-4">
+          <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Payments are typically monthly, with a 7&ndash;14 day processing window after month-end</li>
+          <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">View counts are verified by the operator using platform analytics &mdash; not self-reported</li>
+          <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most programs pay via bank transfer, PayPal, Wise, or crypto</li>
+          <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Some programs offer a guaranteed minimum during your first month to offset warmup effects</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">For detailed rate benchmarks across different niches and experience levels, see our <a href="/ugc-rates/" class="text-accent hover:underline">UGC rates guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- 07 Red Flags to Avoid -->
+    <section class="guide-section" id="red-flags">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Red Flags to Avoid</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Red flags when evaluating Canvas UGC jobs</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">As Canvas UGC has grown in popularity, so have low-quality and outright predatory programs. Here are the warning signs to watch for:</p>
+
+        <div class="space-y-4 mb-4">
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[15px] font-semibold text-ink mb-1.5">No clear payment structure</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">If the program cannot tell you the exact CPM rate, payment schedule, and payment method before you start, walk away. &ldquo;We&rsquo;ll figure out payment later&rdquo; is not a business arrangement &mdash; it is a way to get free content.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[15px] font-semibold text-ink mb-1.5">Unrealistic CPM promises</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">If someone promises $10+ CPM or &ldquo;guaranteed $5K your first month,&rdquo; be skeptical. Standard Canvas UGC CPMs are $2&ndash;$6. Anyone offering dramatically above market rate either does not understand the model or is not planning to pay.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[15px] font-semibold text-ink mb-1.5">Unpaid &ldquo;test&rdquo; content</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">A paid trial is standard. An <strong>unpaid</strong> trial is a red flag. If a program asks you to produce 10 free videos &ldquo;to prove yourself,&rdquo; they are using you for free content. Legitimate programs pay for trial content, even if at a reduced rate.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[15px] font-semibold text-ink mb-1.5">No contract or written agreement</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">Every Canvas UGC arrangement should have a written agreement covering: payment terms, content expectations, account access, termination conditions, and intellectual property. Verbal agreements are not enforceable.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[15px] font-semibold text-ink mb-1.5">No view tracking transparency</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">You should be able to verify the view counts your content generates. If the operator does not provide access to analytics or regular reporting, you have no way to confirm your payout is accurate.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[15px] font-semibold text-ink mb-1.5">Asking for your personal account credentials</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">Canvas UGC means posting on the <strong>brand&rsquo;s</strong> account. If someone asks for access to your personal social media accounts, that is a different arrangement entirely and should be treated with extreme caution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 Day in the Life -->
+    <section class="guide-section" id="day-in-life">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Day in the Life</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">A day in the life of a Canvas UGC creator</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Understanding what the work actually looks like day-to-day helps you decide if Canvas UGC is right for you. Here is a realistic picture of how full-time and part-time Canvas creators work:</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Morning: Research and planning (30&ndash;60 min)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Check what is trending in your niche on TikTok and Reels. Review the content brief and any new topics from your brand programs. Write hooks for the day&rsquo;s videos. Most creators plan 2&ndash;3 videos at once to batch their production.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Midday: Production (1&ndash;3 hours)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Film your videos. A single short-form video typically takes 15&ndash;30 minutes to shoot (including setup and multiple takes) and another 15&ndash;30 minutes to edit. Experienced creators batch-produce 3&ndash;5 videos in a single session, which is much more efficient than producing one at a time.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For tech/SaaS content, production involves screen recording the product, recording a voiceover, and editing them together. For lifestyle content, it is more about on-camera presence and natural delivery.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Afternoon: Posting and engagement (30&ndash;45 min)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Upload the finished videos to the brand accounts, add captions and hashtags per the brand guidelines, and schedule posts for optimal times. Some programs handle the posting schedule for you &mdash; you just deliver the files. After posting, spend a few minutes engaging with comments on your recent posts. The algorithm favors accounts that interact with their audience.</p>
+
+        <h3 class="font-display text-[18px] font-semibold text-ink mb-3">Weekly: Analytics review (30 min)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Review which videos performed best and why. Look at hook rates (what percentage of viewers make it past the first 3 seconds), average watch time, and total views. Use this data to refine your content strategy for the following week. The best Canvas UGC creators treat every video as a data point and continuously optimize their approach.</p>
+      </div>
+    </section>
+
+    <!-- 09 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "Do I need followers to get Canvas UGC jobs?", a: "No. Canvas UGC creators post on brand accounts, not their own. Your personal follower count is irrelevant. What matters is your ability to produce content that generates views on someone else's account. This makes Canvas UGC one of the most accessible creator income streams for beginners." },
+          { q: "How many videos per week do I need to produce?", a: "Most programs expect 3-5 videos per week from each creator. Some high-volume programs go higher. This is manageable for part-time creators — a single video typically takes 30-60 minutes to produce from concept to upload, so 3-5 per week means roughly 3-5 hours of production time." },
+          { q: "Can I work with multiple brands at the same time?", a: "Yes, and most successful Canvas UGC creators do. Working with 3-5 programs simultaneously is common for full-time creators. This diversifies your income and lets you earn from multiple content streams. Make sure each program's requirements are compatible with your schedule." },
+          { q: "What equipment do I need?", a: "A smartphone with a decent camera (any phone from the last 3-4 years), basic lighting (a ring light or desk lamp), and a quiet recording space. For tech/SaaS content, you'll also need screen recording software. Professional cameras and microphones are not necessary — the UGC aesthetic is deliberately casual and authentic." },
+          { q: "How long before I start earning real money?", a: "Expect 2-4 weeks to land your first program, 1-2 weeks of trial content, and 2-4 more weeks for the brand account to warm up and your content to start generating meaningful views. Realistically, plan for 6-8 weeks from first application to first meaningful paycheck." },
+          { q: "Is Canvas UGC a real career?", a: "For top performers, yes. Full-time Canvas UGC creators earning $5K-$15K+ per month exist and the market is growing. However, like any freelance career, income fluctuates and depends on your output, content quality, and how many programs you work with. Most creators start Canvas UGC as a side income and scale up as they prove they can perform." },
+          { q: "What niches pay the most for Canvas UGC?", a: "Finance, AI tools, and SaaS products typically offer the highest CPMs ($4-$6) because their customer lifetime value is high. Lifestyle, beauty, and general entertainment content sits at the lower end ($2-$3). Higher-CPM niches usually require more specialized knowledge." },
+          { q: "Can OKAD help me find Canvas UGC work?", a: "Yes. We run Canvas UGC programs for multiple brands and are always recruiting talented creators. Email olga@okad.agency with your portfolio, or book a call to discuss what programs we have available." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to start earning with Canvas UGC?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Join our creator network and get matched with brands running active Canvas UGC programs. We handle the operations &mdash; you focus on creating.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCreator} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Join our creator network &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC: The Complete Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Deep dive into how the model works for brands and operators</p>
+          </a>
+          <a href="/canvas-ugc-meaning/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Meaning</p>
+            <p class="text-[12px] text-muted leading-[1.4]">What the term means, the canvas metaphor, and how it differs from regular UGC</p>
+          </a>
+          <a href="/ugc-portfolio-guide/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Portfolio Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Build a portfolio that gets you hired</p>
+          </a>
+          <a href="/brand-pitch/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">How to Pitch Brands</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Cold emails, DM scripts, and follow-up cadence</p>
+          </a>
+          <a href="/ugc-rates/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Creator Rates</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Pricing benchmarks by niche, experience, and deliverable</p>
+          </a>
+          <a href="/hook-rate/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Hook Rate</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Master the first 3 seconds that determine your content&rsquo;s performance</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Canvas UGC Jobs — How to Find, Apply & Land Your First Deal",
+    "description": "A practical guide to finding Canvas UGC jobs. Where to look, what brands expect, how to apply, portfolio requirements, payment expectations, and red flags to avoid.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/canvas-ugc-jobs/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Canvas UGC Jobs" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Do I need followers to get Canvas UGC jobs?", "acceptedAnswer": { "@type": "Answer", "text": "No. Canvas UGC creators post on brand accounts, not their own. Your personal follower count is irrelevant. What matters is your ability to produce content that generates views on someone else's account." } },
+      { "@type": "Question", "name": "How many videos per week do I need to produce?", "acceptedAnswer": { "@type": "Answer", "text": "Most programs expect 3-5 videos per week from each creator. A single video typically takes 30-60 minutes to produce, so 3-5 per week means roughly 3-5 hours of production time." } },
+      { "@type": "Question", "name": "Can I work with multiple brands at the same time?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Working with 3-5 programs simultaneously is common for full-time creators. This diversifies your income and lets you earn from multiple content streams." } },
+      { "@type": "Question", "name": "What equipment do I need?", "acceptedAnswer": { "@type": "Answer", "text": "A smartphone with a decent camera, basic lighting (ring light or desk lamp), and a quiet recording space. For tech/SaaS content, you'll also need screen recording software. Professional equipment is not necessary." } },
+      { "@type": "Question", "name": "How long before I start earning real money?", "acceptedAnswer": { "@type": "Answer", "text": "Expect 2-4 weeks to land your first program, 1-2 weeks of trial content, and 2-4 more weeks for the brand account to warm up. Plan for 6-8 weeks from first application to first meaningful paycheck." } },
+      { "@type": "Question", "name": "Is Canvas UGC a real career?", "acceptedAnswer": { "@type": "Answer", "text": "For top performers, yes. Full-time Canvas UGC creators earning $5K-$15K+ per month exist and the market is growing. Most start as a side income and scale up as they prove performance." } },
+      { "@type": "Question", "name": "What niches pay the most for Canvas UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Finance, AI tools, and SaaS products typically offer CPMs of $4-$6. Lifestyle, beauty, and entertainment content sits at $2-$3. Higher-CPM niches require more specialized knowledge." } },
+      { "@type": "Question", "name": "Can OKAD help me find Canvas UGC work?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We run Canvas UGC programs for multiple brands and are always recruiting talented creators. Email olga@okad.agency with your portfolio, or book a call to discuss available programs." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

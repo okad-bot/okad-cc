@@ -1,0 +1,529 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailCanvas = "mailto:olga@okad.agency?subject=Canvas%20UGC%20agency%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Canvas UGC Agency — What They Do, Costs & How to Choose One | OKAD"
+  description="What a canvas UGC agency does, how much it costs, what to look for, and red flags to avoid. A buyer's guide for brands considering hiring an agency to run their canvas UGC program."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Canvas UGC &middot; Agency Guide
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Canvas UGC Agency: <span class="text-accent">The Buyer's Guide</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          What a canvas UGC agency actually does, how much it costs, what separates good operators from bad ones, and how to evaluate whether your brand needs one. A practical guide for decision-makers.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailCanvas} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Talk to OKAD about Canvas UGC &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Services overview</span>
+          <span>Cost breakdown</span>
+          <span>Red flags</span>
+          <span>How to choose</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "What a Canvas UGC Agency Does", href: "#what" },
+            { num: "02", text: "Services Overview", href: "#services" },
+            { num: "03", text: "Why Brands Hire Agencies vs DIY", href: "#why" },
+            { num: "04", text: "How Much Does It Cost?", href: "#cost" },
+            { num: "05", text: "What to Look For", href: "#look-for" },
+            { num: "06", text: "Red Flags", href: "#red-flags" },
+            { num: "07", text: "Questions to Ask Before Hiring", href: "#questions" },
+            { num: "08", text: "What Results to Expect", href: "#results" },
+            { num: "09", text: "OKAD's Canvas UGC Program", href: "#okad" },
+            { num: "10", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 What -->
+    <section class="guide-section" id="what">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What a canvas UGC agency does</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Runs the entire canvas UGC operation so the brand doesn't have to</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Handles creator recruitment, account management, content strategy, and analytics</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The brand gets a content engine; the agency handles the operations</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A <a href="/canvas-ugc/" class="text-accent hover:underline">canvas UGC</a> agency is an operator that builds and manages canvas UGC programs for brands. Unlike traditional UGC agencies that deliver finished video files, a canvas UGC agency runs an ongoing production system on your brand's social accounts. The agency is not selling you content &mdash; it is running your content operation.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is a fundamentally different service from hiring a social media manager or contracting with a traditional UGC platform. Canvas UGC requires managing multiple creators posting at volume on brand accounts, tracking performance across platforms, processing creator payouts based on view counts, and continuously optimizing content strategy based on data.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The operational complexity is why agencies exist for this model. A brand could theoretically run canvas UGC in-house, but the overhead of recruiting 10&ndash;30+ creators, managing account access and permissions, building tracking systems, and processing monthly payouts is significant. Most brands find it more efficient to hire an experienced operator.</p>
+      </div>
+    </section>
+
+    <!-- 02 Services -->
+    <section class="guide-section" id="services">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Services</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Services overview</h2>
+        <p class="text-ink-2 leading-[1.65] mb-6">A full-service canvas UGC agency covers four core areas. Some agencies offer all four; others specialize in one or two.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <div class="text-[22px] mb-1.5">&#x1F465;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-2">Creator Recruitment</h3>
+            <ul class="pl-4 space-y-1.5 text-[13px] text-ink-2">
+              <li>Source and vet creators from an existing network</li>
+              <li>Match creators to accounts based on niche and style</li>
+              <li>Onboard creators with brand guidelines and access</li>
+              <li>Replace underperformers and recruit replacements</li>
+              <li>Manage creator contracts and legal agreements</li>
+            </ul>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <div class="text-[22px] mb-1.5">&#x1F4F1;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-2">Account Management</h3>
+            <ul class="pl-4 space-y-1.5 text-[13px] text-ink-2">
+              <li>Set up and warm up niched brand accounts</li>
+              <li>Manage posting schedules and content calendars</li>
+              <li>Monitor account health (shadow bans, guidelines)</li>
+              <li>Handle multi-account strategy and expansion</li>
+              <li>Coordinate platform-specific requirements</li>
+            </ul>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <div class="text-[22px] mb-1.5">&#x1F4CB;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-2">Content Strategy</h3>
+            <ul class="pl-4 space-y-1.5 text-[13px] text-ink-2">
+              <li>Define account niches and content angles</li>
+              <li>Build hook banks and format libraries</li>
+              <li>Create and iterate on creator briefs</li>
+              <li>Identify top-performing content for paid promotion</li>
+              <li>Track trends and adapt content strategy</li>
+            </ul>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <div class="text-[22px] mb-1.5">&#x1F4CA;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-2">Analytics &amp; Payouts</h3>
+            <ul class="pl-4 space-y-1.5 text-[13px] text-ink-2">
+              <li>Cross-platform view tracking and attribution</li>
+              <li>Creator-level performance reporting</li>
+              <li>Automated CPM-based payout calculations</li>
+              <li>Monthly payment processing for all creators</li>
+              <li>ROI reporting and program optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Why Agencies -->
+    <section class="guide-section" id="why">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Agency vs DIY</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why brands hire agencies vs DIY</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC is operationally heavy. Here is what brands underestimate when they try to run it in-house.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The operational burden</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Creator recruitment is ongoing.</strong> You need 10&ndash;30+ creators. Some will churn. You need to constantly source, vet, and onboard replacements. An agency with an existing creator network (OKAD has 600+) fills this need immediately.</li>
+          <li><strong>Cross-platform tracking is complex.</strong> Tracking which creator generated which views across TikTok, Instagram, and YouTube requires custom tooling or manual spreadsheet work. Agencies have built these systems already.</li>
+          <li><strong>Payouts are a finance headache.</strong> Monthly CPM-based payments to 10&ndash;30 international creators means managing invoices, exchange rates, payment platforms, and tax documentation. Agencies handle this end to end.</li>
+          <li><strong>Account management is a full-time job.</strong> Monitoring account health, responding to shadow bans, managing permissions, coordinating posting schedules &mdash; across multiple accounts and platforms &mdash; requires dedicated attention.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">When DIY makes sense</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">DIY canvas UGC can work if you have a single account, fewer than 10 creators, and someone on your team who can dedicate 15&ndash;20 hours per week to managing the program. At this scale, the agency fee may not be justified. But once you scale beyond one account or 15+ creators, the operational complexity typically exceeds what an in-house team can manage alongside their other responsibilities.</p>
+      </div>
+    </section>
+
+    <!-- 04 Cost -->
+    <section class="guide-section" id="cost">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Cost</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How much does a canvas UGC agency cost?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator payments: $2&ndash;$6 CPM (paid directly by brand or passed through agency)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Agency management fee: $2,000&ndash;$10,000+/month depending on scope</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Total program cost: $5,000&ndash;$20,000+/month for a multi-account program</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC agency costs have two components: the creator payments and the agency management fee. Some agencies bundle these together; others keep them separate so the brand can see exactly what goes to creators vs. operations.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Program size</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Creator cost/mo</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Agency fee/mo</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Total/mo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Starter (1 account, 10 creators)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$1,500&ndash;$3,000</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$2,000&ndash;$3,500</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$3,500&ndash;$6,500</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Growth (3 accounts, 20 creators)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$3,000&ndash;$8,000</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$4,000&ndash;$7,000</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$7,000&ndash;$15,000</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">Scale (5+ accounts, 30+ creators)</td><td class="px-4 py-2.5 text-ink-2">$6,000&ndash;$15,000</td><td class="px-4 py-2.5 text-ink-2">$6,000&ndash;$10,000+</td><td class="px-4 py-2.5 text-ink-2">$12,000&ndash;$25,000+</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Pricing models</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Flat monthly retainer.</strong> Most common. Fixed fee for a defined scope (number of accounts, creators, videos per month). Predictable for budgeting.</li>
+          <li><strong>Percentage of creator spend.</strong> Agency takes a markup (20&ndash;40%) on creator payments. Scales naturally with program size.</li>
+          <li><strong>Performance-based.</strong> Rare, but some agencies tie a portion of their fee to view milestones or other KPIs. More common as an add-on than the primary pricing structure.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What about setup costs?</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Some agencies charge a one-time setup fee ($1,000&ndash;$5,000) covering account creation, warmup, initial creator recruitment, and strategy development. Others fold setup costs into the first 2&ndash;3 months of the retainer. Ask about this upfront so there are no surprises.</p>
+      </div>
+    </section>
+
+    <!-- 05 What to Look For -->
+    <section class="guide-section" id="look-for">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; What to Look For</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What to look for in a canvas UGC agency</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Not all agencies that offer "canvas UGC" are equally capable. Here are the signals that separate experienced operators from newcomers.</p>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Existing creator network.</strong> The agency should have a pool of vetted creators ready to deploy &mdash; not start recruiting from scratch for your program. Ask how many creators they have and how they vet them. A strong agency has 200+ active creators across niches.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Cross-platform tracking infrastructure.</strong> Ask how they track views and attribute them to specific creators across TikTok, Instagram, and YouTube. Manual spreadsheets are a red flag at scale. Look for automated or semi-automated tracking systems.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Proven account warmup process.</strong> The agency should have a documented warmup methodology. Ask what their warmup period looks like, what signals they track, and how they know when an account is ready for scaled content.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Transparent reporting.</strong> Monthly reports should include view counts per creator, cost per view, <a href="/hook-rate/" class="text-accent hover:underline">hook rate</a>, save rate, and follower growth. If an agency can't show you these metrics, they are not managing your program data-driven.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Payout management experience.</strong> Processing monthly CPM payments to 10&ndash;30+ international creators requires systems. Ask how they handle invoicing, currency conversion, and payment schedules.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Content strategy, not just operations.</strong> The best agencies do not just manage creators &mdash; they drive content strategy. They should contribute hook banks, format ideas, trend analysis, and data-backed recommendations for what to produce more (or less) of.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 06 Red Flags -->
+    <section class="guide-section" id="red-flags">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Red Flags</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Red flags when evaluating agencies</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC is still a young industry. Some agencies have genuine expertise; others are repackaging traditional UGC or social media management as "canvas UGC." Watch for these warning signs.</p>
+
+        <div class="space-y-4 mb-6">
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[14px] font-semibold mb-1 text-ink">Guaranteeing specific view counts</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">No legitimate agency can guarantee views. Organic reach depends on content quality, platform algorithm, and niche dynamics. An agency should promise process (volume, consistency, optimization) not outcomes (exact view counts).</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[14px] font-semibold mb-1 text-ink">No existing creator network</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">If the agency needs to recruit all creators from scratch for your program, expect significant delays and quality risk. Experienced canvas UGC agencies have built creator networks over time.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[14px] font-semibold mb-1 text-ink">Skipping the warmup phase</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">Any agency that says your brand account does not need warmup is cutting corners. Account warmup is foundational to canvas UGC. Skipping it leads to minimal organic reach regardless of content quality.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[14px] font-semibold mb-1 text-ink">Per-video pricing instead of CPM</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">If the agency charges per video (not CPM-based), they may be running a traditional UGC model and calling it "canvas." True canvas UGC aligns creator payment with performance. Per-video pricing misaligns incentives.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[14px] font-semibold mb-1 text-ink">No data infrastructure</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">Ask to see a sample report. If the agency cannot show you per-creator view tracking, cost-per-view calculations, and content performance breakdowns, they are not equipped to manage a data-driven canvas program.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4">
+            <h3 class="font-display text-[14px] font-semibold mb-1 text-ink">Long lock-in contracts</h3>
+            <p class="text-[13px] text-ink-2 leading-[1.5]">A 12-month contract with no exit clause is a red flag. Good agencies offer month-to-month or 3-month terms because they know results will keep clients. Long lock-ins often signal that the agency cannot retain clients on merit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Questions -->
+    <section class="guide-section" id="questions">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Questions</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Questions to ask before hiring</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Use this checklist in your evaluation calls. The answers will tell you whether the agency is a genuine canvas UGC operator or a generalist with a new service label.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Question</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What a good answer looks like</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">How many canvas programs have you managed?</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Specific number with details about niches and scale</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">How large is your creator network?</td><td class="px-4 py-2.5 border-b border-border text-ink-2">200+ with breakdown by niche and platform</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">What does your warmup process look like?</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Documented 1&ndash;3 week process with specific steps</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">How do you track views per creator?</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Automated system, not manual spreadsheets</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">How do you handle creator payouts?</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Established process for international payments</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">What CPM rates do your creators earn?</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$2&ndash;$6, varies by niche and platform</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Can I see a sample monthly report?</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Per-creator metrics, cost per view, content breakdown</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">What is your contract length?</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Month-to-month or 3-month with exit option</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Who owns the accounts?</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Always the brand. Accounts should be in your name.</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">What happens if we part ways?</td><td class="px-4 py-2.5 text-ink-2">You keep accounts, content, and audience. Clean handoff.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 Results -->
+    <section class="guide-section" id="results">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Expected Results</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What results to expect</h2>
+        <p class="text-ink-2 leading-[1.65] mb-4">Canvas UGC results are not instant. The model requires warmup, iteration, and volume to work. Here is a realistic timeline for a well-run program.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Timeline</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">What to expect</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Weeks 1&ndash;2</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Account setup, niche definition, warmup. No meaningful content output yet.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Weeks 3&ndash;4</td><td class="px-4 py-2.5 border-b border-border text-ink-2">First creators begin posting. Content is iterative &mdash; testing hooks, formats, angles. Views will be modest.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Month 2</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Scaling to full creator roster. Data starts informing content decisions. First breakout posts may appear. 100K&ndash;500K monthly views is typical for a 1&ndash;3 account program.</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Month 3</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Program hitting stride. Content-market fit established. Top organic posts graduating to paid. 500K&ndash;2M+ monthly views for multi-account programs.</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-medium">Month 4+</td><td class="px-4 py-2.5 text-ink-2">Compounding phase. Audience growth accelerates. Content library deepens. Cost per view decreases as scale increases.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Metrics a good agency will report</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li>Total monthly views across all accounts</li>
+          <li>Cost per view (total program spend / total views)</li>
+          <li>Number of videos published per month</li>
+          <li>Creator hit rate (% of posts exceeding account average)</li>
+          <li>Top-performing content and why it worked</li>
+          <li>Organic-to-paid graduation rate</li>
+          <li>Follower growth and audience demographics</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 09 OKAD -->
+    <section class="guide-section" id="okad">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; OKAD</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">OKAD's canvas UGC program</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Full-service canvas UGC agency based in Europe</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">600+ vetted creators across 20+ niches</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">End-to-end operations: recruitment, management, tracking, payouts</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">OKAD is a creative agency that runs canvas UGC programs end to end. We handle everything from account strategy and creator recruitment to content management, cross-platform tracking, and automated payouts. Our role is to be the operational layer so your team can focus on product and brand strategy.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What we bring</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>A network of 600+ vetted creators</strong> across beauty, tech, fitness, food, fashion, and more. We match the right creators to your brand without starting recruitment from zero.</li>
+          <li><strong>Built tracking and payout systems.</strong> Our infrastructure tracks views per creator across TikTok, Instagram, and YouTube, calculates CPM-based payouts, and processes payments monthly.</li>
+          <li><strong>Content strategy, not just operations.</strong> We do not just manage logistics. We build hook banks, format libraries, and iterate on content strategy based on performance data. We contribute creative direction, not just project management.</li>
+          <li><strong>Transparent reporting.</strong> Monthly reports with per-creator metrics, cost per view, content performance breakdowns, and strategic recommendations.</li>
+          <li><strong>Organic-to-paid pipeline.</strong> We identify top organic performers and help you promote them through <a href="/spark-ads/" class="text-accent hover:underline">Spark Ads</a> and <a href="/partnership-ads/" class="text-accent hover:underline">Partnership Ads</a> for maximum ROI.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">How to get started</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Write to us with a brief description of your brand, your target audience, and what you want to achieve. We will scope a program tailored to your goals &mdash; number of accounts, creator count, posting cadence, and estimated budget. The first call is free and takes 30 minutes.</p>
+
+        <div class="flex gap-3 flex-wrap mt-6">
+          <a href={emailCanvas} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Talk to OKAD about Canvas UGC &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to hire a canvas UGC agency?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your brand and goals. We will scope a program, share pricing, and show you what your first 90 days would look like.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCanvas} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Talk to OKAD about Canvas UGC &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What is a canvas UGC agency?", a: "A canvas UGC agency is an operator that builds and manages canvas UGC programs for brands. They handle creator recruitment, account management, content strategy, cross-platform tracking, and creator payouts — the full operational stack needed to run content at scale on brand-owned social accounts." },
+          { q: "How much does a canvas UGC agency cost?", a: "Total program costs typically range from $3,500-$6,500/month for a single-account starter program to $12,000-$25,000+/month for multi-account scale programs. This includes both creator payments (CPM $2-$6) and agency management fees." },
+          { q: "Do I own the accounts and content?", a: "With a reputable agency, yes — always. The brand owns the social accounts, the content library, and the audience. The agency manages operations. If you part ways, you keep everything. Any agency that claims ownership of your accounts is a major red flag." },
+          { q: "How long does it take to see results?", a: "Expect 1-3 weeks for account warmup, then 30-60 days to reach meaningful organic reach. Most well-run programs generate 100K-500K monthly views by month 2 and 500K-2M+ by month 3, depending on niche and number of accounts." },
+          { q: "Can OKAD run canvas UGC for my brand?", a: "Yes. OKAD runs canvas UGC programs end to end — account setup, creator recruitment from our network of 600+ creators, content management, cross-platform tracking, and automated payouts. Write to us at olga@okad.agency to get started." },
+          { q: "What if I already have a social media team?", a: "A canvas UGC agency complements your internal team. Your team handles brand strategy, community management, and paid media. The agency handles the operational layer of canvas UGC — creator management, content production at scale, and performance tracking. The two functions work in parallel." },
+          { q: "How do I know if my brand is right for canvas UGC?", a: "Canvas UGC works best for brands in consumer categories (beauty, tech, fitness, food, fashion) with a product that creators can naturally integrate into content. It works less well for B2B enterprise, highly regulated industries, or brands with budgets under $3,000/month. Book a free call and we'll give you an honest assessment." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">The complete guide to brand-account content</p>
+          </a>
+          <a href="/canvas-ugc-examples/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Examples</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Real campaigns across 5 industries</p>
+          </a>
+          <a href="/canvas-ugc-vs-traditional-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas vs Traditional UGC</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Key differences, pros & cons</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Canvas UGC Agency — What They Do, Costs & How to Choose One",
+    "description": "What a canvas UGC agency does, how much it costs, what to look for, and red flags to avoid. A buyer's guide for brands considering hiring an agency to run their canvas UGC program.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/canvas-ugc-agency/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Canvas UGC", "item": "https://okad.cc/canvas-ugc/" },
+      { "@type": "ListItem", "position": 3, "name": "Canvas UGC Agency" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is a canvas UGC agency?", "acceptedAnswer": { "@type": "Answer", "text": "A canvas UGC agency is an operator that builds and manages canvas UGC programs for brands. They handle creator recruitment, account management, content strategy, cross-platform tracking, and creator payouts." } },
+      { "@type": "Question", "name": "How much does a canvas UGC agency cost?", "acceptedAnswer": { "@type": "Answer", "text": "Total program costs typically range from $3,500-$6,500/month for a single-account starter program to $12,000-$25,000+/month for multi-account scale programs." } },
+      { "@type": "Question", "name": "Do I own the accounts and content?", "acceptedAnswer": { "@type": "Answer", "text": "With a reputable agency, yes — always. The brand owns the social accounts, the content library, and the audience. The agency manages operations." } },
+      { "@type": "Question", "name": "How long does it take to see results?", "acceptedAnswer": { "@type": "Answer", "text": "Expect 1-3 weeks for account warmup, then 30-60 days to reach meaningful organic reach. Most well-run programs generate 100K-500K monthly views by month 2." } },
+      { "@type": "Question", "name": "Can OKAD run canvas UGC for my brand?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. OKAD runs canvas UGC programs end to end — account setup, creator recruitment from our network of 600+ creators, content management, cross-platform tracking, and automated payouts." } },
+      { "@type": "Question", "name": "How do I know if my brand is right for canvas UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Canvas UGC works best for brands in consumer categories (beauty, tech, fitness, food, fashion) with a product creators can naturally integrate into content. It works less well for B2B enterprise or highly regulated industries." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
