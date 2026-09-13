@@ -1,0 +1,488 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailHref = "mailto:olga@okad.agency?subject=Content%20Strategy%20%E2%80%94%20branded%20vs%20UGC";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Branded Content vs UGC: Which Is Right for Your Brand? | OKAD"
+  description="A detailed comparison of branded content and user-generated content (UGC) covering cost analysis, use cases, performance benchmarks, audience trust, and when to use each format. Includes decision framework, hybrid strategies, and real-world examples."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Strategy comparison &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Branded Content vs UGC: <span class="text-accent">Which Is Right for Your Brand?</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Both branded content and UGC drive results, but they work differently, cost differently, and serve different goals. This guide breaks down when to use each, when to combine them, and how to allocate your budget for maximum impact.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailHref} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get a content strategy &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Side-by-side comparison</span>
+          <span>Cost analysis</span>
+          <span>Decision framework</span>
+          <span>Hybrid strategies</span>
+          <span>2026 data</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Two Approaches, One Goal</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Branded Content</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Brand-funded storytelling designed to inform or entertain. Higher production value, tighter brand control, longer shelf life. Best for mid-funnel trust building and brand perception.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4F1;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">User-Generated Content</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Creator-made content that looks and feels organic. Lower cost, higher volume, stronger social proof. Best for lower-funnel conversion and authentic peer validation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Defining the Terms", href: "#definitions" },
+            { num: "02", text: "Head-to-Head Comparison", href: "#comparison" },
+            { num: "03", text: "Cost Analysis", href: "#cost" },
+            { num: "04", text: "Performance Benchmarks", href: "#performance" },
+            { num: "05", text: "When to Use Branded Content", href: "#when-branded" },
+            { num: "06", text: "When to Use UGC", href: "#when-ugc" },
+            { num: "07", text: "The Hybrid Strategy", href: "#hybrid" },
+            { num: "08", text: "Decision Framework", href: "#framework" },
+            { num: "09", text: "Industry-Specific Guidance", href: "#industries" },
+            { num: "10", text: "Building Your Content Mix", href: "#content-mix" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Definitions -->
+    <section class="guide-section" id="definitions">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Definitions</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Defining branded content and UGC clearly</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Branded content: brand-funded content designed to deliver value (information, entertainment) rather than sell directly</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">UGC: content created by real users or creators that looks and feels like organic peer content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The lines are blurring in 2026, but the strategic intent and audience perception remain different</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content is any content that a brand pays to create where the primary purpose is to inform, entertain, or inspire the audience &mdash; not to directly sell a product. The brand is the sponsor, not the protagonist. A documentary series, a podcast, an interactive quiz, a long-form editorial &mdash; these are all forms of branded content. The production value tends to be higher, the brand voice is more prominent, and the content is built to create lasting brand associations. For the complete breakdown of branded content types and strategies, see our <a href="/branded-content-guide/" class="text-accent hover:underline">branded content guide</a>.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">User-generated content, or UGC, is content created by real users or commissioned creators that looks and feels like organic, peer-produced content. In its original sense, UGC was truly organic &mdash; a customer posting a product review or unboxing on their own initiative. In 2026, the term has expanded to include creator-produced content that mimics organic user posts. This commissioned UGC is created by paid creators but styled to look like authentic user recommendations. For a complete overview of the UGC model, see our <a href="/canvas-ugc/" class="text-accent hover:underline">Canvas UGC guide</a>.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The key difference is not who makes the content but how the audience perceives it. Branded content is clearly associated with a brand and earns attention through quality and value. UGC is perceived as peer content and earns attention through authenticity and relatability. Both are effective, but they activate different psychological mechanisms in the viewer.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A third category that further blurs these lines is influencer content, where creators with established audiences produce sponsored content that lives on their own channels. This has elements of both branded content (brand-funded, strategic messaging) and UGC (authentic creator voice, organic distribution). For the comparison between UGC and influencer marketing, see our <a href="/ugc-vs-influencer/" class="text-accent hover:underline">UGC vs influencer guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- 02 Head-to-Head Comparison -->
+    <section class="guide-section" id="comparison">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Comparison</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Branded content vs UGC: side-by-side</h2>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[14px] border-collapse">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="text-left py-3 pr-4 font-semibold text-ink">Dimension</th>
+                <th class="text-left py-3 pr-4 font-semibold text-ink">Branded Content</th>
+                <th class="text-left py-3 font-semibold text-ink">UGC</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-2">
+              <tr class="border-b border-border"><td class="py-3 pr-4 font-medium">Primary goal</td><td class="py-3 pr-4">Brand awareness, trust, perception</td><td class="py-3">Social proof, conversions, ad creative</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4 font-medium">Production value</td><td class="py-3 pr-4">Medium to high</td><td class="py-3">Low to medium (intentionally)</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4 font-medium">Cost per piece</td><td class="py-3 pr-4">$1,000 &ndash; $50,000+</td><td class="py-3">$100 &ndash; $3,000</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4 font-medium">Brand control</td><td class="py-3 pr-4">High &mdash; detailed briefs, storyboards</td><td class="py-3">Medium &mdash; guidelines + creative freedom</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4 font-medium">Audience perception</td><td class="py-3 pr-4">Professional, polished, brand-associated</td><td class="py-3">Authentic, relatable, peer-like</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4 font-medium">Funnel position</td><td class="py-3 pr-4">Top and mid-funnel</td><td class="py-3">Mid and bottom-funnel</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4 font-medium">Volume potential</td><td class="py-3 pr-4">Low to medium (5-20/month)</td><td class="py-3">High (20-100+/month)</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4 font-medium">Shelf life</td><td class="py-3 pr-4">Long (months to years)</td><td class="py-3">Short to medium (weeks to months)</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4 font-medium">Creative testing</td><td class="py-3 pr-4">Limited by cost and volume</td><td class="py-3">Extensive &mdash; many variations at low cost</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4 font-medium">Best platforms</td><td class="py-3 pr-4">YouTube, LinkedIn, podcasts, editorial</td><td class="py-3">TikTok, Instagram, Facebook, app stores</td></tr>
+              <tr><td class="py-3 pr-4 font-medium">Measurement</td><td class="py-3 pr-4">Brand lift, engagement, recall</td><td class="py-3">CTR, CVR, ROAS, CPA</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">This comparison reveals why the "which is better" framing is misleading. Branded content and UGC serve different purposes, appear at different points in the customer journey, and are measured by different metrics. The question is not which to choose but how to combine them effectively.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content builds the perception foundation. It tells the audience who you are, what you stand for, and why they should care. UGC provides the social proof layer. It tells the audience that real people use and enjoy your product. Together, they create a content ecosystem where awareness flows into consideration and consideration flows into conversion.</p>
+      </div>
+    </section>
+
+    <!-- 03 Cost Analysis -->
+    <section class="guide-section" id="cost">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Cost</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Cost analysis: what you actually pay</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">UGC is 5-20x cheaper per asset but may require higher volume for impact</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Branded content costs more upfront but has longer shelf life and broader application</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Total cost of ownership includes production, distribution, management, and measurement</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">UGC cost structure</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A single UGC video from a nano or micro-creator typically costs $100-$500 for a 15-60 second piece. Mid-tier creators charge $500-$2,000. Professional UGC creators with strong portfolios charge $1,000-$3,000 per video. These costs include filming, editing, and one round of revisions. Usage rights for paid advertising add 20-50% to the base fee. At volume (20+ pieces per month), per-unit costs decrease through creator retainer agreements.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A typical UGC program producing 20 videos per month costs $4,000-$15,000 for production, plus $5,000-$20,000 for paid distribution. Management overhead (briefing, coordination, QC) adds another $1,000-$3,000 per month when handled in-house, or is bundled into agency pricing.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Branded content cost structure</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content costs more per piece because it involves more strategy, higher production value, and longer content formats. A branded video series might cost $5,000-$25,000 per episode. An editorial content program costs $3,000-$10,000 per article. A branded podcast costs $5,000-$50,000 per episode depending on production complexity and guest fees. These costs include strategy, scripting, production, post-production, and project management.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A monthly branded content program producing 4-8 pieces costs $10,000-$40,000 for production, plus $5,000-$20,000 for distribution. However, branded content assets often have longer useful lives &mdash; a well-produced brand documentary can generate views for years, while a UGC-style TikTok peaks within days.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Cost per outcome</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The more meaningful comparison is cost per outcome, not cost per asset. UGC tends to deliver lower cost-per-acquisition (CPA) for direct response campaigns because of its higher conversion rates and lower production costs. Branded content tends to deliver lower cost-per-impression and cost-per-engagement for awareness campaigns because of its broader appeal and longer shelf life.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For a $25,000 monthly budget, you could produce roughly 30-50 UGC videos with paid distribution, or 4-6 branded content pieces with paid distribution, or a hybrid mix of both. The right allocation depends on your primary business objective, which the decision framework in section 08 helps determine.</p>
+      </div>
+    </section>
+
+    <!-- 04 Performance -->
+    <section class="guide-section" id="performance">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Performance</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Performance benchmarks in 2026</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">UGC ads outperform polished brand ads on CTR by 2-4x on average</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Branded content outperforms UGC on brand recall by 3-5x</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Both outperform traditional advertising when executed well</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">UGC consistently outperforms traditional brand creative in direct response metrics. Across campaigns managed by OKAD and industry-published benchmarks, UGC ads deliver 2-4x higher click-through rates, 20-35% lower cost-per-acquisition, and 15-30% higher conversion rates compared to studio-produced brand ads. The reason is straightforward: UGC looks like organic content in the feed, so users engage with it before their ad-avoidance instincts kick in.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content excels at metrics that UGC typically does not move. Brand lift studies show that branded content delivers 3-5x higher aided recall than UGC. Branded content viewers are 2-3x more likely to have favorable brand perceptions and 40-60% more likely to consider purchasing from the brand in the future. These effects compound over time &mdash; each piece of branded content reinforces the brand narrative and deepens audience relationships.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Watch time is another differentiator. Branded content typically generates 2-3x more average watch time per viewer than UGC, because longer formats and narrative storytelling hold attention. However, UGC generates more total views due to higher volume and lower barriers to engagement. The choice depends on whether you need depth of engagement (branded content) or breadth of reach (UGC).</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Shareability also differs. UGC earns shares because it is relatable (&ldquo;this is just like me&rdquo;). Branded content earns shares because it is remarkable (&ldquo;you have to see this&rdquo;). Both drive word-of-mouth, but through different social mechanisms.</p>
+      </div>
+    </section>
+
+    <!-- 05 When Branded Content -->
+    <section class="guide-section" id="when-branded">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Use Branded Content</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">When to choose branded content</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand building, category leadership, premium positioning</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Complex products that need explanation or context</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Long-term audience relationships and content libraries</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>You are launching or repositioning a brand.</strong> When audiences do not know who you are or what you stand for, branded content builds that foundation. UGC testimonials ring hollow when the audience has never heard of you. Branded content creates the awareness and perception layer that makes subsequent UGC more credible.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Your product requires education.</strong> SaaS tools, financial products, health solutions, and B2B services often require the audience to understand a problem before they can appreciate the solution. Branded content &mdash; guides, explainer series, podcasts, interactive tools &mdash; educates the audience while positioning your brand as the expert. A 15-second UGC clip cannot explain enterprise software.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>You are building category leadership.</strong> When your goal is to own a topic or narrative in your industry, branded content establishes thought leadership. Red Bull does not sell energy drinks through UGC testimonials &mdash; they produce extreme sports content that makes the brand synonymous with high performance. Branded content can define your brand's territory in a way that UGC cannot.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>You need premium positioning.</strong> Luxury, premium, and aspirational brands benefit from the higher production value and editorial quality of branded content. The content itself communicates the brand's quality standards. A luxury watch brand telling its story through a beautifully shot documentary communicates something fundamentally different than a TikTok unboxing video.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>You are building a content library.</strong> Branded content has longer shelf life. A well-produced guide, video series, or tool can generate traffic and engagement for years. If you are investing in content as a long-term asset, branded content delivers better returns over extended timeframes.</p>
+      </div>
+    </section>
+
+    <!-- 06 When UGC -->
+    <section class="guide-section" id="when-ugc">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Use UGC</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">When to choose UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Direct response advertising and performance marketing</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Social proof and peer validation for consumer products</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">High-volume creative testing and rapid iteration</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>You need ad creative that converts.</strong> If your primary goal is direct response &mdash; clicks, sign-ups, purchases &mdash; UGC is the strongest format for paid social advertising in 2026. UGC ads blend into the organic feed, bypass ad fatigue, and leverage social proof psychology. Brands running performance marketing campaigns should have UGC as a core component of their creative rotation.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Your product is visual and experience-based.</strong> Beauty, food, fashion, fitness, travel, and consumer electronics are categories where seeing a real person use the product is more persuasive than any amount of brand storytelling. A 30-second video of someone applying your skincare product and showing results is more effective than a 5-minute brand documentary for driving purchase decisions.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>You need creative volume for testing.</strong> Performance marketing requires constant creative refresh to combat ad fatigue. You cannot test 30 different hooks if each piece of content costs $5,000. UGC at $200-$500 per piece gives you the volume to test aggressively, identify winning angles, and scale what works. Creative testing is a numbers game, and UGC provides the numbers.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>You want social proof at scale.</strong> Product pages, app store listings, landing pages, and email campaigns all benefit from UGC. Seeing real people recommend a product creates peer pressure that no amount of brand messaging can replicate. E-commerce brands that embed UGC on product pages see 10-30% conversion rate increases.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>You have a limited budget.</strong> If you are a startup or small brand with a limited marketing budget, UGC gives you the most content per dollar. You can launch a full UGC program for $2,000-$5,000 per month, test what resonates with your audience, and build a performance baseline before investing in more expensive branded content.</p>
+      </div>
+    </section>
+
+    <!-- 07 Hybrid Strategy -->
+    <section class="guide-section" id="hybrid">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Hybrid</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The hybrid strategy: combining both formats</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The best-performing brands use both branded content and UGC</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Branded content builds the brand, UGC converts the audience</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Retarget branded content viewers with UGC ads for maximum impact</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most effective content strategies in 2026 do not choose between branded content and UGC &mdash; they combine both into a coordinated system. Branded content creates awareness and builds brand perception. UGC provides social proof and drives conversions. Together, they create a full-funnel content engine.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Here is how the hybrid model works in practice. You produce branded content &mdash; a video series, editorial articles, or interactive experiences &mdash; that tells your brand story and reaches a broad audience. You then retarget people who engaged with your branded content using UGC ads that provide social proof and direct response calls to action. The branded content warmed them up; the UGC converts them.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This approach outperforms either format in isolation. Audiences who see branded content first and then UGC convert at 30-50% higher rates than audiences who see UGC alone. The branded content establishes trust and familiarity; the UGC provides the social proof and urgency to act. Without the branded content foundation, UGC feels random. Without the UGC follow-up, branded content builds awareness that does not convert.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Budget allocation for hybrid strategies</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">For brands with a $20,000+ monthly content budget, a common hybrid split is 30-40% on branded content production, 30-40% on UGC production, and 20-30% on paid distribution for both. As you scale, the UGC share often increases because you need more creative variants for testing, while the branded content share stabilizes around 2-4 flagship pieces per month.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For brands under $10,000 per month, start with UGC to build a performance baseline and generate revenue, then reinvest a portion into branded content as your budget grows. This is a pragmatic approach: UGC delivers faster ROI, and that ROI funds the branded content investment that builds long-term brand value.</p>
+      </div>
+    </section>
+
+    <!-- 08 Decision Framework -->
+    <section class="guide-section" id="framework">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Framework</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Decision framework: five questions to answer</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Answer these five questions to determine your ideal content mix</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">No single answer determines the right approach &mdash; it is the pattern across all five</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">1. What is your primary business objective?</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If your primary objective is brand awareness, consideration, or category leadership, lean toward branded content (60-70% of budget). If your primary objective is direct response, conversions, or customer acquisition, lean toward UGC (60-70% of budget). If you need both, use a balanced hybrid approach.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">2. How well does your audience know your brand?</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you are a new or unknown brand, start with UGC to build initial traction and revenue, then layer in branded content. If you are an established brand with strong awareness, UGC provides the social proof and conversion fuel you need. If you are an established brand looking to reposition, branded content drives the narrative shift.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">3. How complex is your product?</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Simple consumer products (beauty, food, fashion) work well with UGC because the product speaks for itself visually. Complex products (SaaS, financial services, health tech) often need branded content to educate the audience before UGC social proof becomes relevant.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">4. What is your monthly content budget?</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Under $5,000: focus on UGC. $5,000-$15,000: primarily UGC with occasional branded content pieces. $15,000-$50,000: balanced hybrid approach. Over $50,000: full hybrid strategy with multiple branded content series and high-volume UGC.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">5. What does your competitive landscape look like?</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If competitors are all running UGC-style ads, branded content differentiates you. If competitors invest heavily in brand building, UGC can undercut them on authenticity and direct response. Look at what the market is saturated with and lean toward the underutilized format.</p>
+      </div>
+    </section>
+
+    <!-- 09 Industry Guidance -->
+    <section class="guide-section" id="industries">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Industries</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Industry-specific guidance</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">DTC e-commerce: 70% UGC, 30% branded content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">B2B SaaS: 60% branded content, 40% UGC</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Luxury/premium: 80% branded content, 20% UGC</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">DTC e-commerce</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Direct-to-consumer brands benefit most from UGC. The products are visual, the purchase decision is relatively simple, and the audience responds strongly to peer recommendations. Allocate 60-70% of content budget to UGC for product reviews, unboxings, tutorials, and testimonials. Use branded content for brand story, founder narrative, and seasonal campaigns. The UGC drives daily conversions; the branded content builds the brand that commands premium pricing.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">B2B SaaS and technology</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">B2B products need education before conversion. Branded content &mdash; thought leadership articles, product deep-dives, comparison guides, webinar series, and case studies &mdash; should form the content backbone. UGC works as customer testimonials, product walkthroughs, and G2/Capterra-style peer reviews. Allocate 50-60% to branded content and 40-50% to customer-driven UGC and testimonials.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Health and wellness</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Health and wellness brands need both education (branded content about ingredients, science, methodology) and social proof (UGC showing real results and experiences). Regulatory compliance is important &mdash; branded content allows tighter control over health claims. Start with a 50/50 split and adjust based on whether your audience needs more education or more peer validation.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Financial services</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Trust is the currency in financial services. Branded content builds institutional credibility through educational guides, market analysis, and financial planning tools. UGC in the form of customer stories and testimonials provides the personal connection. Compliance requirements make UGC harder to scale in this sector &mdash; every piece needs legal review. Lean 60-70% branded content, 30-40% vetted UGC.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Luxury and premium brands</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Luxury brands build value through aspiration, craftsmanship narratives, and exclusivity. Branded content &mdash; beautifully produced brand films, editorial features, behind-the-scenes craftsmanship series &mdash; reinforces premium positioning. UGC can work for luxury if carefully curated, but the lo-fi aesthetic of typical UGC can undercut premium perception. Allocate 70-80% to branded content and use UGC selectively for influencer-style endorsements.</p>
+      </div>
+    </section>
+
+    <!-- 10 Building Your Content Mix -->
+    <section class="guide-section" id="content-mix">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Content Mix</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Building your content mix with OKAD</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">OKAD produces both branded content and UGC from a single network of 600+ creators</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Unified strategy ensures branded content and UGC work together, not in silos</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Data-driven optimization shifts budget toward what performs</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">OKAD helps brands build the right content mix from day one. Rather than treating branded content and UGC as separate workstreams, we develop a unified content strategy that maps both formats to specific business objectives, funnel stages, and audience segments. This integrated approach ensures that branded content and UGC reinforce each other rather than competing for budget.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Our approach starts with the decision framework outlined in section 08. We assess your brand maturity, product complexity, competitive landscape, and budget to recommend an initial content mix. We then produce, distribute, and measure content across both formats, using performance data to optimize the allocation monthly. If UGC is driving strong conversions, we shift more budget there. If branded content is building significant brand lift, we invest more. The mix is never static.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Because we manage both formats from a single creator network and production team, there is no duplication of effort. The same strategist who develops your branded content strategy also designs your UGC program. The same producer who manages your branded content pipeline manages your UGC creators. This integration reduces costs and ensures message consistency across every touchpoint.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Email <a href={emailHref} class="text-accent hover:underline">olga@okad.agency</a> with your brand, product, and goals. We will design a content mix recommendation and provide a production plan with clear pricing for both branded content and UGC.</p>
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "Is branded content or UGC better for my brand?", a: "Neither is inherently better. Branded content excels at building awareness, trust, and brand perception. UGC excels at driving conversions, providing social proof, and enabling creative testing at scale. Most brands benefit from using both in a coordinated strategy. The right mix depends on your business objectives, product complexity, audience awareness, and budget." },
+          { q: "Can the same creator produce both branded content and UGC?", a: "Yes, though the approach differs. A creator producing branded content follows a more detailed brief, shoots at higher production quality, and creates content that is clearly brand-associated. The same creator producing UGC works with looser guidelines, shoots in an organic style, and creates content that feels like a genuine peer recommendation. Some creators excel at both; others specialize in one format." },
+          { q: "How much more does branded content cost than UGC?", a: "On average, branded content costs 5-20x more per piece than UGC. A UGC video costs $200-$1,500 while a branded content video costs $1,000-$25,000+. However, branded content has longer shelf life and broader application. Cost per outcome — not cost per asset — is the right comparison." },
+          { q: "Should I start with branded content or UGC?", a: "For most brands, start with UGC. It is lower cost, delivers faster ROI, and provides data about what messages and angles resonate with your audience. Use those learnings to inform your branded content strategy when budget allows. The exception is premium or B2B brands where education and credibility must precede social proof." },
+          { q: "Can UGC feel too cheap or low-quality?", a: "Yes, if it is poorly produced. The goal of UGC is to feel authentic, not amateur. Good UGC has clear audio, good lighting, genuine enthusiasm, and a coherent message. It looks organic, not sloppy. Working with experienced UGC creators and maintaining quality standards prevents the content from feeling cheap." },
+          { q: "Does branded content work on TikTok?", a: "Yes, but it needs to adapt to the platform. TikTok branded content should feel native to the platform — using trending sounds, formats, and editing styles — while maintaining higher production quality and brand integration. Mini-documentaries, educational series, and creator collaborations all work well as branded content on TikTok." },
+          { q: "How do I measure the combined impact?", a: "Use platform-specific metrics for each format (CTR and CPA for UGC ads, engagement and brand lift for branded content) and track the combined effect on business metrics like revenue, customer lifetime value, and market share. The most revealing measurement is comparing conversion rates of audiences exposed to both formats versus audiences exposed to just one." },
+          { q: "What is the minimum budget for a hybrid strategy?", a: "A meaningful hybrid strategy starts at around $10,000 per month: $3,000-$5,000 for UGC production (10-15 pieces), $3,000-$5,000 for branded content (2-3 pieces), and $2,000-$4,000 for distribution. Below $10,000, focus on one format first and expand later." },
+          { q: "How often should I reassess my content mix?", a: "Review your content mix monthly based on performance data. Make minor adjustments monthly (shifting 5-10% of budget between formats) and major reassessments quarterly. Significant strategy shifts — like moving from UGC-dominant to hybrid — should happen no more than once per quarter to allow enough data to accumulate." },
+          { q: "Can OKAD handle both branded content and UGC?", a: "Yes. OKAD provides end-to-end production for both branded content and UGC from a single creator network of 600+ vetted creators. We develop unified strategies, produce both formats, manage distribution, and report on combined performance. Email olga@okad.agency to discuss your content mix." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need help deciding between branded content and UGC?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your brand, audience, and goals. We will recommend the right content mix and produce everything from a single team.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a strategy &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="/branded-content-guide/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Branded Content Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Complete guide to branded content strategy and measurement</p>
+          </a>
+          <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">High-volume creator content production at scale</p>
+          </a>
+          <a href="/ugc-vs-influencer/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC vs Influencer Marketing</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Comparing creator content models and when to use each</p>
+          </a>
+          <a href="/branded-content-production/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Branded Content Production</p>
+            <p class="text-[12px] text-muted leading-[1.4]">End-to-end production workflow, budgeting, and quality control</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This comparison is based on performance data from branded content and UGC campaigns managed by OKAD, published industry research on content marketing effectiveness, platform-specific analytics from TikTok, Meta, YouTube, and LinkedIn, and brand lift study results. Performance benchmarks and cost ranges are directional estimates. Individual results depend on industry, content quality, creator selection, platform, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Branded Content vs UGC: Which Is Right for Your Brand?",
+    "description": "A detailed comparison of branded content and user-generated content covering cost analysis, use cases, performance benchmarks, and when to use each format.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/branded-content-vs-ugc/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Branded Content vs UGC" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is branded content or UGC better for my brand?", "acceptedAnswer": { "@type": "Answer", "text": "Neither is inherently better. Branded content excels at building awareness, trust, and brand perception. UGC excels at driving conversions, providing social proof, and enabling creative testing at scale. Most brands benefit from using both in a coordinated strategy." } },
+      { "@type": "Question", "name": "Can the same creator produce both branded content and UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, though the approach differs. Branded content follows more detailed briefs and higher production quality. UGC works with looser guidelines and an organic style." } },
+      { "@type": "Question", "name": "How much more does branded content cost than UGC?", "acceptedAnswer": { "@type": "Answer", "text": "On average, branded content costs 5-20x more per piece. UGC: $200-$1,500. Branded content: $1,000-$25,000+. However, branded content has longer shelf life. Cost per outcome is the right comparison." } },
+      { "@type": "Question", "name": "Should I start with branded content or UGC?", "acceptedAnswer": { "@type": "Answer", "text": "For most brands, start with UGC. It is lower cost, delivers faster ROI, and provides data about what messages resonate. The exception is premium or B2B brands where education and credibility must precede social proof." } },
+      { "@type": "Question", "name": "Can UGC feel too cheap or low-quality?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, if poorly produced. Good UGC has clear audio, good lighting, genuine enthusiasm, and a coherent message. It looks organic, not sloppy. Working with experienced UGC creators prevents this." } },
+      { "@type": "Question", "name": "Does branded content work on TikTok?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, but it needs to adapt to the platform — using trending sounds, formats, and editing styles while maintaining higher production quality and brand integration." } },
+      { "@type": "Question", "name": "How do I measure the combined impact?", "acceptedAnswer": { "@type": "Answer", "text": "Track platform-specific metrics for each format and compare conversion rates of audiences exposed to both formats versus just one. The most revealing measurement is the combined effect on business metrics." } },
+      { "@type": "Question", "name": "What is the minimum budget for a hybrid strategy?", "acceptedAnswer": { "@type": "Answer", "text": "A meaningful hybrid strategy starts at around $10,000 per month: $3,000-$5,000 for UGC, $3,000-$5,000 for branded content, and $2,000-$4,000 for distribution." } },
+      { "@type": "Question", "name": "How often should I reassess my content mix?", "acceptedAnswer": { "@type": "Answer", "text": "Review monthly based on performance data. Minor adjustments monthly, major reassessments quarterly. Allow enough data to accumulate before making significant strategy shifts." } },
+      { "@type": "Question", "name": "Can OKAD handle both branded content and UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. OKAD provides end-to-end production for both formats from a single creator network of 600+ vetted creators. Email olga@okad.agency to discuss your content mix." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

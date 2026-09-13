@@ -1,0 +1,524 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailHref = "mailto:olga@okad.agency?subject=YouTube%20Shorts%20Content%20%E2%80%94%20let%27s%20talk";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="YouTube Shorts Monetization: Complete Guide to Getting Paid (2026) | OKAD"
+  description="Everything you need to know about YouTube Shorts monetization in 2026: RPM rates, eligibility requirements, revenue share structure, monetization strategies, timeline expectations, and tips for maximizing your Shorts earnings."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Monetization guide &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          YouTube Shorts Monetization: <span class="text-accent">Complete Guide to Getting Paid</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          YouTube Shorts now pays creators through ad revenue sharing, but the economics are very different from long-form YouTube. This guide covers everything &mdash; eligibility, RPM rates, revenue structures, and the strategies that actually maximize your Shorts income.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailHref} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get Shorts content &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>RPM rates</span>
+          <span>Eligibility</span>
+          <span>Revenue share</span>
+          <span>Growth strategies</span>
+          <span>2026 data</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Shorts Monetization Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Meet the Threshold</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Reach 1,000 subscribers + 10M Shorts views in 90 days (or 4,000 watch hours on long-form) to join the YouTube Partner Program.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Ads Run Between Shorts</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">YouTube pools ad revenue from ads shown in the Shorts feed, then allocates it to creators based on their share of total views.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">You Keep 45%</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">After music licensing costs are deducted, creators receive 45% of the allocated Shorts ad revenue. This is lower than the 55% for long-form.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "How Shorts Monetization Works", href: "#how-it-works" },
+            { num: "02", text: "Eligibility Requirements", href: "#eligibility" },
+            { num: "03", text: "RPM Rates and Earnings", href: "#rpm" },
+            { num: "04", text: "Revenue Share Structure", href: "#revenue-share" },
+            { num: "05", text: "Shorts vs Long-Form Revenue", href: "#shorts-vs-longform" },
+            { num: "06", text: "Shorts vs TikTok vs Reels Pay", href: "#platform-comparison" },
+            { num: "07", text: "Maximizing Shorts Revenue", href: "#maximize" },
+            { num: "08", text: "Monetization Timeline", href: "#timeline" },
+            { num: "09", text: "Beyond Ad Revenue", href: "#beyond-ads" },
+            { num: "10", text: "Shorts for Brands", href: "#for-brands" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 How It Works -->
+    <section class="guide-section" id="how-it-works">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Mechanics</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How YouTube Shorts monetization works</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Ads appear between Shorts in the feed, not within individual Shorts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Revenue is pooled and allocated based on your share of total Shorts views</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Music licensing costs are deducted before the creator's 45% share</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">YouTube Shorts monetization works fundamentally differently from long-form YouTube monetization. On long-form videos, ads are placed directly within or around your specific video, and you earn based on the ads shown on your content. On Shorts, ads appear between videos in the Shorts feed &mdash; as users swipe between Shorts, they occasionally see an ad. This means the ad revenue is not tied to a specific creator's video but to the overall Shorts viewing session.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">YouTube collects all ad revenue generated from the Shorts feed, then distributes it to creators based on their proportional share of total Shorts views during each payment period. If your Shorts received 0.1% of all Shorts views in a given month, you receive 0.1% of the creator pool for that month. The creator pool is calculated after YouTube takes its platform share and deducts music licensing costs.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The music licensing component is important. If your Short uses licensed music from YouTube's audio library, a portion of the revenue allocated to your views goes to music rights holders before you get your cut. If you use original audio (no copyrighted music), you keep a larger share. If you use music, the revenue is split between you and the music rights holders based on how many tracks are in the Short. A Short with one licensed track shares revenue 50/50 with the music rights holder. A Short with two tracks gives two-thirds to music rights holders.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">After music costs, the remaining revenue is split 45% to the creator and 55% to YouTube. This is less favorable than the long-form split (55% creator, 45% YouTube) but reflects the different economics of short-form content and the Shorts feed's ad model.</p>
+      </div>
+    </section>
+
+    <!-- 02 Eligibility -->
+    <section class="guide-section" id="eligibility">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Eligibility</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">YouTube Partner Program eligibility</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Standard YPP: 1,000 subscribers + 4,000 watch hours OR 10M Shorts views in 90 days</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Expanded YPP (lower tier): 500 subscribers + 3M Shorts views in 90 days for fan funding</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Must comply with YouTube monetization policies and community guidelines</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">To earn ad revenue from Shorts, you need to be accepted into the YouTube Partner Program (YPP). As of 2026, there are two tiers of eligibility.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Standard YPP (ad revenue sharing):</strong> You need at least 1,000 subscribers AND either 4,000 valid public watch hours on long-form content in the past 12 months OR 10 million valid public Shorts views in the past 90 days. Meeting either the watch hours or Shorts views threshold qualifies you. Once accepted, you earn ad revenue from both long-form videos and Shorts.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Expanded YPP (fan funding only):</strong> A lower entry tier requires just 500 subscribers AND 3 million valid public Shorts views in the past 90 days (or 3,000 watch hours). This tier gives access to fan funding features like Super Thanks, Super Chat, Super Stickers, and channel memberships, but NOT ad revenue sharing. To earn from Shorts ads, you need to reach the standard YPP threshold.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Beyond the numeric thresholds, you must have an AdSense account linked to your channel, live in an eligible country (most countries with YouTube monetization), comply with all YouTube monetization policies, have no active community guideline strikes, and have two-factor authentication enabled on your Google account.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The 10 million Shorts views threshold is steep for new creators. To put it in perspective, it requires an average of about 111,000 views per day across all your Shorts for 90 days. This means you need either a viral hit or consistent high-performing content. Most creators reach this through a combination of volume (posting 1-3 Shorts daily) and occasional viral moments. For comparison data on Shorts vs other short-form platforms, see our <a href="/youtube-shorts-vs-tiktok/" class="text-accent hover:underline">YouTube Shorts vs TikTok</a> comparison.</p>
+      </div>
+    </section>
+
+    <!-- 03 RPM Rates -->
+    <section class="guide-section" id="rpm">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; RPM</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">RPM rates: what creators actually earn</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Shorts RPM: $0.01 &ndash; $0.15 per 1,000 views (varies widely)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Compare to long-form RPM: $2 &ndash; $12 per 1,000 views</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">RPM varies by niche, audience geography, and season</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">RPM (revenue per mille, or revenue per thousand views) is the key metric for understanding Shorts earnings. As of 2026, most creators report Shorts RPMs between $0.03 and $0.08 per 1,000 views, with outliers ranging from $0.01 at the low end to $0.15 at the high end. This means 1 million Shorts views generates roughly $30-$80 in ad revenue for most creators.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">These numbers are dramatically lower than long-form YouTube RPMs, which typically range from $2-$12 per 1,000 views depending on niche. A creator who earns $5 RPM on long-form content and $0.05 RPM on Shorts needs 100x more Shorts views to match their long-form revenue. This is why most YouTube monetization experts advise treating Shorts as a growth and discovery tool rather than a primary revenue source.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">RPM by niche</h3>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[14px] border-collapse">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="text-left py-3 pr-4 font-semibold text-ink">Niche</th>
+                <th class="text-left py-3 pr-4 font-semibold text-ink">Shorts RPM range</th>
+                <th class="text-left py-3 font-semibold text-ink">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-2">
+              <tr class="border-b border-border"><td class="py-3 pr-4">Finance / investing</td><td class="py-3 pr-4">$0.06 &ndash; $0.15</td><td class="py-3">Highest-paying niche due to advertiser demand</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Tech / software</td><td class="py-3 pr-4">$0.05 &ndash; $0.12</td><td class="py-3">Strong advertiser interest, US/UK heavy audience</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Business / entrepreneurship</td><td class="py-3 pr-4">$0.04 &ndash; $0.10</td><td class="py-3">High CPMs from B2B advertisers</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Health / fitness</td><td class="py-3 pr-4">$0.03 &ndash; $0.08</td><td class="py-3">Large audience, moderate advertiser competition</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Beauty / skincare</td><td class="py-3 pr-4">$0.03 &ndash; $0.07</td><td class="py-3">High volume niche, brand-friendly content</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Food / cooking</td><td class="py-3 pr-4">$0.02 &ndash; $0.06</td><td class="py-3">Broad appeal, moderate RPMs</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Entertainment / comedy</td><td class="py-3 pr-4">$0.02 &ndash; $0.05</td><td class="py-3">High views but lower advertiser CPMs</td></tr>
+              <tr><td class="py-3 pr-4">Gaming</td><td class="py-3 pr-4">$0.01 &ndash; $0.04</td><td class="py-3">High volume, younger audience, lower CPMs</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Geography significantly impacts RPM. Shorts views from the US, UK, Canada, and Australia generate 3-10x more revenue than views from India, Southeast Asia, or Latin America. A creator with a primarily US audience will see substantially higher RPMs than one with a global audience, even in the same niche. This is because US advertisers pay significantly higher CPMs.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Real earnings examples</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">To ground these numbers in reality: a creator in the fitness niche with 5 million Shorts views per month and a $0.05 RPM earns approximately $250 per month from Shorts ad revenue alone. A finance creator with 10 million views and a $0.10 RPM earns approximately $1,000 per month. A gaming creator with 20 million views but a $0.02 RPM earns approximately $400 per month. These are ad revenue numbers only &mdash; total creator income from Shorts includes sponsorships, affiliate links, and merchandise, which typically dwarf ad revenue.</p>
+      </div>
+    </section>
+
+    <!-- 04 Revenue Share -->
+    <section class="guide-section" id="revenue-share">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Revenue Share</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Understanding the Shorts revenue share structure</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Step 1: YouTube pools all Shorts feed ad revenue</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Step 2: Allocate to creators based on view share, deduct music costs</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Step 3: Creator receives 45% of remaining allocation</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The Shorts revenue share calculation happens in three steps, and understanding each step helps explain why Shorts RPMs are lower than long-form RPMs.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Step 1: Pool the revenue.</strong> YouTube collects all ad revenue generated from ads shown in the Shorts feed across all countries and advertisers. This is a single global pool for each payment period.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Step 2: Allocate and deduct music costs.</strong> YouTube calculates each monetizing creator's share of total Shorts views. If your Shorts received 0.001% of all Shorts views globally, 0.001% of the total pool is allocated to your channel. Before you receive your cut, YouTube deducts music licensing costs. If your Shorts use no licensed music, nothing is deducted. If they use licensed tracks, a portion goes to music rights holders.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Step 3: Apply the 45/55 split.</strong> After music deductions, the remaining amount is split 45% to the creator and 55% to YouTube. This 45% is what shows up in your YouTube Analytics as Shorts revenue.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The practical implication is clear: to maximize your Shorts revenue per view, use original audio whenever possible. Every licensed music track in your Short reduces your cut. This does not mean you should avoid music &mdash; the right track can dramatically boost a Short's performance and generate more total views. But when the creative works equally well with original audio, choosing original audio is the financially optimal decision.</p>
+      </div>
+    </section>
+
+    <!-- 05 Shorts vs Long-Form -->
+    <section class="guide-section" id="shorts-vs-longform">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Shorts vs Long-Form</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Shorts revenue vs long-form YouTube revenue</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Long-form RPM is 30-200x higher than Shorts RPM</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Shorts excel at audience growth and discovery, not direct revenue</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The smartest strategy: use Shorts to grow, monetize with long-form</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The revenue gap between Shorts and long-form YouTube content is enormous and important to understand. A long-form video in a high-CPM niche (finance, technology, business) might earn $8-$12 per 1,000 views. The same creator's Shorts might earn $0.05-$0.12 per 1,000 views. That is a 60-200x difference in revenue per view.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This gap exists because long-form videos support more ad formats (pre-roll, mid-roll, post-roll, display), more ad inventory per view (multiple ads in a single video), and higher CPMs (advertisers pay more for engaged, captive audiences watching longer content). Shorts support only the between-Shorts feed ads, which generate lower CPMs and are shared across millions of creators.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">However, Shorts have an enormous advantage in reach. A single viral Short can reach 10-50 million views, dwarfing the typical reach of long-form content. A creator who gets 100,000 views on a long-form video might get 5-10 million views on a Short. The per-view revenue is lower, but the total reach is far greater.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The optimal strategy for most YouTube creators is to use Shorts as a growth engine and long-form content as the monetization engine. Shorts attract new subscribers through viral reach. Long-form content converts those subscribers into recurring viewers who generate meaningful ad revenue. The creators earning the most on YouTube in 2026 are those who master both formats and use each for its strength.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Some creators report that Shorts-driven subscriber growth leads to a 20-40% increase in long-form viewership within 3-6 months. This indirect monetization impact &mdash; Shorts fueling long-form growth &mdash; is often more valuable than the direct Shorts ad revenue.</p>
+      </div>
+    </section>
+
+    <!-- 06 Platform Comparison -->
+    <section class="guide-section" id="platform-comparison">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Platform Pay</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Shorts vs TikTok vs Reels: who pays more?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">YouTube Shorts: $0.03-$0.08 RPM &mdash; consistent, transparent revenue share</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok: $0.02-$0.05 RPM &mdash; Creativity Program pays more for longer videos</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Instagram Reels: No direct revenue share &mdash; monetization through bonuses and brand deals</li>
+          </ul>
+        </div>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[14px] border-collapse">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="text-left py-3 pr-4 font-semibold text-ink">Platform</th>
+                <th class="text-left py-3 pr-4 font-semibold text-ink">RPM range</th>
+                <th class="text-left py-3 pr-4 font-semibold text-ink">Model</th>
+                <th class="text-left py-3 font-semibold text-ink">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-2">
+              <tr class="border-b border-border"><td class="py-3 pr-4">YouTube Shorts</td><td class="py-3 pr-4">$0.03 &ndash; $0.08</td><td class="py-3 pr-4">Ad revenue share (45%)</td><td class="py-3">Most transparent, scales with views</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">TikTok (Creator Fund)</td><td class="py-3 pr-4">$0.02 &ndash; $0.04</td><td class="py-3 pr-4">Fixed fund pool</td><td class="py-3">Being phased out for Creativity Program</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">TikTok (Creativity Program)</td><td class="py-3 pr-4">$0.50 &ndash; $1.00+</td><td class="py-3 pr-4">Performance-based</td><td class="py-3">Only for videos 1min+, much higher pay</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Instagram Reels</td><td class="py-3 pr-4">N/A</td><td class="py-3 pr-4">No direct rev share</td><td class="py-3">Occasional bonuses, brand deals primary</td></tr>
+              <tr><td class="py-3 pr-4">Snapchat Spotlight</td><td class="py-3 pr-4">$0.01 &ndash; $0.05</td><td class="py-3 pr-4">Revenue share</td><td class="py-3">Lower and less predictable</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">YouTube Shorts offers the most transparent and scalable monetization model for short-form content. Unlike TikTok's Creator Fund, which splits a fixed pool among all participating creators (diluting payouts as more creators join), YouTube's model is tied to actual ad revenue, meaning payouts grow as Shorts advertising grows. For the full Shorts vs TikTok comparison beyond monetization, see our <a href="/youtube-shorts-vs-tiktok/" class="text-accent hover:underline">YouTube Shorts vs TikTok guide</a>.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok's Creativity Program, which replaced the Creator Fund for eligible creators, pays significantly more but requires videos to be at least 1 minute long. This means it is not a direct competitor to Shorts for sub-60-second content. For creators making 1-3 minute videos, TikTok's Creativity Program currently offers higher per-view payouts than YouTube Shorts.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Instagram Reels does not offer a direct revenue share program for most creators. Monetization on Reels comes primarily through brand deals, affiliate links, and occasional Instagram bonus programs. This makes Instagram less attractive for creators focused on platform ad revenue but potentially more valuable for those monetizing through brand partnerships.</p>
+      </div>
+    </section>
+
+    <!-- 07 Maximizing Revenue -->
+    <section class="guide-section" id="maximize">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Strategies</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Ten strategies to maximize Shorts revenue</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Volume matters: post 1-3 Shorts daily for maximum algorithmic distribution</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Target high-CPM audiences and niches to boost RPM</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use original audio when possible to avoid music revenue splits</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">1. Post consistently and frequently</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The YouTube Shorts algorithm rewards consistent posting. Creators who post 1-3 Shorts daily see significantly more total views than those who post sporadically. Each Short is a separate lottery ticket in the algorithm &mdash; more content means more chances for a video to break through. Consistency also trains the algorithm to distribute your content to relevant audiences.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">2. Target high-CPM niches</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Finance, technology, business, and education Shorts earn 2-5x higher RPMs than entertainment or gaming content. If your expertise spans multiple niches, prioritize content in higher-CPM categories. This does not mean abandoning your core niche, but incorporating adjacent high-value topics can meaningfully increase your RPM.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">3. Use original audio</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Licensed music reduces your revenue share. When a Short works equally well with original audio (voiceover, talking head, sound effects), choose original audio. When music is essential to the creative (dance trends, music-driven content), use it strategically &mdash; one track rather than multiple layered tracks.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">4. Optimize for retention</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The Shorts algorithm heavily weights viewer retention. A Short that viewers watch multiple times (loop) or watch to the end gets distributed more broadly than one that viewers swipe past. Structure your Shorts with a strong hook in the first second, maintain tension throughout, and create a reason to watch again. Higher distribution means more views, which means more revenue. For hook optimization techniques, see our <a href="/hook-rate/" class="text-accent hover:underline">hook rate guide</a>.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">5. Target US and tier-1 audiences</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Views from the US, UK, Canada, Australia, and Western Europe generate the highest RPMs because advertisers in these markets pay the highest CPMs. Create content in English, post during US peak hours (6-10 PM EST), and create content relevant to Western audiences when possible. This geographic targeting can double or triple your effective RPM.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">6. Batch produce content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Record 5-10 Shorts in a single session, then schedule them throughout the week. Batch production reduces the daily time commitment, maintains consistent quality, and ensures you never miss a posting day. Most successful Shorts creators spend 2-3 hours once or twice per week recording, then edit and schedule in batches.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">7. Leverage trending topics</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Shorts related to trending topics, news events, and cultural moments get algorithmic boosts. Monitor trending topics in your niche and create relevant Shorts quickly. Speed matters &mdash; a trend-related Short posted within 24 hours gets dramatically more distribution than one posted a week later.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">8. Create series and recurring formats</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Recurring formats build viewer expectations and loyalty. "Daily money tip," "Tech myth vs fact," or "One-minute recipe" series give viewers a reason to follow and return. Series also make content creation easier because the format is established &mdash; you only need to change the topic, not reinvent the structure.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">9. Cross-promote to long-form</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">End your Shorts with a hook to your long-form content: "Full breakdown on my channel" or "Part 2 is a full video." This converts Shorts viewers into long-form viewers, where the RPM is 30-200x higher. Even converting 1-2% of Shorts viewers to long-form viewers can significantly boost your total YouTube revenue.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">10. Diversify revenue streams</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Shorts ad revenue alone is not enough for most creators. Use Shorts as the top of a monetization funnel: Shorts drive views and subscribers, which attract brand deals and sponsorships (5-50x more lucrative than ad revenue). Shorts featuring products drive affiliate revenue. Shorts build audience for memberships, courses, and merchandise. Ad revenue is the floor, not the ceiling.</p>
+      </div>
+    </section>
+
+    <!-- 08 Timeline -->
+    <section class="guide-section" id="timeline">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Timeline</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Monetization timeline: how long it takes</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">0-3 months: build content library and audience, no revenue</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">3-6 months: reach YPP threshold (with consistent posting), first payouts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">6-12 months: meaningful ad revenue + brand deal opportunities</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Month 1-3: Foundation.</strong> Post 1-2 Shorts daily, experiment with formats, find your niche and voice. Most creators see 1,000-50,000 views per Short during this phase. Revenue: $0 (not yet eligible for YPP). Focus: learning what works, building a content library, and growing subscribers toward the 1,000 threshold.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Month 3-6: Growth.</strong> Formats are established, posting cadence is consistent, some Shorts start breaking out. Creators posting daily typically reach 1,000 subscribers during this phase. The 10M Shorts views threshold is harder and may take longer. Some creators get a viral hit that accelerates this. Revenue: $0-$50/month if you reach YPP early. Focus: hitting YPP thresholds and building brand deal opportunities.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Month 6-12: Monetization.</strong> YPP is active, ad revenue starts flowing, brand deal inquiries increase. With 5-10 million Shorts views per month, expect $100-$500/month from ad revenue. Brand deals and sponsorships can add $500-$5,000/month depending on niche and audience. Focus: optimizing RPM, diversifying revenue, and possibly adding long-form content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Month 12+: Scale.</strong> Established format, growing audience, multiple revenue streams. Top Shorts creators earn $1,000-$5,000/month from ad revenue and $5,000-$50,000/month from brand deals, affiliates, and other monetization. Focus: scaling what works, building team support, and expanding to other platforms and formats.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">These timelines assume consistent daily posting and reasonable content quality. Creators in underserved niches or those who get early viral hits can accelerate significantly. Creators who post inconsistently or in highly competitive niches may take longer.</p>
+      </div>
+    </section>
+
+    <!-- 09 Beyond Ads -->
+    <section class="guide-section" id="beyond-ads">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Other Revenue</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Beyond ad revenue: other ways Shorts make money</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand sponsorships pay 5-50x more than ad revenue per view</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Affiliate links and product commissions compound with views</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Shorts drive traffic to higher-margin products: courses, memberships, services</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Brand sponsorships</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Brand sponsorships are the biggest revenue driver for most Shorts creators. A creator with 100K subscribers and consistent viewership can charge $500-$3,000 per sponsored Short. A creator with 500K+ subscribers can charge $2,000-$10,000+. These rates dwarf ad revenue. A single sponsored Short can earn more than months of ad revenue. Building a sponsorship pipeline requires consistent content quality, audience demographics data, and proactive outreach or representation. For guidance on working with brands, see our <a href="/canvas-ugc/" class="text-accent hover:underline">Canvas UGC guide</a>.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Affiliate marketing</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Affiliate links in Shorts descriptions or pinned comments can generate significant passive income, especially for product-focused niches (tech reviews, beauty, fitness equipment). Commission rates typically range from 3-15% of product price. A viral Short featuring a product can generate thousands of affiliate clicks and hundreds of sales.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Super Thanks and fan funding</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">YouTube's Super Thanks feature lets viewers tip creators directly on Shorts. While individual tips are small ($2-$50), consistent creators can earn $100-$1,000/month from Super Thanks as their audience grows and engagement deepens. This feature is available to creators in the expanded YPP tier (500 subscribers + 3M Shorts views).</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Driving traffic to owned assets</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most scalable monetization strategy is using Shorts to drive traffic to higher-margin owned assets: online courses ($50-$500), coaching programs ($500-$5,000), digital downloads ($10-$100), and membership communities ($5-$50/month). A Short that attracts 100,000 views and converts 0.1% to a $100 product generates $10,000 &mdash; more than most creators earn from 100 million Shorts ad revenue views.</p>
+      </div>
+    </section>
+
+    <!-- 10 For Brands -->
+    <section class="guide-section" id="for-brands">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; For Brands</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">YouTube Shorts for brand marketing</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Shorts Ads are a cost-effective way to reach YouTube's massive audience</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator-produced Shorts outperform brand-produced ads on engagement</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">OKAD produces Shorts content for brands with creator networks</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">For brands, YouTube Shorts offers a cost-effective way to reach a massive and growing audience. YouTube Shorts receives over 70 billion daily views globally, and Shorts Ads allow brands to appear in this high-engagement feed. CPMs for Shorts Ads are typically 30-50% lower than standard YouTube video ads, making it an efficient awareness and consideration channel.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most effective Shorts Ads look like organic Shorts &mdash; creator-produced, authentic, and native to the platform. Brands that repurpose TV commercials or polished brand videos as Shorts Ads see significantly lower engagement than those using creator-produced content. OKAD produces Shorts-native content for brands using our network of 600+ vetted creators, ensuring every piece looks and feels organic while delivering strategic brand messaging.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Email <a href={emailHref} class="text-accent hover:underline">olga@okad.agency</a> to discuss YouTube Shorts content production for your brand.</p>
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "How much do YouTube Shorts pay per 1,000 views?", a: "YouTube Shorts RPM ranges from $0.01 to $0.15 per 1,000 views, with most creators earning $0.03-$0.08. The exact amount depends on your niche, audience geography, music usage, and seasonal advertiser demand. Finance and tech niches earn the highest RPMs, while gaming and entertainment earn the lowest." },
+          { q: "How many Shorts views do I need to make $1,000?", a: "At an average RPM of $0.05, you need approximately 20 million Shorts views to earn $1,000 in ad revenue. At a higher RPM of $0.10 (achievable in finance or tech niches with US-heavy audiences), you need about 10 million views. Most creators supplement ad revenue with sponsorships and affiliates to reach meaningful income levels." },
+          { q: "Is YouTube Shorts monetization better than TikTok?", a: "For ad revenue transparency and scalability, YouTube Shorts is better. YouTube's revenue share model is tied to actual ad revenue and is clearly documented. TikTok's Creator Fund has fixed pools that dilute as more creators join. However, TikTok's Creativity Program (for videos 1 minute+) currently pays higher per-view rates. For brand deals and sponsorships, both platforms offer strong opportunities." },
+          { q: "Does using music reduce my Shorts earnings?", a: "Yes. When your Short uses licensed music from YouTube's audio library, revenue allocated to your views is split between you and the music rights holders before the 45% creator share is applied. Using original audio means no music licensing deduction, giving you the full 45% of your allocated revenue." },
+          { q: "How long does it take to get monetized on Shorts?", a: "For most creators posting 1-2 Shorts daily, reaching 1,000 subscribers takes 3-6 months. The 10 million Shorts views in 90 days threshold is harder and may take 6-12+ months without a viral hit. Some creators reach it faster through trend participation, collaborations, or niche expertise that attracts rapid growth." },
+          { q: "Can I make a living from YouTube Shorts alone?", a: "Very few creators earn a full-time living from Shorts ad revenue alone. The RPMs are too low for ad revenue to sustain most creators. However, Shorts as a platform — combining ad revenue, sponsorships, affiliate marketing, Super Thanks, and driving traffic to products — can absolutely generate full-time income. Think of ad revenue as the base layer, not the entire income." },
+          { q: "Do Shorts hurt my long-form YouTube channel?", a: "No. YouTube has confirmed that Shorts and long-form content are served by separate recommendation systems. Posting Shorts does not reduce long-form video distribution. In fact, many creators report that Shorts help grow their subscriber base, which then boosts long-form viewership. The key is ensuring your Shorts audience is relevant to your long-form content." },
+          { q: "What is the best length for monetized Shorts?", a: "There is no single best length. Shorts under 30 seconds tend to get the highest loop rates (viewers watch multiple times), which boosts algorithmic distribution. Shorts in the 30-60 second range provide more content depth and watch time. Test both lengths and track which generates more total views and revenue for your specific audience and content style." },
+          { q: "How often should I post Shorts to maximize earnings?", a: "Posting 1-3 Shorts per day is the sweet spot for most creators. Daily posting keeps you in the algorithm's favor and gives you more chances for viral breakouts. Posting more than 3 per day shows diminishing returns and can reduce per-video quality. Consistency matters more than volume — one Short every day outperforms seven Shorts in one day followed by a week of silence." },
+          { q: "Can brands sponsor my Shorts even if I am not monetized?", a: "Yes. Brand sponsorships are independent of YouTube Partner Program status. Brands care about your audience, engagement, and content quality — not whether YouTube pays you ad revenue. Many creators land their first brand deals before reaching YPP thresholds, especially in high-value niches with engaged audiences." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need YouTube Shorts content for your brand?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD produces Shorts-native content with creator networks. Tell us about your brand and goals, and we will deliver content optimized for the Shorts feed.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get started &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="/youtube-shorts-vs-tiktok/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">YouTube Shorts vs TikTok</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Platform comparison for creators and brands</p>
+          </a>
+          <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">High-volume creator content production at scale</p>
+          </a>
+          <a href="/hook-rate/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Hook Rate Optimization</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Maximizing the first seconds of every video</p>
+          </a>
+          <a href="/ugc-rates/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Rates Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">How much UGC creators charge in 2026</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on YouTube's official Partner Program documentation, published creator earnings reports, platform analytics data shared by creators across niches, industry research on short-form video monetization, and aggregate data from creator campaigns managed by OKAD. RPM figures, earnings examples, and timelines are directional estimates based on available data. Individual results vary based on niche, audience geography, content quality, posting frequency, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "YouTube Shorts Monetization: Complete Guide to Getting Paid",
+    "description": "Everything you need to know about YouTube Shorts monetization in 2026: RPM rates, eligibility requirements, revenue share structure, and strategies for maximizing earnings.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/youtube-shorts-monetization/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "YouTube Shorts Monetization" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How much do YouTube Shorts pay per 1,000 views?", "acceptedAnswer": { "@type": "Answer", "text": "YouTube Shorts RPM ranges from $0.01 to $0.15 per 1,000 views, with most creators earning $0.03-$0.08. The exact amount depends on niche, audience geography, music usage, and seasonal advertiser demand." } },
+      { "@type": "Question", "name": "How many Shorts views do I need to make $1,000?", "acceptedAnswer": { "@type": "Answer", "text": "At an average RPM of $0.05, you need approximately 20 million Shorts views. At a higher RPM of $0.10, about 10 million views. Most creators supplement ad revenue with sponsorships and affiliates." } },
+      { "@type": "Question", "name": "Is YouTube Shorts monetization better than TikTok?", "acceptedAnswer": { "@type": "Answer", "text": "For ad revenue transparency and scalability, YouTube Shorts is better. TikTok's Creativity Program pays higher per-view for videos 1 minute+, but YouTube's model is more transparent and scales with actual ad revenue." } },
+      { "@type": "Question", "name": "Does using music reduce my Shorts earnings?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Licensed music splits revenue between you and music rights holders before the 45% creator share is applied. Using original audio gives you the full 45% of allocated revenue." } },
+      { "@type": "Question", "name": "How long does it take to get monetized on Shorts?", "acceptedAnswer": { "@type": "Answer", "text": "For most creators posting daily, 3-6 months to reach 1,000 subscribers. The 10M Shorts views threshold may take 6-12+ months without a viral hit." } },
+      { "@type": "Question", "name": "Can I make a living from YouTube Shorts alone?", "acceptedAnswer": { "@type": "Answer", "text": "Very few can from ad revenue alone. But Shorts as a platform — combining ads, sponsorships, affiliates, Super Thanks, and product sales — can generate full-time income." } },
+      { "@type": "Question", "name": "Do Shorts hurt my long-form YouTube channel?", "acceptedAnswer": { "@type": "Answer", "text": "No. Shorts and long-form use separate recommendation systems. Many creators report Shorts help grow subscribers, boosting long-form viewership." } },
+      { "@type": "Question", "name": "What is the best length for monetized Shorts?", "acceptedAnswer": { "@type": "Answer", "text": "Under 30 seconds gets highest loop rates. 30-60 seconds provides more depth. Test both and track which generates more total views and revenue for your content style." } },
+      { "@type": "Question", "name": "How often should I post Shorts to maximize earnings?", "acceptedAnswer": { "@type": "Answer", "text": "1-3 Shorts per day is the sweet spot. Daily posting keeps you in the algorithm's favor. Consistency matters more than volume." } },
+      { "@type": "Question", "name": "Can brands sponsor my Shorts even if I am not monetized?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Brand sponsorships are independent of YPP status. Brands care about audience, engagement, and content quality, not your YPP membership." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

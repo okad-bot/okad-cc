@@ -1,0 +1,686 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailHref = "mailto:olga@okad.agency?subject=Creative%20testing%20framework%20%E2%80%94%20tell%20us%20about%20your%20ads";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Creative Testing Framework: How Top Brands Test Ad Creatives | OKAD"
+  description="The complete creative testing framework used by top DTC and SaaS brands. Learn isolation testing, multivariate testing, the hook-body-CTA hierarchy, budget allocation, sample sizes for statistical significance, and testing cadence by spend level."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Creative Testing Framework: <span class="text-accent">How Top Brands Test Ad Creatives</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Most brands test creative wrong. They change everything at once, declare winners too early, and waste budget on inconclusive results. This framework shows you how to test systematically &mdash; isolating variables, reaching statistical significance, and building a compounding knowledge base.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailHref} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get a testing audit &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Testing methodology</span>
+          <span>Statistical significance</span>
+          <span>Hook &rarr; Body &rarr; CTA</span>
+          <span>Budget allocation</span>
+          <span>Cadence by spend</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Why Creative Testing Matters</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AF;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Find Winners Faster</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Systematic testing finds winning creatives 2&ndash;3&times; faster than random launches. You learn what works and double down &mdash; instead of guessing.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4CA;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Compound Knowledge</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Every test teaches you something about your audience. Testing builds an asset: a growing database of what hooks, formats, and angles convert.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Stop Wasting Budget</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Brands without a testing framework waste 30&ndash;50% of ad spend on underperforming creative. Structured testing cuts that waste in half.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "Testing Methodologies", href: "#methodologies" },
+            { num: "03", text: "The Testing Hierarchy", href: "#hierarchy" },
+            { num: "04", text: "Sample Sizes & Significance", href: "#sample-sizes" },
+            { num: "05", text: "Budget Allocation", href: "#budget" },
+            { num: "06", text: "Testing Cadence by Spend Level", href: "#cadence" },
+            { num: "07", text: "The Testing Workflow", href: "#workflow" },
+            { num: "08", text: "Common Testing Mistakes", href: "#mistakes" },
+            { num: "09", text: "Advanced Testing Tactics", href: "#advanced" },
+            { num: "10", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Creative testing is a system, not a series of guesses</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most brands test by launching multiple creatives and seeing what sticks &mdash; this is not testing, it&rsquo;s gambling</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Real testing isolates variables, reaches statistical significance, and builds compounding learnings</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The framework: test hooks first, then body, then CTA, then format</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The difference between brands that scale profitably on paid media and those that plateau comes down to one thing: their creative testing system. Not their budget. Not their product. Not even their creative quality. It&rsquo;s their ability to systematically discover what works, understand <em>why</em> it works, and iterate on that knowledge faster than <a href="/ad-fatigue/" class="text-accent hover:underline">ad fatigue</a> decays their existing winners.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most brands approach creative testing backwards. They launch 5&ndash;10 ads that are completely different from each other &mdash; different hooks, different messages, different formats, different creators. When one outperforms, they declare it the &ldquo;winner&rdquo; and scale it. But they haven&rsquo;t learned <em>anything</em>. Was it the hook that won? The format? The creator&rsquo;s delivery? The color of their shirt? With everything different, you can&rsquo;t attribute the win to any specific element.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">A proper creative testing framework isolates variables, runs tests to statistical significance, and systematically climbs the optimization ladder: hook &rarr; body &rarr; CTA &rarr; format. Each test teaches you something specific. Over weeks and months, these learnings compound into a deep understanding of what your audience responds to &mdash; and that knowledge becomes your most valuable strategic asset.</p>
+        <ul class="list-none p-0 space-y-2">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Goal:</strong> find winning creatives faster while building reusable audience insights</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Method:</strong> isolate variables, test sequentially, reach statistical significance</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Hierarchy:</strong> hook (highest impact) &rarr; body &rarr; CTA &rarr; format</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[120px]">Budget:</strong> 20&ndash;30% of ad spend allocated to testing</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 Testing Methodologies -->
+    <section class="guide-section" id="methodologies">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Methodologies</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Three testing methodologies compared</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Isolation testing: change one variable at a time &mdash; the gold standard</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Multivariate testing: test multiple variables simultaneously &mdash; faster but harder to read</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Sequential testing: run concepts in waves &mdash; practical for smaller budgets</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Isolation testing (A/B testing)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>What it is:</strong> You take a base creative and change exactly one variable &mdash; the hook, the CTA text, the background music, or the creator. Everything else stays identical. You run both versions to the same audience at the same budget and compare results.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>When to use:</strong> When you need clear, attributable insights. Isolation testing is the gold standard for learning <em>why</em> something works. Use it when optimizing proven concepts &mdash; you already have a winning ad and want to make it better.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Limitation:</strong> Slow. You can only test one variable per cycle (3&ndash;7 days). At one variable per week, you might test 50 variables per year &mdash; which is enough for optimization but not for discovery.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Multivariate testing</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>What it is:</strong> You test multiple variables simultaneously by running many different creative combinations. For example, 4 hooks &times; 3 bodies &times; 2 CTAs = 24 ad variants running at the same time.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>When to use:</strong> When you have enough budget to give each variant sufficient impressions and you need to explore a large creative space quickly. Best for brands spending $50K+/month on ads. Requires larger sample sizes per variant to reach significance.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Limitation:</strong> Requires significant budget and sophisticated analysis. With 24 variants, each one needs enough conversions to be statistically meaningful. At $10 CPA and a 95% confidence target, you might need $5,000&ndash;$10,000 in test spend alone.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Sequential testing</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>What it is:</strong> You test in waves. Week 1: launch 5 completely different concepts. Identify the top 2 performers. Week 2: create 5 variations of those 2 winners (new hooks, new CTAs). Identify the best variant. Week 3: optimize the winning variant further. Each wave narrows the field.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>When to use:</strong> Best for smaller budgets ($10K&ndash;$50K/month) where you can&rsquo;t afford to run many variants simultaneously. Sequential testing is less rigorous than isolation testing but more practical &mdash; it balances learning speed with budget constraints.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Method</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Min budget</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Learning speed</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Rigor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold">Isolation (A/B)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Optimizing winners</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$5K/month</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Slow</td><td class="px-4 py-2.5 border-b border-border text-ink-2 font-semibold" style="color: #2e7d32">Highest</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold">Multivariate</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Exploring creative space</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$50K/month</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Fast</td><td class="px-4 py-2.5 border-b border-border text-ink-2 font-semibold" style="color: #f57f17">Medium</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-semibold">Sequential</td><td class="px-4 py-2.5 text-ink-2">Smaller budgets</td><td class="px-4 py-2.5 text-ink-2">$10K/month</td><td class="px-4 py-2.5 text-ink-2">Medium</td><td class="px-4 py-2.5 text-ink-2 font-semibold" style="color: #f57f17">Medium</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Testing Hierarchy -->
+    <section class="guide-section" id="hierarchy">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Hierarchy</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The testing hierarchy: what to test first</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Hook &rarr; Body &rarr; CTA &rarr; Format (ordered by impact on performance)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The hook determines 60&ndash;80% of an ad&rsquo;s performance</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Never test CTA before you&rsquo;ve optimized the hook</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Not all creative elements are equal. The hook (first 1&ndash;3 seconds) has the largest impact on whether your ad succeeds or fails. If people don&rsquo;t stop scrolling, nothing else matters. A brilliant CTA on an ad nobody watches is worthless. Test in order of impact.</p>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Hook (first 1&ndash;3 seconds).</strong> Impact: 60&ndash;80% of total performance. The hook determines whether anyone watches your ad. Test hook types (question, statement, visual disruption, problem callout), hook copy, and opening visuals. Your <a href="/hook-rate/" class="text-accent hover:underline">hook rate</a> (3-second retention) is the primary metric. Run 5&ndash;8 hook variants per winning body.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Body (middle 10&ndash;40 seconds).</strong> Impact: 15&ndash;25% of total performance. Once you have a winning hook, test different body structures: testimonial vs demo vs problem-solution, feature vs benefit messaging, long vs short format. Measure hold rate (what percentage reach the CTA) and click-through rate.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>CTA (last 3&ndash;5 seconds).</strong> Impact: 5&ndash;10% of total performance. Test CTA copy (urgency vs curiosity vs value), visual treatment (text overlay vs verbal vs button), and offer framing. Measure conversion rate specifically &mdash; CTR from CTA view to landing page click.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Format &amp; production style.</strong> Impact: 5&ndash;15% of total performance. Test talking head vs voiceover, vertical vs square, <a href="/ugc-video-ads/" class="text-accent hover:underline">UGC style</a> vs polished, static vs motion. Format tests are broad &mdash; they inform your overall creative strategy rather than optimizing a single ad.</li>
+        </ol>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Why this order matters</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you test CTAs before hooks, you&rsquo;re optimizing the last 5 seconds of an ad that 70% of people never see. The math doesn&rsquo;t work. Optimize for the widest funnel first (hook = everyone who sees the ad), then narrow (body = people who watched past the hook), then narrow further (CTA = people who watched the whole thing). Each layer of optimization multiplies the impact of the layers below it.</p>
+
+        <div class="bg-card border border-border rounded-xl p-6 mb-6">
+          <p class="text-ink-2 leading-[1.65] mb-3"><strong>Example:</strong> Improving your hook rate from 25% to 35% means 40% more people see your body and CTA. That single improvement cascades through the entire funnel &mdash; more views, more clicks, more conversions, lower CPA &mdash; without changing anything else about the ad.</p>
+          <div class="bg-bg rounded-lg p-4 font-mono text-[14px] text-ink text-center">
+            25% hook rate &times; 10% CTR = <strong>2.5% overall</strong><br/>
+            35% hook rate &times; 10% CTR = <strong>3.5% overall</strong> (+40%)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Sample Sizes & Statistical Significance -->
+    <section class="guide-section" id="sample-sizes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Statistical Significance</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Sample sizes and when to call a winner</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most brands declare winners too early, leading to false positives</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Minimum: 50 conversions per variant for 80% confidence, 100+ for 95%</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">For top-of-funnel metrics (hook rate, CTR): 5,000+ impressions per variant</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The biggest mistake in creative testing is calling winners too early. You launch two ads, one has a 15% lower CPA after 24 hours and $200 in spend, and you declare it the winner. But with that sample size, there&rsquo;s a 40&ndash;50% chance the &ldquo;winner&rdquo; is actually worse &mdash; you just got lucky with a small sample. This is the same reason a coin can land heads 7 out of 10 times without being rigged.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Minimum sample sizes by metric</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Metric</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Min per variant (80%)</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Min per variant (95%)</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Typical time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">Hook rate (3s views)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">5,000 impressions</td><td class="px-4 py-2.5 border-b border-border text-ink-2">10,000 impressions</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1&ndash;3 days</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CTR (click-through rate)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">5,000 impressions</td><td class="px-4 py-2.5 border-b border-border text-ink-2">15,000 impressions</td><td class="px-4 py-2.5 border-b border-border text-ink-2">2&ndash;4 days</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">CPA (cost per acquisition)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">50 conversions</td><td class="px-4 py-2.5 border-b border-border text-ink-2">100 conversions</td><td class="px-4 py-2.5 border-b border-border text-ink-2">3&ndash;7 days</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">ROAS</td><td class="px-4 py-2.5 text-ink-2">75 conversions</td><td class="px-4 py-2.5 text-ink-2">150 conversions</td><td class="px-4 py-2.5 text-ink-2">5&ndash;10 days</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The practical rule</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">For most brands, the practical approach is: <strong>run each test for a minimum of 3&ndash;5 days with at least $50&ndash;$100 per variant per day</strong>. After 3 days, look at the data. If one variant is outperforming by 30%+ and you have 50+ conversions per variant, you can make a decision at 80% confidence. If the difference is under 20%, extend to 7 days to reach higher confidence. If the difference is under 10%, the variants are effectively equal &mdash; pick either and move on to testing a higher-impact variable.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The early kill rule</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Not every test needs to run to full statistical significance. If a variant has spent $200 and has zero conversions while the control has 10+, kill it. The math is clear enough. The early kill rule exists to prevent wasting budget on obvious losers. The threshold: if a variant is performing 50%+ worse than the control after reaching 50% of the minimum sample, you can kill it early with reasonable confidence.</p>
+      </div>
+    </section>
+
+    <!-- 05 Budget Allocation -->
+    <section class="guide-section" id="budget">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Budget</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Budget allocation: testing vs scaling</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Allocate 20&ndash;30% of total ad spend to testing</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">70&ndash;80% goes to scaling proven winners</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Testing budget is an investment, not a cost &mdash; it produces tomorrow&rsquo;s winners</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">The most common budget mistake is spending 100% on scaling existing winners and 0% on testing new creative. This works until your winners fatigue (which, <a href="/ad-fatigue/" class="text-accent hover:underline">as we&rsquo;ve covered</a>, takes ~10 days on Meta). Then you have no replacements ready and CPA spikes while you scramble to produce new creative. The fix: a permanent, non-negotiable testing budget.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Monthly ad spend</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Testing allocation</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Testing budget</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Variants/week</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">$10K</td><td class="px-4 py-2.5 border-b border-border text-ink-2">30%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$3,000</td><td class="px-4 py-2.5 border-b border-border text-ink-2">4&ndash;6</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">$50K</td><td class="px-4 py-2.5 border-b border-border text-ink-2">25%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$12,500</td><td class="px-4 py-2.5 border-b border-border text-ink-2">10&ndash;15</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink">$100K</td><td class="px-4 py-2.5 border-b border-border text-ink-2">20%</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$20,000</td><td class="px-4 py-2.5 border-b border-border text-ink-2">15&ndash;25</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink">$500K+</td><td class="px-4 py-2.5 text-ink-2">15&ndash;20%</td><td class="px-4 py-2.5 text-ink-2">$75K&ndash;$100K</td><td class="px-4 py-2.5 text-ink-2">30&ndash;50+</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>The testing ROI math.</strong> If your testing budget is $3,000/month and you find 2 new winners per month that each generate $10,000 in profitable revenue before fatiguing, the ROI on testing spend is 6.7&times;. Testing budget isn&rsquo;t a cost &mdash; it&rsquo;s the investment that produces your future revenue. Cutting testing budget to save money is like a farmer eating their seed corn.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need help building a testing framework?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We design and run creative testing systems for DTC and SaaS brands. From test design to production to analysis &mdash; a complete pipeline that finds winners and scales them.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a testing audit &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Testing Cadence -->
+    <section class="guide-section" id="cadence">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Cadence</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Testing cadence by spend level</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">$10K&ndash;$50K/month: weekly test cycles, 4&ndash;8 new concepts per cycle</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">$50K&ndash;$200K/month: bi-weekly cycles with rolling launches, 10&ndash;20 concepts</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">$200K+/month: continuous testing, 20&ndash;40+ concepts per week</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">Your testing cadence should match your ad spend. Spending more means faster fatigue, which means you need faster iteration. Here&rsquo;s the breakdown.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Spend level</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Test cycle</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">New concepts</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Data review</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Creative team</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold">$10K&ndash;$50K</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Weekly</td><td class="px-4 py-2.5 border-b border-border text-ink-2">4&ndash;8/week</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Monday</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1 strategist + 2&ndash;3 creators</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-semibold">$50K&ndash;$200K</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Rolling (bi-weekly)</td><td class="px-4 py-2.5 border-b border-border text-ink-2">10&ndash;20/week</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Mon + Thu</td><td class="px-4 py-2.5 border-b border-border text-ink-2">1 strategist + 5&ndash;10 creators + editor</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-semibold">$200K+</td><td class="px-4 py-2.5 text-ink-2">Continuous</td><td class="px-4 py-2.5 text-ink-2">20&ndash;40+/week</td><td class="px-4 py-2.5 text-ink-2">Daily</td><td class="px-4 py-2.5 text-ink-2">Full creative team or agency</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The weekly cycle (for $10K&ndash;$50K/month)</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Monday: Analyze.</strong> Review last week&rsquo;s test results. Tag creatives: Scale, Iterate, Kill. Document learnings in your testing log.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Tuesday: Brief.</strong> Write briefs for new test concepts based on Monday&rsquo;s learnings. Assign to creators. Specify which variable is being tested and the hypothesis.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Wednesday&ndash;Thursday: Produce.</strong> Creators film. Editor assembles. Variants created. Quality check against brief requirements.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Friday: Launch.</strong> Upload new test batch. Set budgets. Start the next cycle. The test runs over the weekend and through the following week.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Saturday&ndash;Sunday: Data collection.</strong> Ads run, algorithm learns, data accumulates. No decisions made until Monday when you have a meaningful sample.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 07 The Testing Workflow -->
+    <section class="guide-section" id="workflow">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Workflow</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The creative testing workflow</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every test starts with a hypothesis: &ldquo;Changing X will improve Y because Z&rdquo;</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Document everything &mdash; the learning log is more valuable than any single test</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use the 60/30/10 production split: iterations, new angles, wild cards</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Step 1: Formulate the hypothesis</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every test must start with a clear hypothesis. Not &ldquo;let&rsquo;s see if this works&rdquo; but &ldquo;we believe that a question-based hook will outperform a statement hook because our audience responds to curiosity.&rdquo; The hypothesis guides what you test, how you measure it, and what you learn regardless of the outcome. A test that disproves a hypothesis is just as valuable as one that proves it.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Step 2: Produce the variants</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Use the <strong>60/30/10 production split</strong> for each batch of test creatives:</p>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>60% iterations</strong> of proven winners (new hooks on winning bodies, fresh creators on winning scripts). Low risk, high probability of finding another winner.</li>
+          <li><strong>30% new angles</strong> based on audience insights, competitor analysis, or customer feedback. Medium risk, medium probability. This is where you discover new winning concepts.</li>
+          <li><strong>10% wild cards</strong> &mdash; experimental formats, unexpected angles, creative risks. Low probability of winning but occasionally produces breakout performers that redefine your entire strategy.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Step 3: Set up the test</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Use separate ad sets with identical targeting, budget, and optimization settings. The only difference should be the creative. On Meta, use the A/B test feature or manual CBO with equal ad set budgets. On TikTok, use the Split Test function. Equal conditions are essential &mdash; if one variant gets a bigger audience or budget, the test is invalid.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Step 4: Analyze and log</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">When the test reaches significance, log the result in a structured format: hypothesis, variants tested, results (with confidence level), learning, and action taken. This testing log becomes your most valuable asset. After 50+ logged tests, you will have a detailed map of what works for your audience that no competitor can replicate. This knowledge directly feeds your <a href="/performance-creative/" class="text-accent hover:underline">performance creative strategy</a>.</p>
+      </div>
+    </section>
+
+    <!-- 08 Common Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The 8 most common creative testing mistakes</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Declaring winners too early is the #1 mistake (leads to 40%+ false positive rate)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Testing too many variables at once makes results uninterpretable</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Not logging learnings means repeating the same failed experiments</li>
+          </ul>
+        </div>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Declaring winners too early.</strong> Calling a test after $100 in spend and 5 conversions is not testing &mdash; it&rsquo;s coin-flipping. Wait for statistical significance (50+ conversions per variant minimum).</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Changing multiple variables at once.</strong> If you test a different hook, different creator, and different CTA simultaneously, you don&rsquo;t know which change caused the difference. Isolate variables or accept you&rsquo;re getting directional signals, not causal insights.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Testing CTAs before hooks.</strong> Optimizing the CTA of an ad with a bad hook is like polishing the bumper of a car with no engine. Fix the hook first.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>No testing budget allocation.</strong> Spending 100% on scaling and 0% on testing means your pipeline runs dry when winners fatigue. Reserve 20&ndash;30% permanently for testing.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Not logging results.</strong> Running 100 tests and remembering the results of 5 is a waste. A structured testing log turns individual tests into compounding knowledge. Document every test: hypothesis, variants, results, learnings.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Unequal test conditions.</strong> Giving one variant a larger audience, higher budget, or different optimization event invalidates the test. All conditions must be identical except the variable being tested.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Testing only what&rsquo;s easy to produce.</strong> If you only test hook variants because they&rsquo;re cheap to produce, you miss format-level insights that could unlock an entirely new performance tier. The 60/30/10 split addresses this.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Ignoring losing tests.</strong> A losing variant teaches you just as much as a winning one &mdash; maybe more. Log why it lost. The pattern of losses often reveals audience preferences that pattern of wins misses.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 09 Advanced Tactics -->
+    <section class="guide-section" id="advanced">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Advanced</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Advanced testing tactics</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Concept testing: validate messaging angles before investing in full production</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Cross-platform testing: a winner on TikTok may or may not win on Meta</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Audience-creative interaction: different segments respond to different creative</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Concept testing with minimum viable creative</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before investing in full UGC production, test the concept with minimum viable creative: a simple text-on-screen video, a static image ad, or a quick selfie-style video. If the concept (the messaging angle, the value proposition, the hook idea) doesn&rsquo;t resonate in its simplest form, polished production won&rsquo;t save it. This approach lets you test 5&ndash;10 concepts in the time and budget it takes to produce 1&ndash;2 polished videos.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Cross-platform creative testing</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A winning creative on TikTok might fail on Meta and vice versa. Audience expectations, content consumption patterns, and platform algorithms all differ. The concept (the underlying message) usually transfers, but the execution must be adapted. Test concepts across platforms, but always with platform-native execution. A TikTok-native talking-head video won&rsquo;t perform the same in a Meta feed.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Audience-creative interaction testing</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Advanced brands test not just which creative wins overall, but which creative wins for which audience segment. A testimonial ad might outperform a demo ad with cold audiences but underperform with retargeting audiences. Understanding these interactions lets you serve the right creative to the right audience at the right funnel stage &mdash; a significant competitive advantage.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The testing knowledge base</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">After 6&ndash;12 months of disciplined testing, your testing log becomes a strategic asset. Common entries include: &ldquo;Question hooks outperform statement hooks by 22% for cold audiences,&rdquo; &ldquo;Female creators outperform male creators by 15% for our product,&rdquo; &ldquo;Problem-agitate-solve body structure outperforms feature-list by 30%.&rdquo; This knowledge base makes every future creative better, reduces testing waste, and creates a compounding advantage competitors can&rsquo;t easily replicate.</p>
+      </div>
+    </section>
+
+    <!-- 10 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What is a creative testing framework?", a: "A creative testing framework is a systematic methodology for testing ad creatives to find winners faster, build audience insights, and reduce wasted ad spend. It includes testing methodologies (isolation, multivariate, sequential), a testing hierarchy (hook → body → CTA → format), sample size requirements, budget allocation rules, and a structured workflow for running and documenting tests." },
+          { q: "How much budget should I allocate to creative testing?", a: "Allocate 20-30% of your total ad spend to testing. At $10K/month, that's $3,000. At $50K/month, that's $12,500. At $100K+, you can reduce the percentage to 15-20% since the absolute dollar amount is large enough. This budget funds the discovery of your next winning creatives — it's an investment, not a cost." },
+          { q: "How many conversions do I need before declaring a winner?", a: "For 80% statistical confidence, you need at least 50 conversions per variant. For 95% confidence, you need 100+ conversions per variant. For top-of-funnel metrics like hook rate and CTR, 5,000-15,000 impressions per variant is the minimum. Running 3-5 days with $50-$100 per variant per day typically provides enough data for a reliable decision." },
+          { q: "What should I test first in my ads?", a: "Test the hook (first 1-3 seconds) first. It has the highest impact on performance — 60-80% of an ad's success depends on whether people stop scrolling to watch. After optimizing your hook, test the body (middle section), then the CTA (end), then format and production style. This hierarchy ensures you optimize the highest-impact elements before refining smaller details." },
+          { q: "What is isolation testing vs multivariate testing?", a: "Isolation testing (A/B testing) changes one variable at a time — same ad with two different hooks, everything else identical. It gives you clear, causal insights but is slower. Multivariate testing changes multiple variables simultaneously across many variants (e.g., 4 hooks × 3 bodies = 12 variants). It's faster for exploration but requires more budget and makes it harder to attribute results to specific changes." },
+          { q: "How often should I launch new test creatives?", a: "It depends on your spend level. At $10K-$50K/month: launch a new batch weekly (4-8 concepts). At $50K-$200K: launch bi-weekly with rolling tests (10-20 concepts per cycle). At $200K+: launch continuously with 20-40+ new concepts per week. Higher spend means faster fatigue, which requires faster creative replacement." },
+          { q: "What is the 60/30/10 production split?", a: "It's a formula for balancing risk and return in your test batches. 60% of your test creatives should be iterations of proven winners (low risk, high probability of finding another winner). 30% should be new angles based on audience insights (medium risk). 10% should be wild cards — experimental formats or unexpected approaches (high risk but occasionally produces breakout performers)." },
+          { q: "How do I know if my test is statistically significant?", a: "The practical approach: if one variant is outperforming by 30%+ and you have 50+ conversions per variant (after 3-5 days of testing), you can make a decision at 80% confidence. If the difference is under 20%, extend to 7 days. If the difference is under 10% after sufficient data, the variants are effectively equal — pick either and move on to testing a higher-impact variable." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to test smarter?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We build and run creative testing systems for brands spending $10K&ndash;$500K+/month on ads. Strategy, production, testing, and data analysis &mdash; a complete pipeline that compounds learnings into better-performing creative over time.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a testing audit &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This framework is based on creative testing methodologies used by top-performing DTC and SaaS brands, supplemented by OKAD Agency&rsquo;s experience managing creative testing across multiple accounts with combined ad spend exceeding $2M/month. Sample size recommendations are based on standard statistical confidence calculations for binomial proportions. Budget allocation percentages are industry-standard ranges adapted for post-Andromeda creative lifespans. Individual results vary based on product, market, audience size, and creative quality.</p>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- Lead Form -->
+    <section class="py-16 border-t border-border" id="get-started">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-card border border-border rounded-2xl p-8 sm:p-10">
+          <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-4">Free consultation</div>
+            <h2 class="font-display font-bold text-[clamp(22px,3.5vw,30px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Get a Custom UGC Plan for Your Brand</h2>
+            <p class="text-[15px] text-ink-2 max-w-[500px] mx-auto leading-[1.5]">Tell us about your brand and we'll send you a custom UGC strategy — content formats, creator count, estimated costs, and timeline.</p>
+          </div>
+          <form id="canvas-form" class="space-y-4 max-w-[480px] mx-auto">
+            <div>
+              <label for="cf-company" class="block text-[13px] font-medium text-ink mb-1.5">Company / Brand *</label>
+              <input type="text" id="cf-company" name="company" required placeholder="Acme Inc." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-email" class="block text-[13px] font-medium text-ink mb-1.5">Work email *</label>
+              <input type="email" id="cf-email" name="email" required placeholder="you@company.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-website" class="block text-[13px] font-medium text-ink mb-1.5">Website</label>
+              <input type="url" id="cf-website" name="website" placeholder="https://yoursite.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-budget" class="block text-[13px] font-medium text-ink mb-1.5">Monthly content budget</label>
+              <select id="cf-budget" name="budget" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] focus:outline-none focus:border-accent transition-colors appearance-none">
+                <option value="">Select range</option>
+                <option value="under-2k">Under $2,000</option>
+                <option value="2k-5k">$2,000 – $5,000</option>
+                <option value="5k-10k">$5,000 – $10,000</option>
+                <option value="10k+">$10,000+</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label for="cf-message" class="block text-[13px] font-medium text-ink mb-1.5">What are you looking to achieve?</label>
+              <textarea id="cf-message" name="message" rows="3" placeholder="E.g. We want to grow our TikTok presence with 20+ videos per month..." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors resize-y"></textarea>
+            </div>
+            <button type="submit" id="cf-submit" class="w-full py-3.5 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all cursor-pointer border-none">Get my UGC plan &rarr;</button>
+            <div id="cf-status" class="text-center text-[13px] hidden"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="/hook-rate/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Hook Rate Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Optimize thumb-stop ratio and 3s retention</p>
+          </a>
+          <a href="/ad-fatigue/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Ad Fatigue Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Creative decay, timelines, and prevention pipelines</p>
+          </a>
+          <a href="/performance-creative/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Performance Creative</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Ad creative that drives measurable results</p>
+          </a>
+          <a href="/ugc-video-ads/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Video Ads</p>
+            <p class="text-[12px] text-muted leading-[1.4]">The complete guide to UGC-style video advertising</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Creative Testing Framework: How Top Brands Test Ad Creatives",
+    "description": "The complete creative testing framework used by top DTC and SaaS brands. Learn isolation testing, multivariate testing, the hook-body-CTA hierarchy, budget allocation, sample sizes for statistical significance, and testing cadence by spend level.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/creative-testing-framework/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Creative Testing Framework" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is a creative testing framework?", "acceptedAnswer": { "@type": "Answer", "text": "A creative testing framework is a systematic methodology for testing ad creatives to find winners faster, build audience insights, and reduce wasted ad spend. It includes testing methodologies (isolation, multivariate, sequential), a testing hierarchy (hook → body → CTA → format), sample size requirements, budget allocation rules, and a structured workflow for running and documenting tests." } },
+      { "@type": "Question", "name": "How much budget should I allocate to creative testing?", "acceptedAnswer": { "@type": "Answer", "text": "Allocate 20-30% of your total ad spend to testing. At $10K/month, that's $3,000. At $50K/month, that's $12,500. At $100K+, you can reduce the percentage to 15-20% since the absolute dollar amount is large enough." } },
+      { "@type": "Question", "name": "How many conversions do I need before declaring a winner?", "acceptedAnswer": { "@type": "Answer", "text": "For 80% statistical confidence, you need at least 50 conversions per variant. For 95% confidence, you need 100+ conversions per variant. For top-of-funnel metrics like hook rate and CTR, 5,000-15,000 impressions per variant is the minimum." } },
+      { "@type": "Question", "name": "What should I test first in my ads?", "acceptedAnswer": { "@type": "Answer", "text": "Test the hook (first 1-3 seconds) first. It has the highest impact on performance — 60-80% of an ad's success depends on whether people stop scrolling to watch. After optimizing your hook, test the body, then the CTA, then format and production style." } },
+      { "@type": "Question", "name": "What is isolation testing vs multivariate testing?", "acceptedAnswer": { "@type": "Answer", "text": "Isolation testing (A/B testing) changes one variable at a time — same ad with two different hooks, everything else identical. It gives clear, causal insights but is slower. Multivariate testing changes multiple variables simultaneously across many variants. It's faster for exploration but requires more budget and makes it harder to attribute results to specific changes." } },
+      { "@type": "Question", "name": "How often should I launch new test creatives?", "acceptedAnswer": { "@type": "Answer", "text": "At $10K-$50K/month: launch a new batch weekly (4-8 concepts). At $50K-$200K: launch bi-weekly with rolling tests (10-20 concepts per cycle). At $200K+: launch continuously with 20-40+ new concepts per week." } },
+      { "@type": "Question", "name": "What is the 60/30/10 production split?", "acceptedAnswer": { "@type": "Answer", "text": "60% of test creatives should be iterations of proven winners (low risk). 30% should be new angles based on audience insights (medium risk). 10% should be wild cards — experimental formats or unexpected approaches (high risk but occasionally produces breakout performers)." } },
+      { "@type": "Question", "name": "How do I know if my test is statistically significant?", "acceptedAnswer": { "@type": "Answer", "text": "If one variant is outperforming by 30%+ and you have 50+ conversions per variant (after 3-5 days), you can make a decision at 80% confidence. If the difference is under 20%, extend to 7 days. If under 10% after sufficient data, the variants are effectively equal — pick either and move on." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  const form = document.getElementById('canvas-form');
+  const status = document.getElementById('cf-status');
+  const submitBtn = document.getElementById('cf-submit');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      status.className = 'text-center text-[13px] hidden';
+      try {
+        const fd = new FormData(form);
+        const data = Object.fromEntries(fd.entries());
+        data.source = window.location.pathname;
+        const resp = await fetch('https://okad.cc/api/canvas-form/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (resp.ok) {
+          status.textContent = 'Thank you! We\'ll get back to you within 24 hours.';
+          status.className = 'text-center text-[13px] text-green-400 mt-2';
+          form.reset();
+        } else {
+          const err = await resp.json().catch(() => ({}));
+          status.textContent = err.error || 'Something went wrong. Please try again.';
+          status.className = 'text-center text-[13px] text-red-400 mt-2';
+        }
+      } catch {
+        status.textContent = 'Network error. Please try again.';
+        status.className = 'text-center text-[13px] text-red-400 mt-2';
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get my UGC plan →';
+    });
+  }
+</script>

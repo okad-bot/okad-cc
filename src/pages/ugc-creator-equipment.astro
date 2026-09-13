@@ -1,0 +1,530 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailHref = "mailto:olga@okad.agency?subject=UGC%20Creator%20Program%20%E2%80%94%20interested";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="UGC Creator Equipment Guide: What You Actually Need (2026) | OKAD"
+  description="A practical guide to UGC creator equipment covering phone vs camera, lighting setups, audio gear, editing tools, and complete budget tiers from $0 to $1,000+. No fluff — just the gear that actually matters for producing professional UGC content."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Equipment guide &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          UGC Creator Equipment: <span class="text-accent">What You Actually Need</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          You do not need expensive gear to produce professional UGC. This guide breaks down exactly what equipment matters, what does not, and how to build your setup at every budget level &mdash; from $0 to $1,000+.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailHref} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Join our creator network &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Phone vs camera</span>
+          <span>Lighting</span>
+          <span>Audio</span>
+          <span>Budget tiers</span>
+          <span>Editing tools</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Equipment Priority Order</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3A4;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">1. Audio First</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Bad audio kills content faster than bad video. Viewers will tolerate average visuals but will swipe away from muffled, echoey, or noisy audio instantly.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4A1;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">2. Lighting Second</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Good lighting transforms phone footage into professional-looking content. A $30 ring light makes a bigger difference than a $1,000 camera.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4F1;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">3. Camera Last</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Any phone from the last 3-4 years shoots good enough video for UGC. Camera upgrades come after audio and lighting are solid.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "The Equipment Hierarchy", href: "#hierarchy" },
+            { num: "02", text: "Phone vs Camera", href: "#phone-vs-camera" },
+            { num: "03", text: "Lighting Setups", href: "#lighting" },
+            { num: "04", text: "Audio Equipment", href: "#audio" },
+            { num: "05", text: "Stabilization & Mounting", href: "#stabilization" },
+            { num: "06", text: "Editing Software", href: "#editing" },
+            { num: "07", text: "Budget Tiers", href: "#budget-tiers" },
+            { num: "08", text: "Setting Up Your Space", href: "#space" },
+            { num: "09", text: "Gear Mistakes to Avoid", href: "#mistakes" },
+            { num: "10", text: "Creator Resources", href: "#resources" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Equipment Hierarchy -->
+    <section class="guide-section" id="hierarchy">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Priority</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The equipment hierarchy: what to invest in first</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Audio > Lighting > Stabilization > Camera (in order of impact on content quality)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Your smartphone is already good enough for video in most cases</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Invest in fixing your weakest link, not upgrading your strongest</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most aspiring UGC creators make the same mistake: they think they need an expensive camera before they can start. This is backwards. The equipment hierarchy for UGC, ranked by impact on content quality, is: audio first, lighting second, stabilization third, and camera dead last.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Here is why. Viewers will watch slightly grainy or imperfect video if the content is good and the audio is clear. But they will immediately swipe away from content with muffled audio, echo, background noise, or inconsistent volume &mdash; regardless of how beautiful the visuals are. This has been confirmed by platform data: TikTok, Instagram, and YouTube all weight early retention heavily in their algorithms, and poor audio is the number one cause of early dropoffs.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Lighting is second because it has an outsized impact on how professional your video looks. The same phone camera in bad lighting produces grainy, unflattering footage with visible noise. In good lighting, it produces crisp, clean footage that looks professional. A $30 ring light does more for your video quality than a $1,000 camera upgrade.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Stabilization is third. Shaky footage is distracting and signals amateur production. A simple $15 phone tripod eliminates this problem entirely. For handheld shots, most modern phones have built-in stabilization that is adequate for UGC.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Camera is last because any smartphone from the last 3-4 years already shoots video at a quality level that exceeds what UGC platforms require. iPhone 13 and up, Samsung Galaxy S21 and up, Google Pixel 6 and up &mdash; all produce video that is more than sufficient for TikTok, Instagram Reels, and YouTube Shorts. The platforms compress video significantly during upload anyway, so the difference between phone and camera footage is often invisible to viewers. For a broader overview of getting started as a creator, see our <a href="/how-to-start-canvas-ugc/" class="text-accent hover:underline">how to start Canvas UGC</a> guide.</p>
+      </div>
+    </section>
+
+    <!-- 02 Phone vs Camera -->
+    <section class="guide-section" id="phone-vs-camera">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Video</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Phone vs camera: which should you use?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">For 90% of UGC work, your smartphone is the right choice</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Cameras add value for YouTube long-form, product photography, and premium branded content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">If you upgrade, a mirrorless camera under $800 covers everything</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">When to use your phone</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Use your smartphone for all short-form UGC (TikTok, Reels, Shorts), product reviews and unboxings, talking-head content, lifestyle and day-in-the-life content, tutorials and how-tos, and any content where authenticity is more important than cinematic quality. Phone footage looks native to social platforms, which is exactly what UGC should look like. Over-produced content on these platforms can actually perform worse because it looks like an ad.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Phone shooting also offers practical advantages: faster workflow (no file transfer needed), instant editing in mobile apps, direct posting to platforms, and built-in stabilization that keeps getting better. Most professional UGC creators earning $3,000-$10,000+ per month shoot exclusively on their phones.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">When to consider a camera</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A dedicated camera makes sense for long-form YouTube content (10+ minutes) where higher production value matters, product photography for e-commerce or brand work, premium branded content where the client expects polished visuals, beauty and skincare content where detail and color accuracy are critical, and any content requiring shallow depth of field (blurred background) as a key creative element.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you decide to invest in a camera, you do not need to spend thousands. Entry-level mirrorless cameras like the Sony ZV-1 Mark II ($750), Canon EOS R50 ($680), or Fujifilm X-S20 ($1,300) are excellent for UGC. The Sony ZV-1 Mark II is the most popular choice among UGC creators because it was specifically designed for content creation: it has a flip screen, built-in stabilization, excellent autofocus, and good built-in microphones.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Phone camera settings for UGC</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Regardless of which phone you use, these settings optimize your UGC quality. Record in 4K at 30fps (or 1080p at 60fps for smoother motion). Use the rear camera, not the front camera &mdash; rear cameras have dramatically better sensors and lenses. Lock focus and exposure by tapping and holding on your face or subject. Turn off digital zoom &mdash; it degrades quality. Enable grid lines to help with framing. Clean your camera lens before every recording session (fingerprints cause haze).</p>
+      </div>
+    </section>
+
+    <!-- 03 Lighting -->
+    <section class="guide-section" id="lighting">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Lighting</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Lighting setups for every budget</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Natural window light is free and produces excellent results</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A single ring light ($25-$50) is the most impactful first equipment purchase</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Two-light or three-light setups are for dedicated studios and premium content</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Free: natural light</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Natural window light is the best lighting for UGC, and it costs nothing. Position yourself facing a large window so the light hits your face evenly. Avoid direct sunlight, which creates harsh shadows &mdash; diffused light on overcast days or through sheer curtains produces the most flattering results. The window should be in front of you (or slightly to one side), never behind you. Backlighting from a window creates a silhouette effect that makes your face dark.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The main limitation of natural light is consistency. It changes throughout the day, varies with weather, and is unavailable at night. For creators who film at consistent times near a good window, natural light is sufficient indefinitely. For creators who need to film at any time, artificial lighting is essential.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">$25-$50: ring light</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A ring light is the single most popular and cost-effective lighting investment for UGC creators. An 18-inch ring light ($30-$50) provides even, flattering light for talking-head content and eliminates the inconsistency of natural light. It also creates an attractive ring-shaped catchlight in your eyes, which viewers associate with professional content. Position the ring light directly in front of you, at eye level, with your phone mounted in the center of the ring.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Look for a ring light with adjustable color temperature (3200K-5600K) and brightness levels. Warm tones (3200K-4000K) create a cozy, flattering look. Cool tones (5000K-5600K) create a clean, professional look. Daylight balance (5000K) is the most versatile starting point.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">$100-$200: key light setup</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A dedicated LED panel light ($50-$150) provides more professional lighting than a ring light. Position it at a 45-degree angle to your face, slightly above eye level. This creates natural-looking shadows that add dimension to your face &mdash; more flattering than the flat, even lighting of a ring light. Add a cheap reflector ($15-$25) on the opposite side to fill in shadows. This two-element setup produces near-professional lighting for under $200.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">$300+: three-point lighting</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A three-point lighting setup (key light, fill light, backlight) is the professional standard for studio content. The key light is your main light source at 45 degrees. The fill light is a softer light on the opposite side to reduce shadows. The backlight separates you from the background, adding depth and a professional look. This setup is primarily for dedicated filming spaces and creators producing premium branded content or YouTube long-form.</p>
+      </div>
+    </section>
+
+    <!-- 04 Audio -->
+    <section class="guide-section" id="audio">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Audio</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Audio equipment: the most important investment</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Bad audio is the #1 reason viewers swipe away from content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A $20 wired lavalier mic dramatically improves audio quality</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Wireless lavalier systems ($50-$250) offer the best flexibility for UGC</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Free: phone microphone optimization</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before buying any audio equipment, optimize what you have. Film in a quiet room with the door closed. Avoid rooms with hard surfaces (tile, glass, concrete) that create echo &mdash; carpeted rooms with furniture and curtains absorb sound. Keep the phone within 2-3 feet of your face. Remove or turn off anything that creates background noise (fans, AC, appliances). These simple steps dramatically improve phone audio at zero cost.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">$15-$30: wired lavalier microphone</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A wired lavalier (clip-on) microphone is the cheapest meaningful audio upgrade. Clip it to your collar about 6-8 inches below your chin and plug it into your phone's headphone jack (or use a Lightning/USB-C adapter). This puts the microphone inches from your mouth instead of feet, dramatically reducing room echo and background noise. Popular options include the Boya BY-M1 ($20) and Rode smartLav+ ($60). For most UGC creators, a wired lav is all you ever need.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">$50-$250: wireless lavalier system</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Wireless lavalier microphones give you the audio quality of a clip-on mic without the cable restricting your movement. This is essential for content involving movement, cooking, fitness, or product demonstrations where you need to move around. The Rode Wireless GO II ($250) is the industry standard, offering two transmitters, excellent audio quality, and onboard recording as a backup. Budget options like the DJI Mic 2 ($300 for dual) and Hollyland Lark M2 ($100) offer similar functionality at lower price points.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">$100-$300: USB microphone (for desktop/voiceover)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you record voiceovers, podcasts, or desktop-based content, a USB microphone provides studio-quality audio. The Rode NT-USB Mini ($100), Blue Yeti ($130), and Elgato Wave:3 ($150) are popular choices. These are for stationary recording only &mdash; they are too large and sensitive for on-camera UGC. Position the microphone 6-12 inches from your mouth, slightly off-axis to reduce plosives (popping sounds on P and B words).</p>
+      </div>
+    </section>
+
+    <!-- 05 Stabilization -->
+    <section class="guide-section" id="stabilization">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Stability</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Stabilization and mounting solutions</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A $15 phone tripod eliminates shaky footage instantly</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Gimbals ($80-$150) are for moving shots and B-roll content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most UGC content only needs a tripod &mdash; do not over-invest in stabilization</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Phone tripod ($10-$30)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A basic phone tripod is an essential purchase for any UGC creator. It eliminates shaky footage, frees up your hands, and ensures consistent framing across takes. A flexible mini-tripod ($10-$15) works for tabletop setups. A full-height tripod with a phone mount ($20-$30) is better for standing or sitting content. Look for a tripod with a ball head for easy angle adjustment and a phone mount that accommodates your phone size with or without a case.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Gimbal ($80-$150)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A gimbal is a motorized stabilizer that keeps your phone steady during movement. It produces smooth, cinematic footage while walking, panning, or following action. The DJI OM 7 ($100) and Insta360 Flow ($100) are the most popular phone gimbals. Gimbals are only necessary if your content involves significant movement &mdash; product walkthrough, travel content, fitness demonstrations, or cooking with camera movement. For talking-head content, a tripod is sufficient.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Other mounting solutions</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Depending on your content type, you might need specialized mounts. An overhead mount ($20-$50) is essential for flat-lay content, cooking, art, and product photography. A suction cup mount ($15) works for car content and window-mounted shots. A clamp mount ($10-$15) attaches to shelves, desks, or tables for POV and top-down angles. A selfie stick ($15-$25) provides extended reach for vlog-style content.</p>
+      </div>
+    </section>
+
+    <!-- 06 Editing -->
+    <section class="guide-section" id="editing">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Editing</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Editing software and tools</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CapCut (free) is the industry standard for short-form UGC editing</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Edit on mobile for speed; desktop for complex projects</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Auto-captions, templates, and effects save hours per video</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Mobile editing (recommended for UGC)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>CapCut (free):</strong> The dominant editing app for UGC creators. CapCut offers auto-captions (supporting 20+ languages), trending templates, effects, transitions, text animations, and direct export to TikTok. The learning curve is minimal, and the output quality matches professional desktop editors for short-form content. CapCut Pro ($8/month) adds premium features including AI-powered editing tools. This is the recommended starting point for all new UGC creators.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>InShot (free/$3.99):</strong> A simpler alternative to CapCut with an intuitive interface. Good for basic cuts, text overlays, and music. InShot Pro removes the watermark and unlocks all filters. Better for creators who find CapCut overwhelming.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>VN Video Editor (free):</strong> A surprisingly powerful free editor with a desktop-like timeline interface on mobile. Offers multi-track editing, keyframe animation, and speed curves. No watermark on the free version. Preferred by creators who want more control than CapCut without switching to desktop.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Desktop editing (for long-form and complex projects)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>DaVinci Resolve (free):</strong> A professional-grade video editor with a free version that includes nearly all features. Color grading in DaVinci Resolve is industry-leading. The learning curve is steeper than mobile editors, but the capabilities are vastly greater. Recommended for YouTube long-form content and premium branded content.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Adobe Premiere Pro ($23/month):</strong> The industry standard for professional video editing. Integrates with After Effects for motion graphics and Photoshop for thumbnails. The subscription cost makes it less practical for new creators, but it is the standard for agencies and production teams.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Descript ($24/month):</strong> A unique editor that lets you edit video by editing a transcript. Delete a word from the transcript and it is removed from the video. This is exceptionally fast for talking-head content, podcasts, and any dialogue-heavy video. Also provides AI-powered filler word removal. For more on creator tools, see our <a href="/ugc-creator-tools/" class="text-accent hover:underline">UGC creator tools guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- 07 Budget Tiers -->
+    <section class="guide-section" id="budget-tiers">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Budget Tiers</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Complete equipment setups by budget</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">$0 setup: phone + natural light + quiet room = ready to start</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">$100 setup: phone + ring light + lav mic + tripod = professional-quality UGC</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">$500-$1,000 setup: dedicated camera + lighting + wireless audio = premium production</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">$0 tier: start with what you have</h3>
+        <div class="bg-card border border-border rounded-[10px] p-4 mb-4">
+          <p class="text-[14px] text-ink font-semibold mb-2">Equipment list (total: $0)</p>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[13px] text-ink-2">Camera: your current smartphone (any phone from 2021+)</li>
+            <li class="text-[13px] text-ink-2">Lighting: natural window light (face the window)</li>
+            <li class="text-[13px] text-ink-2">Audio: phone's built-in microphone (film in a quiet room, stay close to phone)</li>
+            <li class="text-[13px] text-ink-2">Stabilization: lean phone against books, water bottle, or any stable surface</li>
+            <li class="text-[13px] text-ink-2">Editing: CapCut free or VN Video Editor (both free, no watermark)</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">This setup is how most successful UGC creators started. There is no need to spend money before you have validated that UGC is something you want to pursue seriously. Create your first 10-20 pieces of content with zero investment. If you enjoy the process and see traction, then invest in upgrades. Many full-time UGC creators produced their first paying work with nothing more than this.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">$100 tier: the essentials</h3>
+        <div class="bg-card border border-border rounded-[10px] p-4 mb-4">
+          <p class="text-[14px] text-ink font-semibold mb-2">Equipment list (total: ~$100)</p>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[13px] text-ink-2">Camera: your current smartphone</li>
+            <li class="text-[13px] text-ink-2">Lighting: 18" ring light with phone mount ($30-$40)</li>
+            <li class="text-[13px] text-ink-2">Audio: wired lavalier microphone &mdash; Boya BY-M1 ($20)</li>
+            <li class="text-[13px] text-ink-2">Stabilization: phone tripod with adjustable height ($15-$25)</li>
+            <li class="text-[13px] text-ink-2">Editing: CapCut free</li>
+            <li class="text-[13px] text-ink-2">Backdrop: clean, clutter-free area in your home (free)</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is the sweet spot for most UGC creators. For about $100, you have professional-quality lighting, clear audio, stable footage, and a capable editing tool. This setup produces content that is indistinguishable from creators using $2,000+ setups on short-form platforms. If you are going to spend any money on equipment, this is the tier that gives you the best return. See our <a href="/ugc-beginner/" class="text-accent hover:underline">UGC beginner guide</a> for more on getting started.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">$500 tier: the professional upgrade</h3>
+        <div class="bg-card border border-border rounded-[10px] p-4 mb-4">
+          <p class="text-[14px] text-ink font-semibold mb-2">Equipment list (total: ~$500)</p>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[13px] text-ink-2">Camera: your current smartphone (or used Sony ZV-1 ~$300-$400)</li>
+            <li class="text-[13px] text-ink-2">Lighting: LED panel light with softbox ($80-$120) + reflector ($15)</li>
+            <li class="text-[13px] text-ink-2">Audio: wireless lavalier &mdash; Hollyland Lark M2 or DJI Mic Mini ($100-$150)</li>
+            <li class="text-[13px] text-ink-2">Stabilization: full tripod + mini tabletop tripod ($40)</li>
+            <li class="text-[13px] text-ink-2">Editing: CapCut Pro ($8/month) or DaVinci Resolve (free)</li>
+            <li class="text-[13px] text-ink-2">Extras: backdrop stand with fabric ($30-$50), phone mount adapter ($10)</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">This tier gives you professional-level results across all content types. The wireless mic allows freedom of movement, the LED panel provides better lighting control than a ring light, and the backdrop stand creates a consistent filming environment. This is the setup level where brands and agencies start considering your production quality professional-grade.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">$1,000+ tier: the full studio</h3>
+        <div class="bg-card border border-border rounded-[10px] p-4 mb-4">
+          <p class="text-[14px] text-ink font-semibold mb-2">Equipment list (total: ~$1,000-$2,000)</p>
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[13px] text-ink-2">Camera: Sony ZV-1 Mark II ($750) or Canon EOS R50 ($680)</li>
+            <li class="text-[13px] text-ink-2">Lighting: two-light setup with LED panels and softboxes ($150-$250)</li>
+            <li class="text-[13px] text-ink-2">Audio: Rode Wireless GO II ($250) or DJI Mic 2 ($300)</li>
+            <li class="text-[13px] text-ink-2">Stabilization: camera tripod ($50-$100) + phone gimbal ($100)</li>
+            <li class="text-[13px] text-ink-2">Editing: Adobe Premiere Pro ($23/month) or DaVinci Resolve (free)</li>
+            <li class="text-[13px] text-ink-2">Extras: backdrop system ($50), teleprompter app ($10), external monitor ($80-$150)</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is a full production setup for creators who are earning consistently from UGC and want to produce premium content. The dedicated camera enables shallow depth of field and superior low-light performance. The two-light setup provides professional studio lighting. The wireless audio system handles any filming scenario. This tier is for creators producing long-form YouTube content, premium branded content, or running their UGC work as a full-time business.</p>
+      </div>
+    </section>
+
+    <!-- 08 Space Setup -->
+    <section class="guide-section" id="space">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Space</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Setting up your filming space</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A dedicated corner of a room is all you need for consistent UGC production</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Background matters: clean, on-brand, and non-distracting</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Reduce echo with soft furnishings: curtains, rugs, pillows</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">You do not need a dedicated studio to produce professional UGC. A corner of your bedroom, living room, or home office is sufficient. The key elements are a clean, visually appealing background; good lighting (natural or artificial); quiet acoustics; and enough space to set up your tripod and position yourself comfortably.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For backgrounds, clean and simple beats elaborate. A plain wall, a bookshelf, or an organized corner of a room works perfectly. Avoid visual clutter, unmade beds, or anything distracting behind you. Some creators invest in a simple backdrop ($30-$50) for consistent backgrounds across all their content. The most versatile backdrop colors are white, cream, and light gray.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Acoustics are often overlooked. Hard surfaces (tile floors, bare walls, glass) create echo that makes audio sound unprofessional. Soft surfaces absorb sound: carpet, curtains, upholstered furniture, rugs, and pillows. If your filming space has poor acoustics, adding a rug, closing curtains, or placing pillows just out of frame can dramatically improve audio quality. This costs nothing but makes a noticeable difference.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Mark your filming position on the floor with a small piece of tape so you can set up consistently every time. This saves time and ensures your framing is identical across videos, which creates a professional and cohesive look across your content library.</p>
+      </div>
+    </section>
+
+    <!-- 09 Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Gear mistakes to avoid</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Do not buy equipment before you start creating &mdash; prove the concept first</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Do not prioritize camera over audio and lighting</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Do not buy gear you do not understand how to use</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Buying gear before creating content.</strong> The biggest mistake is spending hundreds or thousands of dollars on equipment before filming a single video. Start with what you have, create 10-20 pieces of content, learn what you actually need through experience, and then invest strategically. Many aspiring creators buy equipment, film two videos, and quit &mdash; wasting money on gear that sits unused.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Camera-first investing.</strong> Spending $800 on a camera while still using phone audio and filming in poor lighting is backwards. The camera is the least impactful upgrade. Fix audio and lighting first. Many brands cannot tell the difference between phone and camera footage on social platforms anyway.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Over-investing in equipment you do not understand.</strong> Buying a professional camera, three-point lighting, and audio mixer before knowing how to use them leads to frustration and worse results than simple equipment used well. Master one piece of equipment at a time. Learn your phone camera thoroughly before upgrading. Learn your ring light before adding panel lights. Complexity is not the same as quality.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Ignoring acoustics.</strong> Creators spend money on microphones but film in echoey rooms with hard surfaces. Even the best microphone cannot overcome a room with bad acoustics. Treat your room before upgrading your mic &mdash; curtains, rugs, and furniture are cheaper than a $300 microphone and often more effective.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Chasing gear instead of improving content.</strong> Equipment upgrades hit diminishing returns quickly. After the $100 tier (ring light + lav mic + tripod), further equipment spending has minimal impact on content performance. The difference between a $500 setup and a $2,000 setup is barely visible on TikTok. Invest in content skills &mdash; scripting, hooks, pacing, editing &mdash; not more gear.</p>
+      </div>
+    </section>
+
+    <!-- 10 Resources -->
+    <section class="guide-section" id="resources">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Resources</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Creator resources and next steps</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">OKAD's creator network offers paid UGC opportunities for creators at all equipment levels</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Start creating with the $0 tier and upgrade based on actual need, not aspiration</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you are ready to start creating UGC content, OKAD's creator network connects creators with brands looking for content across niches including beauty, fitness, food, tech, fashion, and lifestyle. We work with creators at all equipment levels &mdash; a phone and good lighting is all you need to get started. We provide detailed briefs, fair pay, and ongoing work for creators who deliver quality content consistently.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">To join our creator network or learn more about UGC opportunities, email <a href={emailHref} class="text-accent hover:underline">olga@okad.agency</a> with your portfolio or sample content. For step-by-step guidance on building your UGC career, see our <a href="/how-to-start-canvas-ugc/" class="text-accent hover:underline">how to start Canvas UGC</a> and <a href="/ugc-beginner/" class="text-accent hover:underline">UGC beginner</a> guides.</p>
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What equipment do I need to start UGC?", a: "Strictly speaking, just your smartphone. That is it. Any phone from the last 3-4 years shoots video good enough for UGC. For your first meaningful investment (~$100), get a ring light ($30), a wired lavalier microphone ($20), and a phone tripod ($15). This combination produces professional-quality UGC content." },
+          { q: "Do I need a camera for UGC?", a: "No. The vast majority of professional UGC creators shoot on their phones. Smartphones from 2021 and later produce video quality that exceeds what social platforms require (platforms compress video during upload anyway). A dedicated camera only makes sense for YouTube long-form content or premium branded work where clients specifically request higher production value." },
+          { q: "What is the single best equipment purchase for a new UGC creator?", a: "A wired lavalier microphone ($15-$20). Audio quality is the single biggest differentiator between amateur and professional-looking UGC. Bad audio causes viewers to swipe away immediately, regardless of how good the visuals are. A $20 lav mic plugged into your phone produces dramatically better audio than the built-in phone microphone." },
+          { q: "Is a ring light or LED panel better?", a: "A ring light ($30-$50) is better for most beginners because it provides even, flattering light with minimal setup. An LED panel ($80-$150) provides more professional and natural-looking light with better shadow definition, but requires more careful positioning. Start with a ring light, upgrade to an LED panel when you want more control over your lighting." },
+          { q: "What editing app should I use for UGC?", a: "CapCut is the industry standard for UGC editing. It is free, has auto-captions, templates, effects, and direct TikTok integration. The learning curve is minimal. For creators wanting more control, VN Video Editor (free) offers a desktop-like timeline on mobile. For desktop editing, DaVinci Resolve is free and professional-grade." },
+          { q: "How important is the background in UGC?", a: "Important but not complicated. A clean, uncluttered background signals professionalism. You do not need a studio — a plain wall, bookshelf, or tidy corner of a room works perfectly. Avoid messy bedrooms, cluttered desks, or distracting backgrounds. A simple backdrop stand with fabric ($30-$50) provides a consistent background for all your content." },
+          { q: "Should I invest in a teleprompter?", a: "Not initially. Most UGC content works better with natural, conversational delivery rather than reading from a script. If you find yourself struggling with talking points, a free teleprompter app on a tablet ($0) works well enough. Physical teleprompters ($100-$300) are for creators who produce daily scripted content and need speed." },
+          { q: "What microphone works best for cooking or fitness UGC?", a: "A wireless lavalier microphone. Wired mics restrict movement, and phone mics pick up too much ambient noise when you are moving around. The DJI Mic Mini ($100), Hollyland Lark M2 ($100), or Rode Wireless GO II ($250) give you clear audio while moving freely. Clip the transmitter to your collar and move naturally." },
+          { q: "Can I do UGC with an older phone?", a: "Yes, if it is from 2020 or later and shoots at least 1080p video. Older phones may have weaker low-light performance, so good lighting becomes even more important. The $100 setup (ring light + lav mic + tripod) compensates for older phone cameras effectively. If your phone is from before 2019, the camera quality may be a limitation." },
+          { q: "How much should I spend on equipment as a new UGC creator?", a: "Start at $0 and create your first 10-20 pieces of content. Then invest $100 in the essentials (ring light, lav mic, tripod). Only spend more after you are earning from UGC and have identified specific limitations in your current setup. The $100 tier is sufficient for 90% of UGC work." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to start creating UGC?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Join OKAD's creator network and get matched with brands looking for UGC content. We work with creators at every equipment level.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Join our network &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="/how-to-start-canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">How to Start Canvas UGC</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Step-by-step guide to launching your UGC career</p>
+          </a>
+          <a href="/ugc-beginner/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Beginner Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Everything new creators need to know</p>
+          </a>
+          <a href="/ugc-creator-tools/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Creator Tools</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Complete toolkit for content creation and management</p>
+          </a>
+          <a href="/ugc-rates/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Rates Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">How much UGC creators charge in 2026</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on equipment surveys of active UGC creators in OKAD's network, hands-on testing of recommended products, creator feedback on equipment impact on content quality and client acceptance, and published reviews from trusted tech reviewers. Prices are approximate and may vary by retailer and region. Product recommendations reflect the best available options as of September 2026 and may change as new products are released.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "UGC Creator Equipment Guide: What You Actually Need",
+    "description": "A practical guide to UGC creator equipment covering phone vs camera, lighting, audio, editing tools, and budget tiers from $0 to $1,000+.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/ugc-creator-equipment/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "UGC Creator Equipment" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What equipment do I need to start UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Just your smartphone. For your first investment (~$100), get a ring light ($30), a wired lavalier microphone ($20), and a phone tripod ($15). This produces professional-quality UGC content." } },
+      { "@type": "Question", "name": "Do I need a camera for UGC?", "acceptedAnswer": { "@type": "Answer", "text": "No. The vast majority of professional UGC creators shoot on phones. Smartphones from 2021+ produce video quality that exceeds what social platforms require." } },
+      { "@type": "Question", "name": "What is the single best equipment purchase for a new UGC creator?", "acceptedAnswer": { "@type": "Answer", "text": "A wired lavalier microphone ($15-$20). Audio quality is the single biggest differentiator between amateur and professional UGC." } },
+      { "@type": "Question", "name": "Is a ring light or LED panel better?", "acceptedAnswer": { "@type": "Answer", "text": "A ring light is better for beginners — even, flattering light with minimal setup. LED panels provide more professional lighting but require more careful positioning." } },
+      { "@type": "Question", "name": "What editing app should I use for UGC?", "acceptedAnswer": { "@type": "Answer", "text": "CapCut is the industry standard. Free, auto-captions, templates, direct TikTok integration. For desktop, DaVinci Resolve is free and professional-grade." } },
+      { "@type": "Question", "name": "How important is the background in UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Important but not complicated. A clean, uncluttered background signals professionalism. A plain wall or tidy corner works perfectly." } },
+      { "@type": "Question", "name": "Should I invest in a teleprompter?", "acceptedAnswer": { "@type": "Answer", "text": "Not initially. Most UGC works better with natural delivery. A free teleprompter app on a tablet works well enough if needed." } },
+      { "@type": "Question", "name": "What microphone works best for cooking or fitness UGC?", "acceptedAnswer": { "@type": "Answer", "text": "A wireless lavalier microphone. DJI Mic Mini ($100), Hollyland Lark M2 ($100), or Rode Wireless GO II ($250) give clear audio while moving freely." } },
+      { "@type": "Question", "name": "Can I do UGC with an older phone?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, if from 2020+ and shoots at least 1080p. Good lighting compensates for older cameras. The $100 setup works with any recent phone." } },
+      { "@type": "Question", "name": "How much should I spend on equipment as a new UGC creator?", "acceptedAnswer": { "@type": "Answer", "text": "Start at $0. Create your first 10-20 pieces. Then invest $100 in essentials (ring light, lav mic, tripod). Only spend more after earning from UGC." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>

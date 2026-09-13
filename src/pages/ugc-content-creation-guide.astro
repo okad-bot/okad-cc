@@ -1,0 +1,655 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailHref = "mailto:olga@okad.agency?subject=UGC%20content%20creation%20inquiry";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="UGC Content Creation: From Brief to Delivery — The Complete Workflow | OKAD"
+  description="Learn the complete UGC content creation workflow from receiving a brief to delivering final assets. Covers scripting, filming, editing, and communication with brands."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Creator guide &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          UGC Content Creation: <span class="text-accent">From Brief to Delivery</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          The complete workflow every UGC creator needs &mdash; from the moment you receive a brand brief to the final file delivery. Covers research, scripting, filming, editing, and professional communication at every stage.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailHref} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Start creating with OKAD &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Points Grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4CB;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Brief to Script</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Learn how to decode any brand brief and turn it into a shootable script in under 30 minutes.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Film Like a Pro</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Framing, lighting, audio, and b-roll techniques that elevate phone-shot content to professional quality.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4E6;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Deliver &amp; Get Rehired</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">File naming, revision handling, and communication habits that turn one-off gigs into repeat clients.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Overview", href: "#overview" },
+            { num: "02", text: "Understanding the Brief", href: "#understanding-brief" },
+            { num: "03", text: "Research Phase", href: "#research" },
+            { num: "04", text: "Scripting", href: "#scripting" },
+            { num: "05", text: "Pre-Production Setup", href: "#pre-production" },
+            { num: "06", text: "Filming Techniques", href: "#filming" },
+            { num: "07", text: "Editing Workflow", href: "#editing" },
+            { num: "08", text: "Delivery & Communication", href: "#delivery" },
+            { num: "09", text: "Common Mistakes", href: "#mistakes" },
+            { num: "10", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What UGC content creation actually involves</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">UGC content creation is a structured production process, not casual social media posting</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The workflow has seven stages: brief, research, script, setup, film, edit, deliver</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creators who follow a repeatable process deliver faster and get rehired more often</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">UGC content creation is the process of producing authentic, creator-driven video content for brands. Unlike influencer marketing, where the creator posts on their own account, <a href="/ugc-creator/" class="text-accent hover:underline">UGC creators</a> deliver raw or edited video files that brands use in their own ads, social posts, and product pages. The creator is a content producer, not a media channel.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The workflow spans seven distinct stages: receiving and interpreting the brief, researching the brand and audience, writing the script, setting up equipment and environment, filming the content, editing the footage, and delivering the final assets. Each stage has specific techniques and standards that separate amateur content from professional-grade deliverables.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">What makes this process different from creating personal content is the accountability. A brand is paying for specific deliverables to a specific standard by a specific deadline. There is no room for &ldquo;I&rsquo;ll figure it out when I start filming.&rdquo; The most successful creators in OKAD&rsquo;s 700+ network treat every project like a mini production &mdash; planned, executed, and delivered with a repeatable system that guarantees consistent quality.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This guide walks through every stage of that system. Whether you are filming your first UGC video or refining a workflow you have used for months, the frameworks here are drawn from what OKAD&rsquo;s top-performing creators do in practice &mdash; not theory. The goal is to give you a complete production process you can follow from the moment a <a href="/ugc-brief-templates/" class="text-accent hover:underline">brief</a> lands in your inbox to the moment you hit send on the final delivery.</p>
+      </div>
+    </section>
+
+    <!-- 02 Understanding the Brief -->
+    <section class="guide-section" id="understanding-brief">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Understanding the Brief</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to read and interpret brand briefs</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Six key elements: product, audience, tone, format, deliverables, timeline</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Ask clarifying questions before you start &mdash; never assume what a vague brief means</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Create a personal checklist to verify you have everything before filming</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Every UGC project starts with a brief. Some briefs are detailed documents with reference videos and exact scripts. Others are a single paragraph in a DM. Regardless of format, your job is to extract six essential elements before you do anything else: the <strong>product</strong> (what you are featuring and its key selling points), the <strong>audience</strong> (who the video is trying to reach), the <strong>tone</strong> (casual, energetic, educational, aspirational), the <strong>format</strong> (testimonial, unboxing, tutorial, lifestyle), the <strong>deliverables</strong> (number of videos, aspect ratio, duration, hook variations), and the <strong>timeline</strong> (when raw footage and final edits are due).</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">If any of these six elements are missing from the brief, ask. This is the single most important habit that separates professional creators from beginners. Beginners receive a vague brief and start filming immediately, hoping they will figure it out. Professionals send a short list of clarifying questions within 24 hours. Questions like: &ldquo;Should the video focus on taste or convenience?&rdquo; or &ldquo;Do you want captions baked in, or will your team add them?&rdquo; These take two minutes to write and prevent days of wasted work.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Pay special attention to the <strong>dos and don&rsquo;ts</strong> section. This is where brands list competitor names you cannot mention, health or financial claims you cannot make, specific phrases they require, and visual restrictions. Missing a compliance requirement does not just trigger a reshoot &mdash; it can create legal liability. If the brief does not include a dos and don&rsquo;ts section, ask for one. Every brand has restrictions, even if they have not written them down yet.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Build a personal brief checklist &mdash; a simple document listing every piece of information you need before filming. Run every new brief through this checklist. If boxes are empty, message the brand. OKAD uses a standardized <a href="/ugc-brief-templates/" class="text-accent hover:underline">brief template</a> across all projects for exactly this reason: it forces completeness and eliminates the guessing game.</p>
+      </div>
+    </section>
+
+    <!-- 03 Research Phase -->
+    <section class="guide-section" id="research">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Research Phase</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Studying the brand before you create</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Spend 20&ndash;30 minutes researching the brand, competitors, and audience before scripting</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Study existing UGC from the brand&rsquo;s ads library &mdash; it reveals what they have already tested</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Review product reviews and Reddit threads for authentic language and real pain points</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The research phase is the most skipped step in UGC production, and it is the reason most first drafts miss the mark. Spending 20&ndash;30 minutes understanding the brand, its competitors, and its audience before you write a single word of script dramatically increases the odds that your content resonates on the first take.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Start with the brand itself. Visit their website, browse their social profiles, and read their product descriptions. Note the language they use &mdash; is it clinical and precise, or casual and playful? Check their existing ads in the Meta Ad Library and TikTok Creative Center. These platforms show you exactly what the brand has already tested, which means you can avoid duplicating existing creative and identify angles they have not explored yet.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Next, study the competition. Search for 3&ndash;5 competitors in the same category and look at their UGC ads. What hooks are they using? What claims are they making? This gives you context for differentiation. If every competitor leads with a price comparison hook, your brand might benefit from an emotional hook instead. If the category is saturated with testimonials, a tutorial format might stand out.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Finally, research the target audience. Read Amazon reviews, Reddit threads, and TikTok comments about the product or category. Pay attention to the exact words real customers use to describe their problems and results. These phrases are gold for scripting because they sound authentic &mdash; they <em>are</em> authentic. A creator who says &ldquo;I was tired of my foundation oxidizing by noon&rdquo; sounds more real than one who says &ldquo;This product provides long-lasting coverage&rdquo; because the first phrase is how actual people talk.</p>
+      </div>
+    </section>
+
+    <!-- 04 Scripting -->
+    <section class="guide-section" id="scripting">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Scripting</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Hook formulas, body structure, and CTA approaches</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every UGC script follows three parts: hook (0&ndash;3s), body (3&ndash;45s), CTA (last 5&ndash;10s)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Write 3&ndash;5 hook variations per video &mdash; the hook determines <a href="/hook-rate/" class="text-accent hover:underline">hook rate</a> and ad performance</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Script bullet points, not word-for-word dialogue &mdash; authenticity dies when you read a teleprompter</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Scripting is where your research becomes a production plan. A UGC script is not a Hollywood screenplay &mdash; it is a structured outline that ensures your video hits every key message while leaving room for natural delivery. The best scripts are written as bullet points with key phrases, not word-for-word monologues. This preserves the authenticity that makes UGC outperform studio-produced ads.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The <strong>hook</strong> is the first 1&ndash;3 seconds and determines whether anyone sees the rest of your video. The <a href="/hook-rate/" class="text-accent hover:underline">hook rate</a> &mdash; the percentage of viewers who watch past the opening &mdash; is the single most important metric in paid UGC. Three hook formulas consistently perform: the <strong>question hook</strong> (&ldquo;Why does nobody talk about this?&rdquo;), the <strong>bold claim hook</strong> (&ldquo;This $15 serum replaced my entire skincare routine&rdquo;), and the <strong>problem-agitation hook</strong> (&ldquo;I used to spend an hour on my hair every morning&rdquo;). Write 3&ndash;5 variations using different formulas for each video concept.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The <strong>body</strong> covers the core message in 20&ndash;40 seconds. Structure it around one of three frameworks: problem-solution (describe the frustration, introduce the product as the fix), before-after (show the old way vs. the new way with the product), or feature-benefit (highlight 2&ndash;3 specific features and why each matters to the viewer). Do not try to cover every product feature &mdash; pick the 1&ndash;3 most relevant to the target audience and go deep on those.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The <strong>CTA</strong> should be direct and specific. &ldquo;Link in bio&rdquo; is the default for organic posts. &ldquo;Check it out at [brand].com&rdquo; works for ads. &ldquo;I&rsquo;ll leave the link below&rdquo; is natural for talking-head formats. Avoid stacking multiple CTAs &mdash; one clear instruction converts better than three competing ones. Match the CTA energy to the rest of the video: if the tone is casual and conversational, a hard-sell CTA will feel jarring.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before filming, read your script bullet points out loud. If any phrase sounds like ad copy rather than something you would say to a friend, rewrite it. The entire value of UGC is that it feels like a real person sharing a real opinion. That feeling starts in the script, not on camera.</p>
+      </div>
+    </section>
+
+    <!-- 05 Pre-Production Setup -->
+    <section class="guide-section" id="pre-production">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Pre-Production Setup</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Equipment checklist, lighting, and environment</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">A smartphone, a tripod, and natural window light are enough to start</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Clean your background &mdash; clutter kills the professional feel of UGC content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Audio quality matters more than video quality &mdash; invest in a lavalier mic before a ring light</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Pre-production is the 15&ndash;20 minutes of setup that prevents hours of reshooting. The goal is not a studio-quality set &mdash; it is a clean, well-lit, distraction-free environment where the product and your delivery are the focus. Most UGC is shot on a smartphone, and that is exactly what brands want. The <a href="/ugc-creator-tools/" class="text-accent hover:underline">tools</a> are deliberately simple.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Equipment checklist</h3>
+        <div class="bg-card border border-border rounded-xl p-5 mb-6">
+          <ul class="pl-5 mb-0 space-y-2 text-ink-2 text-[14px]">
+            <li><strong>Smartphone</strong> &mdash; iPhone 12+ or equivalent Android. Shoot in 4K at 30fps if your phone supports it. 1080p is acceptable for most deliverables.</li>
+            <li><strong>Tripod or phone mount</strong> &mdash; $15&ndash;30 is sufficient. Shaky handheld footage is fine for some formats (GRWM, vlog) but a tripod gives you consistent framing for talking head and product shots.</li>
+            <li><strong>Lavalier microphone</strong> &mdash; $20&ndash;50 wired or wireless clip-on mic. Audio quality is the number one technical factor viewers notice. Bad audio makes professional video look amateur.</li>
+            <li><strong>Lighting</strong> &mdash; Natural window light is the best free option. Face the window, never have it behind you. For evening or overcast days, a $30&ndash;60 LED panel provides consistent, flattering light.</li>
+            <li><strong>Product</strong> &mdash; Unbox and inspect the product before filming. Know how to open it, use it, and display it. Fumbling with packaging on camera wastes takes.</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Environment setup</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Background.</strong> Remove clutter, personal items, and anything that distracts from the product. A clean kitchen counter, a tidy bathroom shelf, or a neutral wall with one decorative item works for 90% of UGC formats. Match the setting to the product category: skincare belongs in a bathroom, food products belong in a kitchen, tech belongs at a desk.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Wardrobe.</strong> Unless the brief specifies otherwise, wear what you would normally wear. Authenticity is the goal. Avoid logos from other brands, busy patterns that create visual noise, and pure white or black (both cause exposure problems on camera). Solid, muted colors in the mid-range work best.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Test shot.</strong> Before you start your actual takes, record a 10-second test clip. Check framing, lighting, audio levels, and background. Play it back with sound. Fix any issues now &mdash; not after you have filmed eight takes of the full script.</p>
+      </div>
+    </section>
+
+    <!-- 06 Filming Techniques -->
+    <section class="guide-section" id="filming">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Filming Techniques</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Framing, angles, multiple takes, and b-roll</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Film in 9:16 vertical for TikTok, Reels, and Shorts &mdash; confirm with the brief for any other ratios</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Record 3&ndash;5 complete takes minimum &mdash; your best take is rarely your first</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Capture b-roll of the product from multiple angles for editing flexibility</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Framing.</strong> For talking-head content, position yourself in the center or slightly off-center of the frame with your eyes roughly at the top third of the screen. Leave a small gap above your head &mdash; too much headroom looks awkward, too little feels claustrophobic. Keep the camera at eye level or slightly above. Below eye level (looking up at you) creates an unflattering angle that brands rarely want.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Camera angles.</strong> Vary your angles within a single video to maintain visual interest. A standard UGC video might combine a medium talking-head shot (chest up), a close-up product shot (filling 70% of the frame), and an over-the-shoulder angle showing the product in use. Changing angles every 5&ndash;8 seconds prevents the viewer&rsquo;s eye from getting bored &mdash; this is especially important for videos longer than 30 seconds.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Multiple takes.</strong> Record at least 3&ndash;5 complete takes of the full script. Your first take is a warm-up &mdash; your delivery will be tighter, more natural, and more confident by the third. Some creators film 8&ndash;10 takes and select the best segments from each in editing. This approach takes more filming time but produces a noticeably better final product because you can cherry-pick the best delivery of each section.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>B-roll.</strong> After finishing your talking-head takes, spend 5&ndash;10 minutes capturing b-roll of the product. Film the product from multiple angles: overhead flat lay, side profile, detail shots of textures or labels, the product in use (applying, pouring, clicking, opening). B-roll gives you editing flexibility &mdash; you can cover jump cuts, illustrate claims, and add visual variety without reshooting the entire video.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Audio.</strong> Record in a quiet environment. Turn off fans, close windows, and silence your phone notifications. If you are using a lavalier mic, do a clap sync at the start of each take so you can align the audio in post. Speak at a consistent volume &mdash; avoid the common mistake of starting quietly and getting louder as you warm up. If you stumble on a line, pause for two seconds and restart that sentence from the beginning rather than stopping the entire take.</p>
+      </div>
+    </section>
+
+    <!-- Mid CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Want to create UGC with expert support?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD&rsquo;s creator network provides briefs, feedback, and production support for every project. Join 700+ creators who deliver professional UGC content every day.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Join the network &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Editing Workflow -->
+    <section class="guide-section" id="editing">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Editing Workflow</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Software, pacing, music, captions, and exports</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CapCut for speed, Premiere Pro for control, DaVinci Resolve for free professional power</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Cut ruthlessly &mdash; every second that does not serve the message should be removed</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Captions are mandatory &mdash; 85% of social video is watched without sound</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Editing transforms raw footage into a deliverable. The goal is not cinematic production &mdash; it is a tight, watchable video that holds attention and delivers the brand&rsquo;s message. For most UGC, editing means: selecting the best take, cutting dead air, adding captions, inserting b-roll over transitions, and exporting in the correct format. That is it. Over-editing is as much of a problem as under-editing.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Software options</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full border-collapse text-[14px]">
+            <thead class="bg-bg">
+              <tr>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Software</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Price</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Best for</th>
+                <th class="font-display font-semibold text-[13px] px-4 py-3 text-left border-b border-border">Learning curve</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">CapCut</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $8/mo Pro</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Fast mobile edits, auto-captions, trending templates</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Low &mdash; usable within hours</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">Adobe Premiere Pro</td><td class="px-4 py-2.5 border-b border-border text-ink-2">$23/mo</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Multi-track editing, precise control, pro export settings</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Medium &mdash; 1&ndash;2 weeks to be productive</td></tr>
+              <tr><td class="px-4 py-2.5 border-b border-border text-ink font-medium">DaVinci Resolve</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Free / $295 Studio</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Color grading, professional audio, batch processing</td><td class="px-4 py-2.5 border-b border-border text-ink-2">Medium-high &mdash; powerful but complex interface</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink font-medium">InShot</td><td class="px-4 py-2.5 text-ink-2">Free / $4/mo Pro</td><td class="px-4 py-2.5 text-ink-2">Quick social edits, ratio conversion, stickers</td><td class="px-4 py-2.5 text-ink-2">Low &mdash; intuitive mobile interface</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Editing principles for UGC</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Pacing.</strong> Cut every pause longer than half a second. Remove filler words (&ldquo;um,&rdquo; &ldquo;like,&rdquo; &ldquo;so basically&rdquo;). The resulting jump cuts are not just acceptable in UGC &mdash; they are expected. Fast pacing signals energy and confidence. A 60-second raw take typically becomes a 30&ndash;40 second edited video once you remove dead air.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Captions.</strong> Add captions to every video. An estimated 85% of social media video is watched without sound. CapCut&rsquo;s auto-caption feature handles this in minutes. Style your captions to be readable: bold font, high contrast against the video, placed in the center-lower third of the frame. Avoid the top and bottom edges where platform UI elements overlap.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Music.</strong> Use royalty-free background music or trending sounds as specified in the brief. Music should be at 10&ndash;15% volume relative to your voice &mdash; barely noticeable but filling the silence between sentences. Never use copyrighted music unless the brand explicitly provides it or clears the rights.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Export settings.</strong> Deliver in the format the brief specifies. Standard defaults: 9:16 aspect ratio, 1080x1920 resolution minimum, H.264 codec, 30fps. Export at the highest quality your editor supports. If the brand needs multiple ratios (9:16 + 1:1 + 16:9), create separate exports for each &mdash; do not just crop the same video, as framing needs to be adjusted per ratio.</p>
+      </div>
+    </section>
+
+    <!-- 08 Delivery & Communication -->
+    <section class="guide-section" id="delivery">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Delivery &amp; Communication</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">File naming, delivery format, and revision etiquette</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Professional file naming saves brands 30+ minutes of organizing per delivery batch</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Deliver via Google Drive or WeTransfer &mdash; never through DMs or compressed messaging apps</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Handle revisions professionally &mdash; your response to feedback determines whether you get rehired</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>File naming.</strong> Use a consistent naming convention that identifies the content at a glance: <code>[Brand]_[Format]_[HookVariant]_[CreatorName]_[Date]</code>. For example: <code>Acme_Testimonial_Hook1_JaneDoe_Sep2026.mp4</code>. This may seem like a small detail, but brands managing 50+ creator deliveries per month notice immediately when files arrive named <code>final_video_2.mp4</code> versus properly labeled. Clean file naming signals professionalism and makes the brand&rsquo;s production manager&rsquo;s job easier &mdash; which means they think of you first for the next project.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Delivery format.</strong> Upload to Google Drive or WeTransfer and share the link via email. Never deliver final content through Instagram DMs, WhatsApp, or iMessage &mdash; these platforms compress video quality. Google Drive preserves the original file quality and gives both parties a permanent, organized record of the delivery. Create a folder structure: <code>Brand Name / Delivery Date / Videos</code>. Include a brief text summary listing each deliverable and its specs.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Revision etiquette.</strong> Revisions are normal, not a personal critique. When you receive feedback, acknowledge it within 24 hours, confirm you understand the requested changes, and provide a revised delivery timeline. Do not defend your creative choices or explain why you did it that way &mdash; just make the changes. The standard is 1&ndash;2 revision rounds included in the project fee. If a brand requests changes beyond the agreed scope, politely reference the contract and propose a fair additional fee for the extra work.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Professional communication.</strong> Respond to brand messages within 24 hours on business days. Send proactive updates when filming or editing takes longer than expected &mdash; do not go silent. After delivering the final files, send a brief follow-up: &ldquo;All files delivered. Let me know if you need any adjustments. I enjoyed working on this project and would be happy to collaborate again.&rdquo; This single message plants the seed for repeat business, which is where the real money in UGC lives.</p>
+      </div>
+    </section>
+
+    <!-- 09 Common Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Common Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Top 10 mistakes new UGC creators make</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every mistake on this list is fixable &mdash; most cost nothing but awareness</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The top three mistakes account for 70% of revision requests across OKAD&rsquo;s network</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Avoiding these puts you ahead of 80% of creators applying for the same gigs</li>
+          </ul>
+        </div>
+
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Filming before reading the brief carefully.</strong> Skimming the brief and starting immediately is the fastest path to reshoots. Read it twice, extract the six key elements, ask questions, then film.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Bad audio.</strong> Viewers tolerate imperfect video but abandon videos with muffled, echoey, or quiet audio within seconds. A $20 lavalier mic solves this permanently.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Only filming one take.</strong> Your first take is always your worst. Film at least 3&ndash;5 complete takes and select the best segments. The difference in delivery quality between take one and take four is dramatic.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Over-editing.</strong> Adding transitions, filters, stickers, and effects dilutes the authentic feel that makes UGC work. Brands are paying for content that looks real. Keep editing minimal: cuts, captions, and subtle background music.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Ignoring the safe zones.</strong> Text and key visual elements need to avoid the top and bottom 15% of the frame where platform UI (profile icon, captions bar, like buttons) will overlay. Missing this means your captions or product name gets hidden.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>No b-roll.</strong> Talking-head-only videos feel flat after 15 seconds. B-roll of the product, your hands using it, or close-up texture shots break up the monotony and illustrate your claims visually.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Sounding scripted.</strong> Reading word-for-word from a script kills authenticity. Use bullet points with key phrases and deliver them conversationally. If it sounds like you are reading, you are reading.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Delivering compressed files.</strong> Sending videos through WhatsApp or Instagram DMs compresses the quality. Always deliver through Google Drive or WeTransfer to preserve the full resolution.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Not naming files properly.</strong> <code>video_final_v3_REAL_FINAL.mp4</code> is not a file name. Use the brand-format-hook-name-date convention. Brands notice this detail more than you think.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Taking revision feedback personally.</strong> Revisions are part of the process, not a judgment on your talent. Creators who handle feedback gracefully and deliver revisions quickly are the ones brands rehire.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 10 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          {
+            q: "How long does it take to create one UGC video from brief to delivery?",
+            a: "For an experienced creator, the full process takes 2 to 4 hours per video: 20 minutes reading the brief and researching, 20 minutes scripting, 15 minutes setting up, 30 to 60 minutes filming multiple takes, 30 to 60 minutes editing, and 10 minutes organizing and delivering files. New creators should expect this to take closer to 6 to 8 hours until they develop a repeatable workflow."
+          },
+          {
+            q: "What equipment do I need to start creating UGC content?",
+            a: "A smartphone (iPhone 12 or newer, or equivalent Android), a basic tripod or phone mount ($15 to $30), and a clip-on lavalier microphone ($20 to $50). Natural window light is free and sufficient for most shooting situations. You do not need a ring light, a DSLR camera, or a professional studio. Brands want content that looks authentic, not cinematic. Upgrade your equipment only when specific client requests demand it."
+          },
+          {
+            q: "Should I edit the video or deliver raw footage?",
+            a: "Check the brief — it should specify. Some brands want fully edited videos with captions and music. Others want raw footage so their in-house team can edit. If the brief does not specify, ask. Delivering edited content when a brand wanted raw footage wastes your editing time. Delivering raw footage when they expected a polished final creates the impression that you did not finish the job."
+          },
+          {
+            q: "How many hook variations should I film per video?",
+            a: "Three to five hook variations per video concept is the industry standard. Each hook should use a different approach: a question, a bold claim, a problem statement. Hooks are the highest-leverage element for ad performance, so brands test multiple hooks against the same body and CTA. Filming 5 hooks adds only 10 to 15 minutes to your shooting session but significantly increases the value of your delivery."
+          },
+          {
+            q: "What is the best editing software for UGC creators?",
+            a: "CapCut for the majority of short-form UGC work. It handles cuts, captions, music, and basic effects on mobile or desktop, and most creators can produce a finished video in under 30 minutes. DaVinci Resolve is the best free alternative for desktop editing when you need more control over color, audio, or multi-track editing. Adobe Premiere Pro is worth the subscription if you are producing high-volume content and need batch processing and advanced export controls."
+          },
+          {
+            q: "How do I handle a brand that keeps requesting revisions beyond the agreed scope?",
+            a: "Refer to your contract. If the contract specifies two revision rounds and the brand is requesting a fourth, politely remind them of the agreed terms and propose a per-revision fee for additional rounds. If you do not have a contract, this situation is exactly why you need one for every future project. OKAD recommends including explicit revision limits, a definition of what constitutes a revision versus a new deliverable, and pricing for additional rounds."
+          },
+          {
+            q: "Can I use the same video in my portfolio if the brand used it for ads?",
+            a: "This depends on the contract. Most standard UGC agreements allow creators to use the content in their portfolio for self-promotional purposes, even when the brand has exclusive ad usage rights. However, some enterprise contracts restrict this. Always clarify portfolio usage rights before signing. If the contract is silent on the topic, ask explicitly. Having strong portfolio pieces is essential for landing future work, so this clause matters."
+          },
+          {
+            q: "How do I get started with UGC content creation if I have no portfolio?",
+            a: "Create 3 to 5 sample videos using products you already own. Choose popular consumer products in your target niche — skincare, tech accessories, food, fitness gear. Film them as if a brand hired you: follow a brief structure, script your hooks, use proper lighting and audio, edit with captions. Upload these to your portfolio and use them when pitching brands. The quality of your sample work matters far more than having real brand deals. See our full guide on becoming a UGC creator for the complete roadmap."
+          },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <button class="faq-q flex items-center justify-between w-full text-left py-5 cursor-pointer bg-transparent border-none">
+              <span class="font-display font-semibold text-[16px] text-ink pr-4">{item.q}</span>
+              <span class="faq-icon text-accent text-[20px] font-mono shrink-0">+</span>
+            </button>
+            <div class="faq-a max-h-0 overflow-hidden transition-[max-height] duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom CTA -->
+  <section class="py-10">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+        <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to create UGC content professionally?</h2>
+        <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">OKAD manages the entire UGC production pipeline for brands &mdash; from briefing to creator matching to final delivery. Whether you are a creator looking to join our network or a brand that needs consistent content, we can help.</p>
+        <div class="flex gap-3 justify-center flex-wrap">
+          <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get in touch &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Form -->
+  <section class="py-16 border-t border-border" id="get-started">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="bg-card border border-border rounded-2xl p-8 sm:p-10">
+        <div class="text-center mb-8">
+          <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-4">Free consultation</div>
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,30px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Get a Custom UGC Plan for Your Brand</h2>
+          <p class="text-[15px] text-ink-2 max-w-[500px] mx-auto leading-[1.5]">Tell us about your brand and we'll send you a custom UGC strategy &mdash; content formats, creator count, estimated costs, and timeline.</p>
+        </div>
+        <form id="canvas-form" class="space-y-4 max-w-[480px] mx-auto">
+          <div>
+            <label for="cf-company" class="block text-[13px] font-medium text-ink mb-1.5">Company / Brand *</label>
+            <input type="text" id="cf-company" name="company" required placeholder="Acme Inc." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+          </div>
+          <div>
+            <label for="cf-email" class="block text-[13px] font-medium text-ink mb-1.5">Work email *</label>
+            <input type="email" id="cf-email" name="email" required placeholder="you@company.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+          </div>
+          <div>
+            <label for="cf-website" class="block text-[13px] font-medium text-ink mb-1.5">Website</label>
+            <input type="url" id="cf-website" name="website" placeholder="https://yoursite.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+          </div>
+          <div>
+            <label for="cf-budget" class="block text-[13px] font-medium text-ink mb-1.5">Monthly content budget</label>
+            <select id="cf-budget" name="budget" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] focus:outline-none focus:border-accent transition-colors appearance-none">
+              <option value="">Select range</option>
+              <option value="under-2k">Under $2,000</option>
+              <option value="2k-5k">$2,000 – $5,000</option>
+              <option value="5k-10k">$5,000 – $10,000</option>
+              <option value="10k+">$10,000+</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </div>
+          <div>
+            <label for="cf-message" class="block text-[13px] font-medium text-ink mb-1.5">What are you looking to achieve?</label>
+            <textarea id="cf-message" name="message" rows="3" placeholder="E.g. We want to grow our TikTok presence with 20+ videos per month..." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors resize-y"></textarea>
+          </div>
+          <button type="submit" id="cf-submit" class="w-full py-3.5 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all cursor-pointer border-none">Get my UGC plan &rarr;</button>
+          <div id="cf-status" class="text-center text-[13px] hidden"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Guides -->
+  <section class="py-10 border-t border-border">
+    <div class="max-w-[800px] mx-auto px-6">
+      <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="/ugc-creator/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+          <p class="text-[14px] text-ink font-semibold mb-0.5">How to Become a UGC Creator</p>
+          <p class="text-[12px] text-muted leading-[1.4]">The complete roadmap from zero to paid gigs</p>
+        </a>
+        <a href="/ugc-brief-templates/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+          <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Brief Templates</p>
+          <p class="text-[12px] text-muted leading-[1.4]">Structured templates that reduce revision rounds</p>
+        </a>
+        <a href="/ugc-creator-tools/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+          <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Creator Tools</p>
+          <p class="text-[12px] text-muted leading-[1.4]">The complete 2026 toolkit for professional creators</p>
+        </a>
+        <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+          <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC</p>
+          <p class="text-[12px] text-muted leading-[1.4]">Faceless UGC formats and production workflows</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "UGC Content Creation: From Brief to Delivery — The Complete Workflow",
+      "description": "Learn the complete UGC content creation workflow from receiving a brief to delivering final assets. Covers scripting, filming, editing, and communication with brands.",
+      "url": "https://okad.cc/ugc-content-creation-guide/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "OKAD Agency",
+        "url": "https://okad.cc"
+      },
+      "datePublished": "2026-09-13",
+      "dateModified": "2026-09-13"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://okad.cc/blog/"},
+        {"@type": "ListItem", "position": 3, "name": "UGC Content Creation Guide"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does it take to create one UGC video from brief to delivery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For an experienced creator, the full process takes 2 to 4 hours per video: 20 minutes reading the brief and researching, 20 minutes scripting, 15 minutes setting up, 30 to 60 minutes filming multiple takes, 30 to 60 minutes editing, and 10 minutes organizing and delivering files. New creators should expect this to take closer to 6 to 8 hours until they develop a repeatable workflow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What equipment do I need to start creating UGC content?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A smartphone (iPhone 12 or newer, or equivalent Android), a basic tripod or phone mount ($15 to $30), and a clip-on lavalier microphone ($20 to $50). Natural window light is free and sufficient for most shooting situations. You do not need a ring light, a DSLR camera, or a professional studio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I edit the video or deliver raw footage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check the brief — it should specify. Some brands want fully edited videos with captions and music. Others want raw footage so their in-house team can edit. If the brief does not specify, ask."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many hook variations should I film per video?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three to five hook variations per video concept is the industry standard. Each hook should use a different approach: a question, a bold claim, a problem statement. Hooks are the highest-leverage element for ad performance, so brands test multiple hooks against the same body and CTA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best editing software for UGC creators?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CapCut for the majority of short-form UGC work. It handles cuts, captions, music, and basic effects on mobile or desktop, and most creators can produce a finished video in under 30 minutes. DaVinci Resolve is the best free alternative for desktop editing when you need more control."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I handle a brand that keeps requesting revisions beyond the agreed scope?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Refer to your contract. If the contract specifies two revision rounds and the brand is requesting a fourth, politely remind them of the agreed terms and propose a per-revision fee for additional rounds. If you do not have a contract, this situation is exactly why you need one for every future project."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use the same video in my portfolio if the brand used it for ads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This depends on the contract. Most standard UGC agreements allow creators to use the content in their portfolio for self-promotional purposes, even when the brand has exclusive ad usage rights. However, some enterprise contracts restrict this. Always clarify portfolio usage rights before signing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started with UGC content creation if I have no portfolio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Create 3 to 5 sample videos using products you already own. Choose popular consumer products in your target niche — skincare, tech accessories, food, fitness gear. Film them as if a brand hired you: follow a brief structure, script your hooks, use proper lighting and audio, edit with captions. Upload these to your portfolio and use them when pitching brands."
+          }
+        }
+      ]
+    }
+  ]
+})} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.04);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  const form = document.getElementById('canvas-form');
+  const status = document.getElementById('cf-status');
+  const submitBtn = document.getElementById('cf-submit');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      status.className = 'text-center text-[13px] hidden';
+      try {
+        const fd = new FormData(form);
+        const data = Object.fromEntries(fd.entries());
+        data.source = window.location.pathname;
+        const resp = await fetch('https://okad.cc/api/canvas-form/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (resp.ok) {
+          status.textContent = 'Thank you! We\'ll get back to you within 24 hours.';
+          status.className = 'text-center text-[13px] text-green-400 mt-2';
+          form.reset();
+        } else {
+          const err = await resp.json().catch(() => ({}));
+          status.textContent = err.error || 'Something went wrong. Please try again.';
+          status.className = 'text-center text-[13px] text-red-400 mt-2';
+        }
+      } catch {
+        status.textContent = 'Network error. Please try again.';
+        status.className = 'text-center text-[13px] text-red-400 mt-2';
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get my UGC plan →';
+    });
+  }
+</script>
