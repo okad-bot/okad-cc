@@ -1,0 +1,536 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailHref = "mailto:olga@okad.agency?subject=Branded%20Content%20Production%20%E2%80%94%20let%27s%20discuss";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Branded Content Production: Process, Costs & Best Practices | OKAD"
+  description="A complete guide to branded content production covering the end-to-end workflow, team roles, budgeting frameworks, realistic timelines, and quality control systems. Learn how to produce branded content that performs — from concept to delivery."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Production guide &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Branded Content Production: <span class="text-accent">Process, Costs & Best Practices</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Every piece of branded content that drives results started with a solid production process. This guide walks through the entire workflow &mdash; from strategy and briefing to filming, editing, and quality control &mdash; with real budget frameworks and timelines.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailHref} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Start producing content &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>End-to-end workflow</span>
+          <span>Budget tiers</span>
+          <span>Team roles</span>
+          <span>QC systems</span>
+          <span>2026 benchmarks</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Production at a Glance</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4CB;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Brief & Strategy</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Define goals, audience, deliverables, and success metrics before anything gets filmed. The brief is the foundation of every successful production.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Produce & Film</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Creators or in-house teams shoot content following approved scripts and storyboards. Production can be remote, on-location, or studio-based.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x2705;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">QC & Deliver</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Every asset goes through quality control before delivery &mdash; checking hooks, pacing, brand compliance, platform specs, and technical quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "What Is Branded Content Production", href: "#what-is" },
+            { num: "02", text: "The Production Workflow", href: "#workflow" },
+            { num: "03", text: "Team Roles & Responsibilities", href: "#team-roles" },
+            { num: "04", text: "Budgeting Frameworks", href: "#budgeting" },
+            { num: "05", text: "Production Timelines", href: "#timelines" },
+            { num: "06", text: "Quality Control Systems", href: "#quality-control" },
+            { num: "07", text: "Common Production Mistakes", href: "#mistakes" },
+            { num: "08", text: "Scaling Production", href: "#scaling" },
+            { num: "09", text: "Tools & Technology", href: "#tools" },
+            { num: "10", text: "Working with OKAD", href: "#okad" },
+            { num: "11", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 What Is Branded Content Production -->
+    <section class="guide-section" id="what-is">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What branded content production actually involves</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The entire process of turning a brand's marketing objectives into finished content assets</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Covers strategy, scripting, casting, filming, editing, review, and delivery</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Quality depends on the system, not individual talent &mdash; repeatable processes beat one-off brilliance</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content production is the end-to-end process of creating content that a brand funds, where the content is designed to inform, entertain, or inspire rather than deliver a direct sales pitch. It encompasses everything from initial strategy discussions through final asset delivery and performance measurement. The production pipeline includes creative development, talent casting, content creation, post-production, quality assurance, and distribution preparation.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The reason production matters so much is that execution is where most branded content fails. A brilliant concept means nothing if the hook is weak, the lighting is bad, the pacing drags, or the brand integration feels forced. The gap between branded content that performs and branded content that falls flat almost always comes down to production quality and process discipline.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">In 2026, branded content production has evolved significantly. The rise of creator-led content means that much of the filming happens remotely, with creators shooting on their own equipment in their own environments. This has lowered production costs but raised the importance of clear briefs, strong creative direction, and systematic quality control. You can no longer rely on a production crew to catch problems on set &mdash; you need systems that catch problems before they become expensive reshoots.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Production also looks different depending on the format. A TikTok-native video shot by a creator on their phone requires a different workflow than a long-form YouTube documentary or a LinkedIn editorial series. This guide covers all formats, but the principles remain consistent: clear briefs, structured workflows, defined roles, and systematic quality control. For a broader look at branded content strategy and types, see our <a href="/branded-content-guide/" class="text-accent hover:underline">complete branded content guide</a>.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most common misconception about branded content production is that it requires massive budgets and Hollywood-level crews. It does not. Some of the highest-performing branded content in 2026 is shot on smartphones by solo creators working from their apartments. What it does require is a production system &mdash; a repeatable process that ensures every piece of content meets quality standards, stays on-brief, and ships on time.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Production vs. creation</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">It is worth distinguishing between production and creation. Creation is the act of making something &mdash; filming a video, writing an article, recording a podcast. Production is the system around creation &mdash; the brief that guides the creator, the review process that catches errors, the timeline that keeps everything on track, and the quality standards that ensure consistency. You can have excellent creators and still produce bad branded content if your production system is broken.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This distinction matters because brands often focus on finding the best creators while neglecting the production infrastructure that turns raw creator talent into consistent, on-brand, high-performing content. The best agencies and in-house teams invest equally in both: creator talent and production systems.</p>
+      </div>
+    </section>
+
+    <!-- 02 The Production Workflow -->
+    <section class="guide-section" id="workflow">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Workflow</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The six-stage production workflow</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Strategy &rarr; Brief &rarr; Pre-production &rarr; Production &rarr; Post-production &rarr; Delivery</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Each stage has defined inputs, outputs, and approval gates</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Skipping stages creates compounding problems downstream</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Stage 1: Strategy</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Before any creative work begins, you need a clear strategy. This means defining the business objective (awareness, consideration, conversion), the target audience (demographics, psychographics, platform behavior), the content format (short-form video, long-form editorial, podcast), the distribution channels, and the success metrics. A strategy document does not need to be long &mdash; one page is often sufficient &mdash; but it needs to be specific. "Build brand awareness" is not a strategy. "Increase aided brand recall among US women 25-34 who follow fitness content on TikTok by creating a 12-video series featuring three fitness creators" is a strategy.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The strategy phase also includes competitive analysis. What branded content are competitors producing? What is performing well in your category? What gaps exist that your brand can fill? This research prevents you from producing content that is indistinguishable from everything else in the feed.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Stage 2: Brief development</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The brief is the single most important document in the production process. A good brief saves time, reduces revisions, and dramatically improves output quality. A bad brief &mdash; or no brief &mdash; guarantees miscommunication, wasted creator time, and content that misses the mark.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">An effective branded content brief includes: the brand background and product information, the campaign objective, the target audience description, key messages (limited to 1-3), mandatory inclusions and exclusions, tone and style guidance, format and technical specifications (aspect ratio, duration, resolution), examples of content the brand likes and dislikes, the approval process and timeline, and usage rights and licensing terms. The brief should be detailed enough that a creator who has never worked with the brand can produce on-target content on the first attempt.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Stage 3: Pre-production</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Pre-production covers everything between brief approval and the start of filming. This includes creator casting and contracting, script or concept development, storyboarding (for more complex productions), location scouting, prop and product sourcing, equipment preparation, and scheduling. For creator-led content, pre-production is often lighter &mdash; the creator develops their own concept based on the brief, submits it for approval, and then films. For studio or on-location shoots, pre-production is more involved and typically takes 1-3 weeks.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The key pre-production gate is concept approval. Before any filming begins, the brand should review and approve the creative concept, script, or storyboard. This is where misalignments get caught early. Catching a problem at the concept stage costs nothing. Catching it after filming costs a reshoot.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Stage 4: Production</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Production is the actual content creation &mdash; filming, photographing, writing, or recording. For creator-led branded content, this typically happens at the creator's location using their equipment. For larger productions, it involves a crew, dedicated locations, and professional equipment. The production phase should follow the approved concept closely while leaving room for the creator's authentic style and spontaneous moments that make content feel genuine.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Best practices during production include filming multiple takes of key moments, capturing B-roll footage for editing flexibility, recording clean audio separately when possible, shooting in the highest resolution the platform supports, and documenting the setup for potential reshoots. For creator-led content, provide a production checklist that covers lighting, audio, framing, and background requirements.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Stage 5: Post-production</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Post-production includes video editing, color grading, audio mixing, graphics and text overlay, caption and subtitle creation, thumbnail design, and format adaptation for different platforms. For short-form content, post-production is often done by the creator. For longer-form or higher-production content, a dedicated editor handles post-production.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most important post-production decision is the hook. The first 1-3 seconds of any video determine whether the audience watches or scrolls past. Even if the production quality is excellent, a weak hook means no one sees it. Post-production should optimize the hook ruthlessly &mdash; testing different opening frames, text overlays, and audio cues to maximize retention.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Stage 6: Review and delivery</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The final stage includes internal review against the brief, brand compliance checks, legal review (if required), client approval, and delivery of final assets with all supporting materials (captions, hashtags, posting schedules, usage rights documentation). Delivery should include all platform-specific versions &mdash; a 9:16 vertical for TikTok, a 4:5 for Instagram feed, a 16:9 for YouTube &mdash; plus any thumbnail or cover image variants.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Build two rounds of revision into every timeline. The first revision addresses substantive feedback (wrong messaging, missing product shot, off-brand tone). The second revision catches technical issues (audio levels, text legibility, color accuracy). More than two revision rounds usually indicates a brief problem, not a production problem.</p>
+      </div>
+    </section>
+
+    <!-- 03 Team Roles -->
+    <section class="guide-section" id="team-roles">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Team</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Team roles and responsibilities</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Every production needs at minimum: a strategist, a project manager, a creator, and a reviewer</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">One person can fill multiple roles on smaller teams</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Clear role definition prevents gaps and duplicated effort</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content production requires several distinct functions, though the number of people filling those functions varies enormously. A solo creator working with a small brand might handle strategy, production, and editing themselves. A large-scale campaign might involve dozens of specialists. The functions remain the same regardless of team size.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Creative strategist</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The creative strategist defines the content approach based on the brand's business objectives and audience insights. They determine the content format, messaging framework, creator profile, and distribution strategy. On smaller teams, this role is often filled by the brand manager or agency account lead. The strategist's primary output is the creative brief and campaign plan.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Project manager / producer</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The producer keeps the production on track. They manage timelines, coordinate between creators and the brand, handle contracts and payments, track deliverables, and ensure that every piece of content moves through the workflow on schedule. In high-volume production, this role is essential. A good producer can manage 15-30 creator relationships simultaneously. Without a producer, timelines slip, communication breaks down, and content quality suffers.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Content creator</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The creator is the person who actually makes the content &mdash; filming, writing, photographing, or recording. In branded content, creators bring their authentic voice and audience connection. The best branded content happens when the creator has genuine creative freedom within clear strategic guardrails. Over-scripting kills authenticity. Under-briefing kills relevance. The sweet spot is a detailed brief with creative latitude.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Editor / post-production</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The editor transforms raw footage into finished content. For short-form creator content, the creator often edits their own work. For longer or more complex content, a dedicated editor handles cutting, color grading, audio mixing, graphics, and platform-specific formatting. A skilled editor can rescue mediocre footage and elevate good footage into excellent content.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Quality controller / reviewer</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The QC function reviews every asset before delivery. This includes checking brand compliance (correct logos, colors, messaging), technical quality (resolution, audio levels, export settings), platform specifications (aspect ratio, duration limits, file size), and brief adherence (all required elements present, no excluded content). QC should be a separate function from creation &mdash; the person who made the content should not be the final reviewer.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Brand reviewer / client</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The brand side typically has one or two designated reviewers who approve content at key gates: concept approval, rough cut approval, and final approval. Limiting the number of reviewers prevents conflicting feedback and approval delays. The most efficient brands designate a single decision-maker for content approvals and empower them to approve without committee review.</p>
+      </div>
+    </section>
+
+    <!-- 04 Budgeting -->
+    <section class="guide-section" id="budgeting">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Budget</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Budgeting frameworks for branded content</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Budget splits typically: 40-50% production, 30-40% distribution, 10-20% strategy and management</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator-led content: $200-$5,000 per asset. Studio production: $5,000-$50,000+</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Distribution budget should be at least equal to production budget</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">The budget split</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most common budgeting mistake in branded content is spending everything on production and leaving nothing for distribution. Beautiful content that nobody sees is worthless. A practical budget split for most brands is 40-50% on production (creator fees, equipment, editing, post-production), 30-40% on distribution (paid amplification, platform ad spend, boosting), and 10-20% on strategy and project management (planning, briefing, coordination, reporting).</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This means if you have a $10,000 monthly branded content budget, roughly $4,000-$5,000 goes to production, $3,000-$4,000 to paid distribution, and $1,000-$2,000 to strategy and management. Brands that allocate more to distribution typically see better overall ROI because distribution amplifies the value of every production dollar.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Production cost ranges by format</h3>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[14px] border-collapse">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="text-left py-3 pr-4 font-semibold text-ink">Format</th>
+                <th class="text-left py-3 pr-4 font-semibold text-ink">Budget range</th>
+                <th class="text-left py-3 font-semibold text-ink">Typical timeline</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-2">
+              <tr class="border-b border-border"><td class="py-3 pr-4">UGC-style short video (15-60s)</td><td class="py-3 pr-4">$200 &ndash; $1,500</td><td class="py-3">3-7 days</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Creator-led branded video (60-180s)</td><td class="py-3 pr-4">$1,000 &ndash; $5,000</td><td class="py-3">5-14 days</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Editorial article (1,500-3,000 words)</td><td class="py-3 pr-4">$2,000 &ndash; $8,000</td><td class="py-3">7-21 days</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Podcast episode (30-60 min)</td><td class="py-3 pr-4">$3,000 &ndash; $15,000</td><td class="py-3">14-30 days</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Long-form video / mini-doc</td><td class="py-3 pr-4">$10,000 &ndash; $75,000</td><td class="py-3">30-90 days</td></tr>
+              <tr class="border-b border-border"><td class="py-3 pr-4">Photo series (10-20 images)</td><td class="py-3 pr-4">$500 &ndash; $5,000</td><td class="py-3">5-14 days</td></tr>
+              <tr><td class="py-3 pr-4">Interactive / tool-based content</td><td class="py-3 pr-4">$10,000 &ndash; $100,000+</td><td class="py-3">30-120 days</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">These ranges are directional. Actual costs depend on creator tier, production complexity, number of revisions, usage rights, and geographic market. A nano-creator in a low-cost market producing a simple product review will be at the bottom of the range. A mid-tier creator in the US producing a multi-scene, edited video with licensed music will be at the top.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Budget tiers</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>$2,000-$5,000/month (starter):</strong> 3-5 pieces of creator-led short-form video per month, basic distribution, manual management. Best for brands testing branded content for the first time.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>$5,000-$15,000/month (growth):</strong> 8-15 content pieces across 2-3 creators, systematic distribution, structured reporting, iterative optimization. Best for brands scaling a proven format.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>$15,000-$50,000/month (scale):</strong> 20-40 content pieces, multiple formats, 5-10+ creators, dedicated producer, full-funnel distribution, performance analytics. Best for brands building a sustained content engine.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>$50,000+/month (enterprise):</strong> High-volume multi-format production, premium creators, custom studio content, global campaigns, advanced measurement including brand lift studies. Best for established brands with significant content needs.</p>
+      </div>
+    </section>
+
+    <!-- 05 Timelines -->
+    <section class="guide-section" id="timelines">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Timelines</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Realistic production timelines</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Fast-track UGC: 5-7 business days from brief to delivery</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Standard creator content: 10-14 business days</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Complex productions: 4-12 weeks including pre-production</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Timelines are one of the most frequently underestimated aspects of branded content production. Brands often expect finished content within days, but realistic timelines need to account for brief development, creator scheduling, filming, editing, review cycles, and revisions. Rushing the timeline almost always results in lower quality or missed deadlines.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For a standard creator-led branded video, expect 2-3 days for brief development and creator briefing, 3-5 days for the creator to film and submit a rough cut, 1-2 days for brand review and feedback, 2-3 days for revisions and final delivery. Total: 10-14 business days. This can be compressed to 5-7 days with pre-vetted creators, streamlined approvals, and a single revision round.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For high-volume programs (10+ pieces per month), a rolling production schedule works best. Rather than producing everything in a batch, stagger creator assignments so that new content enters the pipeline weekly. This provides a steady stream of finished assets and prevents bottlenecks at the review stage.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The biggest timeline risk is the approval process. Internal review delays account for more production slowdowns than any other factor. Setting a 48-hour SLA for content reviews and designating a single approver dramatically reduces this risk. Some brands pre-approve creative concepts and then only review final cuts, which cuts the timeline by 3-5 days.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For more complex branded content &mdash; documentaries, podcast series, editorial campaigns, interactive content &mdash; plan for 4-12 weeks depending on scope. These longer timelines include research, scripting, scheduling, multi-day shoots, extensive post-production, and multiple review rounds. Build buffer time into every milestone: productions almost never run ahead of schedule, and they frequently run behind.</p>
+      </div>
+    </section>
+
+    <!-- 06 Quality Control -->
+    <section class="guide-section" id="quality-control">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Quality Control</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Quality control systems that scale</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">QC is a system, not a feeling &mdash; use checklists, not subjective judgment</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Check at three gates: concept, rough cut, and final delivery</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Separate the QC function from the creation function</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Quality control in branded content is not about subjective aesthetics &mdash; it is about systematically ensuring every asset meets defined standards before it reaches the audience. The best QC systems use checklists that can be applied consistently regardless of who is doing the review. This removes personal taste from the equation and ensures that every piece of content meets the same baseline quality.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">The three-gate QC system</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Gate 1 &mdash; Concept review:</strong> Before filming begins, review the creator's concept or script against the brief. Check that the key message is present, the hook is strong, the tone matches the brand, and no excluded elements are included. This gate catches strategic misalignments before they become expensive production problems.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Gate 2 &mdash; Rough cut review:</strong> After filming and initial editing, review the rough cut for content quality, pacing, audio clarity, visual quality, brand integration, and overall effectiveness. Provide specific, actionable feedback. "This does not feel right" is not useful feedback. "The hook needs to be shorter &mdash; cut the first 2 seconds and start with the product reveal" is useful feedback.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Gate 3 &mdash; Final delivery review:</strong> Before delivery, check technical specifications (resolution, aspect ratio, file size, export settings), brand compliance (logos, colors, disclaimers), platform requirements (duration limits, safe zones, caption formatting), and legal requirements (disclosures, music licensing, talent releases). This gate should be pass/fail with a standardized checklist.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">QC checklist essentials</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">A production QC checklist should cover: hook effectiveness (does the first 1-3 seconds grab attention?), key message delivery (is the core message communicated clearly?), brand integration (is the brand present without being forced?), audio quality (clear dialogue, appropriate music levels, no background noise?), visual quality (proper lighting, stable footage, correct framing?), pacing (does the content maintain viewer attention throughout?), platform specifications (correct aspect ratio, duration, resolution?), captions and text (legible, accurate, properly timed?), CTA clarity (does the viewer know what to do next?), and compliance (FTC disclosures, music rights, talent releases in place?).</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For teams producing at volume, consider building a scoring rubric that rates each element on a 1-5 scale. This makes QC consistent across reviewers and provides data you can use to identify patterns &mdash; if audio quality consistently scores low, you know to invest in better audio guidance for creators. For more on the metrics that matter, see our guide on <a href="/hook-rate/" class="text-accent hover:underline">hook rate optimization</a>.</p>
+      </div>
+    </section>
+
+    <!-- 07 Common Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Pitfalls</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Common production mistakes and how to avoid them</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Vague briefs cause 80% of production problems</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Over-scripting kills authenticity; under-briefing kills relevance</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Spending everything on production and nothing on distribution is the most expensive mistake</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Mistake 1: Vague or incomplete briefs</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The single most common production mistake is an inadequate brief. When a brief says "create a fun video about our product," the creator is guessing at objectives, audience, tone, and messaging. This leads to content that is technically well-made but strategically irrelevant. Fix: use a standardized brief template, and do not approve production start until the brief is complete. Every brief should answer: who is this for, what should they feel/think/do after watching, and what does success look like?</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Mistake 2: Over-scripting creators</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Brands hire creators for their authentic voice and then hand them a word-for-word script that sounds like it was written by a marketing committee. The result is content that feels forced and performs poorly. Fix: provide talking points, not scripts. Tell creators what to say, not how to say it. The exception is regulated industries where specific claims or disclaimers must be stated verbatim.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Mistake 3: Neglecting distribution budget</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Many brands spend their entire budget on production and have nothing left for distribution. Even excellent content has limited organic reach without paid amplification. Fix: allocate at minimum 30% of total budget to distribution. For brands new to a platform, consider 50%. Content that performs well organically should be boosted immediately to capture momentum.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Mistake 4: Too many approvers</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">When five people need to approve every piece of content, the result is conflicting feedback, watered-down creative, and timeline delays. Fix: designate one decision-maker for content approvals. Other stakeholders can provide input, but one person makes the call. Set a 48-hour approval SLA to prevent bottlenecks.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Mistake 5: Treating every piece as precious</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Some brands approach every content piece as if it were a TV commercial, requiring perfection and multiple rounds of polish. In the world of social content, volume and speed matter more than individual piece perfection. Fix: adopt a portfolio mindset. Not every piece will be a hit. Produce enough content to learn what works, then double down on winning formats. The goal is consistent quality, not individual perfection.</p>
+      </div>
+    </section>
+
+    <!-- 08 Scaling -->
+    <section class="guide-section" id="scaling">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Scale</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Scaling branded content production</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Scaling requires systems, not just more people</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Templatize briefs, standardize QC, automate coordination</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Move from artisan to factory without losing authenticity</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Scaling production from 5 pieces per month to 50 requires more than multiplying your current process by 10. What works at low volume breaks at high volume. Manual coordination via email and spreadsheets becomes unmanageable. Inconsistent briefing leads to wildly variable quality. Ad hoc QC lets problems through.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The key to scaling is systematization. Create standardized brief templates for each content format. Build a creator roster with pre-negotiated rates and established working relationships. Implement a project management system that tracks every piece of content through the pipeline. Develop QC checklists that any trained reviewer can apply consistently. Automate repetitive tasks: creator outreach, contract generation, payment processing, delivery notifications.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most brands hit their first scaling wall at around 15-20 pieces per month. At this point, a single person can no longer manage the entire production pipeline. You need either a dedicated producer or an agency partner. The second wall comes at around 50-75 pieces per month, where you need specialized roles: a strategist, a producer, a QC reviewer, and potentially a dedicated editor. Beyond 100 pieces per month, you need a production team with clear workflows, handoff procedures, and performance metrics.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For brands looking to scale quickly, working with an agency like OKAD provides immediate access to production infrastructure, creator networks, and quality control systems. For a deeper understanding of high-volume content production, see our <a href="/ugc-video-ads/" class="text-accent hover:underline">UGC video ads guide</a> and <a href="/canvas-ugc/" class="text-accent hover:underline">Canvas UGC</a> framework.</p>
+      </div>
+    </section>
+
+    <!-- 09 Tools -->
+    <section class="guide-section" id="tools">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Tools</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Tools and technology for production</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Project management: Notion, Asana, Monday, or Trello for pipeline tracking</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Content review: Frame.io, Filestage, or Google Drive for async feedback</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator platforms: OKAD network, Insense, Billo, or direct outreach</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The right tools reduce friction in every stage of production. For project management, you need a system that tracks every content piece from brief to delivery with status visibility for all stakeholders. Notion, Asana, Monday, and Trello all work &mdash; the specific tool matters less than consistent usage. Pick one and use it for everything.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For content review and feedback, Frame.io remains the gold standard for video review, offering timestamped comments directly on the video timeline. Filestage provides similar functionality with additional approval workflow features. For brands on a budget, Google Drive with commenting works for basic review, though it lacks the precision of dedicated tools.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For creator management, you need a way to track creator profiles, content history, rates, contracts, and communication. A simple spreadsheet works at low volume. At scale, a CRM or dedicated creator management platform becomes essential. Most agencies, including OKAD, maintain proprietary creator databases with performance data, audience demographics, and reliability scores.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For editing, CapCut dominates short-form video editing among creators due to its template system, auto-captions, and direct TikTok integration. Adobe Premiere Pro and DaVinci Resolve remain the standards for professional editing. Descript offers transcript-based editing that speeds up talking-head content production significantly.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For analytics and reporting, most platforms provide native analytics for organic content. For paid amplification, TikTok Ads Manager, Meta Ads Manager, and YouTube Analytics provide campaign-level data. Third-party tools like Sprout Social, Hootsuite, or CreatorIQ aggregate cross-platform data into unified dashboards.</p>
+      </div>
+    </section>
+
+    <!-- 10 Working with OKAD -->
+    <section class="guide-section" id="okad">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; OKAD</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Branded content production with OKAD</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">End-to-end production: strategy, casting, briefing, production, QC, delivery</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">600+ vetted creators across niches and platforms</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">All-in pricing with no hidden fees</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">OKAD handles every stage of branded content production, from strategy development to final asset delivery. Our production workflow follows the six-stage process outlined in this guide, with dedicated producers managing each project and systematic QC at every gate.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Our creator network includes 600+ vetted creators across beauty, fitness, food, tech, fashion, home, lifestyle, and professional niches. Every creator in our network has been evaluated for content quality, reliability, communication, and audience authenticity. We handle creator briefing, contract management, and payments, so brands work with a single point of contact rather than managing multiple creator relationships.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Our pricing is all-in: strategy, creator sourcing, brief development, production management, quality control, and final delivery are bundled into a per-asset or monthly retainer price. There are no hidden fees for revisions (up to two rounds), platform formatting, or project management. For paid distribution, we manage campaigns across TikTok, Instagram, YouTube, and LinkedIn with transparent ad spend reporting.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Email <a href={emailHref} class="text-accent hover:underline">olga@okad.agency</a> with your brand, product, and production goals. We will respond within 24 hours with a preliminary production plan and pricing.</p>
+      </div>
+    </section>
+
+    <!-- 11 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "How long does branded content production take?", a: "For creator-led short-form video, expect 5-14 business days from brief to delivery. Standard campaigns with concept development and two revision rounds take 10-14 days. Complex productions (documentaries, podcast series, editorial campaigns) take 4-12 weeks depending on scope. The biggest variable is usually the approval process, not the production itself." },
+          { q: "How much does branded content production cost?", a: "UGC-style short videos cost $200-$1,500 per piece. Creator-led branded videos run $1,000-$5,000. Editorial content costs $2,000-$8,000 per article. Podcast episodes range from $3,000-$15,000. Long-form video starts at $10,000. Add 30-40% for distribution budget. OKAD provides all-in pricing with production and management bundled." },
+          { q: "Do I need professional equipment for branded content?", a: "Not necessarily. Most high-performing branded content on TikTok, Instagram, and YouTube Shorts is shot on smartphones. The key is good lighting, clear audio, and strong creative. Professional equipment becomes important for long-form YouTube content, documentary-style pieces, and high-production studio shoots. Focus on content quality over equipment specs." },
+          { q: "How many revision rounds should I expect?", a: "Plan for two revision rounds per piece of content. The first addresses substantive changes (messaging, structure, tone). The second addresses technical refinements (audio levels, text positioning, color). If you consistently need more than two rounds, the problem is usually the brief, not the production." },
+          { q: "Should I hire creators directly or use an agency?", a: "Direct hiring works well for ongoing relationships with 1-3 creators where you have production management capacity. An agency makes sense when you need access to a large creator network, want to scale volume quickly, need production management infrastructure, or lack in-house content expertise. Many brands use a hybrid approach." },
+          { q: "What makes a good branded content brief?", a: "A good brief includes: brand background, campaign objective, target audience, key messages (1-3 maximum), mandatory inclusions and exclusions, tone and style guidance, format specifications, reference examples, timeline, and usage rights. The brief should be detailed enough that a creator who has never worked with your brand can produce on-target content on the first attempt." },
+          { q: "How do I measure production quality?", a: "Use a standardized QC checklist that scores hook effectiveness, message clarity, brand integration, audio quality, visual quality, pacing, platform specifications, and compliance. Track scores over time to identify trends. Combine QC scores with performance data (views, engagement, conversions) to understand which quality factors correlate with results." },
+          { q: "Can branded content be repurposed across platforms?", a: "Yes, but with adaptation. A 90-second TikTok video should not be posted directly to LinkedIn. Repurposing works best when you plan for multi-platform use during production: shoot in the highest resolution, capture extra footage, and create platform-specific edits during post-production. A single shoot can yield 3-5 platform-specific assets." },
+          { q: "What is the biggest production mistake brands make?", a: "Writing vague briefs and then blaming creators when the content does not meet expectations. The brief is the foundation of production quality. Invest time in writing detailed, specific briefs with clear examples, and you will dramatically reduce revisions, improve creator satisfaction, and produce better content." },
+          { q: "How does OKAD handle quality control?", a: "OKAD uses a three-gate QC system. Gate 1: concept review before filming starts. Gate 2: rough cut review after initial editing. Gate 3: final delivery review against a standardized checklist covering hook quality, message delivery, brand compliance, technical specs, and platform requirements. Every piece of content passes all three gates before delivery." },
+          { q: "Can I scale production without sacrificing quality?", a: "Yes, but it requires systems. Standardize briefs, build a vetted creator roster, implement consistent QC checklists, and use project management tools to track every asset through the pipeline. Quality does not degrade with scale when the production system is designed for scale from the start." },
+          { q: "What is the minimum budget to start with branded content?", a: "You can start testing branded content with as little as $2,000 per month, which covers 3-5 creator-led short-form videos. This is enough to learn what formats and messages resonate with your audience. Once you identify a winning formula, scale budget to amplify what works." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to produce branded content that performs?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your brand, product, and goals. We will design a production plan, match you with creators, and deliver content that drives results.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get started &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="/branded-content-guide/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Branded Content Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Complete guide to branded content strategy, types, and measurement</p>
+          </a>
+          <a href="/ugc-video-ads/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Video Ads Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Creating high-converting video ads with creator content</p>
+          </a>
+          <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">High-volume creator content production at scale</p>
+          </a>
+          <a href="/hook-rate/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Hook Rate Optimization</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Maximizing the first 3 seconds of every video</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on production workflows and quality control systems used across hundreds of branded content campaigns managed by OKAD, platform-specific best practices from TikTok, Meta, YouTube, and LinkedIn, published creator economy research, and direct feedback from creators and brands. Budget ranges, timelines, and production benchmarks are directional estimates. Actual results depend on content format, creator tier, production complexity, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Branded Content Production: Process, Costs & Best Practices",
+    "description": "A complete guide to branded content production covering the end-to-end workflow, team roles, budgeting frameworks, realistic timelines, and quality control systems.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/branded-content-production/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Branded Content Production" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How long does branded content production take?", "acceptedAnswer": { "@type": "Answer", "text": "For creator-led short-form video, expect 5-14 business days from brief to delivery. Standard campaigns with concept development and two revision rounds take 10-14 days. Complex productions take 4-12 weeks depending on scope." } },
+      { "@type": "Question", "name": "How much does branded content production cost?", "acceptedAnswer": { "@type": "Answer", "text": "UGC-style short videos cost $200-$1,500 per piece. Creator-led branded videos run $1,000-$5,000. Editorial content costs $2,000-$8,000 per article. Add 30-40% for distribution budget. OKAD provides all-in pricing." } },
+      { "@type": "Question", "name": "Do I need professional equipment for branded content?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. Most high-performing branded content on TikTok, Instagram, and YouTube Shorts is shot on smartphones. Good lighting, clear audio, and strong creative matter more than equipment specs." } },
+      { "@type": "Question", "name": "How many revision rounds should I expect?", "acceptedAnswer": { "@type": "Answer", "text": "Plan for two revision rounds per piece. The first addresses substantive changes, the second addresses technical refinements. More than two rounds usually indicates a brief problem." } },
+      { "@type": "Question", "name": "Should I hire creators directly or use an agency?", "acceptedAnswer": { "@type": "Answer", "text": "Direct hiring works for ongoing relationships with 1-3 creators. An agency makes sense for access to large creator networks, scaling volume, and production management infrastructure." } },
+      { "@type": "Question", "name": "What makes a good branded content brief?", "acceptedAnswer": { "@type": "Answer", "text": "A good brief includes brand background, campaign objective, target audience, key messages, mandatory inclusions/exclusions, tone guidance, format specs, reference examples, timeline, and usage rights." } },
+      { "@type": "Question", "name": "How do I measure production quality?", "acceptedAnswer": { "@type": "Answer", "text": "Use a standardized QC checklist scoring hook effectiveness, message clarity, brand integration, audio quality, visual quality, pacing, platform specs, and compliance." } },
+      { "@type": "Question", "name": "Can branded content be repurposed across platforms?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, but with adaptation. Plan for multi-platform use during production. A single shoot can yield 3-5 platform-specific assets when you capture extra footage and create platform-specific edits." } },
+      { "@type": "Question", "name": "What is the biggest production mistake brands make?", "acceptedAnswer": { "@type": "Answer", "text": "Writing vague briefs and then blaming creators when content misses expectations. Invest time in detailed briefs with clear examples to reduce revisions and improve content quality." } },
+      { "@type": "Question", "name": "How does OKAD handle quality control?", "acceptedAnswer": { "@type": "Answer", "text": "OKAD uses a three-gate QC system: concept review before filming, rough cut review after editing, and final delivery review against a standardized checklist." } },
+      { "@type": "Question", "name": "Can I scale production without sacrificing quality?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, with systems. Standardize briefs, build a vetted creator roster, implement consistent QC checklists, and use project management tools to track every asset." } },
+      { "@type": "Question", "name": "What is the minimum budget to start with branded content?", "acceptedAnswer": { "@type": "Answer", "text": "You can start with $2,000 per month for 3-5 creator-led short-form videos. This is enough to test formats and messages. Scale budget once you identify winning formulas." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
