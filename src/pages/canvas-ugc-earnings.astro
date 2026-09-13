@@ -1,0 +1,525 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailCreator = "mailto:olga@okad.agency?subject=Canvas%20UGC%20creator%20network%20%E2%80%94%20I%20want%20to%20join";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Canvas UGC Earnings — How Much Do Canvas UGC Creators Make? | OKAD"
+  description="How much money can you earn with Canvas UGC? Real earnings data: CPM rates by platform ($2-$6), monthly income by experience level ($200-$8,000+), payment models, and strategies to maximize your creator income."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Earnings guide &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Canvas UGC Earnings: <span class="text-accent">How Much Do Creators Make?</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Canvas UGC creators earn $200 to $8,000+ per month depending on volume, niche, and experience. This guide breaks down real earnings data, CPM rates by platform, payment models, and how to maximize your income.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailCreator} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Join our creator network &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>CPM $2&ndash;$6</span>
+          <span>$200&ndash;$8,000+/mo</span>
+          <span>Per-view payments</span>
+          <span>700+ creators tracked</span>
+          <span>Updated quarterly</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key numbers grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Canvas UGC Earnings at a Glance</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">$200&ndash;$8,000+/mo</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Monthly earnings range depending on experience, volume, and niche. Top creators working multiple accounts exceed $8K consistently.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4CA;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">CPM $2&ndash;$6</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Cost per 1,000 views. Rates vary by platform, niche, and brand budget. Tech and finance niches typically pay at the higher end.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F680;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Volume = Income</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Canvas UGC rewards consistency over virality. Posting 15&ndash;40 videos per month across accounts is the path to reliable income.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Earnings Overview", href: "#overview" },
+            { num: "02", text: "CPM Rates by Platform", href: "#cpm" },
+            { num: "03", text: "Monthly Income by Level", href: "#income" },
+            { num: "04", text: "Payment Models", href: "#payment" },
+            { num: "05", text: "Factors That Affect Earnings", href: "#factors" },
+            { num: "06", text: "How to Maximize Your Earnings", href: "#maximize" },
+            { num: "07", text: "Canvas UGC vs Traditional UGC Earnings", href: "#comparison" },
+            { num: "08", text: "Tax Considerations", href: "#taxes" },
+            { num: "09", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Earnings Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How Canvas UGC creators earn money</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creators are paid per view (CPM), not per video &mdash; income scales with content performance</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Monthly earnings range from $200 for beginners to $8,000+ for experienced creators</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Volume and consistency matter more than individual viral hits</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><a href="/canvas-ugc/" class="text-accent hover:underline">Canvas UGC</a> flips the traditional UGC payment model. Instead of charging a flat fee per video, creators are paid based on how many views their content generates on brand-owned accounts. This means your earnings are directly tied to the value you create.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The typical payment mechanism is CPM (cost per mille) &mdash; a rate paid for every 1,000 views. Most programs pay between $2 and $6 CPM. A video that gets 50,000 views at $4 CPM earns the creator $200. A video that gets 500,000 views at the same rate earns $2,000.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This is fundamentally different from traditional UGC work where you might earn $150&ndash;$300 per video regardless of how it performs. In Canvas UGC, the upside is uncapped. A single breakout video can earn more than an entire month of flat-fee deliverables. The tradeoff is that low-performing videos earn very little.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The key insight is that Canvas UGC rewards <strong>aggregate volume</strong>, not individual luck. If you post 20 videos per month at $4 CPM and each averages 25,000 views, you earn $2,000/month. You don't need any of those videos to go viral. You need all of them to perform adequately &mdash; and that comes from understanding <a href="/hook-rate/" class="text-accent hover:underline">hook rates</a>, niching, and platform mechanics.</p>
+      </div>
+    </section>
+
+    <!-- 02 CPM Rates by Platform -->
+    <section class="guide-section" id="cpm">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; CPM Rates</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">CPM rates by platform and niche</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">CPM rates range from $2 to $6 depending on platform, niche, and brand budget</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok typically offers the highest view volume but lower CPM; YouTube Shorts commands higher CPM</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Tech, finance, and SaaS niches pay at the top of the range</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">CPM is the standard currency of Canvas UGC. It stands for "cost per mille" &mdash; how much the brand pays you for every 1,000 views your content generates on their account. Understanding CPM variations is essential for estimating and maximizing your earnings.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Platform CPM breakdown</h3>
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[14px] border-collapse">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Platform</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Typical CPM</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">View Volume</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">TikTok</td><td class="px-4 py-2.5 text-ink-2">$2&ndash;$4</td><td class="px-4 py-2.5 text-ink-2">Highest</td><td class="px-4 py-2.5 text-ink-2">Best discovery algorithm; volume compensates for lower CPM</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Instagram Reels</td><td class="px-4 py-2.5 text-ink-2">$3&ndash;$5</td><td class="px-4 py-2.5 text-ink-2">Medium</td><td class="px-4 py-2.5 text-ink-2">Higher CPM than TikTok; follower base matters more</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">YouTube Shorts</td><td class="px-4 py-2.5 text-ink-2">$4&ndash;$6</td><td class="px-4 py-2.5 text-ink-2">Medium-High</td><td class="px-4 py-2.5 text-ink-2">Highest CPM; longer shelf life for content</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Facebook Reels</td><td class="px-4 py-2.5 text-ink-2">$2&ndash;$3.50</td><td class="px-4 py-2.5 text-ink-2">Medium</td><td class="px-4 py-2.5 text-ink-2">Older demographic; strong for lifestyle and finance</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Niche CPM premiums</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Not all niches pay equally. Brands in high-LTV (lifetime value) verticals can afford to pay more per view because each customer acquired through organic content is worth more to them.</p>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Tech / SaaS / AI:</strong> $4&ndash;$6 CPM &mdash; highest-paying niche due to high customer LTV</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Finance / Fintech:</strong> $3.50&ndash;$5.50 CPM &mdash; regulated content commands premium rates</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">E-commerce / DTC:</strong> $2.50&ndash;$4 CPM &mdash; high volume, competitive landscape</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Lifestyle / Beauty:</strong> $2&ndash;$3.50 CPM &mdash; large creator pool, lower barriers to entry</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Health / Wellness:</strong> $3&ndash;$5 CPM &mdash; compliance requirements raise the bar</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">These ranges represent what brands typically offer. Individual programs may pay above or below depending on budget, creator quality, and negotiation. Creators who demonstrate consistent performance often negotiate up to the higher end of their niche range within 2&ndash;3 months.</p>
+      </div>
+    </section>
+
+    <!-- 03 Monthly Income by Level -->
+    <section class="guide-section" id="income">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Monthly Income</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Monthly income examples by experience level</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Beginners (1&ndash;3 months): $200&ndash;$800/month</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Intermediate (3&ndash;6 months): $800&ndash;$2,500/month</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Advanced (6+ months): $2,500&ndash;$8,000+/month</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[14px] border-collapse">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Level</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Experience</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Monthly Earnings</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Typical Setup</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Beginner</td><td class="px-4 py-2.5 text-ink-2">1&ndash;3 months</td><td class="px-4 py-2.5 text-accent font-semibold">$200&ndash;$800</td><td class="px-4 py-2.5 text-ink-2">1&ndash;2 brand accounts, 8&ndash;15 videos/mo</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Intermediate</td><td class="px-4 py-2.5 text-ink-2">3&ndash;6 months</td><td class="px-4 py-2.5 text-accent font-semibold">$800&ndash;$2,500</td><td class="px-4 py-2.5 text-ink-2">2&ndash;4 brand accounts, 15&ndash;30 videos/mo</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Advanced</td><td class="px-4 py-2.5 text-ink-2">6+ months</td><td class="px-4 py-2.5 text-accent font-semibold">$2,500&ndash;$8,000+</td><td class="px-4 py-2.5 text-ink-2">4&ndash;8 brand accounts, 30&ndash;50 videos/mo</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Beginner earnings breakdown</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">In your first 1&ndash;3 months, expect to earn $200&ndash;$800 per month. You'll typically work with 1&ndash;2 brand accounts and produce 8&ndash;15 videos per month. Your average views per video will be lower as you learn what works &mdash; expect 5,000&ndash;20,000 views per video. At $3 CPM, 12 videos averaging 15,000 views each produces $540/month.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This phase is about learning, not maximizing income. You're building the muscle memory for scripting, filming, and editing short-form content. Most beginners see a noticeable jump in average views by their second month as they internalize what hooks work in their niche.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Intermediate earnings breakdown</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Between 3&ndash;6 months, you should be earning $800&ndash;$2,500 per month. At this stage, you've developed a reliable production workflow and you understand your niche. You're working with 2&ndash;4 brand accounts and producing 15&ndash;30 videos per month.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Average views per video climb to 20,000&ndash;50,000. At $3.50 CPM, 25 videos averaging 30,000 views each produces $2,625/month. Intermediate creators also start getting offered higher CPM rates as brands recognize their consistent performance.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Advanced earnings breakdown</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">After 6+ months, top Canvas UGC creators earn $2,500&ndash;$8,000+ per month. They work with 4&ndash;8 brand accounts, produce 30&ndash;50 videos per month, and have refined their content style to consistently generate high view counts. Some creators in high-CPM niches like tech and finance earn over $10,000 per month.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">At this level, you may also earn additional income from having your organic content promoted as <a href="/spark-ads/" class="text-accent hover:underline">Spark Ads</a> or <a href="/partnership-ads/" class="text-accent hover:underline">Partnership Ads</a>. When a brand boosts your organic video, some programs pay a bonus on top of the organic CPM.</p>
+      </div>
+    </section>
+
+    <!-- 04 Payment Models -->
+    <section class="guide-section" id="payment">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Payment Models</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How Canvas UGC creators get paid</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Three main models: pure CPM, flat fee per video, and hybrid (base + CPM bonus)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Pure CPM aligns incentives and offers uncapped upside</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Hybrid models provide income stability while keeping performance incentives</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Pure CPM (per-view payment)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most common Canvas UGC payment model. You earn a fixed rate per 1,000 views. Views are tracked at the end of each billing period (typically monthly), and you receive payment based on total verified views across all your content on the brand's accounts. Most programs pay net-30 after the billing period ends.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Pros:</strong> Uncapped earnings potential. A single viral video can earn $500&ndash;$2,000+. Aligns creator and brand incentives &mdash; both want maximum views. <strong>Cons:</strong> Income is variable month-to-month. New creators may earn very little in the first few weeks before content gains traction.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Flat fee per video</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Some programs pay a fixed rate per video delivered &mdash; typically $25&ndash;$75 per video for Canvas UGC. This is less common because it doesn't incentivize quality or performance. It's most often used during onboarding or trial periods when a brand wants to evaluate new creators without committing to CPM tracking.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Pros:</strong> Predictable income. Good for beginners who need guaranteed payment while learning. <strong>Cons:</strong> Earnings are capped. High-performing content earns the same as low-performing content.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Hybrid (base pay + CPM bonus)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">An increasingly popular model that combines a small base payment per video ($15&ndash;$30) with a CPM bonus on top. This gives creators income stability while preserving the performance incentive. Some programs structure the hybrid as a monthly base retainer ($200&ndash;$500) plus CPM on all views.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Pros:</strong> Financial floor protects against slow months. Performance upside still exists. <strong>Cons:</strong> CPM rate in hybrid models is typically lower ($1.50&ndash;$3) since the brand is also paying the base.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Payment logistics</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most Canvas UGC programs pay monthly. Views are verified using platform analytics (screenshots, creator access, or automated tracking tools). Payment methods vary &mdash; PayPal, Wise, direct bank transfer, and crypto are all common depending on the program and the creator's location. International creators should factor in transfer fees when evaluating offers.</p>
+      </div>
+    </section>
+
+    <!-- 05 Factors That Affect Earnings -->
+    <section class="guide-section" id="factors">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Earnings Factors</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What determines how much you earn</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Niche selection is the single biggest factor &mdash; it determines both CPM rate and audience size</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Consistency trumps virality &mdash; predictable output beats occasional spikes</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Multi-account strategy multiplies earnings linearly</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">1. Niche selection</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Your niche determines your CPM rate and your potential audience size. <a href="/canvas-ugc/" class="text-accent hover:underline">Tech and SaaS Canvas UGC</a> pays $4&ndash;$6 CPM because each customer is worth hundreds or thousands in recurring revenue. Lifestyle content pays $2&ndash;$3.50 because margins are thinner. Choose a niche where you have genuine knowledge or interest &mdash; authenticity directly impacts content performance.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">2. Content volume</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">More videos = more total views = more income. This is arithmetic, not luck. A creator posting 30 videos per month will almost always out-earn one posting 10, assuming similar quality and niche. The exception is when lower volume allows significantly higher quality per video, but in Canvas UGC, speed and consistency beat polish.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">3. Hook rate and retention</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Your <a href="/hook-rate/" class="text-accent hover:underline">hook rate</a> &mdash; the percentage of viewers who stay past the first 1&ndash;3 seconds &mdash; is the primary driver of algorithmic distribution. Videos with hook rates above 40% get pushed to far more viewers than those below 20%. Mastering hooks is the most direct path to higher earnings per video.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">4. Number of brand accounts</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Working with more brand accounts linearly multiplies your earning potential. If you earn $600/month from one brand account, working with three similar accounts gives you $1,800/month. Advanced creators manage 4&ndash;8 accounts simultaneously. The constraint is production time &mdash; each additional account requires 8&ndash;15 videos per month.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">5. Engagement quality</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Comments, shares, and saves signal to the algorithm that your content is worth distributing further. Creators who prompt genuine engagement (asking questions, creating debate-worthy takes, providing genuine value) consistently outperform those creating passive content. Higher engagement leads to more views, which directly increases your CPM-based earnings.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">6. Platform selection</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Different platforms have different CPM rates and discovery mechanics. TikTok offers the most organic reach but lower CPM. YouTube Shorts pays higher CPM but requires different content strategies. Many successful creators post across multiple platforms to diversify their income streams.</p>
+      </div>
+    </section>
+
+    <!-- 06 Maximize Earnings -->
+    <section class="guide-section" id="maximize">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Maximize</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to maximize your Canvas UGC earnings</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Batch content production to increase volume without increasing time spent</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Study analytics obsessively &mdash; double down on formats that get views</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Negotiate higher CPM after proving consistent performance</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Batch your production</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The fastest path to higher earnings is producing more content in less time. Set up your filming space once and shoot 5&ndash;10 videos in a single session. Write all your scripts in one sitting. Edit in batches. Creators who batch-produce can create 30+ videos per month while spending 10&ndash;15 hours per week &mdash; roughly the same time inefficient creators spend on 10 videos.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Analyze and iterate</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Track which of your videos perform best and dissect why. Was it the hook? The topic? The format (talking head vs. screen recording vs. POV)? Double down on what works and cut what doesn't. Most creators find that 20% of their content formats generate 80% of their views. Identify your top formats and build a repeatable system around them.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Negotiate your CPM</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">After 2&ndash;3 months of consistent performance, ask for a CPM increase. Bring data: total views delivered, average views per video, and engagement rates. A $1 CPM increase across 500,000 monthly views adds $500/month to your income. Brands prefer paying more to retain proven creators rather than recruiting and training new ones.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Expand to more accounts</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Once you're consistently performing on 1&ndash;2 accounts, ask your program manager about additional brand accounts. Each new account is an additional income stream. The marginal effort decreases as you develop transferable skills across niches.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Build a <a href="/ugc-portfolio-guide/" class="text-accent hover:underline">portfolio</a></h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Document your best-performing content with view counts and engagement metrics. A strong portfolio helps you <a href="/brand-pitch/" class="text-accent hover:underline">pitch to higher-paying brands</a> and negotiate premium CPM rates. Include screenshots of analytics, not just the videos themselves.</p>
+      </div>
+    </section>
+
+    <!-- 07 Canvas UGC vs Traditional UGC Earnings -->
+    <section class="guide-section" id="comparison">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Comparison</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Canvas UGC earnings vs traditional UGC</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Traditional UGC pays flat fees ($150&ndash;$500/video) with predictable but capped income</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Canvas UGC has higher earning potential but more variable monthly income</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Many creators combine both models for income diversification</li>
+          </ul>
+        </div>
+
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[14px] border-collapse">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Factor</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Traditional UGC</th>
+                <th class="px-4 py-2.5 text-left font-semibold text-ink">Canvas UGC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Payment model</td><td class="px-4 py-2.5 text-ink-2">Flat fee per video</td><td class="px-4 py-2.5 text-ink-2">CPM (per view) or hybrid</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Typical per-video rate</td><td class="px-4 py-2.5 text-ink-2">$150&ndash;$500</td><td class="px-4 py-2.5 text-ink-2">$20&ndash;$2,000+ (view-dependent)</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Income ceiling</td><td class="px-4 py-2.5 text-ink-2">Limited by # of clients</td><td class="px-4 py-2.5 text-ink-2">Uncapped (scales with views)</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Income stability</td><td class="px-4 py-2.5 text-ink-2">Predictable</td><td class="px-4 py-2.5 text-ink-2">Variable month-to-month</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Content ownership</td><td class="px-4 py-2.5 text-ink-2">Brand owns footage</td><td class="px-4 py-2.5 text-ink-2">Brand owns account + content</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Client acquisition</td><td class="px-4 py-2.5 text-ink-2">Constant pitching needed</td><td class="px-4 py-2.5 text-ink-2">Ongoing relationships</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Revision cycles</td><td class="px-4 py-2.5 text-ink-2">Multiple rounds common</td><td class="px-4 py-2.5 text-ink-2">Minimal &mdash; post and iterate</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink">Best for</td><td class="px-4 py-2.5 text-ink-2">Creators with strong portfolios</td><td class="px-4 py-2.5 text-ink-2">Consistent, high-volume producers</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4">For a deeper comparison of the delivery models, see our <a href="/canvas-ugc/" class="text-accent hover:underline">complete Canvas UGC guide</a>. The key difference from an earnings perspective: traditional UGC is trading time for money (more clients = more income, linearly). Canvas UGC is trading performance for money (better content = more views = exponentially more income). Many successful creators do both &mdash; traditional UGC for baseline income and Canvas UGC for upside.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For detailed pricing across both models, check our <a href="/ugc-rates/" class="text-accent hover:underline">UGC rates guide</a>.</p>
+      </div>
+    </section>
+
+    <!-- 08 Tax Considerations -->
+    <section class="guide-section" id="taxes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Taxes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Tax considerations for Canvas UGC creators</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Canvas UGC income is self-employment income in most jurisdictions</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Track expenses: equipment, software, internet, and workspace are typically deductible</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Set aside 25&ndash;35% of earnings for taxes from day one</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Disclaimer:</strong> This section provides general information, not tax advice. Consult a qualified tax professional for guidance specific to your situation and jurisdiction.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Self-employment basics</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">In most countries, Canvas UGC creators are classified as independent contractors, not employees. This means you're responsible for reporting and paying your own taxes. In the US, you'll receive a 1099 form if you earn over $600 from a single program. In the EU, you'll typically need to register as a freelancer or sole trader.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Deductible expenses</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">As a self-employed creator, you can typically deduct business-related expenses from your taxable income. Common deductions include:</p>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Equipment:</strong> Camera, microphone, lighting, tripod, phone</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Software:</strong> Editing tools (CapCut Pro, Premiere, etc.), cloud storage</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Internet:</strong> Percentage of your internet bill used for work</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Home office:</strong> Portion of rent/mortgage if you have a dedicated workspace</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Props &amp; supplies:</strong> Products purchased for content creation</li>
+        </ul>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Record keeping</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Keep detailed records of all income and expenses from your first payment. Use a spreadsheet or accounting tool to track monthly earnings by program, platform, and payment method. Save receipts for all business purchases. Good records now save hours of stress at tax time &mdash; and potentially thousands in missed deductions.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">International creators</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you're creating Canvas UGC for brands in a different country, you may need to complete tax treaty forms (like W-8BEN for US-based programs). Payment processing fees for international transfers (PayPal, Wise) are also deductible as a business expense. Factor these fees into your earnings calculations when comparing program offers.</p>
+      </div>
+    </section>
+
+    <!-- 09 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "How much do Canvas UGC creators make per month?", a: "Monthly earnings range from $200-$800 for beginners (1-3 months) to $2,500-$8,000+ for advanced creators (6+ months). Income depends on CPM rate, content volume, niche, and number of brand accounts. The median Canvas UGC creator working full-time earns $1,500-$3,000 per month." },
+          { q: "What is CPM in Canvas UGC?", a: "CPM stands for 'cost per mille' — the amount a brand pays you for every 1,000 views your content generates on their account. Canvas UGC CPM rates typically range from $2 to $6, with tech and finance niches paying at the higher end." },
+          { q: "Is Canvas UGC better than traditional UGC for income?", a: "Canvas UGC offers higher earning potential but more variable income. Traditional UGC pays predictable flat fees ($150-$500 per video) regardless of performance. Canvas UGC earnings are uncapped — a viral video can earn $1,000+, but a poorly performing one might earn $10. Many creators combine both models." },
+          { q: "How long does it take to start earning with Canvas UGC?", a: "Most creators receive their first payment within 30-45 days of starting. Programs typically pay monthly in arrears, so you'll post content in month 1 and receive payment early in month 2. First-month earnings are usually modest ($100-$300) as you learn and the brand account warms up." },
+          { q: "Can you do Canvas UGC as a side hustle?", a: "Yes. Many creators start Canvas UGC alongside a full-time job. Producing 10-15 videos per month takes roughly 5-8 hours per week if you batch your production. At $3-4 CPM, this can generate $300-$800 per month in side income." },
+          { q: "Do you need a following to earn with Canvas UGC?", a: "No. Canvas UGC content is posted on the brand's accounts, not yours. You don't need any personal following. What matters is your ability to create engaging short-form videos that perform well on the platform's algorithm." },
+          { q: "How do Canvas UGC programs verify views?", a: "Programs use platform analytics tools, screenshots, API integrations, or dedicated tracking dashboards to verify view counts. Most programs snapshot views at the end of each billing period (usually the last day of the month) and pay based on that total." },
+          { q: "What happens if my Canvas UGC videos don't get views?", a: "Low-performing videos earn minimal income under CPM models. However, this is expected — not every video will perform. The strategy is aggregate volume. Even experienced creators have videos that underperform. The goal is a healthy average across 15-40 monthly posts, not perfection on every single one." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to start earning with Canvas UGC?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Join our network of 700+ creators. We match you with brands in your niche, handle tracking and payments, and help you scale your income.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailCreator} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Join our creator network &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">Earnings figures in this guide are based on aggregate data from Canvas UGC programs managed by OKAD Agency, supplemented by publicly available creator marketplace benchmarks and platform analytics. All figures represent ranges, not guarantees. Individual earnings depend on content quality, niche, platform dynamics, volume, and market conditions. CPM rates and view counts can fluctuate based on platform algorithm changes, seasonality, and competitive landscape.</p>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">The complete guide to brand-account content</p>
+          </a>
+          <a href="/how-to-start-canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">How to Start Canvas UGC</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Step-by-step beginner guide</p>
+          </a>
+          <a href="/ugc-rates/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Rates Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Complete pricing benchmarks for 2026</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Canvas UGC Earnings — How Much Do Canvas UGC Creators Make?",
+    "description": "How much money can you earn with Canvas UGC? Real earnings data: CPM rates by platform ($2-$6), monthly income by experience level ($200-$8,000+), payment models, and strategies to maximize your creator income.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/canvas-ugc-earnings/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Canvas UGC Earnings" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How much do Canvas UGC creators make per month?", "acceptedAnswer": { "@type": "Answer", "text": "Monthly earnings range from $200-$800 for beginners (1-3 months) to $2,500-$8,000+ for advanced creators (6+ months). Income depends on CPM rate, content volume, niche, and number of brand accounts. The median Canvas UGC creator working full-time earns $1,500-$3,000 per month." } },
+      { "@type": "Question", "name": "What is CPM in Canvas UGC?", "acceptedAnswer": { "@type": "Answer", "text": "CPM stands for 'cost per mille' — the amount a brand pays you for every 1,000 views your content generates on their account. Canvas UGC CPM rates typically range from $2 to $6, with tech and finance niches paying at the higher end." } },
+      { "@type": "Question", "name": "Is Canvas UGC better than traditional UGC for income?", "acceptedAnswer": { "@type": "Answer", "text": "Canvas UGC offers higher earning potential but more variable income. Traditional UGC pays predictable flat fees ($150-$500 per video) regardless of performance. Canvas UGC earnings are uncapped — a viral video can earn $1,000+, but a poorly performing one might earn $10. Many creators combine both models." } },
+      { "@type": "Question", "name": "How long does it take to start earning with Canvas UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Most creators receive their first payment within 30-45 days of starting. Programs typically pay monthly in arrears, so you'll post content in month 1 and receive payment early in month 2. First-month earnings are usually modest ($100-$300) as you learn and the brand account warms up." } },
+      { "@type": "Question", "name": "Can you do Canvas UGC as a side hustle?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Many creators start Canvas UGC alongside a full-time job. Producing 10-15 videos per month takes roughly 5-8 hours per week if you batch your production. At $3-4 CPM, this can generate $300-$800 per month in side income." } },
+      { "@type": "Question", "name": "Do you need a following to earn with Canvas UGC?", "acceptedAnswer": { "@type": "Answer", "text": "No. Canvas UGC content is posted on the brand's accounts, not yours. You don't need any personal following. What matters is your ability to create engaging short-form videos that perform well on the platform's algorithm." } },
+      { "@type": "Question", "name": "How do Canvas UGC programs verify views?", "acceptedAnswer": { "@type": "Answer", "text": "Programs use platform analytics tools, screenshots, API integrations, or dedicated tracking dashboards to verify view counts. Most programs snapshot views at the end of each billing period (usually the last day of the month) and pay based on that total." } },
+      { "@type": "Question", "name": "What happens if my Canvas UGC videos don't get views?", "acceptedAnswer": { "@type": "Answer", "text": "Low-performing videos earn minimal income under CPM models. However, this is expected — not every video will perform. The strategy is aggregate volume. Even experienced creators have videos that underperform. The goal is a healthy average across 15-40 monthly posts, not perfection on every single one." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
