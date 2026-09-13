@@ -1,0 +1,694 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailHref = "mailto:olga@okad.agency?subject=UGC%20creator%20inquiry%20%E2%80%94%20tell%20us%20about%20your%20needs";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="UGC Creator Taxes: What You Need to Know in 2026 | OKAD"
+  description="A comprehensive guide to UGC creator taxes in 2026: self-employment tax, deductions, quarterly payments, 1099 forms, international creators, and record keeping. Educational reference for content creators."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Tax reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          UGC Creator Taxes: <span class="text-accent">What You Need to Know in 2026</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Self-employment tax, deductions, quarterly payments, 1099 forms, and international withholding &mdash; everything UGC creators need to understand about their tax obligations this year.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailHref} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get creator tax help &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>15.3% SE tax</span>
+          <span>Quarterly deadlines</span>
+          <span>1099-NEC &amp; 1099-K</span>
+          <span>International W-8BEN</span>
+          <span>Updated for 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">UGC Creator Tax Essentials</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">15.3% Self-Employment Tax</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">UGC creators pay Social Security (12.4%) and Medicare (2.9%) on net earnings. This is on top of your regular income tax.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C5;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">4 Quarterly Deadlines</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Estimated taxes are due April 15, June 16, September 15, and January 15. Missing deadlines triggers underpayment penalties.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4DD;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Track Every Deduction</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Equipment, software, home office, props, and travel are all deductible. Good records can reduce your tax bill by thousands.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="py-6">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-[rgba(245,158,11,.06)] border border-[rgba(245,158,11,.18)] rounded-xl p-5 text-[13px] text-ink-2 leading-[1.6]">
+          <strong class="text-ink">Disclaimer:</strong> This guide is for educational purposes only and does not constitute tax, legal, or financial advice. Tax laws change frequently. Consult a qualified tax professional (CPA or enrolled agent) for advice specific to your situation. OKAD Agency is not a tax advisory firm.
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "Why Taxes Matter for UGC Creators", href: "#overview" },
+            { num: "02", text: "Are You Self-Employed?", href: "#self-employed" },
+            { num: "03", text: "Self-Employment Tax Explained", href: "#se-tax" },
+            { num: "04", text: "Income Tax Brackets for Creators", href: "#brackets" },
+            { num: "05", text: "Quarterly Estimated Tax Payments", href: "#quarterly" },
+            { num: "06", text: "Deductions for UGC Creators", href: "#deductions" },
+            { num: "07", text: "1099 Forms and Reporting", href: "#1099" },
+            { num: "08", text: "International Creators", href: "#international" },
+            { num: "09", text: "Record Keeping and Bookkeeping", href: "#records" },
+            { num: "10", text: "Common Mistakes to Avoid", href: "#mistakes" },
+            { num: "11", text: "Glossary", href: "#glossary" },
+            { num: "12", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Overview -->
+    <section class="guide-section" id="overview">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Overview</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Why taxes matter for UGC creators</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">UGC income is taxable whether you receive a 1099 or not &mdash; the IRS expects you to report all earnings</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">No taxes are withheld from creator payments &mdash; you are responsible for paying them yourself</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Ignoring taxes can lead to penalties, interest, and a surprise bill that wipes out months of earnings</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you earn money as a UGC creator &mdash; whether through flat-fee projects, <a href="/ugc-rates/" class="text-accent hover:underline">per-video rates</a>, CPM-based Canvas UGC programs, or brand deals &mdash; that income is taxable. Unlike a traditional W-2 job, no employer withholds taxes from your payments. Every dollar you receive from a brand, agency, or platform arrives without any tax taken out. That means you are solely responsible for calculating, setting aside, and paying your own taxes.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Many first-year creators underestimate their tax burden. They earn $15,000 to $40,000 in UGC income, spend it freely, and then face a $4,000 to $12,000 tax bill the following April. Some also owe underpayment penalties on top of the tax itself because they did not make quarterly estimated payments throughout the year.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The good news is that being self-employed also unlocks a wide range of <strong>deductions</strong> that W-2 employees do not have access to. Equipment, software subscriptions, home office space, props, travel, and even a portion of your internet bill can reduce your taxable income. Creators who track their expenses carefully often reduce their effective tax rate by 5 to 10 percentage points compared to those who do not.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This guide covers the core tax concepts every US-based UGC creator needs to understand: self-employment tax, income tax brackets, quarterly payments, deductions, 1099 reporting, and international considerations. It is written for creators earning income through UGC content, including those working with agencies like OKAD through <a href="/canvas-ugc-earnings/" class="text-accent hover:underline">Canvas UGC programs</a>.</p>
+      </div>
+    </section>
+
+    <!-- 02 Are You Self-Employed? -->
+    <section class="guide-section" id="self-employed">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Business Structure</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Are you self-employed?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most UGC creators are classified as independent contractors, not employees</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You can operate as a sole proprietor (default), single-member LLC, or S-Corp</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Your business structure affects how you file and how much self-employment tax you owe</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">When a brand or agency pays you to create UGC content, you are almost always classified as an <strong>independent contractor</strong>, not an employee. This distinction matters enormously for taxes. As an independent contractor, the brand does not withhold income tax, Social Security, or Medicare from your payments. You receive the full amount and handle taxes yourself.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">By default, if you do not register a business entity, you are operating as a <strong>sole proprietor</strong>. This is the simplest structure. You report your UGC income and expenses on Schedule C of your personal tax return (Form 1040). There is no separate business tax return to file. Your business income flows through to your personal return and is taxed at your individual rate.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Some creators choose to form a <strong>single-member LLC</strong> (Limited Liability Company). From a tax perspective, the IRS treats a single-member LLC identically to a sole proprietorship &mdash; you still file Schedule C. However, an LLC provides personal liability protection, which can be valuable if you sign <a href="/ugc-contract/" class="text-accent hover:underline">creator contracts</a> with significant usage rights or indemnification clauses.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Creators earning $60,000 or more in net profit may benefit from electing <strong>S-Corp taxation</strong>. With an S-Corp, you pay yourself a "reasonable salary" (subject to payroll taxes) and take the remaining profit as a distribution (not subject to self-employment tax). This can save several thousand dollars per year in SE tax. However, S-Corps require additional paperwork: payroll processing, a separate corporate tax return (Form 1120-S), and reasonable compensation documentation. Consult a CPA before making this election.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Business structure comparison</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full text-[13px]">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Structure</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Tax Filing</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">SE Tax</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Sole Proprietor</td><td class="px-4 py-2.5 text-ink-2">Schedule C on 1040</td><td class="px-4 py-2.5 text-ink-2">On all net profit</td><td class="px-4 py-2.5 text-ink-2">Beginners, &lt;$60K/yr</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Single-Member LLC</td><td class="px-4 py-2.5 text-ink-2">Schedule C on 1040</td><td class="px-4 py-2.5 text-ink-2">On all net profit</td><td class="px-4 py-2.5 text-ink-2">Liability protection needed</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">LLC + S-Corp Election</td><td class="px-4 py-2.5 text-ink-2">Form 1120-S + 1040</td><td class="px-4 py-2.5 text-ink-2">Only on salary portion</td><td class="px-4 py-2.5 text-ink-2">Net profit &gt;$60K/yr</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Self-Employment Tax -->
+    <section class="guide-section" id="se-tax">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Self-Employment Tax</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Self-employment tax explained</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">SE tax is 15.3% on net earnings: 12.4% Social Security + 2.9% Medicare</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You pay both the employer and employee portions (W-2 employees only pay half)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You can deduct half of your SE tax from your adjusted gross income</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Self-employment tax (SE tax) is the single biggest tax surprise for new UGC creators. It is <strong>separate from income tax</strong> and covers your contributions to Social Security and Medicare. In a traditional job, your employer pays half of these contributions and withholds your half from your paycheck. As a self-employed creator, you pay both halves.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The SE tax rate is <strong>15.3%</strong> of your net self-employment income. This breaks down as 12.4% for Social Security (on the first $168,600 of net earnings in 2026) and 2.9% for Medicare (on all net earnings, with no cap). If your net earnings exceed $200,000 ($250,000 for married filing jointly), an additional 0.9% Medicare surtax applies to the amount above the threshold.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The IRS allows you to deduct the employer-equivalent portion of your SE tax (half of 15.3%, or 7.65%) from your adjusted gross income. This deduction reduces your income tax but does not reduce your SE tax itself. You claim this deduction on Schedule 1 of Form 1040.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">SE tax calculation example</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Suppose you earn $40,000 in gross UGC income and have $8,000 in deductible business expenses, leaving $32,000 in net profit. The IRS first applies a 92.35% factor to your net earnings (this accounts for the employer-equivalent deduction), giving you $29,552 as your SE tax base. Your SE tax is $29,552 &times; 15.3% = <strong>$4,521</strong>. You can then deduct half of that ($2,261) from your adjusted gross income when calculating your income tax.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This means that on $32,000 of net UGC earnings, you owe approximately $4,521 in SE tax alone, before any income tax. This is why setting aside 25&ndash;30% of every payment is a common recommendation for self-employed creators &mdash; it covers both SE tax and federal income tax.</p>
+      </div>
+    </section>
+
+    <!-- 04 Income Tax Brackets -->
+    <section class="guide-section" id="brackets">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Income Tax Brackets</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Income tax brackets for creators</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Federal income tax is progressive &mdash; only income in each bracket is taxed at that bracket's rate</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Most UGC creators fall in the 12% or 22% bracket for federal income tax</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">State income taxes add 0&ndash;13% on top, depending on where you live</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">In addition to self-employment tax, you owe <strong>federal income tax</strong> on your net business profit. The US uses a progressive tax system, meaning your income is divided into brackets and each portion is taxed at an increasing rate. A common misconception is that earning more pushes all of your income into a higher bracket &mdash; it does not. Only the income within each bracket is taxed at that bracket's rate.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Your taxable income is your net UGC profit minus the deductible half of your SE tax, minus either the standard deduction ($15,700 for single filers in 2026) or your itemized deductions, whichever is greater. For many creators, the standard deduction is the better choice unless they have significant mortgage interest, charitable contributions, or state/local tax deductions.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">2026 federal income tax brackets (single filers)</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full text-[13px]">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Taxable Income</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Tax Rate</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Tax on This Bracket</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink-2">$0 &ndash; $11,925</td><td class="px-4 py-2.5 text-accent font-semibold">10%</td><td class="px-4 py-2.5 text-ink-2">Up to $1,193</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink-2">$11,926 &ndash; $48,475</td><td class="px-4 py-2.5 text-accent font-semibold">12%</td><td class="px-4 py-2.5 text-ink-2">Up to $4,386</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink-2">$48,476 &ndash; $103,350</td><td class="px-4 py-2.5 text-accent font-semibold">22%</td><td class="px-4 py-2.5 text-ink-2">Up to $12,073</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink-2">$103,351 &ndash; $197,300</td><td class="px-4 py-2.5 text-accent font-semibold">24%</td><td class="px-4 py-2.5 text-ink-2">Up to $22,548</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink-2">$197,301 &ndash; $250,525</td><td class="px-4 py-2.5 text-accent font-semibold">32%</td><td class="px-4 py-2.5 text-ink-2">Up to $17,032</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink-2">$250,526 &ndash; $626,350</td><td class="px-4 py-2.5 text-accent font-semibold">35%</td><td class="px-4 py-2.5 text-ink-2">Up to $131,539</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink-2">$626,351+</td><td class="px-4 py-2.5 text-accent font-semibold">37%</td><td class="px-4 py-2.5 text-ink-2">Varies</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A UGC creator with $50,000 in net profit (after business expenses), taking the standard deduction and SE tax deduction, would have approximately $30,500 in taxable income. That puts them solidly in the 12% bracket, with a federal income tax of about $3,400. Combined with approximately $7,065 in SE tax, their total federal tax burden would be around $10,465 &mdash; an effective rate of about 21% on net earnings.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Do not forget <strong>state income taxes</strong>. States like California (up to 13.3%), New York (up to 10.9%), and New Jersey (up to 10.75%) add a significant layer. States like Texas, Florida, Nevada, and Wyoming have no state income tax, which is one reason many creators relocate as their income grows.</p>
+      </div>
+    </section>
+
+    <!-- 05 Quarterly Payments -->
+    <section class="guide-section" id="quarterly">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Quarterly Payments</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Quarterly estimated tax payments</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">If you expect to owe $1,000+ in taxes, you must make quarterly estimated payments</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use Form 1040-ES to calculate and submit payments via IRS Direct Pay or EFTPS</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Underpayment penalties apply if you pay less than 90% of current year or 100% of prior year tax</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The US tax system operates on a <strong>pay-as-you-go</strong> basis. W-2 employees have taxes withheld every paycheck. As a self-employed UGC creator, you are expected to make quarterly estimated tax payments to cover both your income tax and self-employment tax obligations throughout the year.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">You are required to make estimated payments if you expect to owe <strong>$1,000 or more</strong> in federal tax for the year (after subtracting withholding from any W-2 job and refundable credits). For most creators earning $10,000+ per year from UGC, this threshold is easily met.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">2026 quarterly deadlines</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full text-[13px]">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Quarter</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Income Period</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Payment Due</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Form</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Q1</td><td class="px-4 py-2.5 text-ink-2">Jan 1 &ndash; Mar 31</td><td class="px-4 py-2.5 text-accent font-semibold">April 15, 2026</td><td class="px-4 py-2.5 text-ink-2">1040-ES</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Q2</td><td class="px-4 py-2.5 text-ink-2">Apr 1 &ndash; May 31</td><td class="px-4 py-2.5 text-accent font-semibold">June 16, 2026</td><td class="px-4 py-2.5 text-ink-2">1040-ES</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Q3</td><td class="px-4 py-2.5 text-ink-2">Jun 1 &ndash; Aug 31</td><td class="px-4 py-2.5 text-accent font-semibold">September 15, 2026</td><td class="px-4 py-2.5 text-ink-2">1040-ES</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Q4</td><td class="px-4 py-2.5 text-ink-2">Sep 1 &ndash; Dec 31</td><td class="px-4 py-2.5 text-accent font-semibold">January 15, 2027</td><td class="px-4 py-2.5 text-ink-2">1040-ES</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">There are two safe harbor methods to avoid underpayment penalties. The <strong>prior-year method</strong> requires you to pay at least 100% of last year's total tax liability (110% if your AGI exceeded $150,000), divided into four equal quarterly payments. The <strong>current-year method</strong> requires you to pay at least 90% of what you will owe this year. Most creators with variable income find the prior-year method simpler because the payment amount is fixed and known.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">You can make payments through <strong>IRS Direct Pay</strong> (free, directly from your bank account), the <strong>Electronic Federal Tax Payment System (EFTPS)</strong>, or by mailing a check with a 1040-ES voucher. Many creators set a calendar reminder for two weeks before each deadline to calculate their payment and submit it. If your UGC income is your only income source, a simple approach is to set aside 25&ndash;30% of every payment you receive into a separate savings account earmarked for taxes.</p>
+      </div>
+    </section>
+
+    <!-- 06 Deductions -->
+    <section class="guide-section" id="deductions">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Deductions</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Deductions for UGC creators</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Business deductions reduce your net profit, lowering both income tax and SE tax</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Common deductions: equipment, software, home office, props, internet, travel, education</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Keep receipts and records for every deduction &mdash; the IRS can audit up to 3 years back</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Deductions are your most powerful tool for reducing your tax bill. Every legitimate business expense you deduct reduces your <strong>net profit</strong>, which lowers both your income tax and your self-employment tax. A $1,000 deduction for a creator in the 22% income tax bracket saves approximately $220 in income tax plus $153 in SE tax &mdash; a total savings of $373.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Common UGC creator deductions</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full text-[13px]">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Category</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Examples</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Typical Annual Cost</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Equipment</td><td class="px-4 py-2.5 text-ink-2">Camera, phone, ring light, mic, tripod</td><td class="px-4 py-2.5 text-ink-2">$500&ndash;$3,000</td><td class="px-4 py-2.5 text-ink-2">Section 179 or depreciation</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Software</td><td class="px-4 py-2.5 text-ink-2">CapCut Pro, Adobe, Canva, scheduling tools</td><td class="px-4 py-2.5 text-ink-2">$200&ndash;$800</td><td class="px-4 py-2.5 text-ink-2">Fully deductible subscriptions</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Home office</td><td class="px-4 py-2.5 text-ink-2">Dedicated filming/editing space</td><td class="px-4 py-2.5 text-ink-2">$1,500&ndash;$5,000</td><td class="px-4 py-2.5 text-ink-2">Simplified method: $5/sq ft up to 300 sq ft</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Internet &amp; phone</td><td class="px-4 py-2.5 text-ink-2">Business-use percentage of bills</td><td class="px-4 py-2.5 text-ink-2">$400&ndash;$1,200</td><td class="px-4 py-2.5 text-ink-2">Deduct business-use portion only</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Props &amp; products</td><td class="px-4 py-2.5 text-ink-2">Items purchased for content shoots</td><td class="px-4 py-2.5 text-ink-2">$300&ndash;$2,000</td><td class="px-4 py-2.5 text-ink-2">Must be used in content creation</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Travel</td><td class="px-4 py-2.5 text-ink-2">Shoots, conferences, client meetings</td><td class="px-4 py-2.5 text-ink-2">$500&ndash;$5,000</td><td class="px-4 py-2.5 text-ink-2">Transport, lodging, 50% of meals</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Education</td><td class="px-4 py-2.5 text-ink-2">Courses, workshops, coaching</td><td class="px-4 py-2.5 text-ink-2">$100&ndash;$2,000</td><td class="px-4 py-2.5 text-ink-2">Must relate to current business</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Professional services</td><td class="px-4 py-2.5 text-ink-2">CPA, tax software, legal fees</td><td class="px-4 py-2.5 text-ink-2">$200&ndash;$1,500</td><td class="px-4 py-2.5 text-ink-2">Fully deductible</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Health insurance</td><td class="px-4 py-2.5 text-ink-2">Premiums if self-employed</td><td class="px-4 py-2.5 text-ink-2">$3,000&ndash;$8,000</td><td class="px-4 py-2.5 text-ink-2">Deducted on 1040, not Schedule C</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Retirement contributions</td><td class="px-4 py-2.5 text-ink-2">SEP-IRA, Solo 401(k)</td><td class="px-4 py-2.5 text-ink-2">Up to $69,000</td><td class="px-4 py-2.5 text-ink-2">Reduces taxable income significantly</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The <strong>home office deduction</strong> is one of the most valuable for creators who film at home. You can use the simplified method ($5 per square foot, up to 300 square feet, for a maximum $1,500 deduction) or the regular method (calculate the actual percentage of your home used exclusively for business and apply that percentage to your rent/mortgage, utilities, insurance, and repairs). The space must be used <strong>regularly and exclusively</strong> for business &mdash; a corner of your bedroom that doubles as your filming area qualifies only if it is dedicated to that purpose.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The <strong>Section 179 deduction</strong> allows you to deduct the full cost of qualifying equipment in the year you purchase it, rather than depreciating it over several years. For UGC creators, this means a $1,200 camera or a $800 lighting setup can be fully deducted in the year of purchase, providing an immediate tax benefit. This is particularly valuable for creators just starting out who invest significantly in gear.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">One of the most overlooked deductions is the <strong>self-employed health insurance deduction</strong>. If you are not eligible for employer-sponsored coverage (through a spouse's job, for example), you can deduct 100% of your health, dental, and vision insurance premiums. This deduction is taken on your 1040, not on Schedule C, but it reduces your adjusted gross income and therefore your income tax.</p>
+      </div>
+    </section>
+
+    <!-- 07 1099 Forms -->
+    <section class="guide-section" id="1099">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; 1099 Forms</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">1099 forms and reporting</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brands must send you a 1099-NEC if they paid you $600+ in a calendar year</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Payment platforms may issue a 1099-K for payments exceeding the reporting threshold</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You must report all income even if you do not receive a 1099</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A 1099 is an information return that reports payments made to you. Unlike a W-2, a 1099 does not mean taxes were withheld. It simply tells both you and the IRS how much you were paid. There are two types of 1099s that UGC creators commonly receive:</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">1099-NEC (Nonemployee Compensation)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Any brand, agency, or client that pays you <strong>$600 or more</strong> in a calendar year is required to send you a 1099-NEC by January 31 of the following year. This form reports the total amount paid to you. If you work with five brands and each pays you $2,000, you should receive five separate 1099-NECs. When you fill out a W-9 for a brand before starting work, you are providing the information they need to issue this form.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">1099-K (Payment Card and Third-Party Network Transactions)</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">If you receive payments through a third-party platform (PayPal, Venmo, Stripe, etc.), that platform may issue you a 1099-K. As of 2026, the IRS reporting threshold for 1099-K is <strong>$2,500</strong> in gross payments. This threshold has been gradually lowered from the original $20,000/200 transactions rule. If you receive both a 1099-NEC and a 1099-K for the same income, be careful not to double-report it &mdash; you only report the income once.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">What if you do not receive a 1099?</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">You are legally required to report <strong>all income</strong>, regardless of whether you receive a 1099. If a brand pays you $400 (below the $600 threshold), they are not required to send a 1099, but you must still report that $400 on your Schedule C. Keep your own records of every payment received. Many creators use a spreadsheet or accounting software to track income by client, date, and amount throughout the year. This practice also helps you catch missing 1099s and resolve discrepancies.</p>
+      </div>
+    </section>
+
+    <!-- 08 International Creators -->
+    <section class="guide-section" id="international">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; International Creators</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">International creators and US taxes</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Non-US creators must submit Form W-8BEN to avoid 30% default withholding on US-source income</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Tax treaties between your country and the US may reduce or eliminate US withholding</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">You are still responsible for reporting UGC income to your home country's tax authority</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">UGC creation is inherently global. Creators in the UK, Canada, Europe, Southeast Asia, and Latin America regularly work with US-based brands and agencies. If you are a non-US creator earning income from US sources, there are specific tax rules you need to understand.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">By default, US companies are required to withhold <strong>30% of payments</strong> made to foreign individuals for US-source income. This is a flat withholding rate applied before you receive your payment. However, this rate can be reduced or eliminated through tax treaties.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Form W-8BEN</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Instead of a W-9, international creators provide <strong>Form W-8BEN</strong> (for individuals) or <strong>W-8BEN-E</strong> (for entities) to the US company paying them. This form certifies your foreign status and, if applicable, claims a reduced withholding rate under a tax treaty. The W-8BEN is valid for three years from the date of signing and must be renewed.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Tax treaty benefits</h3>
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full text-[13px]">
+            <thead>
+              <tr class="border-b border-border">
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Country</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Treaty Rate</th>
+                <th class="bg-[rgba(99,102,241,.04)] px-4 py-2.5 text-left font-semibold text-ink">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">United Kingdom</td><td class="px-4 py-2.5 text-accent font-semibold">0%</td><td class="px-4 py-2.5 text-ink-2">Independent personal services generally exempt</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Canada</td><td class="px-4 py-2.5 text-accent font-semibold">0%</td><td class="px-4 py-2.5 text-ink-2">Business profits exempt if no US permanent establishment</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Germany</td><td class="px-4 py-2.5 text-accent font-semibold">0%</td><td class="px-4 py-2.5 text-ink-2">Independent services exempt without US fixed base</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">Australia</td><td class="px-4 py-2.5 text-accent font-semibold">0%</td><td class="px-4 py-2.5 text-ink-2">Business profits article applies</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">India</td><td class="px-4 py-2.5 text-accent font-semibold">15%</td><td class="px-4 py-2.5 text-ink-2">Reduced rate for independent personal services</td></tr>
+              <tr class="border-b border-border"><td class="px-4 py-2.5 text-ink font-medium">No treaty</td><td class="px-4 py-2.5 text-accent font-semibold">30%</td><td class="px-4 py-2.5 text-ink-2">Default withholding rate applies</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">An important nuance: whether UGC creator income qualifies as "independent personal services" or "business profits" under a specific treaty depends on the treaty's language. Many modern treaties have eliminated the independent personal services article and rely solely on the business profits article. In most cases, a foreign creator without a US office, studio, or other "permanent establishment" in the US will not owe US tax on their UGC earnings &mdash; but the W-8BEN must be properly filed to claim this treatment.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Regardless of your US tax treatment, you are responsible for reporting your UGC income to your <strong>home country's tax authority</strong>. Most countries tax their residents on worldwide income. If US tax was withheld, you may be able to claim a foreign tax credit on your home country's return to avoid double taxation.</p>
+      </div>
+    </section>
+
+    <!-- 09 Record Keeping -->
+    <section class="guide-section" id="records">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Record Keeping</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Record keeping and bookkeeping</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Track every income payment and business expense throughout the year</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use a separate bank account and credit card for business transactions</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Keep records for at least 3 years (7 years recommended) &mdash; the IRS audit window</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Good record keeping is the foundation of stress-free tax filing. The IRS requires you to keep "adequate records" to substantiate income and deductions claimed on your return. In practice, this means tracking every payment you receive and every business expense you incur, with supporting documentation.</p>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">What to track</h3>
+        <ul class="list-none p-0 space-y-2 mb-4">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Income:</strong> Date, client/brand name, amount, payment method, invoice number</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Expenses:</strong> Date, vendor, amount, category, business purpose, receipt</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Mileage:</strong> Date, destination, business purpose, miles driven (if claiming vehicle expenses)</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Home office:</strong> Square footage of office, total home square footage, utility bills</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[140px]">Contracts:</strong> Copies of all <a href="/ugc-contract/" class="text-accent hover:underline">creator contracts</a>, W-9s/W-8BENs filed, 1099s received</li>
+        </ul>
+
+        <h3 class="font-display text-[18px] font-semibold tracking-[-0.01em] text-ink mt-8 mb-3">Recommended tools</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Accounting software:</strong> QuickBooks Self-Employed ($15/month), Wave (free), or FreshBooks ($19/month) are popular choices for creators. They connect to your bank account, automatically categorize transactions, and generate Schedule C reports at tax time. For creators earning under $20,000/year, a well-maintained spreadsheet can also work.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Receipt tracking:</strong> Use an app like Dext (formerly Receipt Bank), Shoeboxed, or even your phone's camera to capture receipts immediately after purchase. Paper receipts fade over time. Digital copies stored in a cloud folder organized by month are the most reliable backup.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Separate bank account:</strong> Open a dedicated business checking account, even as a sole proprietor. Running all UGC income and expenses through a single account makes tracking dramatically easier and creates a clean audit trail. Many online banks offer free business accounts with no minimum balance.</p>
+      </div>
+    </section>
+
+    <!-- 10 Common Mistakes -->
+    <section class="guide-section" id="mistakes">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Common Mistakes</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Common tax mistakes to avoid</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Not setting aside money for taxes is the single most common and costly mistake</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Missing deductions costs creators hundreds to thousands per year in overpaid taxes</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Skipping quarterly payments creates penalties even if you pay your full tax bill in April</li>
+          </ul>
+        </div>
+
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>1. Not setting aside money for taxes.</strong> This is the number one mistake. Creators receive their full payment without any withholding, spend it all, and are caught off guard by a large tax bill. The fix is simple: transfer 25&ndash;30% of every payment into a separate savings account the same day you receive it. Do not touch that money until tax time.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>2. Forgetting about self-employment tax.</strong> New creators often calculate only their income tax and forget about the 15.3% SE tax. On $30,000 of net earnings, SE tax alone is approximately $4,240. This is on top of income tax. Always account for both when estimating your tax burden.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>3. Missing deductions.</strong> Failing to track and claim legitimate business expenses means you are overpaying taxes. Common missed deductions include home office space, a portion of internet and phone bills, educational courses, and professional services (CPA fees, tax software). Even small deductions add up. A creator who misses $3,000 in deductions overpays by approximately $700&ndash;$1,100 depending on their bracket.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>4. Skipping quarterly estimated payments.</strong> Even if you pay your full tax bill on April 15, the IRS charges underpayment penalties if you did not make quarterly payments throughout the year. The penalty rate is based on the federal short-term rate plus 3 percentage points (currently around 8% annually). On a $10,000 tax bill with no quarterly payments, the penalty can be $400 to $600.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>5. Mixing personal and business finances.</strong> Using the same bank account for personal spending and UGC business income makes bookkeeping difficult and creates problems in an audit. The IRS may disallow deductions if you cannot clearly document which expenses were business-related. A separate account solves this.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>6. Not reporting income below the 1099 threshold.</strong> If a brand pays you $400, they are not required to issue a 1099. But you are still legally required to report that income. The IRS can match payments from the brand's records to your return. Unreported income is one of the most common audit triggers for self-employed individuals.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>7. Claiming personal expenses as business deductions.</strong> Your personal phone, gym membership, everyday clothing, and regular meals are not deductible simply because you are a creator. Only expenses with a clear, documented business purpose qualify. Aggressive or unsupported deductions increase audit risk.</p>
+      </div>
+    </section>
+
+    <!-- 11 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Tax glossary for UGC creators</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Key terms every creator should know, from AGI to W-9</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Understanding these terms helps you communicate with tax professionals and read IRS guidance</li>
+          </ul>
+        </div>
+        <ul class="list-none p-0 space-y-3 mb-4">
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">AGI (Adjusted Gross Income):</strong> Your total income minus specific adjustments (half of SE tax, retirement contributions, health insurance premiums). Your AGI determines eligibility for many tax benefits.</li>
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">Schedule C:</strong> The IRS form used to report profit or loss from a sole proprietorship or single-member LLC. You list your gross income, deductible expenses, and net profit here.</li>
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">Schedule SE:</strong> The form used to calculate your self-employment tax (Social Security + Medicare). Your SE tax result carries over to your 1040.</li>
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">Form 1040-ES:</strong> The form (and vouchers) used to make quarterly estimated tax payments.</li>
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">1099-NEC:</strong> The information return a client sends you (and the IRS) reporting $600+ in nonemployee compensation paid to you during the year.</li>
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">1099-K:</strong> The information return a payment platform sends when your transactions exceed the reporting threshold ($2,500 in 2026).</li>
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">W-9:</strong> The form you provide to US clients certifying your taxpayer identification number (SSN or EIN) so they can issue your 1099.</li>
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">W-8BEN:</strong> The form non-US individuals provide to US payers certifying foreign status and, if applicable, claiming tax treaty benefits.</li>
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">Section 179:</strong> An IRS provision allowing you to deduct the full purchase price of qualifying business equipment in the year of purchase, rather than depreciating over time.</li>
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">SEP-IRA:</strong> A Simplified Employee Pension retirement account for self-employed individuals. Contributions are tax-deductible and reduce your taxable income. You can contribute up to 25% of net self-employment income.</li>
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">Net Profit:</strong> Your gross UGC income minus all allowable business deductions. Net profit is the figure used to calculate both your income tax and self-employment tax.</li>
+          <li class="text-ink-2 leading-[1.65]"><strong class="text-ink">Safe Harbor:</strong> A method for calculating quarterly estimated payments that guarantees you will not owe underpayment penalties, even if you end up owing additional tax at filing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 12 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">12 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "How much should I set aside for taxes as a UGC creator?", a: "A common recommendation is 25-30% of every payment. This covers both self-employment tax (15.3%) and federal income tax (10-22% for most creators). If you live in a state with income tax, consider setting aside 30-35%. It is better to over-save and get a refund than to face a surprise bill." },
+          { q: "Do I need to pay taxes if I earned less than $600 from UGC?", a: "Yes. The $600 threshold only determines whether a client must send you a 1099-NEC. It does not determine whether the income is taxable. All self-employment income is taxable regardless of amount. However, if your total net self-employment income is under $400 for the year, you are not required to pay self-employment tax (though you must still report the income)." },
+          { q: "Can I deduct the cost of products I review in UGC videos?", a: "If you purchase products specifically for use in UGC content, the cost is generally deductible as a business expense. Products sent to you for free by brands are not a deductible expense (you did not pay for them). If you keep and personally use a product after filming, the IRS may argue it has personal value and is not fully deductible. Document the business purpose of every purchase." },
+          { q: "What happens if I do not file taxes on my UGC income?", a: "Failing to file or report income can result in penalties, interest, and potential legal consequences. The IRS receives copies of your 1099s and can match them against your return. If they find unreported income, they will send a notice and assess additional tax plus penalties (typically 20-25% of the underpayment) and interest. In serious cases, failure to file can lead to criminal charges." },
+          { q: "Should I hire a CPA or use tax software?", a: "For your first year as a creator, a CPA experienced with self-employed clients is worth the investment ($200-$500). They can set up your filing structure, identify deductions you might miss, and advise on quarterly payments. In subsequent years, if your situation is straightforward, tax software like TurboTax Self-Employed or FreeTaxUSA can handle Schedule C filing effectively." },
+          { q: "Can I deduct my home internet and phone as a UGC creator?", a: "Yes, but only the business-use portion. If you estimate that 60% of your internet usage is for UGC work (uploading content, research, platform management), you can deduct 60% of your internet bill. The same applies to your phone plan. Keep a log or reasonable estimate of business versus personal usage." },
+          { q: "Do international UGC creators pay US taxes?", a: "It depends. Non-US creators earning income from US-based brands may be subject to 30% withholding on US-source income. However, tax treaties between the US and many countries can reduce or eliminate this withholding. International creators must file Form W-8BEN with each US payer. They are also responsible for reporting the income in their home country." },
+          { q: "What is the difference between a 1099-NEC and a 1099-K?", a: "A 1099-NEC is issued directly by the brand or agency that paid you $600+ for your services. A 1099-K is issued by a payment platform (PayPal, Stripe, Venmo) when your transactions through that platform exceed the reporting threshold ($2,500 in 2026). If you receive both for the same income, report it only once on your Schedule C." },
+          { q: "Can I contribute to a retirement account to reduce my taxes?", a: "Yes. Self-employed creators can open a SEP-IRA (contribute up to 25% of net self-employment income, max $69,000 in 2026) or a Solo 401(k) (up to $23,500 employee contribution plus 25% employer contribution). These contributions reduce your taxable income dollar-for-dollar. A $5,000 SEP-IRA contribution for a creator in the 22% bracket saves $1,100 in income tax plus reduces the base for other calculations." },
+          { q: "How do I know what UGC rate to charge to cover my taxes?", a: "When setting your rates, remember that roughly 25-30% of your gross income goes to taxes. If you want to take home $100 per video, you need to charge at least $130-$140 to cover your tax obligation. See our UGC rates guide for current market benchmarks." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Need help navigating UGC creator taxes?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">We work with hundreds of UGC creators and can connect you with tax professionals who specialize in creator income. Let us help you build a sustainable content business.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get in touch &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on publicly available IRS publications, tax code provisions, and common self-employment tax guidance current as of September 2026. Tax brackets, thresholds, and standard deduction amounts reflect 2026 inflation adjustments where available. Treaty rates are general summaries and may vary based on the specific type of income and treaty article. This content is educational and does not replace professional tax advice. Consult a CPA or enrolled agent for guidance specific to your circumstances.</p>
+      </div>
+    </section>
+
+    <!-- Lead Form -->
+    <section class="py-16 border-t border-border" id="get-started">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-card border border-border rounded-2xl p-8 sm:p-10">
+          <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-4">Free consultation</div>
+            <h2 class="font-display font-bold text-[clamp(22px,3.5vw,30px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Get a Custom UGC Plan for Your Brand</h2>
+            <p class="text-[15px] text-ink-2 max-w-[500px] mx-auto leading-[1.5]">Tell us about your brand and we'll send you a custom UGC strategy — content formats, creator count, estimated costs, and timeline.</p>
+          </div>
+          <form id="canvas-form" class="space-y-4 max-w-[480px] mx-auto">
+            <div>
+              <label for="cf-company" class="block text-[13px] font-medium text-ink mb-1.5">Company / Brand *</label>
+              <input type="text" id="cf-company" name="company" required placeholder="Acme Inc." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-email" class="block text-[13px] font-medium text-ink mb-1.5">Work email *</label>
+              <input type="email" id="cf-email" name="email" required placeholder="you@company.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-website" class="block text-[13px] font-medium text-ink mb-1.5">Website</label>
+              <input type="url" id="cf-website" name="website" placeholder="https://yoursite.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-budget" class="block text-[13px] font-medium text-ink mb-1.5">Monthly content budget</label>
+              <select id="cf-budget" name="budget" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] focus:outline-none focus:border-accent transition-colors appearance-none">
+                <option value="">Select range</option>
+                <option value="under-2k">Under $2,000</option>
+                <option value="2k-5k">$2,000 – $5,000</option>
+                <option value="5k-10k">$5,000 – $10,000</option>
+                <option value="10k+">$10,000+</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label for="cf-message" class="block text-[13px] font-medium text-ink mb-1.5">What are you looking to achieve?</label>
+              <textarea id="cf-message" name="message" rows="3" placeholder="E.g. We want to grow our TikTok presence with 20+ videos per month..." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors resize-y"></textarea>
+            </div>
+            <button type="submit" id="cf-submit" class="w-full py-3.5 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all cursor-pointer border-none">Get my UGC plan &rarr;</button>
+            <div id="cf-status" class="text-center text-[13px] hidden"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <a href="/ugc-rates/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Rates Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Complete pricing benchmarks for 2026</p>
+          </a>
+          <a href="/canvas-ugc-earnings/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Earnings</p>
+            <p class="text-[12px] text-muted leading-[1.4]">How much do Canvas UGC creators make?</p>
+          </a>
+          <a href="/ugc-contract/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">UGC Contract Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Usage rights, payment terms, and red flags</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "UGC Creator Taxes: What You Need to Know in 2026",
+    "description": "A comprehensive guide to UGC creator taxes in 2026: self-employment tax, deductions, quarterly payments, 1099 forms, international creators, and record keeping.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/ugc-creator-taxes/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "UGC Creator Taxes" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How much should I set aside for taxes as a UGC creator?", "acceptedAnswer": { "@type": "Answer", "text": "A common recommendation is 25-30% of every payment. This covers both self-employment tax (15.3%) and federal income tax (10-22% for most creators). If you live in a state with income tax, consider setting aside 30-35%. It is better to over-save and get a refund than to face a surprise bill." } },
+      { "@type": "Question", "name": "Do I need to pay taxes if I earned less than $600 from UGC?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The $600 threshold only determines whether a client must send you a 1099-NEC. It does not determine whether the income is taxable. All self-employment income is taxable regardless of amount. However, if your total net self-employment income is under $400 for the year, you are not required to pay self-employment tax (though you must still report the income)." } },
+      { "@type": "Question", "name": "Can I deduct the cost of products I review in UGC videos?", "acceptedAnswer": { "@type": "Answer", "text": "If you purchase products specifically for use in UGC content, the cost is generally deductible as a business expense. Products sent to you for free by brands are not a deductible expense (you did not pay for them). If you keep and personally use a product after filming, the IRS may argue it has personal value and is not fully deductible. Document the business purpose of every purchase." } },
+      { "@type": "Question", "name": "What happens if I do not file taxes on my UGC income?", "acceptedAnswer": { "@type": "Answer", "text": "Failing to file or report income can result in penalties, interest, and potential legal consequences. The IRS receives copies of your 1099s and can match them against your return. If they find unreported income, they will send a notice and assess additional tax plus penalties (typically 20-25% of the underpayment) and interest. In serious cases, failure to file can lead to criminal charges." } },
+      { "@type": "Question", "name": "Should I hire a CPA or use tax software?", "acceptedAnswer": { "@type": "Answer", "text": "For your first year as a creator, a CPA experienced with self-employed clients is worth the investment ($200-$500). They can set up your filing structure, identify deductions you might miss, and advise on quarterly payments. In subsequent years, if your situation is straightforward, tax software like TurboTax Self-Employed or FreeTaxUSA can handle Schedule C filing effectively." } },
+      { "@type": "Question", "name": "Can I deduct my home internet and phone as a UGC creator?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, but only the business-use portion. If you estimate that 60% of your internet usage is for UGC work (uploading content, research, platform management), you can deduct 60% of your internet bill. The same applies to your phone plan. Keep a log or reasonable estimate of business versus personal usage." } },
+      { "@type": "Question", "name": "Do international UGC creators pay US taxes?", "acceptedAnswer": { "@type": "Answer", "text": "It depends. Non-US creators earning income from US-based brands may be subject to 30% withholding on US-source income. However, tax treaties between the US and many countries can reduce or eliminate this withholding. International creators must file Form W-8BEN with each US payer. They are also responsible for reporting the income in their home country." } },
+      { "@type": "Question", "name": "What is the difference between a 1099-NEC and a 1099-K?", "acceptedAnswer": { "@type": "Answer", "text": "A 1099-NEC is issued directly by the brand or agency that paid you $600+ for your services. A 1099-K is issued by a payment platform (PayPal, Stripe, Venmo) when your transactions through that platform exceed the reporting threshold ($2,500 in 2026). If you receive both for the same income, report it only once on your Schedule C." } },
+      { "@type": "Question", "name": "Can I contribute to a retirement account to reduce my taxes?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Self-employed creators can open a SEP-IRA (contribute up to 25% of net self-employment income, max $69,000 in 2026) or a Solo 401(k) (up to $23,500 employee contribution plus 25% employer contribution). These contributions reduce your taxable income dollar-for-dollar. A $5,000 SEP-IRA contribution for a creator in the 22% bracket saves $1,100 in income tax plus reduces the base for other calculations." } },
+      { "@type": "Question", "name": "How do I know what UGC rate to charge to cover my taxes?", "acceptedAnswer": { "@type": "Answer", "text": "When setting your rates, remember that roughly 25-30% of your gross income goes to taxes. If you want to take home $100 per video, you need to charge at least $130-$140 to cover your tax obligation. See our UGC rates guide for current market benchmarks." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  const form = document.getElementById('canvas-form');
+  const status = document.getElementById('cf-status');
+  const submitBtn = document.getElementById('cf-submit');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      status.className = 'text-center text-[13px] hidden';
+      try {
+        const fd = new FormData(form);
+        const data = Object.fromEntries(fd.entries());
+        data.source = window.location.pathname;
+        const resp = await fetch('https://okad.cc/api/canvas-form/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (resp.ok) {
+          status.textContent = 'Thank you! We\'ll get back to you within 24 hours.';
+          status.className = 'text-center text-[13px] text-green-400 mt-2';
+          form.reset();
+        } else {
+          const err = await resp.json().catch(() => ({}));
+          status.textContent = err.error || 'Something went wrong. Please try again.';
+          status.className = 'text-center text-[13px] text-red-400 mt-2';
+        }
+      } catch {
+        status.textContent = 'Network error. Please try again.';
+        status.className = 'text-center text-[13px] text-red-400 mt-2';
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get my UGC plan →';
+    });
+  }
+</script>

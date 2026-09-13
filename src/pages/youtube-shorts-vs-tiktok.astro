@@ -1,0 +1,698 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailHref = "mailto:olga@okad.agency?subject=Short-form%20video%20strategy%20%E2%80%94%20tell%20us%20about%20your%20needs";
+const calHref = "https://calendly.com/okad_calls/first";
+
+const faqItems = [
+  { q: "Which platform pays more per view in 2026?", a: "YouTube Shorts pays significantly more per view. The average RPM for Shorts ranges from $0.04 to $0.12, while TikTok's Creativity Program Beta pays roughly $0.02 to $0.05 per 1,000 views. YouTube's ad-revenue sharing model gives creators a structural advantage because the money comes from advertisers bidding on ad placements, not from a fixed fund. However, TikTok creators can earn more from brand deals and gifting on a per-follower basis due to higher engagement rates." },
+  { q: "Can I post the same video on both platforms?", a: "Yes, and most successful creators do. Remove platform-specific watermarks before cross-posting — both algorithms deprioritize videos with competitor watermarks. Use a tool like SnapTik or SaveTT to download clean versions from TikTok, or better yet, export the original file from your editing app and upload natively to each platform. Adjust captions and hashtags to fit each platform's conventions." },
+  { q: "Do I need separate accounts for YouTube Shorts and TikTok?", a: "No. On YouTube, Shorts are published from your main channel alongside long-form content. On TikTok, you have a single account. Many creators maintain both and use each platform's strengths: TikTok for rapid audience testing and trend participation, YouTube Shorts for long-term discoverability and higher RPM monetization." },
+  { q: "How many subscribers do I need to monetize YouTube Shorts?", a: "You need 1,000 subscribers and either 4,000 watch hours on long-form videos or 10 million Shorts views in the past 90 days to join the YouTube Partner Program. The Shorts-specific threshold (10 million views) is designed for creators who focus exclusively on short-form content. Once accepted, you earn a share of ad revenue from ads displayed between Shorts in the feed." },
+  { q: "What is TikTok's Creativity Program Beta?", a: "The Creativity Program Beta replaced the original Creator Fund in 2023 and offers significantly higher payouts. To qualify, you need 10,000 followers, 100,000 views in the last 30 days, and your videos must be longer than 60 seconds. The program pays based on qualified views — views from real users on original content. Payouts vary but typically range from $0.50 to $1.00 per 1,000 qualified views, which is substantially better than the old Creator Fund's $0.02 to $0.04 per 1,000 views." },
+  { q: "Which platform is better for brand deals?", a: "Both platforms attract brand deals, but TikTok creators tend to command higher rates relative to their follower count because of higher average engagement rates. A TikTok creator with 100,000 followers might charge $1,000 to $3,000 per sponsored post, while a YouTube Shorts creator with the same following might charge $500 to $1,500 for a Shorts integration. However, YouTube creators can bundle Shorts with long-form sponsorships for significantly higher total deal values." },
+  { q: "How long should my Shorts or TikToks be?", a: "YouTube Shorts can be up to 3 minutes (expanded from 60 seconds in 2024). TikTok videos can be up to 10 minutes, though the algorithm favors content under 3 minutes for broader distribution. For both platforms, the sweet spot for virality is 30 to 90 seconds — long enough to deliver value, short enough to maintain retention. Videos over 60 seconds are required for TikTok's Creativity Program Beta." },
+  { q: "Does OKAD help with short-form video strategy?", a: "Yes. We help brands and creators develop platform-specific short-form video strategies, including content planning, hook optimization, cross-posting workflows, and performance tracking. We handle everything from concept development to production and analytics. Reach out at olga@okad.agency or book a call to discuss your needs." },
+];
+---
+
+<Layout
+  title="YouTube Shorts vs TikTok for Creators: Which Pays More in 2026? | OKAD"
+  description="An in-depth comparison of YouTube Shorts and TikTok for creators in 2026. Compare monetization (RPM, Creator Fund, Creativity Program), algorithm mechanics, audience demographics, growth strategies, and cross-posting workflows. Data-backed guide by OKAD Agency."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Platform comparison &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          YouTube Shorts vs TikTok: <span class="text-accent">Which Pays More in 2026?</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Two platforms dominate short-form video. One shares ad revenue directly. The other offers faster growth and higher engagement. This guide compares monetization, algorithms, audiences, and growth strategies &mdash; so you can decide where to invest your time.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailHref} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get a video strategy &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>RPM comparison</span>
+          <span>Algorithm breakdown</span>
+          <span>Cross-posting strategy</span>
+          <span>Growth playbook</span>
+          <span>2026 data</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">Why This Comparison Matters</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4B0;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Monetization Gap</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">YouTube Shorts RPM can be 2&ndash;5x higher than TikTok's Creativity Program. But TikTok creators often earn more from brand deals and gifting per follower.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Different Growth Curves</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">TikTok's algorithm favors new creators with explosive early reach. YouTube Shorts rewards consistency and channel authority over time.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F504;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Cross-Post or Specialize?</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Most successful creators post on both platforms. The question is how to optimize each video for each algorithm without doubling your workload.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "The Short-Form Landscape in 2026", href: "#landscape" },
+            { num: "02", text: "Monetization Comparison", href: "#monetization" },
+            { num: "03", text: "Algorithm Differences", href: "#algorithm" },
+            { num: "04", text: "Audience Demographics", href: "#audience" },
+            { num: "05", text: "Content Format Differences", href: "#formats" },
+            { num: "06", text: "Growth Strategies for YouTube Shorts", href: "#growth-shorts" },
+            { num: "07", text: "Growth Strategies for TikTok", href: "#growth-tiktok" },
+            { num: "08", text: "Cross-Posting Strategy", href: "#cross-posting" },
+            { num: "09", text: "Analytics and Metrics", href: "#analytics" },
+            { num: "10", text: "Which Platform to Choose", href: "#decision" },
+            { num: "11", text: "Glossary", href: "#glossary" },
+            { num: "12", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 Landscape -->
+    <section class="guide-section" id="landscape">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Landscape</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">The short-form video landscape in 2026</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Short-form vertical video is the dominant content format across social platforms</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">YouTube Shorts surpassed 70 billion daily views; TikTok exceeds 1 billion monthly active users</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Creator monetization has matured on both platforms with distinct economic models</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Short-form vertical video has become the primary way people consume content on mobile devices. What started as a novelty with Vine and Musical.ly has evolved into the dominant media format of the mid-2020s. By 2026, creators, brands, and media companies treat short-form video as a core distribution channel &mdash; not an experiment.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>YouTube Shorts</strong> launched in 2020 as Google's response to TikTok and has grown into a major pillar of the YouTube ecosystem. In 2024, YouTube introduced ad-revenue sharing for Shorts creators, fundamentally changing the economics. By 2026, Shorts accounts for a significant portion of total YouTube watch time, and the platform has expanded the maximum duration to 3 minutes. YouTube's key advantage is its integration with the broader YouTube ecosystem &mdash; Shorts can drive subscribers to long-form content, memberships, and Super Chats.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>TikTok</strong> remains the platform that defined the short-form format. Despite regulatory challenges in multiple markets, it maintains over 1 billion monthly active users globally and continues to set trends in content creation, music discovery, and e-commerce. TikTok has expanded beyond short clips into longer videos, live shopping, and a mature advertising platform. Its algorithm remains the gold standard for content discovery &mdash; surfacing videos to the right audiences regardless of follower count.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For creators deciding where to invest their time, the choice between YouTube Shorts and TikTok is not binary. Each platform offers distinct advantages in monetization, growth, audience, and content style. Understanding these differences is essential for building a sustainable creator business. For brands working with agencies like <a href="/canvas-ugc/">OKAD</a>, the platform mix directly affects content strategy, production workflows, and ROI.</p>
+      </div>
+    </section>
+
+    <!-- 02 Monetization -->
+    <section class="guide-section" id="monetization">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Monetization</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Monetization comparison: who pays creators more?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">YouTube Shorts RPM: $0.04&ndash;$0.12 per 1,000 views via ad-revenue sharing</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok Creativity Program Beta: $0.50&ndash;$1.00 per 1,000 qualified views (videos 60s+)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Both platforms supplement direct payouts with brand deals, tips, and e-commerce</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Monetization is the most asked-about topic in the Shorts vs TikTok debate. The answer depends on which revenue streams you count. For direct platform payouts, the models are fundamentally different.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">YouTube Shorts monetization</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">YouTube Shorts uses an <strong>ad-revenue sharing model</strong>. Ads run between Shorts in the feed, and the revenue from those ads is pooled. YouTube allocates a portion of that pool to creators based on their share of total Shorts views, then applies a 45% revenue share (the creator keeps 45% of the allocated amount). This model launched in February 2023 and has matured through 2024&ndash;2026.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The effective RPM (revenue per 1,000 views) for Shorts varies widely &mdash; typically between <strong>$0.04 and $0.12</strong>. This is lower than YouTube long-form RPM ($3&ndash;$12+), but the volume of Shorts views can be enormous. A creator getting 10 million Shorts views per month might earn $400&ndash;$1,200 from ad revenue alone. The RPM is influenced by the viewer's geography, the advertiser demand in that market, and the content category. Finance and tech niches see higher RPMs; entertainment and comedy see lower.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">To qualify for Shorts monetization, creators must join the <strong>YouTube Partner Program</strong> (YPP), which requires 1,000 subscribers and either 4,000 watch hours on long-form content or 10 million Shorts views in 90 days. For more details on YouTube Shorts revenue mechanics, see our <a href="/youtube-shorts-monetization/">YouTube Shorts monetization guide</a>.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">TikTok monetization</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok's monetization landscape has evolved significantly. The original <strong>Creator Fund</strong> (launched 2020) paid notoriously low rates &mdash; roughly $0.02&ndash;$0.04 per 1,000 views &mdash; and was widely criticized for its fixed-pool structure that diluted payouts as more creators joined. TikTok replaced it with the <strong>Creativity Program Beta</strong> in 2023, which pays substantially more: approximately <strong>$0.50&ndash;$1.00 per 1,000 qualified views</strong>. The catch: only videos longer than 60 seconds qualify, and creators need 10,000+ followers and 100,000+ views in the last 30 days.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Beyond direct payouts, TikTok offers <strong>TikTok Pulse</strong> (placing creator content next to top-performing videos with ad-revenue sharing), <strong>LIVE gifts</strong> (virtual gifting during live streams), <strong>TikTok Shop</strong> (affiliate commissions and direct sales), and <strong>Series</strong> (premium paywalled content). For many TikTok creators, brand sponsorships remain the largest revenue source &mdash; TikTok's high engagement rates make creators attractive to advertisers, often at higher per-post rates relative to follower count compared to other platforms.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full text-[13px]">
+            <thead>
+              <tr>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">Revenue stream</th>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">YouTube Shorts</th>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">TikTok</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Ad-revenue sharing</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">45% share, RPM $0.04&ndash;$0.12</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Pulse only (top 4% content)</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Creator program</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Part of YPP (same program)</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Creativity Program Beta, $0.50&ndash;$1.00 CPM</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Eligibility</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">1K subs + 10M Shorts views (90d)</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">10K followers + 100K views (30d)</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Brand deals (avg rate)</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">$500&ndash;$1,500 / 100K followers</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">$1,000&ndash;$3,000 / 100K followers</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Live gifting</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Super Thanks, Super Chat</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">LIVE gifts, coins, diamonds</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">E-commerce</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">YouTube Shopping (limited)</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">TikTok Shop (affiliate + direct)</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2">Paywall content</td><td class="px-4 py-2.5 text-ink-2">Channel memberships</td><td class="px-4 py-2.5 text-ink-2">Series (premium videos)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The bottom line: YouTube Shorts pays more per view for most creators through its ad-revenue share, and the income is more predictable and scalable. TikTok's Creativity Program Beta offers competitive rates for longer videos, and TikTok creators often earn more from sponsorships and e-commerce. The optimal strategy for maximizing total revenue is to be active on both platforms.</p>
+      </div>
+    </section>
+
+    <!-- 03 Algorithm -->
+    <section class="guide-section" id="algorithm">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Algorithm</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How each algorithm surfaces content</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok's For You Page is content-first &mdash; follower count barely matters for distribution</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">YouTube Shorts blends content signals with channel authority and watch history</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Both platforms prioritize retention rate as the primary ranking signal</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Understanding how each algorithm works is critical for creators because it determines who sees your content and how far it can spread. Despite surface similarities, TikTok and YouTube Shorts use meaningfully different recommendation systems.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">TikTok's algorithm</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok's recommendation engine is <strong>content-first</strong>. When you post a video, TikTok shows it to a small test audience (typically a few hundred users) and measures engagement signals: watch time, completion rate, replays, shares, comments, and likes &mdash; roughly in that order of importance. If the video performs well with the test group, TikTok expands distribution to larger audiences in waves. A video from an account with zero followers can reach millions if the content performs well at each expansion stage.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">This content-first approach makes TikTok uniquely meritocratic for new creators. The algorithm does not heavily weight follower count or posting history. It optimizes for <strong>keeping users on the platform</strong>, which means it favors videos that hold attention and generate interaction. The downside: TikTok's distribution is volatile. A creator might get 2 million views on one video and 2,000 on the next. The algorithm does not guarantee baseline reach to your followers. Understanding <a href="/hook-rate/">hook rate</a> is essential for performing well on TikTok &mdash; the first few seconds determine whether the algorithm promotes your content.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">YouTube Shorts algorithm</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">YouTube's Shorts recommendation system is more <strong>hybrid</strong>. It considers the video's performance (retention, engagement) but also factors in <strong>channel authority</strong> &mdash; the channel's topic, subscriber base, and historical performance. A channel that consistently publishes Shorts in a specific niche will get more algorithmic support over time. YouTube also cross-recommends between Shorts and long-form content, which means a viral Short can drive subscribers who then watch your longer videos.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">YouTube Shorts tends to provide <strong>more stable baseline reach</strong> to existing subscribers compared to TikTok. The Shorts shelf (the dedicated Shorts feed) mixes subscribed and recommended content. YouTube also surfaces Shorts on the homepage, in search results, and as suggested videos. This multi-surface distribution gives Shorts a longer tail &mdash; a Short published months ago can still accumulate views through search and recommendations, whereas TikTok videos tend to peak and fade within 48&ndash;72 hours.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full text-[13px]">
+            <thead>
+              <tr>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">Signal</th>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">YouTube Shorts</th>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">TikTok</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Primary ranking factor</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Retention + channel authority</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Retention + engagement velocity</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">New creator advantage</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Moderate &mdash; channel history matters</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Strong &mdash; content-first distribution</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Content lifespan</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Long tail (search + suggested)</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Short burst (48&ndash;72h peak)</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Subscriber feed priority</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Moderate &mdash; Shorts shelf + homepage</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Low &mdash; FYP dominates, Following tab secondary</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2">Cross-format boost</td><td class="px-4 py-2.5 text-ink-2">Yes &mdash; Shorts boost long-form channel</td><td class="px-4 py-2.5 text-ink-2">No &mdash; single-format platform</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Audience -->
+    <section class="guide-section" id="audience">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Audience</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Audience demographics and engagement patterns</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok skews younger (16&ndash;34); YouTube Shorts has broader age distribution (18&ndash;49)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok engagement rates are 2&ndash;3x higher than YouTube Shorts on average</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">YouTube has stronger reach in India, Brazil, and Japan; TikTok leads in Southeast Asia and Europe</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The audiences on each platform overlap but are not identical. Understanding the demographic differences helps creators choose the right platform for their niche and tailor their content accordingly.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>TikTok's audience</strong> skews younger. Approximately 60% of users are between 16 and 34 years old, with the 18&ndash;24 bracket being the most active. TikTok's user base is culturally engaged &mdash; they participate in trends, create duets and stitches, and use the platform for entertainment, education, and product discovery. Engagement rates on TikTok are significantly higher than other platforms: average engagement per video for creators with 10,000&ndash;100,000 followers is typically 4&ndash;8%, compared to 1&ndash;3% on YouTube Shorts. TikTok also has a strong presence in Southeast Asia, Europe, and Latin America.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>YouTube Shorts' audience</strong> is broader in age distribution. YouTube reaches 2.7 billion monthly active users globally, and the Shorts audience spans from teenagers to viewers in their 50s. This wider demographic makes YouTube Shorts particularly attractive for creators in niches that target adults &mdash; personal finance, business, home improvement, tech reviews, and education. YouTube's geographic reach is also broader, with particularly strong penetration in India (the largest YouTube market), Brazil, Japan, and the United States.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For brands and creators producing <a href="/canvas-ugc/">UGC-style content</a>, the platform choice often comes down to target demographic. If you are targeting Gen Z consumers for lifestyle, fashion, or beauty products, TikTok's audience is a better fit. If you are targeting a broader or older demographic, or if your content is educational or informational, YouTube Shorts provides better reach.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full text-[13px]">
+            <thead>
+              <tr>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">Metric</th>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">YouTube Shorts</th>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">TikTok</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Core age group</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">18&ndash;49</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">16&ndash;34</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Monthly active users</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">2.7B+ (YouTube total)</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">1B+</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Avg engagement rate</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">1&ndash;3%</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">4&ndash;8%</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Strongest regions</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">India, US, Brazil, Japan</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">SE Asia, US, Europe, LATAM</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2">Purchase intent</td><td class="px-4 py-2.5 text-ink-2">Moderate (search-driven)</td><td class="px-4 py-2.5 text-ink-2">High (discovery-driven, TikTok Shop)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Format Differences -->
+    <section class="guide-section" id="formats">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Formats</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Content format and technical differences</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">YouTube Shorts: up to 3 minutes, 9:16 aspect ratio, limited in-app editing</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok: up to 10 minutes, rich in-app effects, duet/stitch features</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Both platforms support captions, music, and text overlays natively</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">While both platforms serve vertical video, they differ in technical specs, creative tools, and content conventions. These differences affect how creators produce, edit, and optimize their content for each platform.</p>
+
+        <div class="overflow-x-auto rounded-xl border border-border bg-card mb-6">
+          <table class="w-full text-[13px]">
+            <thead>
+              <tr>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">Spec</th>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">YouTube Shorts</th>
+                <th class="bg-[rgba(99,102,241,.04)] text-left px-4 py-3 font-semibold text-ink border-b border-border">TikTok</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Max duration</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">3 minutes</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">10 minutes</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Aspect ratio</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">9:16 (vertical)</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">9:16 (vertical)</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Resolution</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">1080 &times; 1920 recommended</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">1080 &times; 1920 recommended</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">In-app editing</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Basic (trim, music, text, filters)</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Advanced (effects, transitions, green screen, templates)</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Duet / Stitch</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Remix (limited)</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Duet + Stitch (robust)</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Music library</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">YouTube Audio Library (large)</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Full commercial tracks (extensive)</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2 border-b border-border">Auto captions</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Yes</td><td class="px-4 py-2.5 text-ink-2 border-b border-border">Yes</td></tr>
+              <tr><td class="px-4 py-2.5 text-ink-2">Hashtag system</td><td class="px-4 py-2.5 text-ink-2">Moderate importance</td><td class="px-4 py-2.5 text-ink-2">High importance for discovery</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>TikTok's creative tools</strong> are more advanced and deeply integrated. The in-app editor supports complex transitions, green screen effects, voice effects, templates, and trending audio. Duet and Stitch features encourage collaborative and reactive content, which drives engagement and helps videos go viral. TikTok's trends are largely format-driven &mdash; a trending sound, template, or editing style can carry a video to millions of views even with simple production.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>YouTube Shorts' editing tools</strong> are more basic but improving. YouTube has been investing in its Shorts creation tools, adding features like the Remix button (similar to Duet), AI-generated backgrounds, and a growing music library. The advantage of YouTube Shorts is that content can be produced in any external editing app and uploaded natively &mdash; professional-grade editing is common and even preferred in many niches.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For creators producing content at scale, the format differences matter for workflow. TikTok rewards trend participation and in-app features. YouTube Shorts rewards polished, evergreen content that performs over time. The ideal approach is to produce core content externally (using CapCut, Premiere, or DaVinci Resolve) and then add platform-specific elements before publishing.</p>
+      </div>
+    </section>
+
+    <!-- 06 Growth Shorts -->
+    <section class="guide-section" id="growth-shorts">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Growth: YouTube Shorts</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Growth strategies for YouTube Shorts</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Niche consistency builds channel authority and improves algorithmic recommendations</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Use Shorts as a funnel to drive subscribers to long-form content</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Optimize for search by including relevant keywords in titles and descriptions</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Growing on YouTube Shorts requires a different mindset than TikTok. YouTube rewards <strong>consistency, niche focus, and channel-level authority</strong>. Here are the strategies that work best in 2026.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">1. Niche down and stay consistent</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">YouTube's algorithm learns your channel's topic over time. A channel that posts cooking Shorts consistently will be recommended to cooking enthusiasts. Jumping between unrelated topics confuses the algorithm and dilutes your subscriber base. Pick a clear niche and build authority within it. Post at least 3&ndash;5 Shorts per week to maintain momentum.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">2. Use Shorts as a subscriber funnel</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most powerful use of Shorts on YouTube is driving subscribers who then watch your long-form videos. End your Shorts with a verbal or visual CTA to subscribe or watch a related long-form video. YouTube's algorithm will cross-promote your Shorts and long-form content to the same audience. This creates a flywheel: Shorts bring new viewers, long-form content builds loyalty and watch time, and the combined channel metrics improve recommendations for both formats.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">3. Optimize for search</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Unlike TikTok, YouTube is fundamentally a search engine. Your Shorts can appear in YouTube search results and Google search. Use descriptive titles with relevant keywords, write detailed descriptions, and add relevant tags. This SEO advantage gives YouTube Shorts a long tail &mdash; a well-optimized Short can continue to attract views months after publishing, whereas TikTok videos rarely get discovered through search.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">4. Hook in the first frame</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Retention is the primary algorithm signal. The first 1&ndash;2 seconds must grab attention immediately. Use bold text overlays, unexpected visuals, or a compelling question to stop the scroll. For a deep dive on <a href="/hook-rate/">optimizing your hook rate</a>, check our dedicated guide. On YouTube Shorts specifically, the thumbnail (auto-selected from the video) also matters, as it appears in search results and suggested videos.</p>
+      </div>
+    </section>
+
+    <!-- 07 Growth TikTok -->
+    <section class="guide-section" id="growth-tiktok">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Growth: TikTok</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Growth strategies for TikTok</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Trend participation is the fastest path to reach on TikTok</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Post volume matters &mdash; 1&ndash;3 videos per day is the standard for growth</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Community interaction (replies, duets, stitches) amplifies content distribution</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok growth is driven by <strong>content velocity, trend participation, and community interaction</strong>. The platform rewards creators who publish frequently and engage with the broader TikTok culture.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">1. Ride trends early</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok's culture revolves around trends &mdash; sounds, formats, dances, challenges, and narrative structures that spread across the platform. Creators who adopt trends early (within 24&ndash;48 hours of emergence) get disproportionate distribution because the algorithm is actively pushing that trend to more users. Use TikTok's Creative Center and the Discover page to spot emerging trends. Apply the trend to your niche rather than copying it verbatim.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">2. Post frequently</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Volume is more important on TikTok than on YouTube Shorts. Posting 1&ndash;3 times per day is common among growing creators. Each video is an independent shot at the algorithm &mdash; one viral video can bring more followers than a month of steady posting. TikTok does not penalize accounts for posting frequently or for having videos that underperform. This "lottery ticket" dynamic means the optimal strategy is to publish as much quality content as possible.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">3. Engage with your community</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok's algorithm boosts content from creators who actively engage. Reply to comments with video responses (these often outperform original content). Use Duet and Stitch to react to other creators' content in your niche. Go live regularly &mdash; live streaming increases your account's visibility in the recommendation system. Community engagement signals to the algorithm that you are an active, valued participant on the platform.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">4. Optimize for completion rate</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok's algorithm heavily weights <strong>completion rate</strong> and <strong>replays</strong>. Shorter videos (15&ndash;30 seconds) are easier to watch multiple times, which inflates the replay metric. Structure your content to deliver a payoff at the end that makes viewers want to watch again. Loop techniques &mdash; where the ending connects seamlessly to the beginning &mdash; are effective for boosting replays. For longer videos (60+ seconds, which qualify for the Creativity Program), focus on maintaining retention throughout by using pattern interrupts every 3&ndash;5 seconds.</p>
+      </div>
+    </section>
+
+    <!-- 08 Cross-posting -->
+    <section class="guide-section" id="cross-posting">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; Cross-Posting</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Cross-posting strategy: how to repurpose between platforms</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Always upload watermark-free originals &mdash; both algorithms penalize competitor watermarks</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Adapt captions, hashtags, and descriptions for each platform's conventions</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Stagger posting times by 24&ndash;48 hours to test performance independently</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Most successful creators post on both platforms, but cross-posting effectively requires more than uploading the same file twice. Each platform has different conventions, algorithm preferences, and audience expectations. Here is a practical workflow for cross-posting between YouTube Shorts and TikTok.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The cross-posting workflow</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Step 1: Produce content externally.</strong> Edit your videos in a dedicated app (CapCut, Premiere Pro, DaVinci Resolve, or Final Cut Pro) and export the final file without any platform-specific elements. This gives you a clean master file you can upload to both platforms.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Step 2: Customize for each platform.</strong> Before uploading to TikTok, add trending sounds, relevant hashtags (4&ndash;6 is optimal), and TikTok-native text effects if applicable. Before uploading to YouTube Shorts, write a keyword-rich title, a detailed description, and add relevant tags. Include #Shorts in the title or description to ensure YouTube classifies it correctly.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Step 3: Stagger your posting.</strong> Do not post to both platforms simultaneously. Post to your primary platform first (whichever has the larger audience) and wait 24&ndash;48 hours before posting to the secondary platform. This lets you evaluate performance independently and avoid potential duplication penalties. Some creators post to TikTok first (for trend testing) and then to YouTube Shorts (for longer-term discovery).</p>
+        <p class="text-ink-2 leading-[1.65] mb-4"><strong>Step 4: Track performance separately.</strong> Maintain separate analytics for each platform. A video that performs well on TikTok may underperform on YouTube Shorts and vice versa. Use performance data to refine your content strategy for each platform. Over time, you may find that certain content types work better on one platform, allowing you to specialize your cross-posting selection.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For brands managing <a href="/canvas-ugc/">UGC content</a> across multiple platforms, a systematic cross-posting workflow is essential for efficiency. At OKAD, we build content calendars that account for platform-specific optimization while minimizing production redundancy.</p>
+      </div>
+    </section>
+
+    <!-- 09 Analytics -->
+    <section class="guide-section" id="analytics">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Analytics</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Analytics and metrics: what to track on each platform</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Retention curve is the most important metric on both platforms</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">YouTube offers deeper analytics (traffic sources, search terms, subscriber conversion)</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok provides faster feedback loops (real-time views, FYP vs Following split)</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Both platforms offer creator analytics, but they emphasize different metrics and provide different levels of depth. Understanding which metrics matter on each platform helps you diagnose problems and double down on what works.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Key metrics for YouTube Shorts</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Retention rate</strong> &mdash; the percentage of the video watched on average. YouTube Studio shows a retention curve that reveals exactly where viewers drop off. This is your most actionable metric.</li>
+          <li><strong>Swipe-away rate</strong> &mdash; how often viewers swipe to the next Short before yours ends. A high swipe-away rate signals weak content or a misleading hook.</li>
+          <li><strong>Subscriber conversion</strong> &mdash; how many viewers subscribed from a specific Short. YouTube tracks this at the video level, which is invaluable for understanding what content drives growth.</li>
+          <li><strong>Traffic sources</strong> &mdash; whether views came from the Shorts shelf, search, suggested, or external sources. YouTube's traffic source data is the most detailed of any platform.</li>
+          <li><strong>RPM</strong> &mdash; revenue per 1,000 views. Track this to understand your earning rate and how it varies by content type and audience geography.</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Key metrics for TikTok</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li><strong>Average watch time</strong> &mdash; the average duration viewers watched your video. Higher average watch time signals strong content to the algorithm.</li>
+          <li><strong>Completion rate</strong> &mdash; the percentage of viewers who watched the entire video. Critical for short videos (under 30 seconds) where replays boost this metric.</li>
+          <li><strong>For You Page percentage</strong> &mdash; what share of your views came from the FYP versus the Following tab or profile visits. A high FYP percentage means the algorithm is actively distributing your content to new audiences.</li>
+          <li><strong>Share rate</strong> &mdash; how often viewers share your video. Shares are one of the strongest engagement signals on TikTok, often more impactful than likes or comments.</li>
+          <li><strong>Follower growth per video</strong> &mdash; how many followers each video generates. This helps identify which content types convert viewers into followers.</li>
+        </ul>
+        <p class="text-ink-2 leading-[1.65] mb-4">For a comprehensive approach to tracking short-form content performance, combine platform-native analytics with third-party tools. Social Blade, Pentos, and Tubular Labs offer cross-platform comparisons and historical data tracking that the native dashboards do not provide.</p>
+      </div>
+    </section>
+
+    <!-- 10 Decision Framework -->
+    <section class="guide-section" id="decision">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; Decision Framework</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Which platform should you choose?</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Choose YouTube Shorts if you want higher RPM, long-tail discoverability, and a long-form funnel</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Choose TikTok if you want faster growth, younger audiences, and higher engagement rates</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The best strategy for most creators: do both, but lead with one</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The "which platform" question does not have a universal answer. It depends on your goals, niche, audience, and content style. Here is a decision framework to help you choose.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Choose YouTube Shorts if:</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li>You want <strong>higher per-view revenue</strong> from ad-revenue sharing</li>
+          <li>You produce <strong>evergreen content</strong> (tutorials, how-tos, reviews) that benefits from search discovery</li>
+          <li>You plan to build a <strong>long-form YouTube channel</strong> and use Shorts as a subscriber funnel</li>
+          <li>Your target audience is <strong>25&ndash;49 years old</strong> or in a professional niche</li>
+          <li>You value <strong>predictable, compounding growth</strong> over viral spikes</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Choose TikTok if:</h3>
+        <ul class="pl-5 mb-4 space-y-2 text-ink-2">
+          <li>You want <strong>rapid follower growth</strong> and the possibility of viral breakouts</li>
+          <li>Your target audience is <strong>Gen Z (16&ndash;24)</strong></li>
+          <li>You excel at <strong>trend-driven, culturally relevant content</strong></li>
+          <li>You want to monetize through <strong>brand deals, affiliate marketing, or e-commerce</strong></li>
+          <li>You prefer <strong>in-app editing tools</strong> and community-driven formats (duets, stitches)</li>
+        </ul>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">The recommended approach: lead with one, expand to both</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">For most creators, the optimal strategy is to <strong>pick a primary platform</strong> based on the criteria above, build a consistent presence there, and then expand to the second platform once you have a production workflow that supports cross-posting. Leading with one platform lets you master its algorithm, build an audience, and develop content patterns before splitting your attention.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The exception: if you are producing content at scale (as a brand or agency), you should publish to both platforms from day one. The marginal cost of cross-posting is low once you have a production pipeline, and the reach diversification reduces platform risk. At OKAD, we typically build content strategies that account for both platforms from the outset, with platform-specific optimizations layered onto a shared content calendar.</p>
+      </div>
+    </section>
+
+    <!-- 11 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Glossary of key terms</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Essential terminology for understanding short-form video monetization and performance</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Platform-specific terms explained in plain language</li>
+          </ul>
+        </div>
+        <ul class="list-none p-0 space-y-3">
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">RPM</strong> Revenue per mille &mdash; the amount a creator earns per 1,000 views. YouTube reports this in YouTube Studio.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">CPM</strong> Cost per mille &mdash; the amount an advertiser pays per 1,000 ad impressions. RPM is what the creator receives after the platform's cut.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">YPP</strong> YouTube Partner Program &mdash; the monetization program creators must join to earn ad revenue on YouTube.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">Creator Fund</strong> TikTok's original monetization program (2020&ndash;2023). Paid from a fixed pool; largely replaced by the Creativity Program Beta.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">Creativity Program Beta</strong> TikTok's current monetization program. Requires 10K followers and 60+ second videos. Pays per qualified view.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">TikTok Pulse</strong> A premium ad placement program where ads appear next to the top 4% of content. Selected creators share ad revenue.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">FYP</strong> For You Page &mdash; TikTok's main content feed, personalized by the recommendation algorithm.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">Shorts shelf</strong> The dedicated vertical-scrolling feed for YouTube Shorts, accessible from the YouTube homepage and mobile app.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0"><a href="/hook-rate/">Hook rate</a></strong> The percentage of viewers who watch past the first 3 seconds. The primary creative health metric for short-form video.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">Retention curve</strong> A graph showing what percentage of viewers are still watching at each second of a video. Available in YouTube Studio and TikTok Analytics.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">Completion rate</strong> The percentage of viewers who watch the entire video. Especially important on TikTok where replays boost this metric.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">Duet</strong> A TikTok feature that lets you create a split-screen video alongside another creator's content.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">Stitch</strong> A TikTok feature that lets you clip and incorporate a segment of another creator's video into yours.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">Remix</strong> YouTube Shorts' equivalent of Duet &mdash; lets you create alongside or in response to another Short.</li>
+          <li class="flex items-baseline gap-2 py-1.5 text-ink-2"><strong class="text-ink min-w-[180px] shrink-0">Swipe-away rate</strong> YouTube Shorts metric showing how often viewers swipe to the next Short before yours finishes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 12 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">12 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+        {faqItems.map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to build your short-form video strategy?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your brand and goals. We'll help you choose the right platform mix, produce scroll-stopping content, and build a workflow that scales across YouTube Shorts and TikTok.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailHref} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get a video strategy &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on publicly available data from YouTube and TikTok, creator earnings reports, platform documentation, and OKAD Agency's experience managing short-form video campaigns for brands. Monetization figures are directional ranges based on aggregate creator data and vary by niche, geography, audience demographics, and content quality. Platform features and policies are current as of September 2026 and may change.</p>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- Lead Form -->
+    <section class="py-16 border-t border-border" id="get-started">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-card border border-border rounded-2xl p-8 sm:p-10">
+          <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-4">Free consultation</div>
+            <h2 class="font-display font-bold text-[clamp(22px,3.5vw,30px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Get a Custom UGC Plan for Your Brand</h2>
+            <p class="text-[15px] text-ink-2 max-w-[500px] mx-auto leading-[1.5]">Tell us about your brand and we'll send you a custom UGC strategy — content formats, creator count, estimated costs, and timeline.</p>
+          </div>
+          <form id="canvas-form" class="space-y-4 max-w-[480px] mx-auto">
+            <div>
+              <label for="cf-company" class="block text-[13px] font-medium text-ink mb-1.5">Company / Brand *</label>
+              <input type="text" id="cf-company" name="company" required placeholder="Acme Inc." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-email" class="block text-[13px] font-medium text-ink mb-1.5">Work email *</label>
+              <input type="email" id="cf-email" name="email" required placeholder="you@company.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-website" class="block text-[13px] font-medium text-ink mb-1.5">Website</label>
+              <input type="url" id="cf-website" name="website" placeholder="https://yoursite.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-budget" class="block text-[13px] font-medium text-ink mb-1.5">Monthly content budget</label>
+              <select id="cf-budget" name="budget" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] focus:outline-none focus:border-accent transition-colors appearance-none">
+                <option value="">Select range</option>
+                <option value="under-2k">Under $2,000</option>
+                <option value="2k-5k">$2,000 – $5,000</option>
+                <option value="5k-10k">$5,000 – $10,000</option>
+                <option value="10k+">$10,000+</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label for="cf-message" class="block text-[13px] font-medium text-ink mb-1.5">What are you looking to achieve?</label>
+              <textarea id="cf-message" name="message" rows="3" placeholder="E.g. We want to grow our TikTok presence with 20+ videos per month..." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors resize-y"></textarea>
+            </div>
+            <button type="submit" id="cf-submit" class="w-full py-3.5 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all cursor-pointer border-none">Get my UGC plan &rarr;</button>
+            <div id="cf-status" class="text-center text-[13px] hidden"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="/youtube-shorts-monetization/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">YouTube Shorts Monetization</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Deep dive into YPP, RPM, and Shorts revenue</p>
+          </a>
+          <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC</p>
+            <p class="text-[12px] text-muted leading-[1.4]">User-generated content strategy and production</p>
+          </a>
+          <a href="/hook-rate/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Hook Rate Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">The complete guide to 3-second retention</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "YouTube Shorts vs TikTok for Creators: Which Pays More in 2026?",
+    "description": "An in-depth comparison of YouTube Shorts and TikTok for creators in 2026. Compare monetization, algorithm mechanics, audience demographics, growth strategies, and cross-posting workflows.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/youtube-shorts-vs-tiktok/" },
+    "datePublished": "2026-09-13",
+    "dateModified": "2026-09-13"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "YouTube Shorts vs TikTok" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": { "@type": "Answer", "text": item.a }
+    }))
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  const form = document.getElementById('canvas-form');
+  const status = document.getElementById('cf-status');
+  const submitBtn = document.getElementById('cf-submit');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      status.className = 'text-center text-[13px] hidden';
+      try {
+        const fd = new FormData(form);
+        const data = Object.fromEntries(fd.entries());
+        data.source = window.location.pathname;
+        const resp = await fetch('https://okad.cc/api/canvas-form/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (resp.ok) {
+          status.textContent = 'Thank you! We\'ll get back to you within 24 hours.';
+          status.className = 'text-center text-[13px] text-green-400 mt-2';
+          form.reset();
+        } else {
+          const err = await resp.json().catch(() => ({}));
+          status.textContent = err.error || 'Something went wrong. Please try again.';
+          status.className = 'text-center text-[13px] text-red-400 mt-2';
+        }
+      } catch {
+        status.textContent = 'Network error. Please try again.';
+        status.className = 'text-center text-[13px] text-red-400 mt-2';
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get my UGC plan →';
+    });
+  }
+</script>

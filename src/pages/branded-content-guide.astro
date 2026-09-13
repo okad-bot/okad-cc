@@ -1,0 +1,731 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const emailSubject = "mailto:olga@okad.agency?subject=Branded%20Content%20%E2%80%94%20tell%20us%20about%20your%20brand";
+const calHref = "https://calendly.com/okad_calls/first";
+---
+
+<Layout
+  title="Branded Content: The Complete Guide for 2026 | OKAD"
+  description="Branded content is storytelling funded by a brand but designed to inform or entertain rather than sell directly. This guide covers every type of branded content — editorial, video, social, podcast, interactive — with platform strategies for TikTok, Instagram, YouTube, and LinkedIn, measurement frameworks, 2026 trends, and how to build a branded content program that drives real business results."
+>
+  <Header />
+  <main>
+
+    <!-- Hero -->
+    <section class="pt-20 md:pt-24 pb-10 text-center bg-bg">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-6">
+          Open reference &middot; September 2026
+        </div>
+        <h1 class="font-display font-bold text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.03em] text-ink mb-4">
+          Branded Content: <span class="text-accent">The Complete Guide for 2026</span>
+        </h1>
+        <p class="text-[18px] text-ink-2 max-w-[600px] mx-auto leading-[1.6] mb-8">
+          Branded content is storytelling funded by a brand but built to inform, entertain, or inspire &mdash; not to interrupt. This guide covers every format, every major platform, and the measurement frameworks that separate vanity metrics from business impact.
+        </p>
+        <div class="flex gap-3 justify-center flex-wrap mb-8">
+          <a href={emailSubject} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all no-underline">Get branded content &rarr;</a>
+          <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-sans text-[14px] font-semibold bg-card text-ink border border-border hover:border-accent hover:text-accent transition-all no-underline">Book a call &rarr;</a>
+        </div>
+        <div class="flex gap-5 flex-wrap justify-center font-mono text-[12px] text-muted">
+          <span>Editorial &middot; Video &middot; Social</span>
+          <span>Multi-platform</span>
+          <span>ROI-driven</span>
+          <span>2026 trends</span>
+          <span>Full playbook</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works grid -->
+    <section class="py-8">
+      <div class="max-w-[800px] mx-auto px-6">
+        <h2 class="font-display text-[22px] font-bold tracking-[-0.02em] text-center mb-5">How Branded Content Works</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4A1;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Brand Funds the Story</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">A brand sponsors content that educates, entertains, or inspires an audience &mdash; without leading with a hard sell or product pitch.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F3AC;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Creators Bring It to Life</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Journalists, filmmakers, podcasters, or social creators produce the content in their authentic style, ensuring it resonates with real audiences.</p>
+          </div>
+          <div class="bg-card border border-border rounded-[10px] p-4 text-center">
+            <div class="text-[22px] mb-1.5">&#x1F4C8;</div>
+            <h3 class="font-display text-[14px] font-semibold mb-1">Audience Engages Willingly</h3>
+            <p class="text-[12px] text-muted leading-[1.4]">Because the content delivers genuine value, people watch, read, share, and remember &mdash; building trust that compounds over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="py-10 border-t border-b border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Contents</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          {[
+            { num: "01", text: "What Is Branded Content", href: "#what-is" },
+            { num: "02", text: "Types of Branded Content", href: "#types" },
+            { num: "03", text: "Branded Content vs. Other Formats", href: "#comparison" },
+            { num: "04", text: "How to Create Branded Content", href: "#create" },
+            { num: "05", text: "Platform Strategies", href: "#platforms" },
+            { num: "06", text: "Real-World Examples", href: "#examples" },
+            { num: "07", text: "Measurement and KPIs", href: "#measurement" },
+            { num: "08", text: "Trends for 2026", href: "#trends" },
+            { num: "09", text: "Building a Branded Content Strategy", href: "#strategy" },
+            { num: "10", text: "OKAD's Branded Content Service", href: "#okad-service" },
+            { num: "11", text: "Glossary", href: "#glossary" },
+            { num: "12", text: "FAQ", href: "#faq" },
+          ].map((item) => (
+            <a href={item.href} class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[14px] text-ink-2 font-medium hover:bg-bg-alt transition-colors no-underline">
+              <span class="font-mono text-[11px] font-medium text-accent min-w-[22px]">{item.num}</span>
+              {item.text}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 What Is Branded Content -->
+    <section class="guide-section" id="what-is">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">01 &mdash; Definition</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">What branded content actually means</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Content funded by a brand, designed to deliver value rather than sell directly</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The brand is present but not the protagonist &mdash; the story, information, or entertainment is</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Builds trust, recall, and affinity over time rather than chasing immediate conversions</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content is any content that a brand pays to create or distribute where the primary purpose is to inform, entertain, or inspire the audience &mdash; not to directly sell a product. The brand is the sponsor, not the subject. A documentary series funded by Patagonia about regenerative farming, a recipe video series backed by a kitchen appliance brand, a podcast about entrepreneurship produced by a fintech company &mdash; these are all branded content. The brand association is present, but the content earns attention on its own merits.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">The distinction matters because audiences in 2026 have near-perfect radar for content that exists only to sell them something. Banner blindness has expanded into content blindness: anything that looks, sounds, or feels like an advertisement gets skipped, muted, or blocked. Branded content survives this filter because it leads with value. The viewer watches because the story is interesting, not because a product was placed in front of them.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content is not new &mdash; Michelin published restaurant guides in 1900 to encourage driving and, by extension, tire purchases. What is new is the scale and sophistication available in 2026. Brands can now produce editorial articles, short-form video series, interactive tools, podcasts, and social content, distributing it natively across platforms where audiences already spend their time. The content lives alongside organic posts, not in interruptive ad slots.</p>
+        <p class="text-ink-2 leading-[1.65] mb-4">For a deep dive into using creator-made branded content as paid ads, see our <a href="/branded-content-ads/" class="text-accent hover:underline">Branded Content Ads</a> guide. For the specific mechanics of boosting creator posts on TikTok, see <a href="/spark-ads/" class="text-accent hover:underline">Spark Ads</a>.</p>
+      </div>
+    </section>
+
+    <!-- 02 Types of Branded Content -->
+    <section class="guide-section" id="types">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">02 &mdash; Types</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Five types of branded content</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Editorial: articles, guides, reports published in brand-owned or partner media</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Video: short-form, long-form, documentary, and series formats</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Social: creator-native content for TikTok, Instagram, YouTube, LinkedIn</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Podcast: branded shows, sponsored episodes, and audio storytelling</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Interactive: quizzes, calculators, tools, and immersive experiences</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Editorial branded content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Editorial branded content includes articles, guides, whitepapers, and research reports. It looks and reads like journalism or thought leadership, but the brand funds the production and distribution. The best editorial branded content is indistinguishable from independent content in quality and depth &mdash; the brand attribution is present but does not compromise the editorial value. Examples include industry reports published by SaaS companies, how-to guides produced by tool companies, and data-driven features sponsored by analytics platforms.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Video branded content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Video is the dominant format for branded content in 2026. It spans everything from 15-second TikTok clips to feature-length documentaries. Short-form video (under 60 seconds) works best for awareness and social distribution. Mid-length video (2&ndash;10 minutes) suits tutorials, product stories, and behind-the-scenes features. Long-form documentaries and series build deep brand affinity but require larger budgets and longer production timelines. The key is matching format length to platform norms and audience expectations.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Social branded content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Social branded content is created by or with creators and published natively on social platforms. It is the fastest-growing category because it combines authenticity with distribution. A creator films a product review in their natural style, tags the brand, and the content reaches their followers organically &mdash; then the brand can amplify it as a <a href="/branded-content-ads/" class="text-accent hover:underline">branded content ad</a>. Social branded content includes UGC-style reviews, tutorials, day-in-the-life features, challenges, and collaborative posts. For more on creator-driven social content, see our <a href="/canvas-ugc/" class="text-accent hover:underline">Canvas UGC</a> guide.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Podcast branded content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Podcast branded content ranges from fully brand-owned shows to sponsored segments within existing shows. Brand-owned podcasts give full control over narrative and positioning but require sustained investment (typically 20&ndash;50 episodes before meaningful audience traction). Sponsored episodes within established podcasts provide immediate reach but less brand control. Host-read integrations, where the podcast host discusses the brand in their own voice, consistently outperform pre-recorded ad spots in listener trust and recall.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Interactive branded content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Interactive content includes quizzes, calculators, configurators, data visualizations, and AR/VR experiences. Interactive branded content typically generates 2&ndash;3x higher engagement than static formats because it requires active participation. A skincare brand that builds a "skin type quiz" with personalized product recommendations, or a financial services company that creates a retirement calculator &mdash; these tools deliver genuine utility while associating the brand with helpfulness and expertise. Interactive content also captures first-party data, making it increasingly valuable as third-party cookies disappear.</p>
+
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[13px] border-collapse">
+            <thead>
+              <tr>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Type</th>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Best For</th>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Timeline</th>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Budget Range</th>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Primary KPI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border-b border-border text-ink">Editorial</td><td class="p-3 border-b border-border text-ink-2">SEO, thought leadership, B2B</td><td class="p-3 border-b border-border text-ink-2">2&ndash;6 weeks</td><td class="p-3 border-b border-border text-ink-2">$2K&ndash;$25K per piece</td><td class="p-3 border-b border-border text-ink-2">Organic traffic, time on page</td></tr>
+              <tr><td class="p-3 border-b border-border text-ink">Video (short-form)</td><td class="p-3 border-b border-border text-ink-2">Awareness, social reach, Gen Z</td><td class="p-3 border-b border-border text-ink-2">1&ndash;3 weeks</td><td class="p-3 border-b border-border text-ink-2">$500&ndash;$5K per video</td><td class="p-3 border-b border-border text-ink-2">Views, engagement rate</td></tr>
+              <tr><td class="p-3 border-b border-border text-ink">Video (long-form)</td><td class="p-3 border-b border-border text-ink-2">Brand affinity, storytelling</td><td class="p-3 border-b border-border text-ink-2">4&ndash;16 weeks</td><td class="p-3 border-b border-border text-ink-2">$10K&ndash;$250K+</td><td class="p-3 border-b border-border text-ink-2">Watch time, brand lift</td></tr>
+              <tr><td class="p-3 border-b border-border text-ink">Social / UGC</td><td class="p-3 border-b border-border text-ink-2">Authenticity, performance ads</td><td class="p-3 border-b border-border text-ink-2">1&ndash;2 weeks</td><td class="p-3 border-b border-border text-ink-2">$200&ndash;$3K per creator</td><td class="p-3 border-b border-border text-ink-2">CTR, CPA, ROAS</td></tr>
+              <tr><td class="p-3 border-b border-border text-ink">Podcast</td><td class="p-3 border-b border-border text-ink-2">Trust, B2B, niche audiences</td><td class="p-3 border-b border-border text-ink-2">Ongoing (season-based)</td><td class="p-3 border-b border-border text-ink-2">$5K&ndash;$50K per episode</td><td class="p-3 border-b border-border text-ink-2">Downloads, listener retention</td></tr>
+              <tr><td class="p-3 border-b border-border text-ink">Interactive</td><td class="p-3 border-b border-border text-ink-2">Lead gen, data capture, engagement</td><td class="p-3 border-b border-border text-ink-2">4&ndash;12 weeks</td><td class="p-3 border-b border-border text-ink-2">$10K&ndash;$100K+</td><td class="p-3 border-b border-border text-ink-2">Completions, leads, time spent</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Branded Content vs. Other Formats -->
+    <section class="guide-section" id="comparison">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">03 &mdash; Comparison</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Branded content vs. other marketing formats</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Branded content leads with value; traditional ads lead with a product pitch</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Content marketing is brand-owned; branded content often involves creators or publishers</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Influencer marketing pays for reach; branded content pays for creative production</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content often gets confused with adjacent marketing formats. The distinctions matter because each format has different production workflows, measurement frameworks, and audience expectations.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Branded content vs. traditional advertising</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Traditional advertising interrupts the audience &mdash; a banner on a webpage, a pre-roll before a YouTube video, a 30-second TV spot. The audience tolerates the interruption because they want to access the content behind it. Branded content does not interrupt; it is the content. The audience consumes it because it delivers value on its own terms. This means branded content competes for attention not against other ads, but against organic content &mdash; which is a higher bar but produces a fundamentally different relationship with the audience.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Branded content vs. content marketing</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Content marketing is created and published entirely by the brand on brand-owned channels &mdash; blog posts, email newsletters, social media accounts. Branded content typically involves external creators, publishers, or platforms. A blog post on your company website is content marketing. A feature article in a trade publication funded by your brand is branded content. The distinction is about who creates and distributes the content, and where the audience encounters it.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Branded content vs. influencer marketing</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">In influencer marketing, the brand pays primarily for access to the influencer's audience. The content is a vehicle for reaching those followers. In branded content, the brand pays primarily for the quality of the content itself. The creator's audience is a bonus, not the primary asset. This distinction explains why branded content can be amplified as <a href="/branded-content-ads/" class="text-accent hover:underline">paid ads</a> &mdash; the content has standalone value beyond the creator's organic reach.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Branded content vs. native advertising</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Native advertising matches the form of the platform where it appears (a promoted post on a news site that looks like an article, a sponsored listing that looks like organic search results). Branded content also matches platform form, but the key difference is intent. Native ads are designed to drive a specific action (click, purchase, sign-up). Branded content is designed to build a relationship. The best branded content programs combine both: branded content for trust-building, then native advertising and <a href="/partnership-ads/" class="text-accent hover:underline">partnership ads</a> for conversion.</p>
+
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[13px] border-collapse">
+            <thead>
+              <tr>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Format</th>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Primary Goal</th>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Creator Involved?</th>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Time Horizon</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border-b border-border text-ink">Branded content</td><td class="p-3 border-b border-border text-ink-2">Trust, affinity, recall</td><td class="p-3 border-b border-border text-ink-2">Usually yes</td><td class="p-3 border-b border-border text-ink-2">Medium&ndash;long term</td></tr>
+              <tr><td class="p-3 border-b border-border text-ink">Traditional ads</td><td class="p-3 border-b border-border text-ink-2">Immediate awareness or conversion</td><td class="p-3 border-b border-border text-ink-2">No</td><td class="p-3 border-b border-border text-ink-2">Short term</td></tr>
+              <tr><td class="p-3 border-b border-border text-ink">Content marketing</td><td class="p-3 border-b border-border text-ink-2">SEO, thought leadership</td><td class="p-3 border-b border-border text-ink-2">Sometimes</td><td class="p-3 border-b border-border text-ink-2">Long term</td></tr>
+              <tr><td class="p-3 border-b border-border text-ink">Influencer marketing</td><td class="p-3 border-b border-border text-ink-2">Audience access, social proof</td><td class="p-3 border-b border-border text-ink-2">Always</td><td class="p-3 border-b border-border text-ink-2">Short&ndash;medium term</td></tr>
+              <tr><td class="p-3 border-b border-border text-ink">Native advertising</td><td class="p-3 border-b border-border text-ink-2">Clicks, conversions</td><td class="p-3 border-b border-border text-ink-2">Rarely</td><td class="p-3 border-b border-border text-ink-2">Short term</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 How to Create Branded Content -->
+    <section class="guide-section" id="create">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">04 &mdash; Creation Process</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">How to create branded content that works</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Start with audience insight, not product features</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brief for outcomes, not creative execution &mdash; let creators create</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Build a system for testing, learning, and iterating &mdash; not one-off campaigns</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The biggest mistake brands make with branded content is starting from what they want to say instead of what the audience wants to hear. Effective branded content starts with a genuine audience insight &mdash; a question, frustration, curiosity, or aspiration that your target audience already has &mdash; and then creates content that addresses it. The brand connection emerges naturally because the brand has relevant expertise or perspective on that topic.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Step 1: Define the audience insight</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Identify what your target audience is actively searching for, talking about, or struggling with. Use search data, social listening, community forums, and customer interviews. The insight should be specific enough to drive a content concept. "People want healthy recipes" is too broad. "Home cooks want 20-minute weeknight dinners that don't require specialty ingredients" is actionable.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Step 2: Choose the right format and platform</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Match the format to the insight and the platform to the audience. A complex B2B topic might work best as a long-form editorial piece or a podcast series. A visual consumer product story might suit short-form video on TikTok or Instagram. A tool or resource (calculator, template, quiz) might work best as interactive content on your own site. Do not force an insight into a format &mdash; let the insight dictate the most natural expression.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Step 3: Brief the creator or production team</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">The brief is the single most important document in branded content production. It should include the audience insight (who the content is for and why they care), the content angle (the specific story, question, or topic), key messages (2&ndash;3 points the brand wants conveyed), brand guidelines (tone, visual identity, mandatory disclosures), and deliverable specifications (format, length, platform requirements). The brief should not include a script. The entire value of branded content depends on the creator or producer having enough freedom to make something authentic.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Step 4: Produce and review</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Give creators a clear timeline with review checkpoints. For video, review at concept stage, rough cut, and final cut. For editorial, review at outline, first draft, and final draft. Feedback should focus on whether the content delivers on the brief &mdash; not on imposing the brand's creative preferences. If the content is accurate, on-message, and engaging, let the creator's style stand. Over-editing branded content strips out the authenticity that makes it effective.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Step 5: Distribute and amplify</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Organic distribution alone rarely delivers the reach that justifies branded content investment. Plan for paid amplification from the start. The best approach is to publish organically first, identify which pieces gain traction, and then amplify the winners as <a href="/branded-content-ads/" class="text-accent hover:underline">branded content ads</a> using <a href="/spark-ads/" class="text-accent hover:underline">Spark Ads</a>, <a href="/partnership-ads/" class="text-accent hover:underline">Partnership Ads</a>, or whitelabel promotion. This ensures ad spend is concentrated on proven content, not untested creative.</p>
+      </div>
+    </section>
+
+    <!-- 05 Platform Strategies -->
+    <section class="guide-section" id="platforms">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">05 &mdash; Platform Strategies</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Branded content strategies by platform</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">TikTok: raw authenticity, fast hooks, trend alignment, Spark Ads amplification</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Instagram: polished visual storytelling, Reels + Stories, Partnership Ads</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">YouTube: depth, tutorials, long-form series, search longevity</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">LinkedIn: B2B thought leadership, executive personal brands, document carousels</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">TikTok</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">TikTok rewards authenticity over production value. The most effective branded content on TikTok looks like organic content: shot on a phone, personal delivery, natural audio. The critical factor is the hook &mdash; the first 1&ndash;3 seconds determine whether the viewer watches or scrolls. Branded content for TikTok should front-load intrigue, use native editing tools (text overlays, trending sounds, green screen), and stay under 60 seconds for most formats. Top-performing branded content can be boosted as <a href="/spark-ads/" class="text-accent hover:underline">Spark Ads</a> to scale reach beyond the creator's organic audience. Hook rate (percentage of viewers who watch past 3 seconds) is the leading indicator of success on TikTok &mdash; aim for 40% or higher.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Instagram</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Instagram branded content spans Reels (short-form video), Stories (ephemeral, interactive), carousels (multi-image storytelling), and feed posts. Reels are the primary discovery format in 2026 and should anchor most branded content strategies on the platform. Stories offer interactive features (polls, questions, sliders) that drive engagement and data capture. Instagram audiences expect slightly higher visual polish than TikTok but still favor authentic creator content over studio production. Branded content is amplified through Meta's <a href="/partnership-ads/" class="text-accent hover:underline">Partnership Ads</a> system, which lets brands run ads using the creator's post identity.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">YouTube</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">YouTube is the platform for depth. Branded content on YouTube can be tutorials (5&ndash;15 minutes), reviews (3&ndash;10 minutes), documentary-style features (15&ndash;45 minutes), or short-form Shorts (under 60 seconds). YouTube's search-driven discovery means branded content has a longer shelf life than on social-first platforms &mdash; a well-optimized tutorial can generate views for years. Sponsored integrations within existing creator videos (the creator naturally mentions the brand within a broader topic) consistently outperform standalone branded videos because they inherit the creator's established audience trust.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">LinkedIn</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">LinkedIn branded content works best when it is anchored to individual executives or subject-matter experts rather than brand pages. A CEO sharing lessons from scaling their company, a head of product explaining a technical decision, a designer walking through a case study &mdash; these posts outperform generic brand content by 3&ndash;5x in engagement. Document carousels (PDF uploads that viewers swipe through) and short native video are the highest-performing formats on LinkedIn in 2026. Thought leadership articles still have a role but perform better when promoted through employee advocacy than through the brand page alone.</p>
+      </div>
+    </section>
+
+    <!-- 06 Real-World Examples -->
+    <section class="guide-section" id="examples">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">06 &mdash; Examples</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Real-world branded content examples</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The pattern: content earns attention because it delivers value, not because it was placed in front of people</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">The brand is present but not the protagonist of the story</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Winners combine authentic production with strategic amplification</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">The most instructive branded content examples share a common structure: the brand funds content that audiences would seek out even without the brand association. The brand benefits from the positive association, the audience benefits from the content, and the creator or publisher benefits from the funding.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Documentary and long-form video</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Outdoor and athletic brands have pioneered long-form branded documentaries that tell compelling human stories connected to their brand values &mdash; films about athletes pushing boundaries, communities preserving natural environments, and craftspeople perfecting their art. These productions earn film festival screenings, millions of organic views, and deep emotional brand associations that no 30-second ad could achieve. The investment is significant (often $100K&ndash;$500K+), but the content has a shelf life measured in years, not days.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Creator-led social series</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Brands that partner with creators for recurring content series &mdash; weekly recipe videos, monthly tech reviews, ongoing fitness challenges &mdash; build compounding returns. Each episode reinforces the brand association and grows the audience. The key is consistency: one-off creator posts generate a spike of attention that fades quickly. A 12-episode series with a consistent creator builds a recognizable franchise that audiences anticipate and return to. The best performing series give the creator genuine ownership of the concept, not just a scripted role.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Interactive tools and data journalism</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Some of the most shared branded content takes the form of interactive tools or data-driven journalism. Salary calculators, industry benchmarking tools, interactive maps, and data visualizations attract organic links, social shares, and press coverage. They also position the brand as a trusted source of information in their industry. A financial services brand that publishes an annual cost-of-living comparison tool, or a SaaS company that releases an industry state-of-the-market report, creates branded content that becomes a reference resource &mdash; cited repeatedly, bookmarked, and revisited.</p>
+      </div>
+    </section>
+
+    <!-- 07 Measurement and KPIs -->
+    <section class="guide-section" id="measurement">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">07 &mdash; Measurement</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Measuring branded content performance</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Engagement metrics: views, watch time, shares, saves, comments</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Brand metrics: aided recall, consideration lift, sentiment shift</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Business metrics: traffic, leads, pipeline influenced, attributable revenue</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">Branded content measurement requires a different framework than direct response advertising. Because branded content operates across the funnel &mdash; building awareness, driving consideration, and influencing purchase decisions &mdash; a single metric like ROAS does not capture its full value. The best measurement approach layers three categories of metrics: engagement, brand, and business.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Engagement metrics</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Engagement metrics measure whether the audience actually consumed and interacted with the content. Key metrics include view count (reach), average watch time or time on page (depth of engagement), completion rate (for video and interactive content), shares and saves (content quality signal), and comment volume and sentiment (audience response). Shares and saves are the most valuable engagement signals because they indicate the audience found the content valuable enough to either redistribute or return to later.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Brand metrics</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Brand metrics measure whether the content changed how the audience perceives the brand. These require survey-based measurement: brand lift studies (available natively on TikTok, Meta, and YouTube) compare aided awareness, brand recall, message association, consideration, and purchase intent between exposed and control groups. Brand lift studies are the gold standard for justifying branded content investment to stakeholders who want evidence beyond engagement vanity metrics.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Business metrics</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Business metrics connect branded content to revenue outcomes. Direct attribution (someone clicks a link in the content and purchases) captures only a fraction of the impact. More sophisticated approaches include tracking branded search volume during and after campaigns, measuring direct traffic lifts to the website, analyzing pipeline influenced (for B2B), and running incrementality tests with geographic holdouts. UTM tracking, dedicated landing pages, and unique promo codes provide tactical measurement, while marketing mix modeling provides strategic measurement of branded content's contribution to overall revenue.</p>
+
+        <div class="overflow-x-auto mb-6">
+          <table class="w-full text-[13px] border-collapse">
+            <thead>
+              <tr>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Metric Category</th>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Key Metrics</th>
+                <th class="text-left p-3 bg-[rgba(99,102,241,.04)] border-b border-border font-semibold text-ink text-[12px] uppercase tracking-[.05em]">Measurement Tool</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="p-3 border-b border-border text-ink">Engagement</td><td class="p-3 border-b border-border text-ink-2">Views, watch time, shares, saves, comments</td><td class="p-3 border-b border-border text-ink-2">Platform analytics, UTM tracking</td></tr>
+              <tr><td class="p-3 border-b border-border text-ink">Brand</td><td class="p-3 border-b border-border text-ink-2">Aided recall, consideration lift, sentiment</td><td class="p-3 border-b border-border text-ink-2">Brand lift studies, surveys</td></tr>
+              <tr><td class="p-3 border-b border-border text-ink">Business</td><td class="p-3 border-b border-border text-ink-2">Traffic, leads, pipeline, revenue</td><td class="p-3 border-b border-border text-ink-2">GA4, CRM, marketing mix modeling</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 Trends for 2026 -->
+    <section class="guide-section" id="trends">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">08 &mdash; 2026 Trends</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Branded content trends shaping 2026</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">AI-assisted production is accelerating output without replacing human creators</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Short-form video is the default entry point, but long-form is making a comeback</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">First-party data capture through interactive content is replacing cookie-based targeting</li>
+          </ul>
+        </div>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">AI-assisted production</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">AI tools in 2026 are handling script drafting, thumbnail generation, subtitle creation, B-roll sourcing, and performance prediction. This reduces production timelines by 30&ndash;50% and allows smaller teams to produce more content. However, the human element remains essential &mdash; AI-generated content without a human creator's face, voice, and personality fails to build the trust that makes branded content effective. The winning approach is AI-assisted, human-led: use AI for efficiency in production workflows while keeping authentic human creators at the center of the content.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Long-form resurgence</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">After several years of short-form dominance, 2026 is seeing a resurgence in appetite for depth. Podcast listenership continues to grow. YouTube watch time for videos over 20 minutes is increasing. Audiences saturated with 15-second clips are actively seeking content that goes deeper. For brands, this creates an opportunity to produce substantive content &mdash; mini-documentaries, in-depth tutorials, serialized storytelling &mdash; that builds stronger brand associations than any amount of short-form content. The strategy is not either/or: use short-form to capture attention and long-form to deepen relationships.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Creator equity and co-ownership</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Top creators in 2026 are negotiating beyond flat fees. Revenue shares, equity stakes, co-branded product lines, and long-term ambassadorship deals are replacing one-off sponsored posts. Brands that build genuine partnerships with creators &mdash; treating them as creative partners rather than media channels &mdash; produce better content and retain top talent. The transactional "pay per post" model is being replaced by relationship-driven collaboration where both parties invest in shared outcomes.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">First-party data through content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">As third-party cookies disappear and privacy regulations tighten, branded content is becoming a primary vehicle for first-party data collection. Interactive quizzes, calculators, gated reports, and newsletter sign-ups embedded within branded content allow brands to build direct relationships with their audience. A quiz that helps users find the right product, a calculator that estimates savings, or a report that requires an email address &mdash; these content experiences capture valuable audience data while delivering genuine value in exchange.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Community-driven branded content</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Brands are moving beyond broadcasting content to building communities around it. Discord servers, subreddits, private Facebook groups, and Slack communities centered around a brand's content topic create ongoing engagement that compounds over time. A fitness brand that runs a community challenge alongside its branded content, or a software company that hosts a practitioner community connected to its educational series, creates recurring touchpoints that transform passive viewers into active participants and advocates.</p>
+      </div>
+    </section>
+
+    <!-- 09 Building a Branded Content Strategy -->
+    <section class="guide-section" id="strategy">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">09 &mdash; Strategy</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Building a branded content strategy from scratch</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Define your content territory &mdash; the topic space where your brand has credibility</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Start with one format and one platform, then expand based on data</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Plan for 3&ndash;6 months of consistent output before expecting compounding returns</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">A branded content strategy is not a campaign plan &mdash; it is an operating model for consistently producing content that builds brand equity over time. The most common failure mode is treating branded content as a one-off campaign rather than an ongoing capability. Brands that invest in a three-month burst of content and then stop see diminishing returns. Brands that commit to sustained, consistent output see compounding returns as their content library grows, audience relationships deepen, and distribution efficiency improves.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Define your content territory</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Your content territory is the intersection of what your audience cares about and what your brand has credible authority to discuss. A project management tool brand has credibility to produce content about productivity, remote work, and team collaboration &mdash; but not about fashion or cooking. A skincare brand can speak credibly about dermatology, self-care routines, and ingredient science &mdash; but probably not about automotive repair. Defining a clear content territory prevents branded content from feeling random or opportunistic.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Select your primary format and platform</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Resist the temptation to launch on every platform simultaneously. Choose one primary format (e.g., short-form video) and one primary platform (e.g., TikTok) based on where your audience spends the most time. Master that format and build a repeatable production workflow before expanding. A brand that produces excellent TikTok content can later adapt that content for Instagram Reels, YouTube Shorts, and LinkedIn &mdash; but a brand that tries to produce native content for four platforms from day one will produce mediocre content on all of them.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Build your creator roster</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Identify 5&ndash;10 creators who align with your content territory and audience. Prioritize creators who genuinely use or care about products in your category &mdash; authenticity cannot be manufactured. Start with test projects (1&ndash;3 pieces per creator) to evaluate content quality, reliability, and audience response before committing to longer-term partnerships. Build a mix of creator types: 2&ndash;3 anchor creators for ongoing series and 5&ndash;7 rotating creators for variety and testing. For more on running a creator-powered content program, see our <a href="/canvas-ugc/" class="text-accent hover:underline">Canvas UGC</a> guide.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">Set a publishing cadence and stick to it</h3>
+        <p class="text-ink-2 leading-[1.65] mb-4">Consistency matters more than volume. Three posts per week published reliably will outperform fifteen posts one week and silence the next. Set a cadence that your team can sustain for at least six months. For most brands starting out, 2&ndash;4 pieces of social content per week plus 1&ndash;2 pieces of editorial or long-form content per month is a sustainable starting point. Build a content calendar, batch production where possible, and maintain a content buffer of 2&ndash;3 weeks of pre-produced content to absorb disruptions.</p>
+      </div>
+    </section>
+
+    <!-- 10 OKAD's Branded Content Service -->
+    <section class="guide-section" id="okad-service">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">10 &mdash; OKAD Service</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">OKAD's branded content service</h2>
+        <div class="tldr">
+          <ul class="list-none p-0 m-0 space-y-1">
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">End-to-end: strategy, creator casting, production, distribution, measurement</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Network of 600+ vetted creators across niches and platforms</li>
+            <li class="text-[14px] text-ink-2 before:content-['—_'] before:text-accent before:font-semibold">Integrated with Spark Ads, Partnership Ads, and Canvas UGC programs</li>
+          </ul>
+        </div>
+        <p class="text-ink-2 leading-[1.65] mb-4">OKAD provides full-service branded content production and distribution for brands that want creator-powered content without building an internal content operations team. We handle every stage &mdash; from strategy development and content territory definition to creator casting, production oversight, paid amplification, and performance reporting.</p>
+
+        <h3 class="font-display font-semibold text-[20px] tracking-[-0.01em] mt-8 mb-3">What OKAD handles</h3>
+        <ol class="list-none p-0 counter-reset-step space-y-0">
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Content strategy.</strong> We define your content territory, audience insights, format mix, platform priorities, and publishing cadence. The strategy document becomes the foundation for all content production.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Creator casting.</strong> We match your brand with creators from our network of 600+ vetted creators. Selection is based on niche fit, content quality, audience demographics, engagement rate, and brand safety.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Brief development and production.</strong> We write the creative brief and manage the production process, including review cycles, feedback, and quality assurance. Creators retain creative freedom within strategic guardrails.</li>
+          <li class="py-3.5 pl-[52px] relative border-b border-border text-ink-2 guide-step"><strong>Distribution and amplification.</strong> We handle organic publishing and paid amplification through <a href="/spark-ads/" class="text-accent hover:underline">Spark Ads</a>, <a href="/partnership-ads/" class="text-accent hover:underline">Partnership Ads</a>, and whitelabel promotion. Ad spend is concentrated on content that proves itself organically first.</li>
+          <li class="py-3.5 pl-[52px] relative text-ink-2 guide-step"><strong>Measurement and optimization.</strong> Monthly performance reports covering engagement, brand lift, and business impact. Insights feed back into creator selection, briefing, and format decisions for continuous improvement.</li>
+        </ol>
+
+        <div class="bg-card border border-border rounded-xl p-6 my-6 flex gap-4 items-start flex-col sm:flex-row">
+          <div class="w-11 h-11 rounded-[10px] bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.12)] flex items-center justify-center text-[20px] shrink-0">&#9889;</div>
+          <div>
+            <h4 class="font-display text-[16px] font-semibold mb-1"><a href={emailSubject} class="text-ink hover:text-accent transition-colors no-underline">Start your branded content program with OKAD</a></h4>
+            <p class="text-[14px] text-muted m-0 leading-[1.5]">Email olga@okad.agency with your brand, product, target audience, and goals. We will scope a branded content program, recommend creators and formats, and deliver a detailed proposal within 48 hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 Glossary -->
+    <section class="guide-section" id="glossary">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">11 &mdash; Glossary</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Key terms</h2>
+
+        {[
+          { term: "Branded Content", def: "Content funded by a brand that is designed to inform, entertain, or inspire the audience rather than sell directly. The brand is the sponsor, not the subject. The content earns attention on its own merits." },
+          { term: "Content Territory", def: "The topic space where a brand has credible authority to produce content. Defined by the intersection of audience interests and brand expertise. Prevents content from feeling random or off-brand." },
+          { term: "Spark Ads", def: "TikTok's native format for boosting organic creator posts as paid ads. All engagement (likes, comments, shares) accumulates on the original post. The most popular branded content ad format globally." },
+          { term: "Partnership Ads", def: "Meta's branded content ad format (formerly Branded Content Ads). Creators tag the brand as a paid partner, and the brand promotes the tagged post through Ads Manager on Instagram and Facebook." },
+          { term: "Hook Rate", def: "The percentage of viewers who watch past the first 2-3 seconds of a video. The primary quality signal for short-form video branded content. A hook rate above 40% indicates strong opening performance." },
+          { term: "Brand Lift Study", def: "A controlled experiment that measures changes in brand awareness, recall, consideration, and purchase intent among audiences exposed to branded content versus a control group not exposed." },
+          { term: "Whitelisting", def: "A delivery method where the creator grants the brand permission to run paid ads directly from the creator's social account. Maximizes authenticity but requires the most creator cooperation." },
+          { term: "Canvas UGC", def: "OKAD's model for high-volume creator content production. Brands commission multiple creators to produce authentic content at scale, which can then be used as organic posts or amplified as branded content ads." },
+          { term: "Incrementality Testing", def: "A measurement methodology that isolates the true causal impact of branded content by comparing outcomes in exposed versus unexposed groups, typically using geographic holdouts." },
+          { term: "Content Calendar", def: "A planning document that maps out what content will be published, when, on which platform, and by which creator. Essential for maintaining consistent publishing cadence." },
+          { term: "Creator Brief", def: "The document that outlines what a creator should produce: audience insight, content angle, key messages, tone guidelines, format specifications, and compliance requirements. The brief determines content quality." },
+          { term: "First-Party Data", def: "Data collected directly from the audience through owned interactions (sign-ups, quizzes, purchases) rather than from third-party cookies or data brokers. Increasingly valuable as privacy regulations tighten." },
+          { term: "Native Content", def: "Content that matches the form, feel, and function of the platform where it appears. Branded content succeeds when it feels native to the platform rather than imported from a different medium." },
+        ].map((item) => (
+          <div class="py-4 border-b border-border">
+            <div class="font-display font-semibold text-ink mb-1">{item.term}</div>
+            <div class="text-[14px] text-muted">{item.def}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 12 FAQ -->
+    <section class="guide-section" id="faq">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">12 &mdash; FAQ</div>
+        <h2 class="font-display font-bold text-[clamp(24px,3.5vw,32px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Frequently asked questions</h2>
+
+        {[
+          { q: "What is branded content?", a: "Branded content is any content that a brand funds where the primary purpose is to inform, entertain, or inspire the audience rather than directly sell a product. The brand is the sponsor, not the subject. It includes editorial articles, video series, social creator content, podcasts, and interactive experiences. The content earns attention on its own merits while building positive brand associations over time." },
+          { q: "How is branded content different from advertising?", a: "Traditional advertising interrupts the audience to deliver a product message. Branded content is the content itself — it delivers value (information, entertainment, inspiration) that the audience seeks out willingly. Advertising says 'buy this product.' Branded content says 'here is something useful or interesting, brought to you by this brand.' The audience relationship is fundamentally different because branded content earns attention rather than buying interruptions." },
+          { q: "What types of branded content work best in 2026?", a: "Short-form video (TikTok, Reels, Shorts) delivers the widest reach and fastest feedback loops. Creator-led social content combines authenticity with distribution. Long-form content (documentaries, podcast series, in-depth guides) builds deeper brand associations. Interactive content (quizzes, calculators, tools) generates the highest engagement and first-party data capture. The best strategies combine short-form for awareness with long-form for depth." },
+          { q: "How much does branded content cost?", a: "Costs vary widely by format. Short-form social video with micro-creators: $200-$3,000 per piece. Editorial articles: $2,000-$25,000 per piece. Podcast episodes: $5,000-$50,000 per episode. Long-form documentary video: $10,000-$250,000+. Interactive tools: $10,000-$100,000+. These are production costs only — add 30-100% for paid distribution and amplification. OKAD provides all-in pricing with production and distribution bundled. Contact olga@okad.agency for a custom quote." },
+          { q: "How do I measure branded content ROI?", a: "Use a three-layer measurement framework. Engagement metrics (views, watch time, shares, saves) show whether the audience consumed the content. Brand metrics (aided recall, consideration lift, sentiment) show whether perceptions changed. Business metrics (traffic, leads, pipeline, revenue) show bottom-line impact. Brand lift studies and incrementality tests provide the most rigorous measurement. Track all three layers to capture the full value of branded content." },
+          { q: "How long before branded content shows results?", a: "Expect initial engagement data within 1-2 weeks of publishing. Meaningful brand lift data requires 4-8 weeks of consistent content and sufficient sample sizes for lift studies. Compounding returns — where your content library, audience relationships, and distribution efficiency all reinforce each other — typically emerge after 3-6 months of sustained output. Branded content is a long-term investment, not a quick-hit tactic." },
+          { q: "Should I create branded content in-house or work with an agency?", a: "In-house works well if you have existing content production capabilities, creator relationships, and platform expertise. An agency like OKAD makes sense if you want to launch quickly without building an internal team, need access to a network of vetted creators, or want to scale content volume beyond what your team can handle. Many brands use a hybrid model: in-house for brand-owned content (blog, email, social posts) and agency for creator-powered branded content." },
+          { q: "How do I choose the right creators for branded content?", a: "Prioritize niche fit over follower count. A creator with 15K followers in your exact niche will produce more effective branded content than a creator with 500K followers in a tangential space. Evaluate content quality (hooks, pacing, production), audience demographics (age, gender, geography match your target), engagement rate (active audience, not just followers), and reliability (meeting deadlines, following briefs, professional communication)." },
+          { q: "Can branded content be used as paid ads?", a: "Yes, and it should be. Branded content that performs well organically can be amplified as paid ads using TikTok Spark Ads, Meta Partnership Ads, or whitelabel promotion. This is one of the most effective ad strategies available because the content has already proven it resonates with a real audience. See our guide on branded content ads for the complete breakdown of delivery methods and platform mechanics." },
+          { q: "What platforms should I prioritize for branded content?", a: "Start where your audience spends the most time. For Gen Z and millennials: TikTok and Instagram. For professionals and B2B: LinkedIn and YouTube. For niche communities: YouTube and podcasts. For broad consumer reach: TikTok, Instagram, and YouTube. Master one platform before expanding to others. Cross-posting identical content rarely works — each platform has different audience expectations and format norms." },
+          { q: "How does branded content fit with other marketing channels?", a: "Branded content works best as a mid-funnel complement to upper-funnel awareness ads and lower-funnel performance marketing. Use branded content to build trust and consideration, then retarget engaged viewers with direct response ads. Branded content also feeds content marketing (repurpose for blog, email, social), PR (newsworthy branded content earns media coverage), and sales enablement (share branded content with prospects during the sales process)." },
+          { q: "Can OKAD produce branded content for my brand?", a: "Yes. OKAD provides end-to-end branded content services: strategy development, creator casting from our network of 600+ vetted creators, brief development, content production, paid amplification across TikTok, Instagram, YouTube, and LinkedIn, and monthly performance reporting. We work with brands across e-commerce, SaaS, fintech, health and wellness, and consumer products. Email olga@okad.agency with your brand, product, and goals to get started." },
+        ].map((item) => (
+          <div class="faq-item border-b border-border">
+            <div class="faq-q flex justify-between items-center gap-4 py-5 cursor-pointer">
+              <span class="font-display font-semibold text-[16px] text-ink">{item.q}</span>
+              <span class="font-mono text-[20px] text-accent shrink-0 faq-icon">+</span>
+            </div>
+            <div class="faq-a overflow-hidden max-h-0 transition-all duration-300">
+              <div class="pb-5 text-[15px] text-ink-2 leading-[1.65]">{item.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-10">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-dark rounded-2xl p-10 md:p-14 text-center">
+          <h2 class="font-display font-bold text-[clamp(22px,3.5vw,32px)] tracking-[-0.02em] text-white mb-3">Ready to build your branded content program?</h2>
+          <p class="text-[15px] text-muted max-w-[480px] mx-auto leading-[1.6] mb-6">Tell us about your brand, audience, and goals. We will design a branded content strategy, match you with creators, and produce content that builds trust and drives results.</p>
+          <div class="flex gap-3 justify-center flex-wrap">
+            <a href={emailSubject} class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold bg-white text-ink hover:bg-[rgba(99,102,241,.06)] hover:text-accent transition-all no-underline">Get started &rarr;</a>
+            <a href={calHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2.5 rounded-xl font-sans text-[14px] font-semibold text-muted border border-white/15 hover:text-white hover:border-white/30 transition-all no-underline">Book a call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="guide-section">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-accent mb-2">Methodology</div>
+        <p class="text-ink-2 leading-[1.65]">This guide is based on branded content program structures observed across TikTok, Meta, YouTube, and LinkedIn; platform documentation and creator program policies; FTC, ASA, and EU regulatory guidelines; published industry research on branded content performance; and aggregate data from branded content programs managed by OKAD. Budget ranges, engagement benchmarks, and performance comparisons are directional, not guarantees. Individual results depend on industry, content quality, creator selection, platform, and market conditions.</p>
+      </div>
+    </section>
+
+  </main>
+
+    <!-- Lead Form -->
+    <section class="py-16 border-t border-border" id="get-started">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="bg-card border border-border rounded-2xl p-8 sm:p-10">
+          <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-1.5 text-[12px] font-medium text-accent bg-[rgba(99,102,241,.06)] border border-[rgba(99,102,241,.18)] rounded-full px-3.5 py-1.5 mb-4">Free consultation</div>
+            <h2 class="font-display font-bold text-[clamp(22px,3.5vw,30px)] leading-[1.15] tracking-[-0.02em] text-ink mb-2">Get a Custom Branded Content Plan</h2>
+            <p class="text-[15px] text-ink-2 max-w-[500px] mx-auto leading-[1.5]">Tell us about your brand and we'll send you a branded content strategy &mdash; recommended formats, creator profiles, estimated costs, and timeline.</p>
+          </div>
+          <form id="canvas-form" class="space-y-4 max-w-[480px] mx-auto">
+            <div>
+              <label for="cf-company" class="block text-[13px] font-medium text-ink mb-1.5">Company / Brand *</label>
+              <input type="text" id="cf-company" name="company" required placeholder="Acme Inc." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-email" class="block text-[13px] font-medium text-ink mb-1.5">Work email *</label>
+              <input type="email" id="cf-email" name="email" required placeholder="you@company.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-website" class="block text-[13px] font-medium text-ink mb-1.5">Website</label>
+              <input type="url" id="cf-website" name="website" placeholder="https://yoursite.com" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors" />
+            </div>
+            <div>
+              <label for="cf-budget" class="block text-[13px] font-medium text-ink mb-1.5">Monthly content budget</label>
+              <select id="cf-budget" name="budget" class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] focus:outline-none focus:border-accent transition-colors appearance-none">
+                <option value="">Select range</option>
+                <option value="under-2k">Under $2,000</option>
+                <option value="2k-5k">$2,000 – $5,000</option>
+                <option value="5k-10k">$5,000 – $10,000</option>
+                <option value="10k+">$10,000+</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label for="cf-message" class="block text-[13px] font-medium text-ink mb-1.5">What are you looking to achieve?</label>
+              <textarea id="cf-message" name="message" rows="3" placeholder="E.g. We want to build brand awareness with creator-led video content across TikTok and Instagram..." class="w-full px-4 py-3 rounded-xl bg-bg border border-border text-ink text-[14px] placeholder:text-muted focus:outline-none focus:border-accent transition-colors resize-y"></textarea>
+            </div>
+            <button type="submit" id="cf-submit" class="w-full py-3.5 rounded-xl font-sans text-[14px] font-semibold bg-accent text-white hover:bg-accent-hover transition-all cursor-pointer border-none">Get my branded content plan &rarr;</button>
+            <div id="cf-status" class="text-center text-[13px] hidden"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="py-10 border-t border-border">
+      <div class="max-w-[800px] mx-auto px-6">
+        <div class="font-mono text-[11px] font-medium uppercase tracking-[.1em] text-muted-2 mb-4">Related guides</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="/branded-content-ads/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Branded Content Ads Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Using creator content as paid advertising across platforms</p>
+          </a>
+          <a href="/spark-ads/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Spark Ads Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">TikTok's native creator ad format explained</p>
+          </a>
+          <a href="/canvas-ugc/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Canvas UGC Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">High-volume creator content production at scale</p>
+          </a>
+          <a href="/partnership-ads/" class="block rounded-xl border border-border bg-card p-4 no-underline hover:border-accent transition-colors">
+            <p class="text-[14px] text-ink font-semibold mb-0.5">Partnership Ads Guide</p>
+            <p class="text-[12px] text-muted leading-[1.4]">Meta's creator-powered ad format</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <Footer />
+<script type="application/ld+json" set:html={JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Branded Content: The Complete Guide for 2026",
+    "description": "Branded content is storytelling funded by a brand but designed to inform or entertain rather than sell directly. This guide covers every type of branded content, platform strategies, measurement frameworks, and 2026 trends.",
+    "author": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc" },
+    "publisher": { "@type": "Organization", "name": "OKAD Agency", "url": "https://okad.cc", "logo": { "@type": "ImageObject", "url": "https://okad.cc/favicon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://okad.cc/branded-content-guide/" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://okad.cc/" },
+      { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://okad.cc/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Branded Content Guide" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is branded content?", "acceptedAnswer": { "@type": "Answer", "text": "Branded content is any content that a brand funds where the primary purpose is to inform, entertain, or inspire the audience rather than directly sell a product. The brand is the sponsor, not the subject. It includes editorial articles, video series, social creator content, podcasts, and interactive experiences. The content earns attention on its own merits while building positive brand associations over time." } },
+      { "@type": "Question", "name": "How is branded content different from advertising?", "acceptedAnswer": { "@type": "Answer", "text": "Traditional advertising interrupts the audience to deliver a product message. Branded content is the content itself — it delivers value (information, entertainment, inspiration) that the audience seeks out willingly. Advertising says 'buy this product.' Branded content says 'here is something useful or interesting, brought to you by this brand.'" } },
+      { "@type": "Question", "name": "What types of branded content work best in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Short-form video (TikTok, Reels, Shorts) delivers the widest reach. Creator-led social content combines authenticity with distribution. Long-form content (documentaries, podcast series, guides) builds deeper brand associations. Interactive content (quizzes, calculators, tools) generates the highest engagement and first-party data capture." } },
+      { "@type": "Question", "name": "How much does branded content cost?", "acceptedAnswer": { "@type": "Answer", "text": "Costs vary by format. Short-form social video with micro-creators: $200-$3,000 per piece. Editorial articles: $2,000-$25,000. Podcast episodes: $5,000-$50,000. Long-form video: $10,000-$250,000+. Interactive tools: $10,000-$100,000+. Add 30-100% for paid distribution. OKAD provides all-in pricing. Contact olga@okad.agency for a custom quote." } },
+      { "@type": "Question", "name": "How do I measure branded content ROI?", "acceptedAnswer": { "@type": "Answer", "text": "Use a three-layer framework: engagement metrics (views, watch time, shares), brand metrics (recall, consideration lift, sentiment via brand lift studies), and business metrics (traffic, leads, revenue via GA4 and CRM). Incrementality tests provide the most rigorous measurement." } },
+      { "@type": "Question", "name": "How long before branded content shows results?", "acceptedAnswer": { "@type": "Answer", "text": "Initial engagement data appears within 1-2 weeks. Meaningful brand lift data requires 4-8 weeks. Compounding returns typically emerge after 3-6 months of sustained output. Branded content is a long-term investment." } },
+      { "@type": "Question", "name": "Should I create branded content in-house or with an agency?", "acceptedAnswer": { "@type": "Answer", "text": "In-house works if you have content production capabilities and creator relationships. An agency like OKAD makes sense for quick launches, access to vetted creators, and scaling volume. Many brands use a hybrid model." } },
+      { "@type": "Question", "name": "How do I choose creators for branded content?", "acceptedAnswer": { "@type": "Answer", "text": "Prioritize niche fit over follower count. Evaluate content quality, audience demographics, engagement rate, and reliability. A creator with 15K followers in your exact niche will produce more effective content than one with 500K in a tangential space." } },
+      { "@type": "Question", "name": "Can branded content be used as paid ads?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Branded content that performs well organically can be amplified as paid ads using TikTok Spark Ads, Meta Partnership Ads, or whitelabel promotion. This is highly effective because the content has already proven it resonates with a real audience." } },
+      { "@type": "Question", "name": "What platforms should I prioritize?", "acceptedAnswer": { "@type": "Answer", "text": "Start where your audience is. Gen Z and millennials: TikTok and Instagram. Professionals and B2B: LinkedIn and YouTube. Niche communities: YouTube and podcasts. Master one platform before expanding. Cross-posting identical content rarely works." } },
+      { "@type": "Question", "name": "How does branded content fit with other marketing?", "acceptedAnswer": { "@type": "Answer", "text": "Branded content works as a mid-funnel complement to awareness ads and performance marketing. Use it to build trust and consideration, then retarget engaged viewers with direct response ads. It also feeds content marketing, PR, and sales enablement." } },
+      { "@type": "Question", "name": "Can OKAD produce branded content for my brand?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. OKAD provides end-to-end branded content: strategy, creator casting from 600+ vetted creators, production, paid amplification across TikTok, Instagram, YouTube, and LinkedIn, and monthly reporting. Email olga@okad.agency to get started." } }
+    ]
+  }
+])} />
+</Layout>
+
+<style>
+  .guide-section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .guide-section:last-of-type {
+    border-bottom: none;
+  }
+  .tldr {
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  .guide-step {
+    counter-increment: step;
+  }
+  .guide-step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(99,102,241,.06);
+    border: 1px solid rgba(99,102,241,.15);
+    color: #6366F1;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol:has(.guide-step) {
+    counter-reset: step;
+  }
+  .faq-item.open .faq-a {
+    max-height: 500px;
+  }
+  @media (max-width: 640px) {
+    .guide-section { padding: 40px 0; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open');
+      const icon = q.querySelector('.faq-icon');
+      if (icon) icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      const t = document.querySelector(href);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  const form = document.getElementById('canvas-form');
+  const status = document.getElementById('cf-status');
+  const submitBtn = document.getElementById('cf-submit');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      status.className = 'text-center text-[13px] hidden';
+      try {
+        const fd = new FormData(form);
+        const data = Object.fromEntries(fd.entries());
+        data.source = window.location.pathname;
+        const resp = await fetch('https://okad.cc/api/canvas-form/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (resp.ok) {
+          status.textContent = 'Thank you! We\'ll get back to you within 24 hours.';
+          status.className = 'text-center text-[13px] text-green-400 mt-2';
+          form.reset();
+        } else {
+          const err = await resp.json().catch(() => ({}));
+          status.textContent = err.error || 'Something went wrong. Please try again.';
+          status.className = 'text-center text-[13px] text-red-400 mt-2';
+        }
+      } catch {
+        status.textContent = 'Network error. Please try again.';
+        status.className = 'text-center text-[13px] text-red-400 mt-2';
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get my branded content plan →';
+    });
+  }
+</script>
